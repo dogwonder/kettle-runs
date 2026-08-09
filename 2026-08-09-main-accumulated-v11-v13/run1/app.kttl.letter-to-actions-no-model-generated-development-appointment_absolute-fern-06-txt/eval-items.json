@@ -1,0 +1,77 @@
+[
+  {
+    "id": "app.kttl.letter-to-actions/development-appointment_absolute-fern-06/appointment_absolute-fern-06-attendance-01",
+    "item_id": "appointment_absolute-fern-06-attendance-01",
+    "pack": "app.kttl.letter-to-actions",
+    "pack_version": "0.2.0",
+    "prompt_version": "blake3:571efa3adbfef212b46bbc36b0f757c9f8612ab55d3812388743f539f6ef1542",
+    "fixture": "generated-development-appointment_absolute-fern-06.txt",
+    "fixture_id": "development-appointment_absolute-fern-06",
+    "strata": [
+      "any-letter",
+      "appointment-absolute",
+      "absolute-deadline"
+    ],
+    "raw_input": "You have an appointment about your tenancy account at Ashcombe Housing Trust on 27 December 2026. Please arrive ten minutes early and bring this letter with you.",
+    "decision_key": "you have an appointment about your tenancy account at ashcombe housing trust on 27 december 2026. please arrive ten minutes early and bring this letter with you.",
+    "metric": "extraction",
+    "expected": {
+      "kind": "attendance",
+      "party": "Ashcombe Housing Trust",
+      "deadline": "on 27 December 2026",
+      "anchor": "27 December 2026",
+      "due": "2026-12-27"
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read letters without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.letter-to-actions/development-appointment_absolute-fern-06/appointment_absolute-fern-06-no-ask-02",
+    "item_id": "appointment_absolute-fern-06-no-ask-02",
+    "pack": "app.kttl.letter-to-actions",
+    "pack_version": "0.2.0",
+    "prompt_version": "blake3:571efa3adbfef212b46bbc36b0f757c9f8612ab55d3812388743f539f6ef1542",
+    "fixture": "generated-development-appointment_absolute-fern-06.txt",
+    "fixture_id": "development-appointment_absolute-fern-06",
+    "strata": [
+      "any-letter",
+      "appointment-absolute",
+      "no-obligation"
+    ],
+    "raw_input": "If you have any questions about this letter, our reception team will be glad to help.",
+    "decision_key": "if you have any questions about this letter, our reception team will be glad to help.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read letters without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.letter-to-actions/development-appointment_absolute-fern-06/appointment_absolute-fern-06-no-ask-04",
+    "item_id": "appointment_absolute-fern-06-no-ask-04",
+    "pack": "app.kttl.letter-to-actions",
+    "pack_version": "0.2.0",
+    "prompt_version": "blake3:571efa3adbfef212b46bbc36b0f757c9f8612ab55d3812388743f539f6ef1542",
+    "fixture": "generated-development-appointment_absolute-fern-06.txt",
+    "fixture_id": "development-appointment_absolute-fern-06",
+    "strata": [
+      "any-letter",
+      "appointment-absolute",
+      "no-obligation"
+    ],
+    "raw_input": "Your direct debit of £115.00 will continue to be collected on the 15th of each month as before.",
+    "decision_key": "your direct debit of £115.00 will continue to be collected on the 15th of each month as before.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read letters without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  }
+]

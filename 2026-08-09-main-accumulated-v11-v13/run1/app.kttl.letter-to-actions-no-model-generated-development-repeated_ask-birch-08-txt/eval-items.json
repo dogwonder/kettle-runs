@@ -1,0 +1,77 @@
+[
+  {
+    "id": "app.kttl.letter-to-actions/development-repeated_ask-birch-08/repeated_ask-birch-08-payment-01",
+    "item_id": "repeated_ask-birch-08-payment-01",
+    "pack": "app.kttl.letter-to-actions",
+    "pack_version": "0.2.0",
+    "prompt_version": "blake3:571efa3adbfef212b46bbc36b0f757c9f8612ab55d3812388743f539f6ef1542",
+    "fixture": "generated-development-repeated_ask-birch-08.txt",
+    "fixture_id": "development-repeated_ask-birch-08",
+    "strata": [
+      "any-letter",
+      "repeated-ask",
+      "repeated-obligation"
+    ],
+    "raw_input": "Please pay £142.75 for your energy account within 14 days of the date of this letter.",
+    "decision_key": "please pay £142.75 for your energy account within 14 days of the date of this letter.",
+    "metric": "extraction",
+    "expected": {
+      "kind": "payment",
+      "party": "Cranleigh Energy",
+      "deadline": "within 14 days",
+      "anchor": "the date of this letter",
+      "due": "2026-08-22"
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read letters without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.letter-to-actions/development-repeated_ask-birch-08/repeated_ask-birch-08-no-ask-03",
+    "item_id": "repeated_ask-birch-08-no-ask-03",
+    "pack": "app.kttl.letter-to-actions",
+    "pack_version": "0.2.0",
+    "prompt_version": "blake3:571efa3adbfef212b46bbc36b0f757c9f8612ab55d3812388743f539f6ef1542",
+    "fixture": "generated-development-repeated_ask-birch-08.txt",
+    "fixture_id": "development-repeated_ask-birch-08",
+    "strata": [
+      "any-letter",
+      "repeated-ask",
+      "no-obligation"
+    ],
+    "raw_input": "No further action is needed once you have paid.",
+    "decision_key": "no further action is needed once you have paid.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read letters without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.letter-to-actions/development-repeated_ask-birch-08/repeated_ask-birch-08-no-ask-05",
+    "item_id": "repeated_ask-birch-08-no-ask-05",
+    "pack": "app.kttl.letter-to-actions",
+    "pack_version": "0.2.0",
+    "prompt_version": "blake3:571efa3adbfef212b46bbc36b0f757c9f8612ab55d3812388743f539f6ef1542",
+    "fixture": "generated-development-repeated_ask-birch-08.txt",
+    "fixture_id": "development-repeated_ask-birch-08",
+    "strata": [
+      "any-letter",
+      "repeated-ask",
+      "no-obligation"
+    ],
+    "raw_input": "Payment of £340.00 was received in full and on time.",
+    "decision_key": "payment of £340.00 was received in full and on time.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read letters without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  }
+]

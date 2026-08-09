@@ -1,0 +1,269 @@
+[
+  {
+    "id": "app.kttl.renewal-diff/development-term_removed-cedar-03/development-term_removed-cedar-03-previous-no-value-e667bf",
+    "item_id": "development-term_removed-cedar-03-previous-no-value-e667bf",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-term_removed-cedar-03",
+    "fixture_id": "development-term_removed-cedar-03",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Corvin Mutual pet insurance — policy schedule CEDAR-TR-414 for the year to 31 August 2026.",
+    "decision_key": "previous|corvin mutual pet insurance — policy schedule cedar-tr-414 for the year to 31 august 2026.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-term_removed-cedar-03/development-term_removed-cedar-03-previous-premium-6656f8",
+    "item_id": "development-term_removed-cedar-03-previous-premium-6656f8",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-term_removed-cedar-03",
+    "fixture_id": "development-term_removed-cedar-03",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Total annual premium: £4,211.00.",
+    "decision_key": "previous|total annual premium: £4,211.00.",
+    "metric": "extraction",
+    "expected": {
+      "term": "premium",
+      "basis": "annual",
+      "value": "£4,211.00",
+      "quote": "Total annual premium: £4,211.00."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-term_removed-cedar-03/development-term_removed-cedar-03-previous-no-claims-discount-813c2d",
+    "item_id": "development-term_removed-cedar-03-previous-no-claims-discount-813c2d",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-term_removed-cedar-03",
+    "fixture_id": "development-term_removed-cedar-03",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "No claims discount: 43%.",
+    "decision_key": "previous|no claims discount: 43%.",
+    "metric": "extraction",
+    "expected": {
+      "term": "no_claims_discount",
+      "basis": "per_policy",
+      "value": "43%",
+      "quote": "No claims discount: 43%."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-term_removed-cedar-03/development-term_removed-cedar-03-previous-compulsory-excess-76245c",
+    "item_id": "development-term_removed-cedar-03-previous-compulsory-excess-76245c",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-term_removed-cedar-03",
+    "fixture_id": "development-term_removed-cedar-03",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Compulsory excess: £2,865.00 per claim.",
+    "decision_key": "previous|compulsory excess: £2,865.00 per claim.",
+    "metric": "extraction",
+    "expected": {
+      "term": "compulsory_excess",
+      "basis": "per_claim",
+      "value": "£2,865.00",
+      "quote": "Compulsory excess: £2,865.00 per claim."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-term_removed-cedar-03/development-term_removed-cedar-03-previous-no-value-b9b29d",
+    "item_id": "development-term_removed-cedar-03-previous-no-value-b9b29d",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-term_removed-cedar-03",
+    "fixture_id": "development-term_removed-cedar-03",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Your reference is CEDAR-TR-414. Quote it whenever you write to us about this policy.",
+    "decision_key": "previous|your reference is cedar-tr-414. quote it whenever you write to us about this policy.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-term_removed-cedar-03/development-term_removed-cedar-03-previous-no-value-c54b4c",
+    "item_id": "development-term_removed-cedar-03-previous-no-value-c54b4c",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-term_removed-cedar-03",
+    "fixture_id": "development-term_removed-cedar-03",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Corvin Mutual arranges pet insurance cover under CEDAR-TR-414 and is regulated in the United Kingdom.",
+    "decision_key": "previous|corvin mutual arranges pet insurance cover under cedar-tr-414 and is regulated in the united kingdom.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-term_removed-cedar-03/development-term_removed-cedar-03-renewal-no-value-034dbf",
+    "item_id": "development-term_removed-cedar-03-renewal-no-value-034dbf",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-term_removed-cedar-03",
+    "fixture_id": "development-term_removed-cedar-03",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Corvin Mutual pet insurance — renewal schedule CEDAR-TR-414 for the year to 31 August 2027.",
+    "decision_key": "renewal|corvin mutual pet insurance — renewal schedule cedar-tr-414 for the year to 31 august 2027.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-term_removed-cedar-03/development-term_removed-cedar-03-renewal-premium-6656f8",
+    "item_id": "development-term_removed-cedar-03-renewal-premium-6656f8",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-term_removed-cedar-03",
+    "fixture_id": "development-term_removed-cedar-03",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Total annual premium: £4,211.00.",
+    "decision_key": "renewal|total annual premium: £4,211.00.",
+    "metric": "extraction",
+    "expected": {
+      "term": "premium",
+      "basis": "annual",
+      "value": "£4,211.00",
+      "quote": "Total annual premium: £4,211.00."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-term_removed-cedar-03/development-term_removed-cedar-03-renewal-compulsory-excess-76245c",
+    "item_id": "development-term_removed-cedar-03-renewal-compulsory-excess-76245c",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-term_removed-cedar-03",
+    "fixture_id": "development-term_removed-cedar-03",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Compulsory excess: £2,865.00 per claim.",
+    "decision_key": "renewal|compulsory excess: £2,865.00 per claim.",
+    "metric": "extraction",
+    "expected": {
+      "term": "compulsory_excess",
+      "basis": "per_claim",
+      "value": "£2,865.00",
+      "quote": "Compulsory excess: £2,865.00 per claim."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-term_removed-cedar-03/development-term_removed-cedar-03-renewal-no-value-c54b4c",
+    "item_id": "development-term_removed-cedar-03-renewal-no-value-c54b4c",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-term_removed-cedar-03",
+    "fixture_id": "development-term_removed-cedar-03",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Corvin Mutual arranges pet insurance cover under CEDAR-TR-414 and is regulated in the United Kingdom.",
+    "decision_key": "renewal|corvin mutual arranges pet insurance cover under cedar-tr-414 and is regulated in the united kingdom.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-term_removed-cedar-03/development-term_removed-cedar-03-renewal-no-value-b9b29d",
+    "item_id": "development-term_removed-cedar-03-renewal-no-value-b9b29d",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-term_removed-cedar-03",
+    "fixture_id": "development-term_removed-cedar-03",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Your reference is CEDAR-TR-414. Quote it whenever you write to us about this policy.",
+    "decision_key": "renewal|your reference is cedar-tr-414. quote it whenever you write to us about this policy.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  }
+]

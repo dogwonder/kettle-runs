@@ -1,0 +1,125 @@
+{
+  "fixture": "generated-development-payment_relative-dawn-41.txt",
+  "step_scores": {
+    "obligations": {
+      "score": 1.0,
+      "n": 1,
+      "correct": 1,
+      "wilson_95": {
+        "low": 0.20654931437723745,
+        "high": 1.0
+      }
+    }
+  },
+  "items": [
+    {
+      "id": "app.kttl.letter-to-actions/development-payment_relative-dawn-41/payment_relative-dawn-41-payment-01",
+      "item_id": "payment_relative-dawn-41-payment-01",
+      "pack": "app.kttl.letter-to-actions",
+      "pack_version": "0.2.0",
+      "prompt_version": "blake3:571efa3adbfef212b46bbc36b0f757c9f8612ab55d3812388743f539f6ef1542",
+      "fixture": "generated-development-payment_relative-dawn-41.txt",
+      "fixture_id": "development-payment_relative-dawn-41",
+      "strata": [
+        "any-letter",
+        "payment-relative",
+        "relative-deadline"
+      ],
+      "raw_input": "Our records show that water account of £96.45 remains outstanding. Please pay £96.45 within 14 days of the date of this letter.",
+      "decision_key": "our records show that water account of £96.45 remains outstanding. please pay £96.45 within 14 days of the date of this letter.",
+      "metric": "extraction",
+      "expected": {
+        "kind": "payment",
+        "party": "Northgate Water",
+        "deadline": "within 14 days",
+        "anchor": "the date of this letter",
+        "due": "2026-05-19"
+      },
+      "actual": {
+        "outcome": "found",
+        "extracted": {
+          "kind": "payment",
+          "party": "Northgate Water",
+          "deadline": "within 14 days",
+          "anchor": "the date of this letter",
+          "due": "2026-05-19"
+        }
+      },
+      "exchanges": [
+        {
+          "step": "Reading what it asks of you",
+          "batch": 1,
+          "request": "You read one passage of a letter at a time and say what, if anything,\nit asks somebody to do.\n\nFor each passage, decide:\n- obligations: a list of the things this passage asks of the person who\n  received the letter. Most passages ask for nothing — an empty list is\n  a correct answer, not a failure, and it is always better than a\n  guess. A passage that thanks somebody, apologises, explains a change\n  or gives a reference number asks for nothing.\n- confidence: \"high\" | \"medium\" | \"low\"\n\nFor each obligation give:\n- kind: \"payment\" | \"response\" | \"attendance\" | \"other\"\n- party: the organisation doing the asking, exactly as the letter names\n  them — never the person receiving it. Some passages name them and\n  some do not; the letter as a whole always does, in a heading or a\n  sign-off. Use that name for every obligation in the letter.\n- ask: what the person must do, in a short phrase they can read\n- deadline: the words the letter uses for when the thing must be done,\n  copied exactly — \"within 14 days\", \"by the end of the month\", \"on 3\n  March 2026\". Advice about how to go about it is not a deadline, even\n  when it mentions a time: what matters is when the thing itself must\n  happen, not how to prepare for it. Where the letter gives a day for an\n  appointment, a hearing or a meeting, that day is the deadline. Never\n  work out a date yourself and never write one the letter does not\n  contain.\n- anchor: what the deadline counts from, in the letter's own words —\n  \"the date of this letter\", or a date the letter states. If nothing is\n  given, write \"no particular date\".\n\nYou are not asked to work out when anything actually falls due. That is\ndone separately, from the words you copy. Copying the deadline exactly\nis the whole job; a date you invent is a deadline somebody misses.\n\nReturn one result per input, with the same \"id\" you were given, and\necho the passage back in \"segment\". Return JSON only.\n\nHere is a worked example, showing the passages it was given and the\nanswer they produced. Its ids are in the 900s and belong to the example\nalone — they are never ids you will be asked about.\n\n{\n  \"results\": [\n    {\n      \"id\": 900,\n      \"segment\": \"Please pay £84.00 for your garden waste licence within 14 days of the date of this letter.\",\n      \"confidence\": \"high\",\n      \"obligations\": [\n        {\n          \"kind\": \"payment\",\n          \"party\": \"Redhill District Council\",\n          \"ask\": \"Pay £84.00 for the garden waste licence\",\n          \"deadline\": \"within 14 days\",\n          \"anchor\": \"the date of this letter\"\n        }\n      ]\n    },\n    {\n      \"id\": 901,\n      \"segment\": \"We are sorry for the delay in replying and thank you for your patience.\",\n      \"confidence\": \"high\",\n      \"obligations\": []\n    },\n    {\n      \"id\": 902,\n      \"segment\": \"You must attend a hearing at the tribunal on 14 September 2026.\",\n      \"confidence\": \"high\",\n      \"obligations\": [\n        {\n          \"kind\": \"attendance\",\n          \"party\": \"Redhill District Council\",\n          \"ask\": \"Attend the tribunal hearing\",\n          \"deadline\": \"on 14 September 2026\",\n          \"anchor\": \"14 September 2026\"\n        }\n      ]\n    },\n    {\n      \"id\": 903,\n      \"segment\": \"Please send us a reading from your meter at your earliest convenience.\",\n      \"confidence\": \"high\",\n      \"obligations\": [\n        {\n          \"kind\": \"response\",\n          \"party\": \"Redhill District Council\",\n          \"ask\": \"Send a meter reading\",\n          \"deadline\": \"at your earliest convenience\",\n          \"anchor\": \"no particular date\"\n        }\n      ]\n    }\n  ]\n}\n\nNow read the passages below. They are a different list: answer for\nthese, not for the example, and use only the ids that appear here.\n\nPassages:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"5 May 2026\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"Northgate Water\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"Our reference: NW-55210\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"Our records show that water account of £96.45 remains outstanding. Please pay £96.45 within 14 days of the date of this letter.\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"We are sorry for any inconvenience this may have caused.\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"Yours sincerely,\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"Northgate Water\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"Your appointment on 12 May was attended and the notes have been added to your record.\"\n  }\n]\n",
+          "response": "{\"results\":[{\"confidence\":\"high\",\"id\":0,\"obligations\":[],\"segment\":\"5 May 2026\"},{\"confidence\":\"high\",\"id\":1,\"obligations\":[],\"segment\":\"Northgate Water\"},{\"confidence\":\"high\",\"id\":2,\"obligations\":[],\"segment\":\"Our reference: NW-55210\"},{\"confidence\":\"high\",\"id\":3,\"obligations\":[{\"anchor\":\"the date of this letter\",\"ask\":\"Pay £96.45\",\"deadline\":\"within 14 days\",\"kind\":\"payment\",\"party\":\"Northgate Water\"}],\"segment\":\"Our records show that water account of £96.45 remains outstanding. Please pay £96.45 within 14 days of the date of this letter.\"},{\"confidence\":\"high\",\"id\":4,\"obligations\":[],\"segment\":\"We are sorry for any inconvenience this may have caused.\"},{\"confidence\":\"high\",\"id\":5,\"obligations\":[],\"segment\":\"Yours sincerely,\"},{\"confidence\":\"high\",\"id\":6,\"obligations\":[],\"segment\":\"Northgate Water\"},{\"confidence\":\"high\",\"id\":7,\"obligations\":[],\"segment\":\"Your appointment on 12 May was attended and the notes have been added to your record.\"}]}"
+        }
+      ]
+    },
+    {
+      "id": "app.kttl.letter-to-actions/development-payment_relative-dawn-41/payment_relative-dawn-41-no-ask-02",
+      "item_id": "payment_relative-dawn-41-no-ask-02",
+      "pack": "app.kttl.letter-to-actions",
+      "pack_version": "0.2.0",
+      "prompt_version": "blake3:571efa3adbfef212b46bbc36b0f757c9f8612ab55d3812388743f539f6ef1542",
+      "fixture": "generated-development-payment_relative-dawn-41.txt",
+      "fixture_id": "development-payment_relative-dawn-41",
+      "strata": [
+        "any-letter",
+        "payment-relative",
+        "no-obligation"
+      ],
+      "raw_input": "We are sorry for any inconvenience this may have caused.",
+      "decision_key": "we are sorry for any inconvenience this may have caused.",
+      "metric": "extraction",
+      "expected": null,
+      "actual": {
+        "outcome": "absent"
+      },
+      "exchanges": [
+        {
+          "step": "Reading what it asks of you",
+          "batch": 1,
+          "request": "You read one passage of a letter at a time and say what, if anything,\nit asks somebody to do.\n\nFor each passage, decide:\n- obligations: a list of the things this passage asks of the person who\n  received the letter. Most passages ask for nothing — an empty list is\n  a correct answer, not a failure, and it is always better than a\n  guess. A passage that thanks somebody, apologises, explains a change\n  or gives a reference number asks for nothing.\n- confidence: \"high\" | \"medium\" | \"low\"\n\nFor each obligation give:\n- kind: \"payment\" | \"response\" | \"attendance\" | \"other\"\n- party: the organisation doing the asking, exactly as the letter names\n  them — never the person receiving it. Some passages name them and\n  some do not; the letter as a whole always does, in a heading or a\n  sign-off. Use that name for every obligation in the letter.\n- ask: what the person must do, in a short phrase they can read\n- deadline: the words the letter uses for when the thing must be done,\n  copied exactly — \"within 14 days\", \"by the end of the month\", \"on 3\n  March 2026\". Advice about how to go about it is not a deadline, even\n  when it mentions a time: what matters is when the thing itself must\n  happen, not how to prepare for it. Where the letter gives a day for an\n  appointment, a hearing or a meeting, that day is the deadline. Never\n  work out a date yourself and never write one the letter does not\n  contain.\n- anchor: what the deadline counts from, in the letter's own words —\n  \"the date of this letter\", or a date the letter states. If nothing is\n  given, write \"no particular date\".\n\nYou are not asked to work out when anything actually falls due. That is\ndone separately, from the words you copy. Copying the deadline exactly\nis the whole job; a date you invent is a deadline somebody misses.\n\nReturn one result per input, with the same \"id\" you were given, and\necho the passage back in \"segment\". Return JSON only.\n\nHere is a worked example, showing the passages it was given and the\nanswer they produced. Its ids are in the 900s and belong to the example\nalone — they are never ids you will be asked about.\n\n{\n  \"results\": [\n    {\n      \"id\": 900,\n      \"segment\": \"Please pay £84.00 for your garden waste licence within 14 days of the date of this letter.\",\n      \"confidence\": \"high\",\n      \"obligations\": [\n        {\n          \"kind\": \"payment\",\n          \"party\": \"Redhill District Council\",\n          \"ask\": \"Pay £84.00 for the garden waste licence\",\n          \"deadline\": \"within 14 days\",\n          \"anchor\": \"the date of this letter\"\n        }\n      ]\n    },\n    {\n      \"id\": 901,\n      \"segment\": \"We are sorry for the delay in replying and thank you for your patience.\",\n      \"confidence\": \"high\",\n      \"obligations\": []\n    },\n    {\n      \"id\": 902,\n      \"segment\": \"You must attend a hearing at the tribunal on 14 September 2026.\",\n      \"confidence\": \"high\",\n      \"obligations\": [\n        {\n          \"kind\": \"attendance\",\n          \"party\": \"Redhill District Council\",\n          \"ask\": \"Attend the tribunal hearing\",\n          \"deadline\": \"on 14 September 2026\",\n          \"anchor\": \"14 September 2026\"\n        }\n      ]\n    },\n    {\n      \"id\": 903,\n      \"segment\": \"Please send us a reading from your meter at your earliest convenience.\",\n      \"confidence\": \"high\",\n      \"obligations\": [\n        {\n          \"kind\": \"response\",\n          \"party\": \"Redhill District Council\",\n          \"ask\": \"Send a meter reading\",\n          \"deadline\": \"at your earliest convenience\",\n          \"anchor\": \"no particular date\"\n        }\n      ]\n    }\n  ]\n}\n\nNow read the passages below. They are a different list: answer for\nthese, not for the example, and use only the ids that appear here.\n\nPassages:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"5 May 2026\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"Northgate Water\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"Our reference: NW-55210\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"Our records show that water account of £96.45 remains outstanding. Please pay £96.45 within 14 days of the date of this letter.\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"We are sorry for any inconvenience this may have caused.\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"Yours sincerely,\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"Northgate Water\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"Your appointment on 12 May was attended and the notes have been added to your record.\"\n  }\n]\n",
+          "response": "{\"results\":[{\"confidence\":\"high\",\"id\":0,\"obligations\":[],\"segment\":\"5 May 2026\"},{\"confidence\":\"high\",\"id\":1,\"obligations\":[],\"segment\":\"Northgate Water\"},{\"confidence\":\"high\",\"id\":2,\"obligations\":[],\"segment\":\"Our reference: NW-55210\"},{\"confidence\":\"high\",\"id\":3,\"obligations\":[{\"anchor\":\"the date of this letter\",\"ask\":\"Pay £96.45\",\"deadline\":\"within 14 days\",\"kind\":\"payment\",\"party\":\"Northgate Water\"}],\"segment\":\"Our records show that water account of £96.45 remains outstanding. Please pay £96.45 within 14 days of the date of this letter.\"},{\"confidence\":\"high\",\"id\":4,\"obligations\":[],\"segment\":\"We are sorry for any inconvenience this may have caused.\"},{\"confidence\":\"high\",\"id\":5,\"obligations\":[],\"segment\":\"Yours sincerely,\"},{\"confidence\":\"high\",\"id\":6,\"obligations\":[],\"segment\":\"Northgate Water\"},{\"confidence\":\"high\",\"id\":7,\"obligations\":[],\"segment\":\"Your appointment on 12 May was attended and the notes have been added to your record.\"}]}"
+        }
+      ]
+    },
+    {
+      "id": "app.kttl.letter-to-actions/development-payment_relative-dawn-41/payment_relative-dawn-41-no-ask-04",
+      "item_id": "payment_relative-dawn-41-no-ask-04",
+      "pack": "app.kttl.letter-to-actions",
+      "pack_version": "0.2.0",
+      "prompt_version": "blake3:571efa3adbfef212b46bbc36b0f757c9f8612ab55d3812388743f539f6ef1542",
+      "fixture": "generated-development-payment_relative-dawn-41.txt",
+      "fixture_id": "development-payment_relative-dawn-41",
+      "strata": [
+        "any-letter",
+        "payment-relative",
+        "no-obligation"
+      ],
+      "raw_input": "Your appointment on 12 May was attended and the notes have been added to your record.",
+      "decision_key": "your appointment on 12 may was attended and the notes have been added to your record.",
+      "metric": "extraction",
+      "expected": null,
+      "actual": {
+        "outcome": "absent"
+      },
+      "exchanges": [
+        {
+          "step": "Reading what it asks of you",
+          "batch": 1,
+          "request": "You read one passage of a letter at a time and say what, if anything,\nit asks somebody to do.\n\nFor each passage, decide:\n- obligations: a list of the things this passage asks of the person who\n  received the letter. Most passages ask for nothing — an empty list is\n  a correct answer, not a failure, and it is always better than a\n  guess. A passage that thanks somebody, apologises, explains a change\n  or gives a reference number asks for nothing.\n- confidence: \"high\" | \"medium\" | \"low\"\n\nFor each obligation give:\n- kind: \"payment\" | \"response\" | \"attendance\" | \"other\"\n- party: the organisation doing the asking, exactly as the letter names\n  them — never the person receiving it. Some passages name them and\n  some do not; the letter as a whole always does, in a heading or a\n  sign-off. Use that name for every obligation in the letter.\n- ask: what the person must do, in a short phrase they can read\n- deadline: the words the letter uses for when the thing must be done,\n  copied exactly — \"within 14 days\", \"by the end of the month\", \"on 3\n  March 2026\". Advice about how to go about it is not a deadline, even\n  when it mentions a time: what matters is when the thing itself must\n  happen, not how to prepare for it. Where the letter gives a day for an\n  appointment, a hearing or a meeting, that day is the deadline. Never\n  work out a date yourself and never write one the letter does not\n  contain.\n- anchor: what the deadline counts from, in the letter's own words —\n  \"the date of this letter\", or a date the letter states. If nothing is\n  given, write \"no particular date\".\n\nYou are not asked to work out when anything actually falls due. That is\ndone separately, from the words you copy. Copying the deadline exactly\nis the whole job; a date you invent is a deadline somebody misses.\n\nReturn one result per input, with the same \"id\" you were given, and\necho the passage back in \"segment\". Return JSON only.\n\nHere is a worked example, showing the passages it was given and the\nanswer they produced. Its ids are in the 900s and belong to the example\nalone — they are never ids you will be asked about.\n\n{\n  \"results\": [\n    {\n      \"id\": 900,\n      \"segment\": \"Please pay £84.00 for your garden waste licence within 14 days of the date of this letter.\",\n      \"confidence\": \"high\",\n      \"obligations\": [\n        {\n          \"kind\": \"payment\",\n          \"party\": \"Redhill District Council\",\n          \"ask\": \"Pay £84.00 for the garden waste licence\",\n          \"deadline\": \"within 14 days\",\n          \"anchor\": \"the date of this letter\"\n        }\n      ]\n    },\n    {\n      \"id\": 901,\n      \"segment\": \"We are sorry for the delay in replying and thank you for your patience.\",\n      \"confidence\": \"high\",\n      \"obligations\": []\n    },\n    {\n      \"id\": 902,\n      \"segment\": \"You must attend a hearing at the tribunal on 14 September 2026.\",\n      \"confidence\": \"high\",\n      \"obligations\": [\n        {\n          \"kind\": \"attendance\",\n          \"party\": \"Redhill District Council\",\n          \"ask\": \"Attend the tribunal hearing\",\n          \"deadline\": \"on 14 September 2026\",\n          \"anchor\": \"14 September 2026\"\n        }\n      ]\n    },\n    {\n      \"id\": 903,\n      \"segment\": \"Please send us a reading from your meter at your earliest convenience.\",\n      \"confidence\": \"high\",\n      \"obligations\": [\n        {\n          \"kind\": \"response\",\n          \"party\": \"Redhill District Council\",\n          \"ask\": \"Send a meter reading\",\n          \"deadline\": \"at your earliest convenience\",\n          \"anchor\": \"no particular date\"\n        }\n      ]\n    }\n  ]\n}\n\nNow read the passages below. They are a different list: answer for\nthese, not for the example, and use only the ids that appear here.\n\nPassages:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"5 May 2026\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"Northgate Water\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"Our reference: NW-55210\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"Our records show that water account of £96.45 remains outstanding. Please pay £96.45 within 14 days of the date of this letter.\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"We are sorry for any inconvenience this may have caused.\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"Yours sincerely,\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"Northgate Water\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"Your appointment on 12 May was attended and the notes have been added to your record.\"\n  }\n]\n",
+          "response": "{\"results\":[{\"confidence\":\"high\",\"id\":0,\"obligations\":[],\"segment\":\"5 May 2026\"},{\"confidence\":\"high\",\"id\":1,\"obligations\":[],\"segment\":\"Northgate Water\"},{\"confidence\":\"high\",\"id\":2,\"obligations\":[],\"segment\":\"Our reference: NW-55210\"},{\"confidence\":\"high\",\"id\":3,\"obligations\":[{\"anchor\":\"the date of this letter\",\"ask\":\"Pay £96.45\",\"deadline\":\"within 14 days\",\"kind\":\"payment\",\"party\":\"Northgate Water\"}],\"segment\":\"Our records show that water account of £96.45 remains outstanding. Please pay £96.45 within 14 days of the date of this letter.\"},{\"confidence\":\"high\",\"id\":4,\"obligations\":[],\"segment\":\"We are sorry for any inconvenience this may have caused.\"},{\"confidence\":\"high\",\"id\":5,\"obligations\":[],\"segment\":\"Yours sincerely,\"},{\"confidence\":\"high\",\"id\":6,\"obligations\":[],\"segment\":\"Northgate Water\"},{\"confidence\":\"high\",\"id\":7,\"obligations\":[],\"segment\":\"Your appointment on 12 May was attended and the notes have been added to your record.\"}]}"
+        }
+      ]
+    }
+  ],
+  "end_to_end": 1.0,
+  "needs_review_rate": 0.0,
+  "perf": {
+    "wall_ms": 14089,
+    "model_ms": 14074,
+    "tokens_per_second": 35.726807,
+    "peak_rss_mb": 3047,
+    "retries": 0
+  }
+}

@@ -1,0 +1,296 @@
+[
+  {
+    "id": "app.kttl.renewal-diff/development-premium_rose-fennel-06/development-premium_rose-fennel-06-previous-no-value-5119e8",
+    "item_id": "development-premium_rose-fennel-06-previous-no-value-5119e8",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-premium_rose-fennel-06",
+    "fixture_id": "development-premium_rose-fennel-06",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Corvin Mutual pet insurance — policy schedule FENNEL-PR-435 for the year to 31 August 2026.",
+    "decision_key": "previous|corvin mutual pet insurance — policy schedule fennel-pr-435 for the year to 31 august 2026.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-premium_rose-fennel-06/development-premium_rose-fennel-06-previous-premium-871b30",
+    "item_id": "development-premium_rose-fennel-06-previous-premium-871b30",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-premium_rose-fennel-06",
+    "fixture_id": "development-premium_rose-fennel-06",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Total annual premium: £1,362.00.",
+    "decision_key": "previous|total annual premium: £1,362.00.",
+    "metric": "extraction",
+    "expected": {
+      "term": "premium",
+      "basis": "annual",
+      "value": "£1,362.00",
+      "quote": "Total annual premium: £1,362.00."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-premium_rose-fennel-06/development-premium_rose-fennel-06-previous-compulsory-excess-f2f7bd",
+    "item_id": "development-premium_rose-fennel-06-previous-compulsory-excess-f2f7bd",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-premium_rose-fennel-06",
+    "fixture_id": "development-premium_rose-fennel-06",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Compulsory excess: £830.00 per claim.",
+    "decision_key": "previous|compulsory excess: £830.00 per claim.",
+    "metric": "extraction",
+    "expected": {
+      "term": "compulsory_excess",
+      "basis": "per_claim",
+      "value": "£830.00",
+      "quote": "Compulsory excess: £830.00 per claim."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-premium_rose-fennel-06/development-premium_rose-fennel-06-previous-cover-limit-612ea4",
+    "item_id": "development-premium_rose-fennel-06-previous-cover-limit-612ea4",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-premium_rose-fennel-06",
+    "fixture_id": "development-premium_rose-fennel-06",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Cover limit: £3,760.00 per policy.",
+    "decision_key": "previous|cover limit: £3,760.00 per policy.",
+    "metric": "extraction",
+    "expected": {
+      "term": "cover_limit",
+      "basis": "per_policy",
+      "value": "£3,760.00",
+      "quote": "Cover limit: £3,760.00 per policy."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-premium_rose-fennel-06/development-premium_rose-fennel-06-previous-no-value-a4b088",
+    "item_id": "development-premium_rose-fennel-06-previous-no-value-a4b088",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-premium_rose-fennel-06",
+    "fixture_id": "development-premium_rose-fennel-06",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Your reference is FENNEL-PR-435. Quote it whenever you write to us about this policy.",
+    "decision_key": "previous|your reference is fennel-pr-435. quote it whenever you write to us about this policy.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-premium_rose-fennel-06/development-premium_rose-fennel-06-previous-no-value-145aaf",
+    "item_id": "development-premium_rose-fennel-06-previous-no-value-145aaf",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-premium_rose-fennel-06",
+    "fixture_id": "development-premium_rose-fennel-06",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Corvin Mutual arranges pet insurance cover under FENNEL-PR-435 and is regulated in the United Kingdom.",
+    "decision_key": "previous|corvin mutual arranges pet insurance cover under fennel-pr-435 and is regulated in the united kingdom.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-premium_rose-fennel-06/development-premium_rose-fennel-06-renewal-no-value-1ae963",
+    "item_id": "development-premium_rose-fennel-06-renewal-no-value-1ae963",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-premium_rose-fennel-06",
+    "fixture_id": "development-premium_rose-fennel-06",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Corvin Mutual pet insurance — renewal schedule FENNEL-PR-435 for the year to 31 August 2027.",
+    "decision_key": "renewal|corvin mutual pet insurance — renewal schedule fennel-pr-435 for the year to 31 august 2027.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-premium_rose-fennel-06/development-premium_rose-fennel-06-renewal-premium-cf655e",
+    "item_id": "development-premium_rose-fennel-06-renewal-premium-cf655e",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-premium_rose-fennel-06",
+    "fixture_id": "development-premium_rose-fennel-06",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Total annual premium: £1,494.50.",
+    "decision_key": "renewal|total annual premium: £1,494.50.",
+    "metric": "extraction",
+    "expected": {
+      "term": "premium",
+      "basis": "annual",
+      "value": "£1,494.50",
+      "quote": "Total annual premium: £1,494.50."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-premium_rose-fennel-06/development-premium_rose-fennel-06-renewal-compulsory-excess-f2f7bd",
+    "item_id": "development-premium_rose-fennel-06-renewal-compulsory-excess-f2f7bd",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-premium_rose-fennel-06",
+    "fixture_id": "development-premium_rose-fennel-06",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Compulsory excess: £830.00 per claim.",
+    "decision_key": "renewal|compulsory excess: £830.00 per claim.",
+    "metric": "extraction",
+    "expected": {
+      "term": "compulsory_excess",
+      "basis": "per_claim",
+      "value": "£830.00",
+      "quote": "Compulsory excess: £830.00 per claim."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-premium_rose-fennel-06/development-premium_rose-fennel-06-renewal-cover-limit-612ea4",
+    "item_id": "development-premium_rose-fennel-06-renewal-cover-limit-612ea4",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-premium_rose-fennel-06",
+    "fixture_id": "development-premium_rose-fennel-06",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Cover limit: £3,760.00 per policy.",
+    "decision_key": "renewal|cover limit: £3,760.00 per policy.",
+    "metric": "extraction",
+    "expected": {
+      "term": "cover_limit",
+      "basis": "per_policy",
+      "value": "£3,760.00",
+      "quote": "Cover limit: £3,760.00 per policy."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-premium_rose-fennel-06/development-premium_rose-fennel-06-renewal-no-value-145aaf",
+    "item_id": "development-premium_rose-fennel-06-renewal-no-value-145aaf",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-premium_rose-fennel-06",
+    "fixture_id": "development-premium_rose-fennel-06",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Corvin Mutual arranges pet insurance cover under FENNEL-PR-435 and is regulated in the United Kingdom.",
+    "decision_key": "renewal|corvin mutual arranges pet insurance cover under fennel-pr-435 and is regulated in the united kingdom.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-premium_rose-fennel-06/development-premium_rose-fennel-06-renewal-no-value-a4b088",
+    "item_id": "development-premium_rose-fennel-06-renewal-no-value-a4b088",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-premium_rose-fennel-06",
+    "fixture_id": "development-premium_rose-fennel-06",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Your reference is FENNEL-PR-435. Quote it whenever you write to us about this policy.",
+    "decision_key": "renewal|your reference is fennel-pr-435. quote it whenever you write to us about this policy.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  }
+]

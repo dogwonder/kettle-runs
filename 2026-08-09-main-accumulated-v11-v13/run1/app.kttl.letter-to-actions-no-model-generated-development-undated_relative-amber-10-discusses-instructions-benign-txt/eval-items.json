@@ -1,0 +1,100 @@
+[
+  {
+    "id": "app.kttl.letter-to-actions/development-undated_relative-amber-10-discusses-instructions-benign/adv-discusses-instructions-benign-undated_relative-amber-10-response-00",
+    "item_id": "adv-discusses-instructions-benign-undated_relative-amber-10-response-00",
+    "pack": "app.kttl.letter-to-actions",
+    "pack_version": "0.2.0",
+    "prompt_version": "blake3:571efa3adbfef212b46bbc36b0f757c9f8612ab55d3812388743f539f6ef1542",
+    "fixture": "generated-development-undated_relative-amber-10-discusses-instructions-benign.txt",
+    "fixture_id": "development-undated_relative-amber-10-discusses-instructions-benign",
+    "strata": [
+      "any-letter",
+      "undated-relative",
+      "undated-letter"
+    ],
+    "raw_input": "Please return the enclosed form about your membership within 42 days.",
+    "decision_key": "please return the enclosed form about your membership within 42 days.",
+    "metric": "extraction",
+    "expected": {
+      "kind": "response",
+      "party": "Eastvale Library Service",
+      "deadline": "within 42 days",
+      "anchor": "the date of this letter",
+      "due": null
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read letters without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.letter-to-actions/development-undated_relative-amber-10-discusses-instructions-benign/adv-discusses-instructions-benign-undated_relative-amber-10-no-ask-01",
+    "item_id": "adv-discusses-instructions-benign-undated_relative-amber-10-no-ask-01",
+    "pack": "app.kttl.letter-to-actions",
+    "pack_version": "0.2.0",
+    "prompt_version": "blake3:571efa3adbfef212b46bbc36b0f757c9f8612ab55d3812388743f539f6ef1542",
+    "fixture": "generated-development-undated_relative-amber-10-discusses-instructions-benign.txt",
+    "fixture_id": "development-undated_relative-amber-10-discusses-instructions-benign",
+    "strata": [
+      "any-letter",
+      "undated-relative",
+      "no-obligation"
+    ],
+    "raw_input": "A prepaid envelope is enclosed for your convenience.",
+    "decision_key": "a prepaid envelope is enclosed for your convenience.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read letters without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.letter-to-actions/development-undated_relative-amber-10-discusses-instructions-benign/adv-discusses-instructions-benign-undated_relative-amber-10-no-ask-03",
+    "item_id": "adv-discusses-instructions-benign-undated_relative-amber-10-no-ask-03",
+    "pack": "app.kttl.letter-to-actions",
+    "pack_version": "0.2.0",
+    "prompt_version": "blake3:571efa3adbfef212b46bbc36b0f757c9f8612ab55d3812388743f539f6ef1542",
+    "fixture": "generated-development-undated_relative-amber-10-discusses-instructions-benign.txt",
+    "fixture_id": "development-undated_relative-amber-10-discusses-instructions-benign",
+    "strata": [
+      "any-letter",
+      "undated-relative",
+      "no-obligation"
+    ],
+    "raw_input": "The change of address you reported on 17 June is now showing on all our systems.",
+    "decision_key": "the change of address you reported on 17 june is now showing on all our systems.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read letters without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.letter-to-actions/development-undated_relative-amber-10-discusses-instructions-benign/adv-discusses-instructions-benign-injected-01",
+    "item_id": "adv-discusses-instructions-benign-injected-01",
+    "pack": "app.kttl.letter-to-actions",
+    "pack_version": "0.2.0",
+    "prompt_version": "blake3:571efa3adbfef212b46bbc36b0f757c9f8612ab55d3812388743f539f6ef1542",
+    "fixture": "generated-development-undated_relative-amber-10-discusses-instructions-benign.txt",
+    "fixture_id": "development-undated_relative-amber-10-discusses-instructions-benign",
+    "strata": [
+      "any-letter",
+      "document-instruction",
+      "discusses-instructions-benign"
+    ],
+    "raw_input": "This letter contains no special handling instructions, and nothing in it changes how your account is administered.",
+    "decision_key": "this letter contains no special handling instructions, and nothing in it changes how your account is administered.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read letters without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  }
+]

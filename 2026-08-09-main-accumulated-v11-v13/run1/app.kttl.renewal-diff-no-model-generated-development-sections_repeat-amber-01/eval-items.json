@@ -1,0 +1,850 @@
+[
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-amber-01/development-sections_repeat-amber-01-previous-no-value-1ec645",
+    "item_id": "development-sections_repeat-amber-01-previous-no-value-1ec645",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-amber-01",
+    "fixture_id": "development-sections_repeat-amber-01",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Brackenfield Cover buildings insurance — policy schedule AMBER-SR-400 for the year to 31 August 2026.",
+    "decision_key": "previous|brackenfield cover buildings insurance — policy schedule amber-sr-400 for the year to 31 august 2026.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-amber-01/development-sections_repeat-amber-01-previous-no-value-94eb6c",
+    "item_id": "development-sections_repeat-amber-01-previous-no-value-94eb6c",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-amber-01",
+    "fixture_id": "development-sections_repeat-amber-01",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Period of insurance under AMBER-SR-400: From 1 September 2025 to 31 August 2026 both days inclusive.",
+    "decision_key": "previous|period of insurance under amber-sr-400: from 1 september 2025 to 31 august 2026 both days inclusive.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-amber-01/development-sections_repeat-amber-01-previous-no-value-350b31",
+    "item_id": "development-sections_repeat-amber-01-previous-no-value-350b31",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-amber-01",
+    "fixture_id": "development-sections_repeat-amber-01",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Section: professional indemnity (schedule AMBER-SR-400)",
+    "decision_key": "previous|section: professional indemnity (schedule amber-sr-400)",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-amber-01/development-sections_repeat-amber-01-previous-cover-limit-367418",
+    "item_id": "development-sections_repeat-amber-01-previous-cover-limit-367418",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-amber-01",
+    "fixture_id": "development-sections_repeat-amber-01",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Insurance amount: £604,400.00.",
+    "decision_key": "previous|insurance amount: £604,400.00.",
+    "metric": "extraction",
+    "expected": {
+      "term": "cover_limit",
+      "basis": "per_policy",
+      "value": "£604,400.00",
+      "quote": "Insurance amount: £604,400.00."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-amber-01/development-sections_repeat-amber-01-previous-compulsory-excess-58947a",
+    "item_id": "development-sections_repeat-amber-01-previous-compulsory-excess-58947a",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-amber-01",
+    "fixture_id": "development-sections_repeat-amber-01",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Excess: £5,420.00 each and every claim.",
+    "decision_key": "previous|excess: £5,420.00 each and every claim.",
+    "metric": "extraction",
+    "expected": {
+      "term": "compulsory_excess",
+      "basis": "per_claim",
+      "value": "£5,420.00",
+      "quote": "Excess: £5,420.00 each and every claim."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-amber-01/development-sections_repeat-amber-01-previous-premium-3f0acf",
+    "item_id": "development-sections_repeat-amber-01-previous-premium-3f0acf",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-amber-01",
+    "fixture_id": "development-sections_repeat-amber-01",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Annual premium: £1,447.20.",
+    "decision_key": "previous|annual premium: £1,447.20.",
+    "metric": "extraction",
+    "expected": {
+      "term": "premium",
+      "basis": "annual",
+      "value": "£1,447.20",
+      "quote": "Annual premium: £1,447.20."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-amber-01/development-sections_repeat-amber-01-previous-no-value-963c1f",
+    "item_id": "development-sections_repeat-amber-01-previous-no-value-963c1f",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-amber-01",
+    "fixture_id": "development-sections_repeat-amber-01",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Section: legal expenses (schedule AMBER-SR-400)",
+    "decision_key": "previous|section: legal expenses (schedule amber-sr-400)",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-amber-01/development-sections_repeat-amber-01-previous-cover-limit-4e3287",
+    "item_id": "development-sections_repeat-amber-01-previous-cover-limit-4e3287",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-amber-01",
+    "fixture_id": "development-sections_repeat-amber-01",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Insurance amount: £854,400.00.",
+    "decision_key": "previous|insurance amount: £854,400.00.",
+    "metric": "extraction",
+    "expected": {
+      "term": "cover_limit",
+      "basis": "per_policy",
+      "value": "£854,400.00",
+      "quote": "Insurance amount: £854,400.00."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-amber-01/development-sections_repeat-amber-01-previous-compulsory-excess-c87f3f",
+    "item_id": "development-sections_repeat-amber-01-previous-compulsory-excess-c87f3f",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-amber-01",
+    "fixture_id": "development-sections_repeat-amber-01",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Excess: £5,451.00 each and every claim.",
+    "decision_key": "previous|excess: £5,451.00 each and every claim.",
+    "metric": "extraction",
+    "expected": {
+      "term": "compulsory_excess",
+      "basis": "per_claim",
+      "value": "£5,451.00",
+      "quote": "Excess: £5,451.00 each and every claim."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-amber-01/development-sections_repeat-amber-01-previous-premium-25ffb3",
+    "item_id": "development-sections_repeat-amber-01-previous-premium-25ffb3",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-amber-01",
+    "fixture_id": "development-sections_repeat-amber-01",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Annual premium: £1,494.20.",
+    "decision_key": "previous|annual premium: £1,494.20.",
+    "metric": "extraction",
+    "expected": {
+      "term": "premium",
+      "basis": "annual",
+      "value": "£1,494.20",
+      "quote": "Annual premium: £1,494.20."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-amber-01/development-sections_repeat-amber-01-previous-no-value-c48b68",
+    "item_id": "development-sections_repeat-amber-01-previous-no-value-c48b68",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-amber-01",
+    "fixture_id": "development-sections_repeat-amber-01",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Section: crisis containment (schedule AMBER-SR-400)",
+    "decision_key": "previous|section: crisis containment (schedule amber-sr-400)",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-amber-01/development-sections_repeat-amber-01-previous-cover-limit-258180",
+    "item_id": "development-sections_repeat-amber-01-previous-cover-limit-258180",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-amber-01",
+    "fixture_id": "development-sections_repeat-amber-01",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Insurance amount: £1,104,400.00.",
+    "decision_key": "previous|insurance amount: £1,104,400.00.",
+    "metric": "extraction",
+    "expected": {
+      "term": "cover_limit",
+      "basis": "per_policy",
+      "value": "£1,104,400.00",
+      "quote": "Insurance amount: £1,104,400.00."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-amber-01/development-sections_repeat-amber-01-previous-compulsory-excess-4678fb",
+    "item_id": "development-sections_repeat-amber-01-previous-compulsory-excess-4678fb",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-amber-01",
+    "fixture_id": "development-sections_repeat-amber-01",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Excess: £5,482.00 each and every claim.",
+    "decision_key": "previous|excess: £5,482.00 each and every claim.",
+    "metric": "extraction",
+    "expected": {
+      "term": "compulsory_excess",
+      "basis": "per_claim",
+      "value": "£5,482.00",
+      "quote": "Excess: £5,482.00 each and every claim."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-amber-01/development-sections_repeat-amber-01-previous-premium-71887b",
+    "item_id": "development-sections_repeat-amber-01-previous-premium-71887b",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-amber-01",
+    "fixture_id": "development-sections_repeat-amber-01",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Annual premium: £1,541.20.",
+    "decision_key": "previous|annual premium: £1,541.20.",
+    "metric": "extraction",
+    "expected": {
+      "term": "premium",
+      "basis": "annual",
+      "value": "£1,541.20",
+      "quote": "Annual premium: £1,541.20."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-amber-01/development-sections_repeat-amber-01-previous-premium-648c36",
+    "item_id": "development-sections_repeat-amber-01-previous-premium-648c36",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-amber-01",
+    "fixture_id": "development-sections_repeat-amber-01",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Total annual premium for all sections: £4,482.60.",
+    "decision_key": "previous|total annual premium for all sections: £4,482.60.",
+    "metric": "extraction",
+    "expected": {
+      "term": "premium",
+      "basis": "annual",
+      "value": "£4,482.60",
+      "quote": "Total annual premium for all sections: £4,482.60."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-amber-01/development-sections_repeat-amber-01-previous-no-value-06754f",
+    "item_id": "development-sections_repeat-amber-01-previous-no-value-06754f",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-amber-01",
+    "fixture_id": "development-sections_repeat-amber-01",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Your reference is AMBER-SR-400. Quote it whenever you write to us about this policy.",
+    "decision_key": "previous|your reference is amber-sr-400. quote it whenever you write to us about this policy.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-amber-01/development-sections_repeat-amber-01-previous-no-value-74b08c",
+    "item_id": "development-sections_repeat-amber-01-previous-no-value-74b08c",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-amber-01",
+    "fixture_id": "development-sections_repeat-amber-01",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Brackenfield Cover arranges buildings insurance cover under AMBER-SR-400 and is regulated in the United Kingdom.",
+    "decision_key": "previous|brackenfield cover arranges buildings insurance cover under amber-sr-400 and is regulated in the united kingdom.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-amber-01/development-sections_repeat-amber-01-renewal-no-value-0bcaad",
+    "item_id": "development-sections_repeat-amber-01-renewal-no-value-0bcaad",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-amber-01",
+    "fixture_id": "development-sections_repeat-amber-01",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Brackenfield Cover buildings insurance — renewal schedule AMBER-SR-400 for the year to 31 August 2027.",
+    "decision_key": "renewal|brackenfield cover buildings insurance — renewal schedule amber-sr-400 for the year to 31 august 2027.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-amber-01/development-sections_repeat-amber-01-renewal-no-value-528dbb",
+    "item_id": "development-sections_repeat-amber-01-renewal-no-value-528dbb",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-amber-01",
+    "fixture_id": "development-sections_repeat-amber-01",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Period of insurance under AMBER-SR-400: From 1 September 2026 to 31 August 2027 both days inclusive.",
+    "decision_key": "renewal|period of insurance under amber-sr-400: from 1 september 2026 to 31 august 2027 both days inclusive.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-amber-01/development-sections_repeat-amber-01-renewal-no-value-350b31",
+    "item_id": "development-sections_repeat-amber-01-renewal-no-value-350b31",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-amber-01",
+    "fixture_id": "development-sections_repeat-amber-01",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Section: professional indemnity (schedule AMBER-SR-400)",
+    "decision_key": "renewal|section: professional indemnity (schedule amber-sr-400)",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-amber-01/development-sections_repeat-amber-01-renewal-cover-limit-367418",
+    "item_id": "development-sections_repeat-amber-01-renewal-cover-limit-367418",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-amber-01",
+    "fixture_id": "development-sections_repeat-amber-01",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Insurance amount: £604,400.00.",
+    "decision_key": "renewal|insurance amount: £604,400.00.",
+    "metric": "extraction",
+    "expected": {
+      "term": "cover_limit",
+      "basis": "per_policy",
+      "value": "£604,400.00",
+      "quote": "Insurance amount: £604,400.00."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-amber-01/development-sections_repeat-amber-01-renewal-compulsory-excess-58947a",
+    "item_id": "development-sections_repeat-amber-01-renewal-compulsory-excess-58947a",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-amber-01",
+    "fixture_id": "development-sections_repeat-amber-01",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Excess: £5,420.00 each and every claim.",
+    "decision_key": "renewal|excess: £5,420.00 each and every claim.",
+    "metric": "extraction",
+    "expected": {
+      "term": "compulsory_excess",
+      "basis": "per_claim",
+      "value": "£5,420.00",
+      "quote": "Excess: £5,420.00 each and every claim."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-amber-01/development-sections_repeat-amber-01-renewal-premium-9d924d",
+    "item_id": "development-sections_repeat-amber-01-renewal-premium-9d924d",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-amber-01",
+    "fixture_id": "development-sections_repeat-amber-01",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Annual premium: £1,462.20.",
+    "decision_key": "renewal|annual premium: £1,462.20.",
+    "metric": "extraction",
+    "expected": {
+      "term": "premium",
+      "basis": "annual",
+      "value": "£1,462.20",
+      "quote": "Annual premium: £1,462.20."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-amber-01/development-sections_repeat-amber-01-renewal-no-value-963c1f",
+    "item_id": "development-sections_repeat-amber-01-renewal-no-value-963c1f",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-amber-01",
+    "fixture_id": "development-sections_repeat-amber-01",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Section: legal expenses (schedule AMBER-SR-400)",
+    "decision_key": "renewal|section: legal expenses (schedule amber-sr-400)",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-amber-01/development-sections_repeat-amber-01-renewal-cover-limit-4e3287",
+    "item_id": "development-sections_repeat-amber-01-renewal-cover-limit-4e3287",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-amber-01",
+    "fixture_id": "development-sections_repeat-amber-01",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Insurance amount: £854,400.00.",
+    "decision_key": "renewal|insurance amount: £854,400.00.",
+    "metric": "extraction",
+    "expected": {
+      "term": "cover_limit",
+      "basis": "per_policy",
+      "value": "£854,400.00",
+      "quote": "Insurance amount: £854,400.00."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-amber-01/development-sections_repeat-amber-01-renewal-compulsory-excess-c87f3f",
+    "item_id": "development-sections_repeat-amber-01-renewal-compulsory-excess-c87f3f",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-amber-01",
+    "fixture_id": "development-sections_repeat-amber-01",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Excess: £5,451.00 each and every claim.",
+    "decision_key": "renewal|excess: £5,451.00 each and every claim.",
+    "metric": "extraction",
+    "expected": {
+      "term": "compulsory_excess",
+      "basis": "per_claim",
+      "value": "£5,451.00",
+      "quote": "Excess: £5,451.00 each and every claim."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-amber-01/development-sections_repeat-amber-01-renewal-premium-9c5848",
+    "item_id": "development-sections_repeat-amber-01-renewal-premium-9c5848",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-amber-01",
+    "fixture_id": "development-sections_repeat-amber-01",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Annual premium: £1,509.20.",
+    "decision_key": "renewal|annual premium: £1,509.20.",
+    "metric": "extraction",
+    "expected": {
+      "term": "premium",
+      "basis": "annual",
+      "value": "£1,509.20",
+      "quote": "Annual premium: £1,509.20."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-amber-01/development-sections_repeat-amber-01-renewal-no-value-c48b68",
+    "item_id": "development-sections_repeat-amber-01-renewal-no-value-c48b68",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-amber-01",
+    "fixture_id": "development-sections_repeat-amber-01",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Section: crisis containment (schedule AMBER-SR-400)",
+    "decision_key": "renewal|section: crisis containment (schedule amber-sr-400)",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-amber-01/development-sections_repeat-amber-01-renewal-cover-limit-258180",
+    "item_id": "development-sections_repeat-amber-01-renewal-cover-limit-258180",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-amber-01",
+    "fixture_id": "development-sections_repeat-amber-01",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Insurance amount: £1,104,400.00.",
+    "decision_key": "renewal|insurance amount: £1,104,400.00.",
+    "metric": "extraction",
+    "expected": {
+      "term": "cover_limit",
+      "basis": "per_policy",
+      "value": "£1,104,400.00",
+      "quote": "Insurance amount: £1,104,400.00."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-amber-01/development-sections_repeat-amber-01-renewal-compulsory-excess-4678fb",
+    "item_id": "development-sections_repeat-amber-01-renewal-compulsory-excess-4678fb",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-amber-01",
+    "fixture_id": "development-sections_repeat-amber-01",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Excess: £5,482.00 each and every claim.",
+    "decision_key": "renewal|excess: £5,482.00 each and every claim.",
+    "metric": "extraction",
+    "expected": {
+      "term": "compulsory_excess",
+      "basis": "per_claim",
+      "value": "£5,482.00",
+      "quote": "Excess: £5,482.00 each and every claim."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-amber-01/development-sections_repeat-amber-01-renewal-premium-37e86b",
+    "item_id": "development-sections_repeat-amber-01-renewal-premium-37e86b",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-amber-01",
+    "fixture_id": "development-sections_repeat-amber-01",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Annual premium: £1,556.20.",
+    "decision_key": "renewal|annual premium: £1,556.20.",
+    "metric": "extraction",
+    "expected": {
+      "term": "premium",
+      "basis": "annual",
+      "value": "£1,556.20",
+      "quote": "Annual premium: £1,556.20."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-amber-01/development-sections_repeat-amber-01-renewal-premium-d5f908",
+    "item_id": "development-sections_repeat-amber-01-renewal-premium-d5f908",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-amber-01",
+    "fixture_id": "development-sections_repeat-amber-01",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Total annual premium for all sections: £4,527.60.",
+    "decision_key": "renewal|total annual premium for all sections: £4,527.60.",
+    "metric": "extraction",
+    "expected": {
+      "term": "premium",
+      "basis": "annual",
+      "value": "£4,527.60",
+      "quote": "Total annual premium for all sections: £4,527.60."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-amber-01/development-sections_repeat-amber-01-renewal-no-value-74b08c",
+    "item_id": "development-sections_repeat-amber-01-renewal-no-value-74b08c",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-amber-01",
+    "fixture_id": "development-sections_repeat-amber-01",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Brackenfield Cover arranges buildings insurance cover under AMBER-SR-400 and is regulated in the United Kingdom.",
+    "decision_key": "renewal|brackenfield cover arranges buildings insurance cover under amber-sr-400 and is regulated in the united kingdom.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-amber-01/development-sections_repeat-amber-01-renewal-no-value-06754f",
+    "item_id": "development-sections_repeat-amber-01-renewal-no-value-06754f",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-amber-01",
+    "fixture_id": "development-sections_repeat-amber-01",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Your reference is AMBER-SR-400. Quote it whenever you write to us about this policy.",
+    "decision_key": "renewal|your reference is amber-sr-400. quote it whenever you write to us about this policy.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  }
+]

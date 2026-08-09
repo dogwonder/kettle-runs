@@ -1,0 +1,108 @@
+[
+  {
+    "id": "app.kttl.letter-to-actions/development-payment_and_response-elm-32/payment_and_response-elm-32-payment-01",
+    "item_id": "payment_and_response-elm-32-payment-01",
+    "pack": "app.kttl.letter-to-actions",
+    "pack_version": "0.2.0",
+    "prompt_version": "blake3:571efa3adbfef212b46bbc36b0f757c9f8612ab55d3812388743f539f6ef1542",
+    "fixture": "generated-development-payment_and_response-elm-32.txt",
+    "fixture_id": "development-payment_and_response-elm-32",
+    "strata": [
+      "any-letter",
+      "payment-and-response",
+      "relative-deadline",
+      "multiple-obligations"
+    ],
+    "raw_input": "Please pay £142.75 for your energy account within 14 days of the date of this letter.",
+    "decision_key": "please pay £142.75 for your energy account within 14 days of the date of this letter.",
+    "metric": "extraction",
+    "expected": {
+      "kind": "payment",
+      "party": "Cranleigh Energy",
+      "deadline": "within 14 days",
+      "anchor": "the date of this letter",
+      "due": "2026-08-30"
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read letters without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.letter-to-actions/development-payment_and_response-elm-32/payment_and_response-elm-32-response-02",
+    "item_id": "payment_and_response-elm-32-response-02",
+    "pack": "app.kttl.letter-to-actions",
+    "pack_version": "0.2.0",
+    "prompt_version": "blake3:571efa3adbfef212b46bbc36b0f757c9f8612ab55d3812388743f539f6ef1542",
+    "fixture": "generated-development-payment_and_response-elm-32.txt",
+    "fixture_id": "development-payment_and_response-elm-32",
+    "strata": [
+      "any-letter",
+      "payment-and-response",
+      "relative-deadline",
+      "multiple-obligations"
+    ],
+    "raw_input": "You must also confirm in writing that you have made this payment, within 28 days of the date of this letter.",
+    "decision_key": "you must also confirm in writing that you have made this payment, within 28 days of the date of this letter.",
+    "metric": "extraction",
+    "expected": {
+      "kind": "response",
+      "party": "Cranleigh Energy",
+      "deadline": "within 28 days",
+      "anchor": "the date of this letter",
+      "due": "2026-09-13"
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read letters without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.letter-to-actions/development-payment_and_response-elm-32/payment_and_response-elm-32-no-ask-03",
+    "item_id": "payment_and_response-elm-32-no-ask-03",
+    "pack": "app.kttl.letter-to-actions",
+    "pack_version": "0.2.0",
+    "prompt_version": "blake3:571efa3adbfef212b46bbc36b0f757c9f8612ab55d3812388743f539f6ef1542",
+    "fixture": "generated-development-payment_and_response-elm-32.txt",
+    "fixture_id": "development-payment_and_response-elm-32",
+    "strata": [
+      "any-letter",
+      "payment-and-response",
+      "no-obligation"
+    ],
+    "raw_input": "We appreciate your prompt attention to this.",
+    "decision_key": "we appreciate your prompt attention to this.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read letters without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.letter-to-actions/development-payment_and_response-elm-32/payment_and_response-elm-32-no-ask-05",
+    "item_id": "payment_and_response-elm-32-no-ask-05",
+    "pack": "app.kttl.letter-to-actions",
+    "pack_version": "0.2.0",
+    "prompt_version": "blake3:571efa3adbfef212b46bbc36b0f757c9f8612ab55d3812388743f539f6ef1542",
+    "fixture": "generated-development-payment_and_response-elm-32.txt",
+    "fixture_id": "development-payment_and_response-elm-32",
+    "strata": [
+      "any-letter",
+      "payment-and-response",
+      "no-obligation"
+    ],
+    "raw_input": "We are told the works on your street will finish by 30 September; the contractor is handling it.",
+    "decision_key": "we are told the works on your street will finish by 30 september; the contractor is handling it.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read letters without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  }
+]

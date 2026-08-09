@@ -1,0 +1,77 @@
+[
+  {
+    "id": "app.kttl.letter-to-actions/development-payment_anchored-willow-09/payment_anchored-willow-09-payment-02",
+    "item_id": "payment_anchored-willow-09-payment-02",
+    "pack": "app.kttl.letter-to-actions",
+    "pack_version": "0.2.0",
+    "prompt_version": "blake3:571efa3adbfef212b46bbc36b0f757c9f8612ab55d3812388743f539f6ef1542",
+    "fixture": "generated-development-payment_anchored-willow-09.txt",
+    "fixture_id": "development-payment_anchored-willow-09",
+    "strata": [
+      "any-letter",
+      "payment-anchored",
+      "dated-anchor"
+    ],
+    "raw_input": "Please pay £54.00 within 30 days of 10 January 2026, quoting reference DVG-1180.",
+    "decision_key": "please pay £54.00 within 30 days of 10 january 2026, quoting reference dvg-1180.",
+    "metric": "extraction",
+    "expected": {
+      "kind": "payment",
+      "party": "Denholm Veterinary Group",
+      "deadline": "within 30 days",
+      "anchor": "10 January 2026",
+      "due": "2026-02-09"
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read letters without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.letter-to-actions/development-payment_anchored-willow-09/payment_anchored-willow-09-no-ask-03",
+    "item_id": "payment_anchored-willow-09-no-ask-03",
+    "pack": "app.kttl.letter-to-actions",
+    "pack_version": "0.2.0",
+    "prompt_version": "blake3:571efa3adbfef212b46bbc36b0f757c9f8612ab55d3812388743f539f6ef1542",
+    "fixture": "generated-development-payment_anchored-willow-09.txt",
+    "fixture_id": "development-payment_anchored-willow-09",
+    "strata": [
+      "any-letter",
+      "payment-anchored",
+      "no-obligation"
+    ],
+    "raw_input": "Thank you for your co-operation in this matter.",
+    "decision_key": "thank you for your co-operation in this matter.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read letters without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.letter-to-actions/development-payment_anchored-willow-09/payment_anchored-willow-09-no-ask-05",
+    "item_id": "payment_anchored-willow-09-no-ask-05",
+    "pack": "app.kttl.letter-to-actions",
+    "pack_version": "0.2.0",
+    "prompt_version": "blake3:571efa3adbfef212b46bbc36b0f757c9f8612ab55d3812388743f539f6ef1542",
+    "fixture": "generated-development-payment_anchored-willow-09.txt",
+    "fixture_id": "development-payment_anchored-willow-09",
+    "strata": [
+      "any-letter",
+      "payment-anchored",
+      "no-obligation"
+    ],
+    "raw_input": "This is the last letter you will receive about the works, which finished on 6 February.",
+    "decision_key": "this is the last letter you will receive about the works, which finished on 6 february.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read letters without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  }
+]

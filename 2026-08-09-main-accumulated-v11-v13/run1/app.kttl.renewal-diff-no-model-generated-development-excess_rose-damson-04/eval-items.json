@@ -1,0 +1,296 @@
+[
+  {
+    "id": "app.kttl.renewal-diff/development-excess_rose-damson-04/development-excess_rose-damson-04-previous-no-value-672a36",
+    "item_id": "development-excess_rose-damson-04-previous-no-value-672a36",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-excess_rose-damson-04",
+    "fixture_id": "development-excess_rose-damson-04",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Pennine Line Assurance travel insurance — policy schedule DAMSON-ER-421 for the year to 31 August 2026.",
+    "decision_key": "previous|pennine line assurance travel insurance — policy schedule damson-er-421 for the year to 31 august 2026.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-excess_rose-damson-04/development-excess_rose-damson-04-previous-compulsory-excess-d3f42e",
+    "item_id": "development-excess_rose-damson-04-previous-compulsory-excess-d3f42e",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-excess_rose-damson-04",
+    "fixture_id": "development-excess_rose-damson-04",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Compulsory excess: £255.00 per claim.",
+    "decision_key": "previous|compulsory excess: £255.00 per claim.",
+    "metric": "extraction",
+    "expected": {
+      "term": "compulsory_excess",
+      "basis": "per_claim",
+      "value": "£255.00",
+      "quote": "Compulsory excess: £255.00 per claim."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-excess_rose-damson-04/development-excess_rose-damson-04-previous-premium-95accf",
+    "item_id": "development-excess_rose-damson-04-previous-premium-95accf",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-excess_rose-damson-04",
+    "fixture_id": "development-excess_rose-damson-04",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Total annual premium: £557.00.",
+    "decision_key": "previous|total annual premium: £557.00.",
+    "metric": "extraction",
+    "expected": {
+      "term": "premium",
+      "basis": "annual",
+      "value": "£557.00",
+      "quote": "Total annual premium: £557.00."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-excess_rose-damson-04/development-excess_rose-damson-04-previous-cover-limit-62f561",
+    "item_id": "development-excess_rose-damson-04-previous-cover-limit-62f561",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-excess_rose-damson-04",
+    "fixture_id": "development-excess_rose-damson-04",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Cover limit: £2,610.00 per policy.",
+    "decision_key": "previous|cover limit: £2,610.00 per policy.",
+    "metric": "extraction",
+    "expected": {
+      "term": "cover_limit",
+      "basis": "per_policy",
+      "value": "£2,610.00",
+      "quote": "Cover limit: £2,610.00 per policy."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-excess_rose-damson-04/development-excess_rose-damson-04-previous-no-value-b511f3",
+    "item_id": "development-excess_rose-damson-04-previous-no-value-b511f3",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-excess_rose-damson-04",
+    "fixture_id": "development-excess_rose-damson-04",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Your reference is DAMSON-ER-421. Quote it whenever you write to us about this policy.",
+    "decision_key": "previous|your reference is damson-er-421. quote it whenever you write to us about this policy.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-excess_rose-damson-04/development-excess_rose-damson-04-previous-no-value-e68e1b",
+    "item_id": "development-excess_rose-damson-04-previous-no-value-e68e1b",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-excess_rose-damson-04",
+    "fixture_id": "development-excess_rose-damson-04",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Pennine Line Assurance arranges travel insurance cover under DAMSON-ER-421 and is regulated in the United Kingdom.",
+    "decision_key": "previous|pennine line assurance arranges travel insurance cover under damson-er-421 and is regulated in the united kingdom.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-excess_rose-damson-04/development-excess_rose-damson-04-renewal-no-value-9931f7",
+    "item_id": "development-excess_rose-damson-04-renewal-no-value-9931f7",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-excess_rose-damson-04",
+    "fixture_id": "development-excess_rose-damson-04",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Pennine Line Assurance travel insurance — renewal schedule DAMSON-ER-421 for the year to 31 August 2027.",
+    "decision_key": "renewal|pennine line assurance travel insurance — renewal schedule damson-er-421 for the year to 31 august 2027.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-excess_rose-damson-04/development-excess_rose-damson-04-renewal-compulsory-excess-243e91",
+    "item_id": "development-excess_rose-damson-04-renewal-compulsory-excess-243e91",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-excess_rose-damson-04",
+    "fixture_id": "development-excess_rose-damson-04",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Compulsory excess: £512.50 per claim.",
+    "decision_key": "renewal|compulsory excess: £512.50 per claim.",
+    "metric": "extraction",
+    "expected": {
+      "term": "compulsory_excess",
+      "basis": "per_claim",
+      "value": "£512.50",
+      "quote": "Compulsory excess: £512.50 per claim."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-excess_rose-damson-04/development-excess_rose-damson-04-renewal-premium-95accf",
+    "item_id": "development-excess_rose-damson-04-renewal-premium-95accf",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-excess_rose-damson-04",
+    "fixture_id": "development-excess_rose-damson-04",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Total annual premium: £557.00.",
+    "decision_key": "renewal|total annual premium: £557.00.",
+    "metric": "extraction",
+    "expected": {
+      "term": "premium",
+      "basis": "annual",
+      "value": "£557.00",
+      "quote": "Total annual premium: £557.00."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-excess_rose-damson-04/development-excess_rose-damson-04-renewal-cover-limit-62f561",
+    "item_id": "development-excess_rose-damson-04-renewal-cover-limit-62f561",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-excess_rose-damson-04",
+    "fixture_id": "development-excess_rose-damson-04",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Cover limit: £2,610.00 per policy.",
+    "decision_key": "renewal|cover limit: £2,610.00 per policy.",
+    "metric": "extraction",
+    "expected": {
+      "term": "cover_limit",
+      "basis": "per_policy",
+      "value": "£2,610.00",
+      "quote": "Cover limit: £2,610.00 per policy."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-excess_rose-damson-04/development-excess_rose-damson-04-renewal-no-value-e68e1b",
+    "item_id": "development-excess_rose-damson-04-renewal-no-value-e68e1b",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-excess_rose-damson-04",
+    "fixture_id": "development-excess_rose-damson-04",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Pennine Line Assurance arranges travel insurance cover under DAMSON-ER-421 and is regulated in the United Kingdom.",
+    "decision_key": "renewal|pennine line assurance arranges travel insurance cover under damson-er-421 and is regulated in the united kingdom.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-excess_rose-damson-04/development-excess_rose-damson-04-renewal-no-value-b511f3",
+    "item_id": "development-excess_rose-damson-04-renewal-no-value-b511f3",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-excess_rose-damson-04",
+    "fixture_id": "development-excess_rose-damson-04",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Your reference is DAMSON-ER-421. Quote it whenever you write to us about this policy.",
+    "decision_key": "renewal|your reference is damson-er-421. quote it whenever you write to us about this policy.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  }
+]

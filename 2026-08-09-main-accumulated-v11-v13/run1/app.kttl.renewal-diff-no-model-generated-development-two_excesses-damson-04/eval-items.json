@@ -1,0 +1,296 @@
+[
+  {
+    "id": "app.kttl.renewal-diff/development-two_excesses-damson-04/development-two_excesses-damson-04-previous-no-value-11fa2e",
+    "item_id": "development-two_excesses-damson-04-previous-no-value-11fa2e",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-two_excesses-damson-04",
+    "fixture_id": "development-two_excesses-damson-04",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Haldon Insurance Services contents insurance — policy schedule DAMSON-TE-421 for the year to 31 August 2026.",
+    "decision_key": "previous|haldon insurance services contents insurance — policy schedule damson-te-421 for the year to 31 august 2026.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-two_excesses-damson-04/development-two_excesses-damson-04-previous-compulsory-excess-cb5dca",
+    "item_id": "development-two_excesses-damson-04-previous-compulsory-excess-cb5dca",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-two_excesses-damson-04",
+    "fixture_id": "development-two_excesses-damson-04",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Compulsory excess: £4,390.00 per claim.",
+    "decision_key": "previous|compulsory excess: £4,390.00 per claim.",
+    "metric": "extraction",
+    "expected": {
+      "term": "compulsory_excess",
+      "basis": "per_claim",
+      "value": "£4,390.00",
+      "quote": "Compulsory excess: £4,390.00 per claim."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-two_excesses-damson-04/development-two_excesses-damson-04-previous-voluntary-excess-6cf78f",
+    "item_id": "development-two_excesses-damson-04-previous-voluntary-excess-6cf78f",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-two_excesses-damson-04",
+    "fixture_id": "development-two_excesses-damson-04",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Voluntary excess: £988.00 per claim.",
+    "decision_key": "previous|voluntary excess: £988.00 per claim.",
+    "metric": "extraction",
+    "expected": {
+      "term": "voluntary_excess",
+      "basis": "per_claim",
+      "value": "£988.00",
+      "quote": "Voluntary excess: £988.00 per claim."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-two_excesses-damson-04/development-two_excesses-damson-04-previous-total-excess-8194c1",
+    "item_id": "development-two_excesses-damson-04-previous-total-excess-8194c1",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-two_excesses-damson-04",
+    "fixture_id": "development-two_excesses-damson-04",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Total excess payable: £5,378.00 per claim.",
+    "decision_key": "previous|total excess payable: £5,378.00 per claim.",
+    "metric": "extraction",
+    "expected": {
+      "term": "total_excess",
+      "basis": "per_claim",
+      "value": "£5,378.00",
+      "quote": "Total excess payable: £5,378.00 per claim."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-two_excesses-damson-04/development-two_excesses-damson-04-previous-no-value-1f27c8",
+    "item_id": "development-two_excesses-damson-04-previous-no-value-1f27c8",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-two_excesses-damson-04",
+    "fixture_id": "development-two_excesses-damson-04",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Your reference is DAMSON-TE-421. Quote it whenever you write to us about this policy.",
+    "decision_key": "previous|your reference is damson-te-421. quote it whenever you write to us about this policy.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-two_excesses-damson-04/development-two_excesses-damson-04-previous-no-value-abb3f8",
+    "item_id": "development-two_excesses-damson-04-previous-no-value-abb3f8",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-two_excesses-damson-04",
+    "fixture_id": "development-two_excesses-damson-04",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Haldon Insurance Services arranges contents insurance cover under DAMSON-TE-421 and is regulated in the United Kingdom.",
+    "decision_key": "previous|haldon insurance services arranges contents insurance cover under damson-te-421 and is regulated in the united kingdom.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-two_excesses-damson-04/development-two_excesses-damson-04-renewal-no-value-517cb9",
+    "item_id": "development-two_excesses-damson-04-renewal-no-value-517cb9",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-two_excesses-damson-04",
+    "fixture_id": "development-two_excesses-damson-04",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Haldon Insurance Services contents insurance — renewal schedule DAMSON-TE-421 for the year to 31 August 2027.",
+    "decision_key": "renewal|haldon insurance services contents insurance — renewal schedule damson-te-421 for the year to 31 august 2027.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-two_excesses-damson-04/development-two_excesses-damson-04-renewal-compulsory-excess-d32972",
+    "item_id": "development-two_excesses-damson-04-renewal-compulsory-excess-d32972",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-two_excesses-damson-04",
+    "fixture_id": "development-two_excesses-damson-04",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Compulsory excess: £4,440.00 per claim.",
+    "decision_key": "renewal|compulsory excess: £4,440.00 per claim.",
+    "metric": "extraction",
+    "expected": {
+      "term": "compulsory_excess",
+      "basis": "per_claim",
+      "value": "£4,440.00",
+      "quote": "Compulsory excess: £4,440.00 per claim."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-two_excesses-damson-04/development-two_excesses-damson-04-renewal-voluntary-excess-6cf78f",
+    "item_id": "development-two_excesses-damson-04-renewal-voluntary-excess-6cf78f",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-two_excesses-damson-04",
+    "fixture_id": "development-two_excesses-damson-04",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Voluntary excess: £988.00 per claim.",
+    "decision_key": "renewal|voluntary excess: £988.00 per claim.",
+    "metric": "extraction",
+    "expected": {
+      "term": "voluntary_excess",
+      "basis": "per_claim",
+      "value": "£988.00",
+      "quote": "Voluntary excess: £988.00 per claim."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-two_excesses-damson-04/development-two_excesses-damson-04-renewal-total-excess-97a619",
+    "item_id": "development-two_excesses-damson-04-renewal-total-excess-97a619",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-two_excesses-damson-04",
+    "fixture_id": "development-two_excesses-damson-04",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Total excess payable: £5,428.00 per claim.",
+    "decision_key": "renewal|total excess payable: £5,428.00 per claim.",
+    "metric": "extraction",
+    "expected": {
+      "term": "total_excess",
+      "basis": "per_claim",
+      "value": "£5,428.00",
+      "quote": "Total excess payable: £5,428.00 per claim."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-two_excesses-damson-04/development-two_excesses-damson-04-renewal-no-value-abb3f8",
+    "item_id": "development-two_excesses-damson-04-renewal-no-value-abb3f8",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-two_excesses-damson-04",
+    "fixture_id": "development-two_excesses-damson-04",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Haldon Insurance Services arranges contents insurance cover under DAMSON-TE-421 and is regulated in the United Kingdom.",
+    "decision_key": "renewal|haldon insurance services arranges contents insurance cover under damson-te-421 and is regulated in the united kingdom.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-two_excesses-damson-04/development-two_excesses-damson-04-renewal-no-value-1f27c8",
+    "item_id": "development-two_excesses-damson-04-renewal-no-value-1f27c8",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-two_excesses-damson-04",
+    "fixture_id": "development-two_excesses-damson-04",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Your reference is DAMSON-TE-421. Quote it whenever you write to us about this policy.",
+    "decision_key": "renewal|your reference is damson-te-421. quote it whenever you write to us about this policy.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  }
+]

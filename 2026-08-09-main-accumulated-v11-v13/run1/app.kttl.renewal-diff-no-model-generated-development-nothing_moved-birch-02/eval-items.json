@@ -1,0 +1,296 @@
+[
+  {
+    "id": "app.kttl.renewal-diff/development-nothing_moved-birch-02/development-nothing_moved-birch-02-previous-no-value-f3511f",
+    "item_id": "development-nothing_moved-birch-02-previous-no-value-f3511f",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-nothing_moved-birch-02",
+    "fixture_id": "development-nothing_moved-birch-02",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Kestrel Assurance car insurance — policy schedule BIRCH-NM-407 for the year to 31 August 2026.",
+    "decision_key": "previous|kestrel assurance car insurance — policy schedule birch-nm-407 for the year to 31 august 2026.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-nothing_moved-birch-02/development-nothing_moved-birch-02-previous-premium-1bfa93",
+    "item_id": "development-nothing_moved-birch-02-previous-premium-1bfa93",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-nothing_moved-birch-02",
+    "fixture_id": "development-nothing_moved-birch-02",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Total annual premium: £2,685.00.",
+    "decision_key": "previous|total annual premium: £2,685.00.",
+    "metric": "extraction",
+    "expected": {
+      "term": "premium",
+      "basis": "annual",
+      "value": "£2,685.00",
+      "quote": "Total annual premium: £2,685.00."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-nothing_moved-birch-02/development-nothing_moved-birch-02-previous-compulsory-excess-0c4933",
+    "item_id": "development-nothing_moved-birch-02-previous-compulsory-excess-0c4933",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-nothing_moved-birch-02",
+    "fixture_id": "development-nothing_moved-birch-02",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Compulsory excess: £1,775.00 per claim.",
+    "decision_key": "previous|compulsory excess: £1,775.00 per claim.",
+    "metric": "extraction",
+    "expected": {
+      "term": "compulsory_excess",
+      "basis": "per_claim",
+      "value": "£1,775.00",
+      "quote": "Compulsory excess: £1,775.00 per claim."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-nothing_moved-birch-02/development-nothing_moved-birch-02-previous-cover-limit-cbfa65",
+    "item_id": "development-nothing_moved-birch-02-previous-cover-limit-cbfa65",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-nothing_moved-birch-02",
+    "fixture_id": "development-nothing_moved-birch-02",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Cover limit: £5,650.00 per policy.",
+    "decision_key": "previous|cover limit: £5,650.00 per policy.",
+    "metric": "extraction",
+    "expected": {
+      "term": "cover_limit",
+      "basis": "per_policy",
+      "value": "£5,650.00",
+      "quote": "Cover limit: £5,650.00 per policy."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-nothing_moved-birch-02/development-nothing_moved-birch-02-previous-no-value-365bb0",
+    "item_id": "development-nothing_moved-birch-02-previous-no-value-365bb0",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-nothing_moved-birch-02",
+    "fixture_id": "development-nothing_moved-birch-02",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Your reference is BIRCH-NM-407. Quote it whenever you write to us about this policy.",
+    "decision_key": "previous|your reference is birch-nm-407. quote it whenever you write to us about this policy.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-nothing_moved-birch-02/development-nothing_moved-birch-02-previous-no-value-18b1cc",
+    "item_id": "development-nothing_moved-birch-02-previous-no-value-18b1cc",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-nothing_moved-birch-02",
+    "fixture_id": "development-nothing_moved-birch-02",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Kestrel Assurance arranges car insurance cover under BIRCH-NM-407 and is regulated in the United Kingdom.",
+    "decision_key": "previous|kestrel assurance arranges car insurance cover under birch-nm-407 and is regulated in the united kingdom.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-nothing_moved-birch-02/development-nothing_moved-birch-02-renewal-no-value-2836b1",
+    "item_id": "development-nothing_moved-birch-02-renewal-no-value-2836b1",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-nothing_moved-birch-02",
+    "fixture_id": "development-nothing_moved-birch-02",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Kestrel Assurance car insurance — renewal schedule BIRCH-NM-407 for the year to 31 August 2027.",
+    "decision_key": "renewal|kestrel assurance car insurance — renewal schedule birch-nm-407 for the year to 31 august 2027.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-nothing_moved-birch-02/development-nothing_moved-birch-02-renewal-premium-1bfa93",
+    "item_id": "development-nothing_moved-birch-02-renewal-premium-1bfa93",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-nothing_moved-birch-02",
+    "fixture_id": "development-nothing_moved-birch-02",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Total annual premium: £2,685.00.",
+    "decision_key": "renewal|total annual premium: £2,685.00.",
+    "metric": "extraction",
+    "expected": {
+      "term": "premium",
+      "basis": "annual",
+      "value": "£2,685.00",
+      "quote": "Total annual premium: £2,685.00."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-nothing_moved-birch-02/development-nothing_moved-birch-02-renewal-compulsory-excess-0c4933",
+    "item_id": "development-nothing_moved-birch-02-renewal-compulsory-excess-0c4933",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-nothing_moved-birch-02",
+    "fixture_id": "development-nothing_moved-birch-02",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Compulsory excess: £1,775.00 per claim.",
+    "decision_key": "renewal|compulsory excess: £1,775.00 per claim.",
+    "metric": "extraction",
+    "expected": {
+      "term": "compulsory_excess",
+      "basis": "per_claim",
+      "value": "£1,775.00",
+      "quote": "Compulsory excess: £1,775.00 per claim."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-nothing_moved-birch-02/development-nothing_moved-birch-02-renewal-cover-limit-cbfa65",
+    "item_id": "development-nothing_moved-birch-02-renewal-cover-limit-cbfa65",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-nothing_moved-birch-02",
+    "fixture_id": "development-nothing_moved-birch-02",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Cover limit: £5,650.00 per policy.",
+    "decision_key": "renewal|cover limit: £5,650.00 per policy.",
+    "metric": "extraction",
+    "expected": {
+      "term": "cover_limit",
+      "basis": "per_policy",
+      "value": "£5,650.00",
+      "quote": "Cover limit: £5,650.00 per policy."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-nothing_moved-birch-02/development-nothing_moved-birch-02-renewal-no-value-18b1cc",
+    "item_id": "development-nothing_moved-birch-02-renewal-no-value-18b1cc",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-nothing_moved-birch-02",
+    "fixture_id": "development-nothing_moved-birch-02",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Kestrel Assurance arranges car insurance cover under BIRCH-NM-407 and is regulated in the United Kingdom.",
+    "decision_key": "renewal|kestrel assurance arranges car insurance cover under birch-nm-407 and is regulated in the united kingdom.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-nothing_moved-birch-02/development-nothing_moved-birch-02-renewal-no-value-365bb0",
+    "item_id": "development-nothing_moved-birch-02-renewal-no-value-365bb0",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-nothing_moved-birch-02",
+    "fixture_id": "development-nothing_moved-birch-02",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Your reference is BIRCH-NM-407. Quote it whenever you write to us about this policy.",
+    "decision_key": "renewal|your reference is birch-nm-407. quote it whenever you write to us about this policy.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  }
+]

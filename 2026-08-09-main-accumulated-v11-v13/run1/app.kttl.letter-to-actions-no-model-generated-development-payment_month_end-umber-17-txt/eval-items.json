@@ -1,0 +1,77 @@
+[
+  {
+    "id": "app.kttl.letter-to-actions/development-payment_month_end-umber-17/payment_month_end-umber-17-payment-01",
+    "item_id": "payment_month_end-umber-17-payment-01",
+    "pack": "app.kttl.letter-to-actions",
+    "pack_version": "0.2.0",
+    "prompt_version": "blake3:571efa3adbfef212b46bbc36b0f757c9f8612ab55d3812388743f539f6ef1542",
+    "fixture": "generated-development-payment_month_end-umber-17.txt",
+    "fixture_id": "development-payment_month_end-umber-17",
+    "strata": [
+      "any-letter",
+      "payment-month-end",
+      "month-end"
+    ],
+    "raw_input": "The balance on your water account is £96.45. Please settle it by the end of the month.",
+    "decision_key": "the balance on your water account is £96.45. please settle it by the end of the month.",
+    "metric": "extraction",
+    "expected": {
+      "kind": "payment",
+      "party": "Northgate Water",
+      "deadline": "by the end of the month",
+      "anchor": "the date of this letter",
+      "due": "2026-05-31"
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read letters without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.letter-to-actions/development-payment_month_end-umber-17/payment_month_end-umber-17-no-ask-02",
+    "item_id": "payment_month_end-umber-17-no-ask-02",
+    "pack": "app.kttl.letter-to-actions",
+    "pack_version": "0.2.0",
+    "prompt_version": "blake3:571efa3adbfef212b46bbc36b0f757c9f8612ab55d3812388743f539f6ef1542",
+    "fixture": "generated-development-payment_month_end-umber-17.txt",
+    "fixture_id": "development-payment_month_end-umber-17",
+    "strata": [
+      "any-letter",
+      "payment-month-end",
+      "no-obligation"
+    ],
+    "raw_input": "This letter is for your records and no reply is needed if you have already paid.",
+    "decision_key": "this letter is for your records and no reply is needed if you have already paid.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read letters without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.letter-to-actions/development-payment_month_end-umber-17/payment_month_end-umber-17-no-ask-04",
+    "item_id": "payment_month_end-umber-17-no-ask-04",
+    "pack": "app.kttl.letter-to-actions",
+    "pack_version": "0.2.0",
+    "prompt_version": "blake3:571efa3adbfef212b46bbc36b0f757c9f8612ab55d3812388743f539f6ef1542",
+    "fixture": "generated-development-payment_month_end-umber-17.txt",
+    "fixture_id": "development-payment_month_end-umber-17",
+    "strata": [
+      "any-letter",
+      "payment-month-end",
+      "no-obligation"
+    ],
+    "raw_input": "Your new monthly rate of £62.40 will be applied automatically from 1 June.",
+    "decision_key": "your new monthly rate of £62.40 will be applied automatically from 1 june.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read letters without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  }
+]

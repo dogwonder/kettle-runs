@@ -1,0 +1,94 @@
+[
+  {
+    "id": "app.kttl.letter-to-actions/development-courtesy_only-birch-19/courtesy_only-birch-19-no-ask-01",
+    "item_id": "courtesy_only-birch-19-no-ask-01",
+    "pack": "app.kttl.letter-to-actions",
+    "pack_version": "0.2.0",
+    "prompt_version": "blake3:571efa3adbfef212b46bbc36b0f757c9f8612ab55d3812388743f539f6ef1542",
+    "fixture": "generated-development-courtesy_only-birch-19.txt",
+    "fixture_id": "development-courtesy_only-birch-19",
+    "strata": [
+      "any-letter",
+      "courtesy-only",
+      "no-obligation"
+    ],
+    "raw_input": "We are writing to confirm that your policy renewal has been updated on our records. You do not need to do anything.",
+    "decision_key": "we are writing to confirm that your policy renewal has been updated on our records. you do not need to do anything.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read letters without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.letter-to-actions/development-courtesy_only-birch-19/courtesy_only-birch-19-no-ask-02",
+    "item_id": "courtesy_only-birch-19-no-ask-02",
+    "pack": "app.kttl.letter-to-actions",
+    "pack_version": "0.2.0",
+    "prompt_version": "blake3:571efa3adbfef212b46bbc36b0f757c9f8612ab55d3812388743f539f6ef1542",
+    "fixture": "generated-development-courtesy_only-birch-19.txt",
+    "fixture_id": "development-courtesy_only-birch-19",
+    "strata": [
+      "any-letter",
+      "courtesy-only",
+      "no-obligation"
+    ],
+    "raw_input": "We are grateful for your patience while we made these changes.",
+    "decision_key": "we are grateful for your patience while we made these changes.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read letters without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.letter-to-actions/development-courtesy_only-birch-19/courtesy_only-birch-19-no-ask-03",
+    "item_id": "courtesy_only-birch-19-no-ask-03",
+    "pack": "app.kttl.letter-to-actions",
+    "pack_version": "0.2.0",
+    "prompt_version": "blake3:571efa3adbfef212b46bbc36b0f757c9f8612ab55d3812388743f539f6ef1542",
+    "fixture": "generated-development-courtesy_only-birch-19.txt",
+    "fixture_id": "development-courtesy_only-birch-19",
+    "strata": [
+      "any-letter",
+      "courtesy-only",
+      "no-obligation"
+    ],
+    "raw_input": "If anything in this letter is unclear, our team is happy to explain it.",
+    "decision_key": "if anything in this letter is unclear, our team is happy to explain it.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read letters without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.letter-to-actions/development-courtesy_only-birch-19/courtesy_only-birch-19-no-ask-05",
+    "item_id": "courtesy_only-birch-19-no-ask-05",
+    "pack": "app.kttl.letter-to-actions",
+    "pack_version": "0.2.0",
+    "prompt_version": "blake3:571efa3adbfef212b46bbc36b0f757c9f8612ab55d3812388743f539f6ef1542",
+    "fixture": "generated-development-courtesy_only-birch-19.txt",
+    "fixture_id": "development-courtesy_only-birch-19",
+    "strata": [
+      "any-letter",
+      "courtesy-only",
+      "no-obligation"
+    ],
+    "raw_input": "Your direct debit of £115.00 will continue to be collected on the 15th of each month as before.",
+    "decision_key": "your direct debit of £115.00 will continue to be collected on the 15th of each month as before.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read letters without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  }
+]

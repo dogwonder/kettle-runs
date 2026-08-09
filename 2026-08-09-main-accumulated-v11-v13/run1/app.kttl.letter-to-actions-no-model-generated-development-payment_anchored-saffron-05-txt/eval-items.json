@@ -1,0 +1,77 @@
+[
+  {
+    "id": "app.kttl.letter-to-actions/development-payment_anchored-saffron-05/payment_anchored-saffron-05-payment-02",
+    "item_id": "payment_anchored-saffron-05-payment-02",
+    "pack": "app.kttl.letter-to-actions",
+    "pack_version": "0.2.0",
+    "prompt_version": "blake3:571efa3adbfef212b46bbc36b0f757c9f8612ab55d3812388743f539f6ef1542",
+    "fixture": "generated-development-payment_anchored-saffron-05.txt",
+    "fixture_id": "development-payment_anchored-saffron-05",
+    "strata": [
+      "any-letter",
+      "payment-anchored",
+      "dated-anchor"
+    ],
+    "raw_input": "Please pay £96.45 within 30 days of 16 September 2026, quoting reference NW-55210.",
+    "decision_key": "please pay £96.45 within 30 days of 16 september 2026, quoting reference nw-55210.",
+    "metric": "extraction",
+    "expected": {
+      "kind": "payment",
+      "party": "Northgate Water",
+      "deadline": "within 30 days",
+      "anchor": "16 September 2026",
+      "due": "2026-10-16"
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read letters without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.letter-to-actions/development-payment_anchored-saffron-05/payment_anchored-saffron-05-no-ask-03",
+    "item_id": "payment_anchored-saffron-05-no-ask-03",
+    "pack": "app.kttl.letter-to-actions",
+    "pack_version": "0.2.0",
+    "prompt_version": "blake3:571efa3adbfef212b46bbc36b0f757c9f8612ab55d3812388743f539f6ef1542",
+    "fixture": "generated-development-payment_anchored-saffron-05.txt",
+    "fixture_id": "development-payment_anchored-saffron-05",
+    "strata": [
+      "any-letter",
+      "payment-anchored",
+      "no-obligation"
+    ],
+    "raw_input": "Thank you for your co-operation in this matter.",
+    "decision_key": "thank you for your co-operation in this matter.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read letters without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.letter-to-actions/development-payment_anchored-saffron-05/payment_anchored-saffron-05-no-ask-05",
+    "item_id": "payment_anchored-saffron-05-no-ask-05",
+    "pack": "app.kttl.letter-to-actions",
+    "pack_version": "0.2.0",
+    "prompt_version": "blake3:571efa3adbfef212b46bbc36b0f757c9f8612ab55d3812388743f539f6ef1542",
+    "fixture": "generated-development-payment_anchored-saffron-05.txt",
+    "fixture_id": "development-payment_anchored-saffron-05",
+    "strata": [
+      "any-letter",
+      "payment-anchored",
+      "no-obligation"
+    ],
+    "raw_input": "Our records show your last contribution was made on 29 May.",
+    "decision_key": "our records show your last contribution was made on 29 may.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read letters without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  }
+]

@@ -1,0 +1,77 @@
+[
+  {
+    "id": "app.kttl.letter-to-actions/development-repeated_ask-willow-29/repeated_ask-willow-29-payment-01",
+    "item_id": "repeated_ask-willow-29-payment-01",
+    "pack": "app.kttl.letter-to-actions",
+    "pack_version": "0.2.0",
+    "prompt_version": "blake3:571efa3adbfef212b46bbc36b0f757c9f8612ab55d3812388743f539f6ef1542",
+    "fixture": "generated-development-repeated_ask-willow-29.txt",
+    "fixture_id": "development-repeated_ask-willow-29",
+    "strata": [
+      "any-letter",
+      "repeated-ask",
+      "repeated-obligation"
+    ],
+    "raw_input": "Please pay £96.45 for your water account within 14 days of the date of this letter.",
+    "decision_key": "please pay £96.45 for your water account within 14 days of the date of this letter.",
+    "metric": "extraction",
+    "expected": {
+      "kind": "payment",
+      "party": "Northgate Water",
+      "deadline": "within 14 days",
+      "anchor": "the date of this letter",
+      "due": "2026-05-15"
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read letters without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.letter-to-actions/development-repeated_ask-willow-29/repeated_ask-willow-29-no-ask-03",
+    "item_id": "repeated_ask-willow-29-no-ask-03",
+    "pack": "app.kttl.letter-to-actions",
+    "pack_version": "0.2.0",
+    "prompt_version": "blake3:571efa3adbfef212b46bbc36b0f757c9f8612ab55d3812388743f539f6ef1542",
+    "fixture": "generated-development-repeated_ask-willow-29.txt",
+    "fixture_id": "development-repeated_ask-willow-29",
+    "strata": [
+      "any-letter",
+      "repeated-ask",
+      "no-obligation"
+    ],
+    "raw_input": "No further action is needed once you have paid.",
+    "decision_key": "no further action is needed once you have paid.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read letters without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.letter-to-actions/development-repeated_ask-willow-29/repeated_ask-willow-29-no-ask-05",
+    "item_id": "repeated_ask-willow-29-no-ask-05",
+    "pack": "app.kttl.letter-to-actions",
+    "pack_version": "0.2.0",
+    "prompt_version": "blake3:571efa3adbfef212b46bbc36b0f757c9f8612ab55d3812388743f539f6ef1542",
+    "fixture": "generated-development-repeated_ask-willow-29.txt",
+    "fixture_id": "development-repeated_ask-willow-29",
+    "strata": [
+      "any-letter",
+      "repeated-ask",
+      "no-obligation"
+    ],
+    "raw_input": "You may keep this letter for your records; a copy is also held on your file.",
+    "decision_key": "you may keep this letter for your records; a copy is also held on your file.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read letters without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  }
+]

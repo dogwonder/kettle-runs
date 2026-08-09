@@ -1,0 +1,94 @@
+[
+  {
+    "id": "app.kttl.letter-to-actions/development-courtesy_only-indigo-02/courtesy_only-indigo-02-no-ask-01",
+    "item_id": "courtesy_only-indigo-02-no-ask-01",
+    "pack": "app.kttl.letter-to-actions",
+    "pack_version": "0.2.0",
+    "prompt_version": "blake3:571efa3adbfef212b46bbc36b0f757c9f8612ab55d3812388743f539f6ef1542",
+    "fixture": "generated-development-courtesy_only-indigo-02.txt",
+    "fixture_id": "development-courtesy_only-indigo-02",
+    "strata": [
+      "any-letter",
+      "courtesy-only",
+      "no-obligation"
+    ],
+    "raw_input": "We are writing to confirm that your council tax account has been updated on our records. You do not need to do anything.",
+    "decision_key": "we are writing to confirm that your council tax account has been updated on our records. you do not need to do anything.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read letters without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.letter-to-actions/development-courtesy_only-indigo-02/courtesy_only-indigo-02-no-ask-02",
+    "item_id": "courtesy_only-indigo-02-no-ask-02",
+    "pack": "app.kttl.letter-to-actions",
+    "pack_version": "0.2.0",
+    "prompt_version": "blake3:571efa3adbfef212b46bbc36b0f757c9f8612ab55d3812388743f539f6ef1542",
+    "fixture": "generated-development-courtesy_only-indigo-02.txt",
+    "fixture_id": "development-courtesy_only-indigo-02",
+    "strata": [
+      "any-letter",
+      "courtesy-only",
+      "no-obligation"
+    ],
+    "raw_input": "We are grateful for your patience while we made these changes.",
+    "decision_key": "we are grateful for your patience while we made these changes.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read letters without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.letter-to-actions/development-courtesy_only-indigo-02/courtesy_only-indigo-02-no-ask-03",
+    "item_id": "courtesy_only-indigo-02-no-ask-03",
+    "pack": "app.kttl.letter-to-actions",
+    "pack_version": "0.2.0",
+    "prompt_version": "blake3:571efa3adbfef212b46bbc36b0f757c9f8612ab55d3812388743f539f6ef1542",
+    "fixture": "generated-development-courtesy_only-indigo-02.txt",
+    "fixture_id": "development-courtesy_only-indigo-02",
+    "strata": [
+      "any-letter",
+      "courtesy-only",
+      "no-obligation"
+    ],
+    "raw_input": "If anything in this letter is unclear, our team is happy to explain it.",
+    "decision_key": "if anything in this letter is unclear, our team is happy to explain it.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read letters without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.letter-to-actions/development-courtesy_only-indigo-02/courtesy_only-indigo-02-no-ask-05",
+    "item_id": "courtesy_only-indigo-02-no-ask-05",
+    "pack": "app.kttl.letter-to-actions",
+    "pack_version": "0.2.0",
+    "prompt_version": "blake3:571efa3adbfef212b46bbc36b0f757c9f8612ab55d3812388743f539f6ef1542",
+    "fixture": "generated-development-courtesy_only-indigo-02.txt",
+    "fixture_id": "development-courtesy_only-indigo-02",
+    "strata": [
+      "any-letter",
+      "courtesy-only",
+      "no-obligation"
+    ],
+    "raw_input": "You may keep this letter for your records; a copy is also held on your file.",
+    "decision_key": "you may keep this letter for your records; a copy is also held on your file.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read letters without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  }
+]

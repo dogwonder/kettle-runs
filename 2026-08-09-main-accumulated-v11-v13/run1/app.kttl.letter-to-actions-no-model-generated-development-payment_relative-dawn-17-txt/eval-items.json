@@ -1,0 +1,77 @@
+[
+  {
+    "id": "app.kttl.letter-to-actions/development-payment_relative-dawn-17/payment_relative-dawn-17-payment-01",
+    "item_id": "payment_relative-dawn-17-payment-01",
+    "pack": "app.kttl.letter-to-actions",
+    "pack_version": "0.2.0",
+    "prompt_version": "blake3:571efa3adbfef212b46bbc36b0f757c9f8612ab55d3812388743f539f6ef1542",
+    "fixture": "generated-development-payment_relative-dawn-17.txt",
+    "fixture_id": "development-payment_relative-dawn-17",
+    "strata": [
+      "any-letter",
+      "payment-relative",
+      "relative-deadline"
+    ],
+    "raw_input": "Our records show that water account of £96.45 remains outstanding. Please pay £96.45 within 14 days of the date of this letter.",
+    "decision_key": "our records show that water account of £96.45 remains outstanding. please pay £96.45 within 14 days of the date of this letter.",
+    "metric": "extraction",
+    "expected": {
+      "kind": "payment",
+      "party": "Northgate Water",
+      "deadline": "within 14 days",
+      "anchor": "the date of this letter",
+      "due": "2026-06-08"
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read letters without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.letter-to-actions/development-payment_relative-dawn-17/payment_relative-dawn-17-no-ask-02",
+    "item_id": "payment_relative-dawn-17-no-ask-02",
+    "pack": "app.kttl.letter-to-actions",
+    "pack_version": "0.2.0",
+    "prompt_version": "blake3:571efa3adbfef212b46bbc36b0f757c9f8612ab55d3812388743f539f6ef1542",
+    "fixture": "generated-development-payment_relative-dawn-17.txt",
+    "fixture_id": "development-payment_relative-dawn-17",
+    "strata": [
+      "any-letter",
+      "payment-relative",
+      "no-obligation"
+    ],
+    "raw_input": "We are sorry for any inconvenience this may have caused.",
+    "decision_key": "we are sorry for any inconvenience this may have caused.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read letters without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.letter-to-actions/development-payment_relative-dawn-17/payment_relative-dawn-17-no-ask-04",
+    "item_id": "payment_relative-dawn-17-no-ask-04",
+    "pack": "app.kttl.letter-to-actions",
+    "pack_version": "0.2.0",
+    "prompt_version": "blake3:571efa3adbfef212b46bbc36b0f757c9f8612ab55d3812388743f539f6ef1542",
+    "fixture": "generated-development-payment_relative-dawn-17.txt",
+    "fixture_id": "development-payment_relative-dawn-17",
+    "strata": [
+      "any-letter",
+      "payment-relative",
+      "no-obligation"
+    ],
+    "raw_input": "Your complaint was upheld on 20 May and the compensation has been paid.",
+    "decision_key": "your complaint was upheld on 20 may and the compensation has been paid.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read letters without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  }
+]

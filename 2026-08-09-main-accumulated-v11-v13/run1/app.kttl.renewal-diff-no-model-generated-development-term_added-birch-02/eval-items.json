@@ -1,0 +1,269 @@
+[
+  {
+    "id": "app.kttl.renewal-diff/development-term_added-birch-02/development-term_added-birch-02-previous-no-value-130d3c",
+    "item_id": "development-term_added-birch-02-previous-no-value-130d3c",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-term_added-birch-02",
+    "fixture_id": "development-term_added-birch-02",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Marlowe Mutual home insurance — policy schedule BIRCH-TA-407 for the year to 31 August 2026.",
+    "decision_key": "previous|marlowe mutual home insurance — policy schedule birch-ta-407 for the year to 31 august 2026.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-term_added-birch-02/development-term_added-birch-02-previous-premium-e89f12",
+    "item_id": "development-term_added-birch-02-previous-premium-e89f12",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-term_added-birch-02",
+    "fixture_id": "development-term_added-birch-02",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Total annual premium: £3,476.00.",
+    "decision_key": "previous|total annual premium: £3,476.00.",
+    "metric": "extraction",
+    "expected": {
+      "term": "premium",
+      "basis": "annual",
+      "value": "£3,476.00",
+      "quote": "Total annual premium: £3,476.00."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-term_added-birch-02/development-term_added-birch-02-previous-compulsory-excess-eccf6b",
+    "item_id": "development-term_added-birch-02-previous-compulsory-excess-eccf6b",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-term_added-birch-02",
+    "fixture_id": "development-term_added-birch-02",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Compulsory excess: £2,340.00 per claim.",
+    "decision_key": "previous|compulsory excess: £2,340.00 per claim.",
+    "metric": "extraction",
+    "expected": {
+      "term": "compulsory_excess",
+      "basis": "per_claim",
+      "value": "£2,340.00",
+      "quote": "Compulsory excess: £2,340.00 per claim."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-term_added-birch-02/development-term_added-birch-02-previous-no-value-c62dd8",
+    "item_id": "development-term_added-birch-02-previous-no-value-c62dd8",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-term_added-birch-02",
+    "fixture_id": "development-term_added-birch-02",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Your reference is BIRCH-TA-407. Quote it whenever you write to us about this policy.",
+    "decision_key": "previous|your reference is birch-ta-407. quote it whenever you write to us about this policy.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-term_added-birch-02/development-term_added-birch-02-previous-no-value-f856c9",
+    "item_id": "development-term_added-birch-02-previous-no-value-f856c9",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-term_added-birch-02",
+    "fixture_id": "development-term_added-birch-02",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Marlowe Mutual arranges home insurance cover under BIRCH-TA-407 and is regulated in the United Kingdom.",
+    "decision_key": "previous|marlowe mutual arranges home insurance cover under birch-ta-407 and is regulated in the united kingdom.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-term_added-birch-02/development-term_added-birch-02-renewal-no-value-80fa6a",
+    "item_id": "development-term_added-birch-02-renewal-no-value-80fa6a",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-term_added-birch-02",
+    "fixture_id": "development-term_added-birch-02",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Marlowe Mutual home insurance — renewal schedule BIRCH-TA-407 for the year to 31 August 2027.",
+    "decision_key": "renewal|marlowe mutual home insurance — renewal schedule birch-ta-407 for the year to 31 august 2027.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-term_added-birch-02/development-term_added-birch-02-renewal-premium-e89f12",
+    "item_id": "development-term_added-birch-02-renewal-premium-e89f12",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-term_added-birch-02",
+    "fixture_id": "development-term_added-birch-02",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Total annual premium: £3,476.00.",
+    "decision_key": "renewal|total annual premium: £3,476.00.",
+    "metric": "extraction",
+    "expected": {
+      "term": "premium",
+      "basis": "annual",
+      "value": "£3,476.00",
+      "quote": "Total annual premium: £3,476.00."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-term_added-birch-02/development-term_added-birch-02-renewal-compulsory-excess-eccf6b",
+    "item_id": "development-term_added-birch-02-renewal-compulsory-excess-eccf6b",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-term_added-birch-02",
+    "fixture_id": "development-term_added-birch-02",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Compulsory excess: £2,340.00 per claim.",
+    "decision_key": "renewal|compulsory excess: £2,340.00 per claim.",
+    "metric": "extraction",
+    "expected": {
+      "term": "compulsory_excess",
+      "basis": "per_claim",
+      "value": "£2,340.00",
+      "quote": "Compulsory excess: £2,340.00 per claim."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-term_added-birch-02/development-term_added-birch-02-renewal-voluntary-excess-122c6d",
+    "item_id": "development-term_added-birch-02-renewal-voluntary-excess-122c6d",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-term_added-birch-02",
+    "fixture_id": "development-term_added-birch-02",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Voluntary excess: £528.00 per claim.",
+    "decision_key": "renewal|voluntary excess: £528.00 per claim.",
+    "metric": "extraction",
+    "expected": {
+      "term": "voluntary_excess",
+      "basis": "per_claim",
+      "value": "£528.00",
+      "quote": "Voluntary excess: £528.00 per claim."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-term_added-birch-02/development-term_added-birch-02-renewal-no-value-f856c9",
+    "item_id": "development-term_added-birch-02-renewal-no-value-f856c9",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-term_added-birch-02",
+    "fixture_id": "development-term_added-birch-02",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Marlowe Mutual arranges home insurance cover under BIRCH-TA-407 and is regulated in the United Kingdom.",
+    "decision_key": "renewal|marlowe mutual arranges home insurance cover under birch-ta-407 and is regulated in the united kingdom.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-term_added-birch-02/development-term_added-birch-02-renewal-no-value-c62dd8",
+    "item_id": "development-term_added-birch-02-renewal-no-value-c62dd8",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-term_added-birch-02",
+    "fixture_id": "development-term_added-birch-02",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Your reference is BIRCH-TA-407. Quote it whenever you write to us about this policy.",
+    "decision_key": "renewal|your reference is birch-ta-407. quote it whenever you write to us about this policy.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  }
+]

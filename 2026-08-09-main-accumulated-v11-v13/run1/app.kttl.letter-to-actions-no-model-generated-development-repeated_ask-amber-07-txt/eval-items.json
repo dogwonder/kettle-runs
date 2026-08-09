@@ -1,0 +1,77 @@
+[
+  {
+    "id": "app.kttl.letter-to-actions/development-repeated_ask-amber-07/repeated_ask-amber-07-payment-01",
+    "item_id": "repeated_ask-amber-07-payment-01",
+    "pack": "app.kttl.letter-to-actions",
+    "pack_version": "0.2.0",
+    "prompt_version": "blake3:571efa3adbfef212b46bbc36b0f757c9f8612ab55d3812388743f539f6ef1542",
+    "fixture": "generated-development-repeated_ask-amber-07.txt",
+    "fixture_id": "development-repeated_ask-amber-07",
+    "strata": [
+      "any-letter",
+      "repeated-ask",
+      "repeated-obligation"
+    ],
+    "raw_input": "Please pay £188.20 for your policy renewal within 14 days of the date of this letter.",
+    "decision_key": "please pay £188.20 for your policy renewal within 14 days of the date of this letter.",
+    "metric": "extraction",
+    "expected": {
+      "kind": "payment",
+      "party": "Belwood Insurance",
+      "deadline": "within 14 days",
+      "anchor": "the date of this letter",
+      "due": "2026-07-17"
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read letters without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.letter-to-actions/development-repeated_ask-amber-07/repeated_ask-amber-07-no-ask-03",
+    "item_id": "repeated_ask-amber-07-no-ask-03",
+    "pack": "app.kttl.letter-to-actions",
+    "pack_version": "0.2.0",
+    "prompt_version": "blake3:571efa3adbfef212b46bbc36b0f757c9f8612ab55d3812388743f539f6ef1542",
+    "fixture": "generated-development-repeated_ask-amber-07.txt",
+    "fixture_id": "development-repeated_ask-amber-07",
+    "strata": [
+      "any-letter",
+      "repeated-ask",
+      "no-obligation"
+    ],
+    "raw_input": "No further action is needed once you have paid.",
+    "decision_key": "no further action is needed once you have paid.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read letters without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.letter-to-actions/development-repeated_ask-amber-07/repeated_ask-amber-07-no-ask-05",
+    "item_id": "repeated_ask-amber-07-no-ask-05",
+    "pack": "app.kttl.letter-to-actions",
+    "pack_version": "0.2.0",
+    "prompt_version": "blake3:571efa3adbfef212b46bbc36b0f757c9f8612ab55d3812388743f539f6ef1542",
+    "fixture": "generated-development-repeated_ask-amber-07.txt",
+    "fixture_id": "development-repeated_ask-amber-07",
+    "strata": [
+      "any-letter",
+      "repeated-ask",
+      "no-obligation"
+    ],
+    "raw_input": "The meter reading of 4 April has been used for this bill, so no estimate was needed.",
+    "decision_key": "the meter reading of 4 april has been used for this bill, so no estimate was needed.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read letters without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  }
+]

@@ -1,0 +1,77 @@
+[
+  {
+    "id": "app.kttl.letter-to-actions/development-undated_relative-quartz-26/undated_relative-quartz-26-response-00",
+    "item_id": "undated_relative-quartz-26-response-00",
+    "pack": "app.kttl.letter-to-actions",
+    "pack_version": "0.2.0",
+    "prompt_version": "blake3:571efa3adbfef212b46bbc36b0f757c9f8612ab55d3812388743f539f6ef1542",
+    "fixture": "generated-development-undated_relative-quartz-26.txt",
+    "fixture_id": "development-undated_relative-quartz-26",
+    "strata": [
+      "any-letter",
+      "undated-relative",
+      "undated-letter"
+    ],
+    "raw_input": "Please return the enclosed form about your council tax account within 14 days.",
+    "decision_key": "please return the enclosed form about your council tax account within 14 days.",
+    "metric": "extraction",
+    "expected": {
+      "kind": "response",
+      "party": "Kelsford Borough Council",
+      "deadline": "within 14 days",
+      "anchor": "the date of this letter",
+      "due": null
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read letters without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.letter-to-actions/development-undated_relative-quartz-26/undated_relative-quartz-26-no-ask-01",
+    "item_id": "undated_relative-quartz-26-no-ask-01",
+    "pack": "app.kttl.letter-to-actions",
+    "pack_version": "0.2.0",
+    "prompt_version": "blake3:571efa3adbfef212b46bbc36b0f757c9f8612ab55d3812388743f539f6ef1542",
+    "fixture": "generated-development-undated_relative-quartz-26.txt",
+    "fixture_id": "development-undated_relative-quartz-26",
+    "strata": [
+      "any-letter",
+      "undated-relative",
+      "no-obligation"
+    ],
+    "raw_input": "A prepaid envelope is enclosed for your convenience.",
+    "decision_key": "a prepaid envelope is enclosed for your convenience.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read letters without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.letter-to-actions/development-undated_relative-quartz-26/undated_relative-quartz-26-no-ask-03",
+    "item_id": "undated_relative-quartz-26-no-ask-03",
+    "pack": "app.kttl.letter-to-actions",
+    "pack_version": "0.2.0",
+    "prompt_version": "blake3:571efa3adbfef212b46bbc36b0f757c9f8612ab55d3812388743f539f6ef1542",
+    "fixture": "generated-development-undated_relative-quartz-26.txt",
+    "fixture_id": "development-undated_relative-quartz-26",
+    "strata": [
+      "any-letter",
+      "undated-relative",
+      "no-obligation"
+    ],
+    "raw_input": "A refund of £74.10 was sent to your bank on 26 April and should have arrived within 3 days.",
+    "decision_key": "a refund of £74.10 was sent to your bank on 26 april and should have arrived within 3 days.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read letters without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  }
+]

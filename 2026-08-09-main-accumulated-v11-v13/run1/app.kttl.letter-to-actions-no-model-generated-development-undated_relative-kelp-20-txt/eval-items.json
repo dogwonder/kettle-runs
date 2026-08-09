@@ -1,0 +1,77 @@
+[
+  {
+    "id": "app.kttl.letter-to-actions/development-undated_relative-kelp-20/undated_relative-kelp-20-response-00",
+    "item_id": "undated_relative-kelp-20-response-00",
+    "pack": "app.kttl.letter-to-actions",
+    "pack_version": "0.2.0",
+    "prompt_version": "blake3:571efa3adbfef212b46bbc36b0f757c9f8612ab55d3812388743f539f6ef1542",
+    "fixture": "generated-development-undated_relative-kelp-20.txt",
+    "fixture_id": "development-undated_relative-kelp-20",
+    "strata": [
+      "any-letter",
+      "undated-relative",
+      "undated-letter"
+    ],
+    "raw_input": "Please return the enclosed form about your energy account within 42 days.",
+    "decision_key": "please return the enclosed form about your energy account within 42 days.",
+    "metric": "extraction",
+    "expected": {
+      "kind": "response",
+      "party": "Cranleigh Energy",
+      "deadline": "within 42 days",
+      "anchor": "the date of this letter",
+      "due": null
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read letters without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.letter-to-actions/development-undated_relative-kelp-20/undated_relative-kelp-20-no-ask-01",
+    "item_id": "undated_relative-kelp-20-no-ask-01",
+    "pack": "app.kttl.letter-to-actions",
+    "pack_version": "0.2.0",
+    "prompt_version": "blake3:571efa3adbfef212b46bbc36b0f757c9f8612ab55d3812388743f539f6ef1542",
+    "fixture": "generated-development-undated_relative-kelp-20.txt",
+    "fixture_id": "development-undated_relative-kelp-20",
+    "strata": [
+      "any-letter",
+      "undated-relative",
+      "no-obligation"
+    ],
+    "raw_input": "A prepaid envelope is enclosed for your convenience.",
+    "decision_key": "a prepaid envelope is enclosed for your convenience.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read letters without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.letter-to-actions/development-undated_relative-kelp-20/undated_relative-kelp-20-no-ask-03",
+    "item_id": "undated_relative-kelp-20-no-ask-03",
+    "pack": "app.kttl.letter-to-actions",
+    "pack_version": "0.2.0",
+    "prompt_version": "blake3:571efa3adbfef212b46bbc36b0f757c9f8612ab55d3812388743f539f6ef1542",
+    "fixture": "generated-development-undated_relative-kelp-20.txt",
+    "fixture_id": "development-undated_relative-kelp-20",
+    "strata": [
+      "any-letter",
+      "undated-relative",
+      "no-obligation"
+    ],
+    "raw_input": "The certificate issued on 9 October remains valid for 12 months from that date.",
+    "decision_key": "the certificate issued on 9 october remains valid for 12 months from that date.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read letters without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  }
+]

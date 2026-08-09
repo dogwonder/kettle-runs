@@ -1,0 +1,296 @@
+[
+  {
+    "id": "app.kttl.renewal-diff/development-two_excesses-fennel-06/development-two_excesses-fennel-06-previous-no-value-e9e9b7",
+    "item_id": "development-two_excesses-fennel-06-previous-no-value-e9e9b7",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-two_excesses-fennel-06",
+    "fixture_id": "development-two_excesses-fennel-06",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Corvin Mutual pet insurance — policy schedule FENNEL-TE-435 for the year to 31 August 2026.",
+    "decision_key": "previous|corvin mutual pet insurance — policy schedule fennel-te-435 for the year to 31 august 2026.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-two_excesses-fennel-06/development-two_excesses-fennel-06-previous-compulsory-excess-f9f96f",
+    "item_id": "development-two_excesses-fennel-06-previous-compulsory-excess-f9f96f",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-two_excesses-fennel-06",
+    "fixture_id": "development-two_excesses-fennel-06",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Compulsory excess: £4,400.00 per claim.",
+    "decision_key": "previous|compulsory excess: £4,400.00 per claim.",
+    "metric": "extraction",
+    "expected": {
+      "term": "compulsory_excess",
+      "basis": "per_claim",
+      "value": "£4,400.00",
+      "quote": "Compulsory excess: £4,400.00 per claim."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-two_excesses-fennel-06/development-two_excesses-fennel-06-previous-voluntary-excess-46c7a5",
+    "item_id": "development-two_excesses-fennel-06-previous-voluntary-excess-46c7a5",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-two_excesses-fennel-06",
+    "fixture_id": "development-two_excesses-fennel-06",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Voluntary excess: £990.00 per claim.",
+    "decision_key": "previous|voluntary excess: £990.00 per claim.",
+    "metric": "extraction",
+    "expected": {
+      "term": "voluntary_excess",
+      "basis": "per_claim",
+      "value": "£990.00",
+      "quote": "Voluntary excess: £990.00 per claim."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-two_excesses-fennel-06/development-two_excesses-fennel-06-previous-total-excess-426b40",
+    "item_id": "development-two_excesses-fennel-06-previous-total-excess-426b40",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-two_excesses-fennel-06",
+    "fixture_id": "development-two_excesses-fennel-06",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Total excess payable: £5,390.00 per claim.",
+    "decision_key": "previous|total excess payable: £5,390.00 per claim.",
+    "metric": "extraction",
+    "expected": {
+      "term": "total_excess",
+      "basis": "per_claim",
+      "value": "£5,390.00",
+      "quote": "Total excess payable: £5,390.00 per claim."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-two_excesses-fennel-06/development-two_excesses-fennel-06-previous-no-value-656ba0",
+    "item_id": "development-two_excesses-fennel-06-previous-no-value-656ba0",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-two_excesses-fennel-06",
+    "fixture_id": "development-two_excesses-fennel-06",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Your reference is FENNEL-TE-435. Quote it whenever you write to us about this policy.",
+    "decision_key": "previous|your reference is fennel-te-435. quote it whenever you write to us about this policy.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-two_excesses-fennel-06/development-two_excesses-fennel-06-previous-no-value-33b1b4",
+    "item_id": "development-two_excesses-fennel-06-previous-no-value-33b1b4",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-two_excesses-fennel-06",
+    "fixture_id": "development-two_excesses-fennel-06",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Corvin Mutual arranges pet insurance cover under FENNEL-TE-435 and is regulated in the United Kingdom.",
+    "decision_key": "previous|corvin mutual arranges pet insurance cover under fennel-te-435 and is regulated in the united kingdom.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-two_excesses-fennel-06/development-two_excesses-fennel-06-renewal-no-value-843444",
+    "item_id": "development-two_excesses-fennel-06-renewal-no-value-843444",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-two_excesses-fennel-06",
+    "fixture_id": "development-two_excesses-fennel-06",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Corvin Mutual pet insurance — renewal schedule FENNEL-TE-435 for the year to 31 August 2027.",
+    "decision_key": "renewal|corvin mutual pet insurance — renewal schedule fennel-te-435 for the year to 31 august 2027.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-two_excesses-fennel-06/development-two_excesses-fennel-06-renewal-compulsory-excess-8c49ea",
+    "item_id": "development-two_excesses-fennel-06-renewal-compulsory-excess-8c49ea",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-two_excesses-fennel-06",
+    "fixture_id": "development-two_excesses-fennel-06",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Compulsory excess: £4,450.00 per claim.",
+    "decision_key": "renewal|compulsory excess: £4,450.00 per claim.",
+    "metric": "extraction",
+    "expected": {
+      "term": "compulsory_excess",
+      "basis": "per_claim",
+      "value": "£4,450.00",
+      "quote": "Compulsory excess: £4,450.00 per claim."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-two_excesses-fennel-06/development-two_excesses-fennel-06-renewal-voluntary-excess-46c7a5",
+    "item_id": "development-two_excesses-fennel-06-renewal-voluntary-excess-46c7a5",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-two_excesses-fennel-06",
+    "fixture_id": "development-two_excesses-fennel-06",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Voluntary excess: £990.00 per claim.",
+    "decision_key": "renewal|voluntary excess: £990.00 per claim.",
+    "metric": "extraction",
+    "expected": {
+      "term": "voluntary_excess",
+      "basis": "per_claim",
+      "value": "£990.00",
+      "quote": "Voluntary excess: £990.00 per claim."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-two_excesses-fennel-06/development-two_excesses-fennel-06-renewal-total-excess-053e32",
+    "item_id": "development-two_excesses-fennel-06-renewal-total-excess-053e32",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-two_excesses-fennel-06",
+    "fixture_id": "development-two_excesses-fennel-06",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Total excess payable: £5,440.00 per claim.",
+    "decision_key": "renewal|total excess payable: £5,440.00 per claim.",
+    "metric": "extraction",
+    "expected": {
+      "term": "total_excess",
+      "basis": "per_claim",
+      "value": "£5,440.00",
+      "quote": "Total excess payable: £5,440.00 per claim."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-two_excesses-fennel-06/development-two_excesses-fennel-06-renewal-no-value-33b1b4",
+    "item_id": "development-two_excesses-fennel-06-renewal-no-value-33b1b4",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-two_excesses-fennel-06",
+    "fixture_id": "development-two_excesses-fennel-06",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Corvin Mutual arranges pet insurance cover under FENNEL-TE-435 and is regulated in the United Kingdom.",
+    "decision_key": "renewal|corvin mutual arranges pet insurance cover under fennel-te-435 and is regulated in the united kingdom.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-two_excesses-fennel-06/development-two_excesses-fennel-06-renewal-no-value-656ba0",
+    "item_id": "development-two_excesses-fennel-06-renewal-no-value-656ba0",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-two_excesses-fennel-06",
+    "fixture_id": "development-two_excesses-fennel-06",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Your reference is FENNEL-TE-435. Quote it whenever you write to us about this policy.",
+    "decision_key": "renewal|your reference is fennel-te-435. quote it whenever you write to us about this policy.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  }
+]

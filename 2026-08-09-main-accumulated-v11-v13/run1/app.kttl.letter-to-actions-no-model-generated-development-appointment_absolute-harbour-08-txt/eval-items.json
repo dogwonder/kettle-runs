@@ -1,0 +1,77 @@
+[
+  {
+    "id": "app.kttl.letter-to-actions/development-appointment_absolute-harbour-08/appointment_absolute-harbour-08-attendance-01",
+    "item_id": "appointment_absolute-harbour-08-attendance-01",
+    "pack": "app.kttl.letter-to-actions",
+    "pack_version": "0.2.0",
+    "prompt_version": "blake3:571efa3adbfef212b46bbc36b0f757c9f8612ab55d3812388743f539f6ef1542",
+    "fixture": "generated-development-appointment_absolute-harbour-08.txt",
+    "fixture_id": "development-appointment_absolute-harbour-08",
+    "strata": [
+      "any-letter",
+      "appointment-absolute",
+      "absolute-deadline"
+    ],
+    "raw_input": "You have an appointment about your energy account at Cranleigh Energy on 11 February 2026. Please arrive ten minutes early and bring this letter with you.",
+    "decision_key": "you have an appointment about your energy account at cranleigh energy on 11 february 2026. please arrive ten minutes early and bring this letter with you.",
+    "metric": "extraction",
+    "expected": {
+      "kind": "attendance",
+      "party": "Cranleigh Energy",
+      "deadline": "on 11 February 2026",
+      "anchor": "11 February 2026",
+      "due": "2026-02-11"
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read letters without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.letter-to-actions/development-appointment_absolute-harbour-08/appointment_absolute-harbour-08-no-ask-02",
+    "item_id": "appointment_absolute-harbour-08-no-ask-02",
+    "pack": "app.kttl.letter-to-actions",
+    "pack_version": "0.2.0",
+    "prompt_version": "blake3:571efa3adbfef212b46bbc36b0f757c9f8612ab55d3812388743f539f6ef1542",
+    "fixture": "generated-development-appointment_absolute-harbour-08.txt",
+    "fixture_id": "development-appointment_absolute-harbour-08",
+    "strata": [
+      "any-letter",
+      "appointment-absolute",
+      "no-obligation"
+    ],
+    "raw_input": "If you have any questions about this letter, our reception team will be glad to help.",
+    "decision_key": "if you have any questions about this letter, our reception team will be glad to help.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read letters without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.letter-to-actions/development-appointment_absolute-harbour-08/appointment_absolute-harbour-08-no-ask-04",
+    "item_id": "appointment_absolute-harbour-08-no-ask-04",
+    "pack": "app.kttl.letter-to-actions",
+    "pack_version": "0.2.0",
+    "prompt_version": "blake3:571efa3adbfef212b46bbc36b0f757c9f8612ab55d3812388743f539f6ef1542",
+    "fixture": "generated-development-appointment_absolute-harbour-08.txt",
+    "fixture_id": "development-appointment_absolute-harbour-08",
+    "strata": [
+      "any-letter",
+      "appointment-absolute",
+      "no-obligation"
+    ],
+    "raw_input": "The £25.00 charge applied in error on 7 March has been refunded to your account.",
+    "decision_key": "the £25.00 charge applied in error on 7 march has been refunded to your account.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read letters without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  }
+]

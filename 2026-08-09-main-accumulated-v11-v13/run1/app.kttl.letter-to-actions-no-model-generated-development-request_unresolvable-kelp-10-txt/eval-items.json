@@ -1,0 +1,77 @@
+[
+  {
+    "id": "app.kttl.letter-to-actions/development-request_unresolvable-kelp-10/request_unresolvable-kelp-10-response-01",
+    "item_id": "request_unresolvable-kelp-10-response-01",
+    "pack": "app.kttl.letter-to-actions",
+    "pack_version": "0.2.0",
+    "prompt_version": "blake3:571efa3adbfef212b46bbc36b0f757c9f8612ab55d3812388743f539f6ef1542",
+    "fixture": "generated-development-request_unresolvable-kelp-10.txt",
+    "fixture_id": "development-request_unresolvable-kelp-10",
+    "strata": [
+      "any-letter",
+      "request-unresolvable",
+      "unresolvable-deadline"
+    ],
+    "raw_input": "Please send us a meter reading for your membership at your earliest convenience.",
+    "decision_key": "please send us a meter reading for your membership at your earliest convenience.",
+    "metric": "extraction",
+    "expected": {
+      "kind": "response",
+      "party": "Eastvale Library Service",
+      "deadline": "at your earliest convenience",
+      "anchor": "no particular date",
+      "due": null
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read letters without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.letter-to-actions/development-request_unresolvable-kelp-10/request_unresolvable-kelp-10-no-ask-02",
+    "item_id": "request_unresolvable-kelp-10-no-ask-02",
+    "pack": "app.kttl.letter-to-actions",
+    "pack_version": "0.2.0",
+    "prompt_version": "blake3:571efa3adbfef212b46bbc36b0f757c9f8612ab55d3812388743f539f6ef1542",
+    "fixture": "generated-development-request_unresolvable-kelp-10.txt",
+    "fixture_id": "development-request_unresolvable-kelp-10",
+    "strata": [
+      "any-letter",
+      "request-unresolvable",
+      "no-obligation"
+    ],
+    "raw_input": "Thank you for being a customer of ours.",
+    "decision_key": "thank you for being a customer of ours.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read letters without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.letter-to-actions/development-request_unresolvable-kelp-10/request_unresolvable-kelp-10-no-ask-04",
+    "item_id": "request_unresolvable-kelp-10-no-ask-04",
+    "pack": "app.kttl.letter-to-actions",
+    "pack_version": "0.2.0",
+    "prompt_version": "blake3:571efa3adbfef212b46bbc36b0f757c9f8612ab55d3812388743f539f6ef1542",
+    "fixture": "generated-development-request_unresolvable-kelp-10.txt",
+    "fixture_id": "development-request_unresolvable-kelp-10",
+    "strata": [
+      "any-letter",
+      "request-unresolvable",
+      "no-obligation"
+    ],
+    "raw_input": "This information is provided under our licence conditions and needs no reply.",
+    "decision_key": "this information is provided under our licence conditions and needs no reply.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read letters without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  }
+]

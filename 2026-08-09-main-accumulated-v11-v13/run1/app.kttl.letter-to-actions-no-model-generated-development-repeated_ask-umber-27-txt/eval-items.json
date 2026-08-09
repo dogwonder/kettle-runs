@@ -1,0 +1,77 @@
+[
+  {
+    "id": "app.kttl.letter-to-actions/development-repeated_ask-umber-27/repeated_ask-umber-27-payment-01",
+    "item_id": "repeated_ask-umber-27-payment-01",
+    "pack": "app.kttl.letter-to-actions",
+    "pack_version": "0.2.0",
+    "prompt_version": "blake3:571efa3adbfef212b46bbc36b0f757c9f8612ab55d3812388743f539f6ef1542",
+    "fixture": "generated-development-repeated_ask-umber-27.txt",
+    "fixture_id": "development-repeated_ask-umber-27",
+    "strata": [
+      "any-letter",
+      "repeated-ask",
+      "repeated-obligation"
+    ],
+    "raw_input": "Please pay £0.00 for your annual review within 14 days of the date of this letter.",
+    "decision_key": "please pay £0.00 for your annual review within 14 days of the date of this letter.",
+    "metric": "extraction",
+    "expected": {
+      "kind": "payment",
+      "party": "Marlow Ridge Surgery",
+      "deadline": "within 14 days",
+      "anchor": "the date of this letter",
+      "due": "2026-04-02"
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read letters without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.letter-to-actions/development-repeated_ask-umber-27/repeated_ask-umber-27-no-ask-03",
+    "item_id": "repeated_ask-umber-27-no-ask-03",
+    "pack": "app.kttl.letter-to-actions",
+    "pack_version": "0.2.0",
+    "prompt_version": "blake3:571efa3adbfef212b46bbc36b0f757c9f8612ab55d3812388743f539f6ef1542",
+    "fixture": "generated-development-repeated_ask-umber-27.txt",
+    "fixture_id": "development-repeated_ask-umber-27",
+    "strata": [
+      "any-letter",
+      "repeated-ask",
+      "no-obligation"
+    ],
+    "raw_input": "No further action is needed once you have paid.",
+    "decision_key": "no further action is needed once you have paid.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read letters without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.letter-to-actions/development-repeated_ask-umber-27/repeated_ask-umber-27-no-ask-05",
+    "item_id": "repeated_ask-umber-27-no-ask-05",
+    "pack": "app.kttl.letter-to-actions",
+    "pack_version": "0.2.0",
+    "prompt_version": "blake3:571efa3adbfef212b46bbc36b0f757c9f8612ab55d3812388743f539f6ef1542",
+    "fixture": "generated-development-repeated_ask-umber-27.txt",
+    "fixture_id": "development-repeated_ask-umber-27",
+    "strata": [
+      "any-letter",
+      "repeated-ask",
+      "no-obligation"
+    ],
+    "raw_input": "Our surveyor attended on 13 March and found nothing that needs your attention.",
+    "decision_key": "our surveyor attended on 13 march and found nothing that needs your attention.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read letters without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  }
+]

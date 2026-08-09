@@ -1,0 +1,108 @@
+[
+  {
+    "id": "app.kttl.letter-to-actions/development-payment_and_response-kelp-14/payment_and_response-kelp-14-payment-01",
+    "item_id": "payment_and_response-kelp-14-payment-01",
+    "pack": "app.kttl.letter-to-actions",
+    "pack_version": "0.2.0",
+    "prompt_version": "blake3:571efa3adbfef212b46bbc36b0f757c9f8612ab55d3812388743f539f6ef1542",
+    "fixture": "generated-development-payment_and_response-kelp-14.txt",
+    "fixture_id": "development-payment_and_response-kelp-14",
+    "strata": [
+      "any-letter",
+      "payment-and-response",
+      "relative-deadline",
+      "multiple-obligations"
+    ],
+    "raw_input": "Please pay £214.60 for your council tax account within 14 days of the date of this letter.",
+    "decision_key": "please pay £214.60 for your council tax account within 14 days of the date of this letter.",
+    "metric": "extraction",
+    "expected": {
+      "kind": "payment",
+      "party": "Kelsford Borough Council",
+      "deadline": "within 14 days",
+      "anchor": "the date of this letter",
+      "due": "2026-02-24"
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read letters without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.letter-to-actions/development-payment_and_response-kelp-14/payment_and_response-kelp-14-response-02",
+    "item_id": "payment_and_response-kelp-14-response-02",
+    "pack": "app.kttl.letter-to-actions",
+    "pack_version": "0.2.0",
+    "prompt_version": "blake3:571efa3adbfef212b46bbc36b0f757c9f8612ab55d3812388743f539f6ef1542",
+    "fixture": "generated-development-payment_and_response-kelp-14.txt",
+    "fixture_id": "development-payment_and_response-kelp-14",
+    "strata": [
+      "any-letter",
+      "payment-and-response",
+      "relative-deadline",
+      "multiple-obligations"
+    ],
+    "raw_input": "You must also confirm in writing that you have made this payment, within 28 days of the date of this letter.",
+    "decision_key": "you must also confirm in writing that you have made this payment, within 28 days of the date of this letter.",
+    "metric": "extraction",
+    "expected": {
+      "kind": "response",
+      "party": "Kelsford Borough Council",
+      "deadline": "within 28 days",
+      "anchor": "the date of this letter",
+      "due": "2026-03-10"
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read letters without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.letter-to-actions/development-payment_and_response-kelp-14/payment_and_response-kelp-14-no-ask-03",
+    "item_id": "payment_and_response-kelp-14-no-ask-03",
+    "pack": "app.kttl.letter-to-actions",
+    "pack_version": "0.2.0",
+    "prompt_version": "blake3:571efa3adbfef212b46bbc36b0f757c9f8612ab55d3812388743f539f6ef1542",
+    "fixture": "generated-development-payment_and_response-kelp-14.txt",
+    "fixture_id": "development-payment_and_response-kelp-14",
+    "strata": [
+      "any-letter",
+      "payment-and-response",
+      "no-obligation"
+    ],
+    "raw_input": "We appreciate your prompt attention to this.",
+    "decision_key": "we appreciate your prompt attention to this.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read letters without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.letter-to-actions/development-payment_and_response-kelp-14/payment_and_response-kelp-14-no-ask-05",
+    "item_id": "payment_and_response-kelp-14-no-ask-05",
+    "pack": "app.kttl.letter-to-actions",
+    "pack_version": "0.2.0",
+    "prompt_version": "blake3:571efa3adbfef212b46bbc36b0f757c9f8612ab55d3812388743f539f6ef1542",
+    "fixture": "generated-development-payment_and_response-kelp-14.txt",
+    "fixture_id": "development-payment_and_response-kelp-14",
+    "strata": [
+      "any-letter",
+      "payment-and-response",
+      "no-obligation"
+    ],
+    "raw_input": "Your cover continues until 14 September and renews by itself unless you tell us otherwise.",
+    "decision_key": "your cover continues until 14 september and renews by itself unless you tell us otherwise.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read letters without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  }
+]

@@ -1,0 +1,850 @@
+[
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-damson-04/development-sections_repeat-damson-04-previous-no-value-e81ee5",
+    "item_id": "development-sections_repeat-damson-04-previous-no-value-e81ee5",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-damson-04",
+    "fixture_id": "development-sections_repeat-damson-04",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Corvin Mutual pet insurance — policy schedule DAMSON-SR-421 for the year to 31 August 2026.",
+    "decision_key": "previous|corvin mutual pet insurance — policy schedule damson-sr-421 for the year to 31 august 2026.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-damson-04/development-sections_repeat-damson-04-previous-no-value-3e037e",
+    "item_id": "development-sections_repeat-damson-04-previous-no-value-3e037e",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-damson-04",
+    "fixture_id": "development-sections_repeat-damson-04",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Period of insurance under DAMSON-SR-421: From 1 September 2025 to 31 August 2026 both days inclusive.",
+    "decision_key": "previous|period of insurance under damson-sr-421: from 1 september 2025 to 31 august 2026 both days inclusive.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-damson-04/development-sections_repeat-damson-04-previous-no-value-b66bac",
+    "item_id": "development-sections_repeat-damson-04-previous-no-value-b66bac",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-damson-04",
+    "fixture_id": "development-sections_repeat-damson-04",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Section: professional indemnity (schedule DAMSON-SR-421)",
+    "decision_key": "previous|section: professional indemnity (schedule damson-sr-421)",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-damson-04/development-sections_repeat-damson-04-previous-cover-limit-ea7c80",
+    "item_id": "development-sections_repeat-damson-04-previous-cover-limit-ea7c80",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-damson-04",
+    "fixture_id": "development-sections_repeat-damson-04",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Insurance amount: £604,700.00.",
+    "decision_key": "previous|insurance amount: £604,700.00.",
+    "metric": "extraction",
+    "expected": {
+      "term": "cover_limit",
+      "basis": "per_policy",
+      "value": "£604,700.00",
+      "quote": "Insurance amount: £604,700.00."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-damson-04/development-sections_repeat-damson-04-previous-compulsory-excess-ae09e7",
+    "item_id": "development-sections_repeat-damson-04-previous-compulsory-excess-ae09e7",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-damson-04",
+    "fixture_id": "development-sections_repeat-damson-04",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Excess: £5,435.00 each and every claim.",
+    "decision_key": "previous|excess: £5,435.00 each and every claim.",
+    "metric": "extraction",
+    "expected": {
+      "term": "compulsory_excess",
+      "basis": "per_claim",
+      "value": "£5,435.00",
+      "quote": "Excess: £5,435.00 each and every claim."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-damson-04/development-sections_repeat-damson-04-previous-premium-27df75",
+    "item_id": "development-sections_repeat-damson-04-previous-premium-27df75",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-damson-04",
+    "fixture_id": "development-sections_repeat-damson-04",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Annual premium: £1,451.10.",
+    "decision_key": "previous|annual premium: £1,451.10.",
+    "metric": "extraction",
+    "expected": {
+      "term": "premium",
+      "basis": "annual",
+      "value": "£1,451.10",
+      "quote": "Annual premium: £1,451.10."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-damson-04/development-sections_repeat-damson-04-previous-no-value-a11e97",
+    "item_id": "development-sections_repeat-damson-04-previous-no-value-a11e97",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-damson-04",
+    "fixture_id": "development-sections_repeat-damson-04",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Section: legal expenses (schedule DAMSON-SR-421)",
+    "decision_key": "previous|section: legal expenses (schedule damson-sr-421)",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-damson-04/development-sections_repeat-damson-04-previous-cover-limit-954984",
+    "item_id": "development-sections_repeat-damson-04-previous-cover-limit-954984",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-damson-04",
+    "fixture_id": "development-sections_repeat-damson-04",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Insurance amount: £854,700.00.",
+    "decision_key": "previous|insurance amount: £854,700.00.",
+    "metric": "extraction",
+    "expected": {
+      "term": "cover_limit",
+      "basis": "per_policy",
+      "value": "£854,700.00",
+      "quote": "Insurance amount: £854,700.00."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-damson-04/development-sections_repeat-damson-04-previous-compulsory-excess-1f1ad7",
+    "item_id": "development-sections_repeat-damson-04-previous-compulsory-excess-1f1ad7",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-damson-04",
+    "fixture_id": "development-sections_repeat-damson-04",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Excess: £5,466.00 each and every claim.",
+    "decision_key": "previous|excess: £5,466.00 each and every claim.",
+    "metric": "extraction",
+    "expected": {
+      "term": "compulsory_excess",
+      "basis": "per_claim",
+      "value": "£5,466.00",
+      "quote": "Excess: £5,466.00 each and every claim."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-damson-04/development-sections_repeat-damson-04-previous-premium-ea0fed",
+    "item_id": "development-sections_repeat-damson-04-previous-premium-ea0fed",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-damson-04",
+    "fixture_id": "development-sections_repeat-damson-04",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Annual premium: £1,498.10.",
+    "decision_key": "previous|annual premium: £1,498.10.",
+    "metric": "extraction",
+    "expected": {
+      "term": "premium",
+      "basis": "annual",
+      "value": "£1,498.10",
+      "quote": "Annual premium: £1,498.10."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-damson-04/development-sections_repeat-damson-04-previous-no-value-2fd54d",
+    "item_id": "development-sections_repeat-damson-04-previous-no-value-2fd54d",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-damson-04",
+    "fixture_id": "development-sections_repeat-damson-04",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Section: crisis containment (schedule DAMSON-SR-421)",
+    "decision_key": "previous|section: crisis containment (schedule damson-sr-421)",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-damson-04/development-sections_repeat-damson-04-previous-cover-limit-64f189",
+    "item_id": "development-sections_repeat-damson-04-previous-cover-limit-64f189",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-damson-04",
+    "fixture_id": "development-sections_repeat-damson-04",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Insurance amount: £1,104,700.00.",
+    "decision_key": "previous|insurance amount: £1,104,700.00.",
+    "metric": "extraction",
+    "expected": {
+      "term": "cover_limit",
+      "basis": "per_policy",
+      "value": "£1,104,700.00",
+      "quote": "Insurance amount: £1,104,700.00."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-damson-04/development-sections_repeat-damson-04-previous-compulsory-excess-c8d98e",
+    "item_id": "development-sections_repeat-damson-04-previous-compulsory-excess-c8d98e",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-damson-04",
+    "fixture_id": "development-sections_repeat-damson-04",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Excess: £5,497.00 each and every claim.",
+    "decision_key": "previous|excess: £5,497.00 each and every claim.",
+    "metric": "extraction",
+    "expected": {
+      "term": "compulsory_excess",
+      "basis": "per_claim",
+      "value": "£5,497.00",
+      "quote": "Excess: £5,497.00 each and every claim."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-damson-04/development-sections_repeat-damson-04-previous-premium-e17434",
+    "item_id": "development-sections_repeat-damson-04-previous-premium-e17434",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-damson-04",
+    "fixture_id": "development-sections_repeat-damson-04",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Annual premium: £1,545.10.",
+    "decision_key": "previous|annual premium: £1,545.10.",
+    "metric": "extraction",
+    "expected": {
+      "term": "premium",
+      "basis": "annual",
+      "value": "£1,545.10",
+      "quote": "Annual premium: £1,545.10."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-damson-04/development-sections_repeat-damson-04-previous-premium-3abec3",
+    "item_id": "development-sections_repeat-damson-04-previous-premium-3abec3",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-damson-04",
+    "fixture_id": "development-sections_repeat-damson-04",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Total annual premium for all sections: £4,494.30.",
+    "decision_key": "previous|total annual premium for all sections: £4,494.30.",
+    "metric": "extraction",
+    "expected": {
+      "term": "premium",
+      "basis": "annual",
+      "value": "£4,494.30",
+      "quote": "Total annual premium for all sections: £4,494.30."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-damson-04/development-sections_repeat-damson-04-previous-no-value-574af1",
+    "item_id": "development-sections_repeat-damson-04-previous-no-value-574af1",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-damson-04",
+    "fixture_id": "development-sections_repeat-damson-04",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Your reference is DAMSON-SR-421. Quote it whenever you write to us about this policy.",
+    "decision_key": "previous|your reference is damson-sr-421. quote it whenever you write to us about this policy.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-damson-04/development-sections_repeat-damson-04-previous-no-value-754939",
+    "item_id": "development-sections_repeat-damson-04-previous-no-value-754939",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-damson-04",
+    "fixture_id": "development-sections_repeat-damson-04",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Corvin Mutual arranges pet insurance cover under DAMSON-SR-421 and is regulated in the United Kingdom.",
+    "decision_key": "previous|corvin mutual arranges pet insurance cover under damson-sr-421 and is regulated in the united kingdom.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-damson-04/development-sections_repeat-damson-04-renewal-no-value-5a015b",
+    "item_id": "development-sections_repeat-damson-04-renewal-no-value-5a015b",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-damson-04",
+    "fixture_id": "development-sections_repeat-damson-04",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Corvin Mutual pet insurance — renewal schedule DAMSON-SR-421 for the year to 31 August 2027.",
+    "decision_key": "renewal|corvin mutual pet insurance — renewal schedule damson-sr-421 for the year to 31 august 2027.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-damson-04/development-sections_repeat-damson-04-renewal-no-value-d4b66e",
+    "item_id": "development-sections_repeat-damson-04-renewal-no-value-d4b66e",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-damson-04",
+    "fixture_id": "development-sections_repeat-damson-04",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Period of insurance under DAMSON-SR-421: From 1 September 2026 to 31 August 2027 both days inclusive.",
+    "decision_key": "renewal|period of insurance under damson-sr-421: from 1 september 2026 to 31 august 2027 both days inclusive.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-damson-04/development-sections_repeat-damson-04-renewal-no-value-b66bac",
+    "item_id": "development-sections_repeat-damson-04-renewal-no-value-b66bac",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-damson-04",
+    "fixture_id": "development-sections_repeat-damson-04",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Section: professional indemnity (schedule DAMSON-SR-421)",
+    "decision_key": "renewal|section: professional indemnity (schedule damson-sr-421)",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-damson-04/development-sections_repeat-damson-04-renewal-cover-limit-ea7c80",
+    "item_id": "development-sections_repeat-damson-04-renewal-cover-limit-ea7c80",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-damson-04",
+    "fixture_id": "development-sections_repeat-damson-04",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Insurance amount: £604,700.00.",
+    "decision_key": "renewal|insurance amount: £604,700.00.",
+    "metric": "extraction",
+    "expected": {
+      "term": "cover_limit",
+      "basis": "per_policy",
+      "value": "£604,700.00",
+      "quote": "Insurance amount: £604,700.00."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-damson-04/development-sections_repeat-damson-04-renewal-compulsory-excess-ae09e7",
+    "item_id": "development-sections_repeat-damson-04-renewal-compulsory-excess-ae09e7",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-damson-04",
+    "fixture_id": "development-sections_repeat-damson-04",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Excess: £5,435.00 each and every claim.",
+    "decision_key": "renewal|excess: £5,435.00 each and every claim.",
+    "metric": "extraction",
+    "expected": {
+      "term": "compulsory_excess",
+      "basis": "per_claim",
+      "value": "£5,435.00",
+      "quote": "Excess: £5,435.00 each and every claim."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-damson-04/development-sections_repeat-damson-04-renewal-premium-d49b56",
+    "item_id": "development-sections_repeat-damson-04-renewal-premium-d49b56",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-damson-04",
+    "fixture_id": "development-sections_repeat-damson-04",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Annual premium: £1,466.10.",
+    "decision_key": "renewal|annual premium: £1,466.10.",
+    "metric": "extraction",
+    "expected": {
+      "term": "premium",
+      "basis": "annual",
+      "value": "£1,466.10",
+      "quote": "Annual premium: £1,466.10."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-damson-04/development-sections_repeat-damson-04-renewal-no-value-a11e97",
+    "item_id": "development-sections_repeat-damson-04-renewal-no-value-a11e97",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-damson-04",
+    "fixture_id": "development-sections_repeat-damson-04",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Section: legal expenses (schedule DAMSON-SR-421)",
+    "decision_key": "renewal|section: legal expenses (schedule damson-sr-421)",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-damson-04/development-sections_repeat-damson-04-renewal-cover-limit-954984",
+    "item_id": "development-sections_repeat-damson-04-renewal-cover-limit-954984",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-damson-04",
+    "fixture_id": "development-sections_repeat-damson-04",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Insurance amount: £854,700.00.",
+    "decision_key": "renewal|insurance amount: £854,700.00.",
+    "metric": "extraction",
+    "expected": {
+      "term": "cover_limit",
+      "basis": "per_policy",
+      "value": "£854,700.00",
+      "quote": "Insurance amount: £854,700.00."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-damson-04/development-sections_repeat-damson-04-renewal-compulsory-excess-1f1ad7",
+    "item_id": "development-sections_repeat-damson-04-renewal-compulsory-excess-1f1ad7",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-damson-04",
+    "fixture_id": "development-sections_repeat-damson-04",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Excess: £5,466.00 each and every claim.",
+    "decision_key": "renewal|excess: £5,466.00 each and every claim.",
+    "metric": "extraction",
+    "expected": {
+      "term": "compulsory_excess",
+      "basis": "per_claim",
+      "value": "£5,466.00",
+      "quote": "Excess: £5,466.00 each and every claim."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-damson-04/development-sections_repeat-damson-04-renewal-premium-9851ad",
+    "item_id": "development-sections_repeat-damson-04-renewal-premium-9851ad",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-damson-04",
+    "fixture_id": "development-sections_repeat-damson-04",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Annual premium: £1,513.10.",
+    "decision_key": "renewal|annual premium: £1,513.10.",
+    "metric": "extraction",
+    "expected": {
+      "term": "premium",
+      "basis": "annual",
+      "value": "£1,513.10",
+      "quote": "Annual premium: £1,513.10."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-damson-04/development-sections_repeat-damson-04-renewal-no-value-2fd54d",
+    "item_id": "development-sections_repeat-damson-04-renewal-no-value-2fd54d",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-damson-04",
+    "fixture_id": "development-sections_repeat-damson-04",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Section: crisis containment (schedule DAMSON-SR-421)",
+    "decision_key": "renewal|section: crisis containment (schedule damson-sr-421)",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-damson-04/development-sections_repeat-damson-04-renewal-cover-limit-64f189",
+    "item_id": "development-sections_repeat-damson-04-renewal-cover-limit-64f189",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-damson-04",
+    "fixture_id": "development-sections_repeat-damson-04",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Insurance amount: £1,104,700.00.",
+    "decision_key": "renewal|insurance amount: £1,104,700.00.",
+    "metric": "extraction",
+    "expected": {
+      "term": "cover_limit",
+      "basis": "per_policy",
+      "value": "£1,104,700.00",
+      "quote": "Insurance amount: £1,104,700.00."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-damson-04/development-sections_repeat-damson-04-renewal-compulsory-excess-c8d98e",
+    "item_id": "development-sections_repeat-damson-04-renewal-compulsory-excess-c8d98e",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-damson-04",
+    "fixture_id": "development-sections_repeat-damson-04",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Excess: £5,497.00 each and every claim.",
+    "decision_key": "renewal|excess: £5,497.00 each and every claim.",
+    "metric": "extraction",
+    "expected": {
+      "term": "compulsory_excess",
+      "basis": "per_claim",
+      "value": "£5,497.00",
+      "quote": "Excess: £5,497.00 each and every claim."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-damson-04/development-sections_repeat-damson-04-renewal-premium-788483",
+    "item_id": "development-sections_repeat-damson-04-renewal-premium-788483",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-damson-04",
+    "fixture_id": "development-sections_repeat-damson-04",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Annual premium: £1,560.10.",
+    "decision_key": "renewal|annual premium: £1,560.10.",
+    "metric": "extraction",
+    "expected": {
+      "term": "premium",
+      "basis": "annual",
+      "value": "£1,560.10",
+      "quote": "Annual premium: £1,560.10."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-damson-04/development-sections_repeat-damson-04-renewal-premium-1e20bf",
+    "item_id": "development-sections_repeat-damson-04-renewal-premium-1e20bf",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-damson-04",
+    "fixture_id": "development-sections_repeat-damson-04",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Total annual premium for all sections: £4,539.30.",
+    "decision_key": "renewal|total annual premium for all sections: £4,539.30.",
+    "metric": "extraction",
+    "expected": {
+      "term": "premium",
+      "basis": "annual",
+      "value": "£4,539.30",
+      "quote": "Total annual premium for all sections: £4,539.30."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-damson-04/development-sections_repeat-damson-04-renewal-no-value-754939",
+    "item_id": "development-sections_repeat-damson-04-renewal-no-value-754939",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-damson-04",
+    "fixture_id": "development-sections_repeat-damson-04",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Corvin Mutual arranges pet insurance cover under DAMSON-SR-421 and is regulated in the United Kingdom.",
+    "decision_key": "renewal|corvin mutual arranges pet insurance cover under damson-sr-421 and is regulated in the united kingdom.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-damson-04/development-sections_repeat-damson-04-renewal-no-value-574af1",
+    "item_id": "development-sections_repeat-damson-04-renewal-no-value-574af1",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-damson-04",
+    "fixture_id": "development-sections_repeat-damson-04",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Your reference is DAMSON-SR-421. Quote it whenever you write to us about this policy.",
+    "decision_key": "renewal|your reference is damson-sr-421. quote it whenever you write to us about this policy.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  }
+]

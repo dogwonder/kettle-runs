@@ -1,0 +1,138 @@
+[
+  {
+    "id": "app.kttl.letter-to-actions/development-three_asks-kelp-03/three_asks-kelp-03-payment-01",
+    "item_id": "three_asks-kelp-03-payment-01",
+    "pack": "app.kttl.letter-to-actions",
+    "pack_version": "0.2.0",
+    "prompt_version": "blake3:571efa3adbfef212b46bbc36b0f757c9f8612ab55d3812388743f539f6ef1542",
+    "fixture": "generated-development-three_asks-kelp-03.txt",
+    "fixture_id": "development-three_asks-kelp-03",
+    "strata": [
+      "any-letter",
+      "three-asks",
+      "relative-deadline",
+      "multiple-obligations"
+    ],
+    "raw_input": "Please pay £0.00 towards your annual review within 14 days of the date of this letter.",
+    "decision_key": "please pay £0.00 towards your annual review within 14 days of the date of this letter.",
+    "metric": "extraction",
+    "expected": {
+      "kind": "payment",
+      "party": "Marlow Ridge Surgery",
+      "deadline": "within 14 days",
+      "anchor": "the date of this letter",
+      "due": "2026-03-25"
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read letters without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.letter-to-actions/development-three_asks-kelp-03/three_asks-kelp-03-attendance-02",
+    "item_id": "three_asks-kelp-03-attendance-02",
+    "pack": "app.kttl.letter-to-actions",
+    "pack_version": "0.2.0",
+    "prompt_version": "blake3:571efa3adbfef212b46bbc36b0f757c9f8612ab55d3812388743f539f6ef1542",
+    "fixture": "generated-development-three_asks-kelp-03.txt",
+    "fixture_id": "development-three_asks-kelp-03",
+    "strata": [
+      "any-letter",
+      "three-asks",
+      "absolute-deadline",
+      "multiple-obligations"
+    ],
+    "raw_input": "You must attend a review meeting at our offices on 21 April 2026.",
+    "decision_key": "you must attend a review meeting at our offices on 21 april 2026.",
+    "metric": "extraction",
+    "expected": {
+      "kind": "attendance",
+      "party": "Marlow Ridge Surgery",
+      "deadline": "on 21 April 2026",
+      "anchor": "21 April 2026",
+      "due": "2026-04-21"
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read letters without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.letter-to-actions/development-three_asks-kelp-03/three_asks-kelp-03-response-03",
+    "item_id": "three_asks-kelp-03-response-03",
+    "pack": "app.kttl.letter-to-actions",
+    "pack_version": "0.2.0",
+    "prompt_version": "blake3:571efa3adbfef212b46bbc36b0f757c9f8612ab55d3812388743f539f6ef1542",
+    "fixture": "generated-development-three_asks-kelp-03.txt",
+    "fixture_id": "development-three_asks-kelp-03",
+    "strata": [
+      "any-letter",
+      "three-asks",
+      "month-end",
+      "multiple-obligations"
+    ],
+    "raw_input": "Please reply to this letter by the end of the month to confirm that you will attend.",
+    "decision_key": "please reply to this letter by the end of the month to confirm that you will attend.",
+    "metric": "extraction",
+    "expected": {
+      "kind": "response",
+      "party": "Marlow Ridge Surgery",
+      "deadline": "by the end of the month",
+      "anchor": "the date of this letter",
+      "due": "2026-03-31"
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read letters without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.letter-to-actions/development-three_asks-kelp-03/three_asks-kelp-03-no-ask-04",
+    "item_id": "three_asks-kelp-03-no-ask-04",
+    "pack": "app.kttl.letter-to-actions",
+    "pack_version": "0.2.0",
+    "prompt_version": "blake3:571efa3adbfef212b46bbc36b0f757c9f8612ab55d3812388743f539f6ef1542",
+    "fixture": "generated-development-three_asks-kelp-03.txt",
+    "fixture_id": "development-three_asks-kelp-03",
+    "strata": [
+      "any-letter",
+      "three-asks",
+      "no-obligation"
+    ],
+    "raw_input": "We look forward to hearing from you in due course.",
+    "decision_key": "we look forward to hearing from you in due course.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read letters without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.letter-to-actions/development-three_asks-kelp-03/three_asks-kelp-03-no-ask-06",
+    "item_id": "three_asks-kelp-03-no-ask-06",
+    "pack": "app.kttl.letter-to-actions",
+    "pack_version": "0.2.0",
+    "prompt_version": "blake3:571efa3adbfef212b46bbc36b0f757c9f8612ab55d3812388743f539f6ef1542",
+    "fixture": "generated-development-three_asks-kelp-03.txt",
+    "fixture_id": "development-three_asks-kelp-03",
+    "strata": [
+      "any-letter",
+      "three-asks",
+      "no-obligation"
+    ],
+    "raw_input": "The interest rate on your account changed on 1 April, and we applied it for you.",
+    "decision_key": "the interest rate on your account changed on 1 april, and we applied it for you.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read letters without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  }
+]

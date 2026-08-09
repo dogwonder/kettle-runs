@@ -1,0 +1,850 @@
+[
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-cedar-03/development-sections_repeat-cedar-03-previous-no-value-050dea",
+    "item_id": "development-sections_repeat-cedar-03-previous-no-value-050dea",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-cedar-03",
+    "fixture_id": "development-sections_repeat-cedar-03",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Pennine Line Assurance travel insurance — policy schedule CEDAR-SR-414 for the year to 31 August 2026.",
+    "decision_key": "previous|pennine line assurance travel insurance — policy schedule cedar-sr-414 for the year to 31 august 2026.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-cedar-03/development-sections_repeat-cedar-03-previous-no-value-ac6de3",
+    "item_id": "development-sections_repeat-cedar-03-previous-no-value-ac6de3",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-cedar-03",
+    "fixture_id": "development-sections_repeat-cedar-03",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Period of insurance under CEDAR-SR-414: From 1 September 2025 to 31 August 2026 both days inclusive.",
+    "decision_key": "previous|period of insurance under cedar-sr-414: from 1 september 2025 to 31 august 2026 both days inclusive.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-cedar-03/development-sections_repeat-cedar-03-previous-no-value-09cd7d",
+    "item_id": "development-sections_repeat-cedar-03-previous-no-value-09cd7d",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-cedar-03",
+    "fixture_id": "development-sections_repeat-cedar-03",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Section: professional indemnity (schedule CEDAR-SR-414)",
+    "decision_key": "previous|section: professional indemnity (schedule cedar-sr-414)",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-cedar-03/development-sections_repeat-cedar-03-previous-cover-limit-060420",
+    "item_id": "development-sections_repeat-cedar-03-previous-cover-limit-060420",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-cedar-03",
+    "fixture_id": "development-sections_repeat-cedar-03",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Insurance amount: £604,600.00.",
+    "decision_key": "previous|insurance amount: £604,600.00.",
+    "metric": "extraction",
+    "expected": {
+      "term": "cover_limit",
+      "basis": "per_policy",
+      "value": "£604,600.00",
+      "quote": "Insurance amount: £604,600.00."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-cedar-03/development-sections_repeat-cedar-03-previous-compulsory-excess-29311a",
+    "item_id": "development-sections_repeat-cedar-03-previous-compulsory-excess-29311a",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-cedar-03",
+    "fixture_id": "development-sections_repeat-cedar-03",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Excess: £5,430.00 each and every claim.",
+    "decision_key": "previous|excess: £5,430.00 each and every claim.",
+    "metric": "extraction",
+    "expected": {
+      "term": "compulsory_excess",
+      "basis": "per_claim",
+      "value": "£5,430.00",
+      "quote": "Excess: £5,430.00 each and every claim."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-cedar-03/development-sections_repeat-cedar-03-previous-premium-e10122",
+    "item_id": "development-sections_repeat-cedar-03-previous-premium-e10122",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-cedar-03",
+    "fixture_id": "development-sections_repeat-cedar-03",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Annual premium: £1,449.80.",
+    "decision_key": "previous|annual premium: £1,449.80.",
+    "metric": "extraction",
+    "expected": {
+      "term": "premium",
+      "basis": "annual",
+      "value": "£1,449.80",
+      "quote": "Annual premium: £1,449.80."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-cedar-03/development-sections_repeat-cedar-03-previous-no-value-e7f717",
+    "item_id": "development-sections_repeat-cedar-03-previous-no-value-e7f717",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-cedar-03",
+    "fixture_id": "development-sections_repeat-cedar-03",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Section: legal expenses (schedule CEDAR-SR-414)",
+    "decision_key": "previous|section: legal expenses (schedule cedar-sr-414)",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-cedar-03/development-sections_repeat-cedar-03-previous-cover-limit-73231a",
+    "item_id": "development-sections_repeat-cedar-03-previous-cover-limit-73231a",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-cedar-03",
+    "fixture_id": "development-sections_repeat-cedar-03",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Insurance amount: £854,600.00.",
+    "decision_key": "previous|insurance amount: £854,600.00.",
+    "metric": "extraction",
+    "expected": {
+      "term": "cover_limit",
+      "basis": "per_policy",
+      "value": "£854,600.00",
+      "quote": "Insurance amount: £854,600.00."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-cedar-03/development-sections_repeat-cedar-03-previous-compulsory-excess-fbc9e3",
+    "item_id": "development-sections_repeat-cedar-03-previous-compulsory-excess-fbc9e3",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-cedar-03",
+    "fixture_id": "development-sections_repeat-cedar-03",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Excess: £5,461.00 each and every claim.",
+    "decision_key": "previous|excess: £5,461.00 each and every claim.",
+    "metric": "extraction",
+    "expected": {
+      "term": "compulsory_excess",
+      "basis": "per_claim",
+      "value": "£5,461.00",
+      "quote": "Excess: £5,461.00 each and every claim."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-cedar-03/development-sections_repeat-cedar-03-previous-premium-0964e5",
+    "item_id": "development-sections_repeat-cedar-03-previous-premium-0964e5",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-cedar-03",
+    "fixture_id": "development-sections_repeat-cedar-03",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Annual premium: £1,496.80.",
+    "decision_key": "previous|annual premium: £1,496.80.",
+    "metric": "extraction",
+    "expected": {
+      "term": "premium",
+      "basis": "annual",
+      "value": "£1,496.80",
+      "quote": "Annual premium: £1,496.80."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-cedar-03/development-sections_repeat-cedar-03-previous-no-value-360887",
+    "item_id": "development-sections_repeat-cedar-03-previous-no-value-360887",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-cedar-03",
+    "fixture_id": "development-sections_repeat-cedar-03",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Section: crisis containment (schedule CEDAR-SR-414)",
+    "decision_key": "previous|section: crisis containment (schedule cedar-sr-414)",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-cedar-03/development-sections_repeat-cedar-03-previous-cover-limit-b89ba3",
+    "item_id": "development-sections_repeat-cedar-03-previous-cover-limit-b89ba3",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-cedar-03",
+    "fixture_id": "development-sections_repeat-cedar-03",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Insurance amount: £1,104,600.00.",
+    "decision_key": "previous|insurance amount: £1,104,600.00.",
+    "metric": "extraction",
+    "expected": {
+      "term": "cover_limit",
+      "basis": "per_policy",
+      "value": "£1,104,600.00",
+      "quote": "Insurance amount: £1,104,600.00."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-cedar-03/development-sections_repeat-cedar-03-previous-compulsory-excess-69a6e5",
+    "item_id": "development-sections_repeat-cedar-03-previous-compulsory-excess-69a6e5",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-cedar-03",
+    "fixture_id": "development-sections_repeat-cedar-03",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Excess: £5,492.00 each and every claim.",
+    "decision_key": "previous|excess: £5,492.00 each and every claim.",
+    "metric": "extraction",
+    "expected": {
+      "term": "compulsory_excess",
+      "basis": "per_claim",
+      "value": "£5,492.00",
+      "quote": "Excess: £5,492.00 each and every claim."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-cedar-03/development-sections_repeat-cedar-03-previous-premium-648c0c",
+    "item_id": "development-sections_repeat-cedar-03-previous-premium-648c0c",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-cedar-03",
+    "fixture_id": "development-sections_repeat-cedar-03",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Annual premium: £1,543.80.",
+    "decision_key": "previous|annual premium: £1,543.80.",
+    "metric": "extraction",
+    "expected": {
+      "term": "premium",
+      "basis": "annual",
+      "value": "£1,543.80",
+      "quote": "Annual premium: £1,543.80."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-cedar-03/development-sections_repeat-cedar-03-previous-premium-75e8b6",
+    "item_id": "development-sections_repeat-cedar-03-previous-premium-75e8b6",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-cedar-03",
+    "fixture_id": "development-sections_repeat-cedar-03",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Total annual premium for all sections: £4,490.40.",
+    "decision_key": "previous|total annual premium for all sections: £4,490.40.",
+    "metric": "extraction",
+    "expected": {
+      "term": "premium",
+      "basis": "annual",
+      "value": "£4,490.40",
+      "quote": "Total annual premium for all sections: £4,490.40."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-cedar-03/development-sections_repeat-cedar-03-previous-no-value-2c4cab",
+    "item_id": "development-sections_repeat-cedar-03-previous-no-value-2c4cab",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-cedar-03",
+    "fixture_id": "development-sections_repeat-cedar-03",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Your reference is CEDAR-SR-414. Quote it whenever you write to us about this policy.",
+    "decision_key": "previous|your reference is cedar-sr-414. quote it whenever you write to us about this policy.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-cedar-03/development-sections_repeat-cedar-03-previous-no-value-c8cddc",
+    "item_id": "development-sections_repeat-cedar-03-previous-no-value-c8cddc",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-cedar-03",
+    "fixture_id": "development-sections_repeat-cedar-03",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Pennine Line Assurance arranges travel insurance cover under CEDAR-SR-414 and is regulated in the United Kingdom.",
+    "decision_key": "previous|pennine line assurance arranges travel insurance cover under cedar-sr-414 and is regulated in the united kingdom.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-cedar-03/development-sections_repeat-cedar-03-renewal-no-value-bc515c",
+    "item_id": "development-sections_repeat-cedar-03-renewal-no-value-bc515c",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-cedar-03",
+    "fixture_id": "development-sections_repeat-cedar-03",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Pennine Line Assurance travel insurance — renewal schedule CEDAR-SR-414 for the year to 31 August 2027.",
+    "decision_key": "renewal|pennine line assurance travel insurance — renewal schedule cedar-sr-414 for the year to 31 august 2027.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-cedar-03/development-sections_repeat-cedar-03-renewal-no-value-5a8a50",
+    "item_id": "development-sections_repeat-cedar-03-renewal-no-value-5a8a50",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-cedar-03",
+    "fixture_id": "development-sections_repeat-cedar-03",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Period of insurance under CEDAR-SR-414: From 1 September 2026 to 31 August 2027 both days inclusive.",
+    "decision_key": "renewal|period of insurance under cedar-sr-414: from 1 september 2026 to 31 august 2027 both days inclusive.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-cedar-03/development-sections_repeat-cedar-03-renewal-no-value-09cd7d",
+    "item_id": "development-sections_repeat-cedar-03-renewal-no-value-09cd7d",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-cedar-03",
+    "fixture_id": "development-sections_repeat-cedar-03",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Section: professional indemnity (schedule CEDAR-SR-414)",
+    "decision_key": "renewal|section: professional indemnity (schedule cedar-sr-414)",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-cedar-03/development-sections_repeat-cedar-03-renewal-cover-limit-060420",
+    "item_id": "development-sections_repeat-cedar-03-renewal-cover-limit-060420",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-cedar-03",
+    "fixture_id": "development-sections_repeat-cedar-03",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Insurance amount: £604,600.00.",
+    "decision_key": "renewal|insurance amount: £604,600.00.",
+    "metric": "extraction",
+    "expected": {
+      "term": "cover_limit",
+      "basis": "per_policy",
+      "value": "£604,600.00",
+      "quote": "Insurance amount: £604,600.00."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-cedar-03/development-sections_repeat-cedar-03-renewal-compulsory-excess-29311a",
+    "item_id": "development-sections_repeat-cedar-03-renewal-compulsory-excess-29311a",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-cedar-03",
+    "fixture_id": "development-sections_repeat-cedar-03",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Excess: £5,430.00 each and every claim.",
+    "decision_key": "renewal|excess: £5,430.00 each and every claim.",
+    "metric": "extraction",
+    "expected": {
+      "term": "compulsory_excess",
+      "basis": "per_claim",
+      "value": "£5,430.00",
+      "quote": "Excess: £5,430.00 each and every claim."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-cedar-03/development-sections_repeat-cedar-03-renewal-premium-b33682",
+    "item_id": "development-sections_repeat-cedar-03-renewal-premium-b33682",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-cedar-03",
+    "fixture_id": "development-sections_repeat-cedar-03",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Annual premium: £1,464.80.",
+    "decision_key": "renewal|annual premium: £1,464.80.",
+    "metric": "extraction",
+    "expected": {
+      "term": "premium",
+      "basis": "annual",
+      "value": "£1,464.80",
+      "quote": "Annual premium: £1,464.80."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-cedar-03/development-sections_repeat-cedar-03-renewal-no-value-e7f717",
+    "item_id": "development-sections_repeat-cedar-03-renewal-no-value-e7f717",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-cedar-03",
+    "fixture_id": "development-sections_repeat-cedar-03",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Section: legal expenses (schedule CEDAR-SR-414)",
+    "decision_key": "renewal|section: legal expenses (schedule cedar-sr-414)",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-cedar-03/development-sections_repeat-cedar-03-renewal-cover-limit-73231a",
+    "item_id": "development-sections_repeat-cedar-03-renewal-cover-limit-73231a",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-cedar-03",
+    "fixture_id": "development-sections_repeat-cedar-03",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Insurance amount: £854,600.00.",
+    "decision_key": "renewal|insurance amount: £854,600.00.",
+    "metric": "extraction",
+    "expected": {
+      "term": "cover_limit",
+      "basis": "per_policy",
+      "value": "£854,600.00",
+      "quote": "Insurance amount: £854,600.00."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-cedar-03/development-sections_repeat-cedar-03-renewal-compulsory-excess-fbc9e3",
+    "item_id": "development-sections_repeat-cedar-03-renewal-compulsory-excess-fbc9e3",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-cedar-03",
+    "fixture_id": "development-sections_repeat-cedar-03",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Excess: £5,461.00 each and every claim.",
+    "decision_key": "renewal|excess: £5,461.00 each and every claim.",
+    "metric": "extraction",
+    "expected": {
+      "term": "compulsory_excess",
+      "basis": "per_claim",
+      "value": "£5,461.00",
+      "quote": "Excess: £5,461.00 each and every claim."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-cedar-03/development-sections_repeat-cedar-03-renewal-premium-07ba72",
+    "item_id": "development-sections_repeat-cedar-03-renewal-premium-07ba72",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-cedar-03",
+    "fixture_id": "development-sections_repeat-cedar-03",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Annual premium: £1,511.80.",
+    "decision_key": "renewal|annual premium: £1,511.80.",
+    "metric": "extraction",
+    "expected": {
+      "term": "premium",
+      "basis": "annual",
+      "value": "£1,511.80",
+      "quote": "Annual premium: £1,511.80."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-cedar-03/development-sections_repeat-cedar-03-renewal-no-value-360887",
+    "item_id": "development-sections_repeat-cedar-03-renewal-no-value-360887",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-cedar-03",
+    "fixture_id": "development-sections_repeat-cedar-03",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Section: crisis containment (schedule CEDAR-SR-414)",
+    "decision_key": "renewal|section: crisis containment (schedule cedar-sr-414)",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-cedar-03/development-sections_repeat-cedar-03-renewal-cover-limit-b89ba3",
+    "item_id": "development-sections_repeat-cedar-03-renewal-cover-limit-b89ba3",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-cedar-03",
+    "fixture_id": "development-sections_repeat-cedar-03",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Insurance amount: £1,104,600.00.",
+    "decision_key": "renewal|insurance amount: £1,104,600.00.",
+    "metric": "extraction",
+    "expected": {
+      "term": "cover_limit",
+      "basis": "per_policy",
+      "value": "£1,104,600.00",
+      "quote": "Insurance amount: £1,104,600.00."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-cedar-03/development-sections_repeat-cedar-03-renewal-compulsory-excess-69a6e5",
+    "item_id": "development-sections_repeat-cedar-03-renewal-compulsory-excess-69a6e5",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-cedar-03",
+    "fixture_id": "development-sections_repeat-cedar-03",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Excess: £5,492.00 each and every claim.",
+    "decision_key": "renewal|excess: £5,492.00 each and every claim.",
+    "metric": "extraction",
+    "expected": {
+      "term": "compulsory_excess",
+      "basis": "per_claim",
+      "value": "£5,492.00",
+      "quote": "Excess: £5,492.00 each and every claim."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-cedar-03/development-sections_repeat-cedar-03-renewal-premium-1b7b53",
+    "item_id": "development-sections_repeat-cedar-03-renewal-premium-1b7b53",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-cedar-03",
+    "fixture_id": "development-sections_repeat-cedar-03",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Annual premium: £1,558.80.",
+    "decision_key": "renewal|annual premium: £1,558.80.",
+    "metric": "extraction",
+    "expected": {
+      "term": "premium",
+      "basis": "annual",
+      "value": "£1,558.80",
+      "quote": "Annual premium: £1,558.80."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-cedar-03/development-sections_repeat-cedar-03-renewal-premium-ca0be1",
+    "item_id": "development-sections_repeat-cedar-03-renewal-premium-ca0be1",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-cedar-03",
+    "fixture_id": "development-sections_repeat-cedar-03",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Total annual premium for all sections: £4,535.40.",
+    "decision_key": "renewal|total annual premium for all sections: £4,535.40.",
+    "metric": "extraction",
+    "expected": {
+      "term": "premium",
+      "basis": "annual",
+      "value": "£4,535.40",
+      "quote": "Total annual premium for all sections: £4,535.40."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-cedar-03/development-sections_repeat-cedar-03-renewal-no-value-c8cddc",
+    "item_id": "development-sections_repeat-cedar-03-renewal-no-value-c8cddc",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-cedar-03",
+    "fixture_id": "development-sections_repeat-cedar-03",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Pennine Line Assurance arranges travel insurance cover under CEDAR-SR-414 and is regulated in the United Kingdom.",
+    "decision_key": "renewal|pennine line assurance arranges travel insurance cover under cedar-sr-414 and is regulated in the united kingdom.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-sections_repeat-cedar-03/development-sections_repeat-cedar-03-renewal-no-value-2c4cab",
+    "item_id": "development-sections_repeat-cedar-03-renewal-no-value-2c4cab",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-sections_repeat-cedar-03",
+    "fixture_id": "development-sections_repeat-cedar-03",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Your reference is CEDAR-SR-414. Quote it whenever you write to us about this policy.",
+    "decision_key": "renewal|your reference is cedar-sr-414. quote it whenever you write to us about this policy.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  }
+]

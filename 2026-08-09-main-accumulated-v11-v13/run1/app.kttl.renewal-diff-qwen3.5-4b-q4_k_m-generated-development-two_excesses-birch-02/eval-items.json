@@ -1,0 +1,484 @@
+[
+  {
+    "id": "app.kttl.renewal-diff/development-two_excesses-birch-02/development-two_excesses-birch-02-previous-no-value-e9c462",
+    "item_id": "development-two_excesses-birch-02-previous-no-value-e9c462",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-two_excesses-birch-02",
+    "fixture_id": "development-two_excesses-birch-02",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Kestrel Assurance car insurance — policy schedule BIRCH-TE-407 for the year to 31 August 2026.",
+    "decision_key": "previous|kestrel assurance car insurance — policy schedule birch-te-407 for the year to 31 august 2026.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "absent"
+    },
+    "trace_ids": [
+      "claim-000013"
+    ],
+    "exchanges": [
+      {
+        "step": "Reading what each document says",
+        "batch": 1,
+        "request": "You read one passage of an insurance document at a time and say which\nnamed values, if any, it states.\n\nFor each passage, decide:\n- terms: a list of the named values this passage states. Most passages\n  state none — an empty list is a correct answer, not a failure, and it\n  is always better than a guess. A passage that explains what cover\n  means, describes how to claim, or thanks somebody for renewing states\n  no named value.\n- confidence: \"high\" | \"medium\" | \"low\"\n\nFor each term give:\n- term: \"premium\" | \"compulsory_excess\" | \"voluntary_excess\" |\n  \"total_excess\" | \"cover_limit\" | \"no_claims_discount\" |\n  \"cooling_off_period\" | \"other\"\n\n  Use \"other\" when the passage states a named value that is none of\n  these. That is a real answer and the right one: the value goes in\n  front of the person instead of being compared. Never stretch one of\n  the named terms to cover something it is not.\n\n- basis: \"annual\" | \"monthly\" | \"per_claim\" | \"per_policy\"\n\n  What the value is measured against, as the passage says it. A premium\n  quoted as twelve instalments is \"monthly\"; the same policy's total for\n  the year is \"annual\". These are different values, and calling one the\n  other turns an instalment into a price rise.\n\n- value: the value exactly as the document writes it — \"£1,234.56\",\n  \"£500\", \"14 days\", \"60%\". Copy the currency symbol, the commas and\n  the decimals as they appear. Never round, never convert, never work\n  out a total, and never write a number the passage does not contain.\n\n- quote: the words the value comes from, copied exactly from the\n  passage — enough to show where you read it. This is checked against\n  the document: a quote that is not in the passage means the whole term\n  goes to the person instead of being used.\n\nYou are not asked to compare anything, to say whether a value went up\nor down, or to work out a difference. That is done separately, from the\nvalues you copy. Copying them exactly is the whole job.\n\nReturn one result per input, with the same \"id\" you were given, and\necho the passage back in \"segment\". Return JSON only.\n\nPassages:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"Kestrel Assurance car insurance — policy schedule BIRCH-TE-407 for the year to 31 August 2026.\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"Compulsory excess: £4,380.00 per claim.\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"Voluntary excess: £986.00 per claim.\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"Total excess payable: £5,366.00 per claim.\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"Your reference is BIRCH-TE-407. Quote it whenever you write to us about this policy.\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"Kestrel Assurance arranges car insurance cover under BIRCH-TE-407 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"Kestrel Assurance car insurance — renewal schedule BIRCH-TE-407 for the year to 31 August 2027.\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"Compulsory excess: £4,430.00 per claim.\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"Voluntary excess: £986.00 per claim.\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"Total excess payable: £5,416.00 per claim.\"\n  },\n  {\n    \"id\": 10,\n    \"raw\": \"Kestrel Assurance arranges car insurance cover under BIRCH-TE-407 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 11,\n    \"raw\": \"Your reference is BIRCH-TE-407. Quote it whenever you write to us about this policy.\"\n  }\n]\n",
+        "response": "{\"results\":[{\"confidence\":\"low\",\"id\":0,\"segment\":\"Kestrel Assurance car insurance — policy schedule BIRCH-TE-407 for the year to 31 August 2026.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":1,\"segment\":\"Compulsory excess: £4,380.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"£4,380.00 per claim\",\"term\":\"compulsory_excess\",\"value\":\"£4,380.00\"}]},{\"confidence\":\"high\",\"id\":2,\"segment\":\"Voluntary excess: £986.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"£986.00 per claim\",\"term\":\"voluntary_excess\",\"value\":\"£986.00\"}]},{\"confidence\":\"high\",\"id\":3,\"segment\":\"Total excess payable: £5,366.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"£5,366.00 per claim\",\"term\":\"total_excess\",\"value\":\"£5,366.00\"}]},{\"confidence\":\"low\",\"id\":4,\"segment\":\"Your reference is BIRCH-TE-407. Quote it whenever you write to us about this policy.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":5,\"segment\":\"Kestrel Assurance arranges car insurance cover under BIRCH-TE-407 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":6,\"segment\":\"Kestrel Assurance car insurance — renewal schedule BIRCH-TE-407 for the year to 31 August 2027.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":7,\"segment\":\"Compulsory excess: £4,430.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"£4,430.00 per claim\",\"term\":\"compulsory_excess\",\"value\":\"£4,430.00\"}]},{\"confidence\":\"high\",\"id\":8,\"segment\":\"Voluntary excess: £986.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"£986.00 per claim\",\"term\":\"voluntary_excess\",\"value\":\"£986.00\"}]},{\"confidence\":\"high\",\"id\":9,\"segment\":\"Total excess payable: £5,416.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"£5,416.00 per claim\",\"term\":\"total_excess\",\"value\":\"£5,416.00\"}]},{\"confidence\":\"low\",\"id\":10,\"segment\":\"Kestrel Assurance arranges car insurance cover under BIRCH-TE-407 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":11,\"segment\":\"Your reference is BIRCH-TE-407. Quote it whenever you write to us about this policy.\",\"terms\":[]}]}"
+      }
+    ]
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-two_excesses-birch-02/development-two_excesses-birch-02-previous-compulsory-excess-0cbdd9",
+    "item_id": "development-two_excesses-birch-02-previous-compulsory-excess-0cbdd9",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-two_excesses-birch-02",
+    "fixture_id": "development-two_excesses-birch-02",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Compulsory excess: £4,380.00 per claim.",
+    "decision_key": "previous|compulsory excess: £4,380.00 per claim.",
+    "metric": "extraction",
+    "expected": {
+      "term": "compulsory_excess",
+      "basis": "per_claim",
+      "value": "£4,380.00",
+      "quote": "Compulsory excess: £4,380.00 per claim."
+    },
+    "actual": {
+      "outcome": "found",
+      "extracted": {
+        "term": "compulsory_excess",
+        "basis": "per_claim",
+        "value": "£4,380.00",
+        "quote": "£4,380.00 per claim"
+      }
+    },
+    "evidence": {
+      "existence": "pass",
+      "attribution": "pass",
+      "support": "pass"
+    },
+    "trace_ids": [
+      "claim-000001",
+      "claim-000002"
+    ],
+    "exchanges": [
+      {
+        "step": "Reading what each document says",
+        "batch": 1,
+        "request": "You read one passage of an insurance document at a time and say which\nnamed values, if any, it states.\n\nFor each passage, decide:\n- terms: a list of the named values this passage states. Most passages\n  state none — an empty list is a correct answer, not a failure, and it\n  is always better than a guess. A passage that explains what cover\n  means, describes how to claim, or thanks somebody for renewing states\n  no named value.\n- confidence: \"high\" | \"medium\" | \"low\"\n\nFor each term give:\n- term: \"premium\" | \"compulsory_excess\" | \"voluntary_excess\" |\n  \"total_excess\" | \"cover_limit\" | \"no_claims_discount\" |\n  \"cooling_off_period\" | \"other\"\n\n  Use \"other\" when the passage states a named value that is none of\n  these. That is a real answer and the right one: the value goes in\n  front of the person instead of being compared. Never stretch one of\n  the named terms to cover something it is not.\n\n- basis: \"annual\" | \"monthly\" | \"per_claim\" | \"per_policy\"\n\n  What the value is measured against, as the passage says it. A premium\n  quoted as twelve instalments is \"monthly\"; the same policy's total for\n  the year is \"annual\". These are different values, and calling one the\n  other turns an instalment into a price rise.\n\n- value: the value exactly as the document writes it — \"£1,234.56\",\n  \"£500\", \"14 days\", \"60%\". Copy the currency symbol, the commas and\n  the decimals as they appear. Never round, never convert, never work\n  out a total, and never write a number the passage does not contain.\n\n- quote: the words the value comes from, copied exactly from the\n  passage — enough to show where you read it. This is checked against\n  the document: a quote that is not in the passage means the whole term\n  goes to the person instead of being used.\n\nYou are not asked to compare anything, to say whether a value went up\nor down, or to work out a difference. That is done separately, from the\nvalues you copy. Copying them exactly is the whole job.\n\nReturn one result per input, with the same \"id\" you were given, and\necho the passage back in \"segment\". Return JSON only.\n\nPassages:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"Kestrel Assurance car insurance — policy schedule BIRCH-TE-407 for the year to 31 August 2026.\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"Compulsory excess: £4,380.00 per claim.\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"Voluntary excess: £986.00 per claim.\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"Total excess payable: £5,366.00 per claim.\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"Your reference is BIRCH-TE-407. Quote it whenever you write to us about this policy.\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"Kestrel Assurance arranges car insurance cover under BIRCH-TE-407 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"Kestrel Assurance car insurance — renewal schedule BIRCH-TE-407 for the year to 31 August 2027.\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"Compulsory excess: £4,430.00 per claim.\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"Voluntary excess: £986.00 per claim.\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"Total excess payable: £5,416.00 per claim.\"\n  },\n  {\n    \"id\": 10,\n    \"raw\": \"Kestrel Assurance arranges car insurance cover under BIRCH-TE-407 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 11,\n    \"raw\": \"Your reference is BIRCH-TE-407. Quote it whenever you write to us about this policy.\"\n  }\n]\n",
+        "response": "{\"results\":[{\"confidence\":\"low\",\"id\":0,\"segment\":\"Kestrel Assurance car insurance — policy schedule BIRCH-TE-407 for the year to 31 August 2026.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":1,\"segment\":\"Compulsory excess: £4,380.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"£4,380.00 per claim\",\"term\":\"compulsory_excess\",\"value\":\"£4,380.00\"}]},{\"confidence\":\"high\",\"id\":2,\"segment\":\"Voluntary excess: £986.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"£986.00 per claim\",\"term\":\"voluntary_excess\",\"value\":\"£986.00\"}]},{\"confidence\":\"high\",\"id\":3,\"segment\":\"Total excess payable: £5,366.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"£5,366.00 per claim\",\"term\":\"total_excess\",\"value\":\"£5,366.00\"}]},{\"confidence\":\"low\",\"id\":4,\"segment\":\"Your reference is BIRCH-TE-407. Quote it whenever you write to us about this policy.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":5,\"segment\":\"Kestrel Assurance arranges car insurance cover under BIRCH-TE-407 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":6,\"segment\":\"Kestrel Assurance car insurance — renewal schedule BIRCH-TE-407 for the year to 31 August 2027.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":7,\"segment\":\"Compulsory excess: £4,430.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"£4,430.00 per claim\",\"term\":\"compulsory_excess\",\"value\":\"£4,430.00\"}]},{\"confidence\":\"high\",\"id\":8,\"segment\":\"Voluntary excess: £986.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"£986.00 per claim\",\"term\":\"voluntary_excess\",\"value\":\"£986.00\"}]},{\"confidence\":\"high\",\"id\":9,\"segment\":\"Total excess payable: £5,416.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"£5,416.00 per claim\",\"term\":\"total_excess\",\"value\":\"£5,416.00\"}]},{\"confidence\":\"low\",\"id\":10,\"segment\":\"Kestrel Assurance arranges car insurance cover under BIRCH-TE-407 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":11,\"segment\":\"Your reference is BIRCH-TE-407. Quote it whenever you write to us about this policy.\",\"terms\":[]}]}"
+      }
+    ]
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-two_excesses-birch-02/development-two_excesses-birch-02-previous-voluntary-excess-a00154",
+    "item_id": "development-two_excesses-birch-02-previous-voluntary-excess-a00154",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-two_excesses-birch-02",
+    "fixture_id": "development-two_excesses-birch-02",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Voluntary excess: £986.00 per claim.",
+    "decision_key": "previous|voluntary excess: £986.00 per claim.",
+    "metric": "extraction",
+    "expected": {
+      "term": "voluntary_excess",
+      "basis": "per_claim",
+      "value": "£986.00",
+      "quote": "Voluntary excess: £986.00 per claim."
+    },
+    "actual": {
+      "outcome": "found",
+      "extracted": {
+        "term": "voluntary_excess",
+        "basis": "per_claim",
+        "value": "£986.00",
+        "quote": "£986.00 per claim"
+      }
+    },
+    "evidence": {
+      "existence": "pass",
+      "attribution": "pass",
+      "support": "pass"
+    },
+    "trace_ids": [
+      "claim-000003",
+      "claim-000004",
+      "claim-000009",
+      "claim-000010"
+    ],
+    "exchanges": [
+      {
+        "step": "Reading what each document says",
+        "batch": 1,
+        "request": "You read one passage of an insurance document at a time and say which\nnamed values, if any, it states.\n\nFor each passage, decide:\n- terms: a list of the named values this passage states. Most passages\n  state none — an empty list is a correct answer, not a failure, and it\n  is always better than a guess. A passage that explains what cover\n  means, describes how to claim, or thanks somebody for renewing states\n  no named value.\n- confidence: \"high\" | \"medium\" | \"low\"\n\nFor each term give:\n- term: \"premium\" | \"compulsory_excess\" | \"voluntary_excess\" |\n  \"total_excess\" | \"cover_limit\" | \"no_claims_discount\" |\n  \"cooling_off_period\" | \"other\"\n\n  Use \"other\" when the passage states a named value that is none of\n  these. That is a real answer and the right one: the value goes in\n  front of the person instead of being compared. Never stretch one of\n  the named terms to cover something it is not.\n\n- basis: \"annual\" | \"monthly\" | \"per_claim\" | \"per_policy\"\n\n  What the value is measured against, as the passage says it. A premium\n  quoted as twelve instalments is \"monthly\"; the same policy's total for\n  the year is \"annual\". These are different values, and calling one the\n  other turns an instalment into a price rise.\n\n- value: the value exactly as the document writes it — \"£1,234.56\",\n  \"£500\", \"14 days\", \"60%\". Copy the currency symbol, the commas and\n  the decimals as they appear. Never round, never convert, never work\n  out a total, and never write a number the passage does not contain.\n\n- quote: the words the value comes from, copied exactly from the\n  passage — enough to show where you read it. This is checked against\n  the document: a quote that is not in the passage means the whole term\n  goes to the person instead of being used.\n\nYou are not asked to compare anything, to say whether a value went up\nor down, or to work out a difference. That is done separately, from the\nvalues you copy. Copying them exactly is the whole job.\n\nReturn one result per input, with the same \"id\" you were given, and\necho the passage back in \"segment\". Return JSON only.\n\nPassages:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"Kestrel Assurance car insurance — policy schedule BIRCH-TE-407 for the year to 31 August 2026.\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"Compulsory excess: £4,380.00 per claim.\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"Voluntary excess: £986.00 per claim.\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"Total excess payable: £5,366.00 per claim.\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"Your reference is BIRCH-TE-407. Quote it whenever you write to us about this policy.\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"Kestrel Assurance arranges car insurance cover under BIRCH-TE-407 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"Kestrel Assurance car insurance — renewal schedule BIRCH-TE-407 for the year to 31 August 2027.\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"Compulsory excess: £4,430.00 per claim.\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"Voluntary excess: £986.00 per claim.\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"Total excess payable: £5,416.00 per claim.\"\n  },\n  {\n    \"id\": 10,\n    \"raw\": \"Kestrel Assurance arranges car insurance cover under BIRCH-TE-407 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 11,\n    \"raw\": \"Your reference is BIRCH-TE-407. Quote it whenever you write to us about this policy.\"\n  }\n]\n",
+        "response": "{\"results\":[{\"confidence\":\"low\",\"id\":0,\"segment\":\"Kestrel Assurance car insurance — policy schedule BIRCH-TE-407 for the year to 31 August 2026.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":1,\"segment\":\"Compulsory excess: £4,380.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"£4,380.00 per claim\",\"term\":\"compulsory_excess\",\"value\":\"£4,380.00\"}]},{\"confidence\":\"high\",\"id\":2,\"segment\":\"Voluntary excess: £986.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"£986.00 per claim\",\"term\":\"voluntary_excess\",\"value\":\"£986.00\"}]},{\"confidence\":\"high\",\"id\":3,\"segment\":\"Total excess payable: £5,366.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"£5,366.00 per claim\",\"term\":\"total_excess\",\"value\":\"£5,366.00\"}]},{\"confidence\":\"low\",\"id\":4,\"segment\":\"Your reference is BIRCH-TE-407. Quote it whenever you write to us about this policy.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":5,\"segment\":\"Kestrel Assurance arranges car insurance cover under BIRCH-TE-407 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":6,\"segment\":\"Kestrel Assurance car insurance — renewal schedule BIRCH-TE-407 for the year to 31 August 2027.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":7,\"segment\":\"Compulsory excess: £4,430.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"£4,430.00 per claim\",\"term\":\"compulsory_excess\",\"value\":\"£4,430.00\"}]},{\"confidence\":\"high\",\"id\":8,\"segment\":\"Voluntary excess: £986.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"£986.00 per claim\",\"term\":\"voluntary_excess\",\"value\":\"£986.00\"}]},{\"confidence\":\"high\",\"id\":9,\"segment\":\"Total excess payable: £5,416.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"£5,416.00 per claim\",\"term\":\"total_excess\",\"value\":\"£5,416.00\"}]},{\"confidence\":\"low\",\"id\":10,\"segment\":\"Kestrel Assurance arranges car insurance cover under BIRCH-TE-407 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":11,\"segment\":\"Your reference is BIRCH-TE-407. Quote it whenever you write to us about this policy.\",\"terms\":[]}]}"
+      }
+    ]
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-two_excesses-birch-02/development-two_excesses-birch-02-previous-total-excess-7afefe",
+    "item_id": "development-two_excesses-birch-02-previous-total-excess-7afefe",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-two_excesses-birch-02",
+    "fixture_id": "development-two_excesses-birch-02",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Total excess payable: £5,366.00 per claim.",
+    "decision_key": "previous|total excess payable: £5,366.00 per claim.",
+    "metric": "extraction",
+    "expected": {
+      "term": "total_excess",
+      "basis": "per_claim",
+      "value": "£5,366.00",
+      "quote": "Total excess payable: £5,366.00 per claim."
+    },
+    "actual": {
+      "outcome": "found",
+      "extracted": {
+        "term": "total_excess",
+        "basis": "per_claim",
+        "value": "£5,366.00",
+        "quote": "£5,366.00 per claim"
+      }
+    },
+    "evidence": {
+      "existence": "pass",
+      "attribution": "pass",
+      "support": "pass"
+    },
+    "trace_ids": [
+      "claim-000005",
+      "claim-000006"
+    ],
+    "exchanges": [
+      {
+        "step": "Reading what each document says",
+        "batch": 1,
+        "request": "You read one passage of an insurance document at a time and say which\nnamed values, if any, it states.\n\nFor each passage, decide:\n- terms: a list of the named values this passage states. Most passages\n  state none — an empty list is a correct answer, not a failure, and it\n  is always better than a guess. A passage that explains what cover\n  means, describes how to claim, or thanks somebody for renewing states\n  no named value.\n- confidence: \"high\" | \"medium\" | \"low\"\n\nFor each term give:\n- term: \"premium\" | \"compulsory_excess\" | \"voluntary_excess\" |\n  \"total_excess\" | \"cover_limit\" | \"no_claims_discount\" |\n  \"cooling_off_period\" | \"other\"\n\n  Use \"other\" when the passage states a named value that is none of\n  these. That is a real answer and the right one: the value goes in\n  front of the person instead of being compared. Never stretch one of\n  the named terms to cover something it is not.\n\n- basis: \"annual\" | \"monthly\" | \"per_claim\" | \"per_policy\"\n\n  What the value is measured against, as the passage says it. A premium\n  quoted as twelve instalments is \"monthly\"; the same policy's total for\n  the year is \"annual\". These are different values, and calling one the\n  other turns an instalment into a price rise.\n\n- value: the value exactly as the document writes it — \"£1,234.56\",\n  \"£500\", \"14 days\", \"60%\". Copy the currency symbol, the commas and\n  the decimals as they appear. Never round, never convert, never work\n  out a total, and never write a number the passage does not contain.\n\n- quote: the words the value comes from, copied exactly from the\n  passage — enough to show where you read it. This is checked against\n  the document: a quote that is not in the passage means the whole term\n  goes to the person instead of being used.\n\nYou are not asked to compare anything, to say whether a value went up\nor down, or to work out a difference. That is done separately, from the\nvalues you copy. Copying them exactly is the whole job.\n\nReturn one result per input, with the same \"id\" you were given, and\necho the passage back in \"segment\". Return JSON only.\n\nPassages:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"Kestrel Assurance car insurance — policy schedule BIRCH-TE-407 for the year to 31 August 2026.\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"Compulsory excess: £4,380.00 per claim.\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"Voluntary excess: £986.00 per claim.\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"Total excess payable: £5,366.00 per claim.\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"Your reference is BIRCH-TE-407. Quote it whenever you write to us about this policy.\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"Kestrel Assurance arranges car insurance cover under BIRCH-TE-407 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"Kestrel Assurance car insurance — renewal schedule BIRCH-TE-407 for the year to 31 August 2027.\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"Compulsory excess: £4,430.00 per claim.\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"Voluntary excess: £986.00 per claim.\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"Total excess payable: £5,416.00 per claim.\"\n  },\n  {\n    \"id\": 10,\n    \"raw\": \"Kestrel Assurance arranges car insurance cover under BIRCH-TE-407 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 11,\n    \"raw\": \"Your reference is BIRCH-TE-407. Quote it whenever you write to us about this policy.\"\n  }\n]\n",
+        "response": "{\"results\":[{\"confidence\":\"low\",\"id\":0,\"segment\":\"Kestrel Assurance car insurance — policy schedule BIRCH-TE-407 for the year to 31 August 2026.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":1,\"segment\":\"Compulsory excess: £4,380.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"£4,380.00 per claim\",\"term\":\"compulsory_excess\",\"value\":\"£4,380.00\"}]},{\"confidence\":\"high\",\"id\":2,\"segment\":\"Voluntary excess: £986.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"£986.00 per claim\",\"term\":\"voluntary_excess\",\"value\":\"£986.00\"}]},{\"confidence\":\"high\",\"id\":3,\"segment\":\"Total excess payable: £5,366.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"£5,366.00 per claim\",\"term\":\"total_excess\",\"value\":\"£5,366.00\"}]},{\"confidence\":\"low\",\"id\":4,\"segment\":\"Your reference is BIRCH-TE-407. Quote it whenever you write to us about this policy.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":5,\"segment\":\"Kestrel Assurance arranges car insurance cover under BIRCH-TE-407 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":6,\"segment\":\"Kestrel Assurance car insurance — renewal schedule BIRCH-TE-407 for the year to 31 August 2027.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":7,\"segment\":\"Compulsory excess: £4,430.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"£4,430.00 per claim\",\"term\":\"compulsory_excess\",\"value\":\"£4,430.00\"}]},{\"confidence\":\"high\",\"id\":8,\"segment\":\"Voluntary excess: £986.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"£986.00 per claim\",\"term\":\"voluntary_excess\",\"value\":\"£986.00\"}]},{\"confidence\":\"high\",\"id\":9,\"segment\":\"Total excess payable: £5,416.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"£5,416.00 per claim\",\"term\":\"total_excess\",\"value\":\"£5,416.00\"}]},{\"confidence\":\"low\",\"id\":10,\"segment\":\"Kestrel Assurance arranges car insurance cover under BIRCH-TE-407 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":11,\"segment\":\"Your reference is BIRCH-TE-407. Quote it whenever you write to us about this policy.\",\"terms\":[]}]}"
+      }
+    ]
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-two_excesses-birch-02/development-two_excesses-birch-02-previous-no-value-44e910",
+    "item_id": "development-two_excesses-birch-02-previous-no-value-44e910",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-two_excesses-birch-02",
+    "fixture_id": "development-two_excesses-birch-02",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Your reference is BIRCH-TE-407. Quote it whenever you write to us about this policy.",
+    "decision_key": "previous|your reference is birch-te-407. quote it whenever you write to us about this policy.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "absent"
+    },
+    "trace_ids": [
+      "claim-000014",
+      "claim-000018"
+    ],
+    "exchanges": [
+      {
+        "step": "Reading what each document says",
+        "batch": 1,
+        "request": "You read one passage of an insurance document at a time and say which\nnamed values, if any, it states.\n\nFor each passage, decide:\n- terms: a list of the named values this passage states. Most passages\n  state none — an empty list is a correct answer, not a failure, and it\n  is always better than a guess. A passage that explains what cover\n  means, describes how to claim, or thanks somebody for renewing states\n  no named value.\n- confidence: \"high\" | \"medium\" | \"low\"\n\nFor each term give:\n- term: \"premium\" | \"compulsory_excess\" | \"voluntary_excess\" |\n  \"total_excess\" | \"cover_limit\" | \"no_claims_discount\" |\n  \"cooling_off_period\" | \"other\"\n\n  Use \"other\" when the passage states a named value that is none of\n  these. That is a real answer and the right one: the value goes in\n  front of the person instead of being compared. Never stretch one of\n  the named terms to cover something it is not.\n\n- basis: \"annual\" | \"monthly\" | \"per_claim\" | \"per_policy\"\n\n  What the value is measured against, as the passage says it. A premium\n  quoted as twelve instalments is \"monthly\"; the same policy's total for\n  the year is \"annual\". These are different values, and calling one the\n  other turns an instalment into a price rise.\n\n- value: the value exactly as the document writes it — \"£1,234.56\",\n  \"£500\", \"14 days\", \"60%\". Copy the currency symbol, the commas and\n  the decimals as they appear. Never round, never convert, never work\n  out a total, and never write a number the passage does not contain.\n\n- quote: the words the value comes from, copied exactly from the\n  passage — enough to show where you read it. This is checked against\n  the document: a quote that is not in the passage means the whole term\n  goes to the person instead of being used.\n\nYou are not asked to compare anything, to say whether a value went up\nor down, or to work out a difference. That is done separately, from the\nvalues you copy. Copying them exactly is the whole job.\n\nReturn one result per input, with the same \"id\" you were given, and\necho the passage back in \"segment\". Return JSON only.\n\nPassages:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"Kestrel Assurance car insurance — policy schedule BIRCH-TE-407 for the year to 31 August 2026.\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"Compulsory excess: £4,380.00 per claim.\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"Voluntary excess: £986.00 per claim.\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"Total excess payable: £5,366.00 per claim.\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"Your reference is BIRCH-TE-407. Quote it whenever you write to us about this policy.\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"Kestrel Assurance arranges car insurance cover under BIRCH-TE-407 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"Kestrel Assurance car insurance — renewal schedule BIRCH-TE-407 for the year to 31 August 2027.\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"Compulsory excess: £4,430.00 per claim.\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"Voluntary excess: £986.00 per claim.\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"Total excess payable: £5,416.00 per claim.\"\n  },\n  {\n    \"id\": 10,\n    \"raw\": \"Kestrel Assurance arranges car insurance cover under BIRCH-TE-407 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 11,\n    \"raw\": \"Your reference is BIRCH-TE-407. Quote it whenever you write to us about this policy.\"\n  }\n]\n",
+        "response": "{\"results\":[{\"confidence\":\"low\",\"id\":0,\"segment\":\"Kestrel Assurance car insurance — policy schedule BIRCH-TE-407 for the year to 31 August 2026.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":1,\"segment\":\"Compulsory excess: £4,380.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"£4,380.00 per claim\",\"term\":\"compulsory_excess\",\"value\":\"£4,380.00\"}]},{\"confidence\":\"high\",\"id\":2,\"segment\":\"Voluntary excess: £986.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"£986.00 per claim\",\"term\":\"voluntary_excess\",\"value\":\"£986.00\"}]},{\"confidence\":\"high\",\"id\":3,\"segment\":\"Total excess payable: £5,366.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"£5,366.00 per claim\",\"term\":\"total_excess\",\"value\":\"£5,366.00\"}]},{\"confidence\":\"low\",\"id\":4,\"segment\":\"Your reference is BIRCH-TE-407. Quote it whenever you write to us about this policy.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":5,\"segment\":\"Kestrel Assurance arranges car insurance cover under BIRCH-TE-407 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":6,\"segment\":\"Kestrel Assurance car insurance — renewal schedule BIRCH-TE-407 for the year to 31 August 2027.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":7,\"segment\":\"Compulsory excess: £4,430.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"£4,430.00 per claim\",\"term\":\"compulsory_excess\",\"value\":\"£4,430.00\"}]},{\"confidence\":\"high\",\"id\":8,\"segment\":\"Voluntary excess: £986.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"£986.00 per claim\",\"term\":\"voluntary_excess\",\"value\":\"£986.00\"}]},{\"confidence\":\"high\",\"id\":9,\"segment\":\"Total excess payable: £5,416.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"£5,416.00 per claim\",\"term\":\"total_excess\",\"value\":\"£5,416.00\"}]},{\"confidence\":\"low\",\"id\":10,\"segment\":\"Kestrel Assurance arranges car insurance cover under BIRCH-TE-407 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":11,\"segment\":\"Your reference is BIRCH-TE-407. Quote it whenever you write to us about this policy.\",\"terms\":[]}]}"
+      }
+    ]
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-two_excesses-birch-02/development-two_excesses-birch-02-previous-no-value-908ec6",
+    "item_id": "development-two_excesses-birch-02-previous-no-value-908ec6",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-two_excesses-birch-02",
+    "fixture_id": "development-two_excesses-birch-02",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Kestrel Assurance arranges car insurance cover under BIRCH-TE-407 and is regulated in the United Kingdom.",
+    "decision_key": "previous|kestrel assurance arranges car insurance cover under birch-te-407 and is regulated in the united kingdom.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "absent"
+    },
+    "trace_ids": [
+      "claim-000015",
+      "claim-000017"
+    ],
+    "exchanges": [
+      {
+        "step": "Reading what each document says",
+        "batch": 1,
+        "request": "You read one passage of an insurance document at a time and say which\nnamed values, if any, it states.\n\nFor each passage, decide:\n- terms: a list of the named values this passage states. Most passages\n  state none — an empty list is a correct answer, not a failure, and it\n  is always better than a guess. A passage that explains what cover\n  means, describes how to claim, or thanks somebody for renewing states\n  no named value.\n- confidence: \"high\" | \"medium\" | \"low\"\n\nFor each term give:\n- term: \"premium\" | \"compulsory_excess\" | \"voluntary_excess\" |\n  \"total_excess\" | \"cover_limit\" | \"no_claims_discount\" |\n  \"cooling_off_period\" | \"other\"\n\n  Use \"other\" when the passage states a named value that is none of\n  these. That is a real answer and the right one: the value goes in\n  front of the person instead of being compared. Never stretch one of\n  the named terms to cover something it is not.\n\n- basis: \"annual\" | \"monthly\" | \"per_claim\" | \"per_policy\"\n\n  What the value is measured against, as the passage says it. A premium\n  quoted as twelve instalments is \"monthly\"; the same policy's total for\n  the year is \"annual\". These are different values, and calling one the\n  other turns an instalment into a price rise.\n\n- value: the value exactly as the document writes it — \"£1,234.56\",\n  \"£500\", \"14 days\", \"60%\". Copy the currency symbol, the commas and\n  the decimals as they appear. Never round, never convert, never work\n  out a total, and never write a number the passage does not contain.\n\n- quote: the words the value comes from, copied exactly from the\n  passage — enough to show where you read it. This is checked against\n  the document: a quote that is not in the passage means the whole term\n  goes to the person instead of being used.\n\nYou are not asked to compare anything, to say whether a value went up\nor down, or to work out a difference. That is done separately, from the\nvalues you copy. Copying them exactly is the whole job.\n\nReturn one result per input, with the same \"id\" you were given, and\necho the passage back in \"segment\". Return JSON only.\n\nPassages:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"Kestrel Assurance car insurance — policy schedule BIRCH-TE-407 for the year to 31 August 2026.\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"Compulsory excess: £4,380.00 per claim.\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"Voluntary excess: £986.00 per claim.\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"Total excess payable: £5,366.00 per claim.\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"Your reference is BIRCH-TE-407. Quote it whenever you write to us about this policy.\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"Kestrel Assurance arranges car insurance cover under BIRCH-TE-407 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"Kestrel Assurance car insurance — renewal schedule BIRCH-TE-407 for the year to 31 August 2027.\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"Compulsory excess: £4,430.00 per claim.\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"Voluntary excess: £986.00 per claim.\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"Total excess payable: £5,416.00 per claim.\"\n  },\n  {\n    \"id\": 10,\n    \"raw\": \"Kestrel Assurance arranges car insurance cover under BIRCH-TE-407 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 11,\n    \"raw\": \"Your reference is BIRCH-TE-407. Quote it whenever you write to us about this policy.\"\n  }\n]\n",
+        "response": "{\"results\":[{\"confidence\":\"low\",\"id\":0,\"segment\":\"Kestrel Assurance car insurance — policy schedule BIRCH-TE-407 for the year to 31 August 2026.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":1,\"segment\":\"Compulsory excess: £4,380.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"£4,380.00 per claim\",\"term\":\"compulsory_excess\",\"value\":\"£4,380.00\"}]},{\"confidence\":\"high\",\"id\":2,\"segment\":\"Voluntary excess: £986.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"£986.00 per claim\",\"term\":\"voluntary_excess\",\"value\":\"£986.00\"}]},{\"confidence\":\"high\",\"id\":3,\"segment\":\"Total excess payable: £5,366.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"£5,366.00 per claim\",\"term\":\"total_excess\",\"value\":\"£5,366.00\"}]},{\"confidence\":\"low\",\"id\":4,\"segment\":\"Your reference is BIRCH-TE-407. Quote it whenever you write to us about this policy.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":5,\"segment\":\"Kestrel Assurance arranges car insurance cover under BIRCH-TE-407 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":6,\"segment\":\"Kestrel Assurance car insurance — renewal schedule BIRCH-TE-407 for the year to 31 August 2027.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":7,\"segment\":\"Compulsory excess: £4,430.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"£4,430.00 per claim\",\"term\":\"compulsory_excess\",\"value\":\"£4,430.00\"}]},{\"confidence\":\"high\",\"id\":8,\"segment\":\"Voluntary excess: £986.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"£986.00 per claim\",\"term\":\"voluntary_excess\",\"value\":\"£986.00\"}]},{\"confidence\":\"high\",\"id\":9,\"segment\":\"Total excess payable: £5,416.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"£5,416.00 per claim\",\"term\":\"total_excess\",\"value\":\"£5,416.00\"}]},{\"confidence\":\"low\",\"id\":10,\"segment\":\"Kestrel Assurance arranges car insurance cover under BIRCH-TE-407 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":11,\"segment\":\"Your reference is BIRCH-TE-407. Quote it whenever you write to us about this policy.\",\"terms\":[]}]}"
+      }
+    ]
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-two_excesses-birch-02/development-two_excesses-birch-02-renewal-no-value-f51346",
+    "item_id": "development-two_excesses-birch-02-renewal-no-value-f51346",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-two_excesses-birch-02",
+    "fixture_id": "development-two_excesses-birch-02",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Kestrel Assurance car insurance — renewal schedule BIRCH-TE-407 for the year to 31 August 2027.",
+    "decision_key": "renewal|kestrel assurance car insurance — renewal schedule birch-te-407 for the year to 31 august 2027.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "absent"
+    },
+    "trace_ids": [
+      "claim-000016"
+    ],
+    "exchanges": [
+      {
+        "step": "Reading what each document says",
+        "batch": 1,
+        "request": "You read one passage of an insurance document at a time and say which\nnamed values, if any, it states.\n\nFor each passage, decide:\n- terms: a list of the named values this passage states. Most passages\n  state none — an empty list is a correct answer, not a failure, and it\n  is always better than a guess. A passage that explains what cover\n  means, describes how to claim, or thanks somebody for renewing states\n  no named value.\n- confidence: \"high\" | \"medium\" | \"low\"\n\nFor each term give:\n- term: \"premium\" | \"compulsory_excess\" | \"voluntary_excess\" |\n  \"total_excess\" | \"cover_limit\" | \"no_claims_discount\" |\n  \"cooling_off_period\" | \"other\"\n\n  Use \"other\" when the passage states a named value that is none of\n  these. That is a real answer and the right one: the value goes in\n  front of the person instead of being compared. Never stretch one of\n  the named terms to cover something it is not.\n\n- basis: \"annual\" | \"monthly\" | \"per_claim\" | \"per_policy\"\n\n  What the value is measured against, as the passage says it. A premium\n  quoted as twelve instalments is \"monthly\"; the same policy's total for\n  the year is \"annual\". These are different values, and calling one the\n  other turns an instalment into a price rise.\n\n- value: the value exactly as the document writes it — \"£1,234.56\",\n  \"£500\", \"14 days\", \"60%\". Copy the currency symbol, the commas and\n  the decimals as they appear. Never round, never convert, never work\n  out a total, and never write a number the passage does not contain.\n\n- quote: the words the value comes from, copied exactly from the\n  passage — enough to show where you read it. This is checked against\n  the document: a quote that is not in the passage means the whole term\n  goes to the person instead of being used.\n\nYou are not asked to compare anything, to say whether a value went up\nor down, or to work out a difference. That is done separately, from the\nvalues you copy. Copying them exactly is the whole job.\n\nReturn one result per input, with the same \"id\" you were given, and\necho the passage back in \"segment\". Return JSON only.\n\nPassages:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"Kestrel Assurance car insurance — policy schedule BIRCH-TE-407 for the year to 31 August 2026.\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"Compulsory excess: £4,380.00 per claim.\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"Voluntary excess: £986.00 per claim.\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"Total excess payable: £5,366.00 per claim.\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"Your reference is BIRCH-TE-407. Quote it whenever you write to us about this policy.\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"Kestrel Assurance arranges car insurance cover under BIRCH-TE-407 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"Kestrel Assurance car insurance — renewal schedule BIRCH-TE-407 for the year to 31 August 2027.\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"Compulsory excess: £4,430.00 per claim.\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"Voluntary excess: £986.00 per claim.\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"Total excess payable: £5,416.00 per claim.\"\n  },\n  {\n    \"id\": 10,\n    \"raw\": \"Kestrel Assurance arranges car insurance cover under BIRCH-TE-407 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 11,\n    \"raw\": \"Your reference is BIRCH-TE-407. Quote it whenever you write to us about this policy.\"\n  }\n]\n",
+        "response": "{\"results\":[{\"confidence\":\"low\",\"id\":0,\"segment\":\"Kestrel Assurance car insurance — policy schedule BIRCH-TE-407 for the year to 31 August 2026.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":1,\"segment\":\"Compulsory excess: £4,380.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"£4,380.00 per claim\",\"term\":\"compulsory_excess\",\"value\":\"£4,380.00\"}]},{\"confidence\":\"high\",\"id\":2,\"segment\":\"Voluntary excess: £986.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"£986.00 per claim\",\"term\":\"voluntary_excess\",\"value\":\"£986.00\"}]},{\"confidence\":\"high\",\"id\":3,\"segment\":\"Total excess payable: £5,366.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"£5,366.00 per claim\",\"term\":\"total_excess\",\"value\":\"£5,366.00\"}]},{\"confidence\":\"low\",\"id\":4,\"segment\":\"Your reference is BIRCH-TE-407. Quote it whenever you write to us about this policy.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":5,\"segment\":\"Kestrel Assurance arranges car insurance cover under BIRCH-TE-407 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":6,\"segment\":\"Kestrel Assurance car insurance — renewal schedule BIRCH-TE-407 for the year to 31 August 2027.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":7,\"segment\":\"Compulsory excess: £4,430.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"£4,430.00 per claim\",\"term\":\"compulsory_excess\",\"value\":\"£4,430.00\"}]},{\"confidence\":\"high\",\"id\":8,\"segment\":\"Voluntary excess: £986.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"£986.00 per claim\",\"term\":\"voluntary_excess\",\"value\":\"£986.00\"}]},{\"confidence\":\"high\",\"id\":9,\"segment\":\"Total excess payable: £5,416.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"£5,416.00 per claim\",\"term\":\"total_excess\",\"value\":\"£5,416.00\"}]},{\"confidence\":\"low\",\"id\":10,\"segment\":\"Kestrel Assurance arranges car insurance cover under BIRCH-TE-407 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":11,\"segment\":\"Your reference is BIRCH-TE-407. Quote it whenever you write to us about this policy.\",\"terms\":[]}]}"
+      }
+    ]
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-two_excesses-birch-02/development-two_excesses-birch-02-renewal-compulsory-excess-ee22bc",
+    "item_id": "development-two_excesses-birch-02-renewal-compulsory-excess-ee22bc",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-two_excesses-birch-02",
+    "fixture_id": "development-two_excesses-birch-02",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Compulsory excess: £4,430.00 per claim.",
+    "decision_key": "renewal|compulsory excess: £4,430.00 per claim.",
+    "metric": "extraction",
+    "expected": {
+      "term": "compulsory_excess",
+      "basis": "per_claim",
+      "value": "£4,430.00",
+      "quote": "Compulsory excess: £4,430.00 per claim."
+    },
+    "actual": {
+      "outcome": "found",
+      "extracted": {
+        "term": "compulsory_excess",
+        "basis": "per_claim",
+        "value": "£4,430.00",
+        "quote": "£4,430.00 per claim"
+      }
+    },
+    "evidence": {
+      "existence": "pass",
+      "attribution": "pass",
+      "support": "pass"
+    },
+    "trace_ids": [
+      "claim-000007",
+      "claim-000008"
+    ],
+    "exchanges": [
+      {
+        "step": "Reading what each document says",
+        "batch": 1,
+        "request": "You read one passage of an insurance document at a time and say which\nnamed values, if any, it states.\n\nFor each passage, decide:\n- terms: a list of the named values this passage states. Most passages\n  state none — an empty list is a correct answer, not a failure, and it\n  is always better than a guess. A passage that explains what cover\n  means, describes how to claim, or thanks somebody for renewing states\n  no named value.\n- confidence: \"high\" | \"medium\" | \"low\"\n\nFor each term give:\n- term: \"premium\" | \"compulsory_excess\" | \"voluntary_excess\" |\n  \"total_excess\" | \"cover_limit\" | \"no_claims_discount\" |\n  \"cooling_off_period\" | \"other\"\n\n  Use \"other\" when the passage states a named value that is none of\n  these. That is a real answer and the right one: the value goes in\n  front of the person instead of being compared. Never stretch one of\n  the named terms to cover something it is not.\n\n- basis: \"annual\" | \"monthly\" | \"per_claim\" | \"per_policy\"\n\n  What the value is measured against, as the passage says it. A premium\n  quoted as twelve instalments is \"monthly\"; the same policy's total for\n  the year is \"annual\". These are different values, and calling one the\n  other turns an instalment into a price rise.\n\n- value: the value exactly as the document writes it — \"£1,234.56\",\n  \"£500\", \"14 days\", \"60%\". Copy the currency symbol, the commas and\n  the decimals as they appear. Never round, never convert, never work\n  out a total, and never write a number the passage does not contain.\n\n- quote: the words the value comes from, copied exactly from the\n  passage — enough to show where you read it. This is checked against\n  the document: a quote that is not in the passage means the whole term\n  goes to the person instead of being used.\n\nYou are not asked to compare anything, to say whether a value went up\nor down, or to work out a difference. That is done separately, from the\nvalues you copy. Copying them exactly is the whole job.\n\nReturn one result per input, with the same \"id\" you were given, and\necho the passage back in \"segment\". Return JSON only.\n\nPassages:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"Kestrel Assurance car insurance — policy schedule BIRCH-TE-407 for the year to 31 August 2026.\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"Compulsory excess: £4,380.00 per claim.\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"Voluntary excess: £986.00 per claim.\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"Total excess payable: £5,366.00 per claim.\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"Your reference is BIRCH-TE-407. Quote it whenever you write to us about this policy.\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"Kestrel Assurance arranges car insurance cover under BIRCH-TE-407 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"Kestrel Assurance car insurance — renewal schedule BIRCH-TE-407 for the year to 31 August 2027.\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"Compulsory excess: £4,430.00 per claim.\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"Voluntary excess: £986.00 per claim.\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"Total excess payable: £5,416.00 per claim.\"\n  },\n  {\n    \"id\": 10,\n    \"raw\": \"Kestrel Assurance arranges car insurance cover under BIRCH-TE-407 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 11,\n    \"raw\": \"Your reference is BIRCH-TE-407. Quote it whenever you write to us about this policy.\"\n  }\n]\n",
+        "response": "{\"results\":[{\"confidence\":\"low\",\"id\":0,\"segment\":\"Kestrel Assurance car insurance — policy schedule BIRCH-TE-407 for the year to 31 August 2026.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":1,\"segment\":\"Compulsory excess: £4,380.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"£4,380.00 per claim\",\"term\":\"compulsory_excess\",\"value\":\"£4,380.00\"}]},{\"confidence\":\"high\",\"id\":2,\"segment\":\"Voluntary excess: £986.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"£986.00 per claim\",\"term\":\"voluntary_excess\",\"value\":\"£986.00\"}]},{\"confidence\":\"high\",\"id\":3,\"segment\":\"Total excess payable: £5,366.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"£5,366.00 per claim\",\"term\":\"total_excess\",\"value\":\"£5,366.00\"}]},{\"confidence\":\"low\",\"id\":4,\"segment\":\"Your reference is BIRCH-TE-407. Quote it whenever you write to us about this policy.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":5,\"segment\":\"Kestrel Assurance arranges car insurance cover under BIRCH-TE-407 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":6,\"segment\":\"Kestrel Assurance car insurance — renewal schedule BIRCH-TE-407 for the year to 31 August 2027.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":7,\"segment\":\"Compulsory excess: £4,430.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"£4,430.00 per claim\",\"term\":\"compulsory_excess\",\"value\":\"£4,430.00\"}]},{\"confidence\":\"high\",\"id\":8,\"segment\":\"Voluntary excess: £986.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"£986.00 per claim\",\"term\":\"voluntary_excess\",\"value\":\"£986.00\"}]},{\"confidence\":\"high\",\"id\":9,\"segment\":\"Total excess payable: £5,416.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"£5,416.00 per claim\",\"term\":\"total_excess\",\"value\":\"£5,416.00\"}]},{\"confidence\":\"low\",\"id\":10,\"segment\":\"Kestrel Assurance arranges car insurance cover under BIRCH-TE-407 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":11,\"segment\":\"Your reference is BIRCH-TE-407. Quote it whenever you write to us about this policy.\",\"terms\":[]}]}"
+      }
+    ]
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-two_excesses-birch-02/development-two_excesses-birch-02-renewal-voluntary-excess-a00154",
+    "item_id": "development-two_excesses-birch-02-renewal-voluntary-excess-a00154",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-two_excesses-birch-02",
+    "fixture_id": "development-two_excesses-birch-02",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Voluntary excess: £986.00 per claim.",
+    "decision_key": "renewal|voluntary excess: £986.00 per claim.",
+    "metric": "extraction",
+    "expected": {
+      "term": "voluntary_excess",
+      "basis": "per_claim",
+      "value": "£986.00",
+      "quote": "Voluntary excess: £986.00 per claim."
+    },
+    "actual": {
+      "outcome": "found",
+      "extracted": {
+        "term": "voluntary_excess",
+        "basis": "per_claim",
+        "value": "£986.00",
+        "quote": "£986.00 per claim"
+      }
+    },
+    "evidence": {
+      "existence": "pass",
+      "attribution": "pass",
+      "support": "pass"
+    },
+    "trace_ids": [
+      "claim-000003",
+      "claim-000004",
+      "claim-000009",
+      "claim-000010"
+    ],
+    "exchanges": [
+      {
+        "step": "Reading what each document says",
+        "batch": 1,
+        "request": "You read one passage of an insurance document at a time and say which\nnamed values, if any, it states.\n\nFor each passage, decide:\n- terms: a list of the named values this passage states. Most passages\n  state none — an empty list is a correct answer, not a failure, and it\n  is always better than a guess. A passage that explains what cover\n  means, describes how to claim, or thanks somebody for renewing states\n  no named value.\n- confidence: \"high\" | \"medium\" | \"low\"\n\nFor each term give:\n- term: \"premium\" | \"compulsory_excess\" | \"voluntary_excess\" |\n  \"total_excess\" | \"cover_limit\" | \"no_claims_discount\" |\n  \"cooling_off_period\" | \"other\"\n\n  Use \"other\" when the passage states a named value that is none of\n  these. That is a real answer and the right one: the value goes in\n  front of the person instead of being compared. Never stretch one of\n  the named terms to cover something it is not.\n\n- basis: \"annual\" | \"monthly\" | \"per_claim\" | \"per_policy\"\n\n  What the value is measured against, as the passage says it. A premium\n  quoted as twelve instalments is \"monthly\"; the same policy's total for\n  the year is \"annual\". These are different values, and calling one the\n  other turns an instalment into a price rise.\n\n- value: the value exactly as the document writes it — \"£1,234.56\",\n  \"£500\", \"14 days\", \"60%\". Copy the currency symbol, the commas and\n  the decimals as they appear. Never round, never convert, never work\n  out a total, and never write a number the passage does not contain.\n\n- quote: the words the value comes from, copied exactly from the\n  passage — enough to show where you read it. This is checked against\n  the document: a quote that is not in the passage means the whole term\n  goes to the person instead of being used.\n\nYou are not asked to compare anything, to say whether a value went up\nor down, or to work out a difference. That is done separately, from the\nvalues you copy. Copying them exactly is the whole job.\n\nReturn one result per input, with the same \"id\" you were given, and\necho the passage back in \"segment\". Return JSON only.\n\nPassages:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"Kestrel Assurance car insurance — policy schedule BIRCH-TE-407 for the year to 31 August 2026.\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"Compulsory excess: £4,380.00 per claim.\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"Voluntary excess: £986.00 per claim.\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"Total excess payable: £5,366.00 per claim.\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"Your reference is BIRCH-TE-407. Quote it whenever you write to us about this policy.\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"Kestrel Assurance arranges car insurance cover under BIRCH-TE-407 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"Kestrel Assurance car insurance — renewal schedule BIRCH-TE-407 for the year to 31 August 2027.\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"Compulsory excess: £4,430.00 per claim.\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"Voluntary excess: £986.00 per claim.\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"Total excess payable: £5,416.00 per claim.\"\n  },\n  {\n    \"id\": 10,\n    \"raw\": \"Kestrel Assurance arranges car insurance cover under BIRCH-TE-407 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 11,\n    \"raw\": \"Your reference is BIRCH-TE-407. Quote it whenever you write to us about this policy.\"\n  }\n]\n",
+        "response": "{\"results\":[{\"confidence\":\"low\",\"id\":0,\"segment\":\"Kestrel Assurance car insurance — policy schedule BIRCH-TE-407 for the year to 31 August 2026.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":1,\"segment\":\"Compulsory excess: £4,380.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"£4,380.00 per claim\",\"term\":\"compulsory_excess\",\"value\":\"£4,380.00\"}]},{\"confidence\":\"high\",\"id\":2,\"segment\":\"Voluntary excess: £986.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"£986.00 per claim\",\"term\":\"voluntary_excess\",\"value\":\"£986.00\"}]},{\"confidence\":\"high\",\"id\":3,\"segment\":\"Total excess payable: £5,366.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"£5,366.00 per claim\",\"term\":\"total_excess\",\"value\":\"£5,366.00\"}]},{\"confidence\":\"low\",\"id\":4,\"segment\":\"Your reference is BIRCH-TE-407. Quote it whenever you write to us about this policy.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":5,\"segment\":\"Kestrel Assurance arranges car insurance cover under BIRCH-TE-407 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":6,\"segment\":\"Kestrel Assurance car insurance — renewal schedule BIRCH-TE-407 for the year to 31 August 2027.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":7,\"segment\":\"Compulsory excess: £4,430.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"£4,430.00 per claim\",\"term\":\"compulsory_excess\",\"value\":\"£4,430.00\"}]},{\"confidence\":\"high\",\"id\":8,\"segment\":\"Voluntary excess: £986.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"£986.00 per claim\",\"term\":\"voluntary_excess\",\"value\":\"£986.00\"}]},{\"confidence\":\"high\",\"id\":9,\"segment\":\"Total excess payable: £5,416.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"£5,416.00 per claim\",\"term\":\"total_excess\",\"value\":\"£5,416.00\"}]},{\"confidence\":\"low\",\"id\":10,\"segment\":\"Kestrel Assurance arranges car insurance cover under BIRCH-TE-407 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":11,\"segment\":\"Your reference is BIRCH-TE-407. Quote it whenever you write to us about this policy.\",\"terms\":[]}]}"
+      }
+    ]
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-two_excesses-birch-02/development-two_excesses-birch-02-renewal-total-excess-bfa615",
+    "item_id": "development-two_excesses-birch-02-renewal-total-excess-bfa615",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-two_excesses-birch-02",
+    "fixture_id": "development-two_excesses-birch-02",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Total excess payable: £5,416.00 per claim.",
+    "decision_key": "renewal|total excess payable: £5,416.00 per claim.",
+    "metric": "extraction",
+    "expected": {
+      "term": "total_excess",
+      "basis": "per_claim",
+      "value": "£5,416.00",
+      "quote": "Total excess payable: £5,416.00 per claim."
+    },
+    "actual": {
+      "outcome": "found",
+      "extracted": {
+        "term": "total_excess",
+        "basis": "per_claim",
+        "value": "£5,416.00",
+        "quote": "£5,416.00 per claim"
+      }
+    },
+    "evidence": {
+      "existence": "pass",
+      "attribution": "pass",
+      "support": "pass"
+    },
+    "trace_ids": [
+      "claim-000011",
+      "claim-000012"
+    ],
+    "exchanges": [
+      {
+        "step": "Reading what each document says",
+        "batch": 1,
+        "request": "You read one passage of an insurance document at a time and say which\nnamed values, if any, it states.\n\nFor each passage, decide:\n- terms: a list of the named values this passage states. Most passages\n  state none — an empty list is a correct answer, not a failure, and it\n  is always better than a guess. A passage that explains what cover\n  means, describes how to claim, or thanks somebody for renewing states\n  no named value.\n- confidence: \"high\" | \"medium\" | \"low\"\n\nFor each term give:\n- term: \"premium\" | \"compulsory_excess\" | \"voluntary_excess\" |\n  \"total_excess\" | \"cover_limit\" | \"no_claims_discount\" |\n  \"cooling_off_period\" | \"other\"\n\n  Use \"other\" when the passage states a named value that is none of\n  these. That is a real answer and the right one: the value goes in\n  front of the person instead of being compared. Never stretch one of\n  the named terms to cover something it is not.\n\n- basis: \"annual\" | \"monthly\" | \"per_claim\" | \"per_policy\"\n\n  What the value is measured against, as the passage says it. A premium\n  quoted as twelve instalments is \"monthly\"; the same policy's total for\n  the year is \"annual\". These are different values, and calling one the\n  other turns an instalment into a price rise.\n\n- value: the value exactly as the document writes it — \"£1,234.56\",\n  \"£500\", \"14 days\", \"60%\". Copy the currency symbol, the commas and\n  the decimals as they appear. Never round, never convert, never work\n  out a total, and never write a number the passage does not contain.\n\n- quote: the words the value comes from, copied exactly from the\n  passage — enough to show where you read it. This is checked against\n  the document: a quote that is not in the passage means the whole term\n  goes to the person instead of being used.\n\nYou are not asked to compare anything, to say whether a value went up\nor down, or to work out a difference. That is done separately, from the\nvalues you copy. Copying them exactly is the whole job.\n\nReturn one result per input, with the same \"id\" you were given, and\necho the passage back in \"segment\". Return JSON only.\n\nPassages:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"Kestrel Assurance car insurance — policy schedule BIRCH-TE-407 for the year to 31 August 2026.\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"Compulsory excess: £4,380.00 per claim.\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"Voluntary excess: £986.00 per claim.\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"Total excess payable: £5,366.00 per claim.\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"Your reference is BIRCH-TE-407. Quote it whenever you write to us about this policy.\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"Kestrel Assurance arranges car insurance cover under BIRCH-TE-407 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"Kestrel Assurance car insurance — renewal schedule BIRCH-TE-407 for the year to 31 August 2027.\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"Compulsory excess: £4,430.00 per claim.\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"Voluntary excess: £986.00 per claim.\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"Total excess payable: £5,416.00 per claim.\"\n  },\n  {\n    \"id\": 10,\n    \"raw\": \"Kestrel Assurance arranges car insurance cover under BIRCH-TE-407 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 11,\n    \"raw\": \"Your reference is BIRCH-TE-407. Quote it whenever you write to us about this policy.\"\n  }\n]\n",
+        "response": "{\"results\":[{\"confidence\":\"low\",\"id\":0,\"segment\":\"Kestrel Assurance car insurance — policy schedule BIRCH-TE-407 for the year to 31 August 2026.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":1,\"segment\":\"Compulsory excess: £4,380.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"£4,380.00 per claim\",\"term\":\"compulsory_excess\",\"value\":\"£4,380.00\"}]},{\"confidence\":\"high\",\"id\":2,\"segment\":\"Voluntary excess: £986.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"£986.00 per claim\",\"term\":\"voluntary_excess\",\"value\":\"£986.00\"}]},{\"confidence\":\"high\",\"id\":3,\"segment\":\"Total excess payable: £5,366.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"£5,366.00 per claim\",\"term\":\"total_excess\",\"value\":\"£5,366.00\"}]},{\"confidence\":\"low\",\"id\":4,\"segment\":\"Your reference is BIRCH-TE-407. Quote it whenever you write to us about this policy.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":5,\"segment\":\"Kestrel Assurance arranges car insurance cover under BIRCH-TE-407 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":6,\"segment\":\"Kestrel Assurance car insurance — renewal schedule BIRCH-TE-407 for the year to 31 August 2027.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":7,\"segment\":\"Compulsory excess: £4,430.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"£4,430.00 per claim\",\"term\":\"compulsory_excess\",\"value\":\"£4,430.00\"}]},{\"confidence\":\"high\",\"id\":8,\"segment\":\"Voluntary excess: £986.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"£986.00 per claim\",\"term\":\"voluntary_excess\",\"value\":\"£986.00\"}]},{\"confidence\":\"high\",\"id\":9,\"segment\":\"Total excess payable: £5,416.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"£5,416.00 per claim\",\"term\":\"total_excess\",\"value\":\"£5,416.00\"}]},{\"confidence\":\"low\",\"id\":10,\"segment\":\"Kestrel Assurance arranges car insurance cover under BIRCH-TE-407 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":11,\"segment\":\"Your reference is BIRCH-TE-407. Quote it whenever you write to us about this policy.\",\"terms\":[]}]}"
+      }
+    ]
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-two_excesses-birch-02/development-two_excesses-birch-02-renewal-no-value-908ec6",
+    "item_id": "development-two_excesses-birch-02-renewal-no-value-908ec6",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-two_excesses-birch-02",
+    "fixture_id": "development-two_excesses-birch-02",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Kestrel Assurance arranges car insurance cover under BIRCH-TE-407 and is regulated in the United Kingdom.",
+    "decision_key": "renewal|kestrel assurance arranges car insurance cover under birch-te-407 and is regulated in the united kingdom.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "absent"
+    },
+    "trace_ids": [
+      "claim-000015",
+      "claim-000017"
+    ],
+    "exchanges": [
+      {
+        "step": "Reading what each document says",
+        "batch": 1,
+        "request": "You read one passage of an insurance document at a time and say which\nnamed values, if any, it states.\n\nFor each passage, decide:\n- terms: a list of the named values this passage states. Most passages\n  state none — an empty list is a correct answer, not a failure, and it\n  is always better than a guess. A passage that explains what cover\n  means, describes how to claim, or thanks somebody for renewing states\n  no named value.\n- confidence: \"high\" | \"medium\" | \"low\"\n\nFor each term give:\n- term: \"premium\" | \"compulsory_excess\" | \"voluntary_excess\" |\n  \"total_excess\" | \"cover_limit\" | \"no_claims_discount\" |\n  \"cooling_off_period\" | \"other\"\n\n  Use \"other\" when the passage states a named value that is none of\n  these. That is a real answer and the right one: the value goes in\n  front of the person instead of being compared. Never stretch one of\n  the named terms to cover something it is not.\n\n- basis: \"annual\" | \"monthly\" | \"per_claim\" | \"per_policy\"\n\n  What the value is measured against, as the passage says it. A premium\n  quoted as twelve instalments is \"monthly\"; the same policy's total for\n  the year is \"annual\". These are different values, and calling one the\n  other turns an instalment into a price rise.\n\n- value: the value exactly as the document writes it — \"£1,234.56\",\n  \"£500\", \"14 days\", \"60%\". Copy the currency symbol, the commas and\n  the decimals as they appear. Never round, never convert, never work\n  out a total, and never write a number the passage does not contain.\n\n- quote: the words the value comes from, copied exactly from the\n  passage — enough to show where you read it. This is checked against\n  the document: a quote that is not in the passage means the whole term\n  goes to the person instead of being used.\n\nYou are not asked to compare anything, to say whether a value went up\nor down, or to work out a difference. That is done separately, from the\nvalues you copy. Copying them exactly is the whole job.\n\nReturn one result per input, with the same \"id\" you were given, and\necho the passage back in \"segment\". Return JSON only.\n\nPassages:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"Kestrel Assurance car insurance — policy schedule BIRCH-TE-407 for the year to 31 August 2026.\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"Compulsory excess: £4,380.00 per claim.\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"Voluntary excess: £986.00 per claim.\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"Total excess payable: £5,366.00 per claim.\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"Your reference is BIRCH-TE-407. Quote it whenever you write to us about this policy.\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"Kestrel Assurance arranges car insurance cover under BIRCH-TE-407 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"Kestrel Assurance car insurance — renewal schedule BIRCH-TE-407 for the year to 31 August 2027.\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"Compulsory excess: £4,430.00 per claim.\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"Voluntary excess: £986.00 per claim.\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"Total excess payable: £5,416.00 per claim.\"\n  },\n  {\n    \"id\": 10,\n    \"raw\": \"Kestrel Assurance arranges car insurance cover under BIRCH-TE-407 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 11,\n    \"raw\": \"Your reference is BIRCH-TE-407. Quote it whenever you write to us about this policy.\"\n  }\n]\n",
+        "response": "{\"results\":[{\"confidence\":\"low\",\"id\":0,\"segment\":\"Kestrel Assurance car insurance — policy schedule BIRCH-TE-407 for the year to 31 August 2026.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":1,\"segment\":\"Compulsory excess: £4,380.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"£4,380.00 per claim\",\"term\":\"compulsory_excess\",\"value\":\"£4,380.00\"}]},{\"confidence\":\"high\",\"id\":2,\"segment\":\"Voluntary excess: £986.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"£986.00 per claim\",\"term\":\"voluntary_excess\",\"value\":\"£986.00\"}]},{\"confidence\":\"high\",\"id\":3,\"segment\":\"Total excess payable: £5,366.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"£5,366.00 per claim\",\"term\":\"total_excess\",\"value\":\"£5,366.00\"}]},{\"confidence\":\"low\",\"id\":4,\"segment\":\"Your reference is BIRCH-TE-407. Quote it whenever you write to us about this policy.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":5,\"segment\":\"Kestrel Assurance arranges car insurance cover under BIRCH-TE-407 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":6,\"segment\":\"Kestrel Assurance car insurance — renewal schedule BIRCH-TE-407 for the year to 31 August 2027.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":7,\"segment\":\"Compulsory excess: £4,430.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"£4,430.00 per claim\",\"term\":\"compulsory_excess\",\"value\":\"£4,430.00\"}]},{\"confidence\":\"high\",\"id\":8,\"segment\":\"Voluntary excess: £986.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"£986.00 per claim\",\"term\":\"voluntary_excess\",\"value\":\"£986.00\"}]},{\"confidence\":\"high\",\"id\":9,\"segment\":\"Total excess payable: £5,416.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"£5,416.00 per claim\",\"term\":\"total_excess\",\"value\":\"£5,416.00\"}]},{\"confidence\":\"low\",\"id\":10,\"segment\":\"Kestrel Assurance arranges car insurance cover under BIRCH-TE-407 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":11,\"segment\":\"Your reference is BIRCH-TE-407. Quote it whenever you write to us about this policy.\",\"terms\":[]}]}"
+      }
+    ]
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-two_excesses-birch-02/development-two_excesses-birch-02-renewal-no-value-44e910",
+    "item_id": "development-two_excesses-birch-02-renewal-no-value-44e910",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-two_excesses-birch-02",
+    "fixture_id": "development-two_excesses-birch-02",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Your reference is BIRCH-TE-407. Quote it whenever you write to us about this policy.",
+    "decision_key": "renewal|your reference is birch-te-407. quote it whenever you write to us about this policy.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "absent"
+    },
+    "trace_ids": [
+      "claim-000014",
+      "claim-000018"
+    ],
+    "exchanges": [
+      {
+        "step": "Reading what each document says",
+        "batch": 1,
+        "request": "You read one passage of an insurance document at a time and say which\nnamed values, if any, it states.\n\nFor each passage, decide:\n- terms: a list of the named values this passage states. Most passages\n  state none — an empty list is a correct answer, not a failure, and it\n  is always better than a guess. A passage that explains what cover\n  means, describes how to claim, or thanks somebody for renewing states\n  no named value.\n- confidence: \"high\" | \"medium\" | \"low\"\n\nFor each term give:\n- term: \"premium\" | \"compulsory_excess\" | \"voluntary_excess\" |\n  \"total_excess\" | \"cover_limit\" | \"no_claims_discount\" |\n  \"cooling_off_period\" | \"other\"\n\n  Use \"other\" when the passage states a named value that is none of\n  these. That is a real answer and the right one: the value goes in\n  front of the person instead of being compared. Never stretch one of\n  the named terms to cover something it is not.\n\n- basis: \"annual\" | \"monthly\" | \"per_claim\" | \"per_policy\"\n\n  What the value is measured against, as the passage says it. A premium\n  quoted as twelve instalments is \"monthly\"; the same policy's total for\n  the year is \"annual\". These are different values, and calling one the\n  other turns an instalment into a price rise.\n\n- value: the value exactly as the document writes it — \"£1,234.56\",\n  \"£500\", \"14 days\", \"60%\". Copy the currency symbol, the commas and\n  the decimals as they appear. Never round, never convert, never work\n  out a total, and never write a number the passage does not contain.\n\n- quote: the words the value comes from, copied exactly from the\n  passage — enough to show where you read it. This is checked against\n  the document: a quote that is not in the passage means the whole term\n  goes to the person instead of being used.\n\nYou are not asked to compare anything, to say whether a value went up\nor down, or to work out a difference. That is done separately, from the\nvalues you copy. Copying them exactly is the whole job.\n\nReturn one result per input, with the same \"id\" you were given, and\necho the passage back in \"segment\". Return JSON only.\n\nPassages:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"Kestrel Assurance car insurance — policy schedule BIRCH-TE-407 for the year to 31 August 2026.\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"Compulsory excess: £4,380.00 per claim.\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"Voluntary excess: £986.00 per claim.\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"Total excess payable: £5,366.00 per claim.\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"Your reference is BIRCH-TE-407. Quote it whenever you write to us about this policy.\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"Kestrel Assurance arranges car insurance cover under BIRCH-TE-407 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"Kestrel Assurance car insurance — renewal schedule BIRCH-TE-407 for the year to 31 August 2027.\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"Compulsory excess: £4,430.00 per claim.\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"Voluntary excess: £986.00 per claim.\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"Total excess payable: £5,416.00 per claim.\"\n  },\n  {\n    \"id\": 10,\n    \"raw\": \"Kestrel Assurance arranges car insurance cover under BIRCH-TE-407 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 11,\n    \"raw\": \"Your reference is BIRCH-TE-407. Quote it whenever you write to us about this policy.\"\n  }\n]\n",
+        "response": "{\"results\":[{\"confidence\":\"low\",\"id\":0,\"segment\":\"Kestrel Assurance car insurance — policy schedule BIRCH-TE-407 for the year to 31 August 2026.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":1,\"segment\":\"Compulsory excess: £4,380.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"£4,380.00 per claim\",\"term\":\"compulsory_excess\",\"value\":\"£4,380.00\"}]},{\"confidence\":\"high\",\"id\":2,\"segment\":\"Voluntary excess: £986.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"£986.00 per claim\",\"term\":\"voluntary_excess\",\"value\":\"£986.00\"}]},{\"confidence\":\"high\",\"id\":3,\"segment\":\"Total excess payable: £5,366.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"£5,366.00 per claim\",\"term\":\"total_excess\",\"value\":\"£5,366.00\"}]},{\"confidence\":\"low\",\"id\":4,\"segment\":\"Your reference is BIRCH-TE-407. Quote it whenever you write to us about this policy.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":5,\"segment\":\"Kestrel Assurance arranges car insurance cover under BIRCH-TE-407 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":6,\"segment\":\"Kestrel Assurance car insurance — renewal schedule BIRCH-TE-407 for the year to 31 August 2027.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":7,\"segment\":\"Compulsory excess: £4,430.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"£4,430.00 per claim\",\"term\":\"compulsory_excess\",\"value\":\"£4,430.00\"}]},{\"confidence\":\"high\",\"id\":8,\"segment\":\"Voluntary excess: £986.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"£986.00 per claim\",\"term\":\"voluntary_excess\",\"value\":\"£986.00\"}]},{\"confidence\":\"high\",\"id\":9,\"segment\":\"Total excess payable: £5,416.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"£5,416.00 per claim\",\"term\":\"total_excess\",\"value\":\"£5,416.00\"}]},{\"confidence\":\"low\",\"id\":10,\"segment\":\"Kestrel Assurance arranges car insurance cover under BIRCH-TE-407 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":11,\"segment\":\"Your reference is BIRCH-TE-407. Quote it whenever you write to us about this policy.\",\"terms\":[]}]}"
+      }
+    ]
+  }
+]

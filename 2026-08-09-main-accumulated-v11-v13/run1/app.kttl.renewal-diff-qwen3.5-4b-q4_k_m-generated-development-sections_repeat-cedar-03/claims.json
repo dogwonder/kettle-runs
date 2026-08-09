@@ -1,0 +1,2405 @@
+{
+  "schema": "kettle/claim-traces@0",
+  "claims": [
+    {
+      "id": "claim-000001",
+      "pack": "app.kttl.renewal-diff",
+      "step": "Reading what each document says",
+      "batch": 1,
+      "item": 3,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Insurance amount: £604,600.00.",
+      "candidate": {
+        "confidence": "high",
+        "id": 3,
+        "segment": "Insurance amount: £604,600.00.",
+        "terms": [
+          {
+            "basis": "per_policy",
+            "quote": "£604,600.00",
+            "term": "other",
+            "value": "£604,600.00"
+          }
+        ]
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 3,
+            "segment": "Insurance amount: £604,600.00.",
+            "terms": [
+              {
+                "basis": "per_policy",
+                "quote": "£604,600.00",
+                "term": "other",
+                "value": "£604,600.00"
+              }
+            ]
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000002",
+      "parent_id": "claim-000001",
+      "pack": "app.kttl.renewal-diff",
+      "step": "Reading what each document says",
+      "batch": 1,
+      "item": 3,
+      "candidate_index": 1,
+      "kind": "policy_term",
+      "source": "Insurance amount: £604,600.00.",
+      "candidate": {
+        "basis": "per_policy",
+        "quote": "£604,600.00",
+        "term": "other",
+        "value": "£604,600.00"
+      },
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pack_coverage",
+          "outcome": "failed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000003",
+      "pack": "app.kttl.renewal-diff",
+      "step": "Reading what each document says",
+      "batch": 1,
+      "item": 4,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Compulsory excess: £5,430.00 each and every claim.",
+      "candidate": {
+        "confidence": "high",
+        "id": 4,
+        "segment": "Compulsory excess: £5,430.00 each and every claim.",
+        "terms": [
+          {
+            "basis": "per_claim",
+            "quote": "£5,430.00",
+            "term": "compulsory_excess",
+            "value": "£5,430.00"
+          }
+        ]
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 4,
+            "segment": "Compulsory excess: £5,430.00 each and every claim.",
+            "terms": [
+              {
+                "basis": "per_claim",
+                "quote": "£5,430.00",
+                "term": "compulsory_excess",
+                "value": "£5,430.00"
+              }
+            ]
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000004",
+      "parent_id": "claim-000003",
+      "pack": "app.kttl.renewal-diff",
+      "step": "Reading what each document says",
+      "batch": 1,
+      "item": 4,
+      "candidate_index": 1,
+      "kind": "policy_term",
+      "source": "Compulsory excess: £5,430.00 each and every claim.",
+      "candidate": {
+        "basis": "per_claim",
+        "quote": "£5,430.00",
+        "term": "compulsory_excess",
+        "value": "£5,430.00"
+      },
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "quote",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "value_shape",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000005",
+      "pack": "app.kttl.renewal-diff",
+      "step": "Reading what each document says",
+      "batch": 1,
+      "item": 5,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Annual premium: £1,449.80.",
+      "candidate": {
+        "confidence": "high",
+        "id": 5,
+        "segment": "Annual premium: £1,449.80.",
+        "terms": [
+          {
+            "basis": "annual",
+            "quote": "£1,449.80",
+            "term": "premium",
+            "value": "£1,449.80"
+          }
+        ]
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 5,
+            "segment": "Annual premium: £1,449.80.",
+            "terms": [
+              {
+                "basis": "annual",
+                "quote": "£1,449.80",
+                "term": "premium",
+                "value": "£1,449.80"
+              }
+            ]
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000006",
+      "parent_id": "claim-000005",
+      "pack": "app.kttl.renewal-diff",
+      "step": "Reading what each document says",
+      "batch": 1,
+      "item": 5,
+      "candidate_index": 1,
+      "kind": "policy_term",
+      "source": "Annual premium: £1,449.80.",
+      "candidate": {
+        "basis": "annual",
+        "quote": "£1,449.80",
+        "term": "premium",
+        "value": "£1,449.80"
+      },
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "quote",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "value_shape",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000007",
+      "pack": "app.kttl.renewal-diff",
+      "step": "Reading what each document says",
+      "batch": 1,
+      "item": 7,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Insurance amount: £854,600.00.",
+      "candidate": {
+        "confidence": "high",
+        "id": 7,
+        "segment": "Insurance amount: £854,600.00.",
+        "terms": [
+          {
+            "basis": "per_policy",
+            "quote": "£854,600.00",
+            "term": "other",
+            "value": "£854,600.00"
+          }
+        ]
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 7,
+            "segment": "Insurance amount: £854,600.00.",
+            "terms": [
+              {
+                "basis": "per_policy",
+                "quote": "£854,600.00",
+                "term": "other",
+                "value": "£854,600.00"
+              }
+            ]
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000008",
+      "parent_id": "claim-000007",
+      "pack": "app.kttl.renewal-diff",
+      "step": "Reading what each document says",
+      "batch": 1,
+      "item": 7,
+      "candidate_index": 1,
+      "kind": "policy_term",
+      "source": "Insurance amount: £854,600.00.",
+      "candidate": {
+        "basis": "per_policy",
+        "quote": "£854,600.00",
+        "term": "other",
+        "value": "£854,600.00"
+      },
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pack_coverage",
+          "outcome": "failed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000009",
+      "pack": "app.kttl.renewal-diff",
+      "step": "Reading what each document says",
+      "batch": 1,
+      "item": 8,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Compulsory excess: £5,461.00 each and every claim.",
+      "candidate": {
+        "confidence": "high",
+        "id": 8,
+        "segment": "Compulsory excess: £5,461.00 each and every claim.",
+        "terms": [
+          {
+            "basis": "per_claim",
+            "quote": "£5,461.00",
+            "term": "compulsory_excess",
+            "value": "£5,461.00"
+          }
+        ]
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 8,
+            "segment": "Compulsory excess: £5,461.00 each and every claim.",
+            "terms": [
+              {
+                "basis": "per_claim",
+                "quote": "£5,461.00",
+                "term": "compulsory_excess",
+                "value": "£5,461.00"
+              }
+            ]
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000010",
+      "parent_id": "claim-000009",
+      "pack": "app.kttl.renewal-diff",
+      "step": "Reading what each document says",
+      "batch": 1,
+      "item": 8,
+      "candidate_index": 1,
+      "kind": "policy_term",
+      "source": "Compulsory excess: £5,461.00 each and every claim.",
+      "candidate": {
+        "basis": "per_claim",
+        "quote": "£5,461.00",
+        "term": "compulsory_excess",
+        "value": "£5,461.00"
+      },
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "quote",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "value_shape",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000011",
+      "pack": "app.kttl.renewal-diff",
+      "step": "Reading what each document says",
+      "batch": 1,
+      "item": 9,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Annual premium: £1,496.80.",
+      "candidate": {
+        "confidence": "high",
+        "id": 9,
+        "segment": "Annual premium: £1,496.80.",
+        "terms": [
+          {
+            "basis": "annual",
+            "quote": "£1,496.80",
+            "term": "premium",
+            "value": "£1,496.80"
+          }
+        ]
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 9,
+            "segment": "Annual premium: £1,496.80.",
+            "terms": [
+              {
+                "basis": "annual",
+                "quote": "£1,496.80",
+                "term": "premium",
+                "value": "£1,496.80"
+              }
+            ]
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000012",
+      "parent_id": "claim-000011",
+      "pack": "app.kttl.renewal-diff",
+      "step": "Reading what each document says",
+      "batch": 1,
+      "item": 9,
+      "candidate_index": 1,
+      "kind": "policy_term",
+      "source": "Annual premium: £1,496.80.",
+      "candidate": {
+        "basis": "annual",
+        "quote": "£1,496.80",
+        "term": "premium",
+        "value": "£1,496.80"
+      },
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "quote",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "value_shape",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000013",
+      "pack": "app.kttl.renewal-diff",
+      "step": "Reading what each document says",
+      "batch": 1,
+      "item": 11,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Insurance amount: £1,104,600.00.",
+      "candidate": {
+        "confidence": "high",
+        "id": 11,
+        "segment": "Insurance amount: £1,104,600.00.",
+        "terms": [
+          {
+            "basis": "per_policy",
+            "quote": "£1,104,600.00",
+            "term": "other",
+            "value": "£1,104,600.00"
+          }
+        ]
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 11,
+            "segment": "Insurance amount: £1,104,600.00.",
+            "terms": [
+              {
+                "basis": "per_policy",
+                "quote": "£1,104,600.00",
+                "term": "other",
+                "value": "£1,104,600.00"
+              }
+            ]
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000014",
+      "parent_id": "claim-000013",
+      "pack": "app.kttl.renewal-diff",
+      "step": "Reading what each document says",
+      "batch": 1,
+      "item": 11,
+      "candidate_index": 1,
+      "kind": "policy_term",
+      "source": "Insurance amount: £1,104,600.00.",
+      "candidate": {
+        "basis": "per_policy",
+        "quote": "£1,104,600.00",
+        "term": "other",
+        "value": "£1,104,600.00"
+      },
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pack_coverage",
+          "outcome": "failed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000015",
+      "pack": "app.kttl.renewal-diff",
+      "step": "Reading what each document says",
+      "batch": 1,
+      "item": 12,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Compulsory excess: £5,492.00 each and every claim.",
+      "candidate": {
+        "confidence": "high",
+        "id": 12,
+        "segment": "Compulsory excess: £5,492.00 each and every claim.",
+        "terms": [
+          {
+            "basis": "per_claim",
+            "quote": "£5,492.00",
+            "term": "compulsory_excess",
+            "value": "£5,492.00"
+          }
+        ]
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 12,
+            "segment": "Compulsory excess: £5,492.00 each and every claim.",
+            "terms": [
+              {
+                "basis": "per_claim",
+                "quote": "£5,492.00",
+                "term": "compulsory_excess",
+                "value": "£5,492.00"
+              }
+            ]
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000016",
+      "parent_id": "claim-000015",
+      "pack": "app.kttl.renewal-diff",
+      "step": "Reading what each document says",
+      "batch": 1,
+      "item": 12,
+      "candidate_index": 1,
+      "kind": "policy_term",
+      "source": "Compulsory excess: £5,492.00 each and every claim.",
+      "candidate": {
+        "basis": "per_claim",
+        "quote": "£5,492.00",
+        "term": "compulsory_excess",
+        "value": "£5,492.00"
+      },
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "quote",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "value_shape",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000017",
+      "pack": "app.kttl.renewal-diff",
+      "step": "Reading what each document says",
+      "batch": 1,
+      "item": 13,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Annual premium: £1,543.80.",
+      "candidate": {
+        "confidence": "high",
+        "id": 13,
+        "segment": "Annual premium: £1,543.80.",
+        "terms": [
+          {
+            "basis": "annual",
+            "quote": "£1,543.80",
+            "term": "premium",
+            "value": "£1,543.80"
+          }
+        ]
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 13,
+            "segment": "Annual premium: £1,543.80.",
+            "terms": [
+              {
+                "basis": "annual",
+                "quote": "£1,543.80",
+                "term": "premium",
+                "value": "£1,543.80"
+              }
+            ]
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000018",
+      "parent_id": "claim-000017",
+      "pack": "app.kttl.renewal-diff",
+      "step": "Reading what each document says",
+      "batch": 1,
+      "item": 13,
+      "candidate_index": 1,
+      "kind": "policy_term",
+      "source": "Annual premium: £1,543.80.",
+      "candidate": {
+        "basis": "annual",
+        "quote": "£1,543.80",
+        "term": "premium",
+        "value": "£1,543.80"
+      },
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "quote",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "value_shape",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000019",
+      "pack": "app.kttl.renewal-diff",
+      "step": "Reading what each document says",
+      "batch": 1,
+      "item": 14,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Total annual premium for all sections: £4,490.40.",
+      "candidate": {
+        "confidence": "high",
+        "id": 14,
+        "segment": "Total annual premium for all sections: £4,490.40.",
+        "terms": [
+          {
+            "basis": "annual",
+            "quote": "£4,490.40",
+            "term": "premium",
+            "value": "£4,490.40"
+          }
+        ]
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 14,
+            "segment": "Total annual premium for all sections: £4,490.40.",
+            "terms": [
+              {
+                "basis": "annual",
+                "quote": "£4,490.40",
+                "term": "premium",
+                "value": "£4,490.40"
+              }
+            ]
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000020",
+      "parent_id": "claim-000019",
+      "pack": "app.kttl.renewal-diff",
+      "step": "Reading what each document says",
+      "batch": 1,
+      "item": 14,
+      "candidate_index": 1,
+      "kind": "policy_term",
+      "source": "Total annual premium for all sections: £4,490.40.",
+      "candidate": {
+        "basis": "annual",
+        "quote": "£4,490.40",
+        "term": "premium",
+        "value": "£4,490.40"
+      },
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "quote",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "value_shape",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000021",
+      "pack": "app.kttl.renewal-diff",
+      "step": "Reading what each document says",
+      "batch": 1,
+      "item": 0,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Pennine Line Assurance travel insurance — policy schedule CEDAR-SR-414 for the year to 31 August 2026.",
+      "candidate": {
+        "confidence": "low",
+        "id": 0,
+        "segment": "Pennine Line Assurance travel insurance — policy schedule CEDAR-SR-414 for the year to 31 August 2026.",
+        "terms": []
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "low",
+            "id": 0,
+            "segment": "Pennine Line Assurance travel insurance — policy schedule CEDAR-SR-414 for the year to 31 August 2026.",
+            "terms": []
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000022",
+      "pack": "app.kttl.renewal-diff",
+      "step": "Reading what each document says",
+      "batch": 1,
+      "item": 1,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Period of insurance under CEDAR-SR-414: From 1 September 2025 to 31 August 2026 both days inclusive.",
+      "candidate": {
+        "confidence": "low",
+        "id": 1,
+        "segment": "Period of insurance under CEDAR-SR-414: From 1 September 2025 to 31 August 2026 both days inclusive.",
+        "terms": []
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "low",
+            "id": 1,
+            "segment": "Period of insurance under CEDAR-SR-414: From 1 September 2025 to 31 August 2026 both days inclusive.",
+            "terms": []
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000023",
+      "pack": "app.kttl.renewal-diff",
+      "step": "Reading what each document says",
+      "batch": 1,
+      "item": 2,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Section: professional indemnity (schedule CEDAR-SR-414)",
+      "candidate": {
+        "confidence": "low",
+        "id": 2,
+        "segment": "Section: professional indemnity (schedule CEDAR-SR-414)",
+        "terms": []
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "low",
+            "id": 2,
+            "segment": "Section: professional indemnity (schedule CEDAR-SR-414)",
+            "terms": []
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000024",
+      "pack": "app.kttl.renewal-diff",
+      "step": "Reading what each document says",
+      "batch": 1,
+      "item": 6,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Section: legal expenses (schedule CEDAR-SR-414)",
+      "candidate": {
+        "confidence": "low",
+        "id": 6,
+        "segment": "Section: legal expenses (schedule CEDAR-SR-414)",
+        "terms": []
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "low",
+            "id": 6,
+            "segment": "Section: legal expenses (schedule CEDAR-SR-414)",
+            "terms": []
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000025",
+      "pack": "app.kttl.renewal-diff",
+      "step": "Reading what each document says",
+      "batch": 1,
+      "item": 10,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Section: crisis containment (schedule CEDAR-SR-414)",
+      "candidate": {
+        "confidence": "low",
+        "id": 10,
+        "segment": "Section: crisis containment (schedule CEDAR-SR-414)",
+        "terms": []
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "low",
+            "id": 10,
+            "segment": "Section: crisis containment (schedule CEDAR-SR-414)",
+            "terms": []
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000026",
+      "pack": "app.kttl.renewal-diff",
+      "step": "Reading what each document says",
+      "batch": 1,
+      "item": 15,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Your reference is CEDAR-SR-414. Quote it whenever you write to us about this policy.",
+      "candidate": {
+        "confidence": "low",
+        "id": 15,
+        "segment": "Your reference is CEDAR-SR-414. Quote it whenever you write to us about this policy.",
+        "terms": []
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "low",
+            "id": 15,
+            "segment": "Your reference is CEDAR-SR-414. Quote it whenever you write to us about this policy.",
+            "terms": []
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000027",
+      "pack": "app.kttl.renewal-diff",
+      "step": "Reading what each document says",
+      "batch": 1,
+      "item": 16,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Pennine Line Assurance arranges travel insurance cover under CEDAR-SR-414 and is regulated in the United Kingdom.",
+      "candidate": {
+        "confidence": "low",
+        "id": 16,
+        "segment": "Pennine Line Assurance arranges travel insurance cover under CEDAR-SR-414 and is regulated in the United Kingdom.",
+        "terms": []
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "low",
+            "id": 16,
+            "segment": "Pennine Line Assurance arranges travel insurance cover under CEDAR-SR-414 and is regulated in the United Kingdom.",
+            "terms": []
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000028",
+      "pack": "app.kttl.renewal-diff",
+      "step": "Reading what each document says",
+      "batch": 1,
+      "item": 17,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Pennine Line Assurance travel insurance — renewal schedule CEDAR-SR-414 for the year to 31 August 2027.",
+      "candidate": {
+        "confidence": "low",
+        "id": 17,
+        "segment": "Pennine Line Assurance travel insurance — renewal schedule CEDAR-SR-414 for the year to 31 August 2027.",
+        "terms": []
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "low",
+            "id": 17,
+            "segment": "Pennine Line Assurance travel insurance — renewal schedule CEDAR-SR-414 for the year to 31 August 2027.",
+            "terms": []
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000029",
+      "pack": "app.kttl.renewal-diff",
+      "step": "Reading what each document says",
+      "batch": 1,
+      "item": 18,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Period of insurance under CEDAR-SR-414: From 1 September 2026 to 31 August 2027 both days inclusive.",
+      "candidate": {
+        "confidence": "low",
+        "id": 18,
+        "segment": "Period of insurance under CEDAR-SR-414: From 1 September 2026 to 31 August 2027 both days inclusive.",
+        "terms": []
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "low",
+            "id": 18,
+            "segment": "Period of insurance under CEDAR-SR-414: From 1 September 2026 to 31 August 2027 both days inclusive.",
+            "terms": []
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000030",
+      "pack": "app.kttl.renewal-diff",
+      "step": "Reading what each document says",
+      "batch": 1,
+      "item": 19,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Section: professional indemnity (schedule CEDAR-SR-414)",
+      "candidate": {
+        "confidence": "low",
+        "id": 19,
+        "segment": "Section: professional indemnity (schedule CEDAR-SR-414)",
+        "terms": []
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "low",
+            "id": 19,
+            "segment": "Section: professional indemnity (schedule CEDAR-SR-414)",
+            "terms": []
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000031",
+      "pack": "app.kttl.renewal-diff",
+      "step": "Reading what each document says",
+      "batch": 2,
+      "item": 20,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Insurance amount: £604,600.00.",
+      "candidate": {
+        "confidence": "high",
+        "id": 20,
+        "segment": "Insurance amount: £604,600.00.",
+        "terms": [
+          {
+            "basis": "per_policy",
+            "quote": "£604,600.00",
+            "term": "other",
+            "value": "£604,600.00"
+          }
+        ]
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 20,
+            "segment": "Insurance amount: £604,600.00.",
+            "terms": [
+              {
+                "basis": "per_policy",
+                "quote": "£604,600.00",
+                "term": "other",
+                "value": "£604,600.00"
+              }
+            ]
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000032",
+      "parent_id": "claim-000031",
+      "pack": "app.kttl.renewal-diff",
+      "step": "Reading what each document says",
+      "batch": 2,
+      "item": 20,
+      "candidate_index": 1,
+      "kind": "policy_term",
+      "source": "Insurance amount: £604,600.00.",
+      "candidate": {
+        "basis": "per_policy",
+        "quote": "£604,600.00",
+        "term": "other",
+        "value": "£604,600.00"
+      },
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pack_coverage",
+          "outcome": "failed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000033",
+      "pack": "app.kttl.renewal-diff",
+      "step": "Reading what each document says",
+      "batch": 2,
+      "item": 21,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Compulsory excess: £5,430.00 each and every claim.",
+      "candidate": {
+        "confidence": "high",
+        "id": 21,
+        "segment": "Compulsory excess: £5,430.00 each and every claim.",
+        "terms": [
+          {
+            "basis": "per_claim",
+            "quote": "£5,430.00",
+            "term": "compulsory_excess",
+            "value": "£5,430.00"
+          }
+        ]
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 21,
+            "segment": "Compulsory excess: £5,430.00 each and every claim.",
+            "terms": [
+              {
+                "basis": "per_claim",
+                "quote": "£5,430.00",
+                "term": "compulsory_excess",
+                "value": "£5,430.00"
+              }
+            ]
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000034",
+      "parent_id": "claim-000033",
+      "pack": "app.kttl.renewal-diff",
+      "step": "Reading what each document says",
+      "batch": 2,
+      "item": 21,
+      "candidate_index": 1,
+      "kind": "policy_term",
+      "source": "Compulsory excess: £5,430.00 each and every claim.",
+      "candidate": {
+        "basis": "per_claim",
+        "quote": "£5,430.00",
+        "term": "compulsory_excess",
+        "value": "£5,430.00"
+      },
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "quote",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "value_shape",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000035",
+      "pack": "app.kttl.renewal-diff",
+      "step": "Reading what each document says",
+      "batch": 2,
+      "item": 22,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Annual premium: £1,464.80.",
+      "candidate": {
+        "confidence": "high",
+        "id": 22,
+        "segment": "Annual premium: £1,464.80.",
+        "terms": [
+          {
+            "basis": "annual",
+            "quote": "£1,464.80",
+            "term": "premium",
+            "value": "£1,464.80"
+          }
+        ]
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 22,
+            "segment": "Annual premium: £1,464.80.",
+            "terms": [
+              {
+                "basis": "annual",
+                "quote": "£1,464.80",
+                "term": "premium",
+                "value": "£1,464.80"
+              }
+            ]
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000036",
+      "parent_id": "claim-000035",
+      "pack": "app.kttl.renewal-diff",
+      "step": "Reading what each document says",
+      "batch": 2,
+      "item": 22,
+      "candidate_index": 1,
+      "kind": "policy_term",
+      "source": "Annual premium: £1,464.80.",
+      "candidate": {
+        "basis": "annual",
+        "quote": "£1,464.80",
+        "term": "premium",
+        "value": "£1,464.80"
+      },
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "quote",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "value_shape",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000037",
+      "pack": "app.kttl.renewal-diff",
+      "step": "Reading what each document says",
+      "batch": 2,
+      "item": 23,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Section: legal expenses (schedule CEDAR-SR-414)",
+      "candidate": {
+        "confidence": "high",
+        "id": 23,
+        "segment": "Section: legal expenses (schedule CEDAR-SR-414)",
+        "terms": []
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 23,
+            "segment": "Section: legal expenses (schedule CEDAR-SR-414)",
+            "terms": []
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000038",
+      "pack": "app.kttl.renewal-diff",
+      "step": "Reading what each document says",
+      "batch": 2,
+      "item": 24,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Insurance amount: £854,600.00.",
+      "candidate": {
+        "confidence": "high",
+        "id": 24,
+        "segment": "Insurance amount: £854,600.00.",
+        "terms": [
+          {
+            "basis": "per_policy",
+            "quote": "£854,600.00",
+            "term": "other",
+            "value": "£854,600.00"
+          }
+        ]
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 24,
+            "segment": "Insurance amount: £854,600.00.",
+            "terms": [
+              {
+                "basis": "per_policy",
+                "quote": "£854,600.00",
+                "term": "other",
+                "value": "£854,600.00"
+              }
+            ]
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000039",
+      "parent_id": "claim-000038",
+      "pack": "app.kttl.renewal-diff",
+      "step": "Reading what each document says",
+      "batch": 2,
+      "item": 24,
+      "candidate_index": 1,
+      "kind": "policy_term",
+      "source": "Insurance amount: £854,600.00.",
+      "candidate": {
+        "basis": "per_policy",
+        "quote": "£854,600.00",
+        "term": "other",
+        "value": "£854,600.00"
+      },
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pack_coverage",
+          "outcome": "failed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000040",
+      "pack": "app.kttl.renewal-diff",
+      "step": "Reading what each document says",
+      "batch": 2,
+      "item": 25,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Compulsory excess: £5,461.00 each and every claim.",
+      "candidate": {
+        "confidence": "high",
+        "id": 25,
+        "segment": "Compulsory excess: £5,461.00 each and every claim.",
+        "terms": [
+          {
+            "basis": "per_claim",
+            "quote": "£5,461.00",
+            "term": "compulsory_excess",
+            "value": "£5,461.00"
+          }
+        ]
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 25,
+            "segment": "Compulsory excess: £5,461.00 each and every claim.",
+            "terms": [
+              {
+                "basis": "per_claim",
+                "quote": "£5,461.00",
+                "term": "compulsory_excess",
+                "value": "£5,461.00"
+              }
+            ]
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000041",
+      "parent_id": "claim-000040",
+      "pack": "app.kttl.renewal-diff",
+      "step": "Reading what each document says",
+      "batch": 2,
+      "item": 25,
+      "candidate_index": 1,
+      "kind": "policy_term",
+      "source": "Compulsory excess: £5,461.00 each and every claim.",
+      "candidate": {
+        "basis": "per_claim",
+        "quote": "£5,461.00",
+        "term": "compulsory_excess",
+        "value": "£5,461.00"
+      },
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "quote",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "value_shape",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000042",
+      "pack": "app.kttl.renewal-diff",
+      "step": "Reading what each document says",
+      "batch": 2,
+      "item": 26,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Annual premium: £1,511.80.",
+      "candidate": {
+        "confidence": "high",
+        "id": 26,
+        "segment": "Annual premium: £1,511.80.",
+        "terms": [
+          {
+            "basis": "annual",
+            "quote": "£1,511.80",
+            "term": "premium",
+            "value": "£1,511.80"
+          }
+        ]
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 26,
+            "segment": "Annual premium: £1,511.80.",
+            "terms": [
+              {
+                "basis": "annual",
+                "quote": "£1,511.80",
+                "term": "premium",
+                "value": "£1,511.80"
+              }
+            ]
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000043",
+      "parent_id": "claim-000042",
+      "pack": "app.kttl.renewal-diff",
+      "step": "Reading what each document says",
+      "batch": 2,
+      "item": 26,
+      "candidate_index": 1,
+      "kind": "policy_term",
+      "source": "Annual premium: £1,511.80.",
+      "candidate": {
+        "basis": "annual",
+        "quote": "£1,511.80",
+        "term": "premium",
+        "value": "£1,511.80"
+      },
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "quote",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "value_shape",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000044",
+      "pack": "app.kttl.renewal-diff",
+      "step": "Reading what each document says",
+      "batch": 2,
+      "item": 27,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Section: crisis containment (schedule CEDAR-SR-414)",
+      "candidate": {
+        "confidence": "high",
+        "id": 27,
+        "segment": "Section: crisis containment (schedule CEDAR-SR-414)",
+        "terms": []
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 27,
+            "segment": "Section: crisis containment (schedule CEDAR-SR-414)",
+            "terms": []
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000045",
+      "pack": "app.kttl.renewal-diff",
+      "step": "Reading what each document says",
+      "batch": 2,
+      "item": 28,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Insurance amount: £1,104,600.00.",
+      "candidate": {
+        "confidence": "high",
+        "id": 28,
+        "segment": "Insurance amount: £1,104,600.00.",
+        "terms": [
+          {
+            "basis": "per_policy",
+            "quote": "£1,104,600.00",
+            "term": "other",
+            "value": "£1,104,600.00"
+          }
+        ]
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 28,
+            "segment": "Insurance amount: £1,104,600.00.",
+            "terms": [
+              {
+                "basis": "per_policy",
+                "quote": "£1,104,600.00",
+                "term": "other",
+                "value": "£1,104,600.00"
+              }
+            ]
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000046",
+      "parent_id": "claim-000045",
+      "pack": "app.kttl.renewal-diff",
+      "step": "Reading what each document says",
+      "batch": 2,
+      "item": 28,
+      "candidate_index": 1,
+      "kind": "policy_term",
+      "source": "Insurance amount: £1,104,600.00.",
+      "candidate": {
+        "basis": "per_policy",
+        "quote": "£1,104,600.00",
+        "term": "other",
+        "value": "£1,104,600.00"
+      },
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pack_coverage",
+          "outcome": "failed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000047",
+      "pack": "app.kttl.renewal-diff",
+      "step": "Reading what each document says",
+      "batch": 2,
+      "item": 29,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Compulsory excess: £5,492.00 each and every claim.",
+      "candidate": {
+        "confidence": "high",
+        "id": 29,
+        "segment": "Compulsory excess: £5,492.00 each and every claim.",
+        "terms": [
+          {
+            "basis": "per_claim",
+            "quote": "£5,492.00",
+            "term": "compulsory_excess",
+            "value": "£5,492.00"
+          }
+        ]
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 29,
+            "segment": "Compulsory excess: £5,492.00 each and every claim.",
+            "terms": [
+              {
+                "basis": "per_claim",
+                "quote": "£5,492.00",
+                "term": "compulsory_excess",
+                "value": "£5,492.00"
+              }
+            ]
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000048",
+      "parent_id": "claim-000047",
+      "pack": "app.kttl.renewal-diff",
+      "step": "Reading what each document says",
+      "batch": 2,
+      "item": 29,
+      "candidate_index": 1,
+      "kind": "policy_term",
+      "source": "Compulsory excess: £5,492.00 each and every claim.",
+      "candidate": {
+        "basis": "per_claim",
+        "quote": "£5,492.00",
+        "term": "compulsory_excess",
+        "value": "£5,492.00"
+      },
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "quote",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "value_shape",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000049",
+      "pack": "app.kttl.renewal-diff",
+      "step": "Reading what each document says",
+      "batch": 2,
+      "item": 30,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Annual premium: £1,558.80.",
+      "candidate": {
+        "confidence": "high",
+        "id": 30,
+        "segment": "Annual premium: £1,558.80.",
+        "terms": [
+          {
+            "basis": "annual",
+            "quote": "£1,558.80",
+            "term": "premium",
+            "value": "£1,558.80"
+          }
+        ]
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 30,
+            "segment": "Annual premium: £1,558.80.",
+            "terms": [
+              {
+                "basis": "annual",
+                "quote": "£1,558.80",
+                "term": "premium",
+                "value": "£1,558.80"
+              }
+            ]
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000050",
+      "parent_id": "claim-000049",
+      "pack": "app.kttl.renewal-diff",
+      "step": "Reading what each document says",
+      "batch": 2,
+      "item": 30,
+      "candidate_index": 1,
+      "kind": "policy_term",
+      "source": "Annual premium: £1,558.80.",
+      "candidate": {
+        "basis": "annual",
+        "quote": "£1,558.80",
+        "term": "premium",
+        "value": "£1,558.80"
+      },
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "quote",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "value_shape",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000051",
+      "pack": "app.kttl.renewal-diff",
+      "step": "Reading what each document says",
+      "batch": 2,
+      "item": 31,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Total annual premium for all sections: £4,535.40.",
+      "candidate": {
+        "confidence": "high",
+        "id": 31,
+        "segment": "Total annual premium for all sections: £4,535.40.",
+        "terms": [
+          {
+            "basis": "annual",
+            "quote": "£4,535.40",
+            "term": "premium",
+            "value": "£4,535.40"
+          }
+        ]
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 31,
+            "segment": "Total annual premium for all sections: £4,535.40.",
+            "terms": [
+              {
+                "basis": "annual",
+                "quote": "£4,535.40",
+                "term": "premium",
+                "value": "£4,535.40"
+              }
+            ]
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000052",
+      "parent_id": "claim-000051",
+      "pack": "app.kttl.renewal-diff",
+      "step": "Reading what each document says",
+      "batch": 2,
+      "item": 31,
+      "candidate_index": 1,
+      "kind": "policy_term",
+      "source": "Total annual premium for all sections: £4,535.40.",
+      "candidate": {
+        "basis": "annual",
+        "quote": "£4,535.40",
+        "term": "premium",
+        "value": "£4,535.40"
+      },
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "quote",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "value_shape",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000053",
+      "pack": "app.kttl.renewal-diff",
+      "step": "Reading what each document says",
+      "batch": 2,
+      "item": 32,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Pennine Line Assurance arranges travel insurance cover under CEDAR-SR-414 and is regulated in the United Kingdom.",
+      "candidate": {
+        "confidence": "high",
+        "id": 32,
+        "segment": "Pennine Line Assurance arranges travel insurance cover under CEDAR-SR-414 and is regulated in the United Kingdom.",
+        "terms": []
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 32,
+            "segment": "Pennine Line Assurance arranges travel insurance cover under CEDAR-SR-414 and is regulated in the United Kingdom.",
+            "terms": []
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000054",
+      "pack": "app.kttl.renewal-diff",
+      "step": "Reading what each document says",
+      "batch": 2,
+      "item": 33,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Your reference is CEDAR-SR-414. Quote it whenever you write to us about this policy.",
+      "candidate": {
+        "confidence": "high",
+        "id": 33,
+        "segment": "Your reference is CEDAR-SR-414. Quote it whenever you write to us about this policy.",
+        "terms": []
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 33,
+            "segment": "Your reference is CEDAR-SR-414. Quote it whenever you write to us about this policy.",
+            "terms": []
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    }
+  ]
+}

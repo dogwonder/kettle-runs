@@ -1,0 +1,296 @@
+[
+  {
+    "id": "app.kttl.renewal-diff/development-nothing_moved-damson-04/development-nothing_moved-damson-04-previous-no-value-26baa5",
+    "item_id": "development-nothing_moved-damson-04-previous-no-value-26baa5",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-nothing_moved-damson-04",
+    "fixture_id": "development-nothing_moved-damson-04",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Haldon Insurance Services contents insurance — policy schedule DAMSON-NM-421 for the year to 31 August 2026.",
+    "decision_key": "previous|haldon insurance services contents insurance — policy schedule damson-nm-421 for the year to 31 august 2026.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-nothing_moved-damson-04/development-nothing_moved-damson-04-previous-premium-90a2b2",
+    "item_id": "development-nothing_moved-damson-04-previous-premium-90a2b2",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-nothing_moved-damson-04",
+    "fixture_id": "development-nothing_moved-damson-04",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Total annual premium: £2,699.00.",
+    "decision_key": "previous|total annual premium: £2,699.00.",
+    "metric": "extraction",
+    "expected": {
+      "term": "premium",
+      "basis": "annual",
+      "value": "£2,699.00",
+      "quote": "Total annual premium: £2,699.00."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-nothing_moved-damson-04/development-nothing_moved-damson-04-previous-compulsory-excess-3c9b04",
+    "item_id": "development-nothing_moved-damson-04-previous-compulsory-excess-3c9b04",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-nothing_moved-damson-04",
+    "fixture_id": "development-nothing_moved-damson-04",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Compulsory excess: £1,785.00 per claim.",
+    "decision_key": "previous|compulsory excess: £1,785.00 per claim.",
+    "metric": "extraction",
+    "expected": {
+      "term": "compulsory_excess",
+      "basis": "per_claim",
+      "value": "£1,785.00",
+      "quote": "Compulsory excess: £1,785.00 per claim."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-nothing_moved-damson-04/development-nothing_moved-damson-04-previous-cover-limit-60662a",
+    "item_id": "development-nothing_moved-damson-04-previous-cover-limit-60662a",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-nothing_moved-damson-04",
+    "fixture_id": "development-nothing_moved-damson-04",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Cover limit: £5,670.00 per policy.",
+    "decision_key": "previous|cover limit: £5,670.00 per policy.",
+    "metric": "extraction",
+    "expected": {
+      "term": "cover_limit",
+      "basis": "per_policy",
+      "value": "£5,670.00",
+      "quote": "Cover limit: £5,670.00 per policy."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-nothing_moved-damson-04/development-nothing_moved-damson-04-previous-no-value-284c89",
+    "item_id": "development-nothing_moved-damson-04-previous-no-value-284c89",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-nothing_moved-damson-04",
+    "fixture_id": "development-nothing_moved-damson-04",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Your reference is DAMSON-NM-421. Quote it whenever you write to us about this policy.",
+    "decision_key": "previous|your reference is damson-nm-421. quote it whenever you write to us about this policy.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-nothing_moved-damson-04/development-nothing_moved-damson-04-previous-no-value-1ae4e5",
+    "item_id": "development-nothing_moved-damson-04-previous-no-value-1ae4e5",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-nothing_moved-damson-04",
+    "fixture_id": "development-nothing_moved-damson-04",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Haldon Insurance Services arranges contents insurance cover under DAMSON-NM-421 and is regulated in the United Kingdom.",
+    "decision_key": "previous|haldon insurance services arranges contents insurance cover under damson-nm-421 and is regulated in the united kingdom.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-nothing_moved-damson-04/development-nothing_moved-damson-04-renewal-no-value-f75b0b",
+    "item_id": "development-nothing_moved-damson-04-renewal-no-value-f75b0b",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-nothing_moved-damson-04",
+    "fixture_id": "development-nothing_moved-damson-04",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Haldon Insurance Services contents insurance — renewal schedule DAMSON-NM-421 for the year to 31 August 2027.",
+    "decision_key": "renewal|haldon insurance services contents insurance — renewal schedule damson-nm-421 for the year to 31 august 2027.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-nothing_moved-damson-04/development-nothing_moved-damson-04-renewal-premium-90a2b2",
+    "item_id": "development-nothing_moved-damson-04-renewal-premium-90a2b2",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-nothing_moved-damson-04",
+    "fixture_id": "development-nothing_moved-damson-04",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Total annual premium: £2,699.00.",
+    "decision_key": "renewal|total annual premium: £2,699.00.",
+    "metric": "extraction",
+    "expected": {
+      "term": "premium",
+      "basis": "annual",
+      "value": "£2,699.00",
+      "quote": "Total annual premium: £2,699.00."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-nothing_moved-damson-04/development-nothing_moved-damson-04-renewal-compulsory-excess-3c9b04",
+    "item_id": "development-nothing_moved-damson-04-renewal-compulsory-excess-3c9b04",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-nothing_moved-damson-04",
+    "fixture_id": "development-nothing_moved-damson-04",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Compulsory excess: £1,785.00 per claim.",
+    "decision_key": "renewal|compulsory excess: £1,785.00 per claim.",
+    "metric": "extraction",
+    "expected": {
+      "term": "compulsory_excess",
+      "basis": "per_claim",
+      "value": "£1,785.00",
+      "quote": "Compulsory excess: £1,785.00 per claim."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-nothing_moved-damson-04/development-nothing_moved-damson-04-renewal-cover-limit-60662a",
+    "item_id": "development-nothing_moved-damson-04-renewal-cover-limit-60662a",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-nothing_moved-damson-04",
+    "fixture_id": "development-nothing_moved-damson-04",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Cover limit: £5,670.00 per policy.",
+    "decision_key": "renewal|cover limit: £5,670.00 per policy.",
+    "metric": "extraction",
+    "expected": {
+      "term": "cover_limit",
+      "basis": "per_policy",
+      "value": "£5,670.00",
+      "quote": "Cover limit: £5,670.00 per policy."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-nothing_moved-damson-04/development-nothing_moved-damson-04-renewal-no-value-1ae4e5",
+    "item_id": "development-nothing_moved-damson-04-renewal-no-value-1ae4e5",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-nothing_moved-damson-04",
+    "fixture_id": "development-nothing_moved-damson-04",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Haldon Insurance Services arranges contents insurance cover under DAMSON-NM-421 and is regulated in the United Kingdom.",
+    "decision_key": "renewal|haldon insurance services arranges contents insurance cover under damson-nm-421 and is regulated in the united kingdom.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-nothing_moved-damson-04/development-nothing_moved-damson-04-renewal-no-value-284c89",
+    "item_id": "development-nothing_moved-damson-04-renewal-no-value-284c89",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-nothing_moved-damson-04",
+    "fixture_id": "development-nothing_moved-damson-04",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Your reference is DAMSON-NM-421. Quote it whenever you write to us about this policy.",
+    "decision_key": "renewal|your reference is damson-nm-421. quote it whenever you write to us about this policy.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  }
+]

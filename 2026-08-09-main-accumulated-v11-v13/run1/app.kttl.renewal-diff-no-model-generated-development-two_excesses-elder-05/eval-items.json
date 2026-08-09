@@ -1,0 +1,296 @@
+[
+  {
+    "id": "app.kttl.renewal-diff/development-two_excesses-elder-05/development-two_excesses-elder-05-previous-no-value-59f77f",
+    "item_id": "development-two_excesses-elder-05-previous-no-value-59f77f",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-two_excesses-elder-05",
+    "fixture_id": "development-two_excesses-elder-05",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Pennine Line Assurance travel insurance — policy schedule ELDER-TE-428 for the year to 31 August 2026.",
+    "decision_key": "previous|pennine line assurance travel insurance — policy schedule elder-te-428 for the year to 31 august 2026.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-two_excesses-elder-05/development-two_excesses-elder-05-previous-compulsory-excess-d6fe0b",
+    "item_id": "development-two_excesses-elder-05-previous-compulsory-excess-d6fe0b",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-two_excesses-elder-05",
+    "fixture_id": "development-two_excesses-elder-05",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Compulsory excess: £4,395.00 per claim.",
+    "decision_key": "previous|compulsory excess: £4,395.00 per claim.",
+    "metric": "extraction",
+    "expected": {
+      "term": "compulsory_excess",
+      "basis": "per_claim",
+      "value": "£4,395.00",
+      "quote": "Compulsory excess: £4,395.00 per claim."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-two_excesses-elder-05/development-two_excesses-elder-05-previous-voluntary-excess-bfed23",
+    "item_id": "development-two_excesses-elder-05-previous-voluntary-excess-bfed23",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-two_excesses-elder-05",
+    "fixture_id": "development-two_excesses-elder-05",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Voluntary excess: £989.00 per claim.",
+    "decision_key": "previous|voluntary excess: £989.00 per claim.",
+    "metric": "extraction",
+    "expected": {
+      "term": "voluntary_excess",
+      "basis": "per_claim",
+      "value": "£989.00",
+      "quote": "Voluntary excess: £989.00 per claim."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-two_excesses-elder-05/development-two_excesses-elder-05-previous-total-excess-e62592",
+    "item_id": "development-two_excesses-elder-05-previous-total-excess-e62592",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-two_excesses-elder-05",
+    "fixture_id": "development-two_excesses-elder-05",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Total excess payable: £5,384.00 per claim.",
+    "decision_key": "previous|total excess payable: £5,384.00 per claim.",
+    "metric": "extraction",
+    "expected": {
+      "term": "total_excess",
+      "basis": "per_claim",
+      "value": "£5,384.00",
+      "quote": "Total excess payable: £5,384.00 per claim."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-two_excesses-elder-05/development-two_excesses-elder-05-previous-no-value-f825fc",
+    "item_id": "development-two_excesses-elder-05-previous-no-value-f825fc",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-two_excesses-elder-05",
+    "fixture_id": "development-two_excesses-elder-05",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Your reference is ELDER-TE-428. Quote it whenever you write to us about this policy.",
+    "decision_key": "previous|your reference is elder-te-428. quote it whenever you write to us about this policy.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-two_excesses-elder-05/development-two_excesses-elder-05-previous-no-value-1e75bf",
+    "item_id": "development-two_excesses-elder-05-previous-no-value-1e75bf",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-two_excesses-elder-05",
+    "fixture_id": "development-two_excesses-elder-05",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Pennine Line Assurance arranges travel insurance cover under ELDER-TE-428 and is regulated in the United Kingdom.",
+    "decision_key": "previous|pennine line assurance arranges travel insurance cover under elder-te-428 and is regulated in the united kingdom.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-two_excesses-elder-05/development-two_excesses-elder-05-renewal-no-value-b74423",
+    "item_id": "development-two_excesses-elder-05-renewal-no-value-b74423",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-two_excesses-elder-05",
+    "fixture_id": "development-two_excesses-elder-05",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Pennine Line Assurance travel insurance — renewal schedule ELDER-TE-428 for the year to 31 August 2027.",
+    "decision_key": "renewal|pennine line assurance travel insurance — renewal schedule elder-te-428 for the year to 31 august 2027.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-two_excesses-elder-05/development-two_excesses-elder-05-renewal-compulsory-excess-0f4e5f",
+    "item_id": "development-two_excesses-elder-05-renewal-compulsory-excess-0f4e5f",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-two_excesses-elder-05",
+    "fixture_id": "development-two_excesses-elder-05",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Compulsory excess: £4,445.00 per claim.",
+    "decision_key": "renewal|compulsory excess: £4,445.00 per claim.",
+    "metric": "extraction",
+    "expected": {
+      "term": "compulsory_excess",
+      "basis": "per_claim",
+      "value": "£4,445.00",
+      "quote": "Compulsory excess: £4,445.00 per claim."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-two_excesses-elder-05/development-two_excesses-elder-05-renewal-voluntary-excess-bfed23",
+    "item_id": "development-two_excesses-elder-05-renewal-voluntary-excess-bfed23",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-two_excesses-elder-05",
+    "fixture_id": "development-two_excesses-elder-05",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Voluntary excess: £989.00 per claim.",
+    "decision_key": "renewal|voluntary excess: £989.00 per claim.",
+    "metric": "extraction",
+    "expected": {
+      "term": "voluntary_excess",
+      "basis": "per_claim",
+      "value": "£989.00",
+      "quote": "Voluntary excess: £989.00 per claim."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-two_excesses-elder-05/development-two_excesses-elder-05-renewal-total-excess-c6562a",
+    "item_id": "development-two_excesses-elder-05-renewal-total-excess-c6562a",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-two_excesses-elder-05",
+    "fixture_id": "development-two_excesses-elder-05",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Total excess payable: £5,434.00 per claim.",
+    "decision_key": "renewal|total excess payable: £5,434.00 per claim.",
+    "metric": "extraction",
+    "expected": {
+      "term": "total_excess",
+      "basis": "per_claim",
+      "value": "£5,434.00",
+      "quote": "Total excess payable: £5,434.00 per claim."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-two_excesses-elder-05/development-two_excesses-elder-05-renewal-no-value-1e75bf",
+    "item_id": "development-two_excesses-elder-05-renewal-no-value-1e75bf",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-two_excesses-elder-05",
+    "fixture_id": "development-two_excesses-elder-05",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Pennine Line Assurance arranges travel insurance cover under ELDER-TE-428 and is regulated in the United Kingdom.",
+    "decision_key": "renewal|pennine line assurance arranges travel insurance cover under elder-te-428 and is regulated in the united kingdom.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-two_excesses-elder-05/development-two_excesses-elder-05-renewal-no-value-f825fc",
+    "item_id": "development-two_excesses-elder-05-renewal-no-value-f825fc",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-two_excesses-elder-05",
+    "fixture_id": "development-two_excesses-elder-05",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Your reference is ELDER-TE-428. Quote it whenever you write to us about this policy.",
+    "decision_key": "renewal|your reference is elder-te-428. quote it whenever you write to us about this policy.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  }
+]

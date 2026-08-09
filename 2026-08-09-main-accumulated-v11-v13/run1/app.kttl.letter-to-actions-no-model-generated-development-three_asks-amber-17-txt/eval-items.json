@@ -1,0 +1,138 @@
+[
+  {
+    "id": "app.kttl.letter-to-actions/development-three_asks-amber-17/three_asks-amber-17-payment-01",
+    "item_id": "three_asks-amber-17-payment-01",
+    "pack": "app.kttl.letter-to-actions",
+    "pack_version": "0.2.0",
+    "prompt_version": "blake3:571efa3adbfef212b46bbc36b0f757c9f8612ab55d3812388743f539f6ef1542",
+    "fixture": "generated-development-three_asks-amber-17.txt",
+    "fixture_id": "development-three_asks-amber-17",
+    "strata": [
+      "any-letter",
+      "three-asks",
+      "relative-deadline",
+      "multiple-obligations"
+    ],
+    "raw_input": "Please pay £96.45 towards your water account within 14 days of the date of this letter.",
+    "decision_key": "please pay £96.45 towards your water account within 14 days of the date of this letter.",
+    "metric": "extraction",
+    "expected": {
+      "kind": "payment",
+      "party": "Northgate Water",
+      "deadline": "within 14 days",
+      "anchor": "the date of this letter",
+      "due": "2026-06-08"
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read letters without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.letter-to-actions/development-three_asks-amber-17/three_asks-amber-17-attendance-02",
+    "item_id": "three_asks-amber-17-attendance-02",
+    "pack": "app.kttl.letter-to-actions",
+    "pack_version": "0.2.0",
+    "prompt_version": "blake3:571efa3adbfef212b46bbc36b0f757c9f8612ab55d3812388743f539f6ef1542",
+    "fixture": "generated-development-three_asks-amber-17.txt",
+    "fixture_id": "development-three_asks-amber-17",
+    "strata": [
+      "any-letter",
+      "three-asks",
+      "absolute-deadline",
+      "multiple-obligations"
+    ],
+    "raw_input": "You must attend a review meeting at our offices on 13 June 2026.",
+    "decision_key": "you must attend a review meeting at our offices on 13 june 2026.",
+    "metric": "extraction",
+    "expected": {
+      "kind": "attendance",
+      "party": "Northgate Water",
+      "deadline": "on 13 June 2026",
+      "anchor": "13 June 2026",
+      "due": "2026-06-13"
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read letters without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.letter-to-actions/development-three_asks-amber-17/three_asks-amber-17-response-03",
+    "item_id": "three_asks-amber-17-response-03",
+    "pack": "app.kttl.letter-to-actions",
+    "pack_version": "0.2.0",
+    "prompt_version": "blake3:571efa3adbfef212b46bbc36b0f757c9f8612ab55d3812388743f539f6ef1542",
+    "fixture": "generated-development-three_asks-amber-17.txt",
+    "fixture_id": "development-three_asks-amber-17",
+    "strata": [
+      "any-letter",
+      "three-asks",
+      "month-end",
+      "multiple-obligations"
+    ],
+    "raw_input": "Please reply to this letter by the end of the month to confirm that you will attend.",
+    "decision_key": "please reply to this letter by the end of the month to confirm that you will attend.",
+    "metric": "extraction",
+    "expected": {
+      "kind": "response",
+      "party": "Northgate Water",
+      "deadline": "by the end of the month",
+      "anchor": "the date of this letter",
+      "due": "2026-05-31"
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read letters without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.letter-to-actions/development-three_asks-amber-17/three_asks-amber-17-no-ask-04",
+    "item_id": "three_asks-amber-17-no-ask-04",
+    "pack": "app.kttl.letter-to-actions",
+    "pack_version": "0.2.0",
+    "prompt_version": "blake3:571efa3adbfef212b46bbc36b0f757c9f8612ab55d3812388743f539f6ef1542",
+    "fixture": "generated-development-three_asks-amber-17.txt",
+    "fixture_id": "development-three_asks-amber-17",
+    "strata": [
+      "any-letter",
+      "three-asks",
+      "no-obligation"
+    ],
+    "raw_input": "We look forward to hearing from you in due course.",
+    "decision_key": "we look forward to hearing from you in due course.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read letters without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.letter-to-actions/development-three_asks-amber-17/three_asks-amber-17-no-ask-06",
+    "item_id": "three_asks-amber-17-no-ask-06",
+    "pack": "app.kttl.letter-to-actions",
+    "pack_version": "0.2.0",
+    "prompt_version": "blake3:571efa3adbfef212b46bbc36b0f757c9f8612ab55d3812388743f539f6ef1542",
+    "fixture": "generated-development-three_asks-amber-17.txt",
+    "fixture_id": "development-three_asks-amber-17",
+    "strata": [
+      "any-letter",
+      "three-asks",
+      "no-obligation"
+    ],
+    "raw_input": "The balance shown below confirms nothing is owed.",
+    "decision_key": "the balance shown below confirms nothing is owed.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read letters without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  }
+]

@@ -1,0 +1,242 @@
+[
+  {
+    "id": "app.kttl.renewal-diff/development-cooling_off_changed-damson-04/development-cooling_off_changed-damson-04-previous-no-value-2b7ec4",
+    "item_id": "development-cooling_off_changed-damson-04-previous-no-value-2b7ec4",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-cooling_off_changed-damson-04",
+    "fixture_id": "development-cooling_off_changed-damson-04",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Marlowe Mutual home insurance — policy schedule DAMSON-COC-421 for the year to 31 August 2026.",
+    "decision_key": "previous|marlowe mutual home insurance — policy schedule damson-coc-421 for the year to 31 august 2026.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-cooling_off_changed-damson-04/development-cooling_off_changed-damson-04-previous-premium-d98e1e",
+    "item_id": "development-cooling_off_changed-damson-04-previous-premium-d98e1e",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-cooling_off_changed-damson-04",
+    "fixture_id": "development-cooling_off_changed-damson-04",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Total annual premium: £5,429.00.",
+    "decision_key": "previous|total annual premium: £5,429.00.",
+    "metric": "extraction",
+    "expected": {
+      "term": "premium",
+      "basis": "annual",
+      "value": "£5,429.00",
+      "quote": "Total annual premium: £5,429.00."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-cooling_off_changed-damson-04/development-cooling_off_changed-damson-04-previous-cooling-off-period-d89cb2",
+    "item_id": "development-cooling_off_changed-damson-04-previous-cooling-off-period-d89cb2",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-cooling_off_changed-damson-04",
+    "fixture_id": "development-cooling_off_changed-damson-04",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Cooling-off period: 15 days.",
+    "decision_key": "previous|cooling-off period: 15 days.",
+    "metric": "extraction",
+    "expected": {
+      "term": "cooling_off_period",
+      "basis": "per_policy",
+      "value": "15 days",
+      "quote": "Cooling-off period: 15 days."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-cooling_off_changed-damson-04/development-cooling_off_changed-damson-04-previous-no-value-8bb34c",
+    "item_id": "development-cooling_off_changed-damson-04-previous-no-value-8bb34c",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-cooling_off_changed-damson-04",
+    "fixture_id": "development-cooling_off_changed-damson-04",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Your reference is DAMSON-COC-421. Quote it whenever you write to us about this policy.",
+    "decision_key": "previous|your reference is damson-coc-421. quote it whenever you write to us about this policy.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-cooling_off_changed-damson-04/development-cooling_off_changed-damson-04-previous-no-value-59772f",
+    "item_id": "development-cooling_off_changed-damson-04-previous-no-value-59772f",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-cooling_off_changed-damson-04",
+    "fixture_id": "development-cooling_off_changed-damson-04",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Marlowe Mutual arranges home insurance cover under DAMSON-COC-421 and is regulated in the United Kingdom.",
+    "decision_key": "previous|marlowe mutual arranges home insurance cover under damson-coc-421 and is regulated in the united kingdom.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-cooling_off_changed-damson-04/development-cooling_off_changed-damson-04-renewal-no-value-9a78cb",
+    "item_id": "development-cooling_off_changed-damson-04-renewal-no-value-9a78cb",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-cooling_off_changed-damson-04",
+    "fixture_id": "development-cooling_off_changed-damson-04",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Marlowe Mutual home insurance — renewal schedule DAMSON-COC-421 for the year to 31 August 2027.",
+    "decision_key": "renewal|marlowe mutual home insurance — renewal schedule damson-coc-421 for the year to 31 august 2027.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-cooling_off_changed-damson-04/development-cooling_off_changed-damson-04-renewal-premium-d98e1e",
+    "item_id": "development-cooling_off_changed-damson-04-renewal-premium-d98e1e",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-cooling_off_changed-damson-04",
+    "fixture_id": "development-cooling_off_changed-damson-04",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Total annual premium: £5,429.00.",
+    "decision_key": "renewal|total annual premium: £5,429.00.",
+    "metric": "extraction",
+    "expected": {
+      "term": "premium",
+      "basis": "annual",
+      "value": "£5,429.00",
+      "quote": "Total annual premium: £5,429.00."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-cooling_off_changed-damson-04/development-cooling_off_changed-damson-04-renewal-cooling-off-period-73c752",
+    "item_id": "development-cooling_off_changed-damson-04-renewal-cooling-off-period-73c752",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-cooling_off_changed-damson-04",
+    "fixture_id": "development-cooling_off_changed-damson-04",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Cooling-off period: 29 days.",
+    "decision_key": "renewal|cooling-off period: 29 days.",
+    "metric": "extraction",
+    "expected": {
+      "term": "cooling_off_period",
+      "basis": "per_policy",
+      "value": "29 days",
+      "quote": "Cooling-off period: 29 days."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-cooling_off_changed-damson-04/development-cooling_off_changed-damson-04-renewal-no-value-59772f",
+    "item_id": "development-cooling_off_changed-damson-04-renewal-no-value-59772f",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-cooling_off_changed-damson-04",
+    "fixture_id": "development-cooling_off_changed-damson-04",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Marlowe Mutual arranges home insurance cover under DAMSON-COC-421 and is regulated in the United Kingdom.",
+    "decision_key": "renewal|marlowe mutual arranges home insurance cover under damson-coc-421 and is regulated in the united kingdom.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-cooling_off_changed-damson-04/development-cooling_off_changed-damson-04-renewal-no-value-8bb34c",
+    "item_id": "development-cooling_off_changed-damson-04-renewal-no-value-8bb34c",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-cooling_off_changed-damson-04",
+    "fixture_id": "development-cooling_off_changed-damson-04",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Your reference is DAMSON-COC-421. Quote it whenever you write to us about this policy.",
+    "decision_key": "renewal|your reference is damson-coc-421. quote it whenever you write to us about this policy.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  }
+]

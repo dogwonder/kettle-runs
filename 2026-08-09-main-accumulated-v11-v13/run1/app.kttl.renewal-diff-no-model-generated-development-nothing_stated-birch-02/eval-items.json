@@ -1,0 +1,134 @@
+[
+  {
+    "id": "app.kttl.renewal-diff/development-nothing_stated-birch-02/development-nothing_stated-birch-02-previous-no-value-567118",
+    "item_id": "development-nothing_stated-birch-02-previous-no-value-567118",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-nothing_stated-birch-02",
+    "fixture_id": "development-nothing_stated-birch-02",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Corvin Mutual pet insurance — policy schedule BIRCH-NS-407 for the year to 31 August 2026.",
+    "decision_key": "previous|corvin mutual pet insurance — policy schedule birch-ns-407 for the year to 31 august 2026.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-nothing_stated-birch-02/development-nothing_stated-birch-02-previous-no-value-3d8233",
+    "item_id": "development-nothing_stated-birch-02-previous-no-value-3d8233",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-nothing_stated-birch-02",
+    "fixture_id": "development-nothing_stated-birch-02",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Your reference is BIRCH-NS-407. Quote it whenever you write to us about this policy.",
+    "decision_key": "previous|your reference is birch-ns-407. quote it whenever you write to us about this policy.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-nothing_stated-birch-02/development-nothing_stated-birch-02-previous-no-value-b330ad",
+    "item_id": "development-nothing_stated-birch-02-previous-no-value-b330ad",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-nothing_stated-birch-02",
+    "fixture_id": "development-nothing_stated-birch-02",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Corvin Mutual arranges pet insurance cover under BIRCH-NS-407 and is regulated in the United Kingdom.",
+    "decision_key": "previous|corvin mutual arranges pet insurance cover under birch-ns-407 and is regulated in the united kingdom.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-nothing_stated-birch-02/development-nothing_stated-birch-02-renewal-no-value-9667ad",
+    "item_id": "development-nothing_stated-birch-02-renewal-no-value-9667ad",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-nothing_stated-birch-02",
+    "fixture_id": "development-nothing_stated-birch-02",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Corvin Mutual pet insurance — renewal schedule BIRCH-NS-407 for the year to 31 August 2027.",
+    "decision_key": "renewal|corvin mutual pet insurance — renewal schedule birch-ns-407 for the year to 31 august 2027.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-nothing_stated-birch-02/development-nothing_stated-birch-02-renewal-no-value-b330ad",
+    "item_id": "development-nothing_stated-birch-02-renewal-no-value-b330ad",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-nothing_stated-birch-02",
+    "fixture_id": "development-nothing_stated-birch-02",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Corvin Mutual arranges pet insurance cover under BIRCH-NS-407 and is regulated in the United Kingdom.",
+    "decision_key": "renewal|corvin mutual arranges pet insurance cover under birch-ns-407 and is regulated in the united kingdom.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-nothing_stated-birch-02/development-nothing_stated-birch-02-renewal-no-value-3d8233",
+    "item_id": "development-nothing_stated-birch-02-renewal-no-value-3d8233",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-nothing_stated-birch-02",
+    "fixture_id": "development-nothing_stated-birch-02",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Your reference is BIRCH-NS-407. Quote it whenever you write to us about this policy.",
+    "decision_key": "renewal|your reference is birch-ns-407. quote it whenever you write to us about this policy.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  }
+]

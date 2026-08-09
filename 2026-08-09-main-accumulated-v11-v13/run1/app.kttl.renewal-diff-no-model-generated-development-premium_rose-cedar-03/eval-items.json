@@ -1,0 +1,296 @@
+[
+  {
+    "id": "app.kttl.renewal-diff/development-premium_rose-cedar-03/development-premium_rose-cedar-03-previous-no-value-5af70a",
+    "item_id": "development-premium_rose-cedar-03-previous-no-value-5af70a",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-premium_rose-cedar-03",
+    "fixture_id": "development-premium_rose-cedar-03",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Brackenfield Cover buildings insurance — policy schedule CEDAR-PR-414 for the year to 31 August 2026.",
+    "decision_key": "previous|brackenfield cover buildings insurance — policy schedule cedar-pr-414 for the year to 31 august 2026.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-premium_rose-cedar-03/development-premium_rose-cedar-03-previous-premium-7574cf",
+    "item_id": "development-premium_rose-cedar-03-previous-premium-7574cf",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-premium_rose-cedar-03",
+    "fixture_id": "development-premium_rose-cedar-03",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Total annual premium: £1,341.00.",
+    "decision_key": "previous|total annual premium: £1,341.00.",
+    "metric": "extraction",
+    "expected": {
+      "term": "premium",
+      "basis": "annual",
+      "value": "£1,341.00",
+      "quote": "Total annual premium: £1,341.00."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-premium_rose-cedar-03/development-premium_rose-cedar-03-previous-compulsory-excess-c0d5cf",
+    "item_id": "development-premium_rose-cedar-03-previous-compulsory-excess-c0d5cf",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-premium_rose-cedar-03",
+    "fixture_id": "development-premium_rose-cedar-03",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Compulsory excess: £815.00 per claim.",
+    "decision_key": "previous|compulsory excess: £815.00 per claim.",
+    "metric": "extraction",
+    "expected": {
+      "term": "compulsory_excess",
+      "basis": "per_claim",
+      "value": "£815.00",
+      "quote": "Compulsory excess: £815.00 per claim."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-premium_rose-cedar-03/development-premium_rose-cedar-03-previous-cover-limit-fca24a",
+    "item_id": "development-premium_rose-cedar-03-previous-cover-limit-fca24a",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-premium_rose-cedar-03",
+    "fixture_id": "development-premium_rose-cedar-03",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Cover limit: £3,730.00 per policy.",
+    "decision_key": "previous|cover limit: £3,730.00 per policy.",
+    "metric": "extraction",
+    "expected": {
+      "term": "cover_limit",
+      "basis": "per_policy",
+      "value": "£3,730.00",
+      "quote": "Cover limit: £3,730.00 per policy."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-premium_rose-cedar-03/development-premium_rose-cedar-03-previous-no-value-6eb20c",
+    "item_id": "development-premium_rose-cedar-03-previous-no-value-6eb20c",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-premium_rose-cedar-03",
+    "fixture_id": "development-premium_rose-cedar-03",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Your reference is CEDAR-PR-414. Quote it whenever you write to us about this policy.",
+    "decision_key": "previous|your reference is cedar-pr-414. quote it whenever you write to us about this policy.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-premium_rose-cedar-03/development-premium_rose-cedar-03-previous-no-value-911c61",
+    "item_id": "development-premium_rose-cedar-03-previous-no-value-911c61",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-premium_rose-cedar-03",
+    "fixture_id": "development-premium_rose-cedar-03",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Brackenfield Cover arranges buildings insurance cover under CEDAR-PR-414 and is regulated in the United Kingdom.",
+    "decision_key": "previous|brackenfield cover arranges buildings insurance cover under cedar-pr-414 and is regulated in the united kingdom.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-premium_rose-cedar-03/development-premium_rose-cedar-03-renewal-no-value-d40f02",
+    "item_id": "development-premium_rose-cedar-03-renewal-no-value-d40f02",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-premium_rose-cedar-03",
+    "fixture_id": "development-premium_rose-cedar-03",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Brackenfield Cover buildings insurance — renewal schedule CEDAR-PR-414 for the year to 31 August 2027.",
+    "decision_key": "renewal|brackenfield cover buildings insurance — renewal schedule cedar-pr-414 for the year to 31 august 2027.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-premium_rose-cedar-03/development-premium_rose-cedar-03-renewal-premium-1a948a",
+    "item_id": "development-premium_rose-cedar-03-renewal-premium-1a948a",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-premium_rose-cedar-03",
+    "fixture_id": "development-premium_rose-cedar-03",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Total annual premium: £1,473.50.",
+    "decision_key": "renewal|total annual premium: £1,473.50.",
+    "metric": "extraction",
+    "expected": {
+      "term": "premium",
+      "basis": "annual",
+      "value": "£1,473.50",
+      "quote": "Total annual premium: £1,473.50."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-premium_rose-cedar-03/development-premium_rose-cedar-03-renewal-compulsory-excess-c0d5cf",
+    "item_id": "development-premium_rose-cedar-03-renewal-compulsory-excess-c0d5cf",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-premium_rose-cedar-03",
+    "fixture_id": "development-premium_rose-cedar-03",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Compulsory excess: £815.00 per claim.",
+    "decision_key": "renewal|compulsory excess: £815.00 per claim.",
+    "metric": "extraction",
+    "expected": {
+      "term": "compulsory_excess",
+      "basis": "per_claim",
+      "value": "£815.00",
+      "quote": "Compulsory excess: £815.00 per claim."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-premium_rose-cedar-03/development-premium_rose-cedar-03-renewal-cover-limit-fca24a",
+    "item_id": "development-premium_rose-cedar-03-renewal-cover-limit-fca24a",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-premium_rose-cedar-03",
+    "fixture_id": "development-premium_rose-cedar-03",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Cover limit: £3,730.00 per policy.",
+    "decision_key": "renewal|cover limit: £3,730.00 per policy.",
+    "metric": "extraction",
+    "expected": {
+      "term": "cover_limit",
+      "basis": "per_policy",
+      "value": "£3,730.00",
+      "quote": "Cover limit: £3,730.00 per policy."
+    },
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-premium_rose-cedar-03/development-premium_rose-cedar-03-renewal-no-value-911c61",
+    "item_id": "development-premium_rose-cedar-03-renewal-no-value-911c61",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-premium_rose-cedar-03",
+    "fixture_id": "development-premium_rose-cedar-03",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Brackenfield Cover arranges buildings insurance cover under CEDAR-PR-414 and is regulated in the United Kingdom.",
+    "decision_key": "renewal|brackenfield cover arranges buildings insurance cover under cedar-pr-414 and is regulated in the united kingdom.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-premium_rose-cedar-03/development-premium_rose-cedar-03-renewal-no-value-6eb20c",
+    "item_id": "development-premium_rose-cedar-03-renewal-no-value-6eb20c",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-premium_rose-cedar-03",
+    "fixture_id": "development-premium_rose-cedar-03",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Your reference is CEDAR-PR-414. Quote it whenever you write to us about this policy.",
+    "decision_key": "renewal|your reference is cedar-pr-414. quote it whenever you write to us about this policy.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "needs_review",
+      "reason": "Kettle can't read documents without a model's help, so this needs your eyes."
+    },
+    "exchanges": []
+  }
+]

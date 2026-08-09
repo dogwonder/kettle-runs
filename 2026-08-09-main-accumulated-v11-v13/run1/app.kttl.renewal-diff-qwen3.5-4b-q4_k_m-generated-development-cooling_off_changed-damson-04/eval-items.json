@@ -1,0 +1,388 @@
+[
+  {
+    "id": "app.kttl.renewal-diff/development-cooling_off_changed-damson-04/development-cooling_off_changed-damson-04-previous-no-value-2b7ec4",
+    "item_id": "development-cooling_off_changed-damson-04-previous-no-value-2b7ec4",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-cooling_off_changed-damson-04",
+    "fixture_id": "development-cooling_off_changed-damson-04",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Marlowe Mutual home insurance — policy schedule DAMSON-COC-421 for the year to 31 August 2026.",
+    "decision_key": "previous|marlowe mutual home insurance — policy schedule damson-coc-421 for the year to 31 august 2026.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "absent"
+    },
+    "trace_ids": [
+      "claim-000009"
+    ],
+    "exchanges": [
+      {
+        "step": "Reading what each document says",
+        "batch": 1,
+        "request": "You read one passage of an insurance document at a time and say which\nnamed values, if any, it states.\n\nFor each passage, decide:\n- terms: a list of the named values this passage states. Most passages\n  state none — an empty list is a correct answer, not a failure, and it\n  is always better than a guess. A passage that explains what cover\n  means, describes how to claim, or thanks somebody for renewing states\n  no named value.\n- confidence: \"high\" | \"medium\" | \"low\"\n\nFor each term give:\n- term: \"premium\" | \"compulsory_excess\" | \"voluntary_excess\" |\n  \"total_excess\" | \"cover_limit\" | \"no_claims_discount\" |\n  \"cooling_off_period\" | \"other\"\n\n  Use \"other\" when the passage states a named value that is none of\n  these. That is a real answer and the right one: the value goes in\n  front of the person instead of being compared. Never stretch one of\n  the named terms to cover something it is not.\n\n- basis: \"annual\" | \"monthly\" | \"per_claim\" | \"per_policy\"\n\n  What the value is measured against, as the passage says it. A premium\n  quoted as twelve instalments is \"monthly\"; the same policy's total for\n  the year is \"annual\". These are different values, and calling one the\n  other turns an instalment into a price rise.\n\n- value: the value exactly as the document writes it — \"£1,234.56\",\n  \"£500\", \"14 days\", \"60%\". Copy the currency symbol, the commas and\n  the decimals as they appear. Never round, never convert, never work\n  out a total, and never write a number the passage does not contain.\n\n- quote: the words the value comes from, copied exactly from the\n  passage — enough to show where you read it. This is checked against\n  the document: a quote that is not in the passage means the whole term\n  goes to the person instead of being used.\n\nYou are not asked to compare anything, to say whether a value went up\nor down, or to work out a difference. That is done separately, from the\nvalues you copy. Copying them exactly is the whole job.\n\nReturn one result per input, with the same \"id\" you were given, and\necho the passage back in \"segment\". Return JSON only.\n\nPassages:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"Marlowe Mutual home insurance — policy schedule DAMSON-COC-421 for the year to 31 August 2026.\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"Total annual premium: £5,429.00.\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"Cooling-off period: 15 days.\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"Your reference is DAMSON-COC-421. Quote it whenever you write to us about this policy.\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"Marlowe Mutual arranges home insurance cover under DAMSON-COC-421 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"Marlowe Mutual home insurance — renewal schedule DAMSON-COC-421 for the year to 31 August 2027.\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"Total annual premium: £5,429.00.\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"Cooling-off period: 29 days.\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"Marlowe Mutual arranges home insurance cover under DAMSON-COC-421 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"Your reference is DAMSON-COC-421. Quote it whenever you write to us about this policy.\"\n  }\n]\n",
+        "response": "{\"results\":[{\"confidence\":\"low\",\"id\":0,\"segment\":\"Marlowe Mutual home insurance — policy schedule DAMSON-COC-421 for the year to 31 August 2026.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":1,\"segment\":\"Total annual premium: £5,429.00.\",\"terms\":[{\"basis\":\"annual\",\"quote\":\"Total annual premium: £5,429.00.\",\"term\":\"premium\",\"value\":\"£5,429.00\"}]},{\"confidence\":\"high\",\"id\":2,\"segment\":\"Cooling-off period: 15 days.\",\"terms\":[{\"basis\":\"per_policy\",\"quote\":\"Cooling-off period: 15 days.\",\"term\":\"cooling_off_period\",\"value\":\"15 days\"}]},{\"confidence\":\"low\",\"id\":3,\"segment\":\"Your reference is DAMSON-COC-421. Quote it whenever you write to us about this policy.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":4,\"segment\":\"Marlowe Mutual arranges home insurance cover under DAMSON-COC-421 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":5,\"segment\":\"Marlowe Mutual home insurance — renewal schedule DAMSON-COC-421 for the year to 31 August 2027.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":6,\"segment\":\"Total annual premium: £5,429.00.\",\"terms\":[{\"basis\":\"annual\",\"quote\":\"Total annual premium: £5,429.00.\",\"term\":\"premium\",\"value\":\"£5,429.00\"}]},{\"confidence\":\"high\",\"id\":7,\"segment\":\"Cooling-off period: 29 days.\",\"terms\":[{\"basis\":\"per_policy\",\"quote\":\"Cooling-off period: 29 days.\",\"term\":\"cooling_off_period\",\"value\":\"29 days\"}]},{\"confidence\":\"low\",\"id\":8,\"segment\":\"Marlowe Mutual arranges home insurance cover under DAMSON-COC-421 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":9,\"segment\":\"Your reference is DAMSON-COC-421. Quote it whenever you write to us about this policy.\",\"terms\":[]}]}"
+      }
+    ]
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-cooling_off_changed-damson-04/development-cooling_off_changed-damson-04-previous-premium-d98e1e",
+    "item_id": "development-cooling_off_changed-damson-04-previous-premium-d98e1e",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-cooling_off_changed-damson-04",
+    "fixture_id": "development-cooling_off_changed-damson-04",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Total annual premium: £5,429.00.",
+    "decision_key": "previous|total annual premium: £5,429.00.",
+    "metric": "extraction",
+    "expected": {
+      "term": "premium",
+      "basis": "annual",
+      "value": "£5,429.00",
+      "quote": "Total annual premium: £5,429.00."
+    },
+    "actual": {
+      "outcome": "found",
+      "extracted": {
+        "term": "premium",
+        "basis": "annual",
+        "value": "£5,429.00",
+        "quote": "Total annual premium: £5,429.00."
+      }
+    },
+    "evidence": {
+      "existence": "pass",
+      "attribution": "pass",
+      "support": "pass"
+    },
+    "trace_ids": [
+      "claim-000001",
+      "claim-000002",
+      "claim-000005",
+      "claim-000006"
+    ],
+    "exchanges": [
+      {
+        "step": "Reading what each document says",
+        "batch": 1,
+        "request": "You read one passage of an insurance document at a time and say which\nnamed values, if any, it states.\n\nFor each passage, decide:\n- terms: a list of the named values this passage states. Most passages\n  state none — an empty list is a correct answer, not a failure, and it\n  is always better than a guess. A passage that explains what cover\n  means, describes how to claim, or thanks somebody for renewing states\n  no named value.\n- confidence: \"high\" | \"medium\" | \"low\"\n\nFor each term give:\n- term: \"premium\" | \"compulsory_excess\" | \"voluntary_excess\" |\n  \"total_excess\" | \"cover_limit\" | \"no_claims_discount\" |\n  \"cooling_off_period\" | \"other\"\n\n  Use \"other\" when the passage states a named value that is none of\n  these. That is a real answer and the right one: the value goes in\n  front of the person instead of being compared. Never stretch one of\n  the named terms to cover something it is not.\n\n- basis: \"annual\" | \"monthly\" | \"per_claim\" | \"per_policy\"\n\n  What the value is measured against, as the passage says it. A premium\n  quoted as twelve instalments is \"monthly\"; the same policy's total for\n  the year is \"annual\". These are different values, and calling one the\n  other turns an instalment into a price rise.\n\n- value: the value exactly as the document writes it — \"£1,234.56\",\n  \"£500\", \"14 days\", \"60%\". Copy the currency symbol, the commas and\n  the decimals as they appear. Never round, never convert, never work\n  out a total, and never write a number the passage does not contain.\n\n- quote: the words the value comes from, copied exactly from the\n  passage — enough to show where you read it. This is checked against\n  the document: a quote that is not in the passage means the whole term\n  goes to the person instead of being used.\n\nYou are not asked to compare anything, to say whether a value went up\nor down, or to work out a difference. That is done separately, from the\nvalues you copy. Copying them exactly is the whole job.\n\nReturn one result per input, with the same \"id\" you were given, and\necho the passage back in \"segment\". Return JSON only.\n\nPassages:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"Marlowe Mutual home insurance — policy schedule DAMSON-COC-421 for the year to 31 August 2026.\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"Total annual premium: £5,429.00.\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"Cooling-off period: 15 days.\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"Your reference is DAMSON-COC-421. Quote it whenever you write to us about this policy.\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"Marlowe Mutual arranges home insurance cover under DAMSON-COC-421 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"Marlowe Mutual home insurance — renewal schedule DAMSON-COC-421 for the year to 31 August 2027.\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"Total annual premium: £5,429.00.\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"Cooling-off period: 29 days.\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"Marlowe Mutual arranges home insurance cover under DAMSON-COC-421 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"Your reference is DAMSON-COC-421. Quote it whenever you write to us about this policy.\"\n  }\n]\n",
+        "response": "{\"results\":[{\"confidence\":\"low\",\"id\":0,\"segment\":\"Marlowe Mutual home insurance — policy schedule DAMSON-COC-421 for the year to 31 August 2026.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":1,\"segment\":\"Total annual premium: £5,429.00.\",\"terms\":[{\"basis\":\"annual\",\"quote\":\"Total annual premium: £5,429.00.\",\"term\":\"premium\",\"value\":\"£5,429.00\"}]},{\"confidence\":\"high\",\"id\":2,\"segment\":\"Cooling-off period: 15 days.\",\"terms\":[{\"basis\":\"per_policy\",\"quote\":\"Cooling-off period: 15 days.\",\"term\":\"cooling_off_period\",\"value\":\"15 days\"}]},{\"confidence\":\"low\",\"id\":3,\"segment\":\"Your reference is DAMSON-COC-421. Quote it whenever you write to us about this policy.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":4,\"segment\":\"Marlowe Mutual arranges home insurance cover under DAMSON-COC-421 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":5,\"segment\":\"Marlowe Mutual home insurance — renewal schedule DAMSON-COC-421 for the year to 31 August 2027.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":6,\"segment\":\"Total annual premium: £5,429.00.\",\"terms\":[{\"basis\":\"annual\",\"quote\":\"Total annual premium: £5,429.00.\",\"term\":\"premium\",\"value\":\"£5,429.00\"}]},{\"confidence\":\"high\",\"id\":7,\"segment\":\"Cooling-off period: 29 days.\",\"terms\":[{\"basis\":\"per_policy\",\"quote\":\"Cooling-off period: 29 days.\",\"term\":\"cooling_off_period\",\"value\":\"29 days\"}]},{\"confidence\":\"low\",\"id\":8,\"segment\":\"Marlowe Mutual arranges home insurance cover under DAMSON-COC-421 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":9,\"segment\":\"Your reference is DAMSON-COC-421. Quote it whenever you write to us about this policy.\",\"terms\":[]}]}"
+      }
+    ]
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-cooling_off_changed-damson-04/development-cooling_off_changed-damson-04-previous-cooling-off-period-d89cb2",
+    "item_id": "development-cooling_off_changed-damson-04-previous-cooling-off-period-d89cb2",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-cooling_off_changed-damson-04",
+    "fixture_id": "development-cooling_off_changed-damson-04",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Cooling-off period: 15 days.",
+    "decision_key": "previous|cooling-off period: 15 days.",
+    "metric": "extraction",
+    "expected": {
+      "term": "cooling_off_period",
+      "basis": "per_policy",
+      "value": "15 days",
+      "quote": "Cooling-off period: 15 days."
+    },
+    "actual": {
+      "outcome": "found",
+      "extracted": {
+        "term": "cooling_off_period",
+        "basis": "per_policy",
+        "value": "15 days",
+        "quote": "Cooling-off period: 15 days."
+      }
+    },
+    "evidence": {
+      "existence": "pass",
+      "attribution": "pass",
+      "support": "pass"
+    },
+    "trace_ids": [
+      "claim-000003",
+      "claim-000004"
+    ],
+    "exchanges": [
+      {
+        "step": "Reading what each document says",
+        "batch": 1,
+        "request": "You read one passage of an insurance document at a time and say which\nnamed values, if any, it states.\n\nFor each passage, decide:\n- terms: a list of the named values this passage states. Most passages\n  state none — an empty list is a correct answer, not a failure, and it\n  is always better than a guess. A passage that explains what cover\n  means, describes how to claim, or thanks somebody for renewing states\n  no named value.\n- confidence: \"high\" | \"medium\" | \"low\"\n\nFor each term give:\n- term: \"premium\" | \"compulsory_excess\" | \"voluntary_excess\" |\n  \"total_excess\" | \"cover_limit\" | \"no_claims_discount\" |\n  \"cooling_off_period\" | \"other\"\n\n  Use \"other\" when the passage states a named value that is none of\n  these. That is a real answer and the right one: the value goes in\n  front of the person instead of being compared. Never stretch one of\n  the named terms to cover something it is not.\n\n- basis: \"annual\" | \"monthly\" | \"per_claim\" | \"per_policy\"\n\n  What the value is measured against, as the passage says it. A premium\n  quoted as twelve instalments is \"monthly\"; the same policy's total for\n  the year is \"annual\". These are different values, and calling one the\n  other turns an instalment into a price rise.\n\n- value: the value exactly as the document writes it — \"£1,234.56\",\n  \"£500\", \"14 days\", \"60%\". Copy the currency symbol, the commas and\n  the decimals as they appear. Never round, never convert, never work\n  out a total, and never write a number the passage does not contain.\n\n- quote: the words the value comes from, copied exactly from the\n  passage — enough to show where you read it. This is checked against\n  the document: a quote that is not in the passage means the whole term\n  goes to the person instead of being used.\n\nYou are not asked to compare anything, to say whether a value went up\nor down, or to work out a difference. That is done separately, from the\nvalues you copy. Copying them exactly is the whole job.\n\nReturn one result per input, with the same \"id\" you were given, and\necho the passage back in \"segment\". Return JSON only.\n\nPassages:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"Marlowe Mutual home insurance — policy schedule DAMSON-COC-421 for the year to 31 August 2026.\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"Total annual premium: £5,429.00.\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"Cooling-off period: 15 days.\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"Your reference is DAMSON-COC-421. Quote it whenever you write to us about this policy.\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"Marlowe Mutual arranges home insurance cover under DAMSON-COC-421 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"Marlowe Mutual home insurance — renewal schedule DAMSON-COC-421 for the year to 31 August 2027.\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"Total annual premium: £5,429.00.\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"Cooling-off period: 29 days.\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"Marlowe Mutual arranges home insurance cover under DAMSON-COC-421 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"Your reference is DAMSON-COC-421. Quote it whenever you write to us about this policy.\"\n  }\n]\n",
+        "response": "{\"results\":[{\"confidence\":\"low\",\"id\":0,\"segment\":\"Marlowe Mutual home insurance — policy schedule DAMSON-COC-421 for the year to 31 August 2026.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":1,\"segment\":\"Total annual premium: £5,429.00.\",\"terms\":[{\"basis\":\"annual\",\"quote\":\"Total annual premium: £5,429.00.\",\"term\":\"premium\",\"value\":\"£5,429.00\"}]},{\"confidence\":\"high\",\"id\":2,\"segment\":\"Cooling-off period: 15 days.\",\"terms\":[{\"basis\":\"per_policy\",\"quote\":\"Cooling-off period: 15 days.\",\"term\":\"cooling_off_period\",\"value\":\"15 days\"}]},{\"confidence\":\"low\",\"id\":3,\"segment\":\"Your reference is DAMSON-COC-421. Quote it whenever you write to us about this policy.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":4,\"segment\":\"Marlowe Mutual arranges home insurance cover under DAMSON-COC-421 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":5,\"segment\":\"Marlowe Mutual home insurance — renewal schedule DAMSON-COC-421 for the year to 31 August 2027.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":6,\"segment\":\"Total annual premium: £5,429.00.\",\"terms\":[{\"basis\":\"annual\",\"quote\":\"Total annual premium: £5,429.00.\",\"term\":\"premium\",\"value\":\"£5,429.00\"}]},{\"confidence\":\"high\",\"id\":7,\"segment\":\"Cooling-off period: 29 days.\",\"terms\":[{\"basis\":\"per_policy\",\"quote\":\"Cooling-off period: 29 days.\",\"term\":\"cooling_off_period\",\"value\":\"29 days\"}]},{\"confidence\":\"low\",\"id\":8,\"segment\":\"Marlowe Mutual arranges home insurance cover under DAMSON-COC-421 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":9,\"segment\":\"Your reference is DAMSON-COC-421. Quote it whenever you write to us about this policy.\",\"terms\":[]}]}"
+      }
+    ]
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-cooling_off_changed-damson-04/development-cooling_off_changed-damson-04-previous-no-value-8bb34c",
+    "item_id": "development-cooling_off_changed-damson-04-previous-no-value-8bb34c",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-cooling_off_changed-damson-04",
+    "fixture_id": "development-cooling_off_changed-damson-04",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Your reference is DAMSON-COC-421. Quote it whenever you write to us about this policy.",
+    "decision_key": "previous|your reference is damson-coc-421. quote it whenever you write to us about this policy.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "absent"
+    },
+    "trace_ids": [
+      "claim-000010",
+      "claim-000014"
+    ],
+    "exchanges": [
+      {
+        "step": "Reading what each document says",
+        "batch": 1,
+        "request": "You read one passage of an insurance document at a time and say which\nnamed values, if any, it states.\n\nFor each passage, decide:\n- terms: a list of the named values this passage states. Most passages\n  state none — an empty list is a correct answer, not a failure, and it\n  is always better than a guess. A passage that explains what cover\n  means, describes how to claim, or thanks somebody for renewing states\n  no named value.\n- confidence: \"high\" | \"medium\" | \"low\"\n\nFor each term give:\n- term: \"premium\" | \"compulsory_excess\" | \"voluntary_excess\" |\n  \"total_excess\" | \"cover_limit\" | \"no_claims_discount\" |\n  \"cooling_off_period\" | \"other\"\n\n  Use \"other\" when the passage states a named value that is none of\n  these. That is a real answer and the right one: the value goes in\n  front of the person instead of being compared. Never stretch one of\n  the named terms to cover something it is not.\n\n- basis: \"annual\" | \"monthly\" | \"per_claim\" | \"per_policy\"\n\n  What the value is measured against, as the passage says it. A premium\n  quoted as twelve instalments is \"monthly\"; the same policy's total for\n  the year is \"annual\". These are different values, and calling one the\n  other turns an instalment into a price rise.\n\n- value: the value exactly as the document writes it — \"£1,234.56\",\n  \"£500\", \"14 days\", \"60%\". Copy the currency symbol, the commas and\n  the decimals as they appear. Never round, never convert, never work\n  out a total, and never write a number the passage does not contain.\n\n- quote: the words the value comes from, copied exactly from the\n  passage — enough to show where you read it. This is checked against\n  the document: a quote that is not in the passage means the whole term\n  goes to the person instead of being used.\n\nYou are not asked to compare anything, to say whether a value went up\nor down, or to work out a difference. That is done separately, from the\nvalues you copy. Copying them exactly is the whole job.\n\nReturn one result per input, with the same \"id\" you were given, and\necho the passage back in \"segment\". Return JSON only.\n\nPassages:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"Marlowe Mutual home insurance — policy schedule DAMSON-COC-421 for the year to 31 August 2026.\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"Total annual premium: £5,429.00.\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"Cooling-off period: 15 days.\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"Your reference is DAMSON-COC-421. Quote it whenever you write to us about this policy.\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"Marlowe Mutual arranges home insurance cover under DAMSON-COC-421 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"Marlowe Mutual home insurance — renewal schedule DAMSON-COC-421 for the year to 31 August 2027.\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"Total annual premium: £5,429.00.\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"Cooling-off period: 29 days.\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"Marlowe Mutual arranges home insurance cover under DAMSON-COC-421 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"Your reference is DAMSON-COC-421. Quote it whenever you write to us about this policy.\"\n  }\n]\n",
+        "response": "{\"results\":[{\"confidence\":\"low\",\"id\":0,\"segment\":\"Marlowe Mutual home insurance — policy schedule DAMSON-COC-421 for the year to 31 August 2026.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":1,\"segment\":\"Total annual premium: £5,429.00.\",\"terms\":[{\"basis\":\"annual\",\"quote\":\"Total annual premium: £5,429.00.\",\"term\":\"premium\",\"value\":\"£5,429.00\"}]},{\"confidence\":\"high\",\"id\":2,\"segment\":\"Cooling-off period: 15 days.\",\"terms\":[{\"basis\":\"per_policy\",\"quote\":\"Cooling-off period: 15 days.\",\"term\":\"cooling_off_period\",\"value\":\"15 days\"}]},{\"confidence\":\"low\",\"id\":3,\"segment\":\"Your reference is DAMSON-COC-421. Quote it whenever you write to us about this policy.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":4,\"segment\":\"Marlowe Mutual arranges home insurance cover under DAMSON-COC-421 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":5,\"segment\":\"Marlowe Mutual home insurance — renewal schedule DAMSON-COC-421 for the year to 31 August 2027.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":6,\"segment\":\"Total annual premium: £5,429.00.\",\"terms\":[{\"basis\":\"annual\",\"quote\":\"Total annual premium: £5,429.00.\",\"term\":\"premium\",\"value\":\"£5,429.00\"}]},{\"confidence\":\"high\",\"id\":7,\"segment\":\"Cooling-off period: 29 days.\",\"terms\":[{\"basis\":\"per_policy\",\"quote\":\"Cooling-off period: 29 days.\",\"term\":\"cooling_off_period\",\"value\":\"29 days\"}]},{\"confidence\":\"low\",\"id\":8,\"segment\":\"Marlowe Mutual arranges home insurance cover under DAMSON-COC-421 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":9,\"segment\":\"Your reference is DAMSON-COC-421. Quote it whenever you write to us about this policy.\",\"terms\":[]}]}"
+      }
+    ]
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-cooling_off_changed-damson-04/development-cooling_off_changed-damson-04-previous-no-value-59772f",
+    "item_id": "development-cooling_off_changed-damson-04-previous-no-value-59772f",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-cooling_off_changed-damson-04",
+    "fixture_id": "development-cooling_off_changed-damson-04",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Marlowe Mutual arranges home insurance cover under DAMSON-COC-421 and is regulated in the United Kingdom.",
+    "decision_key": "previous|marlowe mutual arranges home insurance cover under damson-coc-421 and is regulated in the united kingdom.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "absent"
+    },
+    "trace_ids": [
+      "claim-000011",
+      "claim-000013"
+    ],
+    "exchanges": [
+      {
+        "step": "Reading what each document says",
+        "batch": 1,
+        "request": "You read one passage of an insurance document at a time and say which\nnamed values, if any, it states.\n\nFor each passage, decide:\n- terms: a list of the named values this passage states. Most passages\n  state none — an empty list is a correct answer, not a failure, and it\n  is always better than a guess. A passage that explains what cover\n  means, describes how to claim, or thanks somebody for renewing states\n  no named value.\n- confidence: \"high\" | \"medium\" | \"low\"\n\nFor each term give:\n- term: \"premium\" | \"compulsory_excess\" | \"voluntary_excess\" |\n  \"total_excess\" | \"cover_limit\" | \"no_claims_discount\" |\n  \"cooling_off_period\" | \"other\"\n\n  Use \"other\" when the passage states a named value that is none of\n  these. That is a real answer and the right one: the value goes in\n  front of the person instead of being compared. Never stretch one of\n  the named terms to cover something it is not.\n\n- basis: \"annual\" | \"monthly\" | \"per_claim\" | \"per_policy\"\n\n  What the value is measured against, as the passage says it. A premium\n  quoted as twelve instalments is \"monthly\"; the same policy's total for\n  the year is \"annual\". These are different values, and calling one the\n  other turns an instalment into a price rise.\n\n- value: the value exactly as the document writes it — \"£1,234.56\",\n  \"£500\", \"14 days\", \"60%\". Copy the currency symbol, the commas and\n  the decimals as they appear. Never round, never convert, never work\n  out a total, and never write a number the passage does not contain.\n\n- quote: the words the value comes from, copied exactly from the\n  passage — enough to show where you read it. This is checked against\n  the document: a quote that is not in the passage means the whole term\n  goes to the person instead of being used.\n\nYou are not asked to compare anything, to say whether a value went up\nor down, or to work out a difference. That is done separately, from the\nvalues you copy. Copying them exactly is the whole job.\n\nReturn one result per input, with the same \"id\" you were given, and\necho the passage back in \"segment\". Return JSON only.\n\nPassages:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"Marlowe Mutual home insurance — policy schedule DAMSON-COC-421 for the year to 31 August 2026.\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"Total annual premium: £5,429.00.\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"Cooling-off period: 15 days.\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"Your reference is DAMSON-COC-421. Quote it whenever you write to us about this policy.\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"Marlowe Mutual arranges home insurance cover under DAMSON-COC-421 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"Marlowe Mutual home insurance — renewal schedule DAMSON-COC-421 for the year to 31 August 2027.\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"Total annual premium: £5,429.00.\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"Cooling-off period: 29 days.\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"Marlowe Mutual arranges home insurance cover under DAMSON-COC-421 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"Your reference is DAMSON-COC-421. Quote it whenever you write to us about this policy.\"\n  }\n]\n",
+        "response": "{\"results\":[{\"confidence\":\"low\",\"id\":0,\"segment\":\"Marlowe Mutual home insurance — policy schedule DAMSON-COC-421 for the year to 31 August 2026.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":1,\"segment\":\"Total annual premium: £5,429.00.\",\"terms\":[{\"basis\":\"annual\",\"quote\":\"Total annual premium: £5,429.00.\",\"term\":\"premium\",\"value\":\"£5,429.00\"}]},{\"confidence\":\"high\",\"id\":2,\"segment\":\"Cooling-off period: 15 days.\",\"terms\":[{\"basis\":\"per_policy\",\"quote\":\"Cooling-off period: 15 days.\",\"term\":\"cooling_off_period\",\"value\":\"15 days\"}]},{\"confidence\":\"low\",\"id\":3,\"segment\":\"Your reference is DAMSON-COC-421. Quote it whenever you write to us about this policy.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":4,\"segment\":\"Marlowe Mutual arranges home insurance cover under DAMSON-COC-421 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":5,\"segment\":\"Marlowe Mutual home insurance — renewal schedule DAMSON-COC-421 for the year to 31 August 2027.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":6,\"segment\":\"Total annual premium: £5,429.00.\",\"terms\":[{\"basis\":\"annual\",\"quote\":\"Total annual premium: £5,429.00.\",\"term\":\"premium\",\"value\":\"£5,429.00\"}]},{\"confidence\":\"high\",\"id\":7,\"segment\":\"Cooling-off period: 29 days.\",\"terms\":[{\"basis\":\"per_policy\",\"quote\":\"Cooling-off period: 29 days.\",\"term\":\"cooling_off_period\",\"value\":\"29 days\"}]},{\"confidence\":\"low\",\"id\":8,\"segment\":\"Marlowe Mutual arranges home insurance cover under DAMSON-COC-421 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":9,\"segment\":\"Your reference is DAMSON-COC-421. Quote it whenever you write to us about this policy.\",\"terms\":[]}]}"
+      }
+    ]
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-cooling_off_changed-damson-04/development-cooling_off_changed-damson-04-renewal-no-value-9a78cb",
+    "item_id": "development-cooling_off_changed-damson-04-renewal-no-value-9a78cb",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-cooling_off_changed-damson-04",
+    "fixture_id": "development-cooling_off_changed-damson-04",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Marlowe Mutual home insurance — renewal schedule DAMSON-COC-421 for the year to 31 August 2027.",
+    "decision_key": "renewal|marlowe mutual home insurance — renewal schedule damson-coc-421 for the year to 31 august 2027.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "absent"
+    },
+    "trace_ids": [
+      "claim-000012"
+    ],
+    "exchanges": [
+      {
+        "step": "Reading what each document says",
+        "batch": 1,
+        "request": "You read one passage of an insurance document at a time and say which\nnamed values, if any, it states.\n\nFor each passage, decide:\n- terms: a list of the named values this passage states. Most passages\n  state none — an empty list is a correct answer, not a failure, and it\n  is always better than a guess. A passage that explains what cover\n  means, describes how to claim, or thanks somebody for renewing states\n  no named value.\n- confidence: \"high\" | \"medium\" | \"low\"\n\nFor each term give:\n- term: \"premium\" | \"compulsory_excess\" | \"voluntary_excess\" |\n  \"total_excess\" | \"cover_limit\" | \"no_claims_discount\" |\n  \"cooling_off_period\" | \"other\"\n\n  Use \"other\" when the passage states a named value that is none of\n  these. That is a real answer and the right one: the value goes in\n  front of the person instead of being compared. Never stretch one of\n  the named terms to cover something it is not.\n\n- basis: \"annual\" | \"monthly\" | \"per_claim\" | \"per_policy\"\n\n  What the value is measured against, as the passage says it. A premium\n  quoted as twelve instalments is \"monthly\"; the same policy's total for\n  the year is \"annual\". These are different values, and calling one the\n  other turns an instalment into a price rise.\n\n- value: the value exactly as the document writes it — \"£1,234.56\",\n  \"£500\", \"14 days\", \"60%\". Copy the currency symbol, the commas and\n  the decimals as they appear. Never round, never convert, never work\n  out a total, and never write a number the passage does not contain.\n\n- quote: the words the value comes from, copied exactly from the\n  passage — enough to show where you read it. This is checked against\n  the document: a quote that is not in the passage means the whole term\n  goes to the person instead of being used.\n\nYou are not asked to compare anything, to say whether a value went up\nor down, or to work out a difference. That is done separately, from the\nvalues you copy. Copying them exactly is the whole job.\n\nReturn one result per input, with the same \"id\" you were given, and\necho the passage back in \"segment\". Return JSON only.\n\nPassages:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"Marlowe Mutual home insurance — policy schedule DAMSON-COC-421 for the year to 31 August 2026.\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"Total annual premium: £5,429.00.\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"Cooling-off period: 15 days.\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"Your reference is DAMSON-COC-421. Quote it whenever you write to us about this policy.\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"Marlowe Mutual arranges home insurance cover under DAMSON-COC-421 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"Marlowe Mutual home insurance — renewal schedule DAMSON-COC-421 for the year to 31 August 2027.\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"Total annual premium: £5,429.00.\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"Cooling-off period: 29 days.\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"Marlowe Mutual arranges home insurance cover under DAMSON-COC-421 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"Your reference is DAMSON-COC-421. Quote it whenever you write to us about this policy.\"\n  }\n]\n",
+        "response": "{\"results\":[{\"confidence\":\"low\",\"id\":0,\"segment\":\"Marlowe Mutual home insurance — policy schedule DAMSON-COC-421 for the year to 31 August 2026.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":1,\"segment\":\"Total annual premium: £5,429.00.\",\"terms\":[{\"basis\":\"annual\",\"quote\":\"Total annual premium: £5,429.00.\",\"term\":\"premium\",\"value\":\"£5,429.00\"}]},{\"confidence\":\"high\",\"id\":2,\"segment\":\"Cooling-off period: 15 days.\",\"terms\":[{\"basis\":\"per_policy\",\"quote\":\"Cooling-off period: 15 days.\",\"term\":\"cooling_off_period\",\"value\":\"15 days\"}]},{\"confidence\":\"low\",\"id\":3,\"segment\":\"Your reference is DAMSON-COC-421. Quote it whenever you write to us about this policy.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":4,\"segment\":\"Marlowe Mutual arranges home insurance cover under DAMSON-COC-421 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":5,\"segment\":\"Marlowe Mutual home insurance — renewal schedule DAMSON-COC-421 for the year to 31 August 2027.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":6,\"segment\":\"Total annual premium: £5,429.00.\",\"terms\":[{\"basis\":\"annual\",\"quote\":\"Total annual premium: £5,429.00.\",\"term\":\"premium\",\"value\":\"£5,429.00\"}]},{\"confidence\":\"high\",\"id\":7,\"segment\":\"Cooling-off period: 29 days.\",\"terms\":[{\"basis\":\"per_policy\",\"quote\":\"Cooling-off period: 29 days.\",\"term\":\"cooling_off_period\",\"value\":\"29 days\"}]},{\"confidence\":\"low\",\"id\":8,\"segment\":\"Marlowe Mutual arranges home insurance cover under DAMSON-COC-421 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":9,\"segment\":\"Your reference is DAMSON-COC-421. Quote it whenever you write to us about this policy.\",\"terms\":[]}]}"
+      }
+    ]
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-cooling_off_changed-damson-04/development-cooling_off_changed-damson-04-renewal-premium-d98e1e",
+    "item_id": "development-cooling_off_changed-damson-04-renewal-premium-d98e1e",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-cooling_off_changed-damson-04",
+    "fixture_id": "development-cooling_off_changed-damson-04",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Total annual premium: £5,429.00.",
+    "decision_key": "renewal|total annual premium: £5,429.00.",
+    "metric": "extraction",
+    "expected": {
+      "term": "premium",
+      "basis": "annual",
+      "value": "£5,429.00",
+      "quote": "Total annual premium: £5,429.00."
+    },
+    "actual": {
+      "outcome": "found",
+      "extracted": {
+        "term": "premium",
+        "basis": "annual",
+        "value": "£5,429.00",
+        "quote": "Total annual premium: £5,429.00."
+      }
+    },
+    "evidence": {
+      "existence": "pass",
+      "attribution": "pass",
+      "support": "pass"
+    },
+    "trace_ids": [
+      "claim-000001",
+      "claim-000002",
+      "claim-000005",
+      "claim-000006"
+    ],
+    "exchanges": [
+      {
+        "step": "Reading what each document says",
+        "batch": 1,
+        "request": "You read one passage of an insurance document at a time and say which\nnamed values, if any, it states.\n\nFor each passage, decide:\n- terms: a list of the named values this passage states. Most passages\n  state none — an empty list is a correct answer, not a failure, and it\n  is always better than a guess. A passage that explains what cover\n  means, describes how to claim, or thanks somebody for renewing states\n  no named value.\n- confidence: \"high\" | \"medium\" | \"low\"\n\nFor each term give:\n- term: \"premium\" | \"compulsory_excess\" | \"voluntary_excess\" |\n  \"total_excess\" | \"cover_limit\" | \"no_claims_discount\" |\n  \"cooling_off_period\" | \"other\"\n\n  Use \"other\" when the passage states a named value that is none of\n  these. That is a real answer and the right one: the value goes in\n  front of the person instead of being compared. Never stretch one of\n  the named terms to cover something it is not.\n\n- basis: \"annual\" | \"monthly\" | \"per_claim\" | \"per_policy\"\n\n  What the value is measured against, as the passage says it. A premium\n  quoted as twelve instalments is \"monthly\"; the same policy's total for\n  the year is \"annual\". These are different values, and calling one the\n  other turns an instalment into a price rise.\n\n- value: the value exactly as the document writes it — \"£1,234.56\",\n  \"£500\", \"14 days\", \"60%\". Copy the currency symbol, the commas and\n  the decimals as they appear. Never round, never convert, never work\n  out a total, and never write a number the passage does not contain.\n\n- quote: the words the value comes from, copied exactly from the\n  passage — enough to show where you read it. This is checked against\n  the document: a quote that is not in the passage means the whole term\n  goes to the person instead of being used.\n\nYou are not asked to compare anything, to say whether a value went up\nor down, or to work out a difference. That is done separately, from the\nvalues you copy. Copying them exactly is the whole job.\n\nReturn one result per input, with the same \"id\" you were given, and\necho the passage back in \"segment\". Return JSON only.\n\nPassages:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"Marlowe Mutual home insurance — policy schedule DAMSON-COC-421 for the year to 31 August 2026.\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"Total annual premium: £5,429.00.\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"Cooling-off period: 15 days.\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"Your reference is DAMSON-COC-421. Quote it whenever you write to us about this policy.\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"Marlowe Mutual arranges home insurance cover under DAMSON-COC-421 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"Marlowe Mutual home insurance — renewal schedule DAMSON-COC-421 for the year to 31 August 2027.\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"Total annual premium: £5,429.00.\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"Cooling-off period: 29 days.\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"Marlowe Mutual arranges home insurance cover under DAMSON-COC-421 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"Your reference is DAMSON-COC-421. Quote it whenever you write to us about this policy.\"\n  }\n]\n",
+        "response": "{\"results\":[{\"confidence\":\"low\",\"id\":0,\"segment\":\"Marlowe Mutual home insurance — policy schedule DAMSON-COC-421 for the year to 31 August 2026.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":1,\"segment\":\"Total annual premium: £5,429.00.\",\"terms\":[{\"basis\":\"annual\",\"quote\":\"Total annual premium: £5,429.00.\",\"term\":\"premium\",\"value\":\"£5,429.00\"}]},{\"confidence\":\"high\",\"id\":2,\"segment\":\"Cooling-off period: 15 days.\",\"terms\":[{\"basis\":\"per_policy\",\"quote\":\"Cooling-off period: 15 days.\",\"term\":\"cooling_off_period\",\"value\":\"15 days\"}]},{\"confidence\":\"low\",\"id\":3,\"segment\":\"Your reference is DAMSON-COC-421. Quote it whenever you write to us about this policy.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":4,\"segment\":\"Marlowe Mutual arranges home insurance cover under DAMSON-COC-421 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":5,\"segment\":\"Marlowe Mutual home insurance — renewal schedule DAMSON-COC-421 for the year to 31 August 2027.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":6,\"segment\":\"Total annual premium: £5,429.00.\",\"terms\":[{\"basis\":\"annual\",\"quote\":\"Total annual premium: £5,429.00.\",\"term\":\"premium\",\"value\":\"£5,429.00\"}]},{\"confidence\":\"high\",\"id\":7,\"segment\":\"Cooling-off period: 29 days.\",\"terms\":[{\"basis\":\"per_policy\",\"quote\":\"Cooling-off period: 29 days.\",\"term\":\"cooling_off_period\",\"value\":\"29 days\"}]},{\"confidence\":\"low\",\"id\":8,\"segment\":\"Marlowe Mutual arranges home insurance cover under DAMSON-COC-421 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":9,\"segment\":\"Your reference is DAMSON-COC-421. Quote it whenever you write to us about this policy.\",\"terms\":[]}]}"
+      }
+    ]
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-cooling_off_changed-damson-04/development-cooling_off_changed-damson-04-renewal-cooling-off-period-73c752",
+    "item_id": "development-cooling_off_changed-damson-04-renewal-cooling-off-period-73c752",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-cooling_off_changed-damson-04",
+    "fixture_id": "development-cooling_off_changed-damson-04",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Cooling-off period: 29 days.",
+    "decision_key": "renewal|cooling-off period: 29 days.",
+    "metric": "extraction",
+    "expected": {
+      "term": "cooling_off_period",
+      "basis": "per_policy",
+      "value": "29 days",
+      "quote": "Cooling-off period: 29 days."
+    },
+    "actual": {
+      "outcome": "found",
+      "extracted": {
+        "term": "cooling_off_period",
+        "basis": "per_policy",
+        "value": "29 days",
+        "quote": "Cooling-off period: 29 days."
+      }
+    },
+    "evidence": {
+      "existence": "pass",
+      "attribution": "pass",
+      "support": "pass"
+    },
+    "trace_ids": [
+      "claim-000007",
+      "claim-000008"
+    ],
+    "exchanges": [
+      {
+        "step": "Reading what each document says",
+        "batch": 1,
+        "request": "You read one passage of an insurance document at a time and say which\nnamed values, if any, it states.\n\nFor each passage, decide:\n- terms: a list of the named values this passage states. Most passages\n  state none — an empty list is a correct answer, not a failure, and it\n  is always better than a guess. A passage that explains what cover\n  means, describes how to claim, or thanks somebody for renewing states\n  no named value.\n- confidence: \"high\" | \"medium\" | \"low\"\n\nFor each term give:\n- term: \"premium\" | \"compulsory_excess\" | \"voluntary_excess\" |\n  \"total_excess\" | \"cover_limit\" | \"no_claims_discount\" |\n  \"cooling_off_period\" | \"other\"\n\n  Use \"other\" when the passage states a named value that is none of\n  these. That is a real answer and the right one: the value goes in\n  front of the person instead of being compared. Never stretch one of\n  the named terms to cover something it is not.\n\n- basis: \"annual\" | \"monthly\" | \"per_claim\" | \"per_policy\"\n\n  What the value is measured against, as the passage says it. A premium\n  quoted as twelve instalments is \"monthly\"; the same policy's total for\n  the year is \"annual\". These are different values, and calling one the\n  other turns an instalment into a price rise.\n\n- value: the value exactly as the document writes it — \"£1,234.56\",\n  \"£500\", \"14 days\", \"60%\". Copy the currency symbol, the commas and\n  the decimals as they appear. Never round, never convert, never work\n  out a total, and never write a number the passage does not contain.\n\n- quote: the words the value comes from, copied exactly from the\n  passage — enough to show where you read it. This is checked against\n  the document: a quote that is not in the passage means the whole term\n  goes to the person instead of being used.\n\nYou are not asked to compare anything, to say whether a value went up\nor down, or to work out a difference. That is done separately, from the\nvalues you copy. Copying them exactly is the whole job.\n\nReturn one result per input, with the same \"id\" you were given, and\necho the passage back in \"segment\". Return JSON only.\n\nPassages:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"Marlowe Mutual home insurance — policy schedule DAMSON-COC-421 for the year to 31 August 2026.\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"Total annual premium: £5,429.00.\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"Cooling-off period: 15 days.\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"Your reference is DAMSON-COC-421. Quote it whenever you write to us about this policy.\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"Marlowe Mutual arranges home insurance cover under DAMSON-COC-421 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"Marlowe Mutual home insurance — renewal schedule DAMSON-COC-421 for the year to 31 August 2027.\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"Total annual premium: £5,429.00.\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"Cooling-off period: 29 days.\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"Marlowe Mutual arranges home insurance cover under DAMSON-COC-421 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"Your reference is DAMSON-COC-421. Quote it whenever you write to us about this policy.\"\n  }\n]\n",
+        "response": "{\"results\":[{\"confidence\":\"low\",\"id\":0,\"segment\":\"Marlowe Mutual home insurance — policy schedule DAMSON-COC-421 for the year to 31 August 2026.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":1,\"segment\":\"Total annual premium: £5,429.00.\",\"terms\":[{\"basis\":\"annual\",\"quote\":\"Total annual premium: £5,429.00.\",\"term\":\"premium\",\"value\":\"£5,429.00\"}]},{\"confidence\":\"high\",\"id\":2,\"segment\":\"Cooling-off period: 15 days.\",\"terms\":[{\"basis\":\"per_policy\",\"quote\":\"Cooling-off period: 15 days.\",\"term\":\"cooling_off_period\",\"value\":\"15 days\"}]},{\"confidence\":\"low\",\"id\":3,\"segment\":\"Your reference is DAMSON-COC-421. Quote it whenever you write to us about this policy.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":4,\"segment\":\"Marlowe Mutual arranges home insurance cover under DAMSON-COC-421 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":5,\"segment\":\"Marlowe Mutual home insurance — renewal schedule DAMSON-COC-421 for the year to 31 August 2027.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":6,\"segment\":\"Total annual premium: £5,429.00.\",\"terms\":[{\"basis\":\"annual\",\"quote\":\"Total annual premium: £5,429.00.\",\"term\":\"premium\",\"value\":\"£5,429.00\"}]},{\"confidence\":\"high\",\"id\":7,\"segment\":\"Cooling-off period: 29 days.\",\"terms\":[{\"basis\":\"per_policy\",\"quote\":\"Cooling-off period: 29 days.\",\"term\":\"cooling_off_period\",\"value\":\"29 days\"}]},{\"confidence\":\"low\",\"id\":8,\"segment\":\"Marlowe Mutual arranges home insurance cover under DAMSON-COC-421 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":9,\"segment\":\"Your reference is DAMSON-COC-421. Quote it whenever you write to us about this policy.\",\"terms\":[]}]}"
+      }
+    ]
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-cooling_off_changed-damson-04/development-cooling_off_changed-damson-04-renewal-no-value-59772f",
+    "item_id": "development-cooling_off_changed-damson-04-renewal-no-value-59772f",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-cooling_off_changed-damson-04",
+    "fixture_id": "development-cooling_off_changed-damson-04",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Marlowe Mutual arranges home insurance cover under DAMSON-COC-421 and is regulated in the United Kingdom.",
+    "decision_key": "renewal|marlowe mutual arranges home insurance cover under damson-coc-421 and is regulated in the united kingdom.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "absent"
+    },
+    "trace_ids": [
+      "claim-000011",
+      "claim-000013"
+    ],
+    "exchanges": [
+      {
+        "step": "Reading what each document says",
+        "batch": 1,
+        "request": "You read one passage of an insurance document at a time and say which\nnamed values, if any, it states.\n\nFor each passage, decide:\n- terms: a list of the named values this passage states. Most passages\n  state none — an empty list is a correct answer, not a failure, and it\n  is always better than a guess. A passage that explains what cover\n  means, describes how to claim, or thanks somebody for renewing states\n  no named value.\n- confidence: \"high\" | \"medium\" | \"low\"\n\nFor each term give:\n- term: \"premium\" | \"compulsory_excess\" | \"voluntary_excess\" |\n  \"total_excess\" | \"cover_limit\" | \"no_claims_discount\" |\n  \"cooling_off_period\" | \"other\"\n\n  Use \"other\" when the passage states a named value that is none of\n  these. That is a real answer and the right one: the value goes in\n  front of the person instead of being compared. Never stretch one of\n  the named terms to cover something it is not.\n\n- basis: \"annual\" | \"monthly\" | \"per_claim\" | \"per_policy\"\n\n  What the value is measured against, as the passage says it. A premium\n  quoted as twelve instalments is \"monthly\"; the same policy's total for\n  the year is \"annual\". These are different values, and calling one the\n  other turns an instalment into a price rise.\n\n- value: the value exactly as the document writes it — \"£1,234.56\",\n  \"£500\", \"14 days\", \"60%\". Copy the currency symbol, the commas and\n  the decimals as they appear. Never round, never convert, never work\n  out a total, and never write a number the passage does not contain.\n\n- quote: the words the value comes from, copied exactly from the\n  passage — enough to show where you read it. This is checked against\n  the document: a quote that is not in the passage means the whole term\n  goes to the person instead of being used.\n\nYou are not asked to compare anything, to say whether a value went up\nor down, or to work out a difference. That is done separately, from the\nvalues you copy. Copying them exactly is the whole job.\n\nReturn one result per input, with the same \"id\" you were given, and\necho the passage back in \"segment\". Return JSON only.\n\nPassages:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"Marlowe Mutual home insurance — policy schedule DAMSON-COC-421 for the year to 31 August 2026.\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"Total annual premium: £5,429.00.\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"Cooling-off period: 15 days.\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"Your reference is DAMSON-COC-421. Quote it whenever you write to us about this policy.\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"Marlowe Mutual arranges home insurance cover under DAMSON-COC-421 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"Marlowe Mutual home insurance — renewal schedule DAMSON-COC-421 for the year to 31 August 2027.\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"Total annual premium: £5,429.00.\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"Cooling-off period: 29 days.\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"Marlowe Mutual arranges home insurance cover under DAMSON-COC-421 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"Your reference is DAMSON-COC-421. Quote it whenever you write to us about this policy.\"\n  }\n]\n",
+        "response": "{\"results\":[{\"confidence\":\"low\",\"id\":0,\"segment\":\"Marlowe Mutual home insurance — policy schedule DAMSON-COC-421 for the year to 31 August 2026.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":1,\"segment\":\"Total annual premium: £5,429.00.\",\"terms\":[{\"basis\":\"annual\",\"quote\":\"Total annual premium: £5,429.00.\",\"term\":\"premium\",\"value\":\"£5,429.00\"}]},{\"confidence\":\"high\",\"id\":2,\"segment\":\"Cooling-off period: 15 days.\",\"terms\":[{\"basis\":\"per_policy\",\"quote\":\"Cooling-off period: 15 days.\",\"term\":\"cooling_off_period\",\"value\":\"15 days\"}]},{\"confidence\":\"low\",\"id\":3,\"segment\":\"Your reference is DAMSON-COC-421. Quote it whenever you write to us about this policy.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":4,\"segment\":\"Marlowe Mutual arranges home insurance cover under DAMSON-COC-421 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":5,\"segment\":\"Marlowe Mutual home insurance — renewal schedule DAMSON-COC-421 for the year to 31 August 2027.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":6,\"segment\":\"Total annual premium: £5,429.00.\",\"terms\":[{\"basis\":\"annual\",\"quote\":\"Total annual premium: £5,429.00.\",\"term\":\"premium\",\"value\":\"£5,429.00\"}]},{\"confidence\":\"high\",\"id\":7,\"segment\":\"Cooling-off period: 29 days.\",\"terms\":[{\"basis\":\"per_policy\",\"quote\":\"Cooling-off period: 29 days.\",\"term\":\"cooling_off_period\",\"value\":\"29 days\"}]},{\"confidence\":\"low\",\"id\":8,\"segment\":\"Marlowe Mutual arranges home insurance cover under DAMSON-COC-421 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":9,\"segment\":\"Your reference is DAMSON-COC-421. Quote it whenever you write to us about this policy.\",\"terms\":[]}]}"
+      }
+    ]
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-cooling_off_changed-damson-04/development-cooling_off_changed-damson-04-renewal-no-value-8bb34c",
+    "item_id": "development-cooling_off_changed-damson-04-renewal-no-value-8bb34c",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:ce46624efd135e18d9e6a355ad2837cc5c73538e796e08b0ba0ba1c864526d03",
+    "fixture": "generated-development-cooling_off_changed-damson-04",
+    "fixture_id": "development-cooling_off_changed-damson-04",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Your reference is DAMSON-COC-421. Quote it whenever you write to us about this policy.",
+    "decision_key": "renewal|your reference is damson-coc-421. quote it whenever you write to us about this policy.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "absent"
+    },
+    "trace_ids": [
+      "claim-000010",
+      "claim-000014"
+    ],
+    "exchanges": [
+      {
+        "step": "Reading what each document says",
+        "batch": 1,
+        "request": "You read one passage of an insurance document at a time and say which\nnamed values, if any, it states.\n\nFor each passage, decide:\n- terms: a list of the named values this passage states. Most passages\n  state none — an empty list is a correct answer, not a failure, and it\n  is always better than a guess. A passage that explains what cover\n  means, describes how to claim, or thanks somebody for renewing states\n  no named value.\n- confidence: \"high\" | \"medium\" | \"low\"\n\nFor each term give:\n- term: \"premium\" | \"compulsory_excess\" | \"voluntary_excess\" |\n  \"total_excess\" | \"cover_limit\" | \"no_claims_discount\" |\n  \"cooling_off_period\" | \"other\"\n\n  Use \"other\" when the passage states a named value that is none of\n  these. That is a real answer and the right one: the value goes in\n  front of the person instead of being compared. Never stretch one of\n  the named terms to cover something it is not.\n\n- basis: \"annual\" | \"monthly\" | \"per_claim\" | \"per_policy\"\n\n  What the value is measured against, as the passage says it. A premium\n  quoted as twelve instalments is \"monthly\"; the same policy's total for\n  the year is \"annual\". These are different values, and calling one the\n  other turns an instalment into a price rise.\n\n- value: the value exactly as the document writes it — \"£1,234.56\",\n  \"£500\", \"14 days\", \"60%\". Copy the currency symbol, the commas and\n  the decimals as they appear. Never round, never convert, never work\n  out a total, and never write a number the passage does not contain.\n\n- quote: the words the value comes from, copied exactly from the\n  passage — enough to show where you read it. This is checked against\n  the document: a quote that is not in the passage means the whole term\n  goes to the person instead of being used.\n\nYou are not asked to compare anything, to say whether a value went up\nor down, or to work out a difference. That is done separately, from the\nvalues you copy. Copying them exactly is the whole job.\n\nReturn one result per input, with the same \"id\" you were given, and\necho the passage back in \"segment\". Return JSON only.\n\nPassages:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"Marlowe Mutual home insurance — policy schedule DAMSON-COC-421 for the year to 31 August 2026.\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"Total annual premium: £5,429.00.\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"Cooling-off period: 15 days.\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"Your reference is DAMSON-COC-421. Quote it whenever you write to us about this policy.\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"Marlowe Mutual arranges home insurance cover under DAMSON-COC-421 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"Marlowe Mutual home insurance — renewal schedule DAMSON-COC-421 for the year to 31 August 2027.\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"Total annual premium: £5,429.00.\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"Cooling-off period: 29 days.\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"Marlowe Mutual arranges home insurance cover under DAMSON-COC-421 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"Your reference is DAMSON-COC-421. Quote it whenever you write to us about this policy.\"\n  }\n]\n",
+        "response": "{\"results\":[{\"confidence\":\"low\",\"id\":0,\"segment\":\"Marlowe Mutual home insurance — policy schedule DAMSON-COC-421 for the year to 31 August 2026.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":1,\"segment\":\"Total annual premium: £5,429.00.\",\"terms\":[{\"basis\":\"annual\",\"quote\":\"Total annual premium: £5,429.00.\",\"term\":\"premium\",\"value\":\"£5,429.00\"}]},{\"confidence\":\"high\",\"id\":2,\"segment\":\"Cooling-off period: 15 days.\",\"terms\":[{\"basis\":\"per_policy\",\"quote\":\"Cooling-off period: 15 days.\",\"term\":\"cooling_off_period\",\"value\":\"15 days\"}]},{\"confidence\":\"low\",\"id\":3,\"segment\":\"Your reference is DAMSON-COC-421. Quote it whenever you write to us about this policy.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":4,\"segment\":\"Marlowe Mutual arranges home insurance cover under DAMSON-COC-421 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":5,\"segment\":\"Marlowe Mutual home insurance — renewal schedule DAMSON-COC-421 for the year to 31 August 2027.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":6,\"segment\":\"Total annual premium: £5,429.00.\",\"terms\":[{\"basis\":\"annual\",\"quote\":\"Total annual premium: £5,429.00.\",\"term\":\"premium\",\"value\":\"£5,429.00\"}]},{\"confidence\":\"high\",\"id\":7,\"segment\":\"Cooling-off period: 29 days.\",\"terms\":[{\"basis\":\"per_policy\",\"quote\":\"Cooling-off period: 29 days.\",\"term\":\"cooling_off_period\",\"value\":\"29 days\"}]},{\"confidence\":\"low\",\"id\":8,\"segment\":\"Marlowe Mutual arranges home insurance cover under DAMSON-COC-421 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":9,\"segment\":\"Your reference is DAMSON-COC-421. Quote it whenever you write to us about this policy.\",\"terms\":[]}]}"
+      }
+    ]
+  }
+]
