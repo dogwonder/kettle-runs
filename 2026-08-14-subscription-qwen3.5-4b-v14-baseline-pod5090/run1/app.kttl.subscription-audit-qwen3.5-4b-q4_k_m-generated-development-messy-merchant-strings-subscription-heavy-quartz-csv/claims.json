@@ -1,0 +1,833 @@
+{
+  "schema": "kettle/claim-traces@0",
+  "claims": [
+    {
+      "id": "claim-000001",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 1,
+      "item": 0,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "STRIPE* MERIDIANPROPERTY CARD 4821",
+      "candidate": {
+        "id": 0,
+        "name": "Meridian Property Card",
+        "raw": "MERIDIANPROPERTY CARD 4821",
+        "recognised": true
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 0,
+            "name": "Meridian Property Card",
+            "raw": "MERIDIANPROPERTY CARD 4821",
+            "recognised": true
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000002",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 1,
+      "item": 1,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "CARD 4821 BBBL GB",
+      "candidate": {
+        "id": 1,
+        "name": "BBB",
+        "raw": "CARD 4821 BBBL GB",
+        "recognised": true
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 1,
+            "name": "BBB",
+            "raw": "CARD 4821 BBBL GB",
+            "recognised": true
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000003",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 1,
+      "item": 2,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "CARD 4821 DSNY PLS GB",
+      "candidate": {
+        "id": 2,
+        "name": "DSNY",
+        "raw": "CARD 4821 DSNY PLS GB",
+        "recognised": true
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 2,
+            "name": "DSNY",
+            "raw": "CARD 4821 DSNY PLS GB",
+            "recognised": true
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000004",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 1,
+      "item": 3,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "CARD 4821 PPL MSC GB",
+      "candidate": {
+        "id": 3,
+        "name": "PPL",
+        "raw": "CARD 4821 PPL MSC GB",
+        "recognised": true
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 3,
+            "name": "PPL",
+            "raw": "CARD 4821 PPL MSC GB",
+            "recognised": true
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000005",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 1,
+      "item": 4,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "CARD 4821 TH GYM GRP GB",
+      "candidate": {
+        "id": 4,
+        "name": "THGym",
+        "raw": "CARD 4821 TH GYM GRP GB",
+        "recognised": true
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 4,
+            "name": "THGym",
+            "raw": "CARD 4821 TH GYM GRP GB",
+            "recognised": true
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000006",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 1,
+      "item": 5,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "CARD 4821 TH TMS GB",
+      "candidate": {
+        "id": 5,
+        "name": "TH",
+        "raw": "CARD 4821 TH TMS GB",
+        "recognised": true
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 5,
+            "name": "TH",
+            "raw": "CARD 4821 TH TMS GB",
+            "recognised": true
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000007",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 1,
+      "item": 6,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "STRIPE* MICROSOFT365 CARD 4821",
+      "candidate": {
+        "id": 6,
+        "name": "Microsoft 365",
+        "raw": "MICROSOFT365 CARD 4821",
+        "recognised": true
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 6,
+            "name": "Microsoft 365",
+            "raw": "MICROSOFT365 CARD 4821",
+            "recognised": true
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000008",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 1,
+      "item": 7,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "CARD 4821 PNRS HLTHCR GB",
+      "candidate": {
+        "id": 7,
+        "name": "PNRS",
+        "raw": "CARD 4821 PNRS HLTHCR GB",
+        "recognised": true
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 7,
+            "name": "PNRS",
+            "raw": "CARD 4821 PNRS HLTHCR GB",
+            "recognised": true
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000009",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 1,
+      "item": 8,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "CARD 4821 NW SCNTST GB",
+      "candidate": {
+        "id": 8,
+        "name": "NW",
+        "raw": "CARD 4821 NW SCNTST GB",
+        "recognised": true
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 8,
+            "name": "NW",
+            "raw": "CARD 4821 NW SCNTST GB",
+            "recognised": true
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000010",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 1,
+      "item": 9,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "STRIPE* DROPBOX CARD 4821",
+      "candidate": {
+        "id": 9,
+        "name": "Dropbox",
+        "raw": "DROPBOX CARD 4821",
+        "recognised": true
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 9,
+            "name": "Dropbox",
+            "raw": "DROPBOX CARD 4821",
+            "recognised": true
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000011",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 1,
+      "item": 4,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "CARD 4821 TH GYM GRP GB",
+      "candidate": {
+        "category": "fitness",
+        "confidence": "medium",
+        "id": 4,
+        "name": "THGym"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "fitness",
+            "confidence": "medium",
+            "id": 4,
+            "name": "THGym"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000012",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 1,
+      "item": 6,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "STRIPE* MICROSOFT365 CARD 4821",
+      "candidate": {
+        "category": "software",
+        "confidence": "high",
+        "id": 6,
+        "name": "Microsoft 365"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "software",
+            "confidence": "high",
+            "id": 6,
+            "name": "Microsoft 365"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000013",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 1,
+      "item": 9,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "STRIPE* DROPBOX CARD 4821",
+      "candidate": {
+        "category": "software",
+        "confidence": "high",
+        "id": 9,
+        "name": "Dropbox"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "software",
+            "confidence": "high",
+            "id": 9,
+            "name": "Dropbox"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000014",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 1,
+      "item": 0,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "STRIPE* MERIDIANPROPERTY CARD 4821",
+      "candidate": {
+        "category": "unknown",
+        "confidence": "low",
+        "id": 0,
+        "name": "Meridian Property Card"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "unknown",
+            "confidence": "low",
+            "id": 0,
+            "name": "Meridian Property Card"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000015",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 1,
+      "item": 1,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "CARD 4821 BBBL GB",
+      "candidate": {
+        "category": "unknown",
+        "confidence": "low",
+        "id": 1,
+        "name": "BBB"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "unknown",
+            "confidence": "low",
+            "id": 1,
+            "name": "BBB"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000016",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 1,
+      "item": 2,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "CARD 4821 DSNY PLS GB",
+      "candidate": {
+        "category": "unknown",
+        "confidence": "low",
+        "id": 2,
+        "name": "DSNY"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "unknown",
+            "confidence": "low",
+            "id": 2,
+            "name": "DSNY"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000017",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 1,
+      "item": 3,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "CARD 4821 PPL MSC GB",
+      "candidate": {
+        "category": "unknown",
+        "confidence": "low",
+        "id": 3,
+        "name": "PPL"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "unknown",
+            "confidence": "low",
+            "id": 3,
+            "name": "PPL"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000018",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 1,
+      "item": 5,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "CARD 4821 TH TMS GB",
+      "candidate": {
+        "category": "unknown",
+        "confidence": "low",
+        "id": 5,
+        "name": "TH"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "unknown",
+            "confidence": "low",
+            "id": 5,
+            "name": "TH"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000019",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 1,
+      "item": 7,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "CARD 4821 PNRS HLTHCR GB",
+      "candidate": {
+        "category": "unknown",
+        "confidence": "low",
+        "id": 7,
+        "name": "PNRS"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "unknown",
+            "confidence": "low",
+            "id": 7,
+            "name": "PNRS"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000020",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 1,
+      "item": 8,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "CARD 4821 NW SCNTST GB",
+      "candidate": {
+        "category": "unknown",
+        "confidence": "low",
+        "id": 8,
+        "name": "NW"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "unknown",
+            "confidence": "low",
+            "id": 8,
+            "name": "NW"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    }
+  ]
+}

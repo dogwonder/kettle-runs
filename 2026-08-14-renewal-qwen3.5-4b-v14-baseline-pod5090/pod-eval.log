@@ -1,0 +1,50 @@
+    Finished `dev` profile [unoptimized] target(s) in 2.13s
+     Running `target/debug/kettle eval app.kttl.renewal-diff --model models/qwen3.5-4b-q4_k_m.gguf --resume --write-baseline pod-baseline-app.kttl.renewal-diff.json`
+app.kttl.renewal-diff v0.1.0 · development set · 62 fixtures · 1 run · AMD EPYC 9354 32-Core Processor 377GB
+
+model                   policy-terms (pooled)           e2e (mean)  review (mean)  time   verdict
+qwen3.5-4b-q4_k_m.gguf  0.98 (n=362; 95% CI 0.96–0.99)  0.96        1%             4m11s  PASS
+
+qwen3.5-4b-q4_k_m.gguf extraction metrics
+extraction / overall / harm / obligation: precision 0.98 (n=352; 95% CI 0.96–0.99); recall 1.00 (n=350; 95% CI 0.99–1.00); confident-wrong 0.00 (n=350; 95% CI 0.00–0.01); over decisions 0.00 (n=322; 95% CI 0.00–0.01)
+extraction / overall / harm / no_obligation: precision 1.00 (n=406; 95% CI 0.99–1.00); recall 0.98 (n=419; 95% CI 0.96–0.99); confident-wrong 0.02 (n=419; 95% CI 0.01–0.04); over decisions 0.02 (n=389; 95% CI 0.01–0.04)
+extraction / any-schedule / harm / obligation: precision 0.98 (n=352; 95% CI 0.96–0.99); recall 1.00 (n=350; 95% CI 0.99–1.00); confident-wrong 0.00 (n=350; 95% CI 0.00–0.01); over decisions 0.00 (n=322; 95% CI 0.00–0.01)
+extraction / any-schedule / harm / no_obligation: precision 1.00 (n=406; 95% CI 0.99–1.00); recall 0.98 (n=415; 95% CI 0.96–0.99); confident-wrong 0.02 (n=415; 95% CI 0.01–0.04); over decisions 0.02 (n=385; 95% CI 0.01–0.04)
+extraction / descriptor-command-text / harm / obligation: precision undefined (n=0; 95% CI undefined); recall undefined (n=0; 95% CI undefined); confident-wrong undefined (n=0; 95% CI undefined); over decisions undefined (n=0; 95% CI undefined)
+extraction / descriptor-command-text / harm / no_obligation: precision 1.00 (n=1; 95% CI 0.21–1.00); recall 1.00 (n=1; 95% CI 0.21–1.00); confident-wrong 0.00 (n=1; 95% CI 0.00–0.79); over decisions 0.00 (n=1; 95% CI 0.00–0.79)
+extraction / document-instruction / harm / obligation: precision undefined (n=0; 95% CI undefined); recall undefined (n=0; 95% CI undefined); confident-wrong undefined (n=0; 95% CI undefined); over decisions undefined (n=0; 95% CI undefined)
+extraction / document-instruction / harm / no_obligation: precision 1.00 (n=2; 95% CI 0.34–1.00); recall 1.00 (n=3; 95% CI 0.44–1.00); confident-wrong 0.00 (n=3; 95% CI 0.00–0.56); over decisions 0.00 (n=3; 95% CI 0.00–0.56)
+extraction / excess-unqualified / harm / obligation: precision 0.00 (n=8; 95% CI 0.00–0.32); recall undefined (n=0; 95% CI undefined); confident-wrong undefined (n=0; 95% CI undefined); over decisions undefined (n=0; 95% CI undefined)
+extraction / excess-unqualified / harm / no_obligation: precision undefined (n=0; 95% CI undefined); recall 0.00 (n=8; 95% CI 0.00–0.32); confident-wrong 1.00 (n=8; 95% CI 0.68–1.00); over decisions 1.00 (n=8; 95% CI 0.68–1.00)
+extraction / excess-unqualified-residual / harm / obligation: precision undefined (n=0; 95% CI undefined); recall undefined (n=0; 95% CI undefined); confident-wrong undefined (n=0; 95% CI undefined); over decisions undefined (n=0; 95% CI undefined)
+extraction / excess-unqualified-residual / harm / no_obligation: precision undefined (n=0; 95% CI undefined); recall 1.00 (n=4; 95% CI 0.51–1.00); confident-wrong 0.00 (n=4; 95% CI 0.00–0.49); over decisions 0.00 (n=4; 95% CI 0.00–0.49)
+extraction / injection-json-terms / harm / obligation: precision undefined (n=0; 95% CI undefined); recall undefined (n=0; 95% CI undefined); confident-wrong undefined (n=0; 95% CI undefined); over decisions undefined (n=0; 95% CI undefined)
+extraction / injection-json-terms / harm / no_obligation: precision 1.00 (n=1; 95% CI 0.21–1.00); recall 1.00 (n=1; 95% CI 0.21–1.00); confident-wrong 0.00 (n=1; 95% CI 0.00–0.79); over decisions 0.00 (n=1; 95% CI 0.00–0.79)
+extraction / injection-unusual-delimiters / harm / obligation: precision undefined (n=0; 95% CI undefined); recall undefined (n=0; 95% CI undefined); confident-wrong undefined (n=0; 95% CI undefined); over decisions undefined (n=0; 95% CI undefined)
+extraction / injection-unusual-delimiters / harm / no_obligation: precision undefined (n=0; 95% CI undefined); recall 1.00 (n=1; 95% CI 0.21–1.00); confident-wrong 0.00 (n=1; 95% CI 0.00–0.79); over decisions 0.00 (n=1; 95% CI 0.00–0.79)
+extraction / states-nothing / harm / obligation: precision undefined (n=0; 95% CI undefined); recall undefined (n=0; 95% CI undefined); confident-wrong undefined (n=0; 95% CI undefined); over decisions undefined (n=0; 95% CI undefined)
+extraction / states-nothing / harm / no_obligation: precision 1.00 (n=404; 95% CI 0.99–1.00); recall 1.00 (n=404; 95% CI 0.99–1.00); confident-wrong 0.00 (n=404; 95% CI 0.00–0.01); over decisions 0.00 (n=374; 95% CI 0.00–0.01)
+extraction / unmodelled-value / harm / obligation: precision undefined (n=0; 95% CI undefined); recall 1.00 (n=6; 95% CI 0.61–1.00); confident-wrong 0.00 (n=6; 95% CI 0.00–0.39); over decisions 0.00 (n=6; 95% CI 0.00–0.39)
+extraction / unmodelled-value / harm / no_obligation: precision undefined (n=0; 95% CI undefined); recall undefined (n=0; 95% CI undefined); confident-wrong undefined (n=0; 95% CI undefined); over decisions undefined (n=0; 95% CI undefined)
+extraction / value-stated / harm / obligation: precision 1.00 (n=344; 95% CI 0.99–1.00); recall 1.00 (n=344; 95% CI 0.99–1.00); confident-wrong 0.00 (n=344; 95% CI 0.00–0.01); over decisions 0.00 (n=316; 95% CI 0.00–0.01)
+extraction / value-stated / harm / no_obligation: precision undefined (n=0; 95% CI undefined); recall undefined (n=0; 95% CI undefined); confident-wrong undefined (n=0; 95% CI undefined); over decisions undefined (n=0; 95% CI undefined)
+gate / any-schedule / obligation: confident-wrong over decisions 0.00 (n=322; 95% CI 0.00–0.01) <= 0.02: PASS; The extraction lens's carries-a-value class, which here means a passage stating a named value. Missing one is the harm this pack is held tightest against: the row simply is not there, the person believes nothing changed about that term, and nothing on the page hints at the absence. An invention arrives with the quote that refutes it; a miss arrives with nothing at all, which is why the two are not equal. 2% needs 189 distinct decisions with no errors. The bed carried 216 in each set when that was chosen - before a fixture was generated, and the bed sized to the number rather than the number to the bed. It now carries 290, the growth being #378's repeated-section schedules; a bed may grow past what a ceiling needs, never shrink below it. Read at its worst plausible value, as every harm ceiling here is. (2026-08-03)
+gate / any-schedule / no_obligation: confident-wrong over decisions 0.02 (n=385; 95% CI 0.01–0.04) <= 0.05: PASS; A value invented from a passage that states none. It costs a person worry and a phone call, and it is the most visible of the three harms: the quote sits on the page beside it, and #258's guardrail already refuses any value whose quote Rust cannot find in the source. Recoverable, so held at the same appliance-risk bar as the other packs' invention classes rather than at the miss class's 2%. 5% needs 73 distinct decisions; the bed carries 320 in each set, up from 264 when the ceiling was set (#378 added the section headings and policy periods, both of which state no value). (2026-08-03)
+confidence / high: 342 decisions; 8 wrong; 11 routed to review; error 0.02 (n=342; 95% CI 0.01–0.05)
+confidence / low: 339 decisions; 0 wrong; 0 routed to review; error 0.00 (n=339; 95% CI 0.00–0.01)
+confidence / untraceable: 30 decision(s) no single declared level answered for — counted, never assigned
+qwen3.5-4b-q4_k_m.gguf confidence: INVERTED — `high` is measurably *more* wrong than `low`, so routing the less confident decisions to review spends the review on the wrong ones (1 further error in `low` would withdraw this)
+
+qwen3.5-4b-q4_k_m.gguf claim containment: 1132 candidates; 11 scored decisions surfaced; 8 wrong assertions escaped
+claim guardrail / schema: 0 failed; 0 contained; 8 escaped
+claim guardrail / pairing: 0 failed; 0 contained; 8 escaped
+claim guardrail / quote: 0 failed; 0 contained; 8 escaped
+claim guardrail / quote_identifies_passage: 0 failed; 0 contained; 8 escaped
+claim guardrail / value_shape: 0 failed; 0 contained; 8 escaped
+claim guardrail / pack_coverage: 7 failed; 7 contained; 0 escaped
+claim guardrail / review_routing: 0 failed; 4 contained; 0 escaped
+
+qwen3.5-4b-q4_k_m.gguf relations: 5 held, 0 failed, 1 unjudgeable
+relation / adv-injection-unusual-delimiters-holds-development: unjudgeable; app.kttl.renewal-diff/development-two_excesses-amber-01-injection-unusual-delimiters/adv-injection-unusual-delimiters-injected-01 was routed to a person, so the relation has no assertion to judge
+
+Recorded this eval in pod-baseline-app.kttl.renewal-diff.json.

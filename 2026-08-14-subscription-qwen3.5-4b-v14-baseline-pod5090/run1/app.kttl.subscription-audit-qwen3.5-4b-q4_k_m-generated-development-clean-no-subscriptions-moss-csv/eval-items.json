@@ -1,0 +1,495 @@
+[
+  {
+    "id": "app.kttl.subscription-audit/development-generated-clean-no-subscriptions-moss/development-clean-no-subscriptions-moss-monthly-rent",
+    "item_id": "development-clean-no-subscriptions-moss-monthly-rent",
+    "pack": "app.kttl.subscription-audit",
+    "pack_version": "1.5.0",
+    "prompt_version": "blake3:fa1bd2f03def1fa16e3c7393cbab37b353d4f1b3eedc01540a3f203d8e2c437a",
+    "fixture": "generated-development-clean-no-subscriptions-moss.csv",
+    "fixture_id": "development-generated-clean-no-subscriptions-moss",
+    "strata": [
+      "any-statement",
+      "clean",
+      "no-subscriptions",
+      "price-rise-mid-series",
+      "multi-descriptor-merchant",
+      "duplicate-charge-not-subscription"
+    ],
+    "raw_input": "STRIPE* WESTMARSHLETTING",
+    "decision_key": "Westmarsh Letting",
+    "metric": "classification",
+    "expected": {
+      "kind": "utility",
+      "category": "housing"
+    },
+    "actual": {
+      "state": "needs_review",
+      "proposed": {
+        "kind": "regular_spend",
+        "category": "other"
+      },
+      "reason": "Kettle wasn't sure, so this one is shown in \"check these yourself\"."
+    },
+    "kind_from": "cadence_despite_periodic",
+    "trace_ids": [
+      "claim-000001",
+      "claim-000011"
+    ],
+    "exchanges": [
+      {
+        "step": "Grouping payments by merchant",
+        "batch": 1,
+        "request": "You clean up merchant names from bank statements.\n\nFor each raw merchant string, return the real-world merchant name a person\nwould recognise. Strip transaction codes, store numbers, and payment\nprocessor prefixes (SQ*, PAYPAL *, SumUp, ZETTLE_*). Strip company\nsuffixes (Ltd, Limited, PLC, Inc) unless the brand itself uses one.\n\nWrite the name the way the brand writes it, not the way the statement\nshouts it. Statements are usually upper case; brand names are not.\n\nKeep punctuation and spacing the brand itself uses, even where the\nstatement has flattened it: Paramount+, Apple TV+, M&S, B&Q, Ben &\nJerry's. Statements strip these characters; the brand name has them.\n\n  NETFLIX.COM        -> Netflix\n  SPOTIFY LTD        -> Spotify\n  PUREGYM LTD        -> PureGym\n  BRITISH GAS        -> British Gas\n  TESCO STORES 3412  -> Tesco\n  SQ *KAFFA COFFEE   -> Kaffa Coffee\n\nIf you cannot identify the merchant, return the cleaned string as-is and\nset \"recognised\": false.\n\nReturn one result per input, with the same \"id\" you were given. Return\nJSON only, matching the schema. No commentary.\n\nRaw merchant strings:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"WESTMARSHLETTING\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"TFARRELL\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"SCOTTISH POWER\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"HOLLOWAY PRINTERS\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"TFLTRAVEL\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"WAITROSE\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"BRINDLEMARKET\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"HOMEBASE\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"MILLGATE TOOLS\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"MARLOW GARDENS\"\n  }\n]\n",
+        "response": "{\"results\":[{\"id\":0,\"name\":\"West Marsh Letting\",\"raw\":\"WESTMARSHLETTING\",\"recognised\":true},{\"id\":1,\"name\":\"T Farrell\",\"raw\":\"TFARRELL\",\"recognised\":true},{\"id\":2,\"name\":\"Scottish Power\",\"raw\":\"SCOTTISH POWER\",\"recognised\":true},{\"id\":3,\"name\":\"Holloway Printers\",\"raw\":\"HOLLOWAY PRINTERS\",\"recognised\":true},{\"id\":4,\"name\":\"TfL Travel\",\"raw\":\"TFLTRAVEL\",\"recognised\":true},{\"id\":5,\"name\":\"Waitrose\",\"raw\":\"WAITROSE\",\"recognised\":true},{\"id\":6,\"name\":\"Brindley Market\",\"raw\":\"BRINDLEMARKET\",\"recognised\":true},{\"id\":7,\"name\":\"Homebase\",\"raw\":\"HOMEBASE\",\"recognised\":true},{\"id\":8,\"name\":\"Millgate Tools\",\"raw\":\"MILLGATE TOOLS\",\"recognised\":true},{\"id\":9,\"name\":\"Marlow Gardens\",\"raw\":\"MARLOW GARDENS\",\"recognised\":true}]}"
+      },
+      {
+        "step": "Sorting merchants",
+        "batch": 1,
+        "request": "You put a category to merchants from a bank statement.\n\nFor each merchant, decide:\n- category: which of the allowed category values best fits what this\n  merchant is. Judge only from the name. If the name does not tell you\n  what the merchant is, answer \"unknown\" — that is a correct answer,\n  not a failure, and it is always better than a guess.\n- confidence: \"high\" | \"medium\" | \"low\"\n\nYou are not asked whether anything is a subscription, and you are not\nshown any amounts or dates. Whether a payment repeats is worked out\nseparately, from the payments themselves.\n\nReturn one result per input, with the same \"id\" you were given. Return\nJSON only.\n\nHere is a worked example, showing the merchants it was given and the\nanswer they produced. Its ids are in the 900s and belong to the example\nalone — they are never ids you will be asked about.\n\n{\n  \"merchants\": [\n    { \"id\": 901, \"raw\": \"Netflix\" },\n    { \"id\": 902, \"raw\": \"British Gas\" },\n    { \"id\": 903, \"raw\": \"Kaffa Coffee\" },\n    { \"id\": 904, \"raw\": \"Amazon Marketplace\" },\n    { \"id\": 905, \"raw\": \"J Henderson Windows\" },\n    { \"id\": 906, \"raw\": \"TLM Services\" }\n  ],\n  \"results\": [\n    { \"id\": 901, \"name\": \"Netflix\", \"category\": \"streaming\", \"confidence\": \"high\" },\n    { \"id\": 902, \"name\": \"British Gas\", \"category\": \"energy\", \"confidence\": \"high\" },\n    { \"id\": 903, \"name\": \"Kaffa Coffee\", \"category\": \"food_drink\", \"confidence\": \"high\" },\n    { \"id\": 904, \"name\": \"Amazon Marketplace\", \"category\": \"retail\", \"confidence\": \"medium\" },\n    { \"id\": 905, \"name\": \"J Henderson Windows\", \"category\": \"other\", \"confidence\": \"medium\" },\n    { \"id\": 906, \"name\": \"TLM Services\", \"category\": \"unknown\", \"confidence\": \"low\" }\n  ]\n}\n\nNow categorise the merchants below. They are a different list: answer\nfor these, not for the example, and use only the ids that appear here.\n\nMerchants:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"West Marsh Letting\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"T Farrell\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"Scottish Power\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"Holloway Printers\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"TfL Travel\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"Waitrose\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"Brindley Market\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"Homebase\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"Millgate Tools\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"Marlow Gardens\"\n  }\n]\n",
+        "response": "{\"results\":[{\"category\":\"other\",\"confidence\":\"medium\",\"id\":0,\"name\":\"West Marsh Letting\"},{\"category\":\"other\",\"confidence\":\"medium\",\"id\":1,\"name\":\"T Farrell\"},{\"category\":\"energy\",\"confidence\":\"high\",\"id\":2,\"name\":\"Scottish Power\"},{\"category\":\"retail\",\"confidence\":\"high\",\"id\":3,\"name\":\"Holloway Printers\"},{\"category\":\"transport\",\"confidence\":\"high\",\"id\":4,\"name\":\"TfL Travel\"},{\"category\":\"food_drink\",\"confidence\":\"high\",\"id\":5,\"name\":\"Waitrose\"},{\"category\":\"retail\",\"confidence\":\"high\",\"id\":6,\"name\":\"Brindley Market\"},{\"category\":\"retail\",\"confidence\":\"high\",\"id\":7,\"name\":\"Homebase\"},{\"category\":\"retail\",\"confidence\":\"high\",\"id\":8,\"name\":\"Millgate Tools\"},{\"category\":\"other\",\"confidence\":\"medium\",\"id\":9,\"name\":\"Marlow Gardens\"}]}"
+      }
+    ]
+  },
+  {
+    "id": "app.kttl.subscription-audit/development-generated-clean-no-subscriptions-moss/development-clean-no-subscriptions-moss-monthly-salary",
+    "item_id": "development-clean-no-subscriptions-moss-monthly-salary",
+    "pack": "app.kttl.subscription-audit",
+    "pack_version": "1.5.0",
+    "prompt_version": "blake3:fa1bd2f03def1fa16e3c7393cbab37b353d4f1b3eedc01540a3f203d8e2c437a",
+    "fixture": "generated-development-clean-no-subscriptions-moss.csv",
+    "fixture_id": "development-generated-clean-no-subscriptions-moss",
+    "strata": [
+      "any-statement",
+      "clean",
+      "no-subscriptions",
+      "price-rise-mid-series"
+    ],
+    "raw_input": "HOLLOWAY PRINTERS",
+    "decision_key": "Holloway Printers",
+    "metric": "classification",
+    "expected": {
+      "kind": "income",
+      "category": "finance"
+    },
+    "actual": {
+      "state": "classified",
+      "classification": {
+        "kind": "income",
+        "category": "retail"
+      }
+    },
+    "kind_from": "income",
+    "trace_ids": [
+      "claim-000004",
+      "claim-000014"
+    ],
+    "exchanges": [
+      {
+        "step": "Grouping payments by merchant",
+        "batch": 1,
+        "request": "You clean up merchant names from bank statements.\n\nFor each raw merchant string, return the real-world merchant name a person\nwould recognise. Strip transaction codes, store numbers, and payment\nprocessor prefixes (SQ*, PAYPAL *, SumUp, ZETTLE_*). Strip company\nsuffixes (Ltd, Limited, PLC, Inc) unless the brand itself uses one.\n\nWrite the name the way the brand writes it, not the way the statement\nshouts it. Statements are usually upper case; brand names are not.\n\nKeep punctuation and spacing the brand itself uses, even where the\nstatement has flattened it: Paramount+, Apple TV+, M&S, B&Q, Ben &\nJerry's. Statements strip these characters; the brand name has them.\n\n  NETFLIX.COM        -> Netflix\n  SPOTIFY LTD        -> Spotify\n  PUREGYM LTD        -> PureGym\n  BRITISH GAS        -> British Gas\n  TESCO STORES 3412  -> Tesco\n  SQ *KAFFA COFFEE   -> Kaffa Coffee\n\nIf you cannot identify the merchant, return the cleaned string as-is and\nset \"recognised\": false.\n\nReturn one result per input, with the same \"id\" you were given. Return\nJSON only, matching the schema. No commentary.\n\nRaw merchant strings:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"WESTMARSHLETTING\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"TFARRELL\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"SCOTTISH POWER\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"HOLLOWAY PRINTERS\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"TFLTRAVEL\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"WAITROSE\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"BRINDLEMARKET\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"HOMEBASE\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"MILLGATE TOOLS\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"MARLOW GARDENS\"\n  }\n]\n",
+        "response": "{\"results\":[{\"id\":0,\"name\":\"West Marsh Letting\",\"raw\":\"WESTMARSHLETTING\",\"recognised\":true},{\"id\":1,\"name\":\"T Farrell\",\"raw\":\"TFARRELL\",\"recognised\":true},{\"id\":2,\"name\":\"Scottish Power\",\"raw\":\"SCOTTISH POWER\",\"recognised\":true},{\"id\":3,\"name\":\"Holloway Printers\",\"raw\":\"HOLLOWAY PRINTERS\",\"recognised\":true},{\"id\":4,\"name\":\"TfL Travel\",\"raw\":\"TFLTRAVEL\",\"recognised\":true},{\"id\":5,\"name\":\"Waitrose\",\"raw\":\"WAITROSE\",\"recognised\":true},{\"id\":6,\"name\":\"Brindley Market\",\"raw\":\"BRINDLEMARKET\",\"recognised\":true},{\"id\":7,\"name\":\"Homebase\",\"raw\":\"HOMEBASE\",\"recognised\":true},{\"id\":8,\"name\":\"Millgate Tools\",\"raw\":\"MILLGATE TOOLS\",\"recognised\":true},{\"id\":9,\"name\":\"Marlow Gardens\",\"raw\":\"MARLOW GARDENS\",\"recognised\":true}]}"
+      },
+      {
+        "step": "Sorting merchants",
+        "batch": 1,
+        "request": "You put a category to merchants from a bank statement.\n\nFor each merchant, decide:\n- category: which of the allowed category values best fits what this\n  merchant is. Judge only from the name. If the name does not tell you\n  what the merchant is, answer \"unknown\" — that is a correct answer,\n  not a failure, and it is always better than a guess.\n- confidence: \"high\" | \"medium\" | \"low\"\n\nYou are not asked whether anything is a subscription, and you are not\nshown any amounts or dates. Whether a payment repeats is worked out\nseparately, from the payments themselves.\n\nReturn one result per input, with the same \"id\" you were given. Return\nJSON only.\n\nHere is a worked example, showing the merchants it was given and the\nanswer they produced. Its ids are in the 900s and belong to the example\nalone — they are never ids you will be asked about.\n\n{\n  \"merchants\": [\n    { \"id\": 901, \"raw\": \"Netflix\" },\n    { \"id\": 902, \"raw\": \"British Gas\" },\n    { \"id\": 903, \"raw\": \"Kaffa Coffee\" },\n    { \"id\": 904, \"raw\": \"Amazon Marketplace\" },\n    { \"id\": 905, \"raw\": \"J Henderson Windows\" },\n    { \"id\": 906, \"raw\": \"TLM Services\" }\n  ],\n  \"results\": [\n    { \"id\": 901, \"name\": \"Netflix\", \"category\": \"streaming\", \"confidence\": \"high\" },\n    { \"id\": 902, \"name\": \"British Gas\", \"category\": \"energy\", \"confidence\": \"high\" },\n    { \"id\": 903, \"name\": \"Kaffa Coffee\", \"category\": \"food_drink\", \"confidence\": \"high\" },\n    { \"id\": 904, \"name\": \"Amazon Marketplace\", \"category\": \"retail\", \"confidence\": \"medium\" },\n    { \"id\": 905, \"name\": \"J Henderson Windows\", \"category\": \"other\", \"confidence\": \"medium\" },\n    { \"id\": 906, \"name\": \"TLM Services\", \"category\": \"unknown\", \"confidence\": \"low\" }\n  ]\n}\n\nNow categorise the merchants below. They are a different list: answer\nfor these, not for the example, and use only the ids that appear here.\n\nMerchants:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"West Marsh Letting\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"T Farrell\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"Scottish Power\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"Holloway Printers\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"TfL Travel\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"Waitrose\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"Brindley Market\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"Homebase\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"Millgate Tools\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"Marlow Gardens\"\n  }\n]\n",
+        "response": "{\"results\":[{\"category\":\"other\",\"confidence\":\"medium\",\"id\":0,\"name\":\"West Marsh Letting\"},{\"category\":\"other\",\"confidence\":\"medium\",\"id\":1,\"name\":\"T Farrell\"},{\"category\":\"energy\",\"confidence\":\"high\",\"id\":2,\"name\":\"Scottish Power\"},{\"category\":\"retail\",\"confidence\":\"high\",\"id\":3,\"name\":\"Holloway Printers\"},{\"category\":\"transport\",\"confidence\":\"high\",\"id\":4,\"name\":\"TfL Travel\"},{\"category\":\"food_drink\",\"confidence\":\"high\",\"id\":5,\"name\":\"Waitrose\"},{\"category\":\"retail\",\"confidence\":\"high\",\"id\":6,\"name\":\"Brindley Market\"},{\"category\":\"retail\",\"confidence\":\"high\",\"id\":7,\"name\":\"Homebase\"},{\"category\":\"retail\",\"confidence\":\"high\",\"id\":8,\"name\":\"Millgate Tools\"},{\"category\":\"other\",\"confidence\":\"medium\",\"id\":9,\"name\":\"Marlow Gardens\"}]}"
+      }
+    ]
+  },
+  {
+    "id": "app.kttl.subscription-audit/development-generated-clean-no-subscriptions-moss/development-clean-no-subscriptions-moss-annual-season-ticket",
+    "item_id": "development-clean-no-subscriptions-moss-annual-season-ticket",
+    "pack": "app.kttl.subscription-audit",
+    "pack_version": "1.5.0",
+    "prompt_version": "blake3:fa1bd2f03def1fa16e3c7393cbab37b353d4f1b3eedc01540a3f203d8e2c437a",
+    "fixture": "generated-development-clean-no-subscriptions-moss.csv",
+    "fixture_id": "development-generated-clean-no-subscriptions-moss",
+    "strata": [
+      "any-statement",
+      "clean",
+      "no-subscriptions",
+      "refunds-and-chargebacks",
+      "multi-descriptor-merchant",
+      "duplicate-charge-not-subscription"
+    ],
+    "raw_input": "STRIPE* TFLTRAVEL",
+    "decision_key": "TfL",
+    "metric": "classification",
+    "expected": {
+      "kind": "utility",
+      "category": "transport"
+    },
+    "actual": {
+      "state": "classified",
+      "classification": {
+        "kind": "utility",
+        "category": "transport"
+      }
+    },
+    "kind_from": "category_map",
+    "trace_ids": [
+      "claim-000005",
+      "claim-000015"
+    ],
+    "exchanges": [
+      {
+        "step": "Grouping payments by merchant",
+        "batch": 1,
+        "request": "You clean up merchant names from bank statements.\n\nFor each raw merchant string, return the real-world merchant name a person\nwould recognise. Strip transaction codes, store numbers, and payment\nprocessor prefixes (SQ*, PAYPAL *, SumUp, ZETTLE_*). Strip company\nsuffixes (Ltd, Limited, PLC, Inc) unless the brand itself uses one.\n\nWrite the name the way the brand writes it, not the way the statement\nshouts it. Statements are usually upper case; brand names are not.\n\nKeep punctuation and spacing the brand itself uses, even where the\nstatement has flattened it: Paramount+, Apple TV+, M&S, B&Q, Ben &\nJerry's. Statements strip these characters; the brand name has them.\n\n  NETFLIX.COM        -> Netflix\n  SPOTIFY LTD        -> Spotify\n  PUREGYM LTD        -> PureGym\n  BRITISH GAS        -> British Gas\n  TESCO STORES 3412  -> Tesco\n  SQ *KAFFA COFFEE   -> Kaffa Coffee\n\nIf you cannot identify the merchant, return the cleaned string as-is and\nset \"recognised\": false.\n\nReturn one result per input, with the same \"id\" you were given. Return\nJSON only, matching the schema. No commentary.\n\nRaw merchant strings:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"WESTMARSHLETTING\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"TFARRELL\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"SCOTTISH POWER\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"HOLLOWAY PRINTERS\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"TFLTRAVEL\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"WAITROSE\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"BRINDLEMARKET\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"HOMEBASE\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"MILLGATE TOOLS\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"MARLOW GARDENS\"\n  }\n]\n",
+        "response": "{\"results\":[{\"id\":0,\"name\":\"West Marsh Letting\",\"raw\":\"WESTMARSHLETTING\",\"recognised\":true},{\"id\":1,\"name\":\"T Farrell\",\"raw\":\"TFARRELL\",\"recognised\":true},{\"id\":2,\"name\":\"Scottish Power\",\"raw\":\"SCOTTISH POWER\",\"recognised\":true},{\"id\":3,\"name\":\"Holloway Printers\",\"raw\":\"HOLLOWAY PRINTERS\",\"recognised\":true},{\"id\":4,\"name\":\"TfL Travel\",\"raw\":\"TFLTRAVEL\",\"recognised\":true},{\"id\":5,\"name\":\"Waitrose\",\"raw\":\"WAITROSE\",\"recognised\":true},{\"id\":6,\"name\":\"Brindley Market\",\"raw\":\"BRINDLEMARKET\",\"recognised\":true},{\"id\":7,\"name\":\"Homebase\",\"raw\":\"HOMEBASE\",\"recognised\":true},{\"id\":8,\"name\":\"Millgate Tools\",\"raw\":\"MILLGATE TOOLS\",\"recognised\":true},{\"id\":9,\"name\":\"Marlow Gardens\",\"raw\":\"MARLOW GARDENS\",\"recognised\":true}]}"
+      },
+      {
+        "step": "Sorting merchants",
+        "batch": 1,
+        "request": "You put a category to merchants from a bank statement.\n\nFor each merchant, decide:\n- category: which of the allowed category values best fits what this\n  merchant is. Judge only from the name. If the name does not tell you\n  what the merchant is, answer \"unknown\" — that is a correct answer,\n  not a failure, and it is always better than a guess.\n- confidence: \"high\" | \"medium\" | \"low\"\n\nYou are not asked whether anything is a subscription, and you are not\nshown any amounts or dates. Whether a payment repeats is worked out\nseparately, from the payments themselves.\n\nReturn one result per input, with the same \"id\" you were given. Return\nJSON only.\n\nHere is a worked example, showing the merchants it was given and the\nanswer they produced. Its ids are in the 900s and belong to the example\nalone — they are never ids you will be asked about.\n\n{\n  \"merchants\": [\n    { \"id\": 901, \"raw\": \"Netflix\" },\n    { \"id\": 902, \"raw\": \"British Gas\" },\n    { \"id\": 903, \"raw\": \"Kaffa Coffee\" },\n    { \"id\": 904, \"raw\": \"Amazon Marketplace\" },\n    { \"id\": 905, \"raw\": \"J Henderson Windows\" },\n    { \"id\": 906, \"raw\": \"TLM Services\" }\n  ],\n  \"results\": [\n    { \"id\": 901, \"name\": \"Netflix\", \"category\": \"streaming\", \"confidence\": \"high\" },\n    { \"id\": 902, \"name\": \"British Gas\", \"category\": \"energy\", \"confidence\": \"high\" },\n    { \"id\": 903, \"name\": \"Kaffa Coffee\", \"category\": \"food_drink\", \"confidence\": \"high\" },\n    { \"id\": 904, \"name\": \"Amazon Marketplace\", \"category\": \"retail\", \"confidence\": \"medium\" },\n    { \"id\": 905, \"name\": \"J Henderson Windows\", \"category\": \"other\", \"confidence\": \"medium\" },\n    { \"id\": 906, \"name\": \"TLM Services\", \"category\": \"unknown\", \"confidence\": \"low\" }\n  ]\n}\n\nNow categorise the merchants below. They are a different list: answer\nfor these, not for the example, and use only the ids that appear here.\n\nMerchants:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"West Marsh Letting\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"T Farrell\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"Scottish Power\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"Holloway Printers\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"TfL Travel\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"Waitrose\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"Brindley Market\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"Homebase\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"Millgate Tools\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"Marlow Gardens\"\n  }\n]\n",
+        "response": "{\"results\":[{\"category\":\"other\",\"confidence\":\"medium\",\"id\":0,\"name\":\"West Marsh Letting\"},{\"category\":\"other\",\"confidence\":\"medium\",\"id\":1,\"name\":\"T Farrell\"},{\"category\":\"energy\",\"confidence\":\"high\",\"id\":2,\"name\":\"Scottish Power\"},{\"category\":\"retail\",\"confidence\":\"high\",\"id\":3,\"name\":\"Holloway Printers\"},{\"category\":\"transport\",\"confidence\":\"high\",\"id\":4,\"name\":\"TfL Travel\"},{\"category\":\"food_drink\",\"confidence\":\"high\",\"id\":5,\"name\":\"Waitrose\"},{\"category\":\"retail\",\"confidence\":\"high\",\"id\":6,\"name\":\"Brindley Market\"},{\"category\":\"retail\",\"confidence\":\"high\",\"id\":7,\"name\":\"Homebase\"},{\"category\":\"retail\",\"confidence\":\"high\",\"id\":8,\"name\":\"Millgate Tools\"},{\"category\":\"other\",\"confidence\":\"medium\",\"id\":9,\"name\":\"Marlow Gardens\"}]}"
+      }
+    ]
+  },
+  {
+    "id": "app.kttl.subscription-audit/development-generated-clean-no-subscriptions-moss/development-clean-no-subscriptions-moss-standing-order-person",
+    "item_id": "development-clean-no-subscriptions-moss-standing-order-person",
+    "pack": "app.kttl.subscription-audit",
+    "pack_version": "1.5.0",
+    "prompt_version": "blake3:fa1bd2f03def1fa16e3c7393cbab37b353d4f1b3eedc01540a3f203d8e2c437a",
+    "fixture": "generated-development-clean-no-subscriptions-moss.csv",
+    "fixture_id": "development-generated-clean-no-subscriptions-moss",
+    "strata": [
+      "any-statement",
+      "clean",
+      "no-subscriptions",
+      "price-rise-mid-series",
+      "multi-descriptor-merchant",
+      "duplicate-charge-not-subscription"
+    ],
+    "raw_input": "STRIPE* TFARRELL",
+    "decision_key": "T Farrell",
+    "metric": "classification",
+    "expected": {
+      "kind": "regular_spend",
+      "category": "finance"
+    },
+    "actual": {
+      "state": "needs_review",
+      "proposed": {
+        "kind": "regular_spend",
+        "category": "other"
+      },
+      "reason": "Kettle wasn't sure, so this one is shown in \"check these yourself\"."
+    },
+    "kind_from": "cadence_despite_periodic",
+    "trace_ids": [
+      "claim-000002",
+      "claim-000012"
+    ],
+    "exchanges": [
+      {
+        "step": "Grouping payments by merchant",
+        "batch": 1,
+        "request": "You clean up merchant names from bank statements.\n\nFor each raw merchant string, return the real-world merchant name a person\nwould recognise. Strip transaction codes, store numbers, and payment\nprocessor prefixes (SQ*, PAYPAL *, SumUp, ZETTLE_*). Strip company\nsuffixes (Ltd, Limited, PLC, Inc) unless the brand itself uses one.\n\nWrite the name the way the brand writes it, not the way the statement\nshouts it. Statements are usually upper case; brand names are not.\n\nKeep punctuation and spacing the brand itself uses, even where the\nstatement has flattened it: Paramount+, Apple TV+, M&S, B&Q, Ben &\nJerry's. Statements strip these characters; the brand name has them.\n\n  NETFLIX.COM        -> Netflix\n  SPOTIFY LTD        -> Spotify\n  PUREGYM LTD        -> PureGym\n  BRITISH GAS        -> British Gas\n  TESCO STORES 3412  -> Tesco\n  SQ *KAFFA COFFEE   -> Kaffa Coffee\n\nIf you cannot identify the merchant, return the cleaned string as-is and\nset \"recognised\": false.\n\nReturn one result per input, with the same \"id\" you were given. Return\nJSON only, matching the schema. No commentary.\n\nRaw merchant strings:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"WESTMARSHLETTING\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"TFARRELL\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"SCOTTISH POWER\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"HOLLOWAY PRINTERS\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"TFLTRAVEL\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"WAITROSE\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"BRINDLEMARKET\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"HOMEBASE\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"MILLGATE TOOLS\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"MARLOW GARDENS\"\n  }\n]\n",
+        "response": "{\"results\":[{\"id\":0,\"name\":\"West Marsh Letting\",\"raw\":\"WESTMARSHLETTING\",\"recognised\":true},{\"id\":1,\"name\":\"T Farrell\",\"raw\":\"TFARRELL\",\"recognised\":true},{\"id\":2,\"name\":\"Scottish Power\",\"raw\":\"SCOTTISH POWER\",\"recognised\":true},{\"id\":3,\"name\":\"Holloway Printers\",\"raw\":\"HOLLOWAY PRINTERS\",\"recognised\":true},{\"id\":4,\"name\":\"TfL Travel\",\"raw\":\"TFLTRAVEL\",\"recognised\":true},{\"id\":5,\"name\":\"Waitrose\",\"raw\":\"WAITROSE\",\"recognised\":true},{\"id\":6,\"name\":\"Brindley Market\",\"raw\":\"BRINDLEMARKET\",\"recognised\":true},{\"id\":7,\"name\":\"Homebase\",\"raw\":\"HOMEBASE\",\"recognised\":true},{\"id\":8,\"name\":\"Millgate Tools\",\"raw\":\"MILLGATE TOOLS\",\"recognised\":true},{\"id\":9,\"name\":\"Marlow Gardens\",\"raw\":\"MARLOW GARDENS\",\"recognised\":true}]}"
+      },
+      {
+        "step": "Sorting merchants",
+        "batch": 1,
+        "request": "You put a category to merchants from a bank statement.\n\nFor each merchant, decide:\n- category: which of the allowed category values best fits what this\n  merchant is. Judge only from the name. If the name does not tell you\n  what the merchant is, answer \"unknown\" — that is a correct answer,\n  not a failure, and it is always better than a guess.\n- confidence: \"high\" | \"medium\" | \"low\"\n\nYou are not asked whether anything is a subscription, and you are not\nshown any amounts or dates. Whether a payment repeats is worked out\nseparately, from the payments themselves.\n\nReturn one result per input, with the same \"id\" you were given. Return\nJSON only.\n\nHere is a worked example, showing the merchants it was given and the\nanswer they produced. Its ids are in the 900s and belong to the example\nalone — they are never ids you will be asked about.\n\n{\n  \"merchants\": [\n    { \"id\": 901, \"raw\": \"Netflix\" },\n    { \"id\": 902, \"raw\": \"British Gas\" },\n    { \"id\": 903, \"raw\": \"Kaffa Coffee\" },\n    { \"id\": 904, \"raw\": \"Amazon Marketplace\" },\n    { \"id\": 905, \"raw\": \"J Henderson Windows\" },\n    { \"id\": 906, \"raw\": \"TLM Services\" }\n  ],\n  \"results\": [\n    { \"id\": 901, \"name\": \"Netflix\", \"category\": \"streaming\", \"confidence\": \"high\" },\n    { \"id\": 902, \"name\": \"British Gas\", \"category\": \"energy\", \"confidence\": \"high\" },\n    { \"id\": 903, \"name\": \"Kaffa Coffee\", \"category\": \"food_drink\", \"confidence\": \"high\" },\n    { \"id\": 904, \"name\": \"Amazon Marketplace\", \"category\": \"retail\", \"confidence\": \"medium\" },\n    { \"id\": 905, \"name\": \"J Henderson Windows\", \"category\": \"other\", \"confidence\": \"medium\" },\n    { \"id\": 906, \"name\": \"TLM Services\", \"category\": \"unknown\", \"confidence\": \"low\" }\n  ]\n}\n\nNow categorise the merchants below. They are a different list: answer\nfor these, not for the example, and use only the ids that appear here.\n\nMerchants:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"West Marsh Letting\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"T Farrell\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"Scottish Power\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"Holloway Printers\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"TfL Travel\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"Waitrose\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"Brindley Market\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"Homebase\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"Millgate Tools\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"Marlow Gardens\"\n  }\n]\n",
+        "response": "{\"results\":[{\"category\":\"other\",\"confidence\":\"medium\",\"id\":0,\"name\":\"West Marsh Letting\"},{\"category\":\"other\",\"confidence\":\"medium\",\"id\":1,\"name\":\"T Farrell\"},{\"category\":\"energy\",\"confidence\":\"high\",\"id\":2,\"name\":\"Scottish Power\"},{\"category\":\"retail\",\"confidence\":\"high\",\"id\":3,\"name\":\"Holloway Printers\"},{\"category\":\"transport\",\"confidence\":\"high\",\"id\":4,\"name\":\"TfL Travel\"},{\"category\":\"food_drink\",\"confidence\":\"high\",\"id\":5,\"name\":\"Waitrose\"},{\"category\":\"retail\",\"confidence\":\"high\",\"id\":6,\"name\":\"Brindley Market\"},{\"category\":\"retail\",\"confidence\":\"high\",\"id\":7,\"name\":\"Homebase\"},{\"category\":\"retail\",\"confidence\":\"high\",\"id\":8,\"name\":\"Millgate Tools\"},{\"category\":\"other\",\"confidence\":\"medium\",\"id\":9,\"name\":\"Marlow Gardens\"}]}"
+      }
+    ]
+  },
+  {
+    "id": "app.kttl.subscription-audit/development-generated-clean-no-subscriptions-moss/development-clean-no-subscriptions-moss-weekly-grocery",
+    "item_id": "development-clean-no-subscriptions-moss-weekly-grocery",
+    "pack": "app.kttl.subscription-audit",
+    "pack_version": "1.5.0",
+    "prompt_version": "blake3:fa1bd2f03def1fa16e3c7393cbab37b353d4f1b3eedc01540a3f203d8e2c437a",
+    "fixture": "generated-development-clean-no-subscriptions-moss.csv",
+    "fixture_id": "development-generated-clean-no-subscriptions-moss",
+    "strata": [
+      "any-statement",
+      "clean",
+      "no-subscriptions",
+      "refunds-and-chargebacks",
+      "multi-descriptor-merchant",
+      "duplicate-charge-not-subscription"
+    ],
+    "raw_input": "STRIPE* WAITROSE",
+    "decision_key": "Waitrose",
+    "metric": "classification",
+    "expected": {
+      "kind": "regular_spend",
+      "category": "food_drink"
+    },
+    "actual": {
+      "state": "needs_review",
+      "proposed": {
+        "kind": "regular_spend",
+        "category": "food_drink"
+      },
+      "reason": "Kettle wasn't sure, so this one is shown in \"check these yourself\"."
+    },
+    "kind_from": "cadence_despite_periodic",
+    "trace_ids": [
+      "claim-000006",
+      "claim-000016"
+    ],
+    "exchanges": [
+      {
+        "step": "Grouping payments by merchant",
+        "batch": 1,
+        "request": "You clean up merchant names from bank statements.\n\nFor each raw merchant string, return the real-world merchant name a person\nwould recognise. Strip transaction codes, store numbers, and payment\nprocessor prefixes (SQ*, PAYPAL *, SumUp, ZETTLE_*). Strip company\nsuffixes (Ltd, Limited, PLC, Inc) unless the brand itself uses one.\n\nWrite the name the way the brand writes it, not the way the statement\nshouts it. Statements are usually upper case; brand names are not.\n\nKeep punctuation and spacing the brand itself uses, even where the\nstatement has flattened it: Paramount+, Apple TV+, M&S, B&Q, Ben &\nJerry's. Statements strip these characters; the brand name has them.\n\n  NETFLIX.COM        -> Netflix\n  SPOTIFY LTD        -> Spotify\n  PUREGYM LTD        -> PureGym\n  BRITISH GAS        -> British Gas\n  TESCO STORES 3412  -> Tesco\n  SQ *KAFFA COFFEE   -> Kaffa Coffee\n\nIf you cannot identify the merchant, return the cleaned string as-is and\nset \"recognised\": false.\n\nReturn one result per input, with the same \"id\" you were given. Return\nJSON only, matching the schema. No commentary.\n\nRaw merchant strings:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"WESTMARSHLETTING\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"TFARRELL\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"SCOTTISH POWER\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"HOLLOWAY PRINTERS\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"TFLTRAVEL\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"WAITROSE\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"BRINDLEMARKET\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"HOMEBASE\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"MILLGATE TOOLS\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"MARLOW GARDENS\"\n  }\n]\n",
+        "response": "{\"results\":[{\"id\":0,\"name\":\"West Marsh Letting\",\"raw\":\"WESTMARSHLETTING\",\"recognised\":true},{\"id\":1,\"name\":\"T Farrell\",\"raw\":\"TFARRELL\",\"recognised\":true},{\"id\":2,\"name\":\"Scottish Power\",\"raw\":\"SCOTTISH POWER\",\"recognised\":true},{\"id\":3,\"name\":\"Holloway Printers\",\"raw\":\"HOLLOWAY PRINTERS\",\"recognised\":true},{\"id\":4,\"name\":\"TfL Travel\",\"raw\":\"TFLTRAVEL\",\"recognised\":true},{\"id\":5,\"name\":\"Waitrose\",\"raw\":\"WAITROSE\",\"recognised\":true},{\"id\":6,\"name\":\"Brindley Market\",\"raw\":\"BRINDLEMARKET\",\"recognised\":true},{\"id\":7,\"name\":\"Homebase\",\"raw\":\"HOMEBASE\",\"recognised\":true},{\"id\":8,\"name\":\"Millgate Tools\",\"raw\":\"MILLGATE TOOLS\",\"recognised\":true},{\"id\":9,\"name\":\"Marlow Gardens\",\"raw\":\"MARLOW GARDENS\",\"recognised\":true}]}"
+      },
+      {
+        "step": "Sorting merchants",
+        "batch": 1,
+        "request": "You put a category to merchants from a bank statement.\n\nFor each merchant, decide:\n- category: which of the allowed category values best fits what this\n  merchant is. Judge only from the name. If the name does not tell you\n  what the merchant is, answer \"unknown\" — that is a correct answer,\n  not a failure, and it is always better than a guess.\n- confidence: \"high\" | \"medium\" | \"low\"\n\nYou are not asked whether anything is a subscription, and you are not\nshown any amounts or dates. Whether a payment repeats is worked out\nseparately, from the payments themselves.\n\nReturn one result per input, with the same \"id\" you were given. Return\nJSON only.\n\nHere is a worked example, showing the merchants it was given and the\nanswer they produced. Its ids are in the 900s and belong to the example\nalone — they are never ids you will be asked about.\n\n{\n  \"merchants\": [\n    { \"id\": 901, \"raw\": \"Netflix\" },\n    { \"id\": 902, \"raw\": \"British Gas\" },\n    { \"id\": 903, \"raw\": \"Kaffa Coffee\" },\n    { \"id\": 904, \"raw\": \"Amazon Marketplace\" },\n    { \"id\": 905, \"raw\": \"J Henderson Windows\" },\n    { \"id\": 906, \"raw\": \"TLM Services\" }\n  ],\n  \"results\": [\n    { \"id\": 901, \"name\": \"Netflix\", \"category\": \"streaming\", \"confidence\": \"high\" },\n    { \"id\": 902, \"name\": \"British Gas\", \"category\": \"energy\", \"confidence\": \"high\" },\n    { \"id\": 903, \"name\": \"Kaffa Coffee\", \"category\": \"food_drink\", \"confidence\": \"high\" },\n    { \"id\": 904, \"name\": \"Amazon Marketplace\", \"category\": \"retail\", \"confidence\": \"medium\" },\n    { \"id\": 905, \"name\": \"J Henderson Windows\", \"category\": \"other\", \"confidence\": \"medium\" },\n    { \"id\": 906, \"name\": \"TLM Services\", \"category\": \"unknown\", \"confidence\": \"low\" }\n  ]\n}\n\nNow categorise the merchants below. They are a different list: answer\nfor these, not for the example, and use only the ids that appear here.\n\nMerchants:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"West Marsh Letting\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"T Farrell\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"Scottish Power\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"Holloway Printers\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"TfL Travel\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"Waitrose\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"Brindley Market\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"Homebase\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"Millgate Tools\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"Marlow Gardens\"\n  }\n]\n",
+        "response": "{\"results\":[{\"category\":\"other\",\"confidence\":\"medium\",\"id\":0,\"name\":\"West Marsh Letting\"},{\"category\":\"other\",\"confidence\":\"medium\",\"id\":1,\"name\":\"T Farrell\"},{\"category\":\"energy\",\"confidence\":\"high\",\"id\":2,\"name\":\"Scottish Power\"},{\"category\":\"retail\",\"confidence\":\"high\",\"id\":3,\"name\":\"Holloway Printers\"},{\"category\":\"transport\",\"confidence\":\"high\",\"id\":4,\"name\":\"TfL Travel\"},{\"category\":\"food_drink\",\"confidence\":\"high\",\"id\":5,\"name\":\"Waitrose\"},{\"category\":\"retail\",\"confidence\":\"high\",\"id\":6,\"name\":\"Brindley Market\"},{\"category\":\"retail\",\"confidence\":\"high\",\"id\":7,\"name\":\"Homebase\"},{\"category\":\"retail\",\"confidence\":\"high\",\"id\":8,\"name\":\"Millgate Tools\"},{\"category\":\"other\",\"confidence\":\"medium\",\"id\":9,\"name\":\"Marlow Gardens\"}]}"
+      }
+    ]
+  },
+  {
+    "id": "app.kttl.subscription-audit/development-generated-clean-no-subscriptions-moss/development-clean-no-subscriptions-moss-duplicate-retail-charge",
+    "item_id": "development-clean-no-subscriptions-moss-duplicate-retail-charge",
+    "pack": "app.kttl.subscription-audit",
+    "pack_version": "1.5.0",
+    "prompt_version": "blake3:fa1bd2f03def1fa16e3c7393cbab37b353d4f1b3eedc01540a3f203d8e2c437a",
+    "fixture": "generated-development-clean-no-subscriptions-moss.csv",
+    "fixture_id": "development-generated-clean-no-subscriptions-moss",
+    "strata": [
+      "any-statement",
+      "clean",
+      "no-subscriptions",
+      "refunds-and-chargebacks",
+      "duplicate-charge-not-subscription"
+    ],
+    "raw_input": "HOMEBASE",
+    "decision_key": "Homebase",
+    "metric": "classification",
+    "expected": {
+      "kind": "one_off",
+      "category": "retail"
+    },
+    "actual": {
+      "state": "classified",
+      "classification": {
+        "kind": "one_off",
+        "category": "retail"
+      }
+    },
+    "kind_from": "cadence",
+    "trace_ids": [
+      "claim-000008",
+      "claim-000018"
+    ],
+    "exchanges": [
+      {
+        "step": "Grouping payments by merchant",
+        "batch": 1,
+        "request": "You clean up merchant names from bank statements.\n\nFor each raw merchant string, return the real-world merchant name a person\nwould recognise. Strip transaction codes, store numbers, and payment\nprocessor prefixes (SQ*, PAYPAL *, SumUp, ZETTLE_*). Strip company\nsuffixes (Ltd, Limited, PLC, Inc) unless the brand itself uses one.\n\nWrite the name the way the brand writes it, not the way the statement\nshouts it. Statements are usually upper case; brand names are not.\n\nKeep punctuation and spacing the brand itself uses, even where the\nstatement has flattened it: Paramount+, Apple TV+, M&S, B&Q, Ben &\nJerry's. Statements strip these characters; the brand name has them.\n\n  NETFLIX.COM        -> Netflix\n  SPOTIFY LTD        -> Spotify\n  PUREGYM LTD        -> PureGym\n  BRITISH GAS        -> British Gas\n  TESCO STORES 3412  -> Tesco\n  SQ *KAFFA COFFEE   -> Kaffa Coffee\n\nIf you cannot identify the merchant, return the cleaned string as-is and\nset \"recognised\": false.\n\nReturn one result per input, with the same \"id\" you were given. Return\nJSON only, matching the schema. No commentary.\n\nRaw merchant strings:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"WESTMARSHLETTING\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"TFARRELL\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"SCOTTISH POWER\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"HOLLOWAY PRINTERS\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"TFLTRAVEL\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"WAITROSE\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"BRINDLEMARKET\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"HOMEBASE\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"MILLGATE TOOLS\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"MARLOW GARDENS\"\n  }\n]\n",
+        "response": "{\"results\":[{\"id\":0,\"name\":\"West Marsh Letting\",\"raw\":\"WESTMARSHLETTING\",\"recognised\":true},{\"id\":1,\"name\":\"T Farrell\",\"raw\":\"TFARRELL\",\"recognised\":true},{\"id\":2,\"name\":\"Scottish Power\",\"raw\":\"SCOTTISH POWER\",\"recognised\":true},{\"id\":3,\"name\":\"Holloway Printers\",\"raw\":\"HOLLOWAY PRINTERS\",\"recognised\":true},{\"id\":4,\"name\":\"TfL Travel\",\"raw\":\"TFLTRAVEL\",\"recognised\":true},{\"id\":5,\"name\":\"Waitrose\",\"raw\":\"WAITROSE\",\"recognised\":true},{\"id\":6,\"name\":\"Brindley Market\",\"raw\":\"BRINDLEMARKET\",\"recognised\":true},{\"id\":7,\"name\":\"Homebase\",\"raw\":\"HOMEBASE\",\"recognised\":true},{\"id\":8,\"name\":\"Millgate Tools\",\"raw\":\"MILLGATE TOOLS\",\"recognised\":true},{\"id\":9,\"name\":\"Marlow Gardens\",\"raw\":\"MARLOW GARDENS\",\"recognised\":true}]}"
+      },
+      {
+        "step": "Sorting merchants",
+        "batch": 1,
+        "request": "You put a category to merchants from a bank statement.\n\nFor each merchant, decide:\n- category: which of the allowed category values best fits what this\n  merchant is. Judge only from the name. If the name does not tell you\n  what the merchant is, answer \"unknown\" — that is a correct answer,\n  not a failure, and it is always better than a guess.\n- confidence: \"high\" | \"medium\" | \"low\"\n\nYou are not asked whether anything is a subscription, and you are not\nshown any amounts or dates. Whether a payment repeats is worked out\nseparately, from the payments themselves.\n\nReturn one result per input, with the same \"id\" you were given. Return\nJSON only.\n\nHere is a worked example, showing the merchants it was given and the\nanswer they produced. Its ids are in the 900s and belong to the example\nalone — they are never ids you will be asked about.\n\n{\n  \"merchants\": [\n    { \"id\": 901, \"raw\": \"Netflix\" },\n    { \"id\": 902, \"raw\": \"British Gas\" },\n    { \"id\": 903, \"raw\": \"Kaffa Coffee\" },\n    { \"id\": 904, \"raw\": \"Amazon Marketplace\" },\n    { \"id\": 905, \"raw\": \"J Henderson Windows\" },\n    { \"id\": 906, \"raw\": \"TLM Services\" }\n  ],\n  \"results\": [\n    { \"id\": 901, \"name\": \"Netflix\", \"category\": \"streaming\", \"confidence\": \"high\" },\n    { \"id\": 902, \"name\": \"British Gas\", \"category\": \"energy\", \"confidence\": \"high\" },\n    { \"id\": 903, \"name\": \"Kaffa Coffee\", \"category\": \"food_drink\", \"confidence\": \"high\" },\n    { \"id\": 904, \"name\": \"Amazon Marketplace\", \"category\": \"retail\", \"confidence\": \"medium\" },\n    { \"id\": 905, \"name\": \"J Henderson Windows\", \"category\": \"other\", \"confidence\": \"medium\" },\n    { \"id\": 906, \"name\": \"TLM Services\", \"category\": \"unknown\", \"confidence\": \"low\" }\n  ]\n}\n\nNow categorise the merchants below. They are a different list: answer\nfor these, not for the example, and use only the ids that appear here.\n\nMerchants:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"West Marsh Letting\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"T Farrell\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"Scottish Power\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"Holloway Printers\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"TfL Travel\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"Waitrose\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"Brindley Market\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"Homebase\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"Millgate Tools\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"Marlow Gardens\"\n  }\n]\n",
+        "response": "{\"results\":[{\"category\":\"other\",\"confidence\":\"medium\",\"id\":0,\"name\":\"West Marsh Letting\"},{\"category\":\"other\",\"confidence\":\"medium\",\"id\":1,\"name\":\"T Farrell\"},{\"category\":\"energy\",\"confidence\":\"high\",\"id\":2,\"name\":\"Scottish Power\"},{\"category\":\"retail\",\"confidence\":\"high\",\"id\":3,\"name\":\"Holloway Printers\"},{\"category\":\"transport\",\"confidence\":\"high\",\"id\":4,\"name\":\"TfL Travel\"},{\"category\":\"food_drink\",\"confidence\":\"high\",\"id\":5,\"name\":\"Waitrose\"},{\"category\":\"retail\",\"confidence\":\"high\",\"id\":6,\"name\":\"Brindley Market\"},{\"category\":\"retail\",\"confidence\":\"high\",\"id\":7,\"name\":\"Homebase\"},{\"category\":\"retail\",\"confidence\":\"high\",\"id\":8,\"name\":\"Millgate Tools\"},{\"category\":\"other\",\"confidence\":\"medium\",\"id\":9,\"name\":\"Marlow Gardens\"}]}"
+      }
+    ]
+  },
+  {
+    "id": "app.kttl.subscription-audit/development-generated-clean-no-subscriptions-moss/development-clean-no-subscriptions-moss-rising-energy-bill",
+    "item_id": "development-clean-no-subscriptions-moss-rising-energy-bill",
+    "pack": "app.kttl.subscription-audit",
+    "pack_version": "1.5.0",
+    "prompt_version": "blake3:fa1bd2f03def1fa16e3c7393cbab37b353d4f1b3eedc01540a3f203d8e2c437a",
+    "fixture": "generated-development-clean-no-subscriptions-moss.csv",
+    "fixture_id": "development-generated-clean-no-subscriptions-moss",
+    "strata": [
+      "any-statement",
+      "clean",
+      "no-subscriptions",
+      "price-rise-mid-series"
+    ],
+    "raw_input": "SCOTTISH POWER",
+    "decision_key": "ScottishPower",
+    "metric": "classification",
+    "expected": {
+      "kind": "utility",
+      "category": "energy"
+    },
+    "actual": {
+      "state": "classified",
+      "classification": {
+        "kind": "utility",
+        "category": "energy"
+      }
+    },
+    "kind_from": "category_map",
+    "trace_ids": [
+      "claim-000003",
+      "claim-000013"
+    ],
+    "exchanges": [
+      {
+        "step": "Grouping payments by merchant",
+        "batch": 1,
+        "request": "You clean up merchant names from bank statements.\n\nFor each raw merchant string, return the real-world merchant name a person\nwould recognise. Strip transaction codes, store numbers, and payment\nprocessor prefixes (SQ*, PAYPAL *, SumUp, ZETTLE_*). Strip company\nsuffixes (Ltd, Limited, PLC, Inc) unless the brand itself uses one.\n\nWrite the name the way the brand writes it, not the way the statement\nshouts it. Statements are usually upper case; brand names are not.\n\nKeep punctuation and spacing the brand itself uses, even where the\nstatement has flattened it: Paramount+, Apple TV+, M&S, B&Q, Ben &\nJerry's. Statements strip these characters; the brand name has them.\n\n  NETFLIX.COM        -> Netflix\n  SPOTIFY LTD        -> Spotify\n  PUREGYM LTD        -> PureGym\n  BRITISH GAS        -> British Gas\n  TESCO STORES 3412  -> Tesco\n  SQ *KAFFA COFFEE   -> Kaffa Coffee\n\nIf you cannot identify the merchant, return the cleaned string as-is and\nset \"recognised\": false.\n\nReturn one result per input, with the same \"id\" you were given. Return\nJSON only, matching the schema. No commentary.\n\nRaw merchant strings:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"WESTMARSHLETTING\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"TFARRELL\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"SCOTTISH POWER\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"HOLLOWAY PRINTERS\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"TFLTRAVEL\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"WAITROSE\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"BRINDLEMARKET\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"HOMEBASE\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"MILLGATE TOOLS\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"MARLOW GARDENS\"\n  }\n]\n",
+        "response": "{\"results\":[{\"id\":0,\"name\":\"West Marsh Letting\",\"raw\":\"WESTMARSHLETTING\",\"recognised\":true},{\"id\":1,\"name\":\"T Farrell\",\"raw\":\"TFARRELL\",\"recognised\":true},{\"id\":2,\"name\":\"Scottish Power\",\"raw\":\"SCOTTISH POWER\",\"recognised\":true},{\"id\":3,\"name\":\"Holloway Printers\",\"raw\":\"HOLLOWAY PRINTERS\",\"recognised\":true},{\"id\":4,\"name\":\"TfL Travel\",\"raw\":\"TFLTRAVEL\",\"recognised\":true},{\"id\":5,\"name\":\"Waitrose\",\"raw\":\"WAITROSE\",\"recognised\":true},{\"id\":6,\"name\":\"Brindley Market\",\"raw\":\"BRINDLEMARKET\",\"recognised\":true},{\"id\":7,\"name\":\"Homebase\",\"raw\":\"HOMEBASE\",\"recognised\":true},{\"id\":8,\"name\":\"Millgate Tools\",\"raw\":\"MILLGATE TOOLS\",\"recognised\":true},{\"id\":9,\"name\":\"Marlow Gardens\",\"raw\":\"MARLOW GARDENS\",\"recognised\":true}]}"
+      },
+      {
+        "step": "Sorting merchants",
+        "batch": 1,
+        "request": "You put a category to merchants from a bank statement.\n\nFor each merchant, decide:\n- category: which of the allowed category values best fits what this\n  merchant is. Judge only from the name. If the name does not tell you\n  what the merchant is, answer \"unknown\" — that is a correct answer,\n  not a failure, and it is always better than a guess.\n- confidence: \"high\" | \"medium\" | \"low\"\n\nYou are not asked whether anything is a subscription, and you are not\nshown any amounts or dates. Whether a payment repeats is worked out\nseparately, from the payments themselves.\n\nReturn one result per input, with the same \"id\" you were given. Return\nJSON only.\n\nHere is a worked example, showing the merchants it was given and the\nanswer they produced. Its ids are in the 900s and belong to the example\nalone — they are never ids you will be asked about.\n\n{\n  \"merchants\": [\n    { \"id\": 901, \"raw\": \"Netflix\" },\n    { \"id\": 902, \"raw\": \"British Gas\" },\n    { \"id\": 903, \"raw\": \"Kaffa Coffee\" },\n    { \"id\": 904, \"raw\": \"Amazon Marketplace\" },\n    { \"id\": 905, \"raw\": \"J Henderson Windows\" },\n    { \"id\": 906, \"raw\": \"TLM Services\" }\n  ],\n  \"results\": [\n    { \"id\": 901, \"name\": \"Netflix\", \"category\": \"streaming\", \"confidence\": \"high\" },\n    { \"id\": 902, \"name\": \"British Gas\", \"category\": \"energy\", \"confidence\": \"high\" },\n    { \"id\": 903, \"name\": \"Kaffa Coffee\", \"category\": \"food_drink\", \"confidence\": \"high\" },\n    { \"id\": 904, \"name\": \"Amazon Marketplace\", \"category\": \"retail\", \"confidence\": \"medium\" },\n    { \"id\": 905, \"name\": \"J Henderson Windows\", \"category\": \"other\", \"confidence\": \"medium\" },\n    { \"id\": 906, \"name\": \"TLM Services\", \"category\": \"unknown\", \"confidence\": \"low\" }\n  ]\n}\n\nNow categorise the merchants below. They are a different list: answer\nfor these, not for the example, and use only the ids that appear here.\n\nMerchants:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"West Marsh Letting\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"T Farrell\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"Scottish Power\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"Holloway Printers\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"TfL Travel\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"Waitrose\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"Brindley Market\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"Homebase\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"Millgate Tools\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"Marlow Gardens\"\n  }\n]\n",
+        "response": "{\"results\":[{\"category\":\"other\",\"confidence\":\"medium\",\"id\":0,\"name\":\"West Marsh Letting\"},{\"category\":\"other\",\"confidence\":\"medium\",\"id\":1,\"name\":\"T Farrell\"},{\"category\":\"energy\",\"confidence\":\"high\",\"id\":2,\"name\":\"Scottish Power\"},{\"category\":\"retail\",\"confidence\":\"high\",\"id\":3,\"name\":\"Holloway Printers\"},{\"category\":\"transport\",\"confidence\":\"high\",\"id\":4,\"name\":\"TfL Travel\"},{\"category\":\"food_drink\",\"confidence\":\"high\",\"id\":5,\"name\":\"Waitrose\"},{\"category\":\"retail\",\"confidence\":\"high\",\"id\":6,\"name\":\"Brindley Market\"},{\"category\":\"retail\",\"confidence\":\"high\",\"id\":7,\"name\":\"Homebase\"},{\"category\":\"retail\",\"confidence\":\"high\",\"id\":8,\"name\":\"Millgate Tools\"},{\"category\":\"other\",\"confidence\":\"medium\",\"id\":9,\"name\":\"Marlow Gardens\"}]}"
+      }
+    ]
+  },
+  {
+    "id": "app.kttl.subscription-audit/development-generated-clean-no-subscriptions-moss/development-clean-no-subscriptions-moss-refunded-card-purchase",
+    "item_id": "development-clean-no-subscriptions-moss-refunded-card-purchase",
+    "pack": "app.kttl.subscription-audit",
+    "pack_version": "1.5.0",
+    "prompt_version": "blake3:fa1bd2f03def1fa16e3c7393cbab37b353d4f1b3eedc01540a3f203d8e2c437a",
+    "fixture": "generated-development-clean-no-subscriptions-moss.csv",
+    "fixture_id": "development-generated-clean-no-subscriptions-moss",
+    "strata": [
+      "any-statement",
+      "clean",
+      "no-subscriptions",
+      "refunds-and-chargebacks"
+    ],
+    "raw_input": "MILLGATE TOOLS",
+    "decision_key": "Millgate Tools",
+    "metric": "classification",
+    "expected": {
+      "kind": "one_off",
+      "category": "retail"
+    },
+    "actual": {
+      "state": "classified",
+      "classification": {
+        "kind": "one_off",
+        "category": "retail"
+      }
+    },
+    "kind_from": "cadence",
+    "trace_ids": [
+      "claim-000009",
+      "claim-000019"
+    ],
+    "exchanges": [
+      {
+        "step": "Grouping payments by merchant",
+        "batch": 1,
+        "request": "You clean up merchant names from bank statements.\n\nFor each raw merchant string, return the real-world merchant name a person\nwould recognise. Strip transaction codes, store numbers, and payment\nprocessor prefixes (SQ*, PAYPAL *, SumUp, ZETTLE_*). Strip company\nsuffixes (Ltd, Limited, PLC, Inc) unless the brand itself uses one.\n\nWrite the name the way the brand writes it, not the way the statement\nshouts it. Statements are usually upper case; brand names are not.\n\nKeep punctuation and spacing the brand itself uses, even where the\nstatement has flattened it: Paramount+, Apple TV+, M&S, B&Q, Ben &\nJerry's. Statements strip these characters; the brand name has them.\n\n  NETFLIX.COM        -> Netflix\n  SPOTIFY LTD        -> Spotify\n  PUREGYM LTD        -> PureGym\n  BRITISH GAS        -> British Gas\n  TESCO STORES 3412  -> Tesco\n  SQ *KAFFA COFFEE   -> Kaffa Coffee\n\nIf you cannot identify the merchant, return the cleaned string as-is and\nset \"recognised\": false.\n\nReturn one result per input, with the same \"id\" you were given. Return\nJSON only, matching the schema. No commentary.\n\nRaw merchant strings:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"WESTMARSHLETTING\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"TFARRELL\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"SCOTTISH POWER\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"HOLLOWAY PRINTERS\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"TFLTRAVEL\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"WAITROSE\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"BRINDLEMARKET\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"HOMEBASE\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"MILLGATE TOOLS\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"MARLOW GARDENS\"\n  }\n]\n",
+        "response": "{\"results\":[{\"id\":0,\"name\":\"West Marsh Letting\",\"raw\":\"WESTMARSHLETTING\",\"recognised\":true},{\"id\":1,\"name\":\"T Farrell\",\"raw\":\"TFARRELL\",\"recognised\":true},{\"id\":2,\"name\":\"Scottish Power\",\"raw\":\"SCOTTISH POWER\",\"recognised\":true},{\"id\":3,\"name\":\"Holloway Printers\",\"raw\":\"HOLLOWAY PRINTERS\",\"recognised\":true},{\"id\":4,\"name\":\"TfL Travel\",\"raw\":\"TFLTRAVEL\",\"recognised\":true},{\"id\":5,\"name\":\"Waitrose\",\"raw\":\"WAITROSE\",\"recognised\":true},{\"id\":6,\"name\":\"Brindley Market\",\"raw\":\"BRINDLEMARKET\",\"recognised\":true},{\"id\":7,\"name\":\"Homebase\",\"raw\":\"HOMEBASE\",\"recognised\":true},{\"id\":8,\"name\":\"Millgate Tools\",\"raw\":\"MILLGATE TOOLS\",\"recognised\":true},{\"id\":9,\"name\":\"Marlow Gardens\",\"raw\":\"MARLOW GARDENS\",\"recognised\":true}]}"
+      },
+      {
+        "step": "Sorting merchants",
+        "batch": 1,
+        "request": "You put a category to merchants from a bank statement.\n\nFor each merchant, decide:\n- category: which of the allowed category values best fits what this\n  merchant is. Judge only from the name. If the name does not tell you\n  what the merchant is, answer \"unknown\" — that is a correct answer,\n  not a failure, and it is always better than a guess.\n- confidence: \"high\" | \"medium\" | \"low\"\n\nYou are not asked whether anything is a subscription, and you are not\nshown any amounts or dates. Whether a payment repeats is worked out\nseparately, from the payments themselves.\n\nReturn one result per input, with the same \"id\" you were given. Return\nJSON only.\n\nHere is a worked example, showing the merchants it was given and the\nanswer they produced. Its ids are in the 900s and belong to the example\nalone — they are never ids you will be asked about.\n\n{\n  \"merchants\": [\n    { \"id\": 901, \"raw\": \"Netflix\" },\n    { \"id\": 902, \"raw\": \"British Gas\" },\n    { \"id\": 903, \"raw\": \"Kaffa Coffee\" },\n    { \"id\": 904, \"raw\": \"Amazon Marketplace\" },\n    { \"id\": 905, \"raw\": \"J Henderson Windows\" },\n    { \"id\": 906, \"raw\": \"TLM Services\" }\n  ],\n  \"results\": [\n    { \"id\": 901, \"name\": \"Netflix\", \"category\": \"streaming\", \"confidence\": \"high\" },\n    { \"id\": 902, \"name\": \"British Gas\", \"category\": \"energy\", \"confidence\": \"high\" },\n    { \"id\": 903, \"name\": \"Kaffa Coffee\", \"category\": \"food_drink\", \"confidence\": \"high\" },\n    { \"id\": 904, \"name\": \"Amazon Marketplace\", \"category\": \"retail\", \"confidence\": \"medium\" },\n    { \"id\": 905, \"name\": \"J Henderson Windows\", \"category\": \"other\", \"confidence\": \"medium\" },\n    { \"id\": 906, \"name\": \"TLM Services\", \"category\": \"unknown\", \"confidence\": \"low\" }\n  ]\n}\n\nNow categorise the merchants below. They are a different list: answer\nfor these, not for the example, and use only the ids that appear here.\n\nMerchants:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"West Marsh Letting\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"T Farrell\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"Scottish Power\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"Holloway Printers\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"TfL Travel\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"Waitrose\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"Brindley Market\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"Homebase\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"Millgate Tools\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"Marlow Gardens\"\n  }\n]\n",
+        "response": "{\"results\":[{\"category\":\"other\",\"confidence\":\"medium\",\"id\":0,\"name\":\"West Marsh Letting\"},{\"category\":\"other\",\"confidence\":\"medium\",\"id\":1,\"name\":\"T Farrell\"},{\"category\":\"energy\",\"confidence\":\"high\",\"id\":2,\"name\":\"Scottish Power\"},{\"category\":\"retail\",\"confidence\":\"high\",\"id\":3,\"name\":\"Holloway Printers\"},{\"category\":\"transport\",\"confidence\":\"high\",\"id\":4,\"name\":\"TfL Travel\"},{\"category\":\"food_drink\",\"confidence\":\"high\",\"id\":5,\"name\":\"Waitrose\"},{\"category\":\"retail\",\"confidence\":\"high\",\"id\":6,\"name\":\"Brindley Market\"},{\"category\":\"retail\",\"confidence\":\"high\",\"id\":7,\"name\":\"Homebase\"},{\"category\":\"retail\",\"confidence\":\"high\",\"id\":8,\"name\":\"Millgate Tools\"},{\"category\":\"other\",\"confidence\":\"medium\",\"id\":9,\"name\":\"Marlow Gardens\"}]}"
+      }
+    ]
+  },
+  {
+    "id": "app.kttl.subscription-audit/development-generated-clean-no-subscriptions-moss/development-clean-no-subscriptions-moss-processor-market-purchase",
+    "item_id": "development-clean-no-subscriptions-moss-processor-market-purchase",
+    "pack": "app.kttl.subscription-audit",
+    "pack_version": "1.5.0",
+    "prompt_version": "blake3:fa1bd2f03def1fa16e3c7393cbab37b353d4f1b3eedc01540a3f203d8e2c437a",
+    "fixture": "generated-development-clean-no-subscriptions-moss.csv",
+    "fixture_id": "development-generated-clean-no-subscriptions-moss",
+    "strata": [
+      "any-statement",
+      "clean",
+      "no-subscriptions",
+      "refunds-and-chargebacks",
+      "multi-descriptor-merchant"
+    ],
+    "raw_input": "STRIPE* BRINDLEMARKET",
+    "decision_key": "Brindle Market",
+    "metric": "classification",
+    "expected": {
+      "kind": "one_off",
+      "category": "retail"
+    },
+    "actual": {
+      "state": "classified",
+      "classification": {
+        "kind": "one_off",
+        "category": "retail"
+      }
+    },
+    "kind_from": "cadence",
+    "trace_ids": [
+      "claim-000007",
+      "claim-000017"
+    ],
+    "exchanges": [
+      {
+        "step": "Grouping payments by merchant",
+        "batch": 1,
+        "request": "You clean up merchant names from bank statements.\n\nFor each raw merchant string, return the real-world merchant name a person\nwould recognise. Strip transaction codes, store numbers, and payment\nprocessor prefixes (SQ*, PAYPAL *, SumUp, ZETTLE_*). Strip company\nsuffixes (Ltd, Limited, PLC, Inc) unless the brand itself uses one.\n\nWrite the name the way the brand writes it, not the way the statement\nshouts it. Statements are usually upper case; brand names are not.\n\nKeep punctuation and spacing the brand itself uses, even where the\nstatement has flattened it: Paramount+, Apple TV+, M&S, B&Q, Ben &\nJerry's. Statements strip these characters; the brand name has them.\n\n  NETFLIX.COM        -> Netflix\n  SPOTIFY LTD        -> Spotify\n  PUREGYM LTD        -> PureGym\n  BRITISH GAS        -> British Gas\n  TESCO STORES 3412  -> Tesco\n  SQ *KAFFA COFFEE   -> Kaffa Coffee\n\nIf you cannot identify the merchant, return the cleaned string as-is and\nset \"recognised\": false.\n\nReturn one result per input, with the same \"id\" you were given. Return\nJSON only, matching the schema. No commentary.\n\nRaw merchant strings:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"WESTMARSHLETTING\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"TFARRELL\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"SCOTTISH POWER\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"HOLLOWAY PRINTERS\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"TFLTRAVEL\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"WAITROSE\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"BRINDLEMARKET\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"HOMEBASE\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"MILLGATE TOOLS\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"MARLOW GARDENS\"\n  }\n]\n",
+        "response": "{\"results\":[{\"id\":0,\"name\":\"West Marsh Letting\",\"raw\":\"WESTMARSHLETTING\",\"recognised\":true},{\"id\":1,\"name\":\"T Farrell\",\"raw\":\"TFARRELL\",\"recognised\":true},{\"id\":2,\"name\":\"Scottish Power\",\"raw\":\"SCOTTISH POWER\",\"recognised\":true},{\"id\":3,\"name\":\"Holloway Printers\",\"raw\":\"HOLLOWAY PRINTERS\",\"recognised\":true},{\"id\":4,\"name\":\"TfL Travel\",\"raw\":\"TFLTRAVEL\",\"recognised\":true},{\"id\":5,\"name\":\"Waitrose\",\"raw\":\"WAITROSE\",\"recognised\":true},{\"id\":6,\"name\":\"Brindley Market\",\"raw\":\"BRINDLEMARKET\",\"recognised\":true},{\"id\":7,\"name\":\"Homebase\",\"raw\":\"HOMEBASE\",\"recognised\":true},{\"id\":8,\"name\":\"Millgate Tools\",\"raw\":\"MILLGATE TOOLS\",\"recognised\":true},{\"id\":9,\"name\":\"Marlow Gardens\",\"raw\":\"MARLOW GARDENS\",\"recognised\":true}]}"
+      },
+      {
+        "step": "Sorting merchants",
+        "batch": 1,
+        "request": "You put a category to merchants from a bank statement.\n\nFor each merchant, decide:\n- category: which of the allowed category values best fits what this\n  merchant is. Judge only from the name. If the name does not tell you\n  what the merchant is, answer \"unknown\" — that is a correct answer,\n  not a failure, and it is always better than a guess.\n- confidence: \"high\" | \"medium\" | \"low\"\n\nYou are not asked whether anything is a subscription, and you are not\nshown any amounts or dates. Whether a payment repeats is worked out\nseparately, from the payments themselves.\n\nReturn one result per input, with the same \"id\" you were given. Return\nJSON only.\n\nHere is a worked example, showing the merchants it was given and the\nanswer they produced. Its ids are in the 900s and belong to the example\nalone — they are never ids you will be asked about.\n\n{\n  \"merchants\": [\n    { \"id\": 901, \"raw\": \"Netflix\" },\n    { \"id\": 902, \"raw\": \"British Gas\" },\n    { \"id\": 903, \"raw\": \"Kaffa Coffee\" },\n    { \"id\": 904, \"raw\": \"Amazon Marketplace\" },\n    { \"id\": 905, \"raw\": \"J Henderson Windows\" },\n    { \"id\": 906, \"raw\": \"TLM Services\" }\n  ],\n  \"results\": [\n    { \"id\": 901, \"name\": \"Netflix\", \"category\": \"streaming\", \"confidence\": \"high\" },\n    { \"id\": 902, \"name\": \"British Gas\", \"category\": \"energy\", \"confidence\": \"high\" },\n    { \"id\": 903, \"name\": \"Kaffa Coffee\", \"category\": \"food_drink\", \"confidence\": \"high\" },\n    { \"id\": 904, \"name\": \"Amazon Marketplace\", \"category\": \"retail\", \"confidence\": \"medium\" },\n    { \"id\": 905, \"name\": \"J Henderson Windows\", \"category\": \"other\", \"confidence\": \"medium\" },\n    { \"id\": 906, \"name\": \"TLM Services\", \"category\": \"unknown\", \"confidence\": \"low\" }\n  ]\n}\n\nNow categorise the merchants below. They are a different list: answer\nfor these, not for the example, and use only the ids that appear here.\n\nMerchants:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"West Marsh Letting\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"T Farrell\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"Scottish Power\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"Holloway Printers\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"TfL Travel\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"Waitrose\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"Brindley Market\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"Homebase\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"Millgate Tools\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"Marlow Gardens\"\n  }\n]\n",
+        "response": "{\"results\":[{\"category\":\"other\",\"confidence\":\"medium\",\"id\":0,\"name\":\"West Marsh Letting\"},{\"category\":\"other\",\"confidence\":\"medium\",\"id\":1,\"name\":\"T Farrell\"},{\"category\":\"energy\",\"confidence\":\"high\",\"id\":2,\"name\":\"Scottish Power\"},{\"category\":\"retail\",\"confidence\":\"high\",\"id\":3,\"name\":\"Holloway Printers\"},{\"category\":\"transport\",\"confidence\":\"high\",\"id\":4,\"name\":\"TfL Travel\"},{\"category\":\"food_drink\",\"confidence\":\"high\",\"id\":5,\"name\":\"Waitrose\"},{\"category\":\"retail\",\"confidence\":\"high\",\"id\":6,\"name\":\"Brindley Market\"},{\"category\":\"retail\",\"confidence\":\"high\",\"id\":7,\"name\":\"Homebase\"},{\"category\":\"retail\",\"confidence\":\"high\",\"id\":8,\"name\":\"Millgate Tools\"},{\"category\":\"other\",\"confidence\":\"medium\",\"id\":9,\"name\":\"Marlow Gardens\"}]}"
+      }
+    ]
+  },
+  {
+    "id": "app.kttl.subscription-audit/development-generated-clean-no-subscriptions-moss/development-clean-no-subscriptions-moss-duplicate-season-pass",
+    "item_id": "development-clean-no-subscriptions-moss-duplicate-season-pass",
+    "pack": "app.kttl.subscription-audit",
+    "pack_version": "1.5.0",
+    "prompt_version": "blake3:fa1bd2f03def1fa16e3c7393cbab37b353d4f1b3eedc01540a3f203d8e2c437a",
+    "fixture": "generated-development-clean-no-subscriptions-moss.csv",
+    "fixture_id": "development-generated-clean-no-subscriptions-moss",
+    "strata": [
+      "any-statement",
+      "clean",
+      "no-subscriptions",
+      "duplicate-charge-not-subscription"
+    ],
+    "raw_input": "MARLOW GARDENS",
+    "decision_key": "Marlow Gardens",
+    "metric": "classification",
+    "expected": {
+      "kind": "one_off",
+      "category": "transport"
+    },
+    "actual": {
+      "state": "classified",
+      "classification": {
+        "kind": "one_off",
+        "category": "other"
+      }
+    },
+    "kind_from": "cadence",
+    "trace_ids": [
+      "claim-000010",
+      "claim-000020"
+    ],
+    "exchanges": [
+      {
+        "step": "Grouping payments by merchant",
+        "batch": 1,
+        "request": "You clean up merchant names from bank statements.\n\nFor each raw merchant string, return the real-world merchant name a person\nwould recognise. Strip transaction codes, store numbers, and payment\nprocessor prefixes (SQ*, PAYPAL *, SumUp, ZETTLE_*). Strip company\nsuffixes (Ltd, Limited, PLC, Inc) unless the brand itself uses one.\n\nWrite the name the way the brand writes it, not the way the statement\nshouts it. Statements are usually upper case; brand names are not.\n\nKeep punctuation and spacing the brand itself uses, even where the\nstatement has flattened it: Paramount+, Apple TV+, M&S, B&Q, Ben &\nJerry's. Statements strip these characters; the brand name has them.\n\n  NETFLIX.COM        -> Netflix\n  SPOTIFY LTD        -> Spotify\n  PUREGYM LTD        -> PureGym\n  BRITISH GAS        -> British Gas\n  TESCO STORES 3412  -> Tesco\n  SQ *KAFFA COFFEE   -> Kaffa Coffee\n\nIf you cannot identify the merchant, return the cleaned string as-is and\nset \"recognised\": false.\n\nReturn one result per input, with the same \"id\" you were given. Return\nJSON only, matching the schema. No commentary.\n\nRaw merchant strings:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"WESTMARSHLETTING\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"TFARRELL\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"SCOTTISH POWER\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"HOLLOWAY PRINTERS\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"TFLTRAVEL\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"WAITROSE\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"BRINDLEMARKET\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"HOMEBASE\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"MILLGATE TOOLS\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"MARLOW GARDENS\"\n  }\n]\n",
+        "response": "{\"results\":[{\"id\":0,\"name\":\"West Marsh Letting\",\"raw\":\"WESTMARSHLETTING\",\"recognised\":true},{\"id\":1,\"name\":\"T Farrell\",\"raw\":\"TFARRELL\",\"recognised\":true},{\"id\":2,\"name\":\"Scottish Power\",\"raw\":\"SCOTTISH POWER\",\"recognised\":true},{\"id\":3,\"name\":\"Holloway Printers\",\"raw\":\"HOLLOWAY PRINTERS\",\"recognised\":true},{\"id\":4,\"name\":\"TfL Travel\",\"raw\":\"TFLTRAVEL\",\"recognised\":true},{\"id\":5,\"name\":\"Waitrose\",\"raw\":\"WAITROSE\",\"recognised\":true},{\"id\":6,\"name\":\"Brindley Market\",\"raw\":\"BRINDLEMARKET\",\"recognised\":true},{\"id\":7,\"name\":\"Homebase\",\"raw\":\"HOMEBASE\",\"recognised\":true},{\"id\":8,\"name\":\"Millgate Tools\",\"raw\":\"MILLGATE TOOLS\",\"recognised\":true},{\"id\":9,\"name\":\"Marlow Gardens\",\"raw\":\"MARLOW GARDENS\",\"recognised\":true}]}"
+      },
+      {
+        "step": "Sorting merchants",
+        "batch": 1,
+        "request": "You put a category to merchants from a bank statement.\n\nFor each merchant, decide:\n- category: which of the allowed category values best fits what this\n  merchant is. Judge only from the name. If the name does not tell you\n  what the merchant is, answer \"unknown\" — that is a correct answer,\n  not a failure, and it is always better than a guess.\n- confidence: \"high\" | \"medium\" | \"low\"\n\nYou are not asked whether anything is a subscription, and you are not\nshown any amounts or dates. Whether a payment repeats is worked out\nseparately, from the payments themselves.\n\nReturn one result per input, with the same \"id\" you were given. Return\nJSON only.\n\nHere is a worked example, showing the merchants it was given and the\nanswer they produced. Its ids are in the 900s and belong to the example\nalone — they are never ids you will be asked about.\n\n{\n  \"merchants\": [\n    { \"id\": 901, \"raw\": \"Netflix\" },\n    { \"id\": 902, \"raw\": \"British Gas\" },\n    { \"id\": 903, \"raw\": \"Kaffa Coffee\" },\n    { \"id\": 904, \"raw\": \"Amazon Marketplace\" },\n    { \"id\": 905, \"raw\": \"J Henderson Windows\" },\n    { \"id\": 906, \"raw\": \"TLM Services\" }\n  ],\n  \"results\": [\n    { \"id\": 901, \"name\": \"Netflix\", \"category\": \"streaming\", \"confidence\": \"high\" },\n    { \"id\": 902, \"name\": \"British Gas\", \"category\": \"energy\", \"confidence\": \"high\" },\n    { \"id\": 903, \"name\": \"Kaffa Coffee\", \"category\": \"food_drink\", \"confidence\": \"high\" },\n    { \"id\": 904, \"name\": \"Amazon Marketplace\", \"category\": \"retail\", \"confidence\": \"medium\" },\n    { \"id\": 905, \"name\": \"J Henderson Windows\", \"category\": \"other\", \"confidence\": \"medium\" },\n    { \"id\": 906, \"name\": \"TLM Services\", \"category\": \"unknown\", \"confidence\": \"low\" }\n  ]\n}\n\nNow categorise the merchants below. They are a different list: answer\nfor these, not for the example, and use only the ids that appear here.\n\nMerchants:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"West Marsh Letting\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"T Farrell\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"Scottish Power\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"Holloway Printers\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"TfL Travel\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"Waitrose\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"Brindley Market\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"Homebase\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"Millgate Tools\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"Marlow Gardens\"\n  }\n]\n",
+        "response": "{\"results\":[{\"category\":\"other\",\"confidence\":\"medium\",\"id\":0,\"name\":\"West Marsh Letting\"},{\"category\":\"other\",\"confidence\":\"medium\",\"id\":1,\"name\":\"T Farrell\"},{\"category\":\"energy\",\"confidence\":\"high\",\"id\":2,\"name\":\"Scottish Power\"},{\"category\":\"retail\",\"confidence\":\"high\",\"id\":3,\"name\":\"Holloway Printers\"},{\"category\":\"transport\",\"confidence\":\"high\",\"id\":4,\"name\":\"TfL Travel\"},{\"category\":\"food_drink\",\"confidence\":\"high\",\"id\":5,\"name\":\"Waitrose\"},{\"category\":\"retail\",\"confidence\":\"high\",\"id\":6,\"name\":\"Brindley Market\"},{\"category\":\"retail\",\"confidence\":\"high\",\"id\":7,\"name\":\"Homebase\"},{\"category\":\"retail\",\"confidence\":\"high\",\"id\":8,\"name\":\"Millgate Tools\"},{\"category\":\"other\",\"confidence\":\"medium\",\"id\":9,\"name\":\"Marlow Gardens\"}]}"
+      }
+    ]
+  }
+]
