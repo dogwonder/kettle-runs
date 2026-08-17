@@ -82,3 +82,26 @@ has an undefined rate that nothing may rank against.
 This recording is therefore the evidence for two things: what the pack
 scores, and the fact that the instrument caught itself. Replaying it is
 what found the defect.
+
+## Addendum, 17 August 2026: the surface described above is gone
+
+"This is the only pack that renders that tag — `HIGH`/`MEDIUM`/`LOW` in
+the report, and on the public demo" was true when this was written and
+is not true now. kettle#519 removed the graded tag from both surfaces:
+the app's evidence row no longer carries one, and the report's tag reads
+`SETTLED` or `UNSURE`. The model's confidence answers are still recorded
+in every run directory, including this one, because measurement needs
+them and a person does not.
+
+**Nothing measured here changes.** The buckets, the counts and the
+UNPROVEN verdict above are what this recording says, and removing a
+surface is not evidence about it — `confidence-predicts-correctness`
+stays unproven on the same review route, which still wants a bigger bed
+rather than a better model. What the removal changes is the stake: the
+question is now "should this signal ever be shown again", where before
+it was "is what we are already showing worth showing".
+
+Recorded as an addendum rather than a correction. A run recording is
+dated evidence, and rewriting the reason a measurement was taken would
+make the archive agree with the present at the cost of saying what was
+believed at the time.
