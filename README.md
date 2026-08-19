@@ -12,7 +12,16 @@ that way: unchanged recorded answers, replayed under new scoring.
 - **Retention, not hoarding.** A run is archived here if a committed
   baseline or a cited finding stands on it. Scratch runs
   (`--fixture-dir` loops, aborted runs) are disposable and never enter.
-- **Bed runs only — the privacy hard line.** Every recording here is
+- **Bed runs only — the privacy hard line**, and since 19 August 2026
+  there is a mechanism as well as a sentence. `scripts/check-boundary.sh`
+  refuses any path named `*.private.*` and any entry with no MANIFEST,
+  and `.githooks/pre-commit` runs it on what you are about to commit
+  (`git config core.hooksPath .githooks`, once per clone). It catches
+  the file-shaped mistake — the directory dragged across without being
+  looked at. It cannot read content, so a real letter OCR'd into a
+  recording under an ordinary name would pass it. **A floor, not a
+  licence**: this repository is public, deleting a file does not unclone
+  it, and "if in doubt, it does not come here" still governs. Every recording here is
   from wholly synthetic fixtures. Nothing from a real document may
   ever enter this repo: `*.private` inputs, field-evidence runs (#428)
   and anything OCR'd or transcribed from a person's papers live under
