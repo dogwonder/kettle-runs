@@ -1,0 +1,548 @@
+[
+  {
+    "id": "app.kttl.renewal-diff/development-premium_rose-damson-04/development-premium_rose-damson-04-previous-no-value-2dbca2",
+    "item_id": "development-premium_rose-damson-04-previous-no-value-2dbca2",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:3f5234da69865c52b4ff21ac48994e65e9b8b3851c1f6e44757c8e8625ea2ffe",
+    "fixture": "generated-development-premium_rose-damson-04",
+    "fixture_id": "development-premium_rose-damson-04",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Haldon Insurance Services contents insurance — policy schedule DAMSON-PR-421 for the year to 31 August 2026.",
+    "decision_key": "previous|haldon insurance services contents insurance — policy schedule damson-pr-421 for the year to 31 august 2026.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "absent"
+    },
+    "trace_ids": [
+      "claim-000013"
+    ],
+    "confidence": {
+      "source": "declared",
+      "level": "low",
+      "trace_id": "claim-000013"
+    },
+    "exchanges": [
+      {
+        "step": "Reading what each document says",
+        "batch": 1,
+        "request": "You read one passage of an insurance document at a time and say which\nnamed values, if any, it states.\n\nFor each passage, decide:\n- terms: a list of the named values this passage states. Most passages\n  state none — an empty list is a correct answer, not a failure, and it\n  is always better than a guess. A passage that explains what cover\n  means, describes how to claim, or thanks somebody for renewing states\n  no named value.\n- confidence: \"high\" | \"medium\" | \"low\"\n\nFor each term give:\n- term: \"premium\" | \"compulsory_excess\" | \"voluntary_excess\" |\n  \"total_excess\" | \"cover_limit\" | \"no_claims_discount\" |\n  \"cooling_off_period\" | \"other\"\n\n  Documents rarely use these words. \"Cover limit\" is the most a policy\n  will pay out, and a schedule may label it \"Insurance amount\", \"Sum\n  insured\", \"Limit of indemnity\" or \"Maximum we will pay\" — those are\n  all \"cover_limit\".\n\n  Use \"other\" when the passage states a named value that is none of\n  these. That is a real answer and the right one: the value goes in\n  front of the person instead of being compared. Never stretch one of\n  the named terms to cover something it is not.\n\n- basis: \"annual\" | \"monthly\" | \"per_claim\" | \"per_policy\"\n\n  What the value is measured against, as the passage says it. A premium\n  quoted as twelve instalments is \"monthly\"; the same policy's total for\n  the year is \"annual\". These are different values, and calling one the\n  other turns an instalment into a price rise.\n\n- value: the value exactly as the document writes it — \"£1,234.56\",\n  \"£500\", \"14 days\", \"60%\". Copy the currency symbol, the commas and\n  the decimals as they appear. Never round, never convert, never work\n  out a total, and never write a number the passage does not contain.\n\n- quote: the words the value comes from, copied exactly from the\n  passage — and the quote must contain the value itself. \"Insurance\n  amount\" is a label, not a quote: on a schedule with three sections it\n  is true of three different amounts, so it shows nothing about which\n  one you read. \"Insurance amount: £604,400.00.\" does show it. Include\n  enough words on either side of the value to make clear which line it\n  came from. This is checked against the document: a quote that is not\n  in the passage, or that does not contain its own value, means the\n  whole term goes to the person instead of being used.\n\nYou are not asked to compare anything, to say whether a value went up\nor down, or to work out a difference. That is done separately, from the\nvalues you copy. Copying them exactly is the whole job.\n\nReturn one result per input, with the same \"id\" you were given, and\necho the passage back in \"segment\". Return JSON only.\n\nPassages:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"Haldon Insurance Services contents insurance — policy schedule DAMSON-PR-421 for the year to 31 August 2026.\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"Total annual premium: £1,348.00.\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"Compulsory excess: £820.00 per claim.\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"Cover limit: £3,740.00 per policy.\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"Your reference is DAMSON-PR-421. Quote it whenever you write to us about this policy.\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"Haldon Insurance Services arranges contents insurance cover under DAMSON-PR-421 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"Haldon Insurance Services contents insurance — renewal schedule DAMSON-PR-421 for the year to 31 August 2027.\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"Total annual premium: £1,480.50.\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"Compulsory excess: £820.00 per claim.\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"Cover limit: £3,740.00 per policy.\"\n  },\n  {\n    \"id\": 10,\n    \"raw\": \"Haldon Insurance Services arranges contents insurance cover under DAMSON-PR-421 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 11,\n    \"raw\": \"Your reference is DAMSON-PR-421. Quote it whenever you write to us about this policy.\"\n  }\n]\n",
+        "response": "{\"results\":[{\"confidence\":\"low\",\"id\":0,\"segment\":\"Haldon Insurance Services contents insurance — policy schedule DAMSON-PR-421 for the year to 31 August 2026.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":1,\"segment\":\"Total annual premium: £1,348.00.\",\"terms\":[{\"basis\":\"annual\",\"quote\":\"Total annual premium: £1,348.00.\",\"term\":\"premium\",\"value\":\"£1,348.00\"}]},{\"confidence\":\"high\",\"id\":2,\"segment\":\"Compulsory excess: £820.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"Compulsory excess: £820.00 per claim.\",\"term\":\"compulsory_excess\",\"value\":\"£820.00\"}]},{\"confidence\":\"high\",\"id\":3,\"segment\":\"Cover limit: £3,740.00 per policy.\",\"terms\":[{\"basis\":\"per_policy\",\"quote\":\"Cover limit: £3,740.00 per policy.\",\"term\":\"cover_limit\",\"value\":\"£3,740.00\"}]},{\"confidence\":\"low\",\"id\":4,\"segment\":\"Your reference is DAMSON-PR-421. Quote it whenever you write to us about this policy.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":5,\"segment\":\"Haldon Insurance Services arranges contents insurance cover under DAMSON-PR-421 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":6,\"segment\":\"Haldon Insurance Services contents insurance — renewal schedule DAMSON-PR-421 for the year to 31 August 2027.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":7,\"segment\":\"Total annual premium: £1,480.50.\",\"terms\":[{\"basis\":\"annual\",\"quote\":\"Total annual premium: £1,480.50.\",\"term\":\"premium\",\"value\":\"£1,480.50\"}]},{\"confidence\":\"high\",\"id\":8,\"segment\":\"Compulsory excess: £820.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"Compulsory excess: £820.00 per claim.\",\"term\":\"compulsory_excess\",\"value\":\"£820.00\"}]},{\"confidence\":\"high\",\"id\":9,\"segment\":\"Cover limit: £3,740.00 per policy.\",\"terms\":[{\"basis\":\"per_policy\",\"quote\":\"Cover limit: £3,740.00 per policy.\",\"term\":\"cover_limit\",\"value\":\"£3,740.00\"}]},{\"confidence\":\"low\",\"id\":10,\"segment\":\"Haldon Insurance Services arranges contents insurance cover under DAMSON-PR-421 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":11,\"segment\":\"Your reference is DAMSON-PR-421. Quote it whenever you write to us about this policy.\",\"terms\":[]}]}"
+      }
+    ]
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-premium_rose-damson-04/development-premium_rose-damson-04-previous-premium-8b8083",
+    "item_id": "development-premium_rose-damson-04-previous-premium-8b8083",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:3f5234da69865c52b4ff21ac48994e65e9b8b3851c1f6e44757c8e8625ea2ffe",
+    "fixture": "generated-development-premium_rose-damson-04",
+    "fixture_id": "development-premium_rose-damson-04",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Total annual premium: £1,348.00.",
+    "decision_key": "previous|total annual premium: £1,348.00.",
+    "metric": "extraction",
+    "expected": {
+      "term": "premium",
+      "basis": "annual",
+      "value": "£1,348.00",
+      "quote": "Total annual premium: £1,348.00."
+    },
+    "actual": {
+      "outcome": "found",
+      "extracted": {
+        "term": "premium",
+        "basis": "annual",
+        "value": "£1,348.00",
+        "quote": "Total annual premium: £1,348.00."
+      }
+    },
+    "evidence": {
+      "existence": "pass",
+      "attribution": "pass",
+      "support": "pass"
+    },
+    "trace_ids": [
+      "claim-000001",
+      "claim-000002"
+    ],
+    "confidence": {
+      "source": "declared",
+      "level": "high",
+      "trace_id": "claim-000001"
+    },
+    "exchanges": [
+      {
+        "step": "Reading what each document says",
+        "batch": 1,
+        "request": "You read one passage of an insurance document at a time and say which\nnamed values, if any, it states.\n\nFor each passage, decide:\n- terms: a list of the named values this passage states. Most passages\n  state none — an empty list is a correct answer, not a failure, and it\n  is always better than a guess. A passage that explains what cover\n  means, describes how to claim, or thanks somebody for renewing states\n  no named value.\n- confidence: \"high\" | \"medium\" | \"low\"\n\nFor each term give:\n- term: \"premium\" | \"compulsory_excess\" | \"voluntary_excess\" |\n  \"total_excess\" | \"cover_limit\" | \"no_claims_discount\" |\n  \"cooling_off_period\" | \"other\"\n\n  Documents rarely use these words. \"Cover limit\" is the most a policy\n  will pay out, and a schedule may label it \"Insurance amount\", \"Sum\n  insured\", \"Limit of indemnity\" or \"Maximum we will pay\" — those are\n  all \"cover_limit\".\n\n  Use \"other\" when the passage states a named value that is none of\n  these. That is a real answer and the right one: the value goes in\n  front of the person instead of being compared. Never stretch one of\n  the named terms to cover something it is not.\n\n- basis: \"annual\" | \"monthly\" | \"per_claim\" | \"per_policy\"\n\n  What the value is measured against, as the passage says it. A premium\n  quoted as twelve instalments is \"monthly\"; the same policy's total for\n  the year is \"annual\". These are different values, and calling one the\n  other turns an instalment into a price rise.\n\n- value: the value exactly as the document writes it — \"£1,234.56\",\n  \"£500\", \"14 days\", \"60%\". Copy the currency symbol, the commas and\n  the decimals as they appear. Never round, never convert, never work\n  out a total, and never write a number the passage does not contain.\n\n- quote: the words the value comes from, copied exactly from the\n  passage — and the quote must contain the value itself. \"Insurance\n  amount\" is a label, not a quote: on a schedule with three sections it\n  is true of three different amounts, so it shows nothing about which\n  one you read. \"Insurance amount: £604,400.00.\" does show it. Include\n  enough words on either side of the value to make clear which line it\n  came from. This is checked against the document: a quote that is not\n  in the passage, or that does not contain its own value, means the\n  whole term goes to the person instead of being used.\n\nYou are not asked to compare anything, to say whether a value went up\nor down, or to work out a difference. That is done separately, from the\nvalues you copy. Copying them exactly is the whole job.\n\nReturn one result per input, with the same \"id\" you were given, and\necho the passage back in \"segment\". Return JSON only.\n\nPassages:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"Haldon Insurance Services contents insurance — policy schedule DAMSON-PR-421 for the year to 31 August 2026.\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"Total annual premium: £1,348.00.\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"Compulsory excess: £820.00 per claim.\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"Cover limit: £3,740.00 per policy.\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"Your reference is DAMSON-PR-421. Quote it whenever you write to us about this policy.\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"Haldon Insurance Services arranges contents insurance cover under DAMSON-PR-421 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"Haldon Insurance Services contents insurance — renewal schedule DAMSON-PR-421 for the year to 31 August 2027.\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"Total annual premium: £1,480.50.\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"Compulsory excess: £820.00 per claim.\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"Cover limit: £3,740.00 per policy.\"\n  },\n  {\n    \"id\": 10,\n    \"raw\": \"Haldon Insurance Services arranges contents insurance cover under DAMSON-PR-421 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 11,\n    \"raw\": \"Your reference is DAMSON-PR-421. Quote it whenever you write to us about this policy.\"\n  }\n]\n",
+        "response": "{\"results\":[{\"confidence\":\"low\",\"id\":0,\"segment\":\"Haldon Insurance Services contents insurance — policy schedule DAMSON-PR-421 for the year to 31 August 2026.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":1,\"segment\":\"Total annual premium: £1,348.00.\",\"terms\":[{\"basis\":\"annual\",\"quote\":\"Total annual premium: £1,348.00.\",\"term\":\"premium\",\"value\":\"£1,348.00\"}]},{\"confidence\":\"high\",\"id\":2,\"segment\":\"Compulsory excess: £820.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"Compulsory excess: £820.00 per claim.\",\"term\":\"compulsory_excess\",\"value\":\"£820.00\"}]},{\"confidence\":\"high\",\"id\":3,\"segment\":\"Cover limit: £3,740.00 per policy.\",\"terms\":[{\"basis\":\"per_policy\",\"quote\":\"Cover limit: £3,740.00 per policy.\",\"term\":\"cover_limit\",\"value\":\"£3,740.00\"}]},{\"confidence\":\"low\",\"id\":4,\"segment\":\"Your reference is DAMSON-PR-421. Quote it whenever you write to us about this policy.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":5,\"segment\":\"Haldon Insurance Services arranges contents insurance cover under DAMSON-PR-421 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":6,\"segment\":\"Haldon Insurance Services contents insurance — renewal schedule DAMSON-PR-421 for the year to 31 August 2027.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":7,\"segment\":\"Total annual premium: £1,480.50.\",\"terms\":[{\"basis\":\"annual\",\"quote\":\"Total annual premium: £1,480.50.\",\"term\":\"premium\",\"value\":\"£1,480.50\"}]},{\"confidence\":\"high\",\"id\":8,\"segment\":\"Compulsory excess: £820.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"Compulsory excess: £820.00 per claim.\",\"term\":\"compulsory_excess\",\"value\":\"£820.00\"}]},{\"confidence\":\"high\",\"id\":9,\"segment\":\"Cover limit: £3,740.00 per policy.\",\"terms\":[{\"basis\":\"per_policy\",\"quote\":\"Cover limit: £3,740.00 per policy.\",\"term\":\"cover_limit\",\"value\":\"£3,740.00\"}]},{\"confidence\":\"low\",\"id\":10,\"segment\":\"Haldon Insurance Services arranges contents insurance cover under DAMSON-PR-421 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":11,\"segment\":\"Your reference is DAMSON-PR-421. Quote it whenever you write to us about this policy.\",\"terms\":[]}]}"
+      }
+    ]
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-premium_rose-damson-04/development-premium_rose-damson-04-previous-compulsory-excess-4840f9",
+    "item_id": "development-premium_rose-damson-04-previous-compulsory-excess-4840f9",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:3f5234da69865c52b4ff21ac48994e65e9b8b3851c1f6e44757c8e8625ea2ffe",
+    "fixture": "generated-development-premium_rose-damson-04",
+    "fixture_id": "development-premium_rose-damson-04",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Compulsory excess: £820.00 per claim.",
+    "decision_key": "previous|compulsory excess: £820.00 per claim.",
+    "metric": "extraction",
+    "expected": {
+      "term": "compulsory_excess",
+      "basis": "per_claim",
+      "value": "£820.00",
+      "quote": "Compulsory excess: £820.00 per claim."
+    },
+    "actual": {
+      "outcome": "found",
+      "extracted": {
+        "term": "compulsory_excess",
+        "basis": "per_claim",
+        "value": "£820.00",
+        "quote": "Compulsory excess: £820.00 per claim."
+      }
+    },
+    "evidence": {
+      "existence": "pass",
+      "attribution": "pass",
+      "support": "pass"
+    },
+    "trace_ids": [
+      "claim-000003",
+      "claim-000004",
+      "claim-000009",
+      "claim-000010"
+    ],
+    "confidence": {
+      "source": "declared",
+      "level": "high",
+      "trace_id": "claim-000003"
+    },
+    "exchanges": [
+      {
+        "step": "Reading what each document says",
+        "batch": 1,
+        "request": "You read one passage of an insurance document at a time and say which\nnamed values, if any, it states.\n\nFor each passage, decide:\n- terms: a list of the named values this passage states. Most passages\n  state none — an empty list is a correct answer, not a failure, and it\n  is always better than a guess. A passage that explains what cover\n  means, describes how to claim, or thanks somebody for renewing states\n  no named value.\n- confidence: \"high\" | \"medium\" | \"low\"\n\nFor each term give:\n- term: \"premium\" | \"compulsory_excess\" | \"voluntary_excess\" |\n  \"total_excess\" | \"cover_limit\" | \"no_claims_discount\" |\n  \"cooling_off_period\" | \"other\"\n\n  Documents rarely use these words. \"Cover limit\" is the most a policy\n  will pay out, and a schedule may label it \"Insurance amount\", \"Sum\n  insured\", \"Limit of indemnity\" or \"Maximum we will pay\" — those are\n  all \"cover_limit\".\n\n  Use \"other\" when the passage states a named value that is none of\n  these. That is a real answer and the right one: the value goes in\n  front of the person instead of being compared. Never stretch one of\n  the named terms to cover something it is not.\n\n- basis: \"annual\" | \"monthly\" | \"per_claim\" | \"per_policy\"\n\n  What the value is measured against, as the passage says it. A premium\n  quoted as twelve instalments is \"monthly\"; the same policy's total for\n  the year is \"annual\". These are different values, and calling one the\n  other turns an instalment into a price rise.\n\n- value: the value exactly as the document writes it — \"£1,234.56\",\n  \"£500\", \"14 days\", \"60%\". Copy the currency symbol, the commas and\n  the decimals as they appear. Never round, never convert, never work\n  out a total, and never write a number the passage does not contain.\n\n- quote: the words the value comes from, copied exactly from the\n  passage — and the quote must contain the value itself. \"Insurance\n  amount\" is a label, not a quote: on a schedule with three sections it\n  is true of three different amounts, so it shows nothing about which\n  one you read. \"Insurance amount: £604,400.00.\" does show it. Include\n  enough words on either side of the value to make clear which line it\n  came from. This is checked against the document: a quote that is not\n  in the passage, or that does not contain its own value, means the\n  whole term goes to the person instead of being used.\n\nYou are not asked to compare anything, to say whether a value went up\nor down, or to work out a difference. That is done separately, from the\nvalues you copy. Copying them exactly is the whole job.\n\nReturn one result per input, with the same \"id\" you were given, and\necho the passage back in \"segment\". Return JSON only.\n\nPassages:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"Haldon Insurance Services contents insurance — policy schedule DAMSON-PR-421 for the year to 31 August 2026.\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"Total annual premium: £1,348.00.\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"Compulsory excess: £820.00 per claim.\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"Cover limit: £3,740.00 per policy.\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"Your reference is DAMSON-PR-421. Quote it whenever you write to us about this policy.\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"Haldon Insurance Services arranges contents insurance cover under DAMSON-PR-421 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"Haldon Insurance Services contents insurance — renewal schedule DAMSON-PR-421 for the year to 31 August 2027.\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"Total annual premium: £1,480.50.\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"Compulsory excess: £820.00 per claim.\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"Cover limit: £3,740.00 per policy.\"\n  },\n  {\n    \"id\": 10,\n    \"raw\": \"Haldon Insurance Services arranges contents insurance cover under DAMSON-PR-421 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 11,\n    \"raw\": \"Your reference is DAMSON-PR-421. Quote it whenever you write to us about this policy.\"\n  }\n]\n",
+        "response": "{\"results\":[{\"confidence\":\"low\",\"id\":0,\"segment\":\"Haldon Insurance Services contents insurance — policy schedule DAMSON-PR-421 for the year to 31 August 2026.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":1,\"segment\":\"Total annual premium: £1,348.00.\",\"terms\":[{\"basis\":\"annual\",\"quote\":\"Total annual premium: £1,348.00.\",\"term\":\"premium\",\"value\":\"£1,348.00\"}]},{\"confidence\":\"high\",\"id\":2,\"segment\":\"Compulsory excess: £820.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"Compulsory excess: £820.00 per claim.\",\"term\":\"compulsory_excess\",\"value\":\"£820.00\"}]},{\"confidence\":\"high\",\"id\":3,\"segment\":\"Cover limit: £3,740.00 per policy.\",\"terms\":[{\"basis\":\"per_policy\",\"quote\":\"Cover limit: £3,740.00 per policy.\",\"term\":\"cover_limit\",\"value\":\"£3,740.00\"}]},{\"confidence\":\"low\",\"id\":4,\"segment\":\"Your reference is DAMSON-PR-421. Quote it whenever you write to us about this policy.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":5,\"segment\":\"Haldon Insurance Services arranges contents insurance cover under DAMSON-PR-421 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":6,\"segment\":\"Haldon Insurance Services contents insurance — renewal schedule DAMSON-PR-421 for the year to 31 August 2027.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":7,\"segment\":\"Total annual premium: £1,480.50.\",\"terms\":[{\"basis\":\"annual\",\"quote\":\"Total annual premium: £1,480.50.\",\"term\":\"premium\",\"value\":\"£1,480.50\"}]},{\"confidence\":\"high\",\"id\":8,\"segment\":\"Compulsory excess: £820.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"Compulsory excess: £820.00 per claim.\",\"term\":\"compulsory_excess\",\"value\":\"£820.00\"}]},{\"confidence\":\"high\",\"id\":9,\"segment\":\"Cover limit: £3,740.00 per policy.\",\"terms\":[{\"basis\":\"per_policy\",\"quote\":\"Cover limit: £3,740.00 per policy.\",\"term\":\"cover_limit\",\"value\":\"£3,740.00\"}]},{\"confidence\":\"low\",\"id\":10,\"segment\":\"Haldon Insurance Services arranges contents insurance cover under DAMSON-PR-421 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":11,\"segment\":\"Your reference is DAMSON-PR-421. Quote it whenever you write to us about this policy.\",\"terms\":[]}]}"
+      }
+    ]
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-premium_rose-damson-04/development-premium_rose-damson-04-previous-cover-limit-6b56ed",
+    "item_id": "development-premium_rose-damson-04-previous-cover-limit-6b56ed",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:3f5234da69865c52b4ff21ac48994e65e9b8b3851c1f6e44757c8e8625ea2ffe",
+    "fixture": "generated-development-premium_rose-damson-04",
+    "fixture_id": "development-premium_rose-damson-04",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Cover limit: £3,740.00 per policy.",
+    "decision_key": "previous|cover limit: £3,740.00 per policy.",
+    "metric": "extraction",
+    "expected": {
+      "term": "cover_limit",
+      "basis": "per_policy",
+      "value": "£3,740.00",
+      "quote": "Cover limit: £3,740.00 per policy."
+    },
+    "actual": {
+      "outcome": "found",
+      "extracted": {
+        "term": "cover_limit",
+        "basis": "per_policy",
+        "value": "£3,740.00",
+        "quote": "Cover limit: £3,740.00 per policy."
+      }
+    },
+    "evidence": {
+      "existence": "pass",
+      "attribution": "pass",
+      "support": "pass"
+    },
+    "trace_ids": [
+      "claim-000005",
+      "claim-000006",
+      "claim-000011",
+      "claim-000012"
+    ],
+    "confidence": {
+      "source": "declared",
+      "level": "high",
+      "trace_id": "claim-000005"
+    },
+    "exchanges": [
+      {
+        "step": "Reading what each document says",
+        "batch": 1,
+        "request": "You read one passage of an insurance document at a time and say which\nnamed values, if any, it states.\n\nFor each passage, decide:\n- terms: a list of the named values this passage states. Most passages\n  state none — an empty list is a correct answer, not a failure, and it\n  is always better than a guess. A passage that explains what cover\n  means, describes how to claim, or thanks somebody for renewing states\n  no named value.\n- confidence: \"high\" | \"medium\" | \"low\"\n\nFor each term give:\n- term: \"premium\" | \"compulsory_excess\" | \"voluntary_excess\" |\n  \"total_excess\" | \"cover_limit\" | \"no_claims_discount\" |\n  \"cooling_off_period\" | \"other\"\n\n  Documents rarely use these words. \"Cover limit\" is the most a policy\n  will pay out, and a schedule may label it \"Insurance amount\", \"Sum\n  insured\", \"Limit of indemnity\" or \"Maximum we will pay\" — those are\n  all \"cover_limit\".\n\n  Use \"other\" when the passage states a named value that is none of\n  these. That is a real answer and the right one: the value goes in\n  front of the person instead of being compared. Never stretch one of\n  the named terms to cover something it is not.\n\n- basis: \"annual\" | \"monthly\" | \"per_claim\" | \"per_policy\"\n\n  What the value is measured against, as the passage says it. A premium\n  quoted as twelve instalments is \"monthly\"; the same policy's total for\n  the year is \"annual\". These are different values, and calling one the\n  other turns an instalment into a price rise.\n\n- value: the value exactly as the document writes it — \"£1,234.56\",\n  \"£500\", \"14 days\", \"60%\". Copy the currency symbol, the commas and\n  the decimals as they appear. Never round, never convert, never work\n  out a total, and never write a number the passage does not contain.\n\n- quote: the words the value comes from, copied exactly from the\n  passage — and the quote must contain the value itself. \"Insurance\n  amount\" is a label, not a quote: on a schedule with three sections it\n  is true of three different amounts, so it shows nothing about which\n  one you read. \"Insurance amount: £604,400.00.\" does show it. Include\n  enough words on either side of the value to make clear which line it\n  came from. This is checked against the document: a quote that is not\n  in the passage, or that does not contain its own value, means the\n  whole term goes to the person instead of being used.\n\nYou are not asked to compare anything, to say whether a value went up\nor down, or to work out a difference. That is done separately, from the\nvalues you copy. Copying them exactly is the whole job.\n\nReturn one result per input, with the same \"id\" you were given, and\necho the passage back in \"segment\". Return JSON only.\n\nPassages:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"Haldon Insurance Services contents insurance — policy schedule DAMSON-PR-421 for the year to 31 August 2026.\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"Total annual premium: £1,348.00.\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"Compulsory excess: £820.00 per claim.\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"Cover limit: £3,740.00 per policy.\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"Your reference is DAMSON-PR-421. Quote it whenever you write to us about this policy.\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"Haldon Insurance Services arranges contents insurance cover under DAMSON-PR-421 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"Haldon Insurance Services contents insurance — renewal schedule DAMSON-PR-421 for the year to 31 August 2027.\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"Total annual premium: £1,480.50.\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"Compulsory excess: £820.00 per claim.\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"Cover limit: £3,740.00 per policy.\"\n  },\n  {\n    \"id\": 10,\n    \"raw\": \"Haldon Insurance Services arranges contents insurance cover under DAMSON-PR-421 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 11,\n    \"raw\": \"Your reference is DAMSON-PR-421. Quote it whenever you write to us about this policy.\"\n  }\n]\n",
+        "response": "{\"results\":[{\"confidence\":\"low\",\"id\":0,\"segment\":\"Haldon Insurance Services contents insurance — policy schedule DAMSON-PR-421 for the year to 31 August 2026.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":1,\"segment\":\"Total annual premium: £1,348.00.\",\"terms\":[{\"basis\":\"annual\",\"quote\":\"Total annual premium: £1,348.00.\",\"term\":\"premium\",\"value\":\"£1,348.00\"}]},{\"confidence\":\"high\",\"id\":2,\"segment\":\"Compulsory excess: £820.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"Compulsory excess: £820.00 per claim.\",\"term\":\"compulsory_excess\",\"value\":\"£820.00\"}]},{\"confidence\":\"high\",\"id\":3,\"segment\":\"Cover limit: £3,740.00 per policy.\",\"terms\":[{\"basis\":\"per_policy\",\"quote\":\"Cover limit: £3,740.00 per policy.\",\"term\":\"cover_limit\",\"value\":\"£3,740.00\"}]},{\"confidence\":\"low\",\"id\":4,\"segment\":\"Your reference is DAMSON-PR-421. Quote it whenever you write to us about this policy.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":5,\"segment\":\"Haldon Insurance Services arranges contents insurance cover under DAMSON-PR-421 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":6,\"segment\":\"Haldon Insurance Services contents insurance — renewal schedule DAMSON-PR-421 for the year to 31 August 2027.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":7,\"segment\":\"Total annual premium: £1,480.50.\",\"terms\":[{\"basis\":\"annual\",\"quote\":\"Total annual premium: £1,480.50.\",\"term\":\"premium\",\"value\":\"£1,480.50\"}]},{\"confidence\":\"high\",\"id\":8,\"segment\":\"Compulsory excess: £820.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"Compulsory excess: £820.00 per claim.\",\"term\":\"compulsory_excess\",\"value\":\"£820.00\"}]},{\"confidence\":\"high\",\"id\":9,\"segment\":\"Cover limit: £3,740.00 per policy.\",\"terms\":[{\"basis\":\"per_policy\",\"quote\":\"Cover limit: £3,740.00 per policy.\",\"term\":\"cover_limit\",\"value\":\"£3,740.00\"}]},{\"confidence\":\"low\",\"id\":10,\"segment\":\"Haldon Insurance Services arranges contents insurance cover under DAMSON-PR-421 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":11,\"segment\":\"Your reference is DAMSON-PR-421. Quote it whenever you write to us about this policy.\",\"terms\":[]}]}"
+      }
+    ]
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-premium_rose-damson-04/development-premium_rose-damson-04-previous-no-value-621970",
+    "item_id": "development-premium_rose-damson-04-previous-no-value-621970",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:3f5234da69865c52b4ff21ac48994e65e9b8b3851c1f6e44757c8e8625ea2ffe",
+    "fixture": "generated-development-premium_rose-damson-04",
+    "fixture_id": "development-premium_rose-damson-04",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Your reference is DAMSON-PR-421. Quote it whenever you write to us about this policy.",
+    "decision_key": "previous|your reference is damson-pr-421. quote it whenever you write to us about this policy.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "absent"
+    },
+    "trace_ids": [
+      "claim-000014",
+      "claim-000018"
+    ],
+    "confidence": {
+      "source": "declared",
+      "level": "low",
+      "trace_id": "claim-000014"
+    },
+    "exchanges": [
+      {
+        "step": "Reading what each document says",
+        "batch": 1,
+        "request": "You read one passage of an insurance document at a time and say which\nnamed values, if any, it states.\n\nFor each passage, decide:\n- terms: a list of the named values this passage states. Most passages\n  state none — an empty list is a correct answer, not a failure, and it\n  is always better than a guess. A passage that explains what cover\n  means, describes how to claim, or thanks somebody for renewing states\n  no named value.\n- confidence: \"high\" | \"medium\" | \"low\"\n\nFor each term give:\n- term: \"premium\" | \"compulsory_excess\" | \"voluntary_excess\" |\n  \"total_excess\" | \"cover_limit\" | \"no_claims_discount\" |\n  \"cooling_off_period\" | \"other\"\n\n  Documents rarely use these words. \"Cover limit\" is the most a policy\n  will pay out, and a schedule may label it \"Insurance amount\", \"Sum\n  insured\", \"Limit of indemnity\" or \"Maximum we will pay\" — those are\n  all \"cover_limit\".\n\n  Use \"other\" when the passage states a named value that is none of\n  these. That is a real answer and the right one: the value goes in\n  front of the person instead of being compared. Never stretch one of\n  the named terms to cover something it is not.\n\n- basis: \"annual\" | \"monthly\" | \"per_claim\" | \"per_policy\"\n\n  What the value is measured against, as the passage says it. A premium\n  quoted as twelve instalments is \"monthly\"; the same policy's total for\n  the year is \"annual\". These are different values, and calling one the\n  other turns an instalment into a price rise.\n\n- value: the value exactly as the document writes it — \"£1,234.56\",\n  \"£500\", \"14 days\", \"60%\". Copy the currency symbol, the commas and\n  the decimals as they appear. Never round, never convert, never work\n  out a total, and never write a number the passage does not contain.\n\n- quote: the words the value comes from, copied exactly from the\n  passage — and the quote must contain the value itself. \"Insurance\n  amount\" is a label, not a quote: on a schedule with three sections it\n  is true of three different amounts, so it shows nothing about which\n  one you read. \"Insurance amount: £604,400.00.\" does show it. Include\n  enough words on either side of the value to make clear which line it\n  came from. This is checked against the document: a quote that is not\n  in the passage, or that does not contain its own value, means the\n  whole term goes to the person instead of being used.\n\nYou are not asked to compare anything, to say whether a value went up\nor down, or to work out a difference. That is done separately, from the\nvalues you copy. Copying them exactly is the whole job.\n\nReturn one result per input, with the same \"id\" you were given, and\necho the passage back in \"segment\". Return JSON only.\n\nPassages:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"Haldon Insurance Services contents insurance — policy schedule DAMSON-PR-421 for the year to 31 August 2026.\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"Total annual premium: £1,348.00.\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"Compulsory excess: £820.00 per claim.\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"Cover limit: £3,740.00 per policy.\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"Your reference is DAMSON-PR-421. Quote it whenever you write to us about this policy.\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"Haldon Insurance Services arranges contents insurance cover under DAMSON-PR-421 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"Haldon Insurance Services contents insurance — renewal schedule DAMSON-PR-421 for the year to 31 August 2027.\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"Total annual premium: £1,480.50.\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"Compulsory excess: £820.00 per claim.\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"Cover limit: £3,740.00 per policy.\"\n  },\n  {\n    \"id\": 10,\n    \"raw\": \"Haldon Insurance Services arranges contents insurance cover under DAMSON-PR-421 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 11,\n    \"raw\": \"Your reference is DAMSON-PR-421. Quote it whenever you write to us about this policy.\"\n  }\n]\n",
+        "response": "{\"results\":[{\"confidence\":\"low\",\"id\":0,\"segment\":\"Haldon Insurance Services contents insurance — policy schedule DAMSON-PR-421 for the year to 31 August 2026.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":1,\"segment\":\"Total annual premium: £1,348.00.\",\"terms\":[{\"basis\":\"annual\",\"quote\":\"Total annual premium: £1,348.00.\",\"term\":\"premium\",\"value\":\"£1,348.00\"}]},{\"confidence\":\"high\",\"id\":2,\"segment\":\"Compulsory excess: £820.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"Compulsory excess: £820.00 per claim.\",\"term\":\"compulsory_excess\",\"value\":\"£820.00\"}]},{\"confidence\":\"high\",\"id\":3,\"segment\":\"Cover limit: £3,740.00 per policy.\",\"terms\":[{\"basis\":\"per_policy\",\"quote\":\"Cover limit: £3,740.00 per policy.\",\"term\":\"cover_limit\",\"value\":\"£3,740.00\"}]},{\"confidence\":\"low\",\"id\":4,\"segment\":\"Your reference is DAMSON-PR-421. Quote it whenever you write to us about this policy.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":5,\"segment\":\"Haldon Insurance Services arranges contents insurance cover under DAMSON-PR-421 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":6,\"segment\":\"Haldon Insurance Services contents insurance — renewal schedule DAMSON-PR-421 for the year to 31 August 2027.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":7,\"segment\":\"Total annual premium: £1,480.50.\",\"terms\":[{\"basis\":\"annual\",\"quote\":\"Total annual premium: £1,480.50.\",\"term\":\"premium\",\"value\":\"£1,480.50\"}]},{\"confidence\":\"high\",\"id\":8,\"segment\":\"Compulsory excess: £820.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"Compulsory excess: £820.00 per claim.\",\"term\":\"compulsory_excess\",\"value\":\"£820.00\"}]},{\"confidence\":\"high\",\"id\":9,\"segment\":\"Cover limit: £3,740.00 per policy.\",\"terms\":[{\"basis\":\"per_policy\",\"quote\":\"Cover limit: £3,740.00 per policy.\",\"term\":\"cover_limit\",\"value\":\"£3,740.00\"}]},{\"confidence\":\"low\",\"id\":10,\"segment\":\"Haldon Insurance Services arranges contents insurance cover under DAMSON-PR-421 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":11,\"segment\":\"Your reference is DAMSON-PR-421. Quote it whenever you write to us about this policy.\",\"terms\":[]}]}"
+      }
+    ]
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-premium_rose-damson-04/development-premium_rose-damson-04-previous-no-value-822acc",
+    "item_id": "development-premium_rose-damson-04-previous-no-value-822acc",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:3f5234da69865c52b4ff21ac48994e65e9b8b3851c1f6e44757c8e8625ea2ffe",
+    "fixture": "generated-development-premium_rose-damson-04",
+    "fixture_id": "development-premium_rose-damson-04",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Haldon Insurance Services arranges contents insurance cover under DAMSON-PR-421 and is regulated in the United Kingdom.",
+    "decision_key": "previous|haldon insurance services arranges contents insurance cover under damson-pr-421 and is regulated in the united kingdom.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "absent"
+    },
+    "trace_ids": [
+      "claim-000015",
+      "claim-000017"
+    ],
+    "confidence": {
+      "source": "declared",
+      "level": "low",
+      "trace_id": "claim-000015"
+    },
+    "exchanges": [
+      {
+        "step": "Reading what each document says",
+        "batch": 1,
+        "request": "You read one passage of an insurance document at a time and say which\nnamed values, if any, it states.\n\nFor each passage, decide:\n- terms: a list of the named values this passage states. Most passages\n  state none — an empty list is a correct answer, not a failure, and it\n  is always better than a guess. A passage that explains what cover\n  means, describes how to claim, or thanks somebody for renewing states\n  no named value.\n- confidence: \"high\" | \"medium\" | \"low\"\n\nFor each term give:\n- term: \"premium\" | \"compulsory_excess\" | \"voluntary_excess\" |\n  \"total_excess\" | \"cover_limit\" | \"no_claims_discount\" |\n  \"cooling_off_period\" | \"other\"\n\n  Documents rarely use these words. \"Cover limit\" is the most a policy\n  will pay out, and a schedule may label it \"Insurance amount\", \"Sum\n  insured\", \"Limit of indemnity\" or \"Maximum we will pay\" — those are\n  all \"cover_limit\".\n\n  Use \"other\" when the passage states a named value that is none of\n  these. That is a real answer and the right one: the value goes in\n  front of the person instead of being compared. Never stretch one of\n  the named terms to cover something it is not.\n\n- basis: \"annual\" | \"monthly\" | \"per_claim\" | \"per_policy\"\n\n  What the value is measured against, as the passage says it. A premium\n  quoted as twelve instalments is \"monthly\"; the same policy's total for\n  the year is \"annual\". These are different values, and calling one the\n  other turns an instalment into a price rise.\n\n- value: the value exactly as the document writes it — \"£1,234.56\",\n  \"£500\", \"14 days\", \"60%\". Copy the currency symbol, the commas and\n  the decimals as they appear. Never round, never convert, never work\n  out a total, and never write a number the passage does not contain.\n\n- quote: the words the value comes from, copied exactly from the\n  passage — and the quote must contain the value itself. \"Insurance\n  amount\" is a label, not a quote: on a schedule with three sections it\n  is true of three different amounts, so it shows nothing about which\n  one you read. \"Insurance amount: £604,400.00.\" does show it. Include\n  enough words on either side of the value to make clear which line it\n  came from. This is checked against the document: a quote that is not\n  in the passage, or that does not contain its own value, means the\n  whole term goes to the person instead of being used.\n\nYou are not asked to compare anything, to say whether a value went up\nor down, or to work out a difference. That is done separately, from the\nvalues you copy. Copying them exactly is the whole job.\n\nReturn one result per input, with the same \"id\" you were given, and\necho the passage back in \"segment\". Return JSON only.\n\nPassages:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"Haldon Insurance Services contents insurance — policy schedule DAMSON-PR-421 for the year to 31 August 2026.\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"Total annual premium: £1,348.00.\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"Compulsory excess: £820.00 per claim.\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"Cover limit: £3,740.00 per policy.\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"Your reference is DAMSON-PR-421. Quote it whenever you write to us about this policy.\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"Haldon Insurance Services arranges contents insurance cover under DAMSON-PR-421 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"Haldon Insurance Services contents insurance — renewal schedule DAMSON-PR-421 for the year to 31 August 2027.\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"Total annual premium: £1,480.50.\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"Compulsory excess: £820.00 per claim.\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"Cover limit: £3,740.00 per policy.\"\n  },\n  {\n    \"id\": 10,\n    \"raw\": \"Haldon Insurance Services arranges contents insurance cover under DAMSON-PR-421 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 11,\n    \"raw\": \"Your reference is DAMSON-PR-421. Quote it whenever you write to us about this policy.\"\n  }\n]\n",
+        "response": "{\"results\":[{\"confidence\":\"low\",\"id\":0,\"segment\":\"Haldon Insurance Services contents insurance — policy schedule DAMSON-PR-421 for the year to 31 August 2026.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":1,\"segment\":\"Total annual premium: £1,348.00.\",\"terms\":[{\"basis\":\"annual\",\"quote\":\"Total annual premium: £1,348.00.\",\"term\":\"premium\",\"value\":\"£1,348.00\"}]},{\"confidence\":\"high\",\"id\":2,\"segment\":\"Compulsory excess: £820.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"Compulsory excess: £820.00 per claim.\",\"term\":\"compulsory_excess\",\"value\":\"£820.00\"}]},{\"confidence\":\"high\",\"id\":3,\"segment\":\"Cover limit: £3,740.00 per policy.\",\"terms\":[{\"basis\":\"per_policy\",\"quote\":\"Cover limit: £3,740.00 per policy.\",\"term\":\"cover_limit\",\"value\":\"£3,740.00\"}]},{\"confidence\":\"low\",\"id\":4,\"segment\":\"Your reference is DAMSON-PR-421. Quote it whenever you write to us about this policy.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":5,\"segment\":\"Haldon Insurance Services arranges contents insurance cover under DAMSON-PR-421 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":6,\"segment\":\"Haldon Insurance Services contents insurance — renewal schedule DAMSON-PR-421 for the year to 31 August 2027.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":7,\"segment\":\"Total annual premium: £1,480.50.\",\"terms\":[{\"basis\":\"annual\",\"quote\":\"Total annual premium: £1,480.50.\",\"term\":\"premium\",\"value\":\"£1,480.50\"}]},{\"confidence\":\"high\",\"id\":8,\"segment\":\"Compulsory excess: £820.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"Compulsory excess: £820.00 per claim.\",\"term\":\"compulsory_excess\",\"value\":\"£820.00\"}]},{\"confidence\":\"high\",\"id\":9,\"segment\":\"Cover limit: £3,740.00 per policy.\",\"terms\":[{\"basis\":\"per_policy\",\"quote\":\"Cover limit: £3,740.00 per policy.\",\"term\":\"cover_limit\",\"value\":\"£3,740.00\"}]},{\"confidence\":\"low\",\"id\":10,\"segment\":\"Haldon Insurance Services arranges contents insurance cover under DAMSON-PR-421 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":11,\"segment\":\"Your reference is DAMSON-PR-421. Quote it whenever you write to us about this policy.\",\"terms\":[]}]}"
+      }
+    ]
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-premium_rose-damson-04/development-premium_rose-damson-04-renewal-no-value-bf56fa",
+    "item_id": "development-premium_rose-damson-04-renewal-no-value-bf56fa",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:3f5234da69865c52b4ff21ac48994e65e9b8b3851c1f6e44757c8e8625ea2ffe",
+    "fixture": "generated-development-premium_rose-damson-04",
+    "fixture_id": "development-premium_rose-damson-04",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Haldon Insurance Services contents insurance — renewal schedule DAMSON-PR-421 for the year to 31 August 2027.",
+    "decision_key": "renewal|haldon insurance services contents insurance — renewal schedule damson-pr-421 for the year to 31 august 2027.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "absent"
+    },
+    "trace_ids": [
+      "claim-000016"
+    ],
+    "confidence": {
+      "source": "declared",
+      "level": "low",
+      "trace_id": "claim-000016"
+    },
+    "exchanges": [
+      {
+        "step": "Reading what each document says",
+        "batch": 1,
+        "request": "You read one passage of an insurance document at a time and say which\nnamed values, if any, it states.\n\nFor each passage, decide:\n- terms: a list of the named values this passage states. Most passages\n  state none — an empty list is a correct answer, not a failure, and it\n  is always better than a guess. A passage that explains what cover\n  means, describes how to claim, or thanks somebody for renewing states\n  no named value.\n- confidence: \"high\" | \"medium\" | \"low\"\n\nFor each term give:\n- term: \"premium\" | \"compulsory_excess\" | \"voluntary_excess\" |\n  \"total_excess\" | \"cover_limit\" | \"no_claims_discount\" |\n  \"cooling_off_period\" | \"other\"\n\n  Documents rarely use these words. \"Cover limit\" is the most a policy\n  will pay out, and a schedule may label it \"Insurance amount\", \"Sum\n  insured\", \"Limit of indemnity\" or \"Maximum we will pay\" — those are\n  all \"cover_limit\".\n\n  Use \"other\" when the passage states a named value that is none of\n  these. That is a real answer and the right one: the value goes in\n  front of the person instead of being compared. Never stretch one of\n  the named terms to cover something it is not.\n\n- basis: \"annual\" | \"monthly\" | \"per_claim\" | \"per_policy\"\n\n  What the value is measured against, as the passage says it. A premium\n  quoted as twelve instalments is \"monthly\"; the same policy's total for\n  the year is \"annual\". These are different values, and calling one the\n  other turns an instalment into a price rise.\n\n- value: the value exactly as the document writes it — \"£1,234.56\",\n  \"£500\", \"14 days\", \"60%\". Copy the currency symbol, the commas and\n  the decimals as they appear. Never round, never convert, never work\n  out a total, and never write a number the passage does not contain.\n\n- quote: the words the value comes from, copied exactly from the\n  passage — and the quote must contain the value itself. \"Insurance\n  amount\" is a label, not a quote: on a schedule with three sections it\n  is true of three different amounts, so it shows nothing about which\n  one you read. \"Insurance amount: £604,400.00.\" does show it. Include\n  enough words on either side of the value to make clear which line it\n  came from. This is checked against the document: a quote that is not\n  in the passage, or that does not contain its own value, means the\n  whole term goes to the person instead of being used.\n\nYou are not asked to compare anything, to say whether a value went up\nor down, or to work out a difference. That is done separately, from the\nvalues you copy. Copying them exactly is the whole job.\n\nReturn one result per input, with the same \"id\" you were given, and\necho the passage back in \"segment\". Return JSON only.\n\nPassages:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"Haldon Insurance Services contents insurance — policy schedule DAMSON-PR-421 for the year to 31 August 2026.\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"Total annual premium: £1,348.00.\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"Compulsory excess: £820.00 per claim.\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"Cover limit: £3,740.00 per policy.\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"Your reference is DAMSON-PR-421. Quote it whenever you write to us about this policy.\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"Haldon Insurance Services arranges contents insurance cover under DAMSON-PR-421 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"Haldon Insurance Services contents insurance — renewal schedule DAMSON-PR-421 for the year to 31 August 2027.\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"Total annual premium: £1,480.50.\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"Compulsory excess: £820.00 per claim.\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"Cover limit: £3,740.00 per policy.\"\n  },\n  {\n    \"id\": 10,\n    \"raw\": \"Haldon Insurance Services arranges contents insurance cover under DAMSON-PR-421 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 11,\n    \"raw\": \"Your reference is DAMSON-PR-421. Quote it whenever you write to us about this policy.\"\n  }\n]\n",
+        "response": "{\"results\":[{\"confidence\":\"low\",\"id\":0,\"segment\":\"Haldon Insurance Services contents insurance — policy schedule DAMSON-PR-421 for the year to 31 August 2026.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":1,\"segment\":\"Total annual premium: £1,348.00.\",\"terms\":[{\"basis\":\"annual\",\"quote\":\"Total annual premium: £1,348.00.\",\"term\":\"premium\",\"value\":\"£1,348.00\"}]},{\"confidence\":\"high\",\"id\":2,\"segment\":\"Compulsory excess: £820.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"Compulsory excess: £820.00 per claim.\",\"term\":\"compulsory_excess\",\"value\":\"£820.00\"}]},{\"confidence\":\"high\",\"id\":3,\"segment\":\"Cover limit: £3,740.00 per policy.\",\"terms\":[{\"basis\":\"per_policy\",\"quote\":\"Cover limit: £3,740.00 per policy.\",\"term\":\"cover_limit\",\"value\":\"£3,740.00\"}]},{\"confidence\":\"low\",\"id\":4,\"segment\":\"Your reference is DAMSON-PR-421. Quote it whenever you write to us about this policy.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":5,\"segment\":\"Haldon Insurance Services arranges contents insurance cover under DAMSON-PR-421 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":6,\"segment\":\"Haldon Insurance Services contents insurance — renewal schedule DAMSON-PR-421 for the year to 31 August 2027.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":7,\"segment\":\"Total annual premium: £1,480.50.\",\"terms\":[{\"basis\":\"annual\",\"quote\":\"Total annual premium: £1,480.50.\",\"term\":\"premium\",\"value\":\"£1,480.50\"}]},{\"confidence\":\"high\",\"id\":8,\"segment\":\"Compulsory excess: £820.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"Compulsory excess: £820.00 per claim.\",\"term\":\"compulsory_excess\",\"value\":\"£820.00\"}]},{\"confidence\":\"high\",\"id\":9,\"segment\":\"Cover limit: £3,740.00 per policy.\",\"terms\":[{\"basis\":\"per_policy\",\"quote\":\"Cover limit: £3,740.00 per policy.\",\"term\":\"cover_limit\",\"value\":\"£3,740.00\"}]},{\"confidence\":\"low\",\"id\":10,\"segment\":\"Haldon Insurance Services arranges contents insurance cover under DAMSON-PR-421 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":11,\"segment\":\"Your reference is DAMSON-PR-421. Quote it whenever you write to us about this policy.\",\"terms\":[]}]}"
+      }
+    ]
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-premium_rose-damson-04/development-premium_rose-damson-04-renewal-premium-2e1758",
+    "item_id": "development-premium_rose-damson-04-renewal-premium-2e1758",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:3f5234da69865c52b4ff21ac48994e65e9b8b3851c1f6e44757c8e8625ea2ffe",
+    "fixture": "generated-development-premium_rose-damson-04",
+    "fixture_id": "development-premium_rose-damson-04",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Total annual premium: £1,480.50.",
+    "decision_key": "renewal|total annual premium: £1,480.50.",
+    "metric": "extraction",
+    "expected": {
+      "term": "premium",
+      "basis": "annual",
+      "value": "£1,480.50",
+      "quote": "Total annual premium: £1,480.50."
+    },
+    "actual": {
+      "outcome": "found",
+      "extracted": {
+        "term": "premium",
+        "basis": "annual",
+        "value": "£1,480.50",
+        "quote": "Total annual premium: £1,480.50."
+      }
+    },
+    "evidence": {
+      "existence": "pass",
+      "attribution": "pass",
+      "support": "pass"
+    },
+    "trace_ids": [
+      "claim-000007",
+      "claim-000008"
+    ],
+    "confidence": {
+      "source": "declared",
+      "level": "high",
+      "trace_id": "claim-000007"
+    },
+    "exchanges": [
+      {
+        "step": "Reading what each document says",
+        "batch": 1,
+        "request": "You read one passage of an insurance document at a time and say which\nnamed values, if any, it states.\n\nFor each passage, decide:\n- terms: a list of the named values this passage states. Most passages\n  state none — an empty list is a correct answer, not a failure, and it\n  is always better than a guess. A passage that explains what cover\n  means, describes how to claim, or thanks somebody for renewing states\n  no named value.\n- confidence: \"high\" | \"medium\" | \"low\"\n\nFor each term give:\n- term: \"premium\" | \"compulsory_excess\" | \"voluntary_excess\" |\n  \"total_excess\" | \"cover_limit\" | \"no_claims_discount\" |\n  \"cooling_off_period\" | \"other\"\n\n  Documents rarely use these words. \"Cover limit\" is the most a policy\n  will pay out, and a schedule may label it \"Insurance amount\", \"Sum\n  insured\", \"Limit of indemnity\" or \"Maximum we will pay\" — those are\n  all \"cover_limit\".\n\n  Use \"other\" when the passage states a named value that is none of\n  these. That is a real answer and the right one: the value goes in\n  front of the person instead of being compared. Never stretch one of\n  the named terms to cover something it is not.\n\n- basis: \"annual\" | \"monthly\" | \"per_claim\" | \"per_policy\"\n\n  What the value is measured against, as the passage says it. A premium\n  quoted as twelve instalments is \"monthly\"; the same policy's total for\n  the year is \"annual\". These are different values, and calling one the\n  other turns an instalment into a price rise.\n\n- value: the value exactly as the document writes it — \"£1,234.56\",\n  \"£500\", \"14 days\", \"60%\". Copy the currency symbol, the commas and\n  the decimals as they appear. Never round, never convert, never work\n  out a total, and never write a number the passage does not contain.\n\n- quote: the words the value comes from, copied exactly from the\n  passage — and the quote must contain the value itself. \"Insurance\n  amount\" is a label, not a quote: on a schedule with three sections it\n  is true of three different amounts, so it shows nothing about which\n  one you read. \"Insurance amount: £604,400.00.\" does show it. Include\n  enough words on either side of the value to make clear which line it\n  came from. This is checked against the document: a quote that is not\n  in the passage, or that does not contain its own value, means the\n  whole term goes to the person instead of being used.\n\nYou are not asked to compare anything, to say whether a value went up\nor down, or to work out a difference. That is done separately, from the\nvalues you copy. Copying them exactly is the whole job.\n\nReturn one result per input, with the same \"id\" you were given, and\necho the passage back in \"segment\". Return JSON only.\n\nPassages:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"Haldon Insurance Services contents insurance — policy schedule DAMSON-PR-421 for the year to 31 August 2026.\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"Total annual premium: £1,348.00.\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"Compulsory excess: £820.00 per claim.\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"Cover limit: £3,740.00 per policy.\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"Your reference is DAMSON-PR-421. Quote it whenever you write to us about this policy.\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"Haldon Insurance Services arranges contents insurance cover under DAMSON-PR-421 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"Haldon Insurance Services contents insurance — renewal schedule DAMSON-PR-421 for the year to 31 August 2027.\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"Total annual premium: £1,480.50.\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"Compulsory excess: £820.00 per claim.\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"Cover limit: £3,740.00 per policy.\"\n  },\n  {\n    \"id\": 10,\n    \"raw\": \"Haldon Insurance Services arranges contents insurance cover under DAMSON-PR-421 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 11,\n    \"raw\": \"Your reference is DAMSON-PR-421. Quote it whenever you write to us about this policy.\"\n  }\n]\n",
+        "response": "{\"results\":[{\"confidence\":\"low\",\"id\":0,\"segment\":\"Haldon Insurance Services contents insurance — policy schedule DAMSON-PR-421 for the year to 31 August 2026.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":1,\"segment\":\"Total annual premium: £1,348.00.\",\"terms\":[{\"basis\":\"annual\",\"quote\":\"Total annual premium: £1,348.00.\",\"term\":\"premium\",\"value\":\"£1,348.00\"}]},{\"confidence\":\"high\",\"id\":2,\"segment\":\"Compulsory excess: £820.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"Compulsory excess: £820.00 per claim.\",\"term\":\"compulsory_excess\",\"value\":\"£820.00\"}]},{\"confidence\":\"high\",\"id\":3,\"segment\":\"Cover limit: £3,740.00 per policy.\",\"terms\":[{\"basis\":\"per_policy\",\"quote\":\"Cover limit: £3,740.00 per policy.\",\"term\":\"cover_limit\",\"value\":\"£3,740.00\"}]},{\"confidence\":\"low\",\"id\":4,\"segment\":\"Your reference is DAMSON-PR-421. Quote it whenever you write to us about this policy.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":5,\"segment\":\"Haldon Insurance Services arranges contents insurance cover under DAMSON-PR-421 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":6,\"segment\":\"Haldon Insurance Services contents insurance — renewal schedule DAMSON-PR-421 for the year to 31 August 2027.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":7,\"segment\":\"Total annual premium: £1,480.50.\",\"terms\":[{\"basis\":\"annual\",\"quote\":\"Total annual premium: £1,480.50.\",\"term\":\"premium\",\"value\":\"£1,480.50\"}]},{\"confidence\":\"high\",\"id\":8,\"segment\":\"Compulsory excess: £820.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"Compulsory excess: £820.00 per claim.\",\"term\":\"compulsory_excess\",\"value\":\"£820.00\"}]},{\"confidence\":\"high\",\"id\":9,\"segment\":\"Cover limit: £3,740.00 per policy.\",\"terms\":[{\"basis\":\"per_policy\",\"quote\":\"Cover limit: £3,740.00 per policy.\",\"term\":\"cover_limit\",\"value\":\"£3,740.00\"}]},{\"confidence\":\"low\",\"id\":10,\"segment\":\"Haldon Insurance Services arranges contents insurance cover under DAMSON-PR-421 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":11,\"segment\":\"Your reference is DAMSON-PR-421. Quote it whenever you write to us about this policy.\",\"terms\":[]}]}"
+      }
+    ]
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-premium_rose-damson-04/development-premium_rose-damson-04-renewal-compulsory-excess-4840f9",
+    "item_id": "development-premium_rose-damson-04-renewal-compulsory-excess-4840f9",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:3f5234da69865c52b4ff21ac48994e65e9b8b3851c1f6e44757c8e8625ea2ffe",
+    "fixture": "generated-development-premium_rose-damson-04",
+    "fixture_id": "development-premium_rose-damson-04",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Compulsory excess: £820.00 per claim.",
+    "decision_key": "renewal|compulsory excess: £820.00 per claim.",
+    "metric": "extraction",
+    "expected": {
+      "term": "compulsory_excess",
+      "basis": "per_claim",
+      "value": "£820.00",
+      "quote": "Compulsory excess: £820.00 per claim."
+    },
+    "actual": {
+      "outcome": "found",
+      "extracted": {
+        "term": "compulsory_excess",
+        "basis": "per_claim",
+        "value": "£820.00",
+        "quote": "Compulsory excess: £820.00 per claim."
+      }
+    },
+    "evidence": {
+      "existence": "pass",
+      "attribution": "pass",
+      "support": "pass"
+    },
+    "trace_ids": [
+      "claim-000003",
+      "claim-000004",
+      "claim-000009",
+      "claim-000010"
+    ],
+    "confidence": {
+      "source": "declared",
+      "level": "high",
+      "trace_id": "claim-000003"
+    },
+    "exchanges": [
+      {
+        "step": "Reading what each document says",
+        "batch": 1,
+        "request": "You read one passage of an insurance document at a time and say which\nnamed values, if any, it states.\n\nFor each passage, decide:\n- terms: a list of the named values this passage states. Most passages\n  state none — an empty list is a correct answer, not a failure, and it\n  is always better than a guess. A passage that explains what cover\n  means, describes how to claim, or thanks somebody for renewing states\n  no named value.\n- confidence: \"high\" | \"medium\" | \"low\"\n\nFor each term give:\n- term: \"premium\" | \"compulsory_excess\" | \"voluntary_excess\" |\n  \"total_excess\" | \"cover_limit\" | \"no_claims_discount\" |\n  \"cooling_off_period\" | \"other\"\n\n  Documents rarely use these words. \"Cover limit\" is the most a policy\n  will pay out, and a schedule may label it \"Insurance amount\", \"Sum\n  insured\", \"Limit of indemnity\" or \"Maximum we will pay\" — those are\n  all \"cover_limit\".\n\n  Use \"other\" when the passage states a named value that is none of\n  these. That is a real answer and the right one: the value goes in\n  front of the person instead of being compared. Never stretch one of\n  the named terms to cover something it is not.\n\n- basis: \"annual\" | \"monthly\" | \"per_claim\" | \"per_policy\"\n\n  What the value is measured against, as the passage says it. A premium\n  quoted as twelve instalments is \"monthly\"; the same policy's total for\n  the year is \"annual\". These are different values, and calling one the\n  other turns an instalment into a price rise.\n\n- value: the value exactly as the document writes it — \"£1,234.56\",\n  \"£500\", \"14 days\", \"60%\". Copy the currency symbol, the commas and\n  the decimals as they appear. Never round, never convert, never work\n  out a total, and never write a number the passage does not contain.\n\n- quote: the words the value comes from, copied exactly from the\n  passage — and the quote must contain the value itself. \"Insurance\n  amount\" is a label, not a quote: on a schedule with three sections it\n  is true of three different amounts, so it shows nothing about which\n  one you read. \"Insurance amount: £604,400.00.\" does show it. Include\n  enough words on either side of the value to make clear which line it\n  came from. This is checked against the document: a quote that is not\n  in the passage, or that does not contain its own value, means the\n  whole term goes to the person instead of being used.\n\nYou are not asked to compare anything, to say whether a value went up\nor down, or to work out a difference. That is done separately, from the\nvalues you copy. Copying them exactly is the whole job.\n\nReturn one result per input, with the same \"id\" you were given, and\necho the passage back in \"segment\". Return JSON only.\n\nPassages:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"Haldon Insurance Services contents insurance — policy schedule DAMSON-PR-421 for the year to 31 August 2026.\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"Total annual premium: £1,348.00.\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"Compulsory excess: £820.00 per claim.\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"Cover limit: £3,740.00 per policy.\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"Your reference is DAMSON-PR-421. Quote it whenever you write to us about this policy.\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"Haldon Insurance Services arranges contents insurance cover under DAMSON-PR-421 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"Haldon Insurance Services contents insurance — renewal schedule DAMSON-PR-421 for the year to 31 August 2027.\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"Total annual premium: £1,480.50.\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"Compulsory excess: £820.00 per claim.\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"Cover limit: £3,740.00 per policy.\"\n  },\n  {\n    \"id\": 10,\n    \"raw\": \"Haldon Insurance Services arranges contents insurance cover under DAMSON-PR-421 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 11,\n    \"raw\": \"Your reference is DAMSON-PR-421. Quote it whenever you write to us about this policy.\"\n  }\n]\n",
+        "response": "{\"results\":[{\"confidence\":\"low\",\"id\":0,\"segment\":\"Haldon Insurance Services contents insurance — policy schedule DAMSON-PR-421 for the year to 31 August 2026.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":1,\"segment\":\"Total annual premium: £1,348.00.\",\"terms\":[{\"basis\":\"annual\",\"quote\":\"Total annual premium: £1,348.00.\",\"term\":\"premium\",\"value\":\"£1,348.00\"}]},{\"confidence\":\"high\",\"id\":2,\"segment\":\"Compulsory excess: £820.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"Compulsory excess: £820.00 per claim.\",\"term\":\"compulsory_excess\",\"value\":\"£820.00\"}]},{\"confidence\":\"high\",\"id\":3,\"segment\":\"Cover limit: £3,740.00 per policy.\",\"terms\":[{\"basis\":\"per_policy\",\"quote\":\"Cover limit: £3,740.00 per policy.\",\"term\":\"cover_limit\",\"value\":\"£3,740.00\"}]},{\"confidence\":\"low\",\"id\":4,\"segment\":\"Your reference is DAMSON-PR-421. Quote it whenever you write to us about this policy.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":5,\"segment\":\"Haldon Insurance Services arranges contents insurance cover under DAMSON-PR-421 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":6,\"segment\":\"Haldon Insurance Services contents insurance — renewal schedule DAMSON-PR-421 for the year to 31 August 2027.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":7,\"segment\":\"Total annual premium: £1,480.50.\",\"terms\":[{\"basis\":\"annual\",\"quote\":\"Total annual premium: £1,480.50.\",\"term\":\"premium\",\"value\":\"£1,480.50\"}]},{\"confidence\":\"high\",\"id\":8,\"segment\":\"Compulsory excess: £820.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"Compulsory excess: £820.00 per claim.\",\"term\":\"compulsory_excess\",\"value\":\"£820.00\"}]},{\"confidence\":\"high\",\"id\":9,\"segment\":\"Cover limit: £3,740.00 per policy.\",\"terms\":[{\"basis\":\"per_policy\",\"quote\":\"Cover limit: £3,740.00 per policy.\",\"term\":\"cover_limit\",\"value\":\"£3,740.00\"}]},{\"confidence\":\"low\",\"id\":10,\"segment\":\"Haldon Insurance Services arranges contents insurance cover under DAMSON-PR-421 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":11,\"segment\":\"Your reference is DAMSON-PR-421. Quote it whenever you write to us about this policy.\",\"terms\":[]}]}"
+      }
+    ]
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-premium_rose-damson-04/development-premium_rose-damson-04-renewal-cover-limit-6b56ed",
+    "item_id": "development-premium_rose-damson-04-renewal-cover-limit-6b56ed",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:3f5234da69865c52b4ff21ac48994e65e9b8b3851c1f6e44757c8e8625ea2ffe",
+    "fixture": "generated-development-premium_rose-damson-04",
+    "fixture_id": "development-premium_rose-damson-04",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Cover limit: £3,740.00 per policy.",
+    "decision_key": "renewal|cover limit: £3,740.00 per policy.",
+    "metric": "extraction",
+    "expected": {
+      "term": "cover_limit",
+      "basis": "per_policy",
+      "value": "£3,740.00",
+      "quote": "Cover limit: £3,740.00 per policy."
+    },
+    "actual": {
+      "outcome": "found",
+      "extracted": {
+        "term": "cover_limit",
+        "basis": "per_policy",
+        "value": "£3,740.00",
+        "quote": "Cover limit: £3,740.00 per policy."
+      }
+    },
+    "evidence": {
+      "existence": "pass",
+      "attribution": "pass",
+      "support": "pass"
+    },
+    "trace_ids": [
+      "claim-000005",
+      "claim-000006",
+      "claim-000011",
+      "claim-000012"
+    ],
+    "confidence": {
+      "source": "declared",
+      "level": "high",
+      "trace_id": "claim-000005"
+    },
+    "exchanges": [
+      {
+        "step": "Reading what each document says",
+        "batch": 1,
+        "request": "You read one passage of an insurance document at a time and say which\nnamed values, if any, it states.\n\nFor each passage, decide:\n- terms: a list of the named values this passage states. Most passages\n  state none — an empty list is a correct answer, not a failure, and it\n  is always better than a guess. A passage that explains what cover\n  means, describes how to claim, or thanks somebody for renewing states\n  no named value.\n- confidence: \"high\" | \"medium\" | \"low\"\n\nFor each term give:\n- term: \"premium\" | \"compulsory_excess\" | \"voluntary_excess\" |\n  \"total_excess\" | \"cover_limit\" | \"no_claims_discount\" |\n  \"cooling_off_period\" | \"other\"\n\n  Documents rarely use these words. \"Cover limit\" is the most a policy\n  will pay out, and a schedule may label it \"Insurance amount\", \"Sum\n  insured\", \"Limit of indemnity\" or \"Maximum we will pay\" — those are\n  all \"cover_limit\".\n\n  Use \"other\" when the passage states a named value that is none of\n  these. That is a real answer and the right one: the value goes in\n  front of the person instead of being compared. Never stretch one of\n  the named terms to cover something it is not.\n\n- basis: \"annual\" | \"monthly\" | \"per_claim\" | \"per_policy\"\n\n  What the value is measured against, as the passage says it. A premium\n  quoted as twelve instalments is \"monthly\"; the same policy's total for\n  the year is \"annual\". These are different values, and calling one the\n  other turns an instalment into a price rise.\n\n- value: the value exactly as the document writes it — \"£1,234.56\",\n  \"£500\", \"14 days\", \"60%\". Copy the currency symbol, the commas and\n  the decimals as they appear. Never round, never convert, never work\n  out a total, and never write a number the passage does not contain.\n\n- quote: the words the value comes from, copied exactly from the\n  passage — and the quote must contain the value itself. \"Insurance\n  amount\" is a label, not a quote: on a schedule with three sections it\n  is true of three different amounts, so it shows nothing about which\n  one you read. \"Insurance amount: £604,400.00.\" does show it. Include\n  enough words on either side of the value to make clear which line it\n  came from. This is checked against the document: a quote that is not\n  in the passage, or that does not contain its own value, means the\n  whole term goes to the person instead of being used.\n\nYou are not asked to compare anything, to say whether a value went up\nor down, or to work out a difference. That is done separately, from the\nvalues you copy. Copying them exactly is the whole job.\n\nReturn one result per input, with the same \"id\" you were given, and\necho the passage back in \"segment\". Return JSON only.\n\nPassages:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"Haldon Insurance Services contents insurance — policy schedule DAMSON-PR-421 for the year to 31 August 2026.\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"Total annual premium: £1,348.00.\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"Compulsory excess: £820.00 per claim.\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"Cover limit: £3,740.00 per policy.\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"Your reference is DAMSON-PR-421. Quote it whenever you write to us about this policy.\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"Haldon Insurance Services arranges contents insurance cover under DAMSON-PR-421 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"Haldon Insurance Services contents insurance — renewal schedule DAMSON-PR-421 for the year to 31 August 2027.\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"Total annual premium: £1,480.50.\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"Compulsory excess: £820.00 per claim.\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"Cover limit: £3,740.00 per policy.\"\n  },\n  {\n    \"id\": 10,\n    \"raw\": \"Haldon Insurance Services arranges contents insurance cover under DAMSON-PR-421 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 11,\n    \"raw\": \"Your reference is DAMSON-PR-421. Quote it whenever you write to us about this policy.\"\n  }\n]\n",
+        "response": "{\"results\":[{\"confidence\":\"low\",\"id\":0,\"segment\":\"Haldon Insurance Services contents insurance — policy schedule DAMSON-PR-421 for the year to 31 August 2026.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":1,\"segment\":\"Total annual premium: £1,348.00.\",\"terms\":[{\"basis\":\"annual\",\"quote\":\"Total annual premium: £1,348.00.\",\"term\":\"premium\",\"value\":\"£1,348.00\"}]},{\"confidence\":\"high\",\"id\":2,\"segment\":\"Compulsory excess: £820.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"Compulsory excess: £820.00 per claim.\",\"term\":\"compulsory_excess\",\"value\":\"£820.00\"}]},{\"confidence\":\"high\",\"id\":3,\"segment\":\"Cover limit: £3,740.00 per policy.\",\"terms\":[{\"basis\":\"per_policy\",\"quote\":\"Cover limit: £3,740.00 per policy.\",\"term\":\"cover_limit\",\"value\":\"£3,740.00\"}]},{\"confidence\":\"low\",\"id\":4,\"segment\":\"Your reference is DAMSON-PR-421. Quote it whenever you write to us about this policy.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":5,\"segment\":\"Haldon Insurance Services arranges contents insurance cover under DAMSON-PR-421 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":6,\"segment\":\"Haldon Insurance Services contents insurance — renewal schedule DAMSON-PR-421 for the year to 31 August 2027.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":7,\"segment\":\"Total annual premium: £1,480.50.\",\"terms\":[{\"basis\":\"annual\",\"quote\":\"Total annual premium: £1,480.50.\",\"term\":\"premium\",\"value\":\"£1,480.50\"}]},{\"confidence\":\"high\",\"id\":8,\"segment\":\"Compulsory excess: £820.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"Compulsory excess: £820.00 per claim.\",\"term\":\"compulsory_excess\",\"value\":\"£820.00\"}]},{\"confidence\":\"high\",\"id\":9,\"segment\":\"Cover limit: £3,740.00 per policy.\",\"terms\":[{\"basis\":\"per_policy\",\"quote\":\"Cover limit: £3,740.00 per policy.\",\"term\":\"cover_limit\",\"value\":\"£3,740.00\"}]},{\"confidence\":\"low\",\"id\":10,\"segment\":\"Haldon Insurance Services arranges contents insurance cover under DAMSON-PR-421 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":11,\"segment\":\"Your reference is DAMSON-PR-421. Quote it whenever you write to us about this policy.\",\"terms\":[]}]}"
+      }
+    ]
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-premium_rose-damson-04/development-premium_rose-damson-04-renewal-no-value-822acc",
+    "item_id": "development-premium_rose-damson-04-renewal-no-value-822acc",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:3f5234da69865c52b4ff21ac48994e65e9b8b3851c1f6e44757c8e8625ea2ffe",
+    "fixture": "generated-development-premium_rose-damson-04",
+    "fixture_id": "development-premium_rose-damson-04",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Haldon Insurance Services arranges contents insurance cover under DAMSON-PR-421 and is regulated in the United Kingdom.",
+    "decision_key": "renewal|haldon insurance services arranges contents insurance cover under damson-pr-421 and is regulated in the united kingdom.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "absent"
+    },
+    "trace_ids": [
+      "claim-000015",
+      "claim-000017"
+    ],
+    "confidence": {
+      "source": "declared",
+      "level": "low",
+      "trace_id": "claim-000015"
+    },
+    "exchanges": [
+      {
+        "step": "Reading what each document says",
+        "batch": 1,
+        "request": "You read one passage of an insurance document at a time and say which\nnamed values, if any, it states.\n\nFor each passage, decide:\n- terms: a list of the named values this passage states. Most passages\n  state none — an empty list is a correct answer, not a failure, and it\n  is always better than a guess. A passage that explains what cover\n  means, describes how to claim, or thanks somebody for renewing states\n  no named value.\n- confidence: \"high\" | \"medium\" | \"low\"\n\nFor each term give:\n- term: \"premium\" | \"compulsory_excess\" | \"voluntary_excess\" |\n  \"total_excess\" | \"cover_limit\" | \"no_claims_discount\" |\n  \"cooling_off_period\" | \"other\"\n\n  Documents rarely use these words. \"Cover limit\" is the most a policy\n  will pay out, and a schedule may label it \"Insurance amount\", \"Sum\n  insured\", \"Limit of indemnity\" or \"Maximum we will pay\" — those are\n  all \"cover_limit\".\n\n  Use \"other\" when the passage states a named value that is none of\n  these. That is a real answer and the right one: the value goes in\n  front of the person instead of being compared. Never stretch one of\n  the named terms to cover something it is not.\n\n- basis: \"annual\" | \"monthly\" | \"per_claim\" | \"per_policy\"\n\n  What the value is measured against, as the passage says it. A premium\n  quoted as twelve instalments is \"monthly\"; the same policy's total for\n  the year is \"annual\". These are different values, and calling one the\n  other turns an instalment into a price rise.\n\n- value: the value exactly as the document writes it — \"£1,234.56\",\n  \"£500\", \"14 days\", \"60%\". Copy the currency symbol, the commas and\n  the decimals as they appear. Never round, never convert, never work\n  out a total, and never write a number the passage does not contain.\n\n- quote: the words the value comes from, copied exactly from the\n  passage — and the quote must contain the value itself. \"Insurance\n  amount\" is a label, not a quote: on a schedule with three sections it\n  is true of three different amounts, so it shows nothing about which\n  one you read. \"Insurance amount: £604,400.00.\" does show it. Include\n  enough words on either side of the value to make clear which line it\n  came from. This is checked against the document: a quote that is not\n  in the passage, or that does not contain its own value, means the\n  whole term goes to the person instead of being used.\n\nYou are not asked to compare anything, to say whether a value went up\nor down, or to work out a difference. That is done separately, from the\nvalues you copy. Copying them exactly is the whole job.\n\nReturn one result per input, with the same \"id\" you were given, and\necho the passage back in \"segment\". Return JSON only.\n\nPassages:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"Haldon Insurance Services contents insurance — policy schedule DAMSON-PR-421 for the year to 31 August 2026.\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"Total annual premium: £1,348.00.\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"Compulsory excess: £820.00 per claim.\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"Cover limit: £3,740.00 per policy.\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"Your reference is DAMSON-PR-421. Quote it whenever you write to us about this policy.\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"Haldon Insurance Services arranges contents insurance cover under DAMSON-PR-421 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"Haldon Insurance Services contents insurance — renewal schedule DAMSON-PR-421 for the year to 31 August 2027.\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"Total annual premium: £1,480.50.\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"Compulsory excess: £820.00 per claim.\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"Cover limit: £3,740.00 per policy.\"\n  },\n  {\n    \"id\": 10,\n    \"raw\": \"Haldon Insurance Services arranges contents insurance cover under DAMSON-PR-421 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 11,\n    \"raw\": \"Your reference is DAMSON-PR-421. Quote it whenever you write to us about this policy.\"\n  }\n]\n",
+        "response": "{\"results\":[{\"confidence\":\"low\",\"id\":0,\"segment\":\"Haldon Insurance Services contents insurance — policy schedule DAMSON-PR-421 for the year to 31 August 2026.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":1,\"segment\":\"Total annual premium: £1,348.00.\",\"terms\":[{\"basis\":\"annual\",\"quote\":\"Total annual premium: £1,348.00.\",\"term\":\"premium\",\"value\":\"£1,348.00\"}]},{\"confidence\":\"high\",\"id\":2,\"segment\":\"Compulsory excess: £820.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"Compulsory excess: £820.00 per claim.\",\"term\":\"compulsory_excess\",\"value\":\"£820.00\"}]},{\"confidence\":\"high\",\"id\":3,\"segment\":\"Cover limit: £3,740.00 per policy.\",\"terms\":[{\"basis\":\"per_policy\",\"quote\":\"Cover limit: £3,740.00 per policy.\",\"term\":\"cover_limit\",\"value\":\"£3,740.00\"}]},{\"confidence\":\"low\",\"id\":4,\"segment\":\"Your reference is DAMSON-PR-421. Quote it whenever you write to us about this policy.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":5,\"segment\":\"Haldon Insurance Services arranges contents insurance cover under DAMSON-PR-421 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":6,\"segment\":\"Haldon Insurance Services contents insurance — renewal schedule DAMSON-PR-421 for the year to 31 August 2027.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":7,\"segment\":\"Total annual premium: £1,480.50.\",\"terms\":[{\"basis\":\"annual\",\"quote\":\"Total annual premium: £1,480.50.\",\"term\":\"premium\",\"value\":\"£1,480.50\"}]},{\"confidence\":\"high\",\"id\":8,\"segment\":\"Compulsory excess: £820.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"Compulsory excess: £820.00 per claim.\",\"term\":\"compulsory_excess\",\"value\":\"£820.00\"}]},{\"confidence\":\"high\",\"id\":9,\"segment\":\"Cover limit: £3,740.00 per policy.\",\"terms\":[{\"basis\":\"per_policy\",\"quote\":\"Cover limit: £3,740.00 per policy.\",\"term\":\"cover_limit\",\"value\":\"£3,740.00\"}]},{\"confidence\":\"low\",\"id\":10,\"segment\":\"Haldon Insurance Services arranges contents insurance cover under DAMSON-PR-421 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":11,\"segment\":\"Your reference is DAMSON-PR-421. Quote it whenever you write to us about this policy.\",\"terms\":[]}]}"
+      }
+    ]
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-premium_rose-damson-04/development-premium_rose-damson-04-renewal-no-value-621970",
+    "item_id": "development-premium_rose-damson-04-renewal-no-value-621970",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:3f5234da69865c52b4ff21ac48994e65e9b8b3851c1f6e44757c8e8625ea2ffe",
+    "fixture": "generated-development-premium_rose-damson-04",
+    "fixture_id": "development-premium_rose-damson-04",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Your reference is DAMSON-PR-421. Quote it whenever you write to us about this policy.",
+    "decision_key": "renewal|your reference is damson-pr-421. quote it whenever you write to us about this policy.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "absent"
+    },
+    "trace_ids": [
+      "claim-000014",
+      "claim-000018"
+    ],
+    "confidence": {
+      "source": "declared",
+      "level": "low",
+      "trace_id": "claim-000014"
+    },
+    "exchanges": [
+      {
+        "step": "Reading what each document says",
+        "batch": 1,
+        "request": "You read one passage of an insurance document at a time and say which\nnamed values, if any, it states.\n\nFor each passage, decide:\n- terms: a list of the named values this passage states. Most passages\n  state none — an empty list is a correct answer, not a failure, and it\n  is always better than a guess. A passage that explains what cover\n  means, describes how to claim, or thanks somebody for renewing states\n  no named value.\n- confidence: \"high\" | \"medium\" | \"low\"\n\nFor each term give:\n- term: \"premium\" | \"compulsory_excess\" | \"voluntary_excess\" |\n  \"total_excess\" | \"cover_limit\" | \"no_claims_discount\" |\n  \"cooling_off_period\" | \"other\"\n\n  Documents rarely use these words. \"Cover limit\" is the most a policy\n  will pay out, and a schedule may label it \"Insurance amount\", \"Sum\n  insured\", \"Limit of indemnity\" or \"Maximum we will pay\" — those are\n  all \"cover_limit\".\n\n  Use \"other\" when the passage states a named value that is none of\n  these. That is a real answer and the right one: the value goes in\n  front of the person instead of being compared. Never stretch one of\n  the named terms to cover something it is not.\n\n- basis: \"annual\" | \"monthly\" | \"per_claim\" | \"per_policy\"\n\n  What the value is measured against, as the passage says it. A premium\n  quoted as twelve instalments is \"monthly\"; the same policy's total for\n  the year is \"annual\". These are different values, and calling one the\n  other turns an instalment into a price rise.\n\n- value: the value exactly as the document writes it — \"£1,234.56\",\n  \"£500\", \"14 days\", \"60%\". Copy the currency symbol, the commas and\n  the decimals as they appear. Never round, never convert, never work\n  out a total, and never write a number the passage does not contain.\n\n- quote: the words the value comes from, copied exactly from the\n  passage — and the quote must contain the value itself. \"Insurance\n  amount\" is a label, not a quote: on a schedule with three sections it\n  is true of three different amounts, so it shows nothing about which\n  one you read. \"Insurance amount: £604,400.00.\" does show it. Include\n  enough words on either side of the value to make clear which line it\n  came from. This is checked against the document: a quote that is not\n  in the passage, or that does not contain its own value, means the\n  whole term goes to the person instead of being used.\n\nYou are not asked to compare anything, to say whether a value went up\nor down, or to work out a difference. That is done separately, from the\nvalues you copy. Copying them exactly is the whole job.\n\nReturn one result per input, with the same \"id\" you were given, and\necho the passage back in \"segment\". Return JSON only.\n\nPassages:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"Haldon Insurance Services contents insurance — policy schedule DAMSON-PR-421 for the year to 31 August 2026.\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"Total annual premium: £1,348.00.\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"Compulsory excess: £820.00 per claim.\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"Cover limit: £3,740.00 per policy.\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"Your reference is DAMSON-PR-421. Quote it whenever you write to us about this policy.\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"Haldon Insurance Services arranges contents insurance cover under DAMSON-PR-421 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"Haldon Insurance Services contents insurance — renewal schedule DAMSON-PR-421 for the year to 31 August 2027.\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"Total annual premium: £1,480.50.\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"Compulsory excess: £820.00 per claim.\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"Cover limit: £3,740.00 per policy.\"\n  },\n  {\n    \"id\": 10,\n    \"raw\": \"Haldon Insurance Services arranges contents insurance cover under DAMSON-PR-421 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 11,\n    \"raw\": \"Your reference is DAMSON-PR-421. Quote it whenever you write to us about this policy.\"\n  }\n]\n",
+        "response": "{\"results\":[{\"confidence\":\"low\",\"id\":0,\"segment\":\"Haldon Insurance Services contents insurance — policy schedule DAMSON-PR-421 for the year to 31 August 2026.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":1,\"segment\":\"Total annual premium: £1,348.00.\",\"terms\":[{\"basis\":\"annual\",\"quote\":\"Total annual premium: £1,348.00.\",\"term\":\"premium\",\"value\":\"£1,348.00\"}]},{\"confidence\":\"high\",\"id\":2,\"segment\":\"Compulsory excess: £820.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"Compulsory excess: £820.00 per claim.\",\"term\":\"compulsory_excess\",\"value\":\"£820.00\"}]},{\"confidence\":\"high\",\"id\":3,\"segment\":\"Cover limit: £3,740.00 per policy.\",\"terms\":[{\"basis\":\"per_policy\",\"quote\":\"Cover limit: £3,740.00 per policy.\",\"term\":\"cover_limit\",\"value\":\"£3,740.00\"}]},{\"confidence\":\"low\",\"id\":4,\"segment\":\"Your reference is DAMSON-PR-421. Quote it whenever you write to us about this policy.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":5,\"segment\":\"Haldon Insurance Services arranges contents insurance cover under DAMSON-PR-421 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":6,\"segment\":\"Haldon Insurance Services contents insurance — renewal schedule DAMSON-PR-421 for the year to 31 August 2027.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":7,\"segment\":\"Total annual premium: £1,480.50.\",\"terms\":[{\"basis\":\"annual\",\"quote\":\"Total annual premium: £1,480.50.\",\"term\":\"premium\",\"value\":\"£1,480.50\"}]},{\"confidence\":\"high\",\"id\":8,\"segment\":\"Compulsory excess: £820.00 per claim.\",\"terms\":[{\"basis\":\"per_claim\",\"quote\":\"Compulsory excess: £820.00 per claim.\",\"term\":\"compulsory_excess\",\"value\":\"£820.00\"}]},{\"confidence\":\"high\",\"id\":9,\"segment\":\"Cover limit: £3,740.00 per policy.\",\"terms\":[{\"basis\":\"per_policy\",\"quote\":\"Cover limit: £3,740.00 per policy.\",\"term\":\"cover_limit\",\"value\":\"£3,740.00\"}]},{\"confidence\":\"low\",\"id\":10,\"segment\":\"Haldon Insurance Services arranges contents insurance cover under DAMSON-PR-421 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":11,\"segment\":\"Your reference is DAMSON-PR-421. Quote it whenever you write to us about this policy.\",\"terms\":[]}]}"
+      }
+    ]
+  }
+]

@@ -1,0 +1,453 @@
+{
+  "schema": "kettle/claim-traces@0",
+  "claims": [
+    {
+      "id": "claim-000001",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 4,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Please pay £188.20 within 30 days of 26 November 2026, quoting reference BI-66319.",
+      "candidate": {
+        "confidence": "high",
+        "id": 4,
+        "obligations": [
+          {
+            "anchor": "26 November 2026",
+            "ask": "Pay £188.20",
+            "deadline": "within 30 days",
+            "kind": "payment",
+            "party": "Belwood Insurance"
+          }
+        ],
+        "segment": "Please pay"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 4,
+            "obligations": [
+              {
+                "anchor": "26 November 2026",
+                "ask": "Pay £188.20",
+                "deadline": "within 30 days",
+                "kind": "payment",
+                "party": "Belwood Insurance"
+              }
+            ],
+            "segment": "Please pay"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000002",
+      "parent_id": "claim-000001",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 4,
+      "candidate_index": 1,
+      "kind": "obligation",
+      "source": "Please pay £188.20 within 30 days of 26 November 2026, quoting reference BI-66319.",
+      "candidate": {
+        "anchor": "26 November 2026",
+        "ask": "Pay £188.20",
+        "deadline": "within 30 days",
+        "kind": "payment",
+        "party": "Belwood Insurance"
+      },
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000003",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 8,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Your solicitor has been sent a copy of this letter and will deal with the signing.",
+      "candidate": {
+        "confidence": "high",
+        "id": 8,
+        "obligations": [],
+        "segment": "Your solicitor has been sent a copy of this letter and will deal with the signing."
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "low",
+            "id": 8,
+            "obligations": [],
+            "segment": "Your"
+          },
+          "schema": "passed",
+          "pairing": "failed"
+        },
+        {
+          "ordinal": 2,
+          "candidate": {
+            "confidence": "high",
+            "id": 8,
+            "obligations": [],
+            "segment": "Your solicitor has been sent a copy of this letter and will deal with the signing."
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000004",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 0,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "3 July 2026",
+      "candidate": {
+        "confidence": "low",
+        "id": 0,
+        "obligations": [],
+        "segment": "3 July 2026"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "low",
+            "id": 0,
+            "obligations": [],
+            "segment": "3 July 2026"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000005",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 1,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Belwood Insurance",
+      "candidate": {
+        "confidence": "low",
+        "id": 1,
+        "obligations": [],
+        "segment": "Belwood"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "low",
+            "id": 1,
+            "obligations": [],
+            "segment": "Belwood"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000006",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 2,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Our reference: BI-66319",
+      "candidate": {
+        "confidence": "low",
+        "id": 2,
+        "obligations": [],
+        "segment": "Our"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "low",
+            "id": 2,
+            "obligations": [],
+            "segment": "Our"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000007",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 3,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "A review of your policy renewal took place on 26 November 2026.",
+      "candidate": {
+        "confidence": "low",
+        "id": 3,
+        "obligations": [],
+        "segment": "A"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "low",
+            "id": 3,
+            "obligations": [],
+            "segment": "A"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000008",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 5,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Thank you for your co-operation in this matter.",
+      "candidate": {
+        "confidence": "low",
+        "id": 5,
+        "obligations": [],
+        "segment": "Thank"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "low",
+            "id": 5,
+            "obligations": [],
+            "segment": "Thank"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000009",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 6,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Yours sincerely,",
+      "candidate": {
+        "confidence": "low",
+        "id": 6,
+        "obligations": [],
+        "segment": "Yours"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "low",
+            "id": 6,
+            "obligations": [],
+            "segment": "Yours"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000010",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 7,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Belwood Insurance",
+      "candidate": {
+        "confidence": "low",
+        "id": 7,
+        "obligations": [],
+        "segment": "Belwood"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "low",
+            "id": 7,
+            "obligations": [],
+            "segment": "Belwood"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    }
+  ]
+}

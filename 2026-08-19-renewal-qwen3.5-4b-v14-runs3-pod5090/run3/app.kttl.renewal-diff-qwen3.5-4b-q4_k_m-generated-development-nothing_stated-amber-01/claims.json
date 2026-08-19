@@ -1,0 +1,269 @@
+{
+  "schema": "kettle/claim-traces@0",
+  "claims": [
+    {
+      "id": "claim-000001",
+      "pack": "app.kttl.renewal-diff",
+      "step": "Reading what each document says",
+      "batch": 1,
+      "item": 0,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Pennine Line Assurance travel insurance — policy schedule AMBER-NS-400 for the year to 31 August 2026.",
+      "candidate": {
+        "confidence": "low",
+        "id": 0,
+        "segment": "Pennine Line Assurance travel insurance — policy schedule AMBER-NS-400 for the year to 31 August 2026.",
+        "terms": []
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "low",
+            "id": 0,
+            "segment": "Pennine Line Assurance travel insurance — policy schedule AMBER-NS-400 for the year to 31 August 2026.",
+            "terms": []
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000002",
+      "pack": "app.kttl.renewal-diff",
+      "step": "Reading what each document says",
+      "batch": 1,
+      "item": 1,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Your reference is AMBER-NS-400. Quote it whenever you write to us about this policy.",
+      "candidate": {
+        "confidence": "low",
+        "id": 1,
+        "segment": "Your reference is AMBER-NS-400. Quote it whenever you write to us about this policy.",
+        "terms": []
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "low",
+            "id": 1,
+            "segment": "Your reference is AMBER-NS-400. Quote it whenever you write to us about this policy.",
+            "terms": []
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000003",
+      "pack": "app.kttl.renewal-diff",
+      "step": "Reading what each document says",
+      "batch": 1,
+      "item": 2,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Pennine Line Assurance arranges travel insurance cover under AMBER-NS-400 and is regulated in the United Kingdom.",
+      "candidate": {
+        "confidence": "low",
+        "id": 2,
+        "segment": "Pennine Line Assurance arranges travel insurance cover under AMBER-NS-400 and is regulated in the United Kingdom.",
+        "terms": []
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "low",
+            "id": 2,
+            "segment": "Pennine Line Assurance arranges travel insurance cover under AMBER-NS-400 and is regulated in the United Kingdom.",
+            "terms": []
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000004",
+      "pack": "app.kttl.renewal-diff",
+      "step": "Reading what each document says",
+      "batch": 1,
+      "item": 3,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Pennine Line Assurance travel insurance — renewal schedule AMBER-NS-400 for the year to 31 August 2027.",
+      "candidate": {
+        "confidence": "low",
+        "id": 3,
+        "segment": "Pennine Line Assurance travel insurance — renewal schedule AMBER-NS-400 for the year to 31 August 2027.",
+        "terms": []
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "low",
+            "id": 3,
+            "segment": "Pennine Line Assurance travel insurance — renewal schedule AMBER-NS-400 for the year to 31 August 2027.",
+            "terms": []
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000005",
+      "pack": "app.kttl.renewal-diff",
+      "step": "Reading what each document says",
+      "batch": 1,
+      "item": 4,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Pennine Line Assurance arranges travel insurance cover under AMBER-NS-400 and is regulated in the United Kingdom.",
+      "candidate": {
+        "confidence": "low",
+        "id": 4,
+        "segment": "Pennine Line Assurance arranges travel insurance cover under AMBER-NS-400 and is regulated in the United Kingdom.",
+        "terms": []
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "low",
+            "id": 4,
+            "segment": "Pennine Line Assurance arranges travel insurance cover under AMBER-NS-400 and is regulated in the United Kingdom.",
+            "terms": []
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000006",
+      "pack": "app.kttl.renewal-diff",
+      "step": "Reading what each document says",
+      "batch": 1,
+      "item": 5,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Your reference is AMBER-NS-400. Quote it whenever you write to us about this policy.",
+      "candidate": {
+        "confidence": "low",
+        "id": 5,
+        "segment": "Your reference is AMBER-NS-400. Quote it whenever you write to us about this policy.",
+        "terms": []
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "low",
+            "id": 5,
+            "segment": "Your reference is AMBER-NS-400. Quote it whenever you write to us about this policy.",
+            "terms": []
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    }
+  ]
+}

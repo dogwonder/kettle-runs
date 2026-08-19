@@ -1,0 +1,437 @@
+{
+  "schema": "kettle/claim-traces@0",
+  "claims": [
+    {
+      "id": "claim-000001",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 3,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "The enclosed declaration is to be returned within 21 days of the date of this letter, quoting reference ELS-3391.",
+      "candidate": {
+        "confidence": "high",
+        "id": 3,
+        "obligations": [
+          {
+            "anchor": "the date of this letter",
+            "ask": "Return the enclosed declaration quoting reference ELS-3391",
+            "deadline": "within 21 days",
+            "kind": "response",
+            "party": "Eastvale Library Service"
+          }
+        ],
+        "segment": "The enclosed"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 3,
+            "obligations": [
+              {
+                "anchor": "the date of this letter",
+                "ask": "Return the enclosed declaration quoting reference ELS-3391",
+                "deadline": "within 21 days",
+                "kind": "response",
+                "party": "Eastvale Library Service"
+              }
+            ],
+            "segment": "The enclosed"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000002",
+      "parent_id": "claim-000001",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 3,
+      "candidate_index": 1,
+      "kind": "obligation",
+      "source": "The enclosed declaration is to be returned within 21 days of the date of this letter, quoting reference ELS-3391.",
+      "candidate": {
+        "anchor": "the date of this letter",
+        "ask": "Return the enclosed declaration quoting reference ELS-3391",
+        "deadline": "within 21 days",
+        "kind": "response",
+        "party": "Eastvale Library Service"
+      },
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000003",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 4,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "The membership is being checked by the department that holds it, and any correction is applied automatically within 30 days.",
+      "candidate": {
+        "confidence": "high",
+        "id": 4,
+        "obligations": [],
+        "segment": "The membership"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 4,
+            "obligations": [],
+            "segment": "The membership"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000004",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 5,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "This part of the letter is sent for information only.",
+      "candidate": {
+        "confidence": "high",
+        "id": 5,
+        "obligations": [],
+        "segment": "This part"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 5,
+            "obligations": [],
+            "segment": "This part"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000005",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 6,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Yours sincerely,",
+      "candidate": {
+        "confidence": "high",
+        "id": 6,
+        "obligations": [],
+        "segment": "Yours"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 6,
+            "obligations": [],
+            "segment": "Yours"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000006",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 7,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Eastvale Library Service",
+      "candidate": {
+        "confidence": "high",
+        "id": 7,
+        "obligations": [],
+        "segment": "Eastvale"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 7,
+            "obligations": [],
+            "segment": "Eastvale"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000007",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 8,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Your direct debit of £115.00 will continue to be collected on the 15th of each month as before.",
+      "candidate": {
+        "confidence": "high",
+        "id": 8,
+        "obligations": [],
+        "segment": "Your direct debit"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 8,
+            "obligations": [],
+            "segment": "Your"
+          },
+          "schema": "passed",
+          "pairing": "failed"
+        },
+        {
+          "ordinal": 2,
+          "candidate": {
+            "confidence": "high",
+            "id": 8,
+            "obligations": [],
+            "segment": "Your direct debit"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000008",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 0,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "22 October 2026",
+      "candidate": {
+        "confidence": "low",
+        "id": 0,
+        "obligations": [],
+        "segment": "22 October 2026"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "low",
+            "id": 0,
+            "obligations": [],
+            "segment": "22 October 2026"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000009",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 1,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Eastvale Library Service",
+      "candidate": {
+        "confidence": "low",
+        "id": 1,
+        "obligations": [],
+        "segment": "Eastvale"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "low",
+            "id": 1,
+            "obligations": [],
+            "segment": "Eastvale"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000010",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 2,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Our reference: ELS-3391",
+      "candidate": {
+        "confidence": "low",
+        "id": 2,
+        "obligations": [],
+        "segment": "Our"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "low",
+            "id": 2,
+            "obligations": [],
+            "segment": "Our"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    }
+  ]
+}

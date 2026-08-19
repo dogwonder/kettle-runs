@@ -1,0 +1,294 @@
+{
+  "schema": "kettle/claim-traces@0",
+  "claims": [
+    {
+      "id": "claim-000001",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 0,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Please return the enclosed form about your membership within 42 days.",
+      "candidate": {
+        "confidence": "high",
+        "id": 0,
+        "obligations": [
+          {
+            "anchor": "42 days",
+            "ask": "Return the enclosed form about your membership",
+            "deadline": "within 42 days",
+            "kind": "response",
+            "party": "Eastvale Library Service"
+          }
+        ],
+        "segment": "Please return"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 0,
+            "obligations": [
+              {
+                "anchor": "42 days",
+                "ask": "Return the enclosed form about your membership",
+                "deadline": "within 42 days",
+                "kind": "response",
+                "party": "Eastvale Library Service"
+              }
+            ],
+            "segment": "Please return"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000002",
+      "parent_id": "claim-000001",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 0,
+      "candidate_index": 1,
+      "kind": "obligation",
+      "source": "Please return the enclosed form about your membership within 42 days.",
+      "candidate": {
+        "anchor": "42 days",
+        "ask": "Return the enclosed form about your membership",
+        "deadline": "within 42 days",
+        "kind": "response",
+        "party": "Eastvale Library Service"
+      },
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000003",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 1,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "A prepaid envelope is enclosed for your convenience.",
+      "candidate": {
+        "confidence": "high",
+        "id": 1,
+        "obligations": [],
+        "segment": "A prepaid"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 1,
+            "obligations": [],
+            "segment": "A prepaid"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000004",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 2,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Yours sincerely,",
+      "candidate": {
+        "confidence": "high",
+        "id": 2,
+        "obligations": [],
+        "segment": "Yours sincerely"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 2,
+            "obligations": [],
+            "segment": "Yours sincerely"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000005",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 3,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Eastvale Library Service",
+      "candidate": {
+        "confidence": "high",
+        "id": 3,
+        "obligations": [],
+        "segment": "Eastvale"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 3,
+            "obligations": [],
+            "segment": "Eastvale"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000006",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 4,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "This letter contains no special handling instructions, and nothing in it changes how your account is administered.",
+      "candidate": {
+        "confidence": "high",
+        "id": 4,
+        "obligations": [],
+        "segment": "This letter"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 4,
+            "obligations": [],
+            "segment": "This letter"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000007",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 5,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "The change of address you reported on 17 June is now showing on all our systems.",
+      "candidate": {
+        "confidence": "high",
+        "id": 5,
+        "obligations": [],
+        "segment": "The change"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 5,
+            "obligations": [],
+            "segment": "The change"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    }
+  ]
+}

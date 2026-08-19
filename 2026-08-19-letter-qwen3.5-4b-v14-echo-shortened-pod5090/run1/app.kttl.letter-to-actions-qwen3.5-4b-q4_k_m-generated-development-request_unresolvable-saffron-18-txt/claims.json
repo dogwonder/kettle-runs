@@ -1,0 +1,374 @@
+{
+  "schema": "kettle/claim-traces@0",
+  "claims": [
+    {
+      "id": "claim-000001",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 0,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "2 June 2026",
+      "candidate": {
+        "confidence": "high",
+        "id": 0,
+        "obligations": [],
+        "segment": "2 June 2026"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 0,
+            "obligations": [],
+            "segment": "2 June 2026"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000002",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 1,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Ashcombe Housing Trust",
+      "candidate": {
+        "confidence": "high",
+        "id": 1,
+        "obligations": [],
+        "segment": "Ashcombe"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 1,
+            "obligations": [],
+            "segment": "Ashcombe"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000003",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 2,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Our reference: AHT-7043",
+      "candidate": {
+        "confidence": "high",
+        "id": 2,
+        "obligations": [],
+        "segment": "Our reference"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 2,
+            "obligations": [],
+            "segment": "Our reference"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000004",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 3,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Please send us a meter reading for your tenancy account at your earliest convenience.",
+      "candidate": {
+        "confidence": "high",
+        "id": 3,
+        "obligations": [
+          {
+            "anchor": "no particular date",
+            "ask": "Send a meter reading for your tenancy account",
+            "deadline": "at your earliest convenience",
+            "kind": "response",
+            "party": "Ashcombe Housing Trust"
+          }
+        ],
+        "segment": "Please send"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 3,
+            "obligations": [
+              {
+                "anchor": "no particular date",
+                "ask": "Send a meter reading for your tenancy account",
+                "deadline": "at your earliest convenience",
+                "kind": "response",
+                "party": "Ashcombe Housing Trust"
+              }
+            ],
+            "segment": "Please send"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000005",
+      "parent_id": "claim-000004",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 3,
+      "candidate_index": 1,
+      "kind": "obligation",
+      "source": "Please send us a meter reading for your tenancy account at your earliest convenience.",
+      "candidate": {
+        "anchor": "no particular date",
+        "ask": "Send a meter reading for your tenancy account",
+        "deadline": "at your earliest convenience",
+        "kind": "response",
+        "party": "Ashcombe Housing Trust"
+      },
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000006",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 4,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Thank you for being a customer of ours.",
+      "candidate": {
+        "confidence": "high",
+        "id": 4,
+        "obligations": [],
+        "segment": "Thank"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 4,
+            "obligations": [],
+            "segment": "Thank"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000007",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 5,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Yours sincerely,",
+      "candidate": {
+        "confidence": "high",
+        "id": 5,
+        "obligations": [],
+        "segment": "Yours"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 5,
+            "obligations": [],
+            "segment": "Yours"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000008",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 6,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Ashcombe Housing Trust",
+      "candidate": {
+        "confidence": "high",
+        "id": 6,
+        "obligations": [],
+        "segment": "Ashcombe"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 6,
+            "obligations": [],
+            "segment": "Ashcombe"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000009",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 7,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "The £25.00 charge applied in error on 7 March has been refunded to your account.",
+      "candidate": {
+        "confidence": "high",
+        "id": 7,
+        "obligations": [],
+        "segment": "The"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 7,
+            "obligations": [],
+            "segment": "The"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    }
+  ]
+}

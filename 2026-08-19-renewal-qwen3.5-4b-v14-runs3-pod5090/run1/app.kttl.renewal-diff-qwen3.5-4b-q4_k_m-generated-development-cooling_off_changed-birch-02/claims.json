@@ -1,0 +1,645 @@
+{
+  "schema": "kettle/claim-traces@0",
+  "claims": [
+    {
+      "id": "claim-000001",
+      "pack": "app.kttl.renewal-diff",
+      "step": "Reading what each document says",
+      "batch": 1,
+      "item": 1,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Total annual premium: £5,415.00.",
+      "candidate": {
+        "confidence": "high",
+        "id": 1,
+        "segment": "Total annual premium: £5,415.00.",
+        "terms": [
+          {
+            "basis": "annual",
+            "quote": "Total annual premium: £5,415.00.",
+            "term": "premium",
+            "value": "£5,415.00"
+          }
+        ]
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 1,
+            "segment": "Total annual premium: £5,415.00.",
+            "terms": [
+              {
+                "basis": "annual",
+                "quote": "Total annual premium: £5,415.00.",
+                "term": "premium",
+                "value": "£5,415.00"
+              }
+            ]
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000002",
+      "parent_id": "claim-000001",
+      "pack": "app.kttl.renewal-diff",
+      "step": "Reading what each document says",
+      "batch": 1,
+      "item": 1,
+      "candidate_index": 1,
+      "kind": "policy_term",
+      "source": "Total annual premium: £5,415.00.",
+      "candidate": {
+        "basis": "annual",
+        "quote": "Total annual premium: £5,415.00.",
+        "term": "premium",
+        "value": "£5,415.00"
+      },
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "quote",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "quote_identifies_passage",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "value_shape",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000003",
+      "pack": "app.kttl.renewal-diff",
+      "step": "Reading what each document says",
+      "batch": 1,
+      "item": 2,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Cooling-off period: 13 days.",
+      "candidate": {
+        "confidence": "high",
+        "id": 2,
+        "segment": "Cooling-off period: 13 days.",
+        "terms": [
+          {
+            "basis": "per_policy",
+            "quote": "Cooling-off period: 13 days.",
+            "term": "cooling_off_period",
+            "value": "13 days"
+          }
+        ]
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 2,
+            "segment": "Cooling-off period: 13 days.",
+            "terms": [
+              {
+                "basis": "per_policy",
+                "quote": "Cooling-off period: 13 days.",
+                "term": "cooling_off_period",
+                "value": "13 days"
+              }
+            ]
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000004",
+      "parent_id": "claim-000003",
+      "pack": "app.kttl.renewal-diff",
+      "step": "Reading what each document says",
+      "batch": 1,
+      "item": 2,
+      "candidate_index": 1,
+      "kind": "policy_term",
+      "source": "Cooling-off period: 13 days.",
+      "candidate": {
+        "basis": "per_policy",
+        "quote": "Cooling-off period: 13 days.",
+        "term": "cooling_off_period",
+        "value": "13 days"
+      },
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "quote",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "quote_identifies_passage",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "value_shape",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000005",
+      "pack": "app.kttl.renewal-diff",
+      "step": "Reading what each document says",
+      "batch": 1,
+      "item": 6,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Total annual premium: £5,415.00.",
+      "candidate": {
+        "confidence": "high",
+        "id": 6,
+        "segment": "Total annual premium: £5,415.00.",
+        "terms": [
+          {
+            "basis": "annual",
+            "quote": "Total annual premium: £5,415.00.",
+            "term": "premium",
+            "value": "£5,415.00"
+          }
+        ]
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 6,
+            "segment": "Total annual premium: £5,415.00.",
+            "terms": [
+              {
+                "basis": "annual",
+                "quote": "Total annual premium: £5,415.00.",
+                "term": "premium",
+                "value": "£5,415.00"
+              }
+            ]
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000006",
+      "parent_id": "claim-000005",
+      "pack": "app.kttl.renewal-diff",
+      "step": "Reading what each document says",
+      "batch": 1,
+      "item": 6,
+      "candidate_index": 1,
+      "kind": "policy_term",
+      "source": "Total annual premium: £5,415.00.",
+      "candidate": {
+        "basis": "annual",
+        "quote": "Total annual premium: £5,415.00.",
+        "term": "premium",
+        "value": "£5,415.00"
+      },
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "quote",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "quote_identifies_passage",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "value_shape",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000007",
+      "pack": "app.kttl.renewal-diff",
+      "step": "Reading what each document says",
+      "batch": 1,
+      "item": 7,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Cooling-off period: 27 days.",
+      "candidate": {
+        "confidence": "high",
+        "id": 7,
+        "segment": "Cooling-off period: 27 days.",
+        "terms": [
+          {
+            "basis": "per_policy",
+            "quote": "Cooling-off period: 27 days.",
+            "term": "cooling_off_period",
+            "value": "27 days"
+          }
+        ]
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 7,
+            "segment": "Cooling-off period: 27 days.",
+            "terms": [
+              {
+                "basis": "per_policy",
+                "quote": "Cooling-off period: 27 days.",
+                "term": "cooling_off_period",
+                "value": "27 days"
+              }
+            ]
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000008",
+      "parent_id": "claim-000007",
+      "pack": "app.kttl.renewal-diff",
+      "step": "Reading what each document says",
+      "batch": 1,
+      "item": 7,
+      "candidate_index": 1,
+      "kind": "policy_term",
+      "source": "Cooling-off period: 27 days.",
+      "candidate": {
+        "basis": "per_policy",
+        "quote": "Cooling-off period: 27 days.",
+        "term": "cooling_off_period",
+        "value": "27 days"
+      },
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "quote",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "quote_identifies_passage",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "value_shape",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000009",
+      "pack": "app.kttl.renewal-diff",
+      "step": "Reading what each document says",
+      "batch": 1,
+      "item": 0,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Corvin Mutual pet insurance — policy schedule BIRCH-COC-407 for the year to 31 August 2026.",
+      "candidate": {
+        "confidence": "low",
+        "id": 0,
+        "segment": "Corvin Mutual pet insurance — policy schedule BIRCH-COC-407 for the year to 31 August 2026.",
+        "terms": []
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "low",
+            "id": 0,
+            "segment": "Corvin Mutual pet insurance — policy schedule BIRCH-COC-407 for the year to 31 August 2026.",
+            "terms": []
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000010",
+      "pack": "app.kttl.renewal-diff",
+      "step": "Reading what each document says",
+      "batch": 1,
+      "item": 3,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Your reference is BIRCH-COC-407. Quote it whenever you write to us about this policy.",
+      "candidate": {
+        "confidence": "low",
+        "id": 3,
+        "segment": "Your reference is BIRCH-COC-407. Quote it whenever you write to us about this policy.",
+        "terms": []
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "low",
+            "id": 3,
+            "segment": "Your reference is BIRCH-COC-407. Quote it whenever you write to us about this policy.",
+            "terms": []
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000011",
+      "pack": "app.kttl.renewal-diff",
+      "step": "Reading what each document says",
+      "batch": 1,
+      "item": 4,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Corvin Mutual arranges pet insurance cover under BIRCH-COC-407 and is regulated in the United Kingdom.",
+      "candidate": {
+        "confidence": "low",
+        "id": 4,
+        "segment": "Corvin Mutual arranges pet insurance cover under BIRCH-COC-407 and is regulated in the United Kingdom.",
+        "terms": []
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "low",
+            "id": 4,
+            "segment": "Corvin Mutual arranges pet insurance cover under BIRCH-COC-407 and is regulated in the United Kingdom.",
+            "terms": []
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000012",
+      "pack": "app.kttl.renewal-diff",
+      "step": "Reading what each document says",
+      "batch": 1,
+      "item": 5,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Corvin Mutual pet insurance — renewal schedule BIRCH-COC-407 for the year to 31 August 2027.",
+      "candidate": {
+        "confidence": "low",
+        "id": 5,
+        "segment": "Corvin Mutual pet insurance — renewal schedule BIRCH-COC-407 for the year to 31 August 2027.",
+        "terms": []
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "low",
+            "id": 5,
+            "segment": "Corvin Mutual pet insurance — renewal schedule BIRCH-COC-407 for the year to 31 August 2027.",
+            "terms": []
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000013",
+      "pack": "app.kttl.renewal-diff",
+      "step": "Reading what each document says",
+      "batch": 1,
+      "item": 8,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Corvin Mutual arranges pet insurance cover under BIRCH-COC-407 and is regulated in the United Kingdom.",
+      "candidate": {
+        "confidence": "low",
+        "id": 8,
+        "segment": "Corvin Mutual arranges pet insurance cover under BIRCH-COC-407 and is regulated in the United Kingdom.",
+        "terms": []
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "low",
+            "id": 8,
+            "segment": "Corvin Mutual arranges pet insurance cover under BIRCH-COC-407 and is regulated in the United Kingdom.",
+            "terms": []
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000014",
+      "pack": "app.kttl.renewal-diff",
+      "step": "Reading what each document says",
+      "batch": 1,
+      "item": 9,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Your reference is BIRCH-COC-407. Quote it whenever you write to us about this policy.",
+      "candidate": {
+        "confidence": "low",
+        "id": 9,
+        "segment": "Your reference is BIRCH-COC-407. Quote it whenever you write to us about this policy.",
+        "terms": []
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "low",
+            "id": 9,
+            "segment": "Your reference is BIRCH-COC-407. Quote it whenever you write to us about this policy.",
+            "terms": []
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "inputs": [],
+  "model": {
+    "file": "qwen3.5-4b-q4_k_m.gguf",
+    "params": "4B",
+    "quant": "Q4_K_M",
+    "context": 8192
+  }
+}

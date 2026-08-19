@@ -1,0 +1,553 @@
+{
+  "schema": "kettle/claim-traces@0",
+  "claims": [
+    {
+      "id": "claim-000001",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 0,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "16 August 2026",
+      "candidate": {
+        "confidence": "high",
+        "id": 0,
+        "obligations": [],
+        "segment": "16 August 2026"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 0,
+            "obligations": [],
+            "segment": "16 August 2026"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000002",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 1,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Cranleigh Energy",
+      "candidate": {
+        "confidence": "high",
+        "id": 1,
+        "obligations": [],
+        "segment": "Cranleigh"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 1,
+            "obligations": [],
+            "segment": "Cranleigh"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000003",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 2,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Our reference: CE-40027",
+      "candidate": {
+        "confidence": "high",
+        "id": 2,
+        "obligations": [],
+        "segment": "Our"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 2,
+            "obligations": [],
+            "segment": "Our"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000004",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 3,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Please pay £142.75 towards your energy account within 14 days of the date of this letter.",
+      "candidate": {
+        "confidence": "high",
+        "id": 3,
+        "obligations": [
+          {
+            "anchor": "the date of this letter",
+            "ask": "Pay £142.75 towards your energy account",
+            "deadline": "within 14 days",
+            "kind": "payment",
+            "party": "Cranleigh Energy"
+          }
+        ],
+        "segment": "Please pay"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 3,
+            "obligations": [
+              {
+                "anchor": "the date of this letter",
+                "ask": "Pay £142.75 towards your energy account",
+                "deadline": "within 14 days",
+                "kind": "payment",
+                "party": "Cranleigh Energy"
+              }
+            ],
+            "segment": "Please pay"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000005",
+      "parent_id": "claim-000004",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 3,
+      "candidate_index": 1,
+      "kind": "obligation",
+      "source": "Please pay £142.75 towards your energy account within 14 days of the date of this letter.",
+      "candidate": {
+        "anchor": "the date of this letter",
+        "ask": "Pay £142.75 towards your energy account",
+        "deadline": "within 14 days",
+        "kind": "payment",
+        "party": "Cranleigh Energy"
+      },
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000006",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 5,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Please reply to this letter by the end of the month to confirm that you will attend.",
+      "candidate": {
+        "confidence": "high",
+        "id": 5,
+        "obligations": [
+          {
+            "anchor": "the end of the month",
+            "ask": "Reply to this letter",
+            "deadline": "by the end of the month",
+            "kind": "response",
+            "party": "Cranleigh Energy"
+          }
+        ],
+        "segment": "Please reply"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 5,
+            "obligations": [
+              {
+                "anchor": "the end of the month",
+                "ask": "Reply to this letter",
+                "deadline": "by the end of the month",
+                "kind": "response",
+                "party": "Cranleigh Energy"
+              }
+            ],
+            "segment": "Please reply"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000007",
+      "parent_id": "claim-000006",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 5,
+      "candidate_index": 1,
+      "kind": "obligation",
+      "source": "Please reply to this letter by the end of the month to confirm that you will attend.",
+      "candidate": {
+        "anchor": "the end of the month",
+        "ask": "Reply to this letter",
+        "deadline": "by the end of the month",
+        "kind": "response",
+        "party": "Cranleigh Energy"
+      },
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000008",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 6,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "We look forward to hearing from you in due course.",
+      "candidate": {
+        "confidence": "high",
+        "id": 6,
+        "obligations": [],
+        "segment": "We"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 6,
+            "obligations": [],
+            "segment": "We"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000009",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 7,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Yours sincerely,",
+      "candidate": {
+        "confidence": "high",
+        "id": 7,
+        "obligations": [],
+        "segment": "Yours"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 7,
+            "obligations": [],
+            "segment": "Yours"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000010",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 8,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Cranleigh Energy",
+      "candidate": {
+        "confidence": "high",
+        "id": 8,
+        "obligations": [],
+        "segment": "Cranleigh"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 8,
+            "obligations": [],
+            "segment": "Cranleigh"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000011",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 9,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Your booking on 3 September was cancelled by us and refunded in full.",
+      "candidate": {
+        "confidence": "high",
+        "id": 9,
+        "obligations": [],
+        "segment": "Your"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 9,
+            "obligations": [],
+            "segment": "Your"
+          },
+          "schema": "passed",
+          "pairing": "failed"
+        },
+        {
+          "ordinal": 2,
+          "candidate": {
+            "confidence": "high",
+            "id": 9,
+            "obligations": [],
+            "segment": "Your"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000012",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 4,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "You must attend a review meeting at our offices on 10 March 2026.",
+      "candidate": {
+        "confidence": "high",
+        "id": 4,
+        "obligations": [
+          {
+            "anchor": "10 March 2026",
+            "ask": "Attend the review meeting",
+            "deadline": "on 10 March 2026",
+            "kind": "attendance",
+            "party": "Cranleigh Energy"
+          }
+        ],
+        "segment": "You"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 4,
+            "obligations": [
+              {
+                "anchor": "10 March 2026",
+                "ask": "Attend the review meeting",
+                "deadline": "on 10 March 2026",
+                "kind": "attendance",
+                "party": "Cranleigh Energy"
+              }
+            ],
+            "segment": "You"
+          },
+          "schema": "passed",
+          "pairing": "failed"
+        },
+        {
+          "ordinal": 2,
+          "candidate": {
+            "confidence": "high",
+            "id": 4,
+            "obligations": [
+              {
+                "anchor": "10 March 2026",
+                "ask": "Attend the review meeting",
+                "deadline": "on 10 March 2026",
+                "kind": "attendance",
+                "party": "our offices"
+              }
+            ],
+            "segment": "You"
+          },
+          "schema": "passed",
+          "pairing": "failed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "failed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    }
+  ]
+}

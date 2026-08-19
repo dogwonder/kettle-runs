@@ -1,0 +1,575 @@
+{
+  "schema": "kettle/claim-traces@0",
+  "claims": [
+    {
+      "id": "claim-000001",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 1,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Harborne Parking Services",
+      "candidate": {
+        "confidence": "high",
+        "id": 1,
+        "obligations": [],
+        "segment": "Harborne"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 1,
+            "obligations": [],
+            "segment": "Harborne"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000002",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 2,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Our reference: HPS-4821",
+      "candidate": {
+        "confidence": "high",
+        "id": 2,
+        "obligations": [],
+        "segment": "Our"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 2,
+            "obligations": [],
+            "segment": "Our"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000003",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 3,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Please pay £120.00 towards your parking charge within 14 days of the date of this letter.",
+      "candidate": {
+        "confidence": "high",
+        "id": 3,
+        "obligations": [
+          {
+            "anchor": "the date of this letter",
+            "ask": "Pay £120.00 towards the parking charge",
+            "deadline": "within 14 days",
+            "kind": "payment",
+            "party": "Harborne Parking Services"
+          }
+        ],
+        "segment": "Please pay"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 3,
+            "obligations": [
+              {
+                "anchor": "the date of this letter",
+                "ask": "Pay £120.00 towards the parking charge",
+                "deadline": "within 14 days",
+                "kind": "payment",
+                "party": "Harborne Parking Services"
+              }
+            ],
+            "segment": "Please pay"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000004",
+      "parent_id": "claim-000003",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 3,
+      "candidate_index": 1,
+      "kind": "obligation",
+      "source": "Please pay £120.00 towards your parking charge within 14 days of the date of this letter.",
+      "candidate": {
+        "anchor": "the date of this letter",
+        "ask": "Pay £120.00 towards the parking charge",
+        "deadline": "within 14 days",
+        "kind": "payment",
+        "party": "Harborne Parking Services"
+      },
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000005",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 4,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "You must attend a review meeting at our offices on 11 February 2026.",
+      "candidate": {
+        "confidence": "high",
+        "id": 4,
+        "obligations": [
+          {
+            "anchor": "11 February 2026",
+            "ask": "Attend the review meeting",
+            "deadline": "on 11 February 2026",
+            "kind": "attendance",
+            "party": "our offices"
+          }
+        ],
+        "segment": "You"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 4,
+            "obligations": [
+              {
+                "anchor": "11 February 2026",
+                "ask": "Attend the review meeting",
+                "deadline": "on 11 February 2026",
+                "kind": "attendance",
+                "party": "Harborne Parking Services"
+              }
+            ],
+            "segment": "You"
+          },
+          "schema": "passed",
+          "pairing": "failed"
+        },
+        {
+          "ordinal": 2,
+          "candidate": {
+            "confidence": "high",
+            "id": 4,
+            "obligations": [
+              {
+                "anchor": "11 February 2026",
+                "ask": "Attend the review meeting",
+                "deadline": "on 11 February 2026",
+                "kind": "attendance",
+                "party": "our offices"
+              }
+            ],
+            "segment": "You"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000006",
+      "parent_id": "claim-000005",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 4,
+      "candidate_index": 1,
+      "kind": "obligation",
+      "source": "You must attend a review meeting at our offices on 11 February 2026.",
+      "candidate": {
+        "anchor": "11 February 2026",
+        "ask": "Attend the review meeting",
+        "deadline": "on 11 February 2026",
+        "kind": "attendance",
+        "party": "our offices"
+      },
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000007",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 5,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Please reply to this letter by the end of the month to confirm that you will attend.",
+      "candidate": {
+        "confidence": "high",
+        "id": 5,
+        "obligations": [
+          {
+            "anchor": "the end of the month",
+            "ask": "Reply to confirm attendance",
+            "deadline": "by the end of the month",
+            "kind": "response",
+            "party": "Harborne Parking Services"
+          }
+        ],
+        "segment": "Please reply"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 5,
+            "obligations": [
+              {
+                "anchor": "the end of the month",
+                "ask": "Reply to confirm attendance",
+                "deadline": "by the end of the month",
+                "kind": "response",
+                "party": "Harborne Parking Services"
+              }
+            ],
+            "segment": "Please reply"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000008",
+      "parent_id": "claim-000007",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 5,
+      "candidate_index": 1,
+      "kind": "obligation",
+      "source": "Please reply to this letter by the end of the month to confirm that you will attend.",
+      "candidate": {
+        "anchor": "the end of the month",
+        "ask": "Reply to confirm attendance",
+        "deadline": "by the end of the month",
+        "kind": "response",
+        "party": "Harborne Parking Services"
+      },
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000009",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 6,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "We look forward to hearing from you in due course.",
+      "candidate": {
+        "confidence": "high",
+        "id": 6,
+        "obligations": [],
+        "segment": "We"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 6,
+            "obligations": [],
+            "segment": "We"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000010",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 7,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Yours sincerely,",
+      "candidate": {
+        "confidence": "high",
+        "id": 7,
+        "obligations": [],
+        "segment": "Yours"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 7,
+            "obligations": [],
+            "segment": "Yours"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000011",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 8,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Harborne Parking Services",
+      "candidate": {
+        "confidence": "high",
+        "id": 8,
+        "obligations": [],
+        "segment": "Harborne"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 8,
+            "obligations": [],
+            "segment": "Harborne"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000012",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 9,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Payment of £340.00 was received in full and on time.",
+      "candidate": {
+        "confidence": "high",
+        "id": 9,
+        "obligations": [],
+        "segment": "Payment"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 9,
+            "obligations": [],
+            "segment": "Payment"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000013",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 0,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "1 January 2026",
+      "candidate": {
+        "confidence": "low",
+        "id": 0,
+        "obligations": [],
+        "segment": "1 January 2026"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "low",
+            "id": 0,
+            "obligations": [],
+            "segment": "1 January 2026"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    }
+  ]
+}
