@@ -1,0 +1,16 @@
+{
+  "inputs": [],
+  "model": {
+    "file": "qwen3.5-4b-q4_k_m.gguf",
+    "params": "4B",
+    "quant": "Q4_K_M",
+    "context": 8192
+  },
+  "request": {
+    "model": "local",
+    "temperature": 0,
+    "message_role": "user",
+    "max_tokens": 4096,
+    "response_format": "json_schema"
+  }
+}
