@@ -81,6 +81,24 @@ answer came back `"within 22 days"` for a 21-day letter.
 That is #457's defect and #544's on a third axis — an expectation the
 prompt's own wording does not uniquely determine.
 
+**Corrected after reading the items** (same day): the obligations were
+not missed. All 36 were **found** — `obligation_key` matched every one,
+`due` identical on both sides. What demotes them is
+`same_assertion_as`, which compares `deadline` verbatim, so a faithful
+copy of the letter's words lands in the confident-wrong cell while the
+obligation it describes is recorded as found.
+
+Chasing that turned up a standing defect these recordings also
+evidence. Three parts of the scorer answer "is the wording part of the
+claim" three different ways: `obligation_key` ignores both `deadline`
+and `anchor` when the deadline resolves (#287), `same_assertion_as`
+takes `deadline` verbatim but reads `anchor` by the date it names
+(#452), and `support` takes both verbatim. The consequence is visible
+in the unmodified runs beside this one: `support` fails 78 times per
+exam run and 79 per development run, every one on `anchor` alone, and
+nothing consumes it — the `month-end` stratum is 78 expected, 78 found,
+**0 support-pass**, and reports recall 1.00.
+
 ## Why it is archived rather than deleted
 
 It is the only measurement of a bed that no longer exists, and the whole
