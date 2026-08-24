@@ -1,0 +1,438 @@
+[
+  {
+    "id": "app.kttl.renewal-diff/development-cooling_off_changed-cedar-03/development-cooling_off_changed-cedar-03-previous-no-value-a155b5",
+    "item_id": "development-cooling_off_changed-cedar-03-previous-no-value-a155b5",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:3f5234da69865c52b4ff21ac48994e65e9b8b3851c1f6e44757c8e8625ea2ffe",
+    "fixture": "generated-development-cooling_off_changed-cedar-03",
+    "fixture_id": "development-cooling_off_changed-cedar-03",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Westmarch Cover landlord insurance — policy schedule CEDAR-COC-414 for the year to 31 August 2026.",
+    "decision_key": "previous|westmarch cover landlord insurance — policy schedule cedar-coc-414 for the year to 31 august 2026.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "absent"
+    },
+    "trace_ids": [
+      "claim-000009"
+    ],
+    "confidence": {
+      "source": "declared",
+      "level": "low",
+      "trace_id": "claim-000009"
+    },
+    "exchanges": [
+      {
+        "step": "Reading what each document says",
+        "batch": 1,
+        "request": "You read one passage of an insurance document at a time and say which\nnamed values, if any, it states.\n\nFor each passage, decide:\n- terms: a list of the named values this passage states. Most passages\n  state none — an empty list is a correct answer, not a failure, and it\n  is always better than a guess. A passage that explains what cover\n  means, describes how to claim, or thanks somebody for renewing states\n  no named value.\n- confidence: \"high\" | \"medium\" | \"low\"\n\nFor each term give:\n- term: \"premium\" | \"compulsory_excess\" | \"voluntary_excess\" |\n  \"total_excess\" | \"cover_limit\" | \"no_claims_discount\" |\n  \"cooling_off_period\" | \"other\"\n\n  Documents rarely use these words. \"Cover limit\" is the most a policy\n  will pay out, and a schedule may label it \"Insurance amount\", \"Sum\n  insured\", \"Limit of indemnity\" or \"Maximum we will pay\" — those are\n  all \"cover_limit\".\n\n  Use \"other\" when the passage states a named value that is none of\n  these. That is a real answer and the right one: the value goes in\n  front of the person instead of being compared. Never stretch one of\n  the named terms to cover something it is not.\n\n- basis: \"annual\" | \"monthly\" | \"per_claim\" | \"per_policy\"\n\n  What the value is measured against, as the passage says it. A premium\n  quoted as twelve instalments is \"monthly\"; the same policy's total for\n  the year is \"annual\". These are different values, and calling one the\n  other turns an instalment into a price rise.\n\n- value: the value exactly as the document writes it — \"£1,234.56\",\n  \"£500\", \"14 days\", \"60%\". Copy the currency symbol, the commas and\n  the decimals as they appear. Never round, never convert, never work\n  out a total, and never write a number the passage does not contain.\n\n- quote: the words the value comes from, copied exactly from the\n  passage — and the quote must contain the value itself. \"Insurance\n  amount\" is a label, not a quote: on a schedule with three sections it\n  is true of three different amounts, so it shows nothing about which\n  one you read. \"Insurance amount: £604,400.00.\" does show it. Include\n  enough words on either side of the value to make clear which line it\n  came from. This is checked against the document: a quote that is not\n  in the passage, or that does not contain its own value, means the\n  whole term goes to the person instead of being used.\n\nYou are not asked to compare anything, to say whether a value went up\nor down, or to work out a difference. That is done separately, from the\nvalues you copy. Copying them exactly is the whole job.\n\nReturn one result per input, with the same \"id\" you were given, and\necho the passage back in \"segment\". Return JSON only.\n\nPassages:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"Westmarch Cover landlord insurance — policy schedule CEDAR-COC-414 for the year to 31 August 2026.\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"Total annual premium: £5,422.00.\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"Cooling-off period: 14 days.\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"Your reference is CEDAR-COC-414. Quote it whenever you write to us about this policy.\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"Westmarch Cover arranges landlord insurance cover under CEDAR-COC-414 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"Westmarch Cover landlord insurance — renewal schedule CEDAR-COC-414 for the year to 31 August 2027.\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"Total annual premium: £5,422.00.\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"Cooling-off period: 28 days.\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"Westmarch Cover arranges landlord insurance cover under CEDAR-COC-414 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"Your reference is CEDAR-COC-414. Quote it whenever you write to us about this policy.\"\n  }\n]\n",
+        "response": "{\"results\":[{\"confidence\":\"low\",\"id\":0,\"segment\":\"Westmarch Cover landlord insurance — policy schedule CEDAR-COC-414 for the year to 31 August 2026.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":1,\"segment\":\"Total annual premium: £5,422.00.\",\"terms\":[{\"basis\":\"annual\",\"quote\":\"Total annual premium: £5,422.00.\",\"term\":\"premium\",\"value\":\"£5,422.00\"}]},{\"confidence\":\"high\",\"id\":2,\"segment\":\"Cooling-off period: 14 days.\",\"terms\":[{\"basis\":\"per_policy\",\"quote\":\"Cooling-off period: 14 days.\",\"term\":\"cooling_off_period\",\"value\":\"14 days\"}]},{\"confidence\":\"low\",\"id\":3,\"segment\":\"Your reference is CEDAR-COC-414. Quote it whenever you write to us about this policy.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":4,\"segment\":\"Westmarch Cover arranges landlord insurance cover under CEDAR-COC-414 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":5,\"segment\":\"Westmarch Cover landlord insurance — renewal schedule CEDAR-COC-414 for the year to 31 August 2027.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":6,\"segment\":\"Total annual premium: £5,422.00.\",\"terms\":[{\"basis\":\"annual\",\"quote\":\"Total annual premium: £5,422.00.\",\"term\":\"premium\",\"value\":\"£5,422.00\"}]},{\"confidence\":\"high\",\"id\":7,\"segment\":\"Cooling-off period: 28 days.\",\"terms\":[{\"basis\":\"per_policy\",\"quote\":\"Cooling-off period: 28 days.\",\"term\":\"cooling_off_period\",\"value\":\"28 days\"}]},{\"confidence\":\"low\",\"id\":8,\"segment\":\"Westmarch Cover arranges landlord insurance cover under CEDAR-COC-414 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":9,\"segment\":\"Your reference is CEDAR-COC-414. Quote it whenever you write to us about this policy.\",\"terms\":[]}]}"
+      }
+    ]
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-cooling_off_changed-cedar-03/development-cooling_off_changed-cedar-03-previous-premium-1e0c89",
+    "item_id": "development-cooling_off_changed-cedar-03-previous-premium-1e0c89",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:3f5234da69865c52b4ff21ac48994e65e9b8b3851c1f6e44757c8e8625ea2ffe",
+    "fixture": "generated-development-cooling_off_changed-cedar-03",
+    "fixture_id": "development-cooling_off_changed-cedar-03",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Total annual premium: £5,422.00.",
+    "decision_key": "previous|total annual premium: £5,422.00.",
+    "metric": "extraction",
+    "expected": {
+      "term": "premium",
+      "basis": "annual",
+      "value": "£5,422.00",
+      "quote": "Total annual premium: £5,422.00."
+    },
+    "actual": {
+      "outcome": "found",
+      "extracted": {
+        "term": "premium",
+        "basis": "annual",
+        "value": "£5,422.00",
+        "quote": "Total annual premium: £5,422.00."
+      }
+    },
+    "evidence": {
+      "existence": "pass",
+      "attribution": "pass",
+      "support": "pass"
+    },
+    "trace_ids": [
+      "claim-000001",
+      "claim-000002",
+      "claim-000005",
+      "claim-000006"
+    ],
+    "confidence": {
+      "source": "declared",
+      "level": "high",
+      "trace_id": "claim-000001"
+    },
+    "exchanges": [
+      {
+        "step": "Reading what each document says",
+        "batch": 1,
+        "request": "You read one passage of an insurance document at a time and say which\nnamed values, if any, it states.\n\nFor each passage, decide:\n- terms: a list of the named values this passage states. Most passages\n  state none — an empty list is a correct answer, not a failure, and it\n  is always better than a guess. A passage that explains what cover\n  means, describes how to claim, or thanks somebody for renewing states\n  no named value.\n- confidence: \"high\" | \"medium\" | \"low\"\n\nFor each term give:\n- term: \"premium\" | \"compulsory_excess\" | \"voluntary_excess\" |\n  \"total_excess\" | \"cover_limit\" | \"no_claims_discount\" |\n  \"cooling_off_period\" | \"other\"\n\n  Documents rarely use these words. \"Cover limit\" is the most a policy\n  will pay out, and a schedule may label it \"Insurance amount\", \"Sum\n  insured\", \"Limit of indemnity\" or \"Maximum we will pay\" — those are\n  all \"cover_limit\".\n\n  Use \"other\" when the passage states a named value that is none of\n  these. That is a real answer and the right one: the value goes in\n  front of the person instead of being compared. Never stretch one of\n  the named terms to cover something it is not.\n\n- basis: \"annual\" | \"monthly\" | \"per_claim\" | \"per_policy\"\n\n  What the value is measured against, as the passage says it. A premium\n  quoted as twelve instalments is \"monthly\"; the same policy's total for\n  the year is \"annual\". These are different values, and calling one the\n  other turns an instalment into a price rise.\n\n- value: the value exactly as the document writes it — \"£1,234.56\",\n  \"£500\", \"14 days\", \"60%\". Copy the currency symbol, the commas and\n  the decimals as they appear. Never round, never convert, never work\n  out a total, and never write a number the passage does not contain.\n\n- quote: the words the value comes from, copied exactly from the\n  passage — and the quote must contain the value itself. \"Insurance\n  amount\" is a label, not a quote: on a schedule with three sections it\n  is true of three different amounts, so it shows nothing about which\n  one you read. \"Insurance amount: £604,400.00.\" does show it. Include\n  enough words on either side of the value to make clear which line it\n  came from. This is checked against the document: a quote that is not\n  in the passage, or that does not contain its own value, means the\n  whole term goes to the person instead of being used.\n\nYou are not asked to compare anything, to say whether a value went up\nor down, or to work out a difference. That is done separately, from the\nvalues you copy. Copying them exactly is the whole job.\n\nReturn one result per input, with the same \"id\" you were given, and\necho the passage back in \"segment\". Return JSON only.\n\nPassages:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"Westmarch Cover landlord insurance — policy schedule CEDAR-COC-414 for the year to 31 August 2026.\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"Total annual premium: £5,422.00.\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"Cooling-off period: 14 days.\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"Your reference is CEDAR-COC-414. Quote it whenever you write to us about this policy.\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"Westmarch Cover arranges landlord insurance cover under CEDAR-COC-414 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"Westmarch Cover landlord insurance — renewal schedule CEDAR-COC-414 for the year to 31 August 2027.\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"Total annual premium: £5,422.00.\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"Cooling-off period: 28 days.\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"Westmarch Cover arranges landlord insurance cover under CEDAR-COC-414 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"Your reference is CEDAR-COC-414. Quote it whenever you write to us about this policy.\"\n  }\n]\n",
+        "response": "{\"results\":[{\"confidence\":\"low\",\"id\":0,\"segment\":\"Westmarch Cover landlord insurance — policy schedule CEDAR-COC-414 for the year to 31 August 2026.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":1,\"segment\":\"Total annual premium: £5,422.00.\",\"terms\":[{\"basis\":\"annual\",\"quote\":\"Total annual premium: £5,422.00.\",\"term\":\"premium\",\"value\":\"£5,422.00\"}]},{\"confidence\":\"high\",\"id\":2,\"segment\":\"Cooling-off period: 14 days.\",\"terms\":[{\"basis\":\"per_policy\",\"quote\":\"Cooling-off period: 14 days.\",\"term\":\"cooling_off_period\",\"value\":\"14 days\"}]},{\"confidence\":\"low\",\"id\":3,\"segment\":\"Your reference is CEDAR-COC-414. Quote it whenever you write to us about this policy.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":4,\"segment\":\"Westmarch Cover arranges landlord insurance cover under CEDAR-COC-414 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":5,\"segment\":\"Westmarch Cover landlord insurance — renewal schedule CEDAR-COC-414 for the year to 31 August 2027.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":6,\"segment\":\"Total annual premium: £5,422.00.\",\"terms\":[{\"basis\":\"annual\",\"quote\":\"Total annual premium: £5,422.00.\",\"term\":\"premium\",\"value\":\"£5,422.00\"}]},{\"confidence\":\"high\",\"id\":7,\"segment\":\"Cooling-off period: 28 days.\",\"terms\":[{\"basis\":\"per_policy\",\"quote\":\"Cooling-off period: 28 days.\",\"term\":\"cooling_off_period\",\"value\":\"28 days\"}]},{\"confidence\":\"low\",\"id\":8,\"segment\":\"Westmarch Cover arranges landlord insurance cover under CEDAR-COC-414 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":9,\"segment\":\"Your reference is CEDAR-COC-414. Quote it whenever you write to us about this policy.\",\"terms\":[]}]}"
+      }
+    ]
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-cooling_off_changed-cedar-03/development-cooling_off_changed-cedar-03-previous-cooling-off-period-0535b7",
+    "item_id": "development-cooling_off_changed-cedar-03-previous-cooling-off-period-0535b7",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:3f5234da69865c52b4ff21ac48994e65e9b8b3851c1f6e44757c8e8625ea2ffe",
+    "fixture": "generated-development-cooling_off_changed-cedar-03",
+    "fixture_id": "development-cooling_off_changed-cedar-03",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Cooling-off period: 14 days.",
+    "decision_key": "previous|cooling-off period: 14 days.",
+    "metric": "extraction",
+    "expected": {
+      "term": "cooling_off_period",
+      "basis": "per_policy",
+      "value": "14 days",
+      "quote": "Cooling-off period: 14 days."
+    },
+    "actual": {
+      "outcome": "found",
+      "extracted": {
+        "term": "cooling_off_period",
+        "basis": "per_policy",
+        "value": "14 days",
+        "quote": "Cooling-off period: 14 days."
+      }
+    },
+    "evidence": {
+      "existence": "pass",
+      "attribution": "pass",
+      "support": "pass"
+    },
+    "trace_ids": [
+      "claim-000003",
+      "claim-000004"
+    ],
+    "confidence": {
+      "source": "declared",
+      "level": "high",
+      "trace_id": "claim-000003"
+    },
+    "exchanges": [
+      {
+        "step": "Reading what each document says",
+        "batch": 1,
+        "request": "You read one passage of an insurance document at a time and say which\nnamed values, if any, it states.\n\nFor each passage, decide:\n- terms: a list of the named values this passage states. Most passages\n  state none — an empty list is a correct answer, not a failure, and it\n  is always better than a guess. A passage that explains what cover\n  means, describes how to claim, or thanks somebody for renewing states\n  no named value.\n- confidence: \"high\" | \"medium\" | \"low\"\n\nFor each term give:\n- term: \"premium\" | \"compulsory_excess\" | \"voluntary_excess\" |\n  \"total_excess\" | \"cover_limit\" | \"no_claims_discount\" |\n  \"cooling_off_period\" | \"other\"\n\n  Documents rarely use these words. \"Cover limit\" is the most a policy\n  will pay out, and a schedule may label it \"Insurance amount\", \"Sum\n  insured\", \"Limit of indemnity\" or \"Maximum we will pay\" — those are\n  all \"cover_limit\".\n\n  Use \"other\" when the passage states a named value that is none of\n  these. That is a real answer and the right one: the value goes in\n  front of the person instead of being compared. Never stretch one of\n  the named terms to cover something it is not.\n\n- basis: \"annual\" | \"monthly\" | \"per_claim\" | \"per_policy\"\n\n  What the value is measured against, as the passage says it. A premium\n  quoted as twelve instalments is \"monthly\"; the same policy's total for\n  the year is \"annual\". These are different values, and calling one the\n  other turns an instalment into a price rise.\n\n- value: the value exactly as the document writes it — \"£1,234.56\",\n  \"£500\", \"14 days\", \"60%\". Copy the currency symbol, the commas and\n  the decimals as they appear. Never round, never convert, never work\n  out a total, and never write a number the passage does not contain.\n\n- quote: the words the value comes from, copied exactly from the\n  passage — and the quote must contain the value itself. \"Insurance\n  amount\" is a label, not a quote: on a schedule with three sections it\n  is true of three different amounts, so it shows nothing about which\n  one you read. \"Insurance amount: £604,400.00.\" does show it. Include\n  enough words on either side of the value to make clear which line it\n  came from. This is checked against the document: a quote that is not\n  in the passage, or that does not contain its own value, means the\n  whole term goes to the person instead of being used.\n\nYou are not asked to compare anything, to say whether a value went up\nor down, or to work out a difference. That is done separately, from the\nvalues you copy. Copying them exactly is the whole job.\n\nReturn one result per input, with the same \"id\" you were given, and\necho the passage back in \"segment\". Return JSON only.\n\nPassages:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"Westmarch Cover landlord insurance — policy schedule CEDAR-COC-414 for the year to 31 August 2026.\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"Total annual premium: £5,422.00.\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"Cooling-off period: 14 days.\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"Your reference is CEDAR-COC-414. Quote it whenever you write to us about this policy.\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"Westmarch Cover arranges landlord insurance cover under CEDAR-COC-414 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"Westmarch Cover landlord insurance — renewal schedule CEDAR-COC-414 for the year to 31 August 2027.\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"Total annual premium: £5,422.00.\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"Cooling-off period: 28 days.\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"Westmarch Cover arranges landlord insurance cover under CEDAR-COC-414 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"Your reference is CEDAR-COC-414. Quote it whenever you write to us about this policy.\"\n  }\n]\n",
+        "response": "{\"results\":[{\"confidence\":\"low\",\"id\":0,\"segment\":\"Westmarch Cover landlord insurance — policy schedule CEDAR-COC-414 for the year to 31 August 2026.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":1,\"segment\":\"Total annual premium: £5,422.00.\",\"terms\":[{\"basis\":\"annual\",\"quote\":\"Total annual premium: £5,422.00.\",\"term\":\"premium\",\"value\":\"£5,422.00\"}]},{\"confidence\":\"high\",\"id\":2,\"segment\":\"Cooling-off period: 14 days.\",\"terms\":[{\"basis\":\"per_policy\",\"quote\":\"Cooling-off period: 14 days.\",\"term\":\"cooling_off_period\",\"value\":\"14 days\"}]},{\"confidence\":\"low\",\"id\":3,\"segment\":\"Your reference is CEDAR-COC-414. Quote it whenever you write to us about this policy.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":4,\"segment\":\"Westmarch Cover arranges landlord insurance cover under CEDAR-COC-414 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":5,\"segment\":\"Westmarch Cover landlord insurance — renewal schedule CEDAR-COC-414 for the year to 31 August 2027.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":6,\"segment\":\"Total annual premium: £5,422.00.\",\"terms\":[{\"basis\":\"annual\",\"quote\":\"Total annual premium: £5,422.00.\",\"term\":\"premium\",\"value\":\"£5,422.00\"}]},{\"confidence\":\"high\",\"id\":7,\"segment\":\"Cooling-off period: 28 days.\",\"terms\":[{\"basis\":\"per_policy\",\"quote\":\"Cooling-off period: 28 days.\",\"term\":\"cooling_off_period\",\"value\":\"28 days\"}]},{\"confidence\":\"low\",\"id\":8,\"segment\":\"Westmarch Cover arranges landlord insurance cover under CEDAR-COC-414 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":9,\"segment\":\"Your reference is CEDAR-COC-414. Quote it whenever you write to us about this policy.\",\"terms\":[]}]}"
+      }
+    ]
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-cooling_off_changed-cedar-03/development-cooling_off_changed-cedar-03-previous-no-value-1dbcf4",
+    "item_id": "development-cooling_off_changed-cedar-03-previous-no-value-1dbcf4",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:3f5234da69865c52b4ff21ac48994e65e9b8b3851c1f6e44757c8e8625ea2ffe",
+    "fixture": "generated-development-cooling_off_changed-cedar-03",
+    "fixture_id": "development-cooling_off_changed-cedar-03",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Your reference is CEDAR-COC-414. Quote it whenever you write to us about this policy.",
+    "decision_key": "previous|your reference is cedar-coc-414. quote it whenever you write to us about this policy.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "absent"
+    },
+    "trace_ids": [
+      "claim-000010",
+      "claim-000014"
+    ],
+    "confidence": {
+      "source": "declared",
+      "level": "low",
+      "trace_id": "claim-000010"
+    },
+    "exchanges": [
+      {
+        "step": "Reading what each document says",
+        "batch": 1,
+        "request": "You read one passage of an insurance document at a time and say which\nnamed values, if any, it states.\n\nFor each passage, decide:\n- terms: a list of the named values this passage states. Most passages\n  state none — an empty list is a correct answer, not a failure, and it\n  is always better than a guess. A passage that explains what cover\n  means, describes how to claim, or thanks somebody for renewing states\n  no named value.\n- confidence: \"high\" | \"medium\" | \"low\"\n\nFor each term give:\n- term: \"premium\" | \"compulsory_excess\" | \"voluntary_excess\" |\n  \"total_excess\" | \"cover_limit\" | \"no_claims_discount\" |\n  \"cooling_off_period\" | \"other\"\n\n  Documents rarely use these words. \"Cover limit\" is the most a policy\n  will pay out, and a schedule may label it \"Insurance amount\", \"Sum\n  insured\", \"Limit of indemnity\" or \"Maximum we will pay\" — those are\n  all \"cover_limit\".\n\n  Use \"other\" when the passage states a named value that is none of\n  these. That is a real answer and the right one: the value goes in\n  front of the person instead of being compared. Never stretch one of\n  the named terms to cover something it is not.\n\n- basis: \"annual\" | \"monthly\" | \"per_claim\" | \"per_policy\"\n\n  What the value is measured against, as the passage says it. A premium\n  quoted as twelve instalments is \"monthly\"; the same policy's total for\n  the year is \"annual\". These are different values, and calling one the\n  other turns an instalment into a price rise.\n\n- value: the value exactly as the document writes it — \"£1,234.56\",\n  \"£500\", \"14 days\", \"60%\". Copy the currency symbol, the commas and\n  the decimals as they appear. Never round, never convert, never work\n  out a total, and never write a number the passage does not contain.\n\n- quote: the words the value comes from, copied exactly from the\n  passage — and the quote must contain the value itself. \"Insurance\n  amount\" is a label, not a quote: on a schedule with three sections it\n  is true of three different amounts, so it shows nothing about which\n  one you read. \"Insurance amount: £604,400.00.\" does show it. Include\n  enough words on either side of the value to make clear which line it\n  came from. This is checked against the document: a quote that is not\n  in the passage, or that does not contain its own value, means the\n  whole term goes to the person instead of being used.\n\nYou are not asked to compare anything, to say whether a value went up\nor down, or to work out a difference. That is done separately, from the\nvalues you copy. Copying them exactly is the whole job.\n\nReturn one result per input, with the same \"id\" you were given, and\necho the passage back in \"segment\". Return JSON only.\n\nPassages:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"Westmarch Cover landlord insurance — policy schedule CEDAR-COC-414 for the year to 31 August 2026.\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"Total annual premium: £5,422.00.\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"Cooling-off period: 14 days.\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"Your reference is CEDAR-COC-414. Quote it whenever you write to us about this policy.\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"Westmarch Cover arranges landlord insurance cover under CEDAR-COC-414 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"Westmarch Cover landlord insurance — renewal schedule CEDAR-COC-414 for the year to 31 August 2027.\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"Total annual premium: £5,422.00.\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"Cooling-off period: 28 days.\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"Westmarch Cover arranges landlord insurance cover under CEDAR-COC-414 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"Your reference is CEDAR-COC-414. Quote it whenever you write to us about this policy.\"\n  }\n]\n",
+        "response": "{\"results\":[{\"confidence\":\"low\",\"id\":0,\"segment\":\"Westmarch Cover landlord insurance — policy schedule CEDAR-COC-414 for the year to 31 August 2026.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":1,\"segment\":\"Total annual premium: £5,422.00.\",\"terms\":[{\"basis\":\"annual\",\"quote\":\"Total annual premium: £5,422.00.\",\"term\":\"premium\",\"value\":\"£5,422.00\"}]},{\"confidence\":\"high\",\"id\":2,\"segment\":\"Cooling-off period: 14 days.\",\"terms\":[{\"basis\":\"per_policy\",\"quote\":\"Cooling-off period: 14 days.\",\"term\":\"cooling_off_period\",\"value\":\"14 days\"}]},{\"confidence\":\"low\",\"id\":3,\"segment\":\"Your reference is CEDAR-COC-414. Quote it whenever you write to us about this policy.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":4,\"segment\":\"Westmarch Cover arranges landlord insurance cover under CEDAR-COC-414 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":5,\"segment\":\"Westmarch Cover landlord insurance — renewal schedule CEDAR-COC-414 for the year to 31 August 2027.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":6,\"segment\":\"Total annual premium: £5,422.00.\",\"terms\":[{\"basis\":\"annual\",\"quote\":\"Total annual premium: £5,422.00.\",\"term\":\"premium\",\"value\":\"£5,422.00\"}]},{\"confidence\":\"high\",\"id\":7,\"segment\":\"Cooling-off period: 28 days.\",\"terms\":[{\"basis\":\"per_policy\",\"quote\":\"Cooling-off period: 28 days.\",\"term\":\"cooling_off_period\",\"value\":\"28 days\"}]},{\"confidence\":\"low\",\"id\":8,\"segment\":\"Westmarch Cover arranges landlord insurance cover under CEDAR-COC-414 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":9,\"segment\":\"Your reference is CEDAR-COC-414. Quote it whenever you write to us about this policy.\",\"terms\":[]}]}"
+      }
+    ]
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-cooling_off_changed-cedar-03/development-cooling_off_changed-cedar-03-previous-no-value-befec7",
+    "item_id": "development-cooling_off_changed-cedar-03-previous-no-value-befec7",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:3f5234da69865c52b4ff21ac48994e65e9b8b3851c1f6e44757c8e8625ea2ffe",
+    "fixture": "generated-development-cooling_off_changed-cedar-03",
+    "fixture_id": "development-cooling_off_changed-cedar-03",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Westmarch Cover arranges landlord insurance cover under CEDAR-COC-414 and is regulated in the United Kingdom.",
+    "decision_key": "previous|westmarch cover arranges landlord insurance cover under cedar-coc-414 and is regulated in the united kingdom.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "absent"
+    },
+    "trace_ids": [
+      "claim-000011",
+      "claim-000013"
+    ],
+    "confidence": {
+      "source": "declared",
+      "level": "low",
+      "trace_id": "claim-000011"
+    },
+    "exchanges": [
+      {
+        "step": "Reading what each document says",
+        "batch": 1,
+        "request": "You read one passage of an insurance document at a time and say which\nnamed values, if any, it states.\n\nFor each passage, decide:\n- terms: a list of the named values this passage states. Most passages\n  state none — an empty list is a correct answer, not a failure, and it\n  is always better than a guess. A passage that explains what cover\n  means, describes how to claim, or thanks somebody for renewing states\n  no named value.\n- confidence: \"high\" | \"medium\" | \"low\"\n\nFor each term give:\n- term: \"premium\" | \"compulsory_excess\" | \"voluntary_excess\" |\n  \"total_excess\" | \"cover_limit\" | \"no_claims_discount\" |\n  \"cooling_off_period\" | \"other\"\n\n  Documents rarely use these words. \"Cover limit\" is the most a policy\n  will pay out, and a schedule may label it \"Insurance amount\", \"Sum\n  insured\", \"Limit of indemnity\" or \"Maximum we will pay\" — those are\n  all \"cover_limit\".\n\n  Use \"other\" when the passage states a named value that is none of\n  these. That is a real answer and the right one: the value goes in\n  front of the person instead of being compared. Never stretch one of\n  the named terms to cover something it is not.\n\n- basis: \"annual\" | \"monthly\" | \"per_claim\" | \"per_policy\"\n\n  What the value is measured against, as the passage says it. A premium\n  quoted as twelve instalments is \"monthly\"; the same policy's total for\n  the year is \"annual\". These are different values, and calling one the\n  other turns an instalment into a price rise.\n\n- value: the value exactly as the document writes it — \"£1,234.56\",\n  \"£500\", \"14 days\", \"60%\". Copy the currency symbol, the commas and\n  the decimals as they appear. Never round, never convert, never work\n  out a total, and never write a number the passage does not contain.\n\n- quote: the words the value comes from, copied exactly from the\n  passage — and the quote must contain the value itself. \"Insurance\n  amount\" is a label, not a quote: on a schedule with three sections it\n  is true of three different amounts, so it shows nothing about which\n  one you read. \"Insurance amount: £604,400.00.\" does show it. Include\n  enough words on either side of the value to make clear which line it\n  came from. This is checked against the document: a quote that is not\n  in the passage, or that does not contain its own value, means the\n  whole term goes to the person instead of being used.\n\nYou are not asked to compare anything, to say whether a value went up\nor down, or to work out a difference. That is done separately, from the\nvalues you copy. Copying them exactly is the whole job.\n\nReturn one result per input, with the same \"id\" you were given, and\necho the passage back in \"segment\". Return JSON only.\n\nPassages:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"Westmarch Cover landlord insurance — policy schedule CEDAR-COC-414 for the year to 31 August 2026.\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"Total annual premium: £5,422.00.\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"Cooling-off period: 14 days.\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"Your reference is CEDAR-COC-414. Quote it whenever you write to us about this policy.\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"Westmarch Cover arranges landlord insurance cover under CEDAR-COC-414 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"Westmarch Cover landlord insurance — renewal schedule CEDAR-COC-414 for the year to 31 August 2027.\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"Total annual premium: £5,422.00.\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"Cooling-off period: 28 days.\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"Westmarch Cover arranges landlord insurance cover under CEDAR-COC-414 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"Your reference is CEDAR-COC-414. Quote it whenever you write to us about this policy.\"\n  }\n]\n",
+        "response": "{\"results\":[{\"confidence\":\"low\",\"id\":0,\"segment\":\"Westmarch Cover landlord insurance — policy schedule CEDAR-COC-414 for the year to 31 August 2026.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":1,\"segment\":\"Total annual premium: £5,422.00.\",\"terms\":[{\"basis\":\"annual\",\"quote\":\"Total annual premium: £5,422.00.\",\"term\":\"premium\",\"value\":\"£5,422.00\"}]},{\"confidence\":\"high\",\"id\":2,\"segment\":\"Cooling-off period: 14 days.\",\"terms\":[{\"basis\":\"per_policy\",\"quote\":\"Cooling-off period: 14 days.\",\"term\":\"cooling_off_period\",\"value\":\"14 days\"}]},{\"confidence\":\"low\",\"id\":3,\"segment\":\"Your reference is CEDAR-COC-414. Quote it whenever you write to us about this policy.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":4,\"segment\":\"Westmarch Cover arranges landlord insurance cover under CEDAR-COC-414 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":5,\"segment\":\"Westmarch Cover landlord insurance — renewal schedule CEDAR-COC-414 for the year to 31 August 2027.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":6,\"segment\":\"Total annual premium: £5,422.00.\",\"terms\":[{\"basis\":\"annual\",\"quote\":\"Total annual premium: £5,422.00.\",\"term\":\"premium\",\"value\":\"£5,422.00\"}]},{\"confidence\":\"high\",\"id\":7,\"segment\":\"Cooling-off period: 28 days.\",\"terms\":[{\"basis\":\"per_policy\",\"quote\":\"Cooling-off period: 28 days.\",\"term\":\"cooling_off_period\",\"value\":\"28 days\"}]},{\"confidence\":\"low\",\"id\":8,\"segment\":\"Westmarch Cover arranges landlord insurance cover under CEDAR-COC-414 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":9,\"segment\":\"Your reference is CEDAR-COC-414. Quote it whenever you write to us about this policy.\",\"terms\":[]}]}"
+      }
+    ]
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-cooling_off_changed-cedar-03/development-cooling_off_changed-cedar-03-renewal-no-value-1dd8d1",
+    "item_id": "development-cooling_off_changed-cedar-03-renewal-no-value-1dd8d1",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:3f5234da69865c52b4ff21ac48994e65e9b8b3851c1f6e44757c8e8625ea2ffe",
+    "fixture": "generated-development-cooling_off_changed-cedar-03",
+    "fixture_id": "development-cooling_off_changed-cedar-03",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Westmarch Cover landlord insurance — renewal schedule CEDAR-COC-414 for the year to 31 August 2027.",
+    "decision_key": "renewal|westmarch cover landlord insurance — renewal schedule cedar-coc-414 for the year to 31 august 2027.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "absent"
+    },
+    "trace_ids": [
+      "claim-000012"
+    ],
+    "confidence": {
+      "source": "declared",
+      "level": "low",
+      "trace_id": "claim-000012"
+    },
+    "exchanges": [
+      {
+        "step": "Reading what each document says",
+        "batch": 1,
+        "request": "You read one passage of an insurance document at a time and say which\nnamed values, if any, it states.\n\nFor each passage, decide:\n- terms: a list of the named values this passage states. Most passages\n  state none — an empty list is a correct answer, not a failure, and it\n  is always better than a guess. A passage that explains what cover\n  means, describes how to claim, or thanks somebody for renewing states\n  no named value.\n- confidence: \"high\" | \"medium\" | \"low\"\n\nFor each term give:\n- term: \"premium\" | \"compulsory_excess\" | \"voluntary_excess\" |\n  \"total_excess\" | \"cover_limit\" | \"no_claims_discount\" |\n  \"cooling_off_period\" | \"other\"\n\n  Documents rarely use these words. \"Cover limit\" is the most a policy\n  will pay out, and a schedule may label it \"Insurance amount\", \"Sum\n  insured\", \"Limit of indemnity\" or \"Maximum we will pay\" — those are\n  all \"cover_limit\".\n\n  Use \"other\" when the passage states a named value that is none of\n  these. That is a real answer and the right one: the value goes in\n  front of the person instead of being compared. Never stretch one of\n  the named terms to cover something it is not.\n\n- basis: \"annual\" | \"monthly\" | \"per_claim\" | \"per_policy\"\n\n  What the value is measured against, as the passage says it. A premium\n  quoted as twelve instalments is \"monthly\"; the same policy's total for\n  the year is \"annual\". These are different values, and calling one the\n  other turns an instalment into a price rise.\n\n- value: the value exactly as the document writes it — \"£1,234.56\",\n  \"£500\", \"14 days\", \"60%\". Copy the currency symbol, the commas and\n  the decimals as they appear. Never round, never convert, never work\n  out a total, and never write a number the passage does not contain.\n\n- quote: the words the value comes from, copied exactly from the\n  passage — and the quote must contain the value itself. \"Insurance\n  amount\" is a label, not a quote: on a schedule with three sections it\n  is true of three different amounts, so it shows nothing about which\n  one you read. \"Insurance amount: £604,400.00.\" does show it. Include\n  enough words on either side of the value to make clear which line it\n  came from. This is checked against the document: a quote that is not\n  in the passage, or that does not contain its own value, means the\n  whole term goes to the person instead of being used.\n\nYou are not asked to compare anything, to say whether a value went up\nor down, or to work out a difference. That is done separately, from the\nvalues you copy. Copying them exactly is the whole job.\n\nReturn one result per input, with the same \"id\" you were given, and\necho the passage back in \"segment\". Return JSON only.\n\nPassages:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"Westmarch Cover landlord insurance — policy schedule CEDAR-COC-414 for the year to 31 August 2026.\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"Total annual premium: £5,422.00.\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"Cooling-off period: 14 days.\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"Your reference is CEDAR-COC-414. Quote it whenever you write to us about this policy.\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"Westmarch Cover arranges landlord insurance cover under CEDAR-COC-414 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"Westmarch Cover landlord insurance — renewal schedule CEDAR-COC-414 for the year to 31 August 2027.\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"Total annual premium: £5,422.00.\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"Cooling-off period: 28 days.\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"Westmarch Cover arranges landlord insurance cover under CEDAR-COC-414 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"Your reference is CEDAR-COC-414. Quote it whenever you write to us about this policy.\"\n  }\n]\n",
+        "response": "{\"results\":[{\"confidence\":\"low\",\"id\":0,\"segment\":\"Westmarch Cover landlord insurance — policy schedule CEDAR-COC-414 for the year to 31 August 2026.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":1,\"segment\":\"Total annual premium: £5,422.00.\",\"terms\":[{\"basis\":\"annual\",\"quote\":\"Total annual premium: £5,422.00.\",\"term\":\"premium\",\"value\":\"£5,422.00\"}]},{\"confidence\":\"high\",\"id\":2,\"segment\":\"Cooling-off period: 14 days.\",\"terms\":[{\"basis\":\"per_policy\",\"quote\":\"Cooling-off period: 14 days.\",\"term\":\"cooling_off_period\",\"value\":\"14 days\"}]},{\"confidence\":\"low\",\"id\":3,\"segment\":\"Your reference is CEDAR-COC-414. Quote it whenever you write to us about this policy.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":4,\"segment\":\"Westmarch Cover arranges landlord insurance cover under CEDAR-COC-414 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":5,\"segment\":\"Westmarch Cover landlord insurance — renewal schedule CEDAR-COC-414 for the year to 31 August 2027.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":6,\"segment\":\"Total annual premium: £5,422.00.\",\"terms\":[{\"basis\":\"annual\",\"quote\":\"Total annual premium: £5,422.00.\",\"term\":\"premium\",\"value\":\"£5,422.00\"}]},{\"confidence\":\"high\",\"id\":7,\"segment\":\"Cooling-off period: 28 days.\",\"terms\":[{\"basis\":\"per_policy\",\"quote\":\"Cooling-off period: 28 days.\",\"term\":\"cooling_off_period\",\"value\":\"28 days\"}]},{\"confidence\":\"low\",\"id\":8,\"segment\":\"Westmarch Cover arranges landlord insurance cover under CEDAR-COC-414 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":9,\"segment\":\"Your reference is CEDAR-COC-414. Quote it whenever you write to us about this policy.\",\"terms\":[]}]}"
+      }
+    ]
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-cooling_off_changed-cedar-03/development-cooling_off_changed-cedar-03-renewal-premium-1e0c89",
+    "item_id": "development-cooling_off_changed-cedar-03-renewal-premium-1e0c89",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:3f5234da69865c52b4ff21ac48994e65e9b8b3851c1f6e44757c8e8625ea2ffe",
+    "fixture": "generated-development-cooling_off_changed-cedar-03",
+    "fixture_id": "development-cooling_off_changed-cedar-03",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Total annual premium: £5,422.00.",
+    "decision_key": "renewal|total annual premium: £5,422.00.",
+    "metric": "extraction",
+    "expected": {
+      "term": "premium",
+      "basis": "annual",
+      "value": "£5,422.00",
+      "quote": "Total annual premium: £5,422.00."
+    },
+    "actual": {
+      "outcome": "found",
+      "extracted": {
+        "term": "premium",
+        "basis": "annual",
+        "value": "£5,422.00",
+        "quote": "Total annual premium: £5,422.00."
+      }
+    },
+    "evidence": {
+      "existence": "pass",
+      "attribution": "pass",
+      "support": "pass"
+    },
+    "trace_ids": [
+      "claim-000001",
+      "claim-000002",
+      "claim-000005",
+      "claim-000006"
+    ],
+    "confidence": {
+      "source": "declared",
+      "level": "high",
+      "trace_id": "claim-000001"
+    },
+    "exchanges": [
+      {
+        "step": "Reading what each document says",
+        "batch": 1,
+        "request": "You read one passage of an insurance document at a time and say which\nnamed values, if any, it states.\n\nFor each passage, decide:\n- terms: a list of the named values this passage states. Most passages\n  state none — an empty list is a correct answer, not a failure, and it\n  is always better than a guess. A passage that explains what cover\n  means, describes how to claim, or thanks somebody for renewing states\n  no named value.\n- confidence: \"high\" | \"medium\" | \"low\"\n\nFor each term give:\n- term: \"premium\" | \"compulsory_excess\" | \"voluntary_excess\" |\n  \"total_excess\" | \"cover_limit\" | \"no_claims_discount\" |\n  \"cooling_off_period\" | \"other\"\n\n  Documents rarely use these words. \"Cover limit\" is the most a policy\n  will pay out, and a schedule may label it \"Insurance amount\", \"Sum\n  insured\", \"Limit of indemnity\" or \"Maximum we will pay\" — those are\n  all \"cover_limit\".\n\n  Use \"other\" when the passage states a named value that is none of\n  these. That is a real answer and the right one: the value goes in\n  front of the person instead of being compared. Never stretch one of\n  the named terms to cover something it is not.\n\n- basis: \"annual\" | \"monthly\" | \"per_claim\" | \"per_policy\"\n\n  What the value is measured against, as the passage says it. A premium\n  quoted as twelve instalments is \"monthly\"; the same policy's total for\n  the year is \"annual\". These are different values, and calling one the\n  other turns an instalment into a price rise.\n\n- value: the value exactly as the document writes it — \"£1,234.56\",\n  \"£500\", \"14 days\", \"60%\". Copy the currency symbol, the commas and\n  the decimals as they appear. Never round, never convert, never work\n  out a total, and never write a number the passage does not contain.\n\n- quote: the words the value comes from, copied exactly from the\n  passage — and the quote must contain the value itself. \"Insurance\n  amount\" is a label, not a quote: on a schedule with three sections it\n  is true of three different amounts, so it shows nothing about which\n  one you read. \"Insurance amount: £604,400.00.\" does show it. Include\n  enough words on either side of the value to make clear which line it\n  came from. This is checked against the document: a quote that is not\n  in the passage, or that does not contain its own value, means the\n  whole term goes to the person instead of being used.\n\nYou are not asked to compare anything, to say whether a value went up\nor down, or to work out a difference. That is done separately, from the\nvalues you copy. Copying them exactly is the whole job.\n\nReturn one result per input, with the same \"id\" you were given, and\necho the passage back in \"segment\". Return JSON only.\n\nPassages:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"Westmarch Cover landlord insurance — policy schedule CEDAR-COC-414 for the year to 31 August 2026.\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"Total annual premium: £5,422.00.\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"Cooling-off period: 14 days.\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"Your reference is CEDAR-COC-414. Quote it whenever you write to us about this policy.\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"Westmarch Cover arranges landlord insurance cover under CEDAR-COC-414 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"Westmarch Cover landlord insurance — renewal schedule CEDAR-COC-414 for the year to 31 August 2027.\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"Total annual premium: £5,422.00.\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"Cooling-off period: 28 days.\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"Westmarch Cover arranges landlord insurance cover under CEDAR-COC-414 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"Your reference is CEDAR-COC-414. Quote it whenever you write to us about this policy.\"\n  }\n]\n",
+        "response": "{\"results\":[{\"confidence\":\"low\",\"id\":0,\"segment\":\"Westmarch Cover landlord insurance — policy schedule CEDAR-COC-414 for the year to 31 August 2026.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":1,\"segment\":\"Total annual premium: £5,422.00.\",\"terms\":[{\"basis\":\"annual\",\"quote\":\"Total annual premium: £5,422.00.\",\"term\":\"premium\",\"value\":\"£5,422.00\"}]},{\"confidence\":\"high\",\"id\":2,\"segment\":\"Cooling-off period: 14 days.\",\"terms\":[{\"basis\":\"per_policy\",\"quote\":\"Cooling-off period: 14 days.\",\"term\":\"cooling_off_period\",\"value\":\"14 days\"}]},{\"confidence\":\"low\",\"id\":3,\"segment\":\"Your reference is CEDAR-COC-414. Quote it whenever you write to us about this policy.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":4,\"segment\":\"Westmarch Cover arranges landlord insurance cover under CEDAR-COC-414 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":5,\"segment\":\"Westmarch Cover landlord insurance — renewal schedule CEDAR-COC-414 for the year to 31 August 2027.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":6,\"segment\":\"Total annual premium: £5,422.00.\",\"terms\":[{\"basis\":\"annual\",\"quote\":\"Total annual premium: £5,422.00.\",\"term\":\"premium\",\"value\":\"£5,422.00\"}]},{\"confidence\":\"high\",\"id\":7,\"segment\":\"Cooling-off period: 28 days.\",\"terms\":[{\"basis\":\"per_policy\",\"quote\":\"Cooling-off period: 28 days.\",\"term\":\"cooling_off_period\",\"value\":\"28 days\"}]},{\"confidence\":\"low\",\"id\":8,\"segment\":\"Westmarch Cover arranges landlord insurance cover under CEDAR-COC-414 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":9,\"segment\":\"Your reference is CEDAR-COC-414. Quote it whenever you write to us about this policy.\",\"terms\":[]}]}"
+      }
+    ]
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-cooling_off_changed-cedar-03/development-cooling_off_changed-cedar-03-renewal-cooling-off-period-8dfb61",
+    "item_id": "development-cooling_off_changed-cedar-03-renewal-cooling-off-period-8dfb61",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:3f5234da69865c52b4ff21ac48994e65e9b8b3851c1f6e44757c8e8625ea2ffe",
+    "fixture": "generated-development-cooling_off_changed-cedar-03",
+    "fixture_id": "development-cooling_off_changed-cedar-03",
+    "strata": [
+      "any-schedule",
+      "value-stated"
+    ],
+    "raw_input": "Cooling-off period: 28 days.",
+    "decision_key": "renewal|cooling-off period: 28 days.",
+    "metric": "extraction",
+    "expected": {
+      "term": "cooling_off_period",
+      "basis": "per_policy",
+      "value": "28 days",
+      "quote": "Cooling-off period: 28 days."
+    },
+    "actual": {
+      "outcome": "found",
+      "extracted": {
+        "term": "cooling_off_period",
+        "basis": "per_policy",
+        "value": "28 days",
+        "quote": "Cooling-off period: 28 days."
+      }
+    },
+    "evidence": {
+      "existence": "pass",
+      "attribution": "pass",
+      "support": "pass"
+    },
+    "trace_ids": [
+      "claim-000007",
+      "claim-000008"
+    ],
+    "confidence": {
+      "source": "declared",
+      "level": "high",
+      "trace_id": "claim-000007"
+    },
+    "exchanges": [
+      {
+        "step": "Reading what each document says",
+        "batch": 1,
+        "request": "You read one passage of an insurance document at a time and say which\nnamed values, if any, it states.\n\nFor each passage, decide:\n- terms: a list of the named values this passage states. Most passages\n  state none — an empty list is a correct answer, not a failure, and it\n  is always better than a guess. A passage that explains what cover\n  means, describes how to claim, or thanks somebody for renewing states\n  no named value.\n- confidence: \"high\" | \"medium\" | \"low\"\n\nFor each term give:\n- term: \"premium\" | \"compulsory_excess\" | \"voluntary_excess\" |\n  \"total_excess\" | \"cover_limit\" | \"no_claims_discount\" |\n  \"cooling_off_period\" | \"other\"\n\n  Documents rarely use these words. \"Cover limit\" is the most a policy\n  will pay out, and a schedule may label it \"Insurance amount\", \"Sum\n  insured\", \"Limit of indemnity\" or \"Maximum we will pay\" — those are\n  all \"cover_limit\".\n\n  Use \"other\" when the passage states a named value that is none of\n  these. That is a real answer and the right one: the value goes in\n  front of the person instead of being compared. Never stretch one of\n  the named terms to cover something it is not.\n\n- basis: \"annual\" | \"monthly\" | \"per_claim\" | \"per_policy\"\n\n  What the value is measured against, as the passage says it. A premium\n  quoted as twelve instalments is \"monthly\"; the same policy's total for\n  the year is \"annual\". These are different values, and calling one the\n  other turns an instalment into a price rise.\n\n- value: the value exactly as the document writes it — \"£1,234.56\",\n  \"£500\", \"14 days\", \"60%\". Copy the currency symbol, the commas and\n  the decimals as they appear. Never round, never convert, never work\n  out a total, and never write a number the passage does not contain.\n\n- quote: the words the value comes from, copied exactly from the\n  passage — and the quote must contain the value itself. \"Insurance\n  amount\" is a label, not a quote: on a schedule with three sections it\n  is true of three different amounts, so it shows nothing about which\n  one you read. \"Insurance amount: £604,400.00.\" does show it. Include\n  enough words on either side of the value to make clear which line it\n  came from. This is checked against the document: a quote that is not\n  in the passage, or that does not contain its own value, means the\n  whole term goes to the person instead of being used.\n\nYou are not asked to compare anything, to say whether a value went up\nor down, or to work out a difference. That is done separately, from the\nvalues you copy. Copying them exactly is the whole job.\n\nReturn one result per input, with the same \"id\" you were given, and\necho the passage back in \"segment\". Return JSON only.\n\nPassages:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"Westmarch Cover landlord insurance — policy schedule CEDAR-COC-414 for the year to 31 August 2026.\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"Total annual premium: £5,422.00.\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"Cooling-off period: 14 days.\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"Your reference is CEDAR-COC-414. Quote it whenever you write to us about this policy.\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"Westmarch Cover arranges landlord insurance cover under CEDAR-COC-414 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"Westmarch Cover landlord insurance — renewal schedule CEDAR-COC-414 for the year to 31 August 2027.\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"Total annual premium: £5,422.00.\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"Cooling-off period: 28 days.\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"Westmarch Cover arranges landlord insurance cover under CEDAR-COC-414 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"Your reference is CEDAR-COC-414. Quote it whenever you write to us about this policy.\"\n  }\n]\n",
+        "response": "{\"results\":[{\"confidence\":\"low\",\"id\":0,\"segment\":\"Westmarch Cover landlord insurance — policy schedule CEDAR-COC-414 for the year to 31 August 2026.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":1,\"segment\":\"Total annual premium: £5,422.00.\",\"terms\":[{\"basis\":\"annual\",\"quote\":\"Total annual premium: £5,422.00.\",\"term\":\"premium\",\"value\":\"£5,422.00\"}]},{\"confidence\":\"high\",\"id\":2,\"segment\":\"Cooling-off period: 14 days.\",\"terms\":[{\"basis\":\"per_policy\",\"quote\":\"Cooling-off period: 14 days.\",\"term\":\"cooling_off_period\",\"value\":\"14 days\"}]},{\"confidence\":\"low\",\"id\":3,\"segment\":\"Your reference is CEDAR-COC-414. Quote it whenever you write to us about this policy.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":4,\"segment\":\"Westmarch Cover arranges landlord insurance cover under CEDAR-COC-414 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":5,\"segment\":\"Westmarch Cover landlord insurance — renewal schedule CEDAR-COC-414 for the year to 31 August 2027.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":6,\"segment\":\"Total annual premium: £5,422.00.\",\"terms\":[{\"basis\":\"annual\",\"quote\":\"Total annual premium: £5,422.00.\",\"term\":\"premium\",\"value\":\"£5,422.00\"}]},{\"confidence\":\"high\",\"id\":7,\"segment\":\"Cooling-off period: 28 days.\",\"terms\":[{\"basis\":\"per_policy\",\"quote\":\"Cooling-off period: 28 days.\",\"term\":\"cooling_off_period\",\"value\":\"28 days\"}]},{\"confidence\":\"low\",\"id\":8,\"segment\":\"Westmarch Cover arranges landlord insurance cover under CEDAR-COC-414 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":9,\"segment\":\"Your reference is CEDAR-COC-414. Quote it whenever you write to us about this policy.\",\"terms\":[]}]}"
+      }
+    ]
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-cooling_off_changed-cedar-03/development-cooling_off_changed-cedar-03-renewal-no-value-befec7",
+    "item_id": "development-cooling_off_changed-cedar-03-renewal-no-value-befec7",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:3f5234da69865c52b4ff21ac48994e65e9b8b3851c1f6e44757c8e8625ea2ffe",
+    "fixture": "generated-development-cooling_off_changed-cedar-03",
+    "fixture_id": "development-cooling_off_changed-cedar-03",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Westmarch Cover arranges landlord insurance cover under CEDAR-COC-414 and is regulated in the United Kingdom.",
+    "decision_key": "renewal|westmarch cover arranges landlord insurance cover under cedar-coc-414 and is regulated in the united kingdom.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "absent"
+    },
+    "trace_ids": [
+      "claim-000011",
+      "claim-000013"
+    ],
+    "confidence": {
+      "source": "declared",
+      "level": "low",
+      "trace_id": "claim-000011"
+    },
+    "exchanges": [
+      {
+        "step": "Reading what each document says",
+        "batch": 1,
+        "request": "You read one passage of an insurance document at a time and say which\nnamed values, if any, it states.\n\nFor each passage, decide:\n- terms: a list of the named values this passage states. Most passages\n  state none — an empty list is a correct answer, not a failure, and it\n  is always better than a guess. A passage that explains what cover\n  means, describes how to claim, or thanks somebody for renewing states\n  no named value.\n- confidence: \"high\" | \"medium\" | \"low\"\n\nFor each term give:\n- term: \"premium\" | \"compulsory_excess\" | \"voluntary_excess\" |\n  \"total_excess\" | \"cover_limit\" | \"no_claims_discount\" |\n  \"cooling_off_period\" | \"other\"\n\n  Documents rarely use these words. \"Cover limit\" is the most a policy\n  will pay out, and a schedule may label it \"Insurance amount\", \"Sum\n  insured\", \"Limit of indemnity\" or \"Maximum we will pay\" — those are\n  all \"cover_limit\".\n\n  Use \"other\" when the passage states a named value that is none of\n  these. That is a real answer and the right one: the value goes in\n  front of the person instead of being compared. Never stretch one of\n  the named terms to cover something it is not.\n\n- basis: \"annual\" | \"monthly\" | \"per_claim\" | \"per_policy\"\n\n  What the value is measured against, as the passage says it. A premium\n  quoted as twelve instalments is \"monthly\"; the same policy's total for\n  the year is \"annual\". These are different values, and calling one the\n  other turns an instalment into a price rise.\n\n- value: the value exactly as the document writes it — \"£1,234.56\",\n  \"£500\", \"14 days\", \"60%\". Copy the currency symbol, the commas and\n  the decimals as they appear. Never round, never convert, never work\n  out a total, and never write a number the passage does not contain.\n\n- quote: the words the value comes from, copied exactly from the\n  passage — and the quote must contain the value itself. \"Insurance\n  amount\" is a label, not a quote: on a schedule with three sections it\n  is true of three different amounts, so it shows nothing about which\n  one you read. \"Insurance amount: £604,400.00.\" does show it. Include\n  enough words on either side of the value to make clear which line it\n  came from. This is checked against the document: a quote that is not\n  in the passage, or that does not contain its own value, means the\n  whole term goes to the person instead of being used.\n\nYou are not asked to compare anything, to say whether a value went up\nor down, or to work out a difference. That is done separately, from the\nvalues you copy. Copying them exactly is the whole job.\n\nReturn one result per input, with the same \"id\" you were given, and\necho the passage back in \"segment\". Return JSON only.\n\nPassages:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"Westmarch Cover landlord insurance — policy schedule CEDAR-COC-414 for the year to 31 August 2026.\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"Total annual premium: £5,422.00.\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"Cooling-off period: 14 days.\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"Your reference is CEDAR-COC-414. Quote it whenever you write to us about this policy.\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"Westmarch Cover arranges landlord insurance cover under CEDAR-COC-414 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"Westmarch Cover landlord insurance — renewal schedule CEDAR-COC-414 for the year to 31 August 2027.\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"Total annual premium: £5,422.00.\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"Cooling-off period: 28 days.\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"Westmarch Cover arranges landlord insurance cover under CEDAR-COC-414 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"Your reference is CEDAR-COC-414. Quote it whenever you write to us about this policy.\"\n  }\n]\n",
+        "response": "{\"results\":[{\"confidence\":\"low\",\"id\":0,\"segment\":\"Westmarch Cover landlord insurance — policy schedule CEDAR-COC-414 for the year to 31 August 2026.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":1,\"segment\":\"Total annual premium: £5,422.00.\",\"terms\":[{\"basis\":\"annual\",\"quote\":\"Total annual premium: £5,422.00.\",\"term\":\"premium\",\"value\":\"£5,422.00\"}]},{\"confidence\":\"high\",\"id\":2,\"segment\":\"Cooling-off period: 14 days.\",\"terms\":[{\"basis\":\"per_policy\",\"quote\":\"Cooling-off period: 14 days.\",\"term\":\"cooling_off_period\",\"value\":\"14 days\"}]},{\"confidence\":\"low\",\"id\":3,\"segment\":\"Your reference is CEDAR-COC-414. Quote it whenever you write to us about this policy.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":4,\"segment\":\"Westmarch Cover arranges landlord insurance cover under CEDAR-COC-414 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":5,\"segment\":\"Westmarch Cover landlord insurance — renewal schedule CEDAR-COC-414 for the year to 31 August 2027.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":6,\"segment\":\"Total annual premium: £5,422.00.\",\"terms\":[{\"basis\":\"annual\",\"quote\":\"Total annual premium: £5,422.00.\",\"term\":\"premium\",\"value\":\"£5,422.00\"}]},{\"confidence\":\"high\",\"id\":7,\"segment\":\"Cooling-off period: 28 days.\",\"terms\":[{\"basis\":\"per_policy\",\"quote\":\"Cooling-off period: 28 days.\",\"term\":\"cooling_off_period\",\"value\":\"28 days\"}]},{\"confidence\":\"low\",\"id\":8,\"segment\":\"Westmarch Cover arranges landlord insurance cover under CEDAR-COC-414 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":9,\"segment\":\"Your reference is CEDAR-COC-414. Quote it whenever you write to us about this policy.\",\"terms\":[]}]}"
+      }
+    ]
+  },
+  {
+    "id": "app.kttl.renewal-diff/development-cooling_off_changed-cedar-03/development-cooling_off_changed-cedar-03-renewal-no-value-1dbcf4",
+    "item_id": "development-cooling_off_changed-cedar-03-renewal-no-value-1dbcf4",
+    "pack": "app.kttl.renewal-diff",
+    "pack_version": "0.1.0",
+    "prompt_version": "blake3:3f5234da69865c52b4ff21ac48994e65e9b8b3851c1f6e44757c8e8625ea2ffe",
+    "fixture": "generated-development-cooling_off_changed-cedar-03",
+    "fixture_id": "development-cooling_off_changed-cedar-03",
+    "strata": [
+      "any-schedule",
+      "states-nothing"
+    ],
+    "raw_input": "Your reference is CEDAR-COC-414. Quote it whenever you write to us about this policy.",
+    "decision_key": "renewal|your reference is cedar-coc-414. quote it whenever you write to us about this policy.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "absent"
+    },
+    "trace_ids": [
+      "claim-000010",
+      "claim-000014"
+    ],
+    "confidence": {
+      "source": "declared",
+      "level": "low",
+      "trace_id": "claim-000010"
+    },
+    "exchanges": [
+      {
+        "step": "Reading what each document says",
+        "batch": 1,
+        "request": "You read one passage of an insurance document at a time and say which\nnamed values, if any, it states.\n\nFor each passage, decide:\n- terms: a list of the named values this passage states. Most passages\n  state none — an empty list is a correct answer, not a failure, and it\n  is always better than a guess. A passage that explains what cover\n  means, describes how to claim, or thanks somebody for renewing states\n  no named value.\n- confidence: \"high\" | \"medium\" | \"low\"\n\nFor each term give:\n- term: \"premium\" | \"compulsory_excess\" | \"voluntary_excess\" |\n  \"total_excess\" | \"cover_limit\" | \"no_claims_discount\" |\n  \"cooling_off_period\" | \"other\"\n\n  Documents rarely use these words. \"Cover limit\" is the most a policy\n  will pay out, and a schedule may label it \"Insurance amount\", \"Sum\n  insured\", \"Limit of indemnity\" or \"Maximum we will pay\" — those are\n  all \"cover_limit\".\n\n  Use \"other\" when the passage states a named value that is none of\n  these. That is a real answer and the right one: the value goes in\n  front of the person instead of being compared. Never stretch one of\n  the named terms to cover something it is not.\n\n- basis: \"annual\" | \"monthly\" | \"per_claim\" | \"per_policy\"\n\n  What the value is measured against, as the passage says it. A premium\n  quoted as twelve instalments is \"monthly\"; the same policy's total for\n  the year is \"annual\". These are different values, and calling one the\n  other turns an instalment into a price rise.\n\n- value: the value exactly as the document writes it — \"£1,234.56\",\n  \"£500\", \"14 days\", \"60%\". Copy the currency symbol, the commas and\n  the decimals as they appear. Never round, never convert, never work\n  out a total, and never write a number the passage does not contain.\n\n- quote: the words the value comes from, copied exactly from the\n  passage — and the quote must contain the value itself. \"Insurance\n  amount\" is a label, not a quote: on a schedule with three sections it\n  is true of three different amounts, so it shows nothing about which\n  one you read. \"Insurance amount: £604,400.00.\" does show it. Include\n  enough words on either side of the value to make clear which line it\n  came from. This is checked against the document: a quote that is not\n  in the passage, or that does not contain its own value, means the\n  whole term goes to the person instead of being used.\n\nYou are not asked to compare anything, to say whether a value went up\nor down, or to work out a difference. That is done separately, from the\nvalues you copy. Copying them exactly is the whole job.\n\nReturn one result per input, with the same \"id\" you were given, and\necho the passage back in \"segment\". Return JSON only.\n\nPassages:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"Westmarch Cover landlord insurance — policy schedule CEDAR-COC-414 for the year to 31 August 2026.\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"Total annual premium: £5,422.00.\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"Cooling-off period: 14 days.\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"Your reference is CEDAR-COC-414. Quote it whenever you write to us about this policy.\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"Westmarch Cover arranges landlord insurance cover under CEDAR-COC-414 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"Westmarch Cover landlord insurance — renewal schedule CEDAR-COC-414 for the year to 31 August 2027.\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"Total annual premium: £5,422.00.\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"Cooling-off period: 28 days.\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"Westmarch Cover arranges landlord insurance cover under CEDAR-COC-414 and is regulated in the United Kingdom.\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"Your reference is CEDAR-COC-414. Quote it whenever you write to us about this policy.\"\n  }\n]\n",
+        "response": "{\"results\":[{\"confidence\":\"low\",\"id\":0,\"segment\":\"Westmarch Cover landlord insurance — policy schedule CEDAR-COC-414 for the year to 31 August 2026.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":1,\"segment\":\"Total annual premium: £5,422.00.\",\"terms\":[{\"basis\":\"annual\",\"quote\":\"Total annual premium: £5,422.00.\",\"term\":\"premium\",\"value\":\"£5,422.00\"}]},{\"confidence\":\"high\",\"id\":2,\"segment\":\"Cooling-off period: 14 days.\",\"terms\":[{\"basis\":\"per_policy\",\"quote\":\"Cooling-off period: 14 days.\",\"term\":\"cooling_off_period\",\"value\":\"14 days\"}]},{\"confidence\":\"low\",\"id\":3,\"segment\":\"Your reference is CEDAR-COC-414. Quote it whenever you write to us about this policy.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":4,\"segment\":\"Westmarch Cover arranges landlord insurance cover under CEDAR-COC-414 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":5,\"segment\":\"Westmarch Cover landlord insurance — renewal schedule CEDAR-COC-414 for the year to 31 August 2027.\",\"terms\":[]},{\"confidence\":\"high\",\"id\":6,\"segment\":\"Total annual premium: £5,422.00.\",\"terms\":[{\"basis\":\"annual\",\"quote\":\"Total annual premium: £5,422.00.\",\"term\":\"premium\",\"value\":\"£5,422.00\"}]},{\"confidence\":\"high\",\"id\":7,\"segment\":\"Cooling-off period: 28 days.\",\"terms\":[{\"basis\":\"per_policy\",\"quote\":\"Cooling-off period: 28 days.\",\"term\":\"cooling_off_period\",\"value\":\"28 days\"}]},{\"confidence\":\"low\",\"id\":8,\"segment\":\"Westmarch Cover arranges landlord insurance cover under CEDAR-COC-414 and is regulated in the United Kingdom.\",\"terms\":[]},{\"confidence\":\"low\",\"id\":9,\"segment\":\"Your reference is CEDAR-COC-414. Quote it whenever you write to us about this policy.\",\"terms\":[]}]}"
+      }
+    ]
+  }
+]
