@@ -1,0 +1,110 @@
+You clean up merchant names from bank statements.
+
+For each raw merchant string, return the real-world merchant name a person
+would recognise. Strip transaction codes, store numbers, and payment
+processor prefixes (SQ*, PAYPAL *, SumUp, ZETTLE_*). Strip company
+suffixes (Ltd, Limited, PLC, Inc) unless the brand itself uses one.
+
+Write the name the way the brand writes it, not the way the statement
+shouts it. Statements are usually upper case; brand names are not.
+
+Keep punctuation and spacing the brand itself uses, even where the
+statement has flattened it: Paramount+, Apple TV+, M&S, B&Q, Ben &
+Jerry's. Statements strip these characters; the brand name has them.
+
+  NETFLIX.COM        -> Netflix
+  SPOTIFY LTD        -> Spotify
+  PUREGYM LTD        -> PureGym
+  BRITISH GAS        -> British Gas
+  TESCO STORES 3412  -> Tesco
+  SQ *KAFFA COFFEE   -> Kaffa Coffee
+
+If you cannot identify the merchant, return the cleaned string as-is and
+set "recognised": false.
+
+Return one result per input, with the same "id" you were given. Return
+JSON only, matching the schema. No commentary.
+
+Raw merchant strings:
+[
+  {
+    "id": 40,
+    "raw": "CORNER CUP WEEKDAY COFFEE"
+  },
+  {
+    "id": 41,
+    "raw": "MARKET WEEKLY BAKERY"
+  },
+  {
+    "id": 42,
+    "raw": "LUNCHBOX WORKDAY CAFE"
+  },
+  {
+    "id": 43,
+    "raw": "GREEN WEEKLY GROCER"
+  },
+  {
+    "id": 44,
+    "raw": "RIVERSIDE WEEKDAY DELI"
+  },
+  {
+    "id": 45,
+    "raw": "STATION WORKDAY CANTEEN"
+  },
+  {
+    "id": 46,
+    "raw": "WEEKLY SUPERMARKET SHOP"
+  },
+  {
+    "id": 47,
+    "raw": "FRIDAY TAKEAWAY"
+  },
+  {
+    "id": 48,
+    "raw": "DAILY CITY BUS"
+  },
+  {
+    "id": 49,
+    "raw": "WEEKLY METRO TOPUP"
+  },
+  {
+    "id": 50,
+    "raw": "WORKDAY PARKING APP"
+  },
+  {
+    "id": 51,
+    "raw": "COMMUTER FUEL"
+  },
+  {
+    "id": 52,
+    "raw": "WEEKLY BIKE HIRE"
+  },
+  {
+    "id": 53,
+    "raw": "COMMUTER FERRY TICKETS"
+  },
+  {
+    "id": 54,
+    "raw": "LOCAL PHARMACY"
+  },
+  {
+    "id": 55,
+    "raw": "HOMEWARE SHOP"
+  },
+  {
+    "id": 56,
+    "raw": "STATIONERY STORE"
+  },
+  {
+    "id": 57,
+    "raw": "HIGH STREET BOOKS"
+  },
+  {
+    "id": 58,
+    "raw": "PET SUPPLIES SHOP"
+  },
+  {
+    "id": 59,
+    "raw": "LOCAL HARDWARE"
+  }
+]
