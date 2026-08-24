@@ -33,8 +33,11 @@ recording of which file produced them — so it could not be replayed,
 cited, or checked.
 
 **It is not a reproduction of that earlier number and must not be read as
-one.** No recording of the earlier audition exists, so which 27B build it
-used is unknown. This is a new measurement with a named digest.
+one.** No recording of the earlier audition exists. Its build *is* known
+from notes rather than from a recording — `ggml-org/Qwen3.8-27B-GGUF`,
+SHA-256 `31629f53165ab6a7dad8c9847dcfd1fdf55829dac1e6e748f4a68581b0033d34`,
+18,973,870,432 bytes — which is **not** the build measured here. This is
+a new measurement with a named digest, on a different 27B.
 
 Quantisation was chosen to keep the comparison clean: the 4B and 9B are
 bartowski *plain* Q4_K_M, so a 27B in unsloth's UD or AtomicChat's AD
@@ -93,10 +96,21 @@ what to run.
 as confident-wrong rising 0.00 → 0.27 → 0.46 across 4B → 9B → 27B. On
 this bed, with recordings behind every point, harm/subscription
 confident-wrong reads **0.03 → 0.05 → 0.05** — flat, not rising. The
-pooled gate moves 0.16 (9B) → 0.12 (27B), i.e. *down*. The remembered
-figures came from unarchived auditions on some other subset and should
-not be quoted again. This is exactly what archiving buys: a claim that
-rested on nothing is now checkable, and it did not check out.
+pooled gate moves 0.16 (9B) → 0.12 (27B), i.e. *down*.
+
+**Three things differ between the two measurements, and this run rules
+out none of them**: the old figures came from a 7-fixture *audition
+subset* at *scoring 14* on the *ggml-org* 27B build, while this is the
+84-fixture bed at scoring 15 on the bartowski build. The subset is the
+likeliest cause — the full bed was already known to disagree with the
+audition about which path the harm arrives by — but "likeliest" is not
+"shown". What is established is narrower and still worth having: the
+0.00 → 0.27 → 0.46 column is not a property of this bed at this scoring
+version, so it is not quotable as one. Excluding the build difference
+costs one ~30-minute pass of the ggml-org 27B on this bed.
+
+This is what archiving buys: a claim that rested on nothing is now
+checkable, and the first check did not reproduce it.
 
 **Calibration is where scale actually paid.** The 27B's `medium` band
 errs at 0.35 against the 9B's 0.86, its `high` band at 0.06 against
