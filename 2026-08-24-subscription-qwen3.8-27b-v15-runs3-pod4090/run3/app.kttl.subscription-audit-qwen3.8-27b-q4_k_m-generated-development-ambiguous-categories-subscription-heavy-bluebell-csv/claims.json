@@ -1,0 +1,805 @@
+{
+  "schema": "kettle/claim-traces@0",
+  "claims": [
+    {
+      "id": "claim-000001",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 1,
+      "item": 0,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "DEEZER PAYMENT",
+      "candidate": {
+        "id": 0,
+        "name": "Deezer",
+        "raw": "DEEZER PAYMENT",
+        "recognised": true
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 0,
+            "name": "Deezer",
+            "raw": "DEEZER PAYMENT",
+            "recognised": true
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000002",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 1,
+      "item": 1,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "EON NEXT PAYMENT",
+      "candidate": {
+        "id": 1,
+        "name": "Eon",
+        "raw": "EON NEXT PAYMENT",
+        "recognised": true
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 1,
+            "name": "Eon",
+            "raw": "EON NEXT PAYMENT",
+            "recognised": true
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000003",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 1,
+      "item": 2,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "FINANCIAL TIMES PAYMENT",
+      "candidate": {
+        "id": 2,
+        "name": "Financial Times",
+        "raw": "FINANCIAL TIMES PAYMENT",
+        "recognised": true
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 2,
+            "name": "Financial Times",
+            "raw": "FINANCIAL TIMES PAYMENT",
+            "recognised": true
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000004",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 1,
+      "item": 3,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "MASTERCLASS PAYMENT",
+      "candidate": {
+        "id": 3,
+        "name": "MasterClass",
+        "raw": "MASTERCLASS PAYMENT",
+        "recognised": true
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 3,
+            "name": "MasterClass",
+            "raw": "MASTERCLASS PAYMENT",
+            "recognised": true
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000005",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 1,
+      "item": 4,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "NUFFIELD HEALTH PAYMENT",
+      "candidate": {
+        "id": 4,
+        "name": "Nuffield Health",
+        "raw": "NUFFIELD HEALTH PAYMENT",
+        "recognised": true
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 4,
+            "name": "Nuffield Health",
+            "raw": "NUFFIELD HEALTH PAYMENT",
+            "recognised": true
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000006",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 1,
+      "item": 5,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "PARAMOUNT PLUS PAYMENT",
+      "candidate": {
+        "id": 5,
+        "name": "Paramount+",
+        "raw": "PARAMOUNT PLUS PAYMENT",
+        "recognised": true
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 5,
+            "name": "Paramount+",
+            "raw": "PARAMOUNT PLUS PAYMENT",
+            "recognised": true
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000007",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 1,
+      "item": 6,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "STRIPE* PROTON",
+      "candidate": {
+        "id": 6,
+        "name": "Proton",
+        "raw": "PROTON",
+        "recognised": true
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 6,
+            "name": "Proton",
+            "raw": "PROTON",
+            "recognised": true
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000008",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 1,
+      "item": 7,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "STRIPE* IDRIVE",
+      "candidate": {
+        "id": 7,
+        "name": "iDrive",
+        "raw": "IDRIVE",
+        "recognised": true
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 7,
+            "name": "iDrive",
+            "raw": "IDRIVE",
+            "recognised": true
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000009",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 1,
+      "item": 8,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "THE SPECTATOR PAYMENT",
+      "candidate": {
+        "id": 8,
+        "name": "The Spectator",
+        "raw": "THE SPECTATOR PAYMENT",
+        "recognised": true
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 8,
+            "name": "The Spectator",
+            "raw": "THE SPECTATOR PAYMENT",
+            "recognised": true
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000010",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 1,
+      "item": 9,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "TANNERY BOOKS PAYMENT",
+      "candidate": {
+        "id": 9,
+        "name": "Tannery Books",
+        "raw": "TANNERY BOOKS PAYMENT",
+        "recognised": true
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 9,
+            "name": "Tannery Books",
+            "raw": "TANNERY BOOKS PAYMENT",
+            "recognised": true
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000011",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 1,
+      "item": 0,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "DEEZER PAYMENT",
+      "candidate": {
+        "category": "streaming",
+        "confidence": "high",
+        "id": 0,
+        "name": "Deezer"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "streaming",
+            "confidence": "high",
+            "id": 0,
+            "name": "Deezer"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000012",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 1,
+      "item": 1,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "EON NEXT PAYMENT",
+      "candidate": {
+        "category": "energy",
+        "confidence": "high",
+        "id": 1,
+        "name": "Eon"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "energy",
+            "confidence": "high",
+            "id": 1,
+            "name": "Eon"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000013",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 1,
+      "item": 2,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "FINANCIAL TIMES PAYMENT",
+      "candidate": {
+        "category": "news_media",
+        "confidence": "high",
+        "id": 2,
+        "name": "Financial Times"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "news_media",
+            "confidence": "high",
+            "id": 2,
+            "name": "Financial Times"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000014",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 1,
+      "item": 3,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "MASTERCLASS PAYMENT",
+      "candidate": {
+        "category": "streaming",
+        "confidence": "high",
+        "id": 3,
+        "name": "MasterClass"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "streaming",
+            "confidence": "high",
+            "id": 3,
+            "name": "MasterClass"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000015",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 1,
+      "item": 4,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "NUFFIELD HEALTH PAYMENT",
+      "candidate": {
+        "category": "fitness",
+        "confidence": "high",
+        "id": 4,
+        "name": "Nuffield Health"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "fitness",
+            "confidence": "high",
+            "id": 4,
+            "name": "Nuffield Health"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000016",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 1,
+      "item": 5,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "PARAMOUNT PLUS PAYMENT",
+      "candidate": {
+        "category": "streaming",
+        "confidence": "high",
+        "id": 5,
+        "name": "Paramount+"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "streaming",
+            "confidence": "high",
+            "id": 5,
+            "name": "Paramount+"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000017",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 1,
+      "item": 6,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "STRIPE* PROTON",
+      "candidate": {
+        "category": "software",
+        "confidence": "medium",
+        "id": 6,
+        "name": "Proton"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "software",
+            "confidence": "medium",
+            "id": 6,
+            "name": "Proton"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000018",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 1,
+      "item": 7,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "STRIPE* IDRIVE",
+      "candidate": {
+        "category": "software",
+        "confidence": "high",
+        "id": 7,
+        "name": "iDrive"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "software",
+            "confidence": "high",
+            "id": 7,
+            "name": "iDrive"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000019",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 1,
+      "item": 8,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "THE SPECTATOR PAYMENT",
+      "candidate": {
+        "category": "news_media",
+        "confidence": "high",
+        "id": 8,
+        "name": "The Spectator"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "news_media",
+            "confidence": "high",
+            "id": 8,
+            "name": "The Spectator"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000020",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 1,
+      "item": 9,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "TANNERY BOOKS PAYMENT",
+      "candidate": {
+        "category": "retail",
+        "confidence": "high",
+        "id": 9,
+        "name": "Tannery Books"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "retail",
+            "confidence": "high",
+            "id": 9,
+            "name": "Tannery Books"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    }
+  ]
+}

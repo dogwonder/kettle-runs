@@ -1,0 +1,821 @@
+{
+  "schema": "kettle/claim-traces@0",
+  "claims": [
+    {
+      "id": "claim-000001",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 1,
+      "item": 0,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "STRIPE* MERIDIANPROPERTY CARD 4821",
+      "candidate": {
+        "id": 0,
+        "name": "Meridian Property",
+        "raw": "MERIDIANPROPERTY CARD 4821",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 0,
+            "name": "Meridian Property",
+            "raw": "MERIDIANPROPERTY CARD 4821",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000002",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 1,
+      "item": 1,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "STRIPE* MOKONKWO CARD 4821",
+      "candidate": {
+        "id": 1,
+        "name": "Mokonkwo",
+        "raw": "MOKONKWO CARD 4821",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 1,
+            "name": "Mokonkwo",
+            "raw": "MOKONKWO CARD 4821",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000003",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 1,
+      "item": 2,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "CARD 4821 CTPS NRGY GB",
+      "candidate": {
+        "id": 2,
+        "name": "Card 4821 Ctps Nrgy Gb",
+        "raw": "CARD 4821 CTPS NRGY GB",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 2,
+            "name": "Card 4821 Ctps Nrgy Gb",
+            "raw": "CARD 4821 CTPS NRGY GB",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000004",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 1,
+      "item": 3,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "CARD 4821 PNRS HLTHCR GB",
+      "candidate": {
+        "id": 3,
+        "name": "Card 4821 Pnrs Hlthcr Gb",
+        "raw": "CARD 4821 PNRS HLTHCR GB",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 3,
+            "name": "Card 4821 Pnrs Hlthcr Gb",
+            "raw": "CARD 4821 PNRS HLTHCR GB",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000005",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 1,
+      "item": 4,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "STRIPE* LNER CARD 4821",
+      "candidate": {
+        "id": 4,
+        "name": "LNER",
+        "raw": "LNER CARD 4821",
+        "recognised": true
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 4,
+            "name": "LNER",
+            "raw": "LNER CARD 4821",
+            "recognised": true
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000006",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 1,
+      "item": 5,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "STRIPE* SAINSBURYS CARD 4821",
+      "candidate": {
+        "id": 5,
+        "name": "Sainsbury's",
+        "raw": "SAINSBURYS CARD 4821",
+        "recognised": true
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 5,
+            "name": "Sainsbury's",
+            "raw": "SAINSBURYS CARD 4821",
+            "recognised": true
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000007",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 1,
+      "item": 6,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "STRIPE* LOWTHERTRADERS CARD 4821",
+      "candidate": {
+        "id": 6,
+        "name": "Lowther Traders",
+        "raw": "LOWTHERTRADERS CARD 4821",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 6,
+            "name": "Lowther Traders",
+            "raw": "LOWTHERTRADERS CARD 4821",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000008",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 1,
+      "item": 7,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "CARD 4821 DNLM GB",
+      "candidate": {
+        "id": 7,
+        "name": "Card 4821 Dnlm Gb",
+        "raw": "CARD 4821 DNLM GB",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 7,
+            "name": "Card 4821 Dnlm Gb",
+            "raw": "CARD 4821 DNLM GB",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000009",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 1,
+      "item": 8,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "CARD 4821 QYSD HRDWR GB",
+      "candidate": {
+        "id": 8,
+        "name": "Card 4821 Qysd Hrdwr Gb",
+        "raw": "CARD 4821 QYSD HRDWR GB",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 8,
+            "name": "Card 4821 Qysd Hrdwr Gb",
+            "raw": "CARD 4821 QYSD HRDWR GB",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000010",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 1,
+      "item": 9,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "CARD 4821 RDCLFF TTRCT GB",
+      "candidate": {
+        "id": 9,
+        "name": "Card 4821 Rdclff Ttrct Gb",
+        "raw": "CARD 4821 RDCLFF TTRCT GB",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 9,
+            "name": "Card 4821 Rdclff Ttrct Gb",
+            "raw": "CARD 4821 RDCLFF TTRCT GB",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000011",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 1,
+      "item": 0,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "STRIPE* MERIDIANPROPERTY CARD 4821",
+      "candidate": {
+        "category": "other",
+        "confidence": "medium",
+        "id": 0,
+        "name": "Meridian Property"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "other",
+            "confidence": "medium",
+            "id": 0,
+            "name": "Meridian Property"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000012",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 1,
+      "item": 2,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "CARD 4821 CTPS NRGY GB",
+      "candidate": {
+        "category": "energy",
+        "confidence": "medium",
+        "id": 2,
+        "name": "Card 4821 Ctps Nrgy Gb"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "energy",
+            "confidence": "medium",
+            "id": 2,
+            "name": "Card 4821 Ctps Nrgy Gb"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000013",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 1,
+      "item": 4,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "STRIPE* LNER CARD 4821",
+      "candidate": {
+        "category": "transport",
+        "confidence": "high",
+        "id": 4,
+        "name": "LNER"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "transport",
+            "confidence": "high",
+            "id": 4,
+            "name": "LNER"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000014",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 1,
+      "item": 5,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "STRIPE* SAINSBURYS CARD 4821",
+      "candidate": {
+        "category": "retail",
+        "confidence": "high",
+        "id": 5,
+        "name": "Sainsbury's"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "retail",
+            "confidence": "high",
+            "id": 5,
+            "name": "Sainsbury's"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000015",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 1,
+      "item": 8,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "CARD 4821 QYSD HRDWR GB",
+      "candidate": {
+        "category": "retail",
+        "confidence": "medium",
+        "id": 8,
+        "name": "Card 4821 Qysd Hrdwr Gb"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "retail",
+            "confidence": "medium",
+            "id": 8,
+            "name": "Card 4821 Qysd Hrdwr Gb"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000016",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 1,
+      "item": 9,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "CARD 4821 RDCLFF TTRCT GB",
+      "candidate": {
+        "category": "retail",
+        "confidence": "medium",
+        "id": 9,
+        "name": "Card 4821 Rdclff Ttrct Gb"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "retail",
+            "confidence": "medium",
+            "id": 9,
+            "name": "Card 4821 Rdclff Ttrct Gb"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000017",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 1,
+      "item": 1,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "STRIPE* MOKONKWO CARD 4821",
+      "candidate": {
+        "category": "unknown",
+        "confidence": "low",
+        "id": 1,
+        "name": "Mokonkwo"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "unknown",
+            "confidence": "low",
+            "id": 1,
+            "name": "Mokonkwo"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000018",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 1,
+      "item": 3,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "CARD 4821 PNRS HLTHCR GB",
+      "candidate": {
+        "category": "unknown",
+        "confidence": "low",
+        "id": 3,
+        "name": "Card 4821 Pnrs Hlthcr Gb"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "unknown",
+            "confidence": "low",
+            "id": 3,
+            "name": "Card 4821 Pnrs Hlthcr Gb"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000019",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 1,
+      "item": 6,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "STRIPE* LOWTHERTRADERS CARD 4821",
+      "candidate": {
+        "category": "unknown",
+        "confidence": "low",
+        "id": 6,
+        "name": "Lowther Traders"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "unknown",
+            "confidence": "low",
+            "id": 6,
+            "name": "Lowther Traders"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000020",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 1,
+      "item": 7,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "CARD 4821 DNLM GB",
+      "candidate": {
+        "category": "unknown",
+        "confidence": "low",
+        "id": 7,
+        "name": "Card 4821 Dnlm Gb"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "unknown",
+            "confidence": "low",
+            "id": 7,
+            "name": "Card 4821 Dnlm Gb"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    }
+  ]
+}

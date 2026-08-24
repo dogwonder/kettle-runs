@@ -1,0 +1,817 @@
+{
+  "schema": "kettle/claim-traces@0",
+  "claims": [
+    {
+      "id": "claim-000001",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 1,
+      "item": 0,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "STRIPE* OAKFIELDESTATES",
+      "candidate": {
+        "id": 0,
+        "name": "Oakfield Estates",
+        "raw": "OAKFIELDESTATES",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 0,
+            "name": "Oakfield Estates",
+            "raw": "OAKFIELDESTATES",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000002",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 1,
+      "item": 1,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "STRIPE* RPATEL",
+      "candidate": {
+        "id": 1,
+        "name": "R Patel",
+        "raw": "RPATEL",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 1,
+            "name": "R Patel",
+            "raw": "RPATEL",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000003",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 1,
+      "item": 2,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "EDF ENERGY",
+      "candidate": {
+        "id": 2,
+        "name": "EDF Energy",
+        "raw": "EDF ENERGY",
+        "recognised": true
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 2,
+            "name": "EDF Energy",
+            "raw": "EDF ENERGY",
+            "recognised": true
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000004",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 1,
+      "item": 3,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "ASHDOWN ENGINEERS",
+      "candidate": {
+        "id": 3,
+        "name": "Ashdown Engineers",
+        "raw": "ASHDOWN ENGINEERS",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 3,
+            "name": "Ashdown Engineers",
+            "raw": "ASHDOWN ENGINEERS",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000005",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 1,
+      "item": 4,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "STRIPE* SOUTHERNRAIL",
+      "candidate": {
+        "id": 4,
+        "name": "Southern Rail",
+        "raw": "SOUTHERNRAIL",
+        "recognised": true
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 4,
+            "name": "Southern Rail",
+            "raw": "SOUTHERNRAIL",
+            "recognised": true
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000006",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 1,
+      "item": 5,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "STRIPE* ALDI",
+      "candidate": {
+        "id": 5,
+        "name": "Aldi",
+        "raw": "ALDI",
+        "recognised": true
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 5,
+            "name": "Aldi",
+            "raw": "ALDI",
+            "recognised": true
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000007",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 1,
+      "item": 6,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "STRIPE* SALTMARSHSTALL",
+      "candidate": {
+        "id": 6,
+        "name": "Saltmarsh Stall",
+        "raw": "SALTMARSHSTALL",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 6,
+            "name": "Saltmarsh Stall",
+            "raw": "SALTMARSHSTALL",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000008",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 1,
+      "item": 7,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "IKEA",
+      "candidate": {
+        "id": 7,
+        "name": "IKEA",
+        "raw": "IKEA",
+        "recognised": true
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 7,
+            "name": "IKEA",
+            "raw": "IKEA",
+            "recognised": true
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000009",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 1,
+      "item": 8,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "ELMWOOD CYCLES",
+      "candidate": {
+        "id": 8,
+        "name": "Elmwood Cycles",
+        "raw": "ELMWOOD CYCLES",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 8,
+            "name": "Elmwood Cycles",
+            "raw": "ELMWOOD CYCLES",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000010",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 1,
+      "item": 9,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "STANWICK LEISURE",
+      "candidate": {
+        "id": 9,
+        "name": "Stanwick Leisure",
+        "raw": "STANWICK LEISURE",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 9,
+            "name": "Stanwick Leisure",
+            "raw": "STANWICK LEISURE",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000011",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 1,
+      "item": 2,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "EDF ENERGY",
+      "candidate": {
+        "category": "energy",
+        "confidence": "high",
+        "id": 2,
+        "name": "EDF Energy"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "energy",
+            "confidence": "high",
+            "id": 2,
+            "name": "EDF Energy"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000012",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 1,
+      "item": 3,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "ASHDOWN ENGINEERS",
+      "candidate": {
+        "category": "other",
+        "confidence": "medium",
+        "id": 3,
+        "name": "Ashdown Engineers"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "other",
+            "confidence": "medium",
+            "id": 3,
+            "name": "Ashdown Engineers"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000013",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 1,
+      "item": 4,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "STRIPE* SOUTHERNRAIL",
+      "candidate": {
+        "category": "transport",
+        "confidence": "high",
+        "id": 4,
+        "name": "Southern Rail"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "transport",
+            "confidence": "high",
+            "id": 4,
+            "name": "Southern Rail"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000014",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 1,
+      "item": 5,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "STRIPE* ALDI",
+      "candidate": {
+        "category": "retail",
+        "confidence": "high",
+        "id": 5,
+        "name": "Aldi"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "retail",
+            "confidence": "high",
+            "id": 5,
+            "name": "Aldi"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000015",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 1,
+      "item": 6,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "STRIPE* SALTMARSHSTALL",
+      "candidate": {
+        "category": "retail",
+        "confidence": "medium",
+        "id": 6,
+        "name": "Saltmarsh Stall"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "retail",
+            "confidence": "medium",
+            "id": 6,
+            "name": "Saltmarsh Stall"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000016",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 1,
+      "item": 7,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "IKEA",
+      "candidate": {
+        "category": "retail",
+        "confidence": "high",
+        "id": 7,
+        "name": "IKEA"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "retail",
+            "confidence": "high",
+            "id": 7,
+            "name": "IKEA"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000017",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 1,
+      "item": 8,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "ELMWOOD CYCLES",
+      "candidate": {
+        "category": "retail",
+        "confidence": "medium",
+        "id": 8,
+        "name": "Elmwood Cycles"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "retail",
+            "confidence": "medium",
+            "id": 8,
+            "name": "Elmwood Cycles"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000018",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 1,
+      "item": 0,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "STRIPE* OAKFIELDESTATES",
+      "candidate": {
+        "category": "unknown",
+        "confidence": "low",
+        "id": 0,
+        "name": "Oakfield Estates"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "unknown",
+            "confidence": "low",
+            "id": 0,
+            "name": "Oakfield Estates"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000019",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 1,
+      "item": 1,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "STRIPE* RPATEL",
+      "candidate": {
+        "category": "unknown",
+        "confidence": "low",
+        "id": 1,
+        "name": "R Patel"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "unknown",
+            "confidence": "low",
+            "id": 1,
+            "name": "R Patel"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000020",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 1,
+      "item": 9,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "STANWICK LEISURE",
+      "candidate": {
+        "category": "other",
+        "confidence": "low",
+        "id": 9,
+        "name": "Stanwick Leisure"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "other",
+            "confidence": "low",
+            "id": 9,
+            "name": "Stanwick Leisure"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    }
+  ]
+}

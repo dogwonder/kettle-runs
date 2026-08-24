@@ -1,0 +1,817 @@
+{
+  "schema": "kettle/claim-traces@0",
+  "claims": [
+    {
+      "id": "claim-000001",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 1,
+      "item": 0,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "STRIPE* CALDERLETTINGS",
+      "candidate": {
+        "id": 0,
+        "name": "Calderlettings",
+        "raw": "CALDERLETTINGS",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 0,
+            "name": "Calderlettings",
+            "raw": "CALDERLETTINGS",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000002",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 1,
+      "item": 1,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "STRIPE* SMACLEOD",
+      "candidate": {
+        "id": 1,
+        "name": "Smacleod",
+        "raw": "SMACLEOD",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 1,
+            "name": "Smacleod",
+            "raw": "SMACLEOD",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000003",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 1,
+      "item": 2,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "EON NEXT",
+      "candidate": {
+        "id": 2,
+        "name": "Eon Next",
+        "raw": "EON NEXT",
+        "recognised": true
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 2,
+            "name": "Eon Next",
+            "raw": "EON NEXT",
+            "recognised": true
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000004",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 1,
+      "item": 3,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "KIRKLAND SUPPLIES",
+      "candidate": {
+        "id": 3,
+        "name": "Kirkland Supplies",
+        "raw": "KIRKLAND SUPPLIES",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 3,
+            "name": "Kirkland Supplies",
+            "raw": "KIRKLAND SUPPLIES",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000005",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 1,
+      "item": 4,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "STRIPE* NORTHERNRAIL",
+      "candidate": {
+        "id": 4,
+        "name": "Northern Rail",
+        "raw": "NORTHERNRAIL",
+        "recognised": true
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 4,
+            "name": "Northern Rail",
+            "raw": "NORTHERNRAIL",
+            "recognised": true
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000006",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 1,
+      "item": 5,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "STRIPE* LIDLGB",
+      "candidate": {
+        "id": 5,
+        "name": "Lidl",
+        "raw": "LIDLGB",
+        "recognised": true
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 5,
+            "name": "Lidl",
+            "raw": "LIDLGB",
+            "recognised": true
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000007",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 1,
+      "item": 6,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "STRIPE* GRANARYMARKET",
+      "candidate": {
+        "id": 6,
+        "name": "Granary Market",
+        "raw": "GRANARYMARKET",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 6,
+            "name": "Granary Market",
+            "raw": "GRANARYMARKET",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000008",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 1,
+      "item": 7,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "WILKO",
+      "candidate": {
+        "id": 7,
+        "name": "Wilko",
+        "raw": "WILKO",
+        "recognised": true
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 7,
+            "name": "Wilko",
+            "raw": "WILKO",
+            "recognised": true
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000009",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 1,
+      "item": 8,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "TANNERY BOOKS",
+      "candidate": {
+        "id": 8,
+        "name": "Tannery Books",
+        "raw": "TANNERY BOOKS",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 8,
+            "name": "Tannery Books",
+            "raw": "TANNERY BOOKS",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000010",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 1,
+      "item": 9,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "BELLFORD PARKS",
+      "candidate": {
+        "id": 9,
+        "name": "Bellford Parks",
+        "raw": "BELLFORD PARKS",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 9,
+            "name": "Bellford Parks",
+            "raw": "BELLFORD PARKS",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000011",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 1,
+      "item": 2,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "EON NEXT",
+      "candidate": {
+        "category": "energy",
+        "confidence": "high",
+        "id": 2,
+        "name": "Eon Next"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "energy",
+            "confidence": "high",
+            "id": 2,
+            "name": "Eon Next"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000012",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 1,
+      "item": 3,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "KIRKLAND SUPPLIES",
+      "candidate": {
+        "category": "retail",
+        "confidence": "medium",
+        "id": 3,
+        "name": "Kirkland Supplies"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "retail",
+            "confidence": "medium",
+            "id": 3,
+            "name": "Kirkland Supplies"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000013",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 1,
+      "item": 4,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "STRIPE* NORTHERNRAIL",
+      "candidate": {
+        "category": "transport",
+        "confidence": "high",
+        "id": 4,
+        "name": "Northern Rail"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "transport",
+            "confidence": "high",
+            "id": 4,
+            "name": "Northern Rail"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000014",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 1,
+      "item": 5,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "STRIPE* LIDLGB",
+      "candidate": {
+        "category": "retail",
+        "confidence": "high",
+        "id": 5,
+        "name": "Lidl"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "retail",
+            "confidence": "high",
+            "id": 5,
+            "name": "Lidl"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000015",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 1,
+      "item": 6,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "STRIPE* GRANARYMARKET",
+      "candidate": {
+        "category": "food_drink",
+        "confidence": "medium",
+        "id": 6,
+        "name": "Granary Market"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "food_drink",
+            "confidence": "medium",
+            "id": 6,
+            "name": "Granary Market"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000016",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 1,
+      "item": 7,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "WILKO",
+      "candidate": {
+        "category": "retail",
+        "confidence": "medium",
+        "id": 7,
+        "name": "Wilko"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "retail",
+            "confidence": "medium",
+            "id": 7,
+            "name": "Wilko"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000017",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 1,
+      "item": 8,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "TANNERY BOOKS",
+      "candidate": {
+        "category": "retail",
+        "confidence": "high",
+        "id": 8,
+        "name": "Tannery Books"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "retail",
+            "confidence": "high",
+            "id": 8,
+            "name": "Tannery Books"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000018",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 1,
+      "item": 0,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "STRIPE* CALDERLETTINGS",
+      "candidate": {
+        "category": "unknown",
+        "confidence": "low",
+        "id": 0,
+        "name": "Calderlettings"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "unknown",
+            "confidence": "low",
+            "id": 0,
+            "name": "Calderlettings"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000019",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 1,
+      "item": 1,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "STRIPE* SMACLEOD",
+      "candidate": {
+        "category": "unknown",
+        "confidence": "low",
+        "id": 1,
+        "name": "Smacleod"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "unknown",
+            "confidence": "low",
+            "id": 1,
+            "name": "Smacleod"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000020",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 1,
+      "item": 9,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "BELLFORD PARKS",
+      "candidate": {
+        "category": "unknown",
+        "confidence": "low",
+        "id": 9,
+        "name": "Bellford Parks"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "unknown",
+            "confidence": "low",
+            "id": 9,
+            "name": "Bellford Parks"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    }
+  ]
+}
