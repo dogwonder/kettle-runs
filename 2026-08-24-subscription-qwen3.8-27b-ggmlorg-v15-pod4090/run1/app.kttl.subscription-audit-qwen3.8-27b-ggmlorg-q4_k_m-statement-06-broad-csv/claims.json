@@ -1,0 +1,6425 @@
+{
+  "schema": "kettle/claim-traces@0",
+  "claims": [
+    {
+      "id": "claim-000001",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 1,
+      "item": 0,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "NORTHSTAR STREAMING SUBSCRIPTION",
+      "candidate": {
+        "id": 0,
+        "name": "Northstar Streaming",
+        "raw": "NORTHSTAR STREAMING SUBSCRIPTION",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 0,
+            "name": "Northstar Streaming",
+            "raw": "NORTHSTAR STREAMING SUBSCRIPTION",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000002",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 1,
+      "item": 1,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "FIREFLY FILMS SUBSCRIPTION",
+      "candidate": {
+        "id": 1,
+        "name": "Firefly Films",
+        "raw": "FIREFLY FILMS SUBSCRIPTION",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 1,
+            "name": "Firefly Films",
+            "raw": "FIREFLY FILMS SUBSCRIPTION",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000003",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 1,
+      "item": 2,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "HARBOUR TV SUBSCRIPTION",
+      "candidate": {
+        "id": 2,
+        "name": "Harbour TV",
+        "raw": "HARBOUR TV SUBSCRIPTION",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 2,
+            "name": "Harbour TV",
+            "raw": "HARBOUR TV SUBSCRIPTION",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000004",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 1,
+      "item": 3,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "ORCHARD MUSIC SUBSCRIPTION",
+      "candidate": {
+        "id": 3,
+        "name": "Orchard Music",
+        "raw": "ORCHARD MUSIC SUBSCRIPTION",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 3,
+            "name": "Orchard Music",
+            "raw": "ORCHARD MUSIC SUBSCRIPTION",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000005",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 1,
+      "item": 4,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "PAPERPLANE CLOUD SUBSCRIPTION",
+      "candidate": {
+        "id": 4,
+        "name": "Paperplane Cloud",
+        "raw": "PAPERPLANE CLOUD SUBSCRIPTION",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 4,
+            "name": "Paperplane Cloud",
+            "raw": "PAPERPLANE CLOUD SUBSCRIPTION",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000006",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 1,
+      "item": 5,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "LANTERN NOTES SUBSCRIPTION",
+      "candidate": {
+        "id": 5,
+        "name": "Lantern Notes",
+        "raw": "LANTERN NOTES SUBSCRIPTION",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 5,
+            "name": "Lantern Notes",
+            "raw": "LANTERN NOTES SUBSCRIPTION",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000007",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 1,
+      "item": 6,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "COPPER CRM SUBSCRIPTION",
+      "candidate": {
+        "id": 6,
+        "name": "Copper CRM",
+        "raw": "COPPER CRM SUBSCRIPTION",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 6,
+            "name": "Copper CRM",
+            "raw": "COPPER CRM SUBSCRIPTION",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000008",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 1,
+      "item": 7,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "WILLOW PASSWORDS SUBSCRIPTION",
+      "candidate": {
+        "id": 7,
+        "name": "Willow Passwords",
+        "raw": "WILLOW PASSWORDS SUBSCRIPTION",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 7,
+            "name": "Willow Passwords",
+            "raw": "WILLOW PASSWORDS SUBSCRIPTION",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000009",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 1,
+      "item": 8,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "MORNING LEDGER SUBSCRIPTION",
+      "candidate": {
+        "id": 8,
+        "name": "Morning Ledger",
+        "raw": "MORNING LEDGER SUBSCRIPTION",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 8,
+            "name": "Morning Ledger",
+            "raw": "MORNING LEDGER SUBSCRIPTION",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000010",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 1,
+      "item": 9,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "CITY JOURNAL SUBSCRIPTION",
+      "candidate": {
+        "id": 9,
+        "name": "City Journal",
+        "raw": "CITY JOURNAL SUBSCRIPTION",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 9,
+            "name": "City Journal",
+            "raw": "CITY JOURNAL SUBSCRIPTION",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000011",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 1,
+      "item": 10,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "WEEKLY REVIEW SUBSCRIPTION",
+      "candidate": {
+        "id": 10,
+        "name": "Weekly Review",
+        "raw": "WEEKLY REVIEW SUBSCRIPTION",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 10,
+            "name": "Weekly Review",
+            "raw": "WEEKLY REVIEW SUBSCRIPTION",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000012",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 1,
+      "item": 11,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "SCIENCE MONTHLY SUBSCRIPTION",
+      "candidate": {
+        "id": 11,
+        "name": "Science Monthly",
+        "raw": "SCIENCE MONTHLY SUBSCRIPTION",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 11,
+            "name": "Science Monthly",
+            "raw": "SCIENCE MONTHLY SUBSCRIPTION",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000013",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 1,
+      "item": 12,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "RIVER YOGA SUBSCRIPTION",
+      "candidate": {
+        "id": 12,
+        "name": "River Yoga",
+        "raw": "RIVER YOGA SUBSCRIPTION",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 12,
+            "name": "River Yoga",
+            "raw": "RIVER YOGA SUBSCRIPTION",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000014",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 1,
+      "item": 13,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "SUMMIT FITNESS SUBSCRIPTION",
+      "candidate": {
+        "id": 13,
+        "name": "Summit Fitness",
+        "raw": "SUMMIT FITNESS SUBSCRIPTION",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 13,
+            "name": "Summit Fitness",
+            "raw": "SUMMIT FITNESS SUBSCRIPTION",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000015",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 1,
+      "item": 14,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "CYCLE COACH SUBSCRIPTION",
+      "candidate": {
+        "id": 14,
+        "name": "Cycle Coach",
+        "raw": "CYCLE COACH SUBSCRIPTION",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 14,
+            "name": "Cycle Coach",
+            "raw": "CYCLE COACH SUBSCRIPTION",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000016",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 1,
+      "item": 15,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "HOME PILATES SUBSCRIPTION",
+      "candidate": {
+        "id": 15,
+        "name": "Home Pilates",
+        "raw": "HOME PILATES SUBSCRIPTION",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 15,
+            "name": "Home Pilates",
+            "raw": "HOME PILATES SUBSCRIPTION",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000017",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 1,
+      "item": 16,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "SEASIDE AUDIOBOOK SUBSCRIPTION",
+      "candidate": {
+        "id": 16,
+        "name": "Seaside Audiobook",
+        "raw": "SEASIDE AUDIOBOOK SUBSCRIPTION",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 16,
+            "name": "Seaside Audiobook",
+            "raw": "SEASIDE AUDIOBOOK SUBSCRIPTION",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000018",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 1,
+      "item": 17,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "MAPLE LANGUAGE APP SUBSCRIPTION",
+      "candidate": {
+        "id": 17,
+        "name": "Maple Language App",
+        "raw": "MAPLE LANGUAGE APP SUBSCRIPTION",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 17,
+            "name": "Maple Language App",
+            "raw": "MAPLE LANGUAGE APP SUBSCRIPTION",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000019",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 1,
+      "item": 18,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "NIGHT OWL SLEEP APP SUBSCRIPTION",
+      "candidate": {
+        "id": 18,
+        "name": "Night Owl Sleep App",
+        "raw": "NIGHT OWL SLEEP APP SUBSCRIPTION",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 18,
+            "name": "Night Owl Sleep App",
+            "raw": "NIGHT OWL SLEEP APP SUBSCRIPTION",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000020",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 1,
+      "item": 19,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "ARCADE GAME PASS SUBSCRIPTION",
+      "candidate": {
+        "id": 19,
+        "name": "Arcade Game Pass",
+        "raw": "ARCADE GAME PASS SUBSCRIPTION",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 19,
+            "name": "Arcade Game Pass",
+            "raw": "ARCADE GAME PASS SUBSCRIPTION",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000021",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 2,
+      "item": 20,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "NORTH COUNTY ENERGY",
+      "candidate": {
+        "id": 20,
+        "name": "North County Energy",
+        "raw": "NORTH COUNTY ENERGY",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 20,
+            "name": "North County Energy",
+            "raw": "NORTH COUNTY ENERGY",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000022",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 2,
+      "item": 21,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "SUNWARD ELECTRIC",
+      "candidate": {
+        "id": 21,
+        "name": "Sunward Electric",
+        "raw": "SUNWARD ELECTRIC",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 21,
+            "name": "Sunward Electric",
+            "raw": "SUNWARD ELECTRIC",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000023",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 2,
+      "item": 22,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "HEARTH GAS",
+      "candidate": {
+        "id": 22,
+        "name": "Hearth Gas",
+        "raw": "HEARTH GAS",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 22,
+            "name": "Hearth Gas",
+            "raw": "HEARTH GAS",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000024",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 2,
+      "item": 23,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "GREEN GRID POWER",
+      "candidate": {
+        "id": 23,
+        "name": "Green Grid Power",
+        "raw": "GREEN GRID POWER",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 23,
+            "name": "Green Grid Power",
+            "raw": "GREEN GRID POWER",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000025",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 2,
+      "item": 24,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "CITY WATER BILL",
+      "candidate": {
+        "id": 24,
+        "name": "City Water Bill",
+        "raw": "CITY WATER BILL",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 24,
+            "name": "City Water Bill",
+            "raw": "CITY WATER BILL",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000026",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 2,
+      "item": 25,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "RIVER WATER SERVICES",
+      "candidate": {
+        "id": 25,
+        "name": "River Water Services",
+        "raw": "RIVER WATER SERVICES",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 25,
+            "name": "River Water Services",
+            "raw": "RIVER WATER SERVICES",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000027",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 2,
+      "item": 26,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "HOME INSURANCE MONTHLY PREMIUM",
+      "candidate": {
+        "id": 26,
+        "name": "Home Insurance Monthly Premium",
+        "raw": "HOME INSURANCE MONTHLY PREMIUM",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 26,
+            "name": "Home Insurance Monthly Premium",
+            "raw": "HOME INSURANCE MONTHLY PREMIUM",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000028",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 2,
+      "item": 27,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "MOTOR COVER MONTHLY PREMIUM",
+      "candidate": {
+        "id": 27,
+        "name": "Motor Cover Monthly Premium",
+        "raw": "MOTOR COVER MONTHLY PREMIUM",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 27,
+            "name": "Motor Cover Monthly Premium",
+            "raw": "MOTOR COVER MONTHLY PREMIUM",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000029",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 2,
+      "item": 28,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "PET COVER MONTHLY PREMIUM",
+      "candidate": {
+        "id": 28,
+        "name": "Pet Cover Monthly Premium",
+        "raw": "PET COVER MONTHLY PREMIUM",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 28,
+            "name": "Pet Cover Monthly Premium",
+            "raw": "PET COVER MONTHLY PREMIUM",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000030",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 2,
+      "item": 29,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "TRAVEL COVER ANNUAL PREMIUM",
+      "candidate": {
+        "id": 29,
+        "name": "Travel Cover Annual Premium",
+        "raw": "TRAVEL COVER ANNUAL PREMIUM",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 29,
+            "name": "Travel Cover Annual Premium",
+            "raw": "TRAVEL COVER ANNUAL PREMIUM",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000031",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 2,
+      "item": 30,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "OAK STREET MONTHLY RENT",
+      "candidate": {
+        "id": 30,
+        "name": "Oak Street Monthly Rent",
+        "raw": "OAK STREET MONTHLY RENT",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 30,
+            "name": "Oak Street Monthly Rent",
+            "raw": "OAK STREET MONTHLY RENT",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000032",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 2,
+      "item": 31,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "HARBOUR MORTGAGE REPAYMENT",
+      "candidate": {
+        "id": 31,
+        "name": "Harbour Mortgage Repayment",
+        "raw": "HARBOUR MORTGAGE REPAYMENT",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 31,
+            "name": "Harbour Mortgage Repayment",
+            "raw": "HARBOUR MORTGAGE REPAYMENT",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000033",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 2,
+      "item": 32,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "CITY COUNCIL TAX BILL",
+      "candidate": {
+        "id": 32,
+        "name": "City Council Tax Bill",
+        "raw": "CITY COUNCIL TAX BILL",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 32,
+            "name": "City Council Tax Bill",
+            "raw": "CITY COUNCIL TAX BILL",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000034",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 2,
+      "item": 33,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "BUILDING MONTHLY SERVICE CHARGE",
+      "candidate": {
+        "id": 33,
+        "name": "Building Monthly Service Charge",
+        "raw": "BUILDING MONTHLY SERVICE CHARGE",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 33,
+            "name": "Building Monthly Service Charge",
+            "raw": "BUILDING MONTHLY SERVICE CHARGE",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000035",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 2,
+      "item": 34,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "COMMUNITY CREDIT LOAN REPAYMENT",
+      "candidate": {
+        "id": 34,
+        "name": "Community Credit Loan Repayment",
+        "raw": "COMMUNITY CREDIT LOAN REPAYMENT",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 34,
+            "name": "Community Credit Loan Repayment",
+            "raw": "COMMUNITY CREDIT LOAN REPAYMENT",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000036",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 2,
+      "item": 35,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "STUDENT LOAN REPAYMENT",
+      "candidate": {
+        "id": 35,
+        "name": "Student Loan Repayment",
+        "raw": "STUDENT LOAN REPAYMENT",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 35,
+            "name": "Student Loan Repayment",
+            "raw": "STUDENT LOAN REPAYMENT",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000037",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 2,
+      "item": 36,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "FAMILY LIFE MONTHLY PREMIUM",
+      "candidate": {
+        "id": 36,
+        "name": "Family Life Monthly Premium",
+        "raw": "FAMILY LIFE MONTHLY PREMIUM",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 36,
+            "name": "Family Life Monthly Premium",
+            "raw": "FAMILY LIFE MONTHLY PREMIUM",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000038",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 2,
+      "item": 37,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "BOILER CARE MONTHLY PLAN",
+      "candidate": {
+        "id": 37,
+        "name": "Boiler Care Monthly Plan",
+        "raw": "BOILER CARE MONTHLY PLAN",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 37,
+            "name": "Boiler Care Monthly Plan",
+            "raw": "BOILER CARE MONTHLY PLAN",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000039",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 2,
+      "item": 38,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "LANDLINE MONTHLY BILL",
+      "candidate": {
+        "id": 38,
+        "name": "Landline Monthly Bill",
+        "raw": "LANDLINE MONTHLY BILL",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 38,
+            "name": "Landline Monthly Bill",
+            "raw": "LANDLINE MONTHLY BILL",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000040",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 2,
+      "item": 39,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "MUNICIPAL HEATING",
+      "candidate": {
+        "id": 39,
+        "name": "Municipal Heating",
+        "raw": "MUNICIPAL HEATING",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 39,
+            "name": "Municipal Heating",
+            "raw": "MUNICIPAL HEATING",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000041",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 3,
+      "item": 40,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "CORNER CUP WEEKDAY COFFEE",
+      "candidate": {
+        "id": 40,
+        "name": "Corner Cup Weekday Coffee",
+        "raw": "CORNER CUP WEEKDAY COFFEE",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 40,
+            "name": "Corner Cup Weekday Coffee",
+            "raw": "CORNER CUP WEEKDAY COFFEE",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000042",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 3,
+      "item": 41,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "MARKET WEEKLY BAKERY",
+      "candidate": {
+        "id": 41,
+        "name": "Market Weekly Bakery",
+        "raw": "MARKET WEEKLY BAKERY",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 41,
+            "name": "Market Weekly Bakery",
+            "raw": "MARKET WEEKLY BAKERY",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000043",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 3,
+      "item": 42,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "LUNCHBOX WORKDAY CAFE",
+      "candidate": {
+        "id": 42,
+        "name": "Lunchbox Workday Cafe",
+        "raw": "LUNCHBOX WORKDAY CAFE",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 42,
+            "name": "Lunchbox Workday Cafe",
+            "raw": "LUNCHBOX WORKDAY CAFE",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000044",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 3,
+      "item": 43,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "GREEN WEEKLY GROCER",
+      "candidate": {
+        "id": 43,
+        "name": "Green Weekly Grocer",
+        "raw": "GREEN WEEKLY GROCER",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 43,
+            "name": "Green Weekly Grocer",
+            "raw": "GREEN WEEKLY GROCER",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000045",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 3,
+      "item": 44,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "RIVERSIDE WEEKDAY DELI",
+      "candidate": {
+        "id": 44,
+        "name": "Riverside Weekday Deli",
+        "raw": "RIVERSIDE WEEKDAY DELI",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 44,
+            "name": "Riverside Weekday Deli",
+            "raw": "RIVERSIDE WEEKDAY DELI",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000046",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 3,
+      "item": 45,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "STATION WORKDAY CANTEEN",
+      "candidate": {
+        "id": 45,
+        "name": "Station Workday Canteen",
+        "raw": "STATION WORKDAY CANTEEN",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 45,
+            "name": "Station Workday Canteen",
+            "raw": "STATION WORKDAY CANTEEN",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000047",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 3,
+      "item": 46,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "WEEKLY SUPERMARKET SHOP",
+      "candidate": {
+        "id": 46,
+        "name": "Weekly Supermarket Shop",
+        "raw": "WEEKLY SUPERMARKET SHOP",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 46,
+            "name": "Weekly Supermarket Shop",
+            "raw": "WEEKLY SUPERMARKET SHOP",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000048",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 3,
+      "item": 47,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "FRIDAY TAKEAWAY",
+      "candidate": {
+        "id": 47,
+        "name": "Friday Takeaway",
+        "raw": "FRIDAY TAKEAWAY",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 47,
+            "name": "Friday Takeaway",
+            "raw": "FRIDAY TAKEAWAY",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000049",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 3,
+      "item": 48,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "DAILY CITY BUS",
+      "candidate": {
+        "id": 48,
+        "name": "Daily City Bus",
+        "raw": "DAILY CITY BUS",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 48,
+            "name": "Daily City Bus",
+            "raw": "DAILY CITY BUS",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000050",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 3,
+      "item": 49,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "WEEKLY METRO TOPUP",
+      "candidate": {
+        "id": 49,
+        "name": "Weekly Metro Topup",
+        "raw": "WEEKLY METRO TOPUP",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 49,
+            "name": "Weekly Metro Topup",
+            "raw": "WEEKLY METRO TOPUP",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000051",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 3,
+      "item": 50,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "WORKDAY PARKING APP",
+      "candidate": {
+        "id": 50,
+        "name": "Workday Parking App",
+        "raw": "WORKDAY PARKING APP",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 50,
+            "name": "Workday Parking App",
+            "raw": "WORKDAY PARKING APP",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000052",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 3,
+      "item": 51,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "COMMUTER FUEL",
+      "candidate": {
+        "id": 51,
+        "name": "Commuter Fuel",
+        "raw": "COMMUTER FUEL",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 51,
+            "name": "Commuter Fuel",
+            "raw": "COMMUTER FUEL",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000053",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 3,
+      "item": 52,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "WEEKLY BIKE HIRE",
+      "candidate": {
+        "id": 52,
+        "name": "Weekly Bike Hire",
+        "raw": "WEEKLY BIKE HIRE",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 52,
+            "name": "Weekly Bike Hire",
+            "raw": "WEEKLY BIKE HIRE",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000054",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 3,
+      "item": 53,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "COMMUTER FERRY TICKETS",
+      "candidate": {
+        "id": 53,
+        "name": "Commuter Ferry Tickets",
+        "raw": "COMMUTER FERRY TICKETS",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 53,
+            "name": "Commuter Ferry Tickets",
+            "raw": "COMMUTER FERRY TICKETS",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000055",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 3,
+      "item": 54,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "LOCAL PHARMACY",
+      "candidate": {
+        "id": 54,
+        "name": "Local Pharmacy",
+        "raw": "LOCAL PHARMACY",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 54,
+            "name": "Local Pharmacy",
+            "raw": "LOCAL PHARMACY",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000056",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 3,
+      "item": 55,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "HOMEWARE SHOP",
+      "candidate": {
+        "id": 55,
+        "name": "Homeware Shop",
+        "raw": "HOMEWARE SHOP",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 55,
+            "name": "Homeware Shop",
+            "raw": "HOMEWARE SHOP",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000057",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 3,
+      "item": 56,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "STATIONERY STORE",
+      "candidate": {
+        "id": 56,
+        "name": "Stationery Store",
+        "raw": "STATIONERY STORE",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 56,
+            "name": "Stationery Store",
+            "raw": "STATIONERY STORE",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000058",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 3,
+      "item": 57,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "HIGH STREET BOOKS",
+      "candidate": {
+        "id": 57,
+        "name": "High Street Books",
+        "raw": "HIGH STREET BOOKS",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 57,
+            "name": "High Street Books",
+            "raw": "HIGH STREET BOOKS",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000059",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 3,
+      "item": 58,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "PET SUPPLIES SHOP",
+      "candidate": {
+        "id": 58,
+        "name": "Pet Supplies Shop",
+        "raw": "PET SUPPLIES SHOP",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 58,
+            "name": "Pet Supplies Shop",
+            "raw": "PET SUPPLIES SHOP",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000060",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 3,
+      "item": 59,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "LOCAL HARDWARE",
+      "candidate": {
+        "id": 59,
+        "name": "Local Hardware",
+        "raw": "LOCAL HARDWARE",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 59,
+            "name": "Local Hardware",
+            "raw": "LOCAL HARDWARE",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000061",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 4,
+      "item": 60,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "FURNITURE WAREHOUSE PURCHASE",
+      "candidate": {
+        "id": 60,
+        "name": "Furniture Warehouse Purchase",
+        "raw": "FURNITURE WAREHOUSE PURCHASE",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 60,
+            "name": "Furniture Warehouse Purchase",
+            "raw": "FURNITURE WAREHOUSE PURCHASE",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000062",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 4,
+      "item": 61,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "ELECTRONICS OUTLET PURCHASE",
+      "candidate": {
+        "id": 61,
+        "name": "Electronics Outlet Purchase",
+        "raw": "ELECTRONICS OUTLET PURCHASE",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 61,
+            "name": "Electronics Outlet Purchase",
+            "raw": "ELECTRONICS OUTLET PURCHASE",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000063",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 4,
+      "item": 62,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "GARDEN SHED PURCHASE",
+      "candidate": {
+        "id": 62,
+        "name": "Garden Shed Purchase",
+        "raw": "GARDEN SHED PURCHASE",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 62,
+            "name": "Garden Shed Purchase",
+            "raw": "GARDEN SHED PURCHASE",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000064",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 4,
+      "item": 63,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "FORMALWEAR PURCHASE",
+      "candidate": {
+        "id": 63,
+        "name": "Formalwear Purchase",
+        "raw": "FORMALWEAR PURCHASE",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 63,
+            "name": "Formalwear Purchase",
+            "raw": "FORMALWEAR PURCHASE",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000065",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 4,
+      "item": 64,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "KITCHEN APPLIANCE SALE",
+      "candidate": {
+        "id": 64,
+        "name": "Kitchen Appliance Sale",
+        "raw": "KITCHEN APPLIANCE SALE",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 64,
+            "name": "Kitchen Appliance Sale",
+            "raw": "KITCHEN APPLIANCE SALE",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000066",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 4,
+      "item": 65,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "AIRLINE TICKET",
+      "candidate": {
+        "id": 65,
+        "name": "Airline Ticket",
+        "raw": "AIRLINE TICKET",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 65,
+            "name": "Airline Ticket",
+            "raw": "AIRLINE TICKET",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000067",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 4,
+      "item": 66,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "HOLIDAY RAIL BOOKING",
+      "candidate": {
+        "id": 66,
+        "name": "Holiday Rail Booking",
+        "raw": "HOLIDAY RAIL BOOKING",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 66,
+            "name": "Holiday Rail Booking",
+            "raw": "HOLIDAY RAIL BOOKING",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000068",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 4,
+      "item": 67,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "CAR HIRE WEEKEND",
+      "candidate": {
+        "id": 67,
+        "name": "Car Hire Weekend",
+        "raw": "CAR HIRE WEEKEND",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 67,
+            "name": "Car Hire Weekend",
+            "raw": "CAR HIRE WEEKEND",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000069",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 4,
+      "item": 68,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "AIRPORT TRANSFER",
+      "candidate": {
+        "id": 68,
+        "name": "Airport Transfer",
+        "raw": "AIRPORT TRANSFER",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 68,
+            "name": "Airport Transfer",
+            "raw": "AIRPORT TRANSFER",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000070",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 4,
+      "item": 69,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "COMMUNITY FUND DONATION",
+      "candidate": {
+        "id": 69,
+        "name": "Community Fund Donation",
+        "raw": "COMMUNITY FUND DONATION",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 69,
+            "name": "Community Fund Donation",
+            "raw": "COMMUNITY FUND DONATION",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000071",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 4,
+      "item": 70,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "WILDLIFE APPEAL",
+      "candidate": {
+        "id": 70,
+        "name": "Wildlife Appeal",
+        "raw": "WILDLIFE APPEAL",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 70,
+            "name": "Wildlife Appeal",
+            "raw": "WILDLIFE APPEAL",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000072",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 4,
+      "item": 71,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "LOCAL FOODBANK GIFT",
+      "candidate": {
+        "id": 71,
+        "name": "Local Foodbank Gift",
+        "raw": "LOCAL FOODBANK GIFT",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 71,
+            "name": "Local Foodbank Gift",
+            "raw": "LOCAL FOODBANK GIFT",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000073",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 4,
+      "item": 72,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "MARATHON SPONSORSHIP",
+      "candidate": {
+        "id": 72,
+        "name": "Marathon Sponsorship",
+        "raw": "MARATHON SPONSORSHIP",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 72,
+            "name": "Marathon Sponsorship",
+            "raw": "MARATHON SPONSORSHIP",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000074",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 4,
+      "item": 73,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "ROOF REPAIR",
+      "candidate": {
+        "id": 73,
+        "name": "Roof Repair",
+        "raw": "ROOF REPAIR",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 73,
+            "name": "Roof Repair",
+            "raw": "ROOF REPAIR",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000075",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 4,
+      "item": 74,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "WINDOW INSTALLATION",
+      "candidate": {
+        "id": 74,
+        "name": "Window Installation",
+        "raw": "WINDOW INSTALLATION",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 74,
+            "name": "Window Installation",
+            "raw": "WINDOW INSTALLATION",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000076",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 4,
+      "item": 75,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "BANK TRANSFER FEE",
+      "candidate": {
+        "id": 75,
+        "name": "Bank Transfer Fee",
+        "raw": "BANK TRANSFER FEE",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 75,
+            "name": "Bank Transfer Fee",
+            "raw": "BANK TRANSFER FEE",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000077",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 4,
+      "item": 76,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "PASSPORT OFFICE",
+      "candidate": {
+        "id": 76,
+        "name": "Passport Office",
+        "raw": "PASSPORT OFFICE",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 76,
+            "name": "Passport Office",
+            "raw": "PASSPORT OFFICE",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000078",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 4,
+      "item": 77,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "LOCAL SOLICITOR",
+      "candidate": {
+        "id": 77,
+        "name": "Local Solicitor",
+        "raw": "LOCAL SOLICITOR",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 77,
+            "name": "Local Solicitor",
+            "raw": "LOCAL SOLICITOR",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000079",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 4,
+      "item": 78,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "WEDDING PHOTOGRAPHER",
+      "candidate": {
+        "id": 78,
+        "name": "Wedding Photographer",
+        "raw": "WEDDING PHOTOGRAPHER",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 78,
+            "name": "Wedding Photographer",
+            "raw": "WEDDING PHOTOGRAPHER",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000080",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Grouping payments by merchant",
+      "batch": 4,
+      "item": 79,
+      "candidate_index": 0,
+      "kind": "normalisation",
+      "source": "DENTAL CLINIC",
+      "candidate": {
+        "id": 79,
+        "name": "Dental Clinic",
+        "raw": "DENTAL CLINIC",
+        "recognised": false
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "id": 79,
+            "name": "Dental Clinic",
+            "raw": "DENTAL CLINIC",
+            "recognised": false
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000081",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 1,
+      "item": 0,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "NORTHSTAR STREAMING SUBSCRIPTION",
+      "candidate": {
+        "category": "streaming",
+        "confidence": "high",
+        "id": 0,
+        "name": "Northstar Streaming"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "streaming",
+            "confidence": "high",
+            "id": 0,
+            "name": "Northstar Streaming"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000082",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 1,
+      "item": 1,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "FIREFLY FILMS SUBSCRIPTION",
+      "candidate": {
+        "category": "streaming",
+        "confidence": "medium",
+        "id": 1,
+        "name": "Firefly Films"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "streaming",
+            "confidence": "medium",
+            "id": 1,
+            "name": "Firefly Films"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000083",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 1,
+      "item": 2,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "HARBOUR TV SUBSCRIPTION",
+      "candidate": {
+        "category": "streaming",
+        "confidence": "medium",
+        "id": 2,
+        "name": "Harbour TV"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "streaming",
+            "confidence": "medium",
+            "id": 2,
+            "name": "Harbour TV"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000084",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 1,
+      "item": 3,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "ORCHARD MUSIC SUBSCRIPTION",
+      "candidate": {
+        "category": "streaming",
+        "confidence": "medium",
+        "id": 3,
+        "name": "Orchard Music"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "streaming",
+            "confidence": "medium",
+            "id": 3,
+            "name": "Orchard Music"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000085",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 1,
+      "item": 4,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "PAPERPLANE CLOUD SUBSCRIPTION",
+      "candidate": {
+        "category": "software",
+        "confidence": "medium",
+        "id": 4,
+        "name": "Paperplane Cloud"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "software",
+            "confidence": "medium",
+            "id": 4,
+            "name": "Paperplane Cloud"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000086",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 1,
+      "item": 6,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "COPPER CRM SUBSCRIPTION",
+      "candidate": {
+        "category": "software",
+        "confidence": "high",
+        "id": 6,
+        "name": "Copper CRM"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "software",
+            "confidence": "high",
+            "id": 6,
+            "name": "Copper CRM"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000087",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 1,
+      "item": 7,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "WILLOW PASSWORDS SUBSCRIPTION",
+      "candidate": {
+        "category": "software",
+        "confidence": "high",
+        "id": 7,
+        "name": "Willow Passwords"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "software",
+            "confidence": "high",
+            "id": 7,
+            "name": "Willow Passwords"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000088",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 1,
+      "item": 12,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "RIVER YOGA SUBSCRIPTION",
+      "candidate": {
+        "category": "fitness",
+        "confidence": "high",
+        "id": 12,
+        "name": "River Yoga"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "fitness",
+            "confidence": "high",
+            "id": 12,
+            "name": "River Yoga"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000089",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 1,
+      "item": 13,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "SUMMIT FITNESS SUBSCRIPTION",
+      "candidate": {
+        "category": "fitness",
+        "confidence": "high",
+        "id": 13,
+        "name": "Summit Fitness"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "fitness",
+            "confidence": "high",
+            "id": 13,
+            "name": "Summit Fitness"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000090",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 1,
+      "item": 14,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "CYCLE COACH SUBSCRIPTION",
+      "candidate": {
+        "category": "fitness",
+        "confidence": "medium",
+        "id": 14,
+        "name": "Cycle Coach"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "fitness",
+            "confidence": "medium",
+            "id": 14,
+            "name": "Cycle Coach"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000091",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 1,
+      "item": 5,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "LANTERN NOTES SUBSCRIPTION",
+      "candidate": {
+        "category": "software",
+        "confidence": "low",
+        "id": 5,
+        "name": "Lantern Notes"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "software",
+            "confidence": "low",
+            "id": 5,
+            "name": "Lantern Notes"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000092",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 1,
+      "item": 8,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "MORNING LEDGER SUBSCRIPTION",
+      "candidate": {
+        "category": "software",
+        "confidence": "low",
+        "id": 8,
+        "name": "Morning Ledger"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "software",
+            "confidence": "low",
+            "id": 8,
+            "name": "Morning Ledger"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000093",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 1,
+      "item": 9,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "CITY JOURNAL SUBSCRIPTION",
+      "candidate": {
+        "category": "unknown",
+        "confidence": "low",
+        "id": 9,
+        "name": "City Journal"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "unknown",
+            "confidence": "low",
+            "id": 9,
+            "name": "City Journal"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000094",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 1,
+      "item": 10,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "WEEKLY REVIEW SUBSCRIPTION",
+      "candidate": {
+        "category": "unknown",
+        "confidence": "low",
+        "id": 10,
+        "name": "Weekly Review"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "unknown",
+            "confidence": "low",
+            "id": 10,
+            "name": "Weekly Review"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000095",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 1,
+      "item": 11,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "SCIENCE MONTHLY SUBSCRIPTION",
+      "candidate": {
+        "category": "unknown",
+        "confidence": "low",
+        "id": 11,
+        "name": "Science Monthly"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "unknown",
+            "confidence": "low",
+            "id": 11,
+            "name": "Science Monthly"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000096",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 2,
+      "item": 15,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "HOME PILATES SUBSCRIPTION",
+      "candidate": {
+        "category": "fitness",
+        "confidence": "high",
+        "id": 15,
+        "name": "Home Pilates"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "fitness",
+            "confidence": "high",
+            "id": 15,
+            "name": "Home Pilates"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000097",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 2,
+      "item": 16,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "SEASIDE AUDIOBOOK SUBSCRIPTION",
+      "candidate": {
+        "category": "streaming",
+        "confidence": "high",
+        "id": 16,
+        "name": "Seaside Audiobook"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "streaming",
+            "confidence": "high",
+            "id": 16,
+            "name": "Seaside Audiobook"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000098",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 2,
+      "item": 17,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "MAPLE LANGUAGE APP SUBSCRIPTION",
+      "candidate": {
+        "category": "software",
+        "confidence": "medium",
+        "id": 17,
+        "name": "Maple Language App"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "software",
+            "confidence": "medium",
+            "id": 17,
+            "name": "Maple Language App"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000099",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 2,
+      "item": 18,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "NIGHT OWL SLEEP APP SUBSCRIPTION",
+      "candidate": {
+        "category": "software",
+        "confidence": "medium",
+        "id": 18,
+        "name": "Night Owl Sleep App"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "software",
+            "confidence": "medium",
+            "id": 18,
+            "name": "Night Owl Sleep App"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000100",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 2,
+      "item": 19,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "ARCADE GAME PASS SUBSCRIPTION",
+      "candidate": {
+        "category": "streaming",
+        "confidence": "medium",
+        "id": 19,
+        "name": "Arcade Game Pass"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "streaming",
+            "confidence": "medium",
+            "id": 19,
+            "name": "Arcade Game Pass"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000101",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 2,
+      "item": 20,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "NORTH COUNTY ENERGY",
+      "candidate": {
+        "category": "energy",
+        "confidence": "high",
+        "id": 20,
+        "name": "North County Energy"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "energy",
+            "confidence": "high",
+            "id": 20,
+            "name": "North County Energy"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000102",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 2,
+      "item": 21,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "SUNWARD ELECTRIC",
+      "candidate": {
+        "category": "energy",
+        "confidence": "high",
+        "id": 21,
+        "name": "Sunward Electric"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "energy",
+            "confidence": "high",
+            "id": 21,
+            "name": "Sunward Electric"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000103",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 2,
+      "item": 22,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "HEARTH GAS",
+      "candidate": {
+        "category": "energy",
+        "confidence": "high",
+        "id": 22,
+        "name": "Hearth Gas"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "energy",
+            "confidence": "high",
+            "id": 22,
+            "name": "Hearth Gas"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000104",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 2,
+      "item": 23,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "GREEN GRID POWER",
+      "candidate": {
+        "category": "energy",
+        "confidence": "high",
+        "id": 23,
+        "name": "Green Grid Power"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "energy",
+            "confidence": "high",
+            "id": 23,
+            "name": "Green Grid Power"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000105",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 2,
+      "item": 24,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "CITY WATER BILL",
+      "candidate": {
+        "category": "energy",
+        "confidence": "high",
+        "id": 24,
+        "name": "City Water Bill"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "energy",
+            "confidence": "high",
+            "id": 24,
+            "name": "City Water Bill"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000106",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 2,
+      "item": 25,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "RIVER WATER SERVICES",
+      "candidate": {
+        "category": "energy",
+        "confidence": "high",
+        "id": 25,
+        "name": "River Water Services"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "energy",
+            "confidence": "high",
+            "id": 25,
+            "name": "River Water Services"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000107",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 2,
+      "item": 26,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "HOME INSURANCE MONTHLY PREMIUM",
+      "candidate": {
+        "category": "insurance",
+        "confidence": "high",
+        "id": 26,
+        "name": "Home Insurance Monthly Premium"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "insurance",
+            "confidence": "high",
+            "id": 26,
+            "name": "Home Insurance Monthly Premium"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000108",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 2,
+      "item": 27,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "MOTOR COVER MONTHLY PREMIUM",
+      "candidate": {
+        "category": "insurance",
+        "confidence": "high",
+        "id": 27,
+        "name": "Motor Cover Monthly Premium"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "insurance",
+            "confidence": "high",
+            "id": 27,
+            "name": "Motor Cover Monthly Premium"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000109",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 2,
+      "item": 28,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "PET COVER MONTHLY PREMIUM",
+      "candidate": {
+        "category": "insurance",
+        "confidence": "high",
+        "id": 28,
+        "name": "Pet Cover Monthly Premium"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "insurance",
+            "confidence": "high",
+            "id": 28,
+            "name": "Pet Cover Monthly Premium"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000110",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 2,
+      "item": 29,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "TRAVEL COVER ANNUAL PREMIUM",
+      "candidate": {
+        "category": "insurance",
+        "confidence": "high",
+        "id": 29,
+        "name": "Travel Cover Annual Premium"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "insurance",
+            "confidence": "high",
+            "id": 29,
+            "name": "Travel Cover Annual Premium"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000111",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 3,
+      "item": 30,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "OAK STREET MONTHLY RENT",
+      "candidate": {
+        "category": "housing",
+        "confidence": "high",
+        "id": 30,
+        "name": "Oak Street Monthly Rent"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "housing",
+            "confidence": "high",
+            "id": 30,
+            "name": "Oak Street Monthly Rent"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000112",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 3,
+      "item": 31,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "HARBOUR MORTGAGE REPAYMENT",
+      "candidate": {
+        "category": "housing",
+        "confidence": "high",
+        "id": 31,
+        "name": "Harbour Mortgage Repayment"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "housing",
+            "confidence": "high",
+            "id": 31,
+            "name": "Harbour Mortgage Repayment"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000113",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 3,
+      "item": 32,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "CITY COUNCIL TAX BILL",
+      "candidate": {
+        "category": "housing",
+        "confidence": "high",
+        "id": 32,
+        "name": "City Council Tax Bill"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "housing",
+            "confidence": "high",
+            "id": 32,
+            "name": "City Council Tax Bill"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000114",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 3,
+      "item": 33,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "BUILDING MONTHLY SERVICE CHARGE",
+      "candidate": {
+        "category": "housing",
+        "confidence": "high",
+        "id": 33,
+        "name": "Building Monthly Service Charge"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "housing",
+            "confidence": "high",
+            "id": 33,
+            "name": "Building Monthly Service Charge"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000115",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 3,
+      "item": 34,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "COMMUNITY CREDIT LOAN REPAYMENT",
+      "candidate": {
+        "category": "finance",
+        "confidence": "high",
+        "id": 34,
+        "name": "Community Credit Loan Repayment"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "finance",
+            "confidence": "high",
+            "id": 34,
+            "name": "Community Credit Loan Repayment"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000116",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 3,
+      "item": 35,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "STUDENT LOAN REPAYMENT",
+      "candidate": {
+        "category": "finance",
+        "confidence": "high",
+        "id": 35,
+        "name": "Student Loan Repayment"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "finance",
+            "confidence": "high",
+            "id": 35,
+            "name": "Student Loan Repayment"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000117",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 3,
+      "item": 36,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "FAMILY LIFE MONTHLY PREMIUM",
+      "candidate": {
+        "category": "insurance",
+        "confidence": "high",
+        "id": 36,
+        "name": "Family Life Monthly Premium"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "insurance",
+            "confidence": "high",
+            "id": 36,
+            "name": "Family Life Monthly Premium"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000118",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 3,
+      "item": 37,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "BOILER CARE MONTHLY PLAN",
+      "candidate": {
+        "category": "housing",
+        "confidence": "medium",
+        "id": 37,
+        "name": "Boiler Care Monthly Plan"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "housing",
+            "confidence": "medium",
+            "id": 37,
+            "name": "Boiler Care Monthly Plan"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000119",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 3,
+      "item": 38,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "LANDLINE MONTHLY BILL",
+      "candidate": {
+        "category": "telecoms",
+        "confidence": "high",
+        "id": 38,
+        "name": "Landline Monthly Bill"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "telecoms",
+            "confidence": "high",
+            "id": 38,
+            "name": "Landline Monthly Bill"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000120",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 3,
+      "item": 39,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "MUNICIPAL HEATING",
+      "candidate": {
+        "category": "energy",
+        "confidence": "high",
+        "id": 39,
+        "name": "Municipal Heating"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "energy",
+            "confidence": "high",
+            "id": 39,
+            "name": "Municipal Heating"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000121",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 3,
+      "item": 40,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "CORNER CUP WEEKDAY COFFEE",
+      "candidate": {
+        "category": "food_drink",
+        "confidence": "high",
+        "id": 40,
+        "name": "Corner Cup Weekday Coffee"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "food_drink",
+            "confidence": "high",
+            "id": 40,
+            "name": "Corner Cup Weekday Coffee"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000122",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 3,
+      "item": 41,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "MARKET WEEKLY BAKERY",
+      "candidate": {
+        "category": "food_drink",
+        "confidence": "high",
+        "id": 41,
+        "name": "Market Weekly Bakery"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "food_drink",
+            "confidence": "high",
+            "id": 41,
+            "name": "Market Weekly Bakery"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000123",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 3,
+      "item": 42,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "LUNCHBOX WORKDAY CAFE",
+      "candidate": {
+        "category": "food_drink",
+        "confidence": "high",
+        "id": 42,
+        "name": "Lunchbox Workday Cafe"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "food_drink",
+            "confidence": "high",
+            "id": 42,
+            "name": "Lunchbox Workday Cafe"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000124",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 3,
+      "item": 43,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "GREEN WEEKLY GROCER",
+      "candidate": {
+        "category": "food_drink",
+        "confidence": "high",
+        "id": 43,
+        "name": "Green Weekly Grocer"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "food_drink",
+            "confidence": "high",
+            "id": 43,
+            "name": "Green Weekly Grocer"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000125",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 3,
+      "item": 44,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "RIVERSIDE WEEKDAY DELI",
+      "candidate": {
+        "category": "food_drink",
+        "confidence": "high",
+        "id": 44,
+        "name": "Riverside Weekday Deli"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "food_drink",
+            "confidence": "high",
+            "id": 44,
+            "name": "Riverside Weekday Deli"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000126",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 4,
+      "item": 45,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "STATION WORKDAY CANTEEN",
+      "candidate": {
+        "category": "food_drink",
+        "confidence": "high",
+        "id": 45,
+        "name": "Station Workday Canteen"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "food_drink",
+            "confidence": "high",
+            "id": 45,
+            "name": "Station Workday Canteen"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000127",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 4,
+      "item": 46,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "WEEKLY SUPERMARKET SHOP",
+      "candidate": {
+        "category": "retail",
+        "confidence": "high",
+        "id": 46,
+        "name": "Weekly Supermarket Shop"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "retail",
+            "confidence": "high",
+            "id": 46,
+            "name": "Weekly Supermarket Shop"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000128",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 4,
+      "item": 47,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "FRIDAY TAKEAWAY",
+      "candidate": {
+        "category": "food_drink",
+        "confidence": "high",
+        "id": 47,
+        "name": "Friday Takeaway"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "food_drink",
+            "confidence": "high",
+            "id": 47,
+            "name": "Friday Takeaway"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000129",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 4,
+      "item": 48,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "DAILY CITY BUS",
+      "candidate": {
+        "category": "transport",
+        "confidence": "high",
+        "id": 48,
+        "name": "Daily City Bus"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "transport",
+            "confidence": "high",
+            "id": 48,
+            "name": "Daily City Bus"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000130",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 4,
+      "item": 49,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "WEEKLY METRO TOPUP",
+      "candidate": {
+        "category": "transport",
+        "confidence": "high",
+        "id": 49,
+        "name": "Weekly Metro Topup"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "transport",
+            "confidence": "high",
+            "id": 49,
+            "name": "Weekly Metro Topup"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000131",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 4,
+      "item": 50,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "WORKDAY PARKING APP",
+      "candidate": {
+        "category": "transport",
+        "confidence": "high",
+        "id": 50,
+        "name": "Workday Parking App"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "transport",
+            "confidence": "high",
+            "id": 50,
+            "name": "Workday Parking App"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000132",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 4,
+      "item": 51,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "COMMUTER FUEL",
+      "candidate": {
+        "category": "transport",
+        "confidence": "high",
+        "id": 51,
+        "name": "Commuter Fuel"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "transport",
+            "confidence": "high",
+            "id": 51,
+            "name": "Commuter Fuel"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000133",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 4,
+      "item": 52,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "WEEKLY BIKE HIRE",
+      "candidate": {
+        "category": "transport",
+        "confidence": "high",
+        "id": 52,
+        "name": "Weekly Bike Hire"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "transport",
+            "confidence": "high",
+            "id": 52,
+            "name": "Weekly Bike Hire"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000134",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 4,
+      "item": 53,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "COMMUTER FERRY TICKETS",
+      "candidate": {
+        "category": "transport",
+        "confidence": "high",
+        "id": 53,
+        "name": "Commuter Ferry Tickets"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "transport",
+            "confidence": "high",
+            "id": 53,
+            "name": "Commuter Ferry Tickets"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000135",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 4,
+      "item": 54,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "LOCAL PHARMACY",
+      "candidate": {
+        "category": "retail",
+        "confidence": "high",
+        "id": 54,
+        "name": "Local Pharmacy"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "retail",
+            "confidence": "high",
+            "id": 54,
+            "name": "Local Pharmacy"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000136",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 4,
+      "item": 55,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "HOMEWARE SHOP",
+      "candidate": {
+        "category": "retail",
+        "confidence": "high",
+        "id": 55,
+        "name": "Homeware Shop"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "retail",
+            "confidence": "high",
+            "id": 55,
+            "name": "Homeware Shop"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000137",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 4,
+      "item": 56,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "STATIONERY STORE",
+      "candidate": {
+        "category": "retail",
+        "confidence": "high",
+        "id": 56,
+        "name": "Stationery Store"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "retail",
+            "confidence": "high",
+            "id": 56,
+            "name": "Stationery Store"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000138",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 4,
+      "item": 57,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "HIGH STREET BOOKS",
+      "candidate": {
+        "category": "retail",
+        "confidence": "high",
+        "id": 57,
+        "name": "High Street Books"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "retail",
+            "confidence": "high",
+            "id": 57,
+            "name": "High Street Books"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000139",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 4,
+      "item": 58,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "PET SUPPLIES SHOP",
+      "candidate": {
+        "category": "retail",
+        "confidence": "high",
+        "id": 58,
+        "name": "Pet Supplies Shop"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "retail",
+            "confidence": "high",
+            "id": 58,
+            "name": "Pet Supplies Shop"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000140",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 4,
+      "item": 59,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "LOCAL HARDWARE",
+      "candidate": {
+        "category": "retail",
+        "confidence": "high",
+        "id": 59,
+        "name": "Local Hardware"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "retail",
+            "confidence": "high",
+            "id": 59,
+            "name": "Local Hardware"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000141",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 5,
+      "item": 60,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "FURNITURE WAREHOUSE PURCHASE",
+      "candidate": {
+        "category": "retail",
+        "confidence": "high",
+        "id": 60,
+        "name": "Furniture Warehouse Purchase"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "retail",
+            "confidence": "high",
+            "id": 60,
+            "name": "Furniture Warehouse Purchase"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000142",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 5,
+      "item": 61,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "ELECTRONICS OUTLET PURCHASE",
+      "candidate": {
+        "category": "retail",
+        "confidence": "high",
+        "id": 61,
+        "name": "Electronics Outlet Purchase"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "retail",
+            "confidence": "high",
+            "id": 61,
+            "name": "Electronics Outlet Purchase"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000143",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 5,
+      "item": 62,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "GARDEN SHED PURCHASE",
+      "candidate": {
+        "category": "retail",
+        "confidence": "medium",
+        "id": 62,
+        "name": "Garden Shed Purchase"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "retail",
+            "confidence": "medium",
+            "id": 62,
+            "name": "Garden Shed Purchase"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000144",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 5,
+      "item": 63,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "FORMALWEAR PURCHASE",
+      "candidate": {
+        "category": "retail",
+        "confidence": "high",
+        "id": 63,
+        "name": "Formalwear Purchase"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "retail",
+            "confidence": "high",
+            "id": 63,
+            "name": "Formalwear Purchase"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000145",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 5,
+      "item": 64,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "KITCHEN APPLIANCE SALE",
+      "candidate": {
+        "category": "retail",
+        "confidence": "high",
+        "id": 64,
+        "name": "Kitchen Appliance Sale"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "retail",
+            "confidence": "high",
+            "id": 64,
+            "name": "Kitchen Appliance Sale"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000146",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 5,
+      "item": 65,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "AIRLINE TICKET",
+      "candidate": {
+        "category": "transport",
+        "confidence": "high",
+        "id": 65,
+        "name": "Airline Ticket"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "transport",
+            "confidence": "high",
+            "id": 65,
+            "name": "Airline Ticket"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000147",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 5,
+      "item": 66,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "HOLIDAY RAIL BOOKING",
+      "candidate": {
+        "category": "transport",
+        "confidence": "high",
+        "id": 66,
+        "name": "Holiday Rail Booking"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "transport",
+            "confidence": "high",
+            "id": 66,
+            "name": "Holiday Rail Booking"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000148",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 5,
+      "item": 67,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "CAR HIRE WEEKEND",
+      "candidate": {
+        "category": "transport",
+        "confidence": "high",
+        "id": 67,
+        "name": "Car Hire Weekend"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "transport",
+            "confidence": "high",
+            "id": 67,
+            "name": "Car Hire Weekend"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000149",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 5,
+      "item": 68,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "AIRPORT TRANSFER",
+      "candidate": {
+        "category": "transport",
+        "confidence": "high",
+        "id": 68,
+        "name": "Airport Transfer"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "transport",
+            "confidence": "high",
+            "id": 68,
+            "name": "Airport Transfer"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000150",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 5,
+      "item": 69,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "COMMUNITY FUND DONATION",
+      "candidate": {
+        "category": "charity",
+        "confidence": "high",
+        "id": 69,
+        "name": "Community Fund Donation"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "charity",
+            "confidence": "high",
+            "id": 69,
+            "name": "Community Fund Donation"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000151",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 5,
+      "item": 70,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "WILDLIFE APPEAL",
+      "candidate": {
+        "category": "charity",
+        "confidence": "high",
+        "id": 70,
+        "name": "Wildlife Appeal"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "charity",
+            "confidence": "high",
+            "id": 70,
+            "name": "Wildlife Appeal"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000152",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 5,
+      "item": 71,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "LOCAL FOODBANK GIFT",
+      "candidate": {
+        "category": "charity",
+        "confidence": "high",
+        "id": 71,
+        "name": "Local Foodbank Gift"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "charity",
+            "confidence": "high",
+            "id": 71,
+            "name": "Local Foodbank Gift"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000153",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 5,
+      "item": 72,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "MARATHON SPONSORSHIP",
+      "candidate": {
+        "category": "charity",
+        "confidence": "medium",
+        "id": 72,
+        "name": "Marathon Sponsorship"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "charity",
+            "confidence": "medium",
+            "id": 72,
+            "name": "Marathon Sponsorship"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000154",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 5,
+      "item": 73,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "ROOF REPAIR",
+      "candidate": {
+        "category": "other",
+        "confidence": "medium",
+        "id": 73,
+        "name": "Roof Repair"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "other",
+            "confidence": "medium",
+            "id": 73,
+            "name": "Roof Repair"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000155",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 5,
+      "item": 74,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "WINDOW INSTALLATION",
+      "candidate": {
+        "category": "other",
+        "confidence": "medium",
+        "id": 74,
+        "name": "Window Installation"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "other",
+            "confidence": "medium",
+            "id": 74,
+            "name": "Window Installation"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000156",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 6,
+      "item": 75,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "BANK TRANSFER FEE",
+      "candidate": {
+        "category": "other",
+        "confidence": "high",
+        "id": 75,
+        "name": "Bank Transfer Fee"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "other",
+            "confidence": "high",
+            "id": 75,
+            "name": "Bank Transfer Fee"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000157",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 6,
+      "item": 76,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "PASSPORT OFFICE",
+      "candidate": {
+        "category": "other",
+        "confidence": "high",
+        "id": 76,
+        "name": "Passport Office"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "other",
+            "confidence": "high",
+            "id": 76,
+            "name": "Passport Office"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000158",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 6,
+      "item": 77,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "LOCAL SOLICITOR",
+      "candidate": {
+        "category": "other",
+        "confidence": "high",
+        "id": 77,
+        "name": "Local Solicitor"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "other",
+            "confidence": "high",
+            "id": 77,
+            "name": "Local Solicitor"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000159",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 6,
+      "item": 78,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "WEDDING PHOTOGRAPHER",
+      "candidate": {
+        "category": "other",
+        "confidence": "high",
+        "id": 78,
+        "name": "Wedding Photographer"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "other",
+            "confidence": "high",
+            "id": 78,
+            "name": "Wedding Photographer"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000160",
+      "pack": "app.kttl.subscription-audit",
+      "step": "Sorting merchants",
+      "batch": 6,
+      "item": 79,
+      "candidate_index": 0,
+      "kind": "classification",
+      "source": "DENTAL CLINIC",
+      "candidate": {
+        "category": "other",
+        "confidence": "high",
+        "id": 79,
+        "name": "Dental Clinic"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "category": "other",
+            "confidence": "high",
+            "id": 79,
+            "name": "Dental Clinic"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+You clean up merchant names from bank statements.
+
+For each raw merchant string, return the real-world merchant name a person
+would recognise. Strip transaction codes, store numbers, and payment
+processor prefixes (SQ*, PAYPAL *, SumUp, ZETTLE_*). Strip company
+suffixes (Ltd, Limited, PLC, Inc) unless the brand itself uses one.
+
+Write the name the way the brand writes it, not the way the statement
+shouts it. Statements are usually upper case; brand names are not.
+
+Keep punctuation and spacing the brand itself uses, even where the
+statement has flattened it: Paramount+, Apple TV+, M&S, B&Q, Ben &
+Jerry's. Statements strip these characters; the brand name has them.
+
+  NETFLIX.COM        -> Netflix
+  SPOTIFY LTD        -> Spotify
+  PUREGYM LTD        -> PureGym
+  BRITISH GAS        -> British Gas
+  TESCO STORES 3412  -> Tesco
+  SQ *KAFFA COFFEE   -> Kaffa Coffee
+
+If you cannot identify the merchant, return the cleaned string as-is and
+set "recognised": false.
+
+Return one result per input, with the same "id" you were given. Return
+JSON only, matching the schema. No commentary.
+
+Raw merchant strings:
+[
+  {
+    "id": 20,
+    "raw": "NORTH COUNTY ENERGY"
+  },
+  {
+    "id": 21,
+    "raw": "SUNWARD ELECTRIC"
+  },
+  {
+    "id": 22,
+    "raw": "HEARTH GAS"
+  },
+  {
+    "id": 23,
+    "raw": "GREEN GRID POWER"
+  },
+  {
+    "id": 24,
+    "raw": "CITY WATER BILL"
+  },
+  {
+    "id": 25,
+    "raw": "RIVER WATER SERVICES"
+  },
+  {
+    "id": 26,
+    "raw": "HOME INSURANCE MONTHLY PREMIUM"
+  },
+  {
+    "id": 27,
+    "raw": "MOTOR COVER MONTHLY PREMIUM"
+  },
+  {
+    "id": 28,
+    "raw": "PET COVER MONTHLY PREMIUM"
+  },
+  {
+    "id": 29,
+    "raw": "TRAVEL COVER ANNUAL PREMIUM"
+  },
+  {
+    "id": 30,
+    "raw": "OAK STREET MONTHLY RENT"
+  },
+  {
+    "id": 31,
+    "raw": "HARBOUR MORTGAGE REPAYMENT"
+  },
+  {
+    "id": 32,
+    "raw": "CITY COUNCIL TAX BILL"
+  },
+  {
+    "id": 33,
+    "raw": "BUILDING MONTHLY SERVICE CHARGE"
+  },
+  {
+    "id": 34,
+    "raw": "COMMUNITY CREDIT LOAN REPAYMENT"
+  },
+  {
+    "id": 35,
+    "raw": "STUDENT LOAN REPAYMENT"
+  },
+  {
+    "id": 36,
+    "raw": "FAMILY LIFE MONTHLY PREMIUM"
+  },
+  {
+    "id": 37,
+    "raw": "BOILER CARE MONTHLY PLAN"
+  },
+  {
+    "id": 38,
+    "raw": "LANDLINE MONTHLY BILL"
+  },
+  {
+    "id": 39,
+    "raw": "MUNICIPAL HEATING"
+  }
+]
