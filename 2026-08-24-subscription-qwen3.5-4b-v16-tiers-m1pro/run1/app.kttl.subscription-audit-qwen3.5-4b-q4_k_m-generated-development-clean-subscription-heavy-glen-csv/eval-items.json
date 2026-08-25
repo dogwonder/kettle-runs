@@ -1,0 +1,541 @@
+[
+  {
+    "id": "app.kttl.subscription-audit/development-generated-clean-subscription-heavy-glen/development-clean-subscription-heavy-glen-annual-archive",
+    "item_id": "development-clean-subscription-heavy-glen-annual-archive",
+    "pack": "app.kttl.subscription-audit",
+    "pack_version": "1.5.0",
+    "prompt_version": "blake3:fa1bd2f03def1fa16e3c7393cbab37b353d4f1b3eedc01540a3f203d8e2c437a",
+    "fixture": "generated-development-clean-subscription-heavy-glen.csv",
+    "fixture_id": "development-generated-clean-subscription-heavy-glen",
+    "strata": [
+      "any-statement",
+      "clean",
+      "subscription-heavy",
+      "annual-subscription-once-yearly",
+      "multi-descriptor-merchant"
+    ],
+    "raw_input": "STRIPE* BACKBLAZE",
+    "decision_key": "Backblaze",
+    "metric": "classification",
+    "expected": {
+      "kind": "subscription",
+      "category": "software"
+    },
+    "actual": {
+      "state": "classified",
+      "classification": {
+        "kind": "subscription",
+        "category": "software"
+      }
+    },
+    "kind_from": "category_map",
+    "trace_ids": [
+      "claim-000007",
+      "claim-000017"
+    ],
+    "confidence": {
+      "source": "declared",
+      "level": "high",
+      "trace_id": "claim-000017"
+    },
+    "exchanges": [
+      {
+        "step": "Grouping payments by merchant",
+        "batch": 1,
+        "request": "You clean up merchant names from bank statements.\n\nFor each raw merchant string, return the real-world merchant name a person\nwould recognise. Strip transaction codes, store numbers, and payment\nprocessor prefixes (SQ*, PAYPAL *, SumUp, ZETTLE_*). Strip company\nsuffixes (Ltd, Limited, PLC, Inc) unless the brand itself uses one.\n\nWrite the name the way the brand writes it, not the way the statement\nshouts it. Statements are usually upper case; brand names are not.\n\nKeep punctuation and spacing the brand itself uses, even where the\nstatement has flattened it: Paramount+, Apple TV+, M&S, B&Q, Ben &\nJerry's. Statements strip these characters; the brand name has them.\n\n  NETFLIX.COM        -> Netflix\n  SPOTIFY LTD        -> Spotify\n  PUREGYM LTD        -> PureGym\n  BRITISH GAS        -> British Gas\n  TESCO STORES 3412  -> Tesco\n  SQ *KAFFA COFFEE   -> Kaffa Coffee\n\nIf you cannot identify the merchant, return the cleaned string as-is and\nset \"recognised\": false.\n\nReturn one result per input, with the same \"id\" you were given. Return\nJSON only, matching the schema. No commentary.\n\nRaw merchant strings:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"DUOLINGO\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"NETFLIX.COM\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"PUREGYM LTD\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"SPOTIFY LTD\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"GOOGLEONE\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"THE GUARDIAN\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"BACKBLAZE\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"THE ECONOMIST\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"TESCOSTORES\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"ARGOS\"\n  }\n]\n",
+        "response": "{\"results\":[{\"id\":0,\"name\":\"Duolingo\",\"raw\":\"DUOLINGO\",\"recognised\":true},{\"id\":1,\"name\":\"Netflix\",\"raw\":\"NETFLIX.COM\",\"recognised\":true},{\"id\":2,\"name\":\"PureGym\",\"raw\":\"PUREGYM LTD\",\"recognised\":true},{\"id\":3,\"name\":\"Spotify\",\"raw\":\"SPOTIFY LTD\",\"recognised\":true},{\"id\":4,\"name\":\"Google One\",\"raw\":\"GOOGLEONE\",\"recognised\":true},{\"id\":5,\"name\":\"The Guardian\",\"raw\":\"THE GUARDIAN\",\"recognised\":true},{\"id\":6,\"name\":\"Backblaze\",\"raw\":\"BACKBLAZE\",\"recognised\":true},{\"id\":7,\"name\":\"The Economist\",\"raw\":\"THE ECONOMIST\",\"recognised\":true},{\"id\":8,\"name\":\"Tesco\",\"raw\":\"TESCOSTORES\",\"recognised\":true},{\"id\":9,\"name\":\"Argos\",\"raw\":\"ARGOS\",\"recognised\":true}]}"
+      },
+      {
+        "step": "Sorting merchants",
+        "batch": 1,
+        "request": "You put a category to merchants from a bank statement.\n\nFor each merchant, decide:\n- category: which of the allowed category values best fits what this\n  merchant is. Judge only from the name. If the name does not tell you\n  what the merchant is, answer \"unknown\" — that is a correct answer,\n  not a failure, and it is always better than a guess.\n- confidence: \"high\" | \"medium\" | \"low\"\n\nYou are not asked whether anything is a subscription, and you are not\nshown any amounts or dates. Whether a payment repeats is worked out\nseparately, from the payments themselves.\n\nReturn one result per input, with the same \"id\" you were given. Return\nJSON only.\n\nHere is a worked example, showing the merchants it was given and the\nanswer they produced. Its ids are in the 900s and belong to the example\nalone — they are never ids you will be asked about.\n\n{\n  \"merchants\": [\n    { \"id\": 901, \"raw\": \"Netflix\" },\n    { \"id\": 902, \"raw\": \"British Gas\" },\n    { \"id\": 903, \"raw\": \"Kaffa Coffee\" },\n    { \"id\": 904, \"raw\": \"Amazon Marketplace\" },\n    { \"id\": 905, \"raw\": \"J Henderson Windows\" },\n    { \"id\": 906, \"raw\": \"TLM Services\" }\n  ],\n  \"results\": [\n    { \"id\": 901, \"name\": \"Netflix\", \"category\": \"streaming\", \"confidence\": \"high\" },\n    { \"id\": 902, \"name\": \"British Gas\", \"category\": \"energy\", \"confidence\": \"high\" },\n    { \"id\": 903, \"name\": \"Kaffa Coffee\", \"category\": \"food_drink\", \"confidence\": \"high\" },\n    { \"id\": 904, \"name\": \"Amazon Marketplace\", \"category\": \"retail\", \"confidence\": \"medium\" },\n    { \"id\": 905, \"name\": \"J Henderson Windows\", \"category\": \"other\", \"confidence\": \"medium\" },\n    { \"id\": 906, \"name\": \"TLM Services\", \"category\": \"unknown\", \"confidence\": \"low\" }\n  ]\n}\n\nNow categorise the merchants below. They are a different list: answer\nfor these, not for the example, and use only the ids that appear here.\n\nMerchants:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"Duolingo\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"Netflix\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"PureGym\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"Spotify\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"Google One\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"The Guardian\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"Backblaze\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"The Economist\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"Tesco\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"Argos\"\n  }\n]\n",
+        "response": "{\"results\":[{\"category\":\"streaming\",\"confidence\":\"high\",\"id\":0,\"name\":\"Duolingo\"},{\"category\":\"streaming\",\"confidence\":\"high\",\"id\":1,\"name\":\"Netflix\"},{\"category\":\"fitness\",\"confidence\":\"high\",\"id\":2,\"name\":\"PureGym\"},{\"category\":\"streaming\",\"confidence\":\"high\",\"id\":3,\"name\":\"Spotify\"},{\"category\":\"software\",\"confidence\":\"high\",\"id\":4,\"name\":\"Google One\"},{\"category\":\"news_media\",\"confidence\":\"high\",\"id\":5,\"name\":\"The Guardian\"},{\"category\":\"software\",\"confidence\":\"high\",\"id\":6,\"name\":\"Backblaze\"},{\"category\":\"news_media\",\"confidence\":\"high\",\"id\":7,\"name\":\"The Economist\"},{\"category\":\"retail\",\"confidence\":\"high\",\"id\":8,\"name\":\"Tesco\"},{\"category\":\"retail\",\"confidence\":\"high\",\"id\":9,\"name\":\"Argos\"}]}"
+      }
+    ]
+  },
+  {
+    "id": "app.kttl.subscription-audit/development-generated-clean-subscription-heavy-glen/development-clean-subscription-heavy-glen-annual-journal",
+    "item_id": "development-clean-subscription-heavy-glen-annual-journal",
+    "pack": "app.kttl.subscription-audit",
+    "pack_version": "1.5.0",
+    "prompt_version": "blake3:fa1bd2f03def1fa16e3c7393cbab37b353d4f1b3eedc01540a3f203d8e2c437a",
+    "fixture": "generated-development-clean-subscription-heavy-glen.csv",
+    "fixture_id": "development-generated-clean-subscription-heavy-glen",
+    "strata": [
+      "any-statement",
+      "clean",
+      "subscription-heavy",
+      "annual-subscription-once-yearly"
+    ],
+    "raw_input": "THE ECONOMIST",
+    "decision_key": "The Economist",
+    "metric": "classification",
+    "expected": {
+      "kind": "subscription",
+      "category": "news_media"
+    },
+    "actual": {
+      "state": "classified",
+      "classification": {
+        "kind": "subscription",
+        "category": "news_media"
+      }
+    },
+    "kind_from": "category_map",
+    "trace_ids": [
+      "claim-000008",
+      "claim-000018"
+    ],
+    "confidence": {
+      "source": "declared",
+      "level": "high",
+      "trace_id": "claim-000018"
+    },
+    "exchanges": [
+      {
+        "step": "Grouping payments by merchant",
+        "batch": 1,
+        "request": "You clean up merchant names from bank statements.\n\nFor each raw merchant string, return the real-world merchant name a person\nwould recognise. Strip transaction codes, store numbers, and payment\nprocessor prefixes (SQ*, PAYPAL *, SumUp, ZETTLE_*). Strip company\nsuffixes (Ltd, Limited, PLC, Inc) unless the brand itself uses one.\n\nWrite the name the way the brand writes it, not the way the statement\nshouts it. Statements are usually upper case; brand names are not.\n\nKeep punctuation and spacing the brand itself uses, even where the\nstatement has flattened it: Paramount+, Apple TV+, M&S, B&Q, Ben &\nJerry's. Statements strip these characters; the brand name has them.\n\n  NETFLIX.COM        -> Netflix\n  SPOTIFY LTD        -> Spotify\n  PUREGYM LTD        -> PureGym\n  BRITISH GAS        -> British Gas\n  TESCO STORES 3412  -> Tesco\n  SQ *KAFFA COFFEE   -> Kaffa Coffee\n\nIf you cannot identify the merchant, return the cleaned string as-is and\nset \"recognised\": false.\n\nReturn one result per input, with the same \"id\" you were given. Return\nJSON only, matching the schema. No commentary.\n\nRaw merchant strings:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"DUOLINGO\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"NETFLIX.COM\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"PUREGYM LTD\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"SPOTIFY LTD\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"GOOGLEONE\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"THE GUARDIAN\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"BACKBLAZE\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"THE ECONOMIST\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"TESCOSTORES\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"ARGOS\"\n  }\n]\n",
+        "response": "{\"results\":[{\"id\":0,\"name\":\"Duolingo\",\"raw\":\"DUOLINGO\",\"recognised\":true},{\"id\":1,\"name\":\"Netflix\",\"raw\":\"NETFLIX.COM\",\"recognised\":true},{\"id\":2,\"name\":\"PureGym\",\"raw\":\"PUREGYM LTD\",\"recognised\":true},{\"id\":3,\"name\":\"Spotify\",\"raw\":\"SPOTIFY LTD\",\"recognised\":true},{\"id\":4,\"name\":\"Google One\",\"raw\":\"GOOGLEONE\",\"recognised\":true},{\"id\":5,\"name\":\"The Guardian\",\"raw\":\"THE GUARDIAN\",\"recognised\":true},{\"id\":6,\"name\":\"Backblaze\",\"raw\":\"BACKBLAZE\",\"recognised\":true},{\"id\":7,\"name\":\"The Economist\",\"raw\":\"THE ECONOMIST\",\"recognised\":true},{\"id\":8,\"name\":\"Tesco\",\"raw\":\"TESCOSTORES\",\"recognised\":true},{\"id\":9,\"name\":\"Argos\",\"raw\":\"ARGOS\",\"recognised\":true}]}"
+      },
+      {
+        "step": "Sorting merchants",
+        "batch": 1,
+        "request": "You put a category to merchants from a bank statement.\n\nFor each merchant, decide:\n- category: which of the allowed category values best fits what this\n  merchant is. Judge only from the name. If the name does not tell you\n  what the merchant is, answer \"unknown\" — that is a correct answer,\n  not a failure, and it is always better than a guess.\n- confidence: \"high\" | \"medium\" | \"low\"\n\nYou are not asked whether anything is a subscription, and you are not\nshown any amounts or dates. Whether a payment repeats is worked out\nseparately, from the payments themselves.\n\nReturn one result per input, with the same \"id\" you were given. Return\nJSON only.\n\nHere is a worked example, showing the merchants it was given and the\nanswer they produced. Its ids are in the 900s and belong to the example\nalone — they are never ids you will be asked about.\n\n{\n  \"merchants\": [\n    { \"id\": 901, \"raw\": \"Netflix\" },\n    { \"id\": 902, \"raw\": \"British Gas\" },\n    { \"id\": 903, \"raw\": \"Kaffa Coffee\" },\n    { \"id\": 904, \"raw\": \"Amazon Marketplace\" },\n    { \"id\": 905, \"raw\": \"J Henderson Windows\" },\n    { \"id\": 906, \"raw\": \"TLM Services\" }\n  ],\n  \"results\": [\n    { \"id\": 901, \"name\": \"Netflix\", \"category\": \"streaming\", \"confidence\": \"high\" },\n    { \"id\": 902, \"name\": \"British Gas\", \"category\": \"energy\", \"confidence\": \"high\" },\n    { \"id\": 903, \"name\": \"Kaffa Coffee\", \"category\": \"food_drink\", \"confidence\": \"high\" },\n    { \"id\": 904, \"name\": \"Amazon Marketplace\", \"category\": \"retail\", \"confidence\": \"medium\" },\n    { \"id\": 905, \"name\": \"J Henderson Windows\", \"category\": \"other\", \"confidence\": \"medium\" },\n    { \"id\": 906, \"name\": \"TLM Services\", \"category\": \"unknown\", \"confidence\": \"low\" }\n  ]\n}\n\nNow categorise the merchants below. They are a different list: answer\nfor these, not for the example, and use only the ids that appear here.\n\nMerchants:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"Duolingo\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"Netflix\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"PureGym\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"Spotify\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"Google One\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"The Guardian\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"Backblaze\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"The Economist\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"Tesco\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"Argos\"\n  }\n]\n",
+        "response": "{\"results\":[{\"category\":\"streaming\",\"confidence\":\"high\",\"id\":0,\"name\":\"Duolingo\"},{\"category\":\"streaming\",\"confidence\":\"high\",\"id\":1,\"name\":\"Netflix\"},{\"category\":\"fitness\",\"confidence\":\"high\",\"id\":2,\"name\":\"PureGym\"},{\"category\":\"streaming\",\"confidence\":\"high\",\"id\":3,\"name\":\"Spotify\"},{\"category\":\"software\",\"confidence\":\"high\",\"id\":4,\"name\":\"Google One\"},{\"category\":\"news_media\",\"confidence\":\"high\",\"id\":5,\"name\":\"The Guardian\"},{\"category\":\"software\",\"confidence\":\"high\",\"id\":6,\"name\":\"Backblaze\"},{\"category\":\"news_media\",\"confidence\":\"high\",\"id\":7,\"name\":\"The Economist\"},{\"category\":\"retail\",\"confidence\":\"high\",\"id\":8,\"name\":\"Tesco\"},{\"category\":\"retail\",\"confidence\":\"high\",\"id\":9,\"name\":\"Argos\"}]}"
+      }
+    ]
+  },
+  {
+    "id": "app.kttl.subscription-audit/development-generated-clean-subscription-heavy-glen/development-clean-subscription-heavy-glen-trial-learning",
+    "item_id": "development-clean-subscription-heavy-glen-trial-learning",
+    "pack": "app.kttl.subscription-audit",
+    "pack_version": "1.5.0",
+    "prompt_version": "blake3:fa1bd2f03def1fa16e3c7393cbab37b353d4f1b3eedc01540a3f203d8e2c437a",
+    "fixture": "generated-development-clean-subscription-heavy-glen.csv",
+    "fixture_id": "development-generated-clean-subscription-heavy-glen",
+    "strata": [
+      "any-statement",
+      "clean",
+      "subscription-heavy",
+      "free-trial-conversion",
+      "refunds-and-chargebacks"
+    ],
+    "raw_input": "DUOLINGO",
+    "decision_key": "Duolingo",
+    "metric": "classification",
+    "expected": {
+      "kind": "subscription",
+      "category": "software"
+    },
+    "actual": {
+      "state": "classified",
+      "classification": {
+        "kind": "subscription",
+        "category": "streaming"
+      }
+    },
+    "kind_from": "category_map",
+    "trace_ids": [
+      "claim-000001",
+      "claim-000011"
+    ],
+    "confidence": {
+      "source": "declared",
+      "level": "high",
+      "trace_id": "claim-000011"
+    },
+    "exchanges": [
+      {
+        "step": "Grouping payments by merchant",
+        "batch": 1,
+        "request": "You clean up merchant names from bank statements.\n\nFor each raw merchant string, return the real-world merchant name a person\nwould recognise. Strip transaction codes, store numbers, and payment\nprocessor prefixes (SQ*, PAYPAL *, SumUp, ZETTLE_*). Strip company\nsuffixes (Ltd, Limited, PLC, Inc) unless the brand itself uses one.\n\nWrite the name the way the brand writes it, not the way the statement\nshouts it. Statements are usually upper case; brand names are not.\n\nKeep punctuation and spacing the brand itself uses, even where the\nstatement has flattened it: Paramount+, Apple TV+, M&S, B&Q, Ben &\nJerry's. Statements strip these characters; the brand name has them.\n\n  NETFLIX.COM        -> Netflix\n  SPOTIFY LTD        -> Spotify\n  PUREGYM LTD        -> PureGym\n  BRITISH GAS        -> British Gas\n  TESCO STORES 3412  -> Tesco\n  SQ *KAFFA COFFEE   -> Kaffa Coffee\n\nIf you cannot identify the merchant, return the cleaned string as-is and\nset \"recognised\": false.\n\nReturn one result per input, with the same \"id\" you were given. Return\nJSON only, matching the schema. No commentary.\n\nRaw merchant strings:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"DUOLINGO\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"NETFLIX.COM\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"PUREGYM LTD\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"SPOTIFY LTD\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"GOOGLEONE\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"THE GUARDIAN\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"BACKBLAZE\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"THE ECONOMIST\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"TESCOSTORES\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"ARGOS\"\n  }\n]\n",
+        "response": "{\"results\":[{\"id\":0,\"name\":\"Duolingo\",\"raw\":\"DUOLINGO\",\"recognised\":true},{\"id\":1,\"name\":\"Netflix\",\"raw\":\"NETFLIX.COM\",\"recognised\":true},{\"id\":2,\"name\":\"PureGym\",\"raw\":\"PUREGYM LTD\",\"recognised\":true},{\"id\":3,\"name\":\"Spotify\",\"raw\":\"SPOTIFY LTD\",\"recognised\":true},{\"id\":4,\"name\":\"Google One\",\"raw\":\"GOOGLEONE\",\"recognised\":true},{\"id\":5,\"name\":\"The Guardian\",\"raw\":\"THE GUARDIAN\",\"recognised\":true},{\"id\":6,\"name\":\"Backblaze\",\"raw\":\"BACKBLAZE\",\"recognised\":true},{\"id\":7,\"name\":\"The Economist\",\"raw\":\"THE ECONOMIST\",\"recognised\":true},{\"id\":8,\"name\":\"Tesco\",\"raw\":\"TESCOSTORES\",\"recognised\":true},{\"id\":9,\"name\":\"Argos\",\"raw\":\"ARGOS\",\"recognised\":true}]}"
+      },
+      {
+        "step": "Sorting merchants",
+        "batch": 1,
+        "request": "You put a category to merchants from a bank statement.\n\nFor each merchant, decide:\n- category: which of the allowed category values best fits what this\n  merchant is. Judge only from the name. If the name does not tell you\n  what the merchant is, answer \"unknown\" — that is a correct answer,\n  not a failure, and it is always better than a guess.\n- confidence: \"high\" | \"medium\" | \"low\"\n\nYou are not asked whether anything is a subscription, and you are not\nshown any amounts or dates. Whether a payment repeats is worked out\nseparately, from the payments themselves.\n\nReturn one result per input, with the same \"id\" you were given. Return\nJSON only.\n\nHere is a worked example, showing the merchants it was given and the\nanswer they produced. Its ids are in the 900s and belong to the example\nalone — they are never ids you will be asked about.\n\n{\n  \"merchants\": [\n    { \"id\": 901, \"raw\": \"Netflix\" },\n    { \"id\": 902, \"raw\": \"British Gas\" },\n    { \"id\": 903, \"raw\": \"Kaffa Coffee\" },\n    { \"id\": 904, \"raw\": \"Amazon Marketplace\" },\n    { \"id\": 905, \"raw\": \"J Henderson Windows\" },\n    { \"id\": 906, \"raw\": \"TLM Services\" }\n  ],\n  \"results\": [\n    { \"id\": 901, \"name\": \"Netflix\", \"category\": \"streaming\", \"confidence\": \"high\" },\n    { \"id\": 902, \"name\": \"British Gas\", \"category\": \"energy\", \"confidence\": \"high\" },\n    { \"id\": 903, \"name\": \"Kaffa Coffee\", \"category\": \"food_drink\", \"confidence\": \"high\" },\n    { \"id\": 904, \"name\": \"Amazon Marketplace\", \"category\": \"retail\", \"confidence\": \"medium\" },\n    { \"id\": 905, \"name\": \"J Henderson Windows\", \"category\": \"other\", \"confidence\": \"medium\" },\n    { \"id\": 906, \"name\": \"TLM Services\", \"category\": \"unknown\", \"confidence\": \"low\" }\n  ]\n}\n\nNow categorise the merchants below. They are a different list: answer\nfor these, not for the example, and use only the ids that appear here.\n\nMerchants:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"Duolingo\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"Netflix\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"PureGym\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"Spotify\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"Google One\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"The Guardian\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"Backblaze\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"The Economist\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"Tesco\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"Argos\"\n  }\n]\n",
+        "response": "{\"results\":[{\"category\":\"streaming\",\"confidence\":\"high\",\"id\":0,\"name\":\"Duolingo\"},{\"category\":\"streaming\",\"confidence\":\"high\",\"id\":1,\"name\":\"Netflix\"},{\"category\":\"fitness\",\"confidence\":\"high\",\"id\":2,\"name\":\"PureGym\"},{\"category\":\"streaming\",\"confidence\":\"high\",\"id\":3,\"name\":\"Spotify\"},{\"category\":\"software\",\"confidence\":\"high\",\"id\":4,\"name\":\"Google One\"},{\"category\":\"news_media\",\"confidence\":\"high\",\"id\":5,\"name\":\"The Guardian\"},{\"category\":\"software\",\"confidence\":\"high\",\"id\":6,\"name\":\"Backblaze\"},{\"category\":\"news_media\",\"confidence\":\"high\",\"id\":7,\"name\":\"The Economist\"},{\"category\":\"retail\",\"confidence\":\"high\",\"id\":8,\"name\":\"Tesco\"},{\"category\":\"retail\",\"confidence\":\"high\",\"id\":9,\"name\":\"Argos\"}]}"
+      }
+    ]
+  },
+  {
+    "id": "app.kttl.subscription-audit/development-generated-clean-subscription-heavy-glen/development-clean-subscription-heavy-glen-trial-fitness",
+    "item_id": "development-clean-subscription-heavy-glen-trial-fitness",
+    "pack": "app.kttl.subscription-audit",
+    "pack_version": "1.5.0",
+    "prompt_version": "blake3:fa1bd2f03def1fa16e3c7393cbab37b353d4f1b3eedc01540a3f203d8e2c437a",
+    "fixture": "generated-development-clean-subscription-heavy-glen.csv",
+    "fixture_id": "development-generated-clean-subscription-heavy-glen",
+    "strata": [
+      "any-statement",
+      "clean",
+      "subscription-heavy",
+      "free-trial-conversion"
+    ],
+    "raw_input": "PUREGYM LTD",
+    "decision_key": "PureGym",
+    "metric": "classification",
+    "expected": {
+      "kind": "subscription",
+      "category": "fitness"
+    },
+    "actual": {
+      "state": "classified",
+      "classification": {
+        "kind": "subscription",
+        "category": "fitness"
+      }
+    },
+    "kind_from": "category_map",
+    "trace_ids": [
+      "claim-000003",
+      "claim-000013"
+    ],
+    "confidence": {
+      "source": "declared",
+      "level": "high",
+      "trace_id": "claim-000013"
+    },
+    "exchanges": [
+      {
+        "step": "Grouping payments by merchant",
+        "batch": 1,
+        "request": "You clean up merchant names from bank statements.\n\nFor each raw merchant string, return the real-world merchant name a person\nwould recognise. Strip transaction codes, store numbers, and payment\nprocessor prefixes (SQ*, PAYPAL *, SumUp, ZETTLE_*). Strip company\nsuffixes (Ltd, Limited, PLC, Inc) unless the brand itself uses one.\n\nWrite the name the way the brand writes it, not the way the statement\nshouts it. Statements are usually upper case; brand names are not.\n\nKeep punctuation and spacing the brand itself uses, even where the\nstatement has flattened it: Paramount+, Apple TV+, M&S, B&Q, Ben &\nJerry's. Statements strip these characters; the brand name has them.\n\n  NETFLIX.COM        -> Netflix\n  SPOTIFY LTD        -> Spotify\n  PUREGYM LTD        -> PureGym\n  BRITISH GAS        -> British Gas\n  TESCO STORES 3412  -> Tesco\n  SQ *KAFFA COFFEE   -> Kaffa Coffee\n\nIf you cannot identify the merchant, return the cleaned string as-is and\nset \"recognised\": false.\n\nReturn one result per input, with the same \"id\" you were given. Return\nJSON only, matching the schema. No commentary.\n\nRaw merchant strings:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"DUOLINGO\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"NETFLIX.COM\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"PUREGYM LTD\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"SPOTIFY LTD\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"GOOGLEONE\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"THE GUARDIAN\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"BACKBLAZE\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"THE ECONOMIST\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"TESCOSTORES\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"ARGOS\"\n  }\n]\n",
+        "response": "{\"results\":[{\"id\":0,\"name\":\"Duolingo\",\"raw\":\"DUOLINGO\",\"recognised\":true},{\"id\":1,\"name\":\"Netflix\",\"raw\":\"NETFLIX.COM\",\"recognised\":true},{\"id\":2,\"name\":\"PureGym\",\"raw\":\"PUREGYM LTD\",\"recognised\":true},{\"id\":3,\"name\":\"Spotify\",\"raw\":\"SPOTIFY LTD\",\"recognised\":true},{\"id\":4,\"name\":\"Google One\",\"raw\":\"GOOGLEONE\",\"recognised\":true},{\"id\":5,\"name\":\"The Guardian\",\"raw\":\"THE GUARDIAN\",\"recognised\":true},{\"id\":6,\"name\":\"Backblaze\",\"raw\":\"BACKBLAZE\",\"recognised\":true},{\"id\":7,\"name\":\"The Economist\",\"raw\":\"THE ECONOMIST\",\"recognised\":true},{\"id\":8,\"name\":\"Tesco\",\"raw\":\"TESCOSTORES\",\"recognised\":true},{\"id\":9,\"name\":\"Argos\",\"raw\":\"ARGOS\",\"recognised\":true}]}"
+      },
+      {
+        "step": "Sorting merchants",
+        "batch": 1,
+        "request": "You put a category to merchants from a bank statement.\n\nFor each merchant, decide:\n- category: which of the allowed category values best fits what this\n  merchant is. Judge only from the name. If the name does not tell you\n  what the merchant is, answer \"unknown\" — that is a correct answer,\n  not a failure, and it is always better than a guess.\n- confidence: \"high\" | \"medium\" | \"low\"\n\nYou are not asked whether anything is a subscription, and you are not\nshown any amounts or dates. Whether a payment repeats is worked out\nseparately, from the payments themselves.\n\nReturn one result per input, with the same \"id\" you were given. Return\nJSON only.\n\nHere is a worked example, showing the merchants it was given and the\nanswer they produced. Its ids are in the 900s and belong to the example\nalone — they are never ids you will be asked about.\n\n{\n  \"merchants\": [\n    { \"id\": 901, \"raw\": \"Netflix\" },\n    { \"id\": 902, \"raw\": \"British Gas\" },\n    { \"id\": 903, \"raw\": \"Kaffa Coffee\" },\n    { \"id\": 904, \"raw\": \"Amazon Marketplace\" },\n    { \"id\": 905, \"raw\": \"J Henderson Windows\" },\n    { \"id\": 906, \"raw\": \"TLM Services\" }\n  ],\n  \"results\": [\n    { \"id\": 901, \"name\": \"Netflix\", \"category\": \"streaming\", \"confidence\": \"high\" },\n    { \"id\": 902, \"name\": \"British Gas\", \"category\": \"energy\", \"confidence\": \"high\" },\n    { \"id\": 903, \"name\": \"Kaffa Coffee\", \"category\": \"food_drink\", \"confidence\": \"high\" },\n    { \"id\": 904, \"name\": \"Amazon Marketplace\", \"category\": \"retail\", \"confidence\": \"medium\" },\n    { \"id\": 905, \"name\": \"J Henderson Windows\", \"category\": \"other\", \"confidence\": \"medium\" },\n    { \"id\": 906, \"name\": \"TLM Services\", \"category\": \"unknown\", \"confidence\": \"low\" }\n  ]\n}\n\nNow categorise the merchants below. They are a different list: answer\nfor these, not for the example, and use only the ids that appear here.\n\nMerchants:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"Duolingo\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"Netflix\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"PureGym\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"Spotify\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"Google One\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"The Guardian\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"Backblaze\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"The Economist\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"Tesco\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"Argos\"\n  }\n]\n",
+        "response": "{\"results\":[{\"category\":\"streaming\",\"confidence\":\"high\",\"id\":0,\"name\":\"Duolingo\"},{\"category\":\"streaming\",\"confidence\":\"high\",\"id\":1,\"name\":\"Netflix\"},{\"category\":\"fitness\",\"confidence\":\"high\",\"id\":2,\"name\":\"PureGym\"},{\"category\":\"streaming\",\"confidence\":\"high\",\"id\":3,\"name\":\"Spotify\"},{\"category\":\"software\",\"confidence\":\"high\",\"id\":4,\"name\":\"Google One\"},{\"category\":\"news_media\",\"confidence\":\"high\",\"id\":5,\"name\":\"The Guardian\"},{\"category\":\"software\",\"confidence\":\"high\",\"id\":6,\"name\":\"Backblaze\"},{\"category\":\"news_media\",\"confidence\":\"high\",\"id\":7,\"name\":\"The Economist\"},{\"category\":\"retail\",\"confidence\":\"high\",\"id\":8,\"name\":\"Tesco\"},{\"category\":\"retail\",\"confidence\":\"high\",\"id\":9,\"name\":\"Argos\"}]}"
+      }
+    ]
+  },
+  {
+    "id": "app.kttl.subscription-audit/development-generated-clean-subscription-heavy-glen/development-clean-subscription-heavy-glen-resumed-streaming",
+    "item_id": "development-clean-subscription-heavy-glen-resumed-streaming",
+    "pack": "app.kttl.subscription-audit",
+    "pack_version": "1.5.0",
+    "prompt_version": "blake3:fa1bd2f03def1fa16e3c7393cbab37b353d4f1b3eedc01540a3f203d8e2c437a",
+    "fixture": "generated-development-clean-subscription-heavy-glen.csv",
+    "fixture_id": "development-generated-clean-subscription-heavy-glen",
+    "strata": [
+      "any-statement",
+      "clean",
+      "subscription-heavy",
+      "cancelled-then-resumed",
+      "price-rise-mid-series"
+    ],
+    "raw_input": "NETFLIX.COM",
+    "decision_key": "Netflix",
+    "metric": "classification",
+    "expected": {
+      "kind": "subscription",
+      "category": "streaming"
+    },
+    "actual": {
+      "state": "classified",
+      "classification": {
+        "kind": "subscription",
+        "category": "streaming"
+      }
+    },
+    "kind_from": "category_map",
+    "trace_ids": [
+      "claim-000002",
+      "claim-000012"
+    ],
+    "confidence": {
+      "source": "declared",
+      "level": "high",
+      "trace_id": "claim-000012"
+    },
+    "exchanges": [
+      {
+        "step": "Grouping payments by merchant",
+        "batch": 1,
+        "request": "You clean up merchant names from bank statements.\n\nFor each raw merchant string, return the real-world merchant name a person\nwould recognise. Strip transaction codes, store numbers, and payment\nprocessor prefixes (SQ*, PAYPAL *, SumUp, ZETTLE_*). Strip company\nsuffixes (Ltd, Limited, PLC, Inc) unless the brand itself uses one.\n\nWrite the name the way the brand writes it, not the way the statement\nshouts it. Statements are usually upper case; brand names are not.\n\nKeep punctuation and spacing the brand itself uses, even where the\nstatement has flattened it: Paramount+, Apple TV+, M&S, B&Q, Ben &\nJerry's. Statements strip these characters; the brand name has them.\n\n  NETFLIX.COM        -> Netflix\n  SPOTIFY LTD        -> Spotify\n  PUREGYM LTD        -> PureGym\n  BRITISH GAS        -> British Gas\n  TESCO STORES 3412  -> Tesco\n  SQ *KAFFA COFFEE   -> Kaffa Coffee\n\nIf you cannot identify the merchant, return the cleaned string as-is and\nset \"recognised\": false.\n\nReturn one result per input, with the same \"id\" you were given. Return\nJSON only, matching the schema. No commentary.\n\nRaw merchant strings:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"DUOLINGO\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"NETFLIX.COM\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"PUREGYM LTD\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"SPOTIFY LTD\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"GOOGLEONE\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"THE GUARDIAN\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"BACKBLAZE\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"THE ECONOMIST\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"TESCOSTORES\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"ARGOS\"\n  }\n]\n",
+        "response": "{\"results\":[{\"id\":0,\"name\":\"Duolingo\",\"raw\":\"DUOLINGO\",\"recognised\":true},{\"id\":1,\"name\":\"Netflix\",\"raw\":\"NETFLIX.COM\",\"recognised\":true},{\"id\":2,\"name\":\"PureGym\",\"raw\":\"PUREGYM LTD\",\"recognised\":true},{\"id\":3,\"name\":\"Spotify\",\"raw\":\"SPOTIFY LTD\",\"recognised\":true},{\"id\":4,\"name\":\"Google One\",\"raw\":\"GOOGLEONE\",\"recognised\":true},{\"id\":5,\"name\":\"The Guardian\",\"raw\":\"THE GUARDIAN\",\"recognised\":true},{\"id\":6,\"name\":\"Backblaze\",\"raw\":\"BACKBLAZE\",\"recognised\":true},{\"id\":7,\"name\":\"The Economist\",\"raw\":\"THE ECONOMIST\",\"recognised\":true},{\"id\":8,\"name\":\"Tesco\",\"raw\":\"TESCOSTORES\",\"recognised\":true},{\"id\":9,\"name\":\"Argos\",\"raw\":\"ARGOS\",\"recognised\":true}]}"
+      },
+      {
+        "step": "Sorting merchants",
+        "batch": 1,
+        "request": "You put a category to merchants from a bank statement.\n\nFor each merchant, decide:\n- category: which of the allowed category values best fits what this\n  merchant is. Judge only from the name. If the name does not tell you\n  what the merchant is, answer \"unknown\" — that is a correct answer,\n  not a failure, and it is always better than a guess.\n- confidence: \"high\" | \"medium\" | \"low\"\n\nYou are not asked whether anything is a subscription, and you are not\nshown any amounts or dates. Whether a payment repeats is worked out\nseparately, from the payments themselves.\n\nReturn one result per input, with the same \"id\" you were given. Return\nJSON only.\n\nHere is a worked example, showing the merchants it was given and the\nanswer they produced. Its ids are in the 900s and belong to the example\nalone — they are never ids you will be asked about.\n\n{\n  \"merchants\": [\n    { \"id\": 901, \"raw\": \"Netflix\" },\n    { \"id\": 902, \"raw\": \"British Gas\" },\n    { \"id\": 903, \"raw\": \"Kaffa Coffee\" },\n    { \"id\": 904, \"raw\": \"Amazon Marketplace\" },\n    { \"id\": 905, \"raw\": \"J Henderson Windows\" },\n    { \"id\": 906, \"raw\": \"TLM Services\" }\n  ],\n  \"results\": [\n    { \"id\": 901, \"name\": \"Netflix\", \"category\": \"streaming\", \"confidence\": \"high\" },\n    { \"id\": 902, \"name\": \"British Gas\", \"category\": \"energy\", \"confidence\": \"high\" },\n    { \"id\": 903, \"name\": \"Kaffa Coffee\", \"category\": \"food_drink\", \"confidence\": \"high\" },\n    { \"id\": 904, \"name\": \"Amazon Marketplace\", \"category\": \"retail\", \"confidence\": \"medium\" },\n    { \"id\": 905, \"name\": \"J Henderson Windows\", \"category\": \"other\", \"confidence\": \"medium\" },\n    { \"id\": 906, \"name\": \"TLM Services\", \"category\": \"unknown\", \"confidence\": \"low\" }\n  ]\n}\n\nNow categorise the merchants below. They are a different list: answer\nfor these, not for the example, and use only the ids that appear here.\n\nMerchants:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"Duolingo\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"Netflix\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"PureGym\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"Spotify\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"Google One\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"The Guardian\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"Backblaze\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"The Economist\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"Tesco\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"Argos\"\n  }\n]\n",
+        "response": "{\"results\":[{\"category\":\"streaming\",\"confidence\":\"high\",\"id\":0,\"name\":\"Duolingo\"},{\"category\":\"streaming\",\"confidence\":\"high\",\"id\":1,\"name\":\"Netflix\"},{\"category\":\"fitness\",\"confidence\":\"high\",\"id\":2,\"name\":\"PureGym\"},{\"category\":\"streaming\",\"confidence\":\"high\",\"id\":3,\"name\":\"Spotify\"},{\"category\":\"software\",\"confidence\":\"high\",\"id\":4,\"name\":\"Google One\"},{\"category\":\"news_media\",\"confidence\":\"high\",\"id\":5,\"name\":\"The Guardian\"},{\"category\":\"software\",\"confidence\":\"high\",\"id\":6,\"name\":\"Backblaze\"},{\"category\":\"news_media\",\"confidence\":\"high\",\"id\":7,\"name\":\"The Economist\"},{\"category\":\"retail\",\"confidence\":\"high\",\"id\":8,\"name\":\"Tesco\"},{\"category\":\"retail\",\"confidence\":\"high\",\"id\":9,\"name\":\"Argos\"}]}"
+      }
+    ]
+  },
+  {
+    "id": "app.kttl.subscription-audit/development-generated-clean-subscription-heavy-glen/development-clean-subscription-heavy-glen-resumed-music",
+    "item_id": "development-clean-subscription-heavy-glen-resumed-music",
+    "pack": "app.kttl.subscription-audit",
+    "pack_version": "1.5.0",
+    "prompt_version": "blake3:fa1bd2f03def1fa16e3c7393cbab37b353d4f1b3eedc01540a3f203d8e2c437a",
+    "fixture": "generated-development-clean-subscription-heavy-glen.csv",
+    "fixture_id": "development-generated-clean-subscription-heavy-glen",
+    "strata": [
+      "any-statement",
+      "clean",
+      "subscription-heavy",
+      "cancelled-then-resumed"
+    ],
+    "raw_input": "SPOTIFY LTD",
+    "decision_key": "Spotify",
+    "metric": "classification",
+    "expected": {
+      "kind": "subscription",
+      "category": "streaming"
+    },
+    "actual": {
+      "state": "classified",
+      "classification": {
+        "kind": "subscription",
+        "category": "streaming"
+      }
+    },
+    "kind_from": "category_map",
+    "trace_ids": [
+      "claim-000004",
+      "claim-000014"
+    ],
+    "confidence": {
+      "source": "declared",
+      "level": "high",
+      "trace_id": "claim-000014"
+    },
+    "exchanges": [
+      {
+        "step": "Grouping payments by merchant",
+        "batch": 1,
+        "request": "You clean up merchant names from bank statements.\n\nFor each raw merchant string, return the real-world merchant name a person\nwould recognise. Strip transaction codes, store numbers, and payment\nprocessor prefixes (SQ*, PAYPAL *, SumUp, ZETTLE_*). Strip company\nsuffixes (Ltd, Limited, PLC, Inc) unless the brand itself uses one.\n\nWrite the name the way the brand writes it, not the way the statement\nshouts it. Statements are usually upper case; brand names are not.\n\nKeep punctuation and spacing the brand itself uses, even where the\nstatement has flattened it: Paramount+, Apple TV+, M&S, B&Q, Ben &\nJerry's. Statements strip these characters; the brand name has them.\n\n  NETFLIX.COM        -> Netflix\n  SPOTIFY LTD        -> Spotify\n  PUREGYM LTD        -> PureGym\n  BRITISH GAS        -> British Gas\n  TESCO STORES 3412  -> Tesco\n  SQ *KAFFA COFFEE   -> Kaffa Coffee\n\nIf you cannot identify the merchant, return the cleaned string as-is and\nset \"recognised\": false.\n\nReturn one result per input, with the same \"id\" you were given. Return\nJSON only, matching the schema. No commentary.\n\nRaw merchant strings:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"DUOLINGO\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"NETFLIX.COM\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"PUREGYM LTD\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"SPOTIFY LTD\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"GOOGLEONE\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"THE GUARDIAN\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"BACKBLAZE\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"THE ECONOMIST\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"TESCOSTORES\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"ARGOS\"\n  }\n]\n",
+        "response": "{\"results\":[{\"id\":0,\"name\":\"Duolingo\",\"raw\":\"DUOLINGO\",\"recognised\":true},{\"id\":1,\"name\":\"Netflix\",\"raw\":\"NETFLIX.COM\",\"recognised\":true},{\"id\":2,\"name\":\"PureGym\",\"raw\":\"PUREGYM LTD\",\"recognised\":true},{\"id\":3,\"name\":\"Spotify\",\"raw\":\"SPOTIFY LTD\",\"recognised\":true},{\"id\":4,\"name\":\"Google One\",\"raw\":\"GOOGLEONE\",\"recognised\":true},{\"id\":5,\"name\":\"The Guardian\",\"raw\":\"THE GUARDIAN\",\"recognised\":true},{\"id\":6,\"name\":\"Backblaze\",\"raw\":\"BACKBLAZE\",\"recognised\":true},{\"id\":7,\"name\":\"The Economist\",\"raw\":\"THE ECONOMIST\",\"recognised\":true},{\"id\":8,\"name\":\"Tesco\",\"raw\":\"TESCOSTORES\",\"recognised\":true},{\"id\":9,\"name\":\"Argos\",\"raw\":\"ARGOS\",\"recognised\":true}]}"
+      },
+      {
+        "step": "Sorting merchants",
+        "batch": 1,
+        "request": "You put a category to merchants from a bank statement.\n\nFor each merchant, decide:\n- category: which of the allowed category values best fits what this\n  merchant is. Judge only from the name. If the name does not tell you\n  what the merchant is, answer \"unknown\" — that is a correct answer,\n  not a failure, and it is always better than a guess.\n- confidence: \"high\" | \"medium\" | \"low\"\n\nYou are not asked whether anything is a subscription, and you are not\nshown any amounts or dates. Whether a payment repeats is worked out\nseparately, from the payments themselves.\n\nReturn one result per input, with the same \"id\" you were given. Return\nJSON only.\n\nHere is a worked example, showing the merchants it was given and the\nanswer they produced. Its ids are in the 900s and belong to the example\nalone — they are never ids you will be asked about.\n\n{\n  \"merchants\": [\n    { \"id\": 901, \"raw\": \"Netflix\" },\n    { \"id\": 902, \"raw\": \"British Gas\" },\n    { \"id\": 903, \"raw\": \"Kaffa Coffee\" },\n    { \"id\": 904, \"raw\": \"Amazon Marketplace\" },\n    { \"id\": 905, \"raw\": \"J Henderson Windows\" },\n    { \"id\": 906, \"raw\": \"TLM Services\" }\n  ],\n  \"results\": [\n    { \"id\": 901, \"name\": \"Netflix\", \"category\": \"streaming\", \"confidence\": \"high\" },\n    { \"id\": 902, \"name\": \"British Gas\", \"category\": \"energy\", \"confidence\": \"high\" },\n    { \"id\": 903, \"name\": \"Kaffa Coffee\", \"category\": \"food_drink\", \"confidence\": \"high\" },\n    { \"id\": 904, \"name\": \"Amazon Marketplace\", \"category\": \"retail\", \"confidence\": \"medium\" },\n    { \"id\": 905, \"name\": \"J Henderson Windows\", \"category\": \"other\", \"confidence\": \"medium\" },\n    { \"id\": 906, \"name\": \"TLM Services\", \"category\": \"unknown\", \"confidence\": \"low\" }\n  ]\n}\n\nNow categorise the merchants below. They are a different list: answer\nfor these, not for the example, and use only the ids that appear here.\n\nMerchants:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"Duolingo\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"Netflix\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"PureGym\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"Spotify\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"Google One\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"The Guardian\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"Backblaze\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"The Economist\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"Tesco\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"Argos\"\n  }\n]\n",
+        "response": "{\"results\":[{\"category\":\"streaming\",\"confidence\":\"high\",\"id\":0,\"name\":\"Duolingo\"},{\"category\":\"streaming\",\"confidence\":\"high\",\"id\":1,\"name\":\"Netflix\"},{\"category\":\"fitness\",\"confidence\":\"high\",\"id\":2,\"name\":\"PureGym\"},{\"category\":\"streaming\",\"confidence\":\"high\",\"id\":3,\"name\":\"Spotify\"},{\"category\":\"software\",\"confidence\":\"high\",\"id\":4,\"name\":\"Google One\"},{\"category\":\"news_media\",\"confidence\":\"high\",\"id\":5,\"name\":\"The Guardian\"},{\"category\":\"software\",\"confidence\":\"high\",\"id\":6,\"name\":\"Backblaze\"},{\"category\":\"news_media\",\"confidence\":\"high\",\"id\":7,\"name\":\"The Economist\"},{\"category\":\"retail\",\"confidence\":\"high\",\"id\":8,\"name\":\"Tesco\"},{\"category\":\"retail\",\"confidence\":\"high\",\"id\":9,\"name\":\"Argos\"}]}"
+      }
+    ]
+  },
+  {
+    "id": "app.kttl.subscription-audit/development-generated-clean-subscription-heavy-glen/development-clean-subscription-heavy-glen-rising-cloud",
+    "item_id": "development-clean-subscription-heavy-glen-rising-cloud",
+    "pack": "app.kttl.subscription-audit",
+    "pack_version": "1.5.0",
+    "prompt_version": "blake3:fa1bd2f03def1fa16e3c7393cbab37b353d4f1b3eedc01540a3f203d8e2c437a",
+    "fixture": "generated-development-clean-subscription-heavy-glen.csv",
+    "fixture_id": "development-generated-clean-subscription-heavy-glen",
+    "strata": [
+      "any-statement",
+      "clean",
+      "subscription-heavy",
+      "price-rise-mid-series",
+      "multi-descriptor-merchant"
+    ],
+    "raw_input": "STRIPE* GOOGLEONE",
+    "decision_key": "Google One",
+    "metric": "classification",
+    "expected": {
+      "kind": "subscription",
+      "category": "software"
+    },
+    "actual": {
+      "state": "needs_review",
+      "proposed": {
+        "kind": "regular_spend",
+        "category": "software"
+      },
+      "reason": "Kettle wasn't sure, so this one is shown in \"check these yourself\"."
+    },
+    "kind_from": "cadence_despite_periodic",
+    "trace_ids": [
+      "claim-000005",
+      "claim-000015"
+    ],
+    "confidence": {
+      "source": "declared",
+      "level": "high",
+      "trace_id": "claim-000015"
+    },
+    "exchanges": [
+      {
+        "step": "Grouping payments by merchant",
+        "batch": 1,
+        "request": "You clean up merchant names from bank statements.\n\nFor each raw merchant string, return the real-world merchant name a person\nwould recognise. Strip transaction codes, store numbers, and payment\nprocessor prefixes (SQ*, PAYPAL *, SumUp, ZETTLE_*). Strip company\nsuffixes (Ltd, Limited, PLC, Inc) unless the brand itself uses one.\n\nWrite the name the way the brand writes it, not the way the statement\nshouts it. Statements are usually upper case; brand names are not.\n\nKeep punctuation and spacing the brand itself uses, even where the\nstatement has flattened it: Paramount+, Apple TV+, M&S, B&Q, Ben &\nJerry's. Statements strip these characters; the brand name has them.\n\n  NETFLIX.COM        -> Netflix\n  SPOTIFY LTD        -> Spotify\n  PUREGYM LTD        -> PureGym\n  BRITISH GAS        -> British Gas\n  TESCO STORES 3412  -> Tesco\n  SQ *KAFFA COFFEE   -> Kaffa Coffee\n\nIf you cannot identify the merchant, return the cleaned string as-is and\nset \"recognised\": false.\n\nReturn one result per input, with the same \"id\" you were given. Return\nJSON only, matching the schema. No commentary.\n\nRaw merchant strings:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"DUOLINGO\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"NETFLIX.COM\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"PUREGYM LTD\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"SPOTIFY LTD\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"GOOGLEONE\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"THE GUARDIAN\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"BACKBLAZE\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"THE ECONOMIST\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"TESCOSTORES\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"ARGOS\"\n  }\n]\n",
+        "response": "{\"results\":[{\"id\":0,\"name\":\"Duolingo\",\"raw\":\"DUOLINGO\",\"recognised\":true},{\"id\":1,\"name\":\"Netflix\",\"raw\":\"NETFLIX.COM\",\"recognised\":true},{\"id\":2,\"name\":\"PureGym\",\"raw\":\"PUREGYM LTD\",\"recognised\":true},{\"id\":3,\"name\":\"Spotify\",\"raw\":\"SPOTIFY LTD\",\"recognised\":true},{\"id\":4,\"name\":\"Google One\",\"raw\":\"GOOGLEONE\",\"recognised\":true},{\"id\":5,\"name\":\"The Guardian\",\"raw\":\"THE GUARDIAN\",\"recognised\":true},{\"id\":6,\"name\":\"Backblaze\",\"raw\":\"BACKBLAZE\",\"recognised\":true},{\"id\":7,\"name\":\"The Economist\",\"raw\":\"THE ECONOMIST\",\"recognised\":true},{\"id\":8,\"name\":\"Tesco\",\"raw\":\"TESCOSTORES\",\"recognised\":true},{\"id\":9,\"name\":\"Argos\",\"raw\":\"ARGOS\",\"recognised\":true}]}"
+      },
+      {
+        "step": "Sorting merchants",
+        "batch": 1,
+        "request": "You put a category to merchants from a bank statement.\n\nFor each merchant, decide:\n- category: which of the allowed category values best fits what this\n  merchant is. Judge only from the name. If the name does not tell you\n  what the merchant is, answer \"unknown\" — that is a correct answer,\n  not a failure, and it is always better than a guess.\n- confidence: \"high\" | \"medium\" | \"low\"\n\nYou are not asked whether anything is a subscription, and you are not\nshown any amounts or dates. Whether a payment repeats is worked out\nseparately, from the payments themselves.\n\nReturn one result per input, with the same \"id\" you were given. Return\nJSON only.\n\nHere is a worked example, showing the merchants it was given and the\nanswer they produced. Its ids are in the 900s and belong to the example\nalone — they are never ids you will be asked about.\n\n{\n  \"merchants\": [\n    { \"id\": 901, \"raw\": \"Netflix\" },\n    { \"id\": 902, \"raw\": \"British Gas\" },\n    { \"id\": 903, \"raw\": \"Kaffa Coffee\" },\n    { \"id\": 904, \"raw\": \"Amazon Marketplace\" },\n    { \"id\": 905, \"raw\": \"J Henderson Windows\" },\n    { \"id\": 906, \"raw\": \"TLM Services\" }\n  ],\n  \"results\": [\n    { \"id\": 901, \"name\": \"Netflix\", \"category\": \"streaming\", \"confidence\": \"high\" },\n    { \"id\": 902, \"name\": \"British Gas\", \"category\": \"energy\", \"confidence\": \"high\" },\n    { \"id\": 903, \"name\": \"Kaffa Coffee\", \"category\": \"food_drink\", \"confidence\": \"high\" },\n    { \"id\": 904, \"name\": \"Amazon Marketplace\", \"category\": \"retail\", \"confidence\": \"medium\" },\n    { \"id\": 905, \"name\": \"J Henderson Windows\", \"category\": \"other\", \"confidence\": \"medium\" },\n    { \"id\": 906, \"name\": \"TLM Services\", \"category\": \"unknown\", \"confidence\": \"low\" }\n  ]\n}\n\nNow categorise the merchants below. They are a different list: answer\nfor these, not for the example, and use only the ids that appear here.\n\nMerchants:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"Duolingo\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"Netflix\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"PureGym\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"Spotify\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"Google One\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"The Guardian\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"Backblaze\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"The Economist\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"Tesco\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"Argos\"\n  }\n]\n",
+        "response": "{\"results\":[{\"category\":\"streaming\",\"confidence\":\"high\",\"id\":0,\"name\":\"Duolingo\"},{\"category\":\"streaming\",\"confidence\":\"high\",\"id\":1,\"name\":\"Netflix\"},{\"category\":\"fitness\",\"confidence\":\"high\",\"id\":2,\"name\":\"PureGym\"},{\"category\":\"streaming\",\"confidence\":\"high\",\"id\":3,\"name\":\"Spotify\"},{\"category\":\"software\",\"confidence\":\"high\",\"id\":4,\"name\":\"Google One\"},{\"category\":\"news_media\",\"confidence\":\"high\",\"id\":5,\"name\":\"The Guardian\"},{\"category\":\"software\",\"confidence\":\"high\",\"id\":6,\"name\":\"Backblaze\"},{\"category\":\"news_media\",\"confidence\":\"high\",\"id\":7,\"name\":\"The Economist\"},{\"category\":\"retail\",\"confidence\":\"high\",\"id\":8,\"name\":\"Tesco\"},{\"category\":\"retail\",\"confidence\":\"high\",\"id\":9,\"name\":\"Argos\"}]}"
+      }
+    ]
+  },
+  {
+    "id": "app.kttl.subscription-audit/development-generated-clean-subscription-heavy-glen/development-clean-subscription-heavy-glen-refunded-news",
+    "item_id": "development-clean-subscription-heavy-glen-refunded-news",
+    "pack": "app.kttl.subscription-audit",
+    "pack_version": "1.5.0",
+    "prompt_version": "blake3:fa1bd2f03def1fa16e3c7393cbab37b353d4f1b3eedc01540a3f203d8e2c437a",
+    "fixture": "generated-development-clean-subscription-heavy-glen.csv",
+    "fixture_id": "development-generated-clean-subscription-heavy-glen",
+    "strata": [
+      "any-statement",
+      "clean",
+      "subscription-heavy",
+      "refunds-and-chargebacks"
+    ],
+    "raw_input": "THE GUARDIAN",
+    "decision_key": "The Guardian",
+    "metric": "classification",
+    "expected": {
+      "kind": "subscription",
+      "category": "news_media"
+    },
+    "actual": {
+      "state": "classified",
+      "classification": {
+        "kind": "subscription",
+        "category": "news_media"
+      }
+    },
+    "kind_from": "category_map",
+    "trace_ids": [
+      "claim-000006",
+      "claim-000016"
+    ],
+    "confidence": {
+      "source": "declared",
+      "level": "high",
+      "trace_id": "claim-000016"
+    },
+    "exchanges": [
+      {
+        "step": "Grouping payments by merchant",
+        "batch": 1,
+        "request": "You clean up merchant names from bank statements.\n\nFor each raw merchant string, return the real-world merchant name a person\nwould recognise. Strip transaction codes, store numbers, and payment\nprocessor prefixes (SQ*, PAYPAL *, SumUp, ZETTLE_*). Strip company\nsuffixes (Ltd, Limited, PLC, Inc) unless the brand itself uses one.\n\nWrite the name the way the brand writes it, not the way the statement\nshouts it. Statements are usually upper case; brand names are not.\n\nKeep punctuation and spacing the brand itself uses, even where the\nstatement has flattened it: Paramount+, Apple TV+, M&S, B&Q, Ben &\nJerry's. Statements strip these characters; the brand name has them.\n\n  NETFLIX.COM        -> Netflix\n  SPOTIFY LTD        -> Spotify\n  PUREGYM LTD        -> PureGym\n  BRITISH GAS        -> British Gas\n  TESCO STORES 3412  -> Tesco\n  SQ *KAFFA COFFEE   -> Kaffa Coffee\n\nIf you cannot identify the merchant, return the cleaned string as-is and\nset \"recognised\": false.\n\nReturn one result per input, with the same \"id\" you were given. Return\nJSON only, matching the schema. No commentary.\n\nRaw merchant strings:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"DUOLINGO\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"NETFLIX.COM\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"PUREGYM LTD\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"SPOTIFY LTD\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"GOOGLEONE\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"THE GUARDIAN\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"BACKBLAZE\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"THE ECONOMIST\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"TESCOSTORES\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"ARGOS\"\n  }\n]\n",
+        "response": "{\"results\":[{\"id\":0,\"name\":\"Duolingo\",\"raw\":\"DUOLINGO\",\"recognised\":true},{\"id\":1,\"name\":\"Netflix\",\"raw\":\"NETFLIX.COM\",\"recognised\":true},{\"id\":2,\"name\":\"PureGym\",\"raw\":\"PUREGYM LTD\",\"recognised\":true},{\"id\":3,\"name\":\"Spotify\",\"raw\":\"SPOTIFY LTD\",\"recognised\":true},{\"id\":4,\"name\":\"Google One\",\"raw\":\"GOOGLEONE\",\"recognised\":true},{\"id\":5,\"name\":\"The Guardian\",\"raw\":\"THE GUARDIAN\",\"recognised\":true},{\"id\":6,\"name\":\"Backblaze\",\"raw\":\"BACKBLAZE\",\"recognised\":true},{\"id\":7,\"name\":\"The Economist\",\"raw\":\"THE ECONOMIST\",\"recognised\":true},{\"id\":8,\"name\":\"Tesco\",\"raw\":\"TESCOSTORES\",\"recognised\":true},{\"id\":9,\"name\":\"Argos\",\"raw\":\"ARGOS\",\"recognised\":true}]}"
+      },
+      {
+        "step": "Sorting merchants",
+        "batch": 1,
+        "request": "You put a category to merchants from a bank statement.\n\nFor each merchant, decide:\n- category: which of the allowed category values best fits what this\n  merchant is. Judge only from the name. If the name does not tell you\n  what the merchant is, answer \"unknown\" — that is a correct answer,\n  not a failure, and it is always better than a guess.\n- confidence: \"high\" | \"medium\" | \"low\"\n\nYou are not asked whether anything is a subscription, and you are not\nshown any amounts or dates. Whether a payment repeats is worked out\nseparately, from the payments themselves.\n\nReturn one result per input, with the same \"id\" you were given. Return\nJSON only.\n\nHere is a worked example, showing the merchants it was given and the\nanswer they produced. Its ids are in the 900s and belong to the example\nalone — they are never ids you will be asked about.\n\n{\n  \"merchants\": [\n    { \"id\": 901, \"raw\": \"Netflix\" },\n    { \"id\": 902, \"raw\": \"British Gas\" },\n    { \"id\": 903, \"raw\": \"Kaffa Coffee\" },\n    { \"id\": 904, \"raw\": \"Amazon Marketplace\" },\n    { \"id\": 905, \"raw\": \"J Henderson Windows\" },\n    { \"id\": 906, \"raw\": \"TLM Services\" }\n  ],\n  \"results\": [\n    { \"id\": 901, \"name\": \"Netflix\", \"category\": \"streaming\", \"confidence\": \"high\" },\n    { \"id\": 902, \"name\": \"British Gas\", \"category\": \"energy\", \"confidence\": \"high\" },\n    { \"id\": 903, \"name\": \"Kaffa Coffee\", \"category\": \"food_drink\", \"confidence\": \"high\" },\n    { \"id\": 904, \"name\": \"Amazon Marketplace\", \"category\": \"retail\", \"confidence\": \"medium\" },\n    { \"id\": 905, \"name\": \"J Henderson Windows\", \"category\": \"other\", \"confidence\": \"medium\" },\n    { \"id\": 906, \"name\": \"TLM Services\", \"category\": \"unknown\", \"confidence\": \"low\" }\n  ]\n}\n\nNow categorise the merchants below. They are a different list: answer\nfor these, not for the example, and use only the ids that appear here.\n\nMerchants:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"Duolingo\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"Netflix\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"PureGym\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"Spotify\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"Google One\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"The Guardian\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"Backblaze\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"The Economist\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"Tesco\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"Argos\"\n  }\n]\n",
+        "response": "{\"results\":[{\"category\":\"streaming\",\"confidence\":\"high\",\"id\":0,\"name\":\"Duolingo\"},{\"category\":\"streaming\",\"confidence\":\"high\",\"id\":1,\"name\":\"Netflix\"},{\"category\":\"fitness\",\"confidence\":\"high\",\"id\":2,\"name\":\"PureGym\"},{\"category\":\"streaming\",\"confidence\":\"high\",\"id\":3,\"name\":\"Spotify\"},{\"category\":\"software\",\"confidence\":\"high\",\"id\":4,\"name\":\"Google One\"},{\"category\":\"news_media\",\"confidence\":\"high\",\"id\":5,\"name\":\"The Guardian\"},{\"category\":\"software\",\"confidence\":\"high\",\"id\":6,\"name\":\"Backblaze\"},{\"category\":\"news_media\",\"confidence\":\"high\",\"id\":7,\"name\":\"The Economist\"},{\"category\":\"retail\",\"confidence\":\"high\",\"id\":8,\"name\":\"Tesco\"},{\"category\":\"retail\",\"confidence\":\"high\",\"id\":9,\"name\":\"Argos\"}]}"
+      }
+    ]
+  },
+  {
+    "id": "app.kttl.subscription-audit/development-generated-clean-subscription-heavy-glen/development-clean-subscription-heavy-glen-weekly-grocery",
+    "item_id": "development-clean-subscription-heavy-glen-weekly-grocery",
+    "pack": "app.kttl.subscription-audit",
+    "pack_version": "1.5.0",
+    "prompt_version": "blake3:fa1bd2f03def1fa16e3c7393cbab37b353d4f1b3eedc01540a3f203d8e2c437a",
+    "fixture": "generated-development-clean-subscription-heavy-glen.csv",
+    "fixture_id": "development-generated-clean-subscription-heavy-glen",
+    "strata": [
+      "any-statement",
+      "clean",
+      "subscription-heavy",
+      "refunds-and-chargebacks",
+      "multi-descriptor-merchant",
+      "duplicate-charge-not-subscription"
+    ],
+    "raw_input": "STRIPE* TESCOSTORES",
+    "decision_key": "Tesco",
+    "metric": "classification",
+    "expected": {
+      "kind": "regular_spend",
+      "category": "food_drink"
+    },
+    "actual": {
+      "state": "needs_review",
+      "proposed": {
+        "kind": "regular_spend",
+        "category": "retail"
+      },
+      "reason": "Kettle wasn't sure, so this one is shown in \"check these yourself\"."
+    },
+    "kind_from": "cadence_despite_periodic",
+    "trace_ids": [
+      "claim-000009",
+      "claim-000019"
+    ],
+    "confidence": {
+      "source": "declared",
+      "level": "high",
+      "trace_id": "claim-000019"
+    },
+    "exchanges": [
+      {
+        "step": "Grouping payments by merchant",
+        "batch": 1,
+        "request": "You clean up merchant names from bank statements.\n\nFor each raw merchant string, return the real-world merchant name a person\nwould recognise. Strip transaction codes, store numbers, and payment\nprocessor prefixes (SQ*, PAYPAL *, SumUp, ZETTLE_*). Strip company\nsuffixes (Ltd, Limited, PLC, Inc) unless the brand itself uses one.\n\nWrite the name the way the brand writes it, not the way the statement\nshouts it. Statements are usually upper case; brand names are not.\n\nKeep punctuation and spacing the brand itself uses, even where the\nstatement has flattened it: Paramount+, Apple TV+, M&S, B&Q, Ben &\nJerry's. Statements strip these characters; the brand name has them.\n\n  NETFLIX.COM        -> Netflix\n  SPOTIFY LTD        -> Spotify\n  PUREGYM LTD        -> PureGym\n  BRITISH GAS        -> British Gas\n  TESCO STORES 3412  -> Tesco\n  SQ *KAFFA COFFEE   -> Kaffa Coffee\n\nIf you cannot identify the merchant, return the cleaned string as-is and\nset \"recognised\": false.\n\nReturn one result per input, with the same \"id\" you were given. Return\nJSON only, matching the schema. No commentary.\n\nRaw merchant strings:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"DUOLINGO\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"NETFLIX.COM\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"PUREGYM LTD\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"SPOTIFY LTD\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"GOOGLEONE\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"THE GUARDIAN\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"BACKBLAZE\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"THE ECONOMIST\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"TESCOSTORES\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"ARGOS\"\n  }\n]\n",
+        "response": "{\"results\":[{\"id\":0,\"name\":\"Duolingo\",\"raw\":\"DUOLINGO\",\"recognised\":true},{\"id\":1,\"name\":\"Netflix\",\"raw\":\"NETFLIX.COM\",\"recognised\":true},{\"id\":2,\"name\":\"PureGym\",\"raw\":\"PUREGYM LTD\",\"recognised\":true},{\"id\":3,\"name\":\"Spotify\",\"raw\":\"SPOTIFY LTD\",\"recognised\":true},{\"id\":4,\"name\":\"Google One\",\"raw\":\"GOOGLEONE\",\"recognised\":true},{\"id\":5,\"name\":\"The Guardian\",\"raw\":\"THE GUARDIAN\",\"recognised\":true},{\"id\":6,\"name\":\"Backblaze\",\"raw\":\"BACKBLAZE\",\"recognised\":true},{\"id\":7,\"name\":\"The Economist\",\"raw\":\"THE ECONOMIST\",\"recognised\":true},{\"id\":8,\"name\":\"Tesco\",\"raw\":\"TESCOSTORES\",\"recognised\":true},{\"id\":9,\"name\":\"Argos\",\"raw\":\"ARGOS\",\"recognised\":true}]}"
+      },
+      {
+        "step": "Sorting merchants",
+        "batch": 1,
+        "request": "You put a category to merchants from a bank statement.\n\nFor each merchant, decide:\n- category: which of the allowed category values best fits what this\n  merchant is. Judge only from the name. If the name does not tell you\n  what the merchant is, answer \"unknown\" — that is a correct answer,\n  not a failure, and it is always better than a guess.\n- confidence: \"high\" | \"medium\" | \"low\"\n\nYou are not asked whether anything is a subscription, and you are not\nshown any amounts or dates. Whether a payment repeats is worked out\nseparately, from the payments themselves.\n\nReturn one result per input, with the same \"id\" you were given. Return\nJSON only.\n\nHere is a worked example, showing the merchants it was given and the\nanswer they produced. Its ids are in the 900s and belong to the example\nalone — they are never ids you will be asked about.\n\n{\n  \"merchants\": [\n    { \"id\": 901, \"raw\": \"Netflix\" },\n    { \"id\": 902, \"raw\": \"British Gas\" },\n    { \"id\": 903, \"raw\": \"Kaffa Coffee\" },\n    { \"id\": 904, \"raw\": \"Amazon Marketplace\" },\n    { \"id\": 905, \"raw\": \"J Henderson Windows\" },\n    { \"id\": 906, \"raw\": \"TLM Services\" }\n  ],\n  \"results\": [\n    { \"id\": 901, \"name\": \"Netflix\", \"category\": \"streaming\", \"confidence\": \"high\" },\n    { \"id\": 902, \"name\": \"British Gas\", \"category\": \"energy\", \"confidence\": \"high\" },\n    { \"id\": 903, \"name\": \"Kaffa Coffee\", \"category\": \"food_drink\", \"confidence\": \"high\" },\n    { \"id\": 904, \"name\": \"Amazon Marketplace\", \"category\": \"retail\", \"confidence\": \"medium\" },\n    { \"id\": 905, \"name\": \"J Henderson Windows\", \"category\": \"other\", \"confidence\": \"medium\" },\n    { \"id\": 906, \"name\": \"TLM Services\", \"category\": \"unknown\", \"confidence\": \"low\" }\n  ]\n}\n\nNow categorise the merchants below. They are a different list: answer\nfor these, not for the example, and use only the ids that appear here.\n\nMerchants:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"Duolingo\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"Netflix\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"PureGym\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"Spotify\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"Google One\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"The Guardian\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"Backblaze\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"The Economist\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"Tesco\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"Argos\"\n  }\n]\n",
+        "response": "{\"results\":[{\"category\":\"streaming\",\"confidence\":\"high\",\"id\":0,\"name\":\"Duolingo\"},{\"category\":\"streaming\",\"confidence\":\"high\",\"id\":1,\"name\":\"Netflix\"},{\"category\":\"fitness\",\"confidence\":\"high\",\"id\":2,\"name\":\"PureGym\"},{\"category\":\"streaming\",\"confidence\":\"high\",\"id\":3,\"name\":\"Spotify\"},{\"category\":\"software\",\"confidence\":\"high\",\"id\":4,\"name\":\"Google One\"},{\"category\":\"news_media\",\"confidence\":\"high\",\"id\":5,\"name\":\"The Guardian\"},{\"category\":\"software\",\"confidence\":\"high\",\"id\":6,\"name\":\"Backblaze\"},{\"category\":\"news_media\",\"confidence\":\"high\",\"id\":7,\"name\":\"The Economist\"},{\"category\":\"retail\",\"confidence\":\"high\",\"id\":8,\"name\":\"Tesco\"},{\"category\":\"retail\",\"confidence\":\"high\",\"id\":9,\"name\":\"Argos\"}]}"
+      }
+    ]
+  },
+  {
+    "id": "app.kttl.subscription-audit/development-generated-clean-subscription-heavy-glen/development-clean-subscription-heavy-glen-duplicate-retail-charge",
+    "item_id": "development-clean-subscription-heavy-glen-duplicate-retail-charge",
+    "pack": "app.kttl.subscription-audit",
+    "pack_version": "1.5.0",
+    "prompt_version": "blake3:fa1bd2f03def1fa16e3c7393cbab37b353d4f1b3eedc01540a3f203d8e2c437a",
+    "fixture": "generated-development-clean-subscription-heavy-glen.csv",
+    "fixture_id": "development-generated-clean-subscription-heavy-glen",
+    "strata": [
+      "any-statement",
+      "clean",
+      "subscription-heavy",
+      "refunds-and-chargebacks",
+      "duplicate-charge-not-subscription"
+    ],
+    "raw_input": "ARGOS",
+    "decision_key": "Argos",
+    "metric": "classification",
+    "expected": {
+      "kind": "one_off",
+      "category": "retail"
+    },
+    "actual": {
+      "state": "classified",
+      "classification": {
+        "kind": "one_off",
+        "category": "retail"
+      }
+    },
+    "kind_from": "cadence",
+    "trace_ids": [
+      "claim-000010",
+      "claim-000020"
+    ],
+    "confidence": {
+      "source": "declared",
+      "level": "high",
+      "trace_id": "claim-000020"
+    },
+    "exchanges": [
+      {
+        "step": "Grouping payments by merchant",
+        "batch": 1,
+        "request": "You clean up merchant names from bank statements.\n\nFor each raw merchant string, return the real-world merchant name a person\nwould recognise. Strip transaction codes, store numbers, and payment\nprocessor prefixes (SQ*, PAYPAL *, SumUp, ZETTLE_*). Strip company\nsuffixes (Ltd, Limited, PLC, Inc) unless the brand itself uses one.\n\nWrite the name the way the brand writes it, not the way the statement\nshouts it. Statements are usually upper case; brand names are not.\n\nKeep punctuation and spacing the brand itself uses, even where the\nstatement has flattened it: Paramount+, Apple TV+, M&S, B&Q, Ben &\nJerry's. Statements strip these characters; the brand name has them.\n\n  NETFLIX.COM        -> Netflix\n  SPOTIFY LTD        -> Spotify\n  PUREGYM LTD        -> PureGym\n  BRITISH GAS        -> British Gas\n  TESCO STORES 3412  -> Tesco\n  SQ *KAFFA COFFEE   -> Kaffa Coffee\n\nIf you cannot identify the merchant, return the cleaned string as-is and\nset \"recognised\": false.\n\nReturn one result per input, with the same \"id\" you were given. Return\nJSON only, matching the schema. No commentary.\n\nRaw merchant strings:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"DUOLINGO\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"NETFLIX.COM\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"PUREGYM LTD\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"SPOTIFY LTD\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"GOOGLEONE\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"THE GUARDIAN\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"BACKBLAZE\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"THE ECONOMIST\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"TESCOSTORES\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"ARGOS\"\n  }\n]\n",
+        "response": "{\"results\":[{\"id\":0,\"name\":\"Duolingo\",\"raw\":\"DUOLINGO\",\"recognised\":true},{\"id\":1,\"name\":\"Netflix\",\"raw\":\"NETFLIX.COM\",\"recognised\":true},{\"id\":2,\"name\":\"PureGym\",\"raw\":\"PUREGYM LTD\",\"recognised\":true},{\"id\":3,\"name\":\"Spotify\",\"raw\":\"SPOTIFY LTD\",\"recognised\":true},{\"id\":4,\"name\":\"Google One\",\"raw\":\"GOOGLEONE\",\"recognised\":true},{\"id\":5,\"name\":\"The Guardian\",\"raw\":\"THE GUARDIAN\",\"recognised\":true},{\"id\":6,\"name\":\"Backblaze\",\"raw\":\"BACKBLAZE\",\"recognised\":true},{\"id\":7,\"name\":\"The Economist\",\"raw\":\"THE ECONOMIST\",\"recognised\":true},{\"id\":8,\"name\":\"Tesco\",\"raw\":\"TESCOSTORES\",\"recognised\":true},{\"id\":9,\"name\":\"Argos\",\"raw\":\"ARGOS\",\"recognised\":true}]}"
+      },
+      {
+        "step": "Sorting merchants",
+        "batch": 1,
+        "request": "You put a category to merchants from a bank statement.\n\nFor each merchant, decide:\n- category: which of the allowed category values best fits what this\n  merchant is. Judge only from the name. If the name does not tell you\n  what the merchant is, answer \"unknown\" — that is a correct answer,\n  not a failure, and it is always better than a guess.\n- confidence: \"high\" | \"medium\" | \"low\"\n\nYou are not asked whether anything is a subscription, and you are not\nshown any amounts or dates. Whether a payment repeats is worked out\nseparately, from the payments themselves.\n\nReturn one result per input, with the same \"id\" you were given. Return\nJSON only.\n\nHere is a worked example, showing the merchants it was given and the\nanswer they produced. Its ids are in the 900s and belong to the example\nalone — they are never ids you will be asked about.\n\n{\n  \"merchants\": [\n    { \"id\": 901, \"raw\": \"Netflix\" },\n    { \"id\": 902, \"raw\": \"British Gas\" },\n    { \"id\": 903, \"raw\": \"Kaffa Coffee\" },\n    { \"id\": 904, \"raw\": \"Amazon Marketplace\" },\n    { \"id\": 905, \"raw\": \"J Henderson Windows\" },\n    { \"id\": 906, \"raw\": \"TLM Services\" }\n  ],\n  \"results\": [\n    { \"id\": 901, \"name\": \"Netflix\", \"category\": \"streaming\", \"confidence\": \"high\" },\n    { \"id\": 902, \"name\": \"British Gas\", \"category\": \"energy\", \"confidence\": \"high\" },\n    { \"id\": 903, \"name\": \"Kaffa Coffee\", \"category\": \"food_drink\", \"confidence\": \"high\" },\n    { \"id\": 904, \"name\": \"Amazon Marketplace\", \"category\": \"retail\", \"confidence\": \"medium\" },\n    { \"id\": 905, \"name\": \"J Henderson Windows\", \"category\": \"other\", \"confidence\": \"medium\" },\n    { \"id\": 906, \"name\": \"TLM Services\", \"category\": \"unknown\", \"confidence\": \"low\" }\n  ]\n}\n\nNow categorise the merchants below. They are a different list: answer\nfor these, not for the example, and use only the ids that appear here.\n\nMerchants:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"Duolingo\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"Netflix\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"PureGym\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"Spotify\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"Google One\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"The Guardian\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"Backblaze\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"The Economist\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"Tesco\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"Argos\"\n  }\n]\n",
+        "response": "{\"results\":[{\"category\":\"streaming\",\"confidence\":\"high\",\"id\":0,\"name\":\"Duolingo\"},{\"category\":\"streaming\",\"confidence\":\"high\",\"id\":1,\"name\":\"Netflix\"},{\"category\":\"fitness\",\"confidence\":\"high\",\"id\":2,\"name\":\"PureGym\"},{\"category\":\"streaming\",\"confidence\":\"high\",\"id\":3,\"name\":\"Spotify\"},{\"category\":\"software\",\"confidence\":\"high\",\"id\":4,\"name\":\"Google One\"},{\"category\":\"news_media\",\"confidence\":\"high\",\"id\":5,\"name\":\"The Guardian\"},{\"category\":\"software\",\"confidence\":\"high\",\"id\":6,\"name\":\"Backblaze\"},{\"category\":\"news_media\",\"confidence\":\"high\",\"id\":7,\"name\":\"The Economist\"},{\"category\":\"retail\",\"confidence\":\"high\",\"id\":8,\"name\":\"Tesco\"},{\"category\":\"retail\",\"confidence\":\"high\",\"id\":9,\"name\":\"Argos\"}]}"
+      }
+    ]
+  }
+]
