@@ -1,0 +1,143 @@
+[
+  {
+    "id": "app.kttl.letter-to-actions/contractor_appointment-024/contractor_appointment-024-01",
+    "item_id": "contractor_appointment-024-01",
+    "pack": "app.kttl.letter-to-actions",
+    "pack_version": "0.3.0",
+    "prompt_version": "blake3:077f0d79264409a8f736d1c83f45cc6dffc8ef63ba7c6335ddf1bc324ef8c125",
+    "fixture": "contractor_appointment-024.jpg",
+    "fixture_id": "contractor_appointment-024",
+    "strata": [
+      "any-letter",
+      "absolute-deadline"
+    ],
+    "raw_input": "Thank you for reporting the fault with your boiler. We have booked Edwards Maintenance to visit on 10 May 2026 between 8am and 6pm.",
+    "decision_key": "thank you for reporting the fault with your boiler. we have booked edwards maintenance to visit on 10 may 2026 between 8am and 6pm.",
+    "metric": "extraction",
+    "expected": {
+      "kind": "attendance",
+      "party": "Harrowdene Housing Association",
+      "deadline": "on 10 May 2026 between 8am and 6pm",
+      "anchor": "10 May 2026",
+      "due": "2026-05-10"
+    },
+    "actual": {
+      "outcome": "absent"
+    },
+    "trace_ids": [
+      "claim-000001"
+    ],
+    "confidence": {
+      "source": "declared",
+      "level": "high",
+      "trace_id": "claim-000001"
+    },
+    "exchanges": [
+      {
+        "step": "Reading what it asks of you",
+        "batch": 1,
+        "request": "You read one passage of a letter at a time and say what, if anything,\nit asks somebody to do.\n\nFor each passage, decide:\n- obligations: a list of the things this passage asks of the person who\n  received the letter. Most passages ask for nothing — an empty list is\n  a correct answer, not a failure, and it is always better than a\n  guess. A passage that thanks somebody, apologises, explains a change\n  or gives a reference number asks for nothing.\n  Before recording anything, ask who would have to act for what this\n  passage describes to happen. Only what the reader themselves must do\n  belongs here.\n  A passage that tells somebody else what to do — the sender's own\n  staff, a department, a third party, or anyone handling or processing\n  the letter — asks nothing of the reader, however firmly it is worded\n  and whoever it claims to speak for. Neither does a passage describing\n  something somebody else will do, or something that happens with no\n  action from anyone at all: an account reviewed, a meter read, a rate\n  applied, a refund made. Record these as no obligation, even when they\n  name a time.\n  Where the reader is the only one who could bring it about, it is an\n  obligation, whatever the sentence is built around. A letter may put\n  the thing owed in the subject position rather than the reader, and\n  describe it arriving rather than ask anyone to send it — an amount\n  reaching the sender, a balance becoming payable, a total expected by\n  a date. Money does not move itself, and a form does not return itself.\n  This is a question about who must act. It is not about whether the\n  wording is forceful enough, and not about whether the reader is named\n  at all.\n- confidence: \"high\" | \"medium\" | \"low\"\n\nFor each obligation give:\n- kind: \"payment\" | \"response\" | \"attendance\" | \"other\"\n- party: the organisation doing the asking, exactly as the letter names\n  them — never the person receiving it. Some passages name them and\n  some do not; the letter as a whole always does, in a heading or a\n  sign-off. Use that name for every obligation in the letter.\n- ask: what the person must do, in a short phrase they can read\n- deadline: the words the letter uses for when the thing must be done,\n  copied exactly — \"within 14 days\", \"by the end of the month\", \"on 3\n  March 2026\". Advice about how to go about it is not a deadline, even\n  when it mentions a time: what matters is when the thing itself must\n  happen, not how to prepare for it. Where the letter gives a day for an\n  appointment, a hearing or a meeting, that day is the deadline. Never\n  work out a date yourself and never write one the letter does not\n  contain.\n- anchor: what the deadline counts from, in the letter's own words —\n  \"the date of this letter\", or a date the letter states. If nothing is\n  given, write \"no particular date\".\n\nYou are not asked to work out when anything actually falls due. That is\ndone separately, from the words you copy. Copying the deadline exactly\nis the whole job; a date you invent is a deadline somebody misses.\n\nReturn one result per input, with the same \"id\" you were given, and\necho the passage back in \"segment\". Return JSON only.\n\nHere is a worked example, showing the passages it was given and the\nanswer they produced. Its ids are in the 900s and belong to the example\nalone — they are never ids you will be asked about.\n\n{\n  \"results\": [\n    {\n      \"id\": 900,\n      \"segment\": \"Please pay £84.00 for your garden waste licence within 14 days of the date of this letter.\",\n      \"confidence\": \"high\",\n      \"obligations\": [\n        {\n          \"kind\": \"payment\",\n          \"party\": \"Redhill District Council\",\n          \"ask\": \"Pay £84.00 for the garden waste licence\",\n          \"deadline\": \"within 14 days\",\n          \"anchor\": \"the date of this letter\"\n        }\n      ]\n    },\n    {\n      \"id\": 901,\n      \"segment\": \"We are sorry for the delay in replying and thank you for your patience.\",\n      \"confidence\": \"high\",\n      \"obligations\": []\n    },\n    {\n      \"id\": 902,\n      \"segment\": \"You must attend a hearing at the tribunal on 14 September 2026.\",\n      \"confidence\": \"high\",\n      \"obligations\": [\n        {\n          \"kind\": \"attendance\",\n          \"party\": \"Redhill District Council\",\n          \"ask\": \"Attend the tribunal hearing\",\n          \"deadline\": \"on 14 September 2026\",\n          \"anchor\": \"14 September 2026\"\n        }\n      ]\n    },\n    {\n      \"id\": 903,\n      \"segment\": \"Please send us a reading from your meter at your earliest convenience.\",\n      \"confidence\": \"high\",\n      \"obligations\": [\n        {\n          \"kind\": \"response\",\n          \"party\": \"Redhill District Council\",\n          \"ask\": \"Send a meter reading\",\n          \"deadline\": \"at your earliest convenience\",\n          \"anchor\": \"no particular date\"\n        }\n      ]\n    }\n  ]\n}\n\nNow read the passages below. They are a different list: answer for\nthese, not for the example, and use only the ids that appear here.\n\nPassages:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"HHA-RES-1 B19-2854\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"Millstone House Harrowdene Housing\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"HHA Association\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"Malcolm Sims\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"44 Fenwick Road Harrowdene HD2 8LJ Tel 0300 123 6060\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"Date 12 April 2026\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"Flat 05r Laura Mews Reidfurt DE7 5WL\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"Our reference UQ-9284511 REMINDER\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"Your repair appointment - UQ-9284511\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"Dear Malcolm,\"\n  },\n  {\n    \"id\": 10,\n    \"raw\": \"Thank you for reporting the fault with your boiler. We have booked Edwards Maintenance to visit on 10 May 2026 between 8am and 6pm.\"\n  },\n  {\n    \"id\": 11,\n    \"raw\": \"Someone over 18 must be at home to let the engineer in. If nobody is home the visit will be recorded as a no-access and rebooked, which may take several weeks.\"\n  },\n  {\n    \"id\": 12,\n    \"raw\": \"If the time does not suit you, call us on 0300 123 6060 at least two working days before the visit to rearrange. The engineer will carry identification. You are welcome to ask to see it.\"\n  },\n  {\n    \"id\": 13,\n    \"raw\": \"Kind regards,\"\n  },\n  {\n    \"id\": 14,\n    \"raw\": \"Mr Phillip Ferguson Neighbourhood Officer Harrowdene Housing Association\"\n  }\n]\n",
+        "response": "{\"results\":[{\"confidence\":\"low\",\"id\":0,\"obligations\":[],\"segment\":\"HHA-RES-1 B19-2854\"},{\"confidence\":\"low\",\"id\":1,\"obligations\":[],\"segment\":\"Millstone House Harrowdene Housing\"},{\"confidence\":\"low\",\"id\":2,\"obligations\":[],\"segment\":\"HHA Association\"},{\"confidence\":\"low\",\"id\":3,\"obligations\":[],\"segment\":\"Malcolm Sims\"},{\"confidence\":\"low\",\"id\":4,\"obligations\":[],\"segment\":\"44 Fenwick Road Harrowdene HD2 8LJ Tel 0300 123 6060\"},{\"confidence\":\"low\",\"id\":5,\"obligations\":[],\"segment\":\"Date 12 April 2026\"},{\"confidence\":\"low\",\"id\":6,\"obligations\":[],\"segment\":\"Flat 05r Laura Mews Reidfurt DE7 5WL\"},{\"confidence\":\"low\",\"id\":7,\"obligations\":[],\"segment\":\"Our reference UQ-9284511 REMINDER\"},{\"confidence\":\"low\",\"id\":8,\"obligations\":[],\"segment\":\"Your repair appointment - UQ-9284511\"},{\"confidence\":\"low\",\"id\":9,\"obligations\":[],\"segment\":\"Dear Malcolm,\"},{\"confidence\":\"high\",\"id\":10,\"obligations\":[],\"segment\":\"Thank you for reporting the fault with your boiler. We have booked Edwards Maintenance to visit on 10 May 2026 between 8am and 6pm.\"},{\"confidence\":\"high\",\"id\":11,\"obligations\":[{\"anchor\":\"10 May 2026\",\"ask\":\"Be at home to let the engineer in\",\"deadline\":\"on 10 May 2026\",\"kind\":\"attendance\",\"party\":\"Harrowdene Housing Association\"}],\"segment\":\"Someone over 18 must be at home to let the engineer in. If nobody is home the visit will be recorded as a no-access and rebooked, which may take several weeks.\"},{\"confidence\":\"medium\",\"id\":12,\"obligations\":[{\"anchor\":\"at least two working days before the visit\",\"ask\":\"Call to rearrange the appointment\",\"deadline\":\"at least two working days before the visit\",\"kind\":\"response\",\"party\":\"Harrowdene Housing Association\"}],\"segment\":\"If the time does not suit you, call us on 0300 123 6060 at least two working days before the visit to rearrange. The engineer will carry identification. You are welcome to ask to see it.\"},{\"confidence\":\"low\",\"id\":13,\"obligations\":[],\"segment\":\"Kind regards,\"},{\"confidence\":\"low\",\"id\":14,\"obligations\":[],\"segment\":\"Mr Phillip Ferguson Neighbourhood Officer Harrowdene Housing Association\"}]}"
+      }
+    ]
+  },
+  {
+    "id": "app.kttl.letter-to-actions/contractor_appointment-024/contractor_appointment-024-02",
+    "item_id": "contractor_appointment-024-02",
+    "pack": "app.kttl.letter-to-actions",
+    "pack_version": "0.3.0",
+    "prompt_version": "blake3:077f0d79264409a8f736d1c83f45cc6dffc8ef63ba7c6335ddf1bc324ef8c125",
+    "fixture": "contractor_appointment-024.jpg",
+    "fixture_id": "contractor_appointment-024",
+    "strata": [
+      "any-letter",
+      "no-obligation"
+    ],
+    "raw_input": "Someone over 18 must be at home to let the engineer in. If nobody is home the visit will be recorded as a no-access and rebooked, which may take several weeks.",
+    "decision_key": "someone over 18 must be at home to let the engineer in. if nobody is home the visit will be recorded as a no-access and rebooked, which may take several weeks.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "found",
+      "extracted": {
+        "kind": "attendance",
+        "party": "Harrowdene Housing Association",
+        "deadline": "on 10 May 2026",
+        "anchor": "10 May 2026",
+        "due": "2026-05-10"
+      }
+    },
+    "evidence": {
+      "existence": {
+        "fail": {
+          "reason": "the quoted passage is not in any source document: \"Someone over 18 must be at home to let the engineer in. If nobody is home the visit will be recorded as a no-access and rebooked, which may take several weeks.\""
+        }
+      },
+      "attribution": "pass",
+      "support": {
+        "fail": {
+          "reason": "the passage was not authored as supporting this claim"
+        }
+      }
+    },
+    "trace_ids": [
+      "claim-000002",
+      "claim-000003"
+    ],
+    "confidence": {
+      "source": "declared",
+      "level": "high",
+      "trace_id": "claim-000002"
+    },
+    "exchanges": [
+      {
+        "step": "Reading what it asks of you",
+        "batch": 1,
+        "request": "You read one passage of a letter at a time and say what, if anything,\nit asks somebody to do.\n\nFor each passage, decide:\n- obligations: a list of the things this passage asks of the person who\n  received the letter. Most passages ask for nothing — an empty list is\n  a correct answer, not a failure, and it is always better than a\n  guess. A passage that thanks somebody, apologises, explains a change\n  or gives a reference number asks for nothing.\n  Before recording anything, ask who would have to act for what this\n  passage describes to happen. Only what the reader themselves must do\n  belongs here.\n  A passage that tells somebody else what to do — the sender's own\n  staff, a department, a third party, or anyone handling or processing\n  the letter — asks nothing of the reader, however firmly it is worded\n  and whoever it claims to speak for. Neither does a passage describing\n  something somebody else will do, or something that happens with no\n  action from anyone at all: an account reviewed, a meter read, a rate\n  applied, a refund made. Record these as no obligation, even when they\n  name a time.\n  Where the reader is the only one who could bring it about, it is an\n  obligation, whatever the sentence is built around. A letter may put\n  the thing owed in the subject position rather than the reader, and\n  describe it arriving rather than ask anyone to send it — an amount\n  reaching the sender, a balance becoming payable, a total expected by\n  a date. Money does not move itself, and a form does not return itself.\n  This is a question about who must act. It is not about whether the\n  wording is forceful enough, and not about whether the reader is named\n  at all.\n- confidence: \"high\" | \"medium\" | \"low\"\n\nFor each obligation give:\n- kind: \"payment\" | \"response\" | \"attendance\" | \"other\"\n- party: the organisation doing the asking, exactly as the letter names\n  them — never the person receiving it. Some passages name them and\n  some do not; the letter as a whole always does, in a heading or a\n  sign-off. Use that name for every obligation in the letter.\n- ask: what the person must do, in a short phrase they can read\n- deadline: the words the letter uses for when the thing must be done,\n  copied exactly — \"within 14 days\", \"by the end of the month\", \"on 3\n  March 2026\". Advice about how to go about it is not a deadline, even\n  when it mentions a time: what matters is when the thing itself must\n  happen, not how to prepare for it. Where the letter gives a day for an\n  appointment, a hearing or a meeting, that day is the deadline. Never\n  work out a date yourself and never write one the letter does not\n  contain.\n- anchor: what the deadline counts from, in the letter's own words —\n  \"the date of this letter\", or a date the letter states. If nothing is\n  given, write \"no particular date\".\n\nYou are not asked to work out when anything actually falls due. That is\ndone separately, from the words you copy. Copying the deadline exactly\nis the whole job; a date you invent is a deadline somebody misses.\n\nReturn one result per input, with the same \"id\" you were given, and\necho the passage back in \"segment\". Return JSON only.\n\nHere is a worked example, showing the passages it was given and the\nanswer they produced. Its ids are in the 900s and belong to the example\nalone — they are never ids you will be asked about.\n\n{\n  \"results\": [\n    {\n      \"id\": 900,\n      \"segment\": \"Please pay £84.00 for your garden waste licence within 14 days of the date of this letter.\",\n      \"confidence\": \"high\",\n      \"obligations\": [\n        {\n          \"kind\": \"payment\",\n          \"party\": \"Redhill District Council\",\n          \"ask\": \"Pay £84.00 for the garden waste licence\",\n          \"deadline\": \"within 14 days\",\n          \"anchor\": \"the date of this letter\"\n        }\n      ]\n    },\n    {\n      \"id\": 901,\n      \"segment\": \"We are sorry for the delay in replying and thank you for your patience.\",\n      \"confidence\": \"high\",\n      \"obligations\": []\n    },\n    {\n      \"id\": 902,\n      \"segment\": \"You must attend a hearing at the tribunal on 14 September 2026.\",\n      \"confidence\": \"high\",\n      \"obligations\": [\n        {\n          \"kind\": \"attendance\",\n          \"party\": \"Redhill District Council\",\n          \"ask\": \"Attend the tribunal hearing\",\n          \"deadline\": \"on 14 September 2026\",\n          \"anchor\": \"14 September 2026\"\n        }\n      ]\n    },\n    {\n      \"id\": 903,\n      \"segment\": \"Please send us a reading from your meter at your earliest convenience.\",\n      \"confidence\": \"high\",\n      \"obligations\": [\n        {\n          \"kind\": \"response\",\n          \"party\": \"Redhill District Council\",\n          \"ask\": \"Send a meter reading\",\n          \"deadline\": \"at your earliest convenience\",\n          \"anchor\": \"no particular date\"\n        }\n      ]\n    }\n  ]\n}\n\nNow read the passages below. They are a different list: answer for\nthese, not for the example, and use only the ids that appear here.\n\nPassages:\n[\n  {\n    \"id\": 0,\n    \"raw\": \"HHA-RES-1 B19-2854\"\n  },\n  {\n    \"id\": 1,\n    \"raw\": \"Millstone House Harrowdene Housing\"\n  },\n  {\n    \"id\": 2,\n    \"raw\": \"HHA Association\"\n  },\n  {\n    \"id\": 3,\n    \"raw\": \"Malcolm Sims\"\n  },\n  {\n    \"id\": 4,\n    \"raw\": \"44 Fenwick Road Harrowdene HD2 8LJ Tel 0300 123 6060\"\n  },\n  {\n    \"id\": 5,\n    \"raw\": \"Date 12 April 2026\"\n  },\n  {\n    \"id\": 6,\n    \"raw\": \"Flat 05r Laura Mews Reidfurt DE7 5WL\"\n  },\n  {\n    \"id\": 7,\n    \"raw\": \"Our reference UQ-9284511 REMINDER\"\n  },\n  {\n    \"id\": 8,\n    \"raw\": \"Your repair appointment - UQ-9284511\"\n  },\n  {\n    \"id\": 9,\n    \"raw\": \"Dear Malcolm,\"\n  },\n  {\n    \"id\": 10,\n    \"raw\": \"Thank you for reporting the fault with your boiler. We have booked Edwards Maintenance to visit on 10 May 2026 between 8am and 6pm.\"\n  },\n  {\n    \"id\": 11,\n    \"raw\": \"Someone over 18 must be at home to let the engineer in. If nobody is home the visit will be recorded as a no-access and rebooked, which may take several weeks.\"\n  },\n  {\n    \"id\": 12,\n    \"raw\": \"If the time does not suit you, call us on 0300 123 6060 at least two working days before the visit to rearrange. The engineer will carry identification. You are welcome to ask to see it.\"\n  },\n  {\n    \"id\": 13,\n    \"raw\": \"Kind regards,\"\n  },\n  {\n    \"id\": 14,\n    \"raw\": \"Mr Phillip Ferguson Neighbourhood Officer Harrowdene Housing Association\"\n  }\n]\n",
+        "response": "{\"results\":[{\"confidence\":\"low\",\"id\":0,\"obligations\":[],\"segment\":\"HHA-RES-1 B19-2854\"},{\"confidence\":\"low\",\"id\":1,\"obligations\":[],\"segment\":\"Millstone House Harrowdene Housing\"},{\"confidence\":\"low\",\"id\":2,\"obligations\":[],\"segment\":\"HHA Association\"},{\"confidence\":\"low\",\"id\":3,\"obligations\":[],\"segment\":\"Malcolm Sims\"},{\"confidence\":\"low\",\"id\":4,\"obligations\":[],\"segment\":\"44 Fenwick Road Harrowdene HD2 8LJ Tel 0300 123 6060\"},{\"confidence\":\"low\",\"id\":5,\"obligations\":[],\"segment\":\"Date 12 April 2026\"},{\"confidence\":\"low\",\"id\":6,\"obligations\":[],\"segment\":\"Flat 05r Laura Mews Reidfurt DE7 5WL\"},{\"confidence\":\"low\",\"id\":7,\"obligations\":[],\"segment\":\"Our reference UQ-9284511 REMINDER\"},{\"confidence\":\"low\",\"id\":8,\"obligations\":[],\"segment\":\"Your repair appointment - UQ-9284511\"},{\"confidence\":\"low\",\"id\":9,\"obligations\":[],\"segment\":\"Dear Malcolm,\"},{\"confidence\":\"high\",\"id\":10,\"obligations\":[],\"segment\":\"Thank you for reporting the fault with your boiler. We have booked Edwards Maintenance to visit on 10 May 2026 between 8am and 6pm.\"},{\"confidence\":\"high\",\"id\":11,\"obligations\":[{\"anchor\":\"10 May 2026\",\"ask\":\"Be at home to let the engineer in\",\"deadline\":\"on 10 May 2026\",\"kind\":\"attendance\",\"party\":\"Harrowdene Housing Association\"}],\"segment\":\"Someone over 18 must be at home to let the engineer in. If nobody is home the visit will be recorded as a no-access and rebooked, which may take several weeks.\"},{\"confidence\":\"medium\",\"id\":12,\"obligations\":[{\"anchor\":\"at least two working days before the visit\",\"ask\":\"Call to rearrange the appointment\",\"deadline\":\"at least two working days before the visit\",\"kind\":\"response\",\"party\":\"Harrowdene Housing Association\"}],\"segment\":\"If the time does not suit you, call us on 0300 123 6060 at least two working days before the visit to rearrange. The engineer will carry identification. You are welcome to ask to see it.\"},{\"confidence\":\"low\",\"id\":13,\"obligations\":[],\"segment\":\"Kind regards,\"},{\"confidence\":\"low\",\"id\":14,\"obligations\":[],\"segment\":\"Mr Phillip Ferguson Neighbourhood Officer Harrowdene Housing Association\"}]}"
+      }
+    ]
+  },
+  {
+    "id": "app.kttl.letter-to-actions/contractor_appointment-024/contractor_appointment-024-03",
+    "item_id": "contractor_appointment-024-03",
+    "pack": "app.kttl.letter-to-actions",
+    "pack_version": "0.3.0",
+    "prompt_version": "blake3:077f0d79264409a8f736d1c83f45cc6dffc8ef63ba7c6335ddf1bc324ef8c125",
+    "fixture": "contractor_appointment-024.jpg",
+    "fixture_id": "contractor_appointment-024",
+    "strata": [
+      "any-letter",
+      "no-obligation"
+    ],
+    "raw_input": "If the time does not suit you, call us on 0300 123 6060 at least two working days before the visit to rearrange.",
+    "decision_key": "if the time does not suit you, call us on 0300 123 6060 at least two working days before the visit to rearrange.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "absent"
+    },
+    "exchanges": []
+  },
+  {
+    "id": "app.kttl.letter-to-actions/contractor_appointment-024/contractor_appointment-024-04",
+    "item_id": "contractor_appointment-024-04",
+    "pack": "app.kttl.letter-to-actions",
+    "pack_version": "0.3.0",
+    "prompt_version": "blake3:077f0d79264409a8f736d1c83f45cc6dffc8ef63ba7c6335ddf1bc324ef8c125",
+    "fixture": "contractor_appointment-024.jpg",
+    "fixture_id": "contractor_appointment-024",
+    "strata": [
+      "any-letter",
+      "no-obligation"
+    ],
+    "raw_input": "The engineer will carry identification. You are welcome to ask to see it.",
+    "decision_key": "the engineer will carry identification. you are welcome to ask to see it.",
+    "metric": "extraction",
+    "expected": null,
+    "actual": {
+      "outcome": "absent"
+    },
+    "exchanges": []
+  }
+]

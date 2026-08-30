@@ -1,0 +1,835 @@
+{
+  "schema": "kettle/claim-traces@0",
+  "claims": [
+    {
+      "id": "claim-000001",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 8,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "This is your Council Tax demand for the property at 2 Sian Streets, which is in valuation band D. The amount payable for the year is 2,006.04, and your account reference is 863/79402/S.",
+      "candidate": {
+        "confidence": "high",
+        "id": 8,
+        "obligations": [],
+        "segment": "This is your Council Tax demand for the property at 2 Sian Streets, which is in valuation band D. The amount payable for the year is 2,006.04, and your account reference is 863/79402/S."
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 8,
+            "obligations": [],
+            "segment": "This is your Council Tax demand for the property at 2 Sian Streets, which is in valuation band D. The amount payable for the year is 2,006.04, and your account reference is 863/79402/S."
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000002",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 9,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "The balance is payable in 10 instalments of €200.60 on the first of each month, as set out in the schedule printed with this notice.",
+      "candidate": {
+        "confidence": "high",
+        "id": 9,
+        "obligations": [],
+        "segment": "The balance is payable in 10 instalments of €200.60 on the first of each month, as set out in the schedule printed with this notice."
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 9,
+            "obligations": [],
+            "segment": "The balance is payable in 10 instalments of €200.60 on the first of each month, as set out in the schedule printed with this notice."
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000003",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 10,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Your first instalment of £200.60 is due within 30 days of 22 February 2026. If you pay by Direct Debit, no action is needed and we will collect on that date.",
+      "candidate": {
+        "confidence": "high",
+        "id": 10,
+        "obligations": [
+          {
+            "anchor": "22 February 2026",
+            "ask": "Pay the first instalment",
+            "deadline": "within 30 days of 22 February 2026",
+            "kind": "payment",
+            "party": "Brackenfield District Council"
+          }
+        ],
+        "segment": "Your first instalment of £200.60 is due within 30 days of 22 February 2026. If you pay by Direct Debit, no action is needed and we will collect on that date."
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 10,
+            "obligations": [
+              {
+                "anchor": "22 February 2026",
+                "ask": "Pay the first instalment",
+                "deadline": "within 30 days of 22 February 2026",
+                "kind": "payment",
+                "party": "Brackenfield District Council"
+              }
+            ],
+            "segment": "Your first instalment of £200.60 is due within 30 days of 22 February 2026. If you pay by Direct Debit, no action is needed and we will collect on that date."
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000004",
+      "parent_id": "claim-000003",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 10,
+      "candidate_index": 1,
+      "kind": "obligation",
+      "source": "Your first instalment of £200.60 is due within 30 days of 22 February 2026. If you pay by Direct Debit, no action is needed and we will collect on that date.",
+      "candidate": {
+        "anchor": "22 February 2026",
+        "ask": "Pay the first instalment",
+        "deadline": "within 30 days of 22 February 2026",
+        "kind": "payment",
+        "party": "Brackenfield District Council"
+      },
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000005",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 11,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "If your circumstances have changed - for example someone has moved in or out - tell us within 30 days of the date of this letter so your bill can be corrected.",
+      "candidate": {
+        "confidence": "high",
+        "id": 11,
+        "obligations": [
+          {
+            "anchor": "the date of this letter",
+            "ask": "Tell the Council if circumstances have changed",
+            "deadline": "within 30 days of the date of this letter",
+            "kind": "response",
+            "party": "Brackenfield District Council"
+          }
+        ],
+        "segment": "If your circumstances have changed - for example someone has moved in or out - tell us within 30 days of the date of this letter so your bill can be corrected."
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 11,
+            "obligations": [
+              {
+                "anchor": "the date of this letter",
+                "ask": "Tell the Council if circumstances have changed",
+                "deadline": "within 30 days of the date of this letter",
+                "kind": "response",
+                "party": "Brackenfield District Council"
+              }
+            ],
+            "segment": "If your circumstances have changed - for example someone has moved in or out - tell us within 30 days of the date of this letter so your bill can be corrected."
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000006",
+      "parent_id": "claim-000005",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 11,
+      "candidate_index": 1,
+      "kind": "obligation",
+      "source": "If your circumstances have changed - for example someone has moved in or out - tell us within 30 days of the date of this letter so your bill can be corrected.",
+      "candidate": {
+        "anchor": "the date of this letter",
+        "ask": "Tell the Council if circumstances have changed",
+        "deadline": "within 30 days of the date of this letter",
+        "kind": "response",
+        "party": "Brackenfield District Council"
+      },
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000007",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 0,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "BDC/CT/2 B53-4192",
+      "candidate": {
+        "confidence": "low",
+        "id": 0,
+        "obligations": [],
+        "segment": "BDC/CT/2 B53-4192"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "low",
+            "id": 0,
+            "obligations": [],
+            "segment": "BDC/CT/2 B53-4192"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000008",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 1,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Civic Centre Brackenfield District",
+      "candidate": {
+        "confidence": "low",
+        "id": 1,
+        "obligations": [],
+        "segment": "Civic Centre Brackenfield District"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "low",
+            "id": 1,
+            "obligations": [],
+            "segment": "Civic Centre Brackenfield District"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000009",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 2,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "BDC Council",
+      "candidate": {
+        "confidence": "low",
+        "id": 2,
+        "obligations": [],
+        "segment": "BDC Council"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "low",
+            "id": 2,
+            "obligations": [],
+            "segment": "BDC Council"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000010",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 3,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "William Jennings 2 Sian Streets New Maryton E3 8ZA",
+      "candidate": {
+        "confidence": "low",
+        "id": 3,
+        "obligations": [],
+        "segment": "William Jennings 2 Sian Streets New Maryton E3 8ZA"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "low",
+            "id": 3,
+            "obligations": [],
+            "segment": "William Jennings 2 Sian Streets New Maryton E3 8ZA"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000011",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 4,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Priory Lane Brackenfield BR4 2QT Tel 01632 960 214",
+      "candidate": {
+        "confidence": "low",
+        "id": 4,
+        "obligations": [],
+        "segment": "Priory Lane Brackenfield BR4 2QT Tel 01632 960 214"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "low",
+            "id": 4,
+            "obligations": [],
+            "segment": "Priory Lane Brackenfield BR4 2QT Tel 01632 960 214"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000012",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 5,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Date 22 February 2026 Our reference 863/79402/S",
+      "candidate": {
+        "confidence": "low",
+        "id": 5,
+        "obligations": [],
+        "segment": "Date 22 February 2026 Our reference 863/79402/S"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "low",
+            "id": 5,
+            "obligations": [],
+            "segment": "Date 22 February 2026 Our reference 863/79402/S"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000013",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 6,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Council Tax demand notice 863/79402/S",
+      "candidate": {
+        "confidence": "low",
+        "id": 6,
+        "obligations": [],
+        "segment": "Council Tax demand notice 863/79402/S"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "low",
+            "id": 6,
+            "obligations": [],
+            "segment": "Council Tax demand notice 863/79402/S"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000014",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 7,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Dear W Jennings,",
+      "candidate": {
+        "confidence": "low",
+        "id": 7,
+        "obligations": [],
+        "segment": "Dear W Jennings,"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "low",
+            "id": 7,
+            "obligations": [],
+            "segment": "Dear W Jennings,"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000015",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 12,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Details of discounts, exemptions and how bands are set are printed on the reverse of this notice.",
+      "candidate": {
+        "confidence": "low",
+        "id": 12,
+        "obligations": [],
+        "segment": "Details of discounts, exemptions and how bands are set are printed on the reverse of this notice."
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "low",
+            "id": 12,
+            "obligations": [],
+            "segment": "Details of discounts, exemptions and how bands are set are printed on the reverse of this notice."
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000016",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 13,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "If you think your property is in the wrong band you can ask the Valuation Office to review it; this notice remains payable while a review is open. Appeals about liability go to the Valuation Tribunal.",
+      "candidate": {
+        "confidence": "low",
+        "id": 13,
+        "obligations": [],
+        "segment": "If you think your property is in the wrong band you can ask the Valuation Office to review it; this notice remains payable while a review is open. Appeals about liability go to the Valuation Tribunal."
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "low",
+            "id": 13,
+            "obligations": [],
+            "segment": "If you think your property is in the wrong band you can ask the Valuation Office to review it; this notice remains payable while a review is open. Appeals about liability go to the Valuation Tribunal."
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000017",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 14,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Yours sincerely,",
+      "candidate": {
+        "confidence": "low",
+        "id": 14,
+        "obligations": [],
+        "segment": "Yours sincerely,"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "low",
+            "id": 14,
+            "obligations": [],
+            "segment": "Yours sincerely,"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000018",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 15,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Nigel Edwards Revenues Officer Brackenfield District Council",
+      "candidate": {
+        "confidence": "low",
+        "id": 15,
+        "obligations": [],
+        "segment": "Nigel Edwards Revenues Officer Brackenfield District Council"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "low",
+            "id": 15,
+            "obligations": [],
+            "segment": "Nigel Edwards Revenues Officer Brackenfield District Council"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000019",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 16,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Brackenfield District Council is a data controller registered with the ICO (Z3149021). Calls may be recorded.",
+      "candidate": {
+        "confidence": "low",
+        "id": 16,
+        "obligations": [],
+        "segment": "Brackenfield District Council is a data controller registered with the ICO (Z3149021). Calls may be recorded."
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "low",
+            "id": 16,
+            "obligations": [],
+            "segment": "Brackenfield District Council is a data controller registered with the ICO (Z3149021). Calls may be recorded."
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    }
+  ]
+}

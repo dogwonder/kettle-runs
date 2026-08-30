@@ -1,0 +1,948 @@
+{
+  "schema": "kettle/claim-traces@0",
+  "claims": [
+    {
+      "id": "claim-000001",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 9,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Enclosed is our invoice for bathroom tap replacement at Studio 5. The total shown opposite is expected by the date shown beside it.",
+      "candidate": {
+        "confidence": "high",
+        "id": 9,
+        "obligations": [
+          {
+            "anchor": "the date shown beside it",
+            "ask": "Pay the total shown opposite",
+            "deadline": "by the date shown beside it",
+            "kind": "payment",
+            "party": "Kestrel Plumbing & Heating Ltd"
+          }
+        ],
+        "segment": "Enclosed is our invoice for bathroom tap replacement at Studio 5. The total shown opposite is expected by the date shown beside it."
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 9,
+            "obligations": [
+              {
+                "anchor": "the date shown beside it",
+                "ask": "Pay the total shown opposite",
+                "deadline": "by the date shown beside it",
+                "kind": "payment",
+                "party": "Kestrel Plumbing & Heating Ltd"
+              }
+            ],
+            "segment": "Enclosed is our invoice for bathroom tap replacement at Studio 5. The total shown opposite is expected by the date shown beside it."
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000002",
+      "parent_id": "claim-000001",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 9,
+      "candidate_index": 1,
+      "kind": "obligation",
+      "source": "Enclosed is our invoice for bathroom tap replacement at Studio 5. The total shown opposite is expected by the date shown beside it.",
+      "candidate": {
+        "anchor": "the date shown beside it",
+        "ask": "Pay the total shown opposite",
+        "deadline": "by the date shown beside it",
+        "kind": "payment",
+        "party": "Kestrel Plumbing & Heating Ltd"
+      },
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000003",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 10,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Due date 18 October 2026",
+      "candidate": {
+        "confidence": "high",
+        "id": 10,
+        "obligations": [],
+        "segment": "Due date 18 October 2026"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 10,
+            "obligations": [],
+            "segment": "Due date 18 October 2026"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000004",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 11,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Sub total £967.41 VAT £193.48 Total £1,160.89",
+      "candidate": {
+        "confidence": "high",
+        "id": 11,
+        "obligations": [],
+        "segment": "Sub total £967.41 VAT £193.48 Total £1,160.89"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 11,
+            "obligations": [],
+            "segment": "Sub total £967.41 VAT £193.48 Total £1,160.89"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000005",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 12,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "We remind you that this is due by the date shown beside it.",
+      "candidate": {
+        "confidence": "high",
+        "id": 12,
+        "obligations": [
+          {
+            "anchor": "the date shown beside it",
+            "ask": "Pay the invoice",
+            "deadline": "by the date shown beside it",
+            "kind": "payment",
+            "party": "Kestrel Plumbing & Heating Ltd"
+          }
+        ],
+        "segment": "We remind you that this is due by the date shown beside it."
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 12,
+            "obligations": [
+              {
+                "anchor": "the date shown beside it",
+                "ask": "Pay the invoice",
+                "deadline": "by the date shown beside it",
+                "kind": "payment",
+                "party": "Kestrel Plumbing & Heating Ltd"
+              }
+            ],
+            "segment": "We remind you that this is due by the date shown beside it."
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000006",
+      "parent_id": "claim-000005",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 12,
+      "candidate_index": 1,
+      "kind": "obligation",
+      "source": "We remind you that this is due by the date shown beside it.",
+      "candidate": {
+        "anchor": "the date shown beside it",
+        "ask": "Pay the invoice",
+        "deadline": "by the date shown beside it",
+        "kind": "payment",
+        "party": "Kestrel Plumbing & Heating Ltd"
+      },
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000007",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 13,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Invoice number P165604-9. Tax point 14 September 2026. VAT is charged at the standard rate of 20% and our VAT registration number is shown at the foot of this page.",
+      "candidate": {
+        "confidence": "high",
+        "id": 13,
+        "obligations": [],
+        "segment": "Invoice number P165604-9. Tax point 14 September 2026. VAT is charged at the standard rate of 20% and our VAT registration number is shown at the foot of this page."
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 13,
+            "obligations": [],
+            "segment": "Invoice number P165604-9. Tax point 14 September 2026. VAT is charged at the standard rate of 20% and our VAT registration number is shown at the foot of this page."
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000008",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 14,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Please quote the invoice number if you need to contact us. Payment can be made by bank transfer to sort code 24-45-50, account 22961201, using the invoice number as the reference.",
+      "candidate": {
+        "confidence": "high",
+        "id": 14,
+        "obligations": [
+          {
+            "anchor": "no particular date",
+            "ask": "Quote the invoice number if contacting us",
+            "deadline": "no particular date",
+            "kind": "response",
+            "party": "Kestrel Plumbing & Heating Ltd"
+          }
+        ],
+        "segment": "Please quote the invoice number if you need to contact us. Payment can be made by bank transfer to sort code 24-45-50, account 22961201, using the invoice number as the reference."
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 14,
+            "obligations": [
+              {
+                "anchor": "no particular date",
+                "ask": "Quote the invoice number if contacting us",
+                "deadline": "no particular date",
+                "kind": "response",
+                "party": "Kestrel Plumbing & Heating Ltd"
+              }
+            ],
+            "segment": "Please quote the invoice number if you need to contact us. Payment can be made by bank transfer to sort code 24-45-50, account 22961201, using the invoice number as the reference."
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000009",
+      "parent_id": "claim-000008",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 14,
+      "candidate_index": 1,
+      "kind": "obligation",
+      "source": "Please quote the invoice number if you need to contact us. Payment can be made by bank transfer to sort code 24-45-50, account 22961201, using the invoice number as the reference.",
+      "candidate": {
+        "anchor": "no particular date",
+        "ask": "Quote the invoice number if contacting us",
+        "deadline": "no particular date",
+        "kind": "response",
+        "party": "Kestrel Plumbing & Heating Ltd"
+      },
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000010",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 15,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Thank you for your business.",
+      "candidate": {
+        "confidence": "high",
+        "id": 15,
+        "obligations": [],
+        "segment": "Thank you for your business."
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 15,
+            "obligations": [],
+            "segment": "Thank you for your business."
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000011",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 16,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Yours sincerely,",
+      "candidate": {
+        "confidence": "high",
+        "id": 16,
+        "obligations": [],
+        "segment": "Yours sincerely,"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 16,
+            "obligations": [],
+            "segment": "Yours sincerely,"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000012",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 17,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Leonard Moore Director Kestrel Plumbing & Heating Ltd",
+      "candidate": {
+        "confidence": "high",
+        "id": 17,
+        "obligations": [],
+        "segment": "Leonard Moore Director Kestrel Plumbing & Heating Ltd"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 17,
+            "obligations": [],
+            "segment": "Leonard Moore Director Kestrel Plumbing & Heating Ltd"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000013",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 18,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Kestrel Plumbing & Heating Ltd, Registered in England no. 07654321. VAT no. 987 6543 21. Gas Safe registered (Invented no. 000000).",
+      "candidate": {
+        "confidence": "high",
+        "id": 18,
+        "obligations": [],
+        "segment": "Kestrel Plumbing & Heating Ltd, Registered in England no. 07654321. VAT no. 987 6543 21. Gas Safe registered (Invented no. 000000)."
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 18,
+            "obligations": [],
+            "segment": "Kestrel Plumbing & Heating Ltd, Registered in England no. 07654321. VAT no. 987 6543 21. Gas Safe registered (Invented no. 000000)."
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000014",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 0,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "-8B3-6679 Kestrel Plumbing & Heating Unit 3, Foundry Yard",
+      "candidate": {
+        "confidence": "low",
+        "id": 0,
+        "obligations": [],
+        "segment": "-8B3-6679 Kestrel Plumbing & Heating Unit 3, Foundry Yard"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "low",
+            "id": 0,
+            "obligations": [],
+            "segment": "-8B3-6679 Kestrel Plumbing & Heating Unit 3, Foundry Yard"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000015",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 1,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "KPH Ltd",
+      "candidate": {
+        "confidence": "low",
+        "id": 1,
+        "obligations": [],
+        "segment": "KPH Ltd"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "low",
+            "id": 1,
+            "obligations": [],
+            "segment": "KPH Ltd"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000016",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 2,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Kestrel Lane Marlow Green MG7 2BT Tel 01632 960 118",
+      "candidate": {
+        "confidence": "low",
+        "id": 2,
+        "obligations": [],
+        "segment": "Kestrel Lane Marlow Green MG7 2BT Tel 01632 960 118"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "low",
+            "id": 2,
+            "obligations": [],
+            "segment": "Kestrel Lane Marlow Green MG7 2BT Tel 01632 960 118"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000017",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 3,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Dr Marc Sanderson",
+      "candidate": {
+        "confidence": "low",
+        "id": 3,
+        "obligations": [],
+        "segment": "Dr Marc Sanderson"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "low",
+            "id": 3,
+            "obligations": [],
+            "segment": "Dr Marc Sanderson"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000018",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 4,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Studio 5 Patel Drives Riceland S1 2XB",
+      "candidate": {
+        "confidence": "low",
+        "id": 4,
+        "obligations": [],
+        "segment": "Studio 5 Patel Drives Riceland S1 2XB"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "low",
+            "id": 4,
+            "obligations": [],
+            "segment": "Studio 5 Patel Drives Riceland S1 2XB"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000019",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 5,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Date 14 September 2026 Our reference P165604-9",
+      "candidate": {
+        "confidence": "low",
+        "id": 5,
+        "obligations": [],
+        "segment": "Date 14 September 2026 Our reference P165604-9"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "low",
+            "id": 5,
+            "obligations": [],
+            "segment": "Date 14 September 2026 Our reference P165604-9"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000020",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 6,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "IMPORTANT",
+      "candidate": {
+        "confidence": "low",
+        "id": 6,
+        "obligations": [],
+        "segment": "IMPORTANT"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "low",
+            "id": 6,
+            "obligations": [],
+            "segment": "IMPORTANT"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000021",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 7,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Invoice P165604-9",
+      "candidate": {
+        "confidence": "low",
+        "id": 7,
+        "obligations": [],
+        "segment": "Invoice P165604-9"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "low",
+            "id": 7,
+            "obligations": [],
+            "segment": "Invoice P165604-9"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000022",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 8,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Dear D Sanderson,",
+      "candidate": {
+        "confidence": "low",
+        "id": 8,
+        "obligations": [],
+        "segment": "Dear D Sanderson,"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "low",
+            "id": 8,
+            "obligations": [],
+            "segment": "Dear D Sanderson,"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    }
+  ]
+}

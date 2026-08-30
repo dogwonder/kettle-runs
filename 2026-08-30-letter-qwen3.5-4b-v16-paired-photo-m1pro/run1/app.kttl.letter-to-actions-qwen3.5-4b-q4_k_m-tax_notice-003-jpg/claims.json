@@ -1,0 +1,792 @@
+{
+  "schema": "kettle/claim-traces@0",
+  "claims": [
+    {
+      "id": "claim-000001",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 0,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "NRAO SA 07 National Revenue Assessment Assessment Centre",
+      "candidate": {
+        "confidence": "high",
+        "id": 0,
+        "obligations": [],
+        "segment": "NRAO SA 07 National Revenue Assessment Assessment Centre"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 0,
+            "obligations": [],
+            "segment": "NRAO SA 07 National Revenue Assessment Assessment Centre"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000002",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 1,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Office Abbie Duncan",
+      "candidate": {
+        "confidence": "high",
+        "id": 1,
+        "obligations": [],
+        "segment": "Office Abbie Duncan"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 1,
+            "obligations": [],
+            "segment": "Office Abbie Duncan"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000003",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 2,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "PO Box 4100 Kelsworth KW9 1AA Tel 0300 200 0000",
+      "candidate": {
+        "confidence": "high",
+        "id": 2,
+        "obligations": [],
+        "segment": "PO Box 4100 Kelsworth KW9 1AA Tel 0300 200 0000"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 2,
+            "obligations": [],
+            "segment": "PO Box 4100 Kelsworth KW9 1AA Tel 0300 200 0000"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000004",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 3,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Date 13 August 2026",
+      "candidate": {
+        "confidence": "high",
+        "id": 3,
+        "obligations": [],
+        "segment": "Date 13 August 2026"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 3,
+            "obligations": [],
+            "segment": "Date 13 August 2026"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000005",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 4,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "43 Cameron Wells Our reference HC-3834657 North Danielleland G2S 8GL",
+      "candidate": {
+        "confidence": "high",
+        "id": 4,
+        "obligations": [],
+        "segment": "43 Cameron Wells Our reference HC-3834657 North Danielleland G2S 8GL"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 4,
+            "obligations": [],
+            "segment": "43 Cameron Wells Our reference HC-3834657 North Danielleland G2S 8GL"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000006",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 5,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Notice to complete a tax return - reference HC-3834657",
+      "candidate": {
+        "confidence": "high",
+        "id": 5,
+        "obligations": [],
+        "segment": "Notice to complete a tax return - reference HC-3834657"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 5,
+            "obligations": [],
+            "segment": "Notice to complete a tax return - reference HC-3834657"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000007",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 6,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Dear A Duncan,",
+      "candidate": {
+        "confidence": "high",
+        "id": 6,
+        "obligations": [],
+        "segment": "Dear A Duncan,"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 6,
+            "obligations": [],
+            "segment": "Dear A Duncan,"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000008",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 7,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Our records show you are required to complete a return for the year ending 5 April 2026. Your unique taxpayer reference is 09839 30103. Please keep it safe and quote it whenever you contact us.",
+      "candidate": {
+        "confidence": "high",
+        "id": 7,
+        "obligations": [],
+        "segment": "Our records show you are required to complete a return for the year ending 5 April 2026. Your unique taxpayer reference is 09839 30103. Please keep it safe and quote it whenever you contact us."
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 7,
+            "obligations": [],
+            "segment": "Our records show you are required to complete a return for the year ending 5 April 2026. Your unique taxpayer reference is 09839 30103. Please keep it safe and quote it whenever you contact us."
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000009",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 8,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "A paper return has an earlier deadline than one filed online. The general filing dates for every year are printed in the box below; where this letter gives you a date, that date applies.",
+      "candidate": {
+        "confidence": "high",
+        "id": 8,
+        "obligations": [],
+        "segment": "A paper return has an earlier deadline than one filed online. The general filing dates for every year are printed in the box below; where this letter gives you a date, that date applies."
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 8,
+            "obligations": [],
+            "segment": "A paper return has an earlier deadline than one filed online. The general filing dates for every year are printed in the box below; where this letter gives you a date, that date applies."
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000010",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 9,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Your return must reach us by 22 September 2026. A return received after that date attracts an automatic penalty of £100.00 even if no tax is owed.",
+      "candidate": {
+        "confidence": "high",
+        "id": 9,
+        "obligations": [
+          {
+            "anchor": "22 September 2026",
+            "ask": "Submit your tax return",
+            "deadline": "by 22 September 2026",
+            "kind": "response",
+            "party": "National Revenue Assessment Office"
+          }
+        ],
+        "segment": "Your return must reach us by 22 September 2026. A return received after that date attracts an automatic penalty of £100.00 even if no tax is owed."
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 9,
+            "obligations": [
+              {
+                "anchor": "22 September 2026",
+                "ask": "Submit your tax return",
+                "deadline": "by 22 September 2026",
+                "kind": "response",
+                "party": "National Revenue Assessment Office"
+              }
+            ],
+            "segment": "Your return must reach us by 22 September 2026. A return received after that date attracts an automatic penalty of £100.00 even if no tax is owed."
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000011",
+      "parent_id": "claim-000010",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 9,
+      "candidate_index": 1,
+      "kind": "obligation",
+      "source": "Your return must reach us by 22 September 2026. A return received after that date attracts an automatic penalty of £100.00 even if no tax is owed.",
+      "candidate": {
+        "anchor": "22 September 2026",
+        "ask": "Submit your tax return",
+        "deadline": "by 22 September 2026",
+        "kind": "response",
+        "party": "National Revenue Assessment Office"
+      },
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000012",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 10,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Any tax you owe for the year is payable by the same date. If you cannot pay in full, call us on 0300 200 0000 before the date passes.",
+      "candidate": {
+        "confidence": "high",
+        "id": 10,
+        "obligations": [
+          {
+            "anchor": "22 September 2026",
+            "ask": "Pay any tax owed",
+            "deadline": "by 22 September 2026",
+            "kind": "payment",
+            "party": "National Revenue Assessment Office"
+          }
+        ],
+        "segment": "Any tax you owe for the year is payable by the same date. If you cannot pay in full, call us on 0300 200 0000 before the date passes."
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 10,
+            "obligations": [
+              {
+                "anchor": "22 September 2026",
+                "ask": "Pay any tax owed",
+                "deadline": "by 22 September 2026",
+                "kind": "payment",
+                "party": "National Revenue Assessment Office"
+              }
+            ],
+            "segment": "Any tax you owe for the year is payable by the same date. If you cannot pay in full, call us on 0300 200 0000 before the date passes."
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000013",
+      "parent_id": "claim-000012",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 10,
+      "candidate_index": 1,
+      "kind": "obligation",
+      "source": "Any tax you owe for the year is payable by the same date. If you cannot pay in full, call us on 0300 200 0000 before the date passes.",
+      "candidate": {
+        "anchor": "22 September 2026",
+        "ask": "Pay any tax owed",
+        "deadline": "by 22 September 2026",
+        "kind": "payment",
+        "party": "National Revenue Assessment Office"
+      },
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000014",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 11,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "If you no longer need to complete a return - for instance you have stopped being self-employed write to us and we will review your record.",
+      "candidate": {
+        "confidence": "medium",
+        "id": 11,
+        "obligations": [
+          {
+            "anchor": "no particular date",
+            "ask": "Write to us to stop completing a return",
+            "deadline": "no particular date",
+            "kind": "response",
+            "party": "National Revenue Assessment Office"
+          }
+        ],
+        "segment": "If you no longer need to complete a return - for instance you have stopped being self-employed write to us and we will review your record."
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "medium",
+            "id": 11,
+            "obligations": [
+              {
+                "anchor": "no particular date",
+                "ask": "Write to us to stop completing a return",
+                "deadline": "no particular date",
+                "kind": "response",
+                "party": "National Revenue Assessment Office"
+              }
+            ],
+            "segment": "If you no longer need to complete a return - for instance you have stopped being self-employed write to us and we will review your record."
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000015",
+      "parent_id": "claim-000014",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 11,
+      "candidate_index": 1,
+      "kind": "obligation",
+      "source": "If you no longer need to complete a return - for instance you have stopped being self-employed write to us and we will review your record.",
+      "candidate": {
+        "anchor": "no particular date",
+        "ask": "Write to us to stop completing a return",
+        "deadline": "no particular date",
+        "kind": "response",
+        "party": "National Revenue Assessment Office"
+      },
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000016",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 12,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Paper returns: 31 October following the end of the tax year. Online returns and any balancing payment: 31 January following the end of the tax year. Interest runs from the day after a payment date.",
+      "candidate": {
+        "confidence": "high",
+        "id": 12,
+        "obligations": [],
+        "segment": "Paper returns: 31 October following the end of the tax year. Online returns and any balancing payment: 31 January following the end of the tax year. Interest runs from the day after a payment date."
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 12,
+            "obligations": [],
+            "segment": "Paper returns: 31 October following the end of the tax year. Online returns and any balancing payment: 31 January following the end of the tax year. Interest runs from the day after a payment date."
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000017",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 13,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Yours sincerely,",
+      "candidate": {
+        "confidence": "high",
+        "id": 13,
+        "obligations": [],
+        "segment": "Yours sincerely,"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 13,
+            "obligations": [],
+            "segment": "Yours sincerely,"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000018",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 14,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Leon Davison Assessment Officer National Revenue Assessment Office",
+      "candidate": {
+        "confidence": "high",
+        "id": 14,
+        "obligations": [],
+        "segment": "Leon Davison Assessment Officer National Revenue Assessment Office"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 14,
+            "obligations": [],
+            "segment": "Leon Davison Assessment Officer National Revenue Assessment Office"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000019",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 15,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "If you write to us, quote your reference. Information about how we use your data is at the address above.",
+      "candidate": {
+        "confidence": "high",
+        "id": 15,
+        "obligations": [],
+        "segment": "If you write to us, quote your reference. Information about how we use your data is at the address above."
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 15,
+            "obligations": [],
+            "segment": "If you write to us, quote your reference. Information about how we use your data is at the address above."
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    }
+  ]
+}
