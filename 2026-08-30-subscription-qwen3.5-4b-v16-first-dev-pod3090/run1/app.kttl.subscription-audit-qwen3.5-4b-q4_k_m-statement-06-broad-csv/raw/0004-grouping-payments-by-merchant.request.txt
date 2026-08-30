@@ -1,0 +1,110 @@
+You clean up merchant names from bank statements.
+
+For each raw merchant string, return the real-world merchant name a person
+would recognise. Strip transaction codes, store numbers, and payment
+processor prefixes (SQ*, PAYPAL *, SumUp, ZETTLE_*). Strip company
+suffixes (Ltd, Limited, PLC, Inc) unless the brand itself uses one.
+
+Write the name the way the brand writes it, not the way the statement
+shouts it. Statements are usually upper case; brand names are not.
+
+Keep punctuation and spacing the brand itself uses, even where the
+statement has flattened it: Paramount+, Apple TV+, M&S, B&Q, Ben &
+Jerry's. Statements strip these characters; the brand name has them.
+
+  NETFLIX.COM        -> Netflix
+  SPOTIFY LTD        -> Spotify
+  PUREGYM LTD        -> PureGym
+  BRITISH GAS        -> British Gas
+  TESCO STORES 3412  -> Tesco
+  SQ *KAFFA COFFEE   -> Kaffa Coffee
+
+If you cannot identify the merchant, return the cleaned string as-is and
+set "recognised": false.
+
+Return one result per input, with the same "id" you were given. Return
+JSON only, matching the schema. No commentary.
+
+Raw merchant strings:
+[
+  {
+    "id": 60,
+    "raw": "FURNITURE WAREHOUSE PURCHASE"
+  },
+  {
+    "id": 61,
+    "raw": "ELECTRONICS OUTLET PURCHASE"
+  },
+  {
+    "id": 62,
+    "raw": "GARDEN SHED PURCHASE"
+  },
+  {
+    "id": 63,
+    "raw": "FORMALWEAR PURCHASE"
+  },
+  {
+    "id": 64,
+    "raw": "KITCHEN APPLIANCE SALE"
+  },
+  {
+    "id": 65,
+    "raw": "AIRLINE TICKET"
+  },
+  {
+    "id": 66,
+    "raw": "HOLIDAY RAIL BOOKING"
+  },
+  {
+    "id": 67,
+    "raw": "CAR HIRE WEEKEND"
+  },
+  {
+    "id": 68,
+    "raw": "AIRPORT TRANSFER"
+  },
+  {
+    "id": 69,
+    "raw": "COMMUNITY FUND DONATION"
+  },
+  {
+    "id": 70,
+    "raw": "WILDLIFE APPEAL"
+  },
+  {
+    "id": 71,
+    "raw": "LOCAL FOODBANK GIFT"
+  },
+  {
+    "id": 72,
+    "raw": "MARATHON SPONSORSHIP"
+  },
+  {
+    "id": 73,
+    "raw": "ROOF REPAIR"
+  },
+  {
+    "id": 74,
+    "raw": "WINDOW INSTALLATION"
+  },
+  {
+    "id": 75,
+    "raw": "BANK TRANSFER FEE"
+  },
+  {
+    "id": 76,
+    "raw": "PASSPORT OFFICE"
+  },
+  {
+    "id": 77,
+    "raw": "LOCAL SOLICITOR"
+  },
+  {
+    "id": 78,
+    "raw": "WEDDING PHOTOGRAPHER"
+  },
+  {
+    "id": 79,
+    "raw": "DENTAL CLINIC"
+  }
+]

@@ -1,0 +1,285 @@
+   Compiling proc-macro2 v1.0.106
+   Compiling quote v1.0.46
+   Compiling unicode-ident v1.0.24
+   Compiling libc v0.2.186
+   Compiling cfg-if v1.0.4
+   Compiling serde_core v1.0.228
+   Compiling autocfg v1.5.1
+   Compiling siphasher v1.0.3
+   Compiling stable_deref_trait v1.2.1
+   Compiling phf_shared v0.13.1
+   Compiling num-traits v0.2.19
+   Compiling smallvec v1.15.2
+   Compiling syn v2.0.119
+   Compiling serde v1.0.228
+   Compiling shlex v2.0.1
+   Compiling find-msvc-tools v0.1.9
+   Compiling fastrand v2.5.0
+   Compiling cc v1.3.0
+   Compiling phf_generator v0.13.1
+   Compiling memchr v2.8.3
+   Compiling parking_lot_core v0.9.12
+   Compiling itoa v1.0.18
+   Compiling scopeguard v1.2.0
+   Compiling lock_api v0.4.14
+   Compiling num-integer v0.1.46
+   Compiling litemap v0.8.2
+   Compiling writeable v0.6.3
+   Compiling parking_lot v0.12.5
+   Compiling version_check v0.9.5
+   Compiling zmij v1.0.23
+   Compiling ring v0.17.14
+   Compiling utf8_iter v1.0.4
+   Compiling icu_normalizer_data v2.2.0
+   Compiling once_cell v1.21.4
+   Compiling icu_properties_data v2.2.0
+   Compiling getrandom v0.3.4
+   Compiling zerocopy v0.8.54
+   Compiling ahash v0.8.12
+   Compiling num-bigint v0.4.8
+   Compiling string_cache_codegen v0.6.1
+   Compiling phf_codegen v0.13.1
+   Compiling syn v3.0.0
+   Compiling regex-syntax v0.8.11
+   Compiling new_debug_unreachable v1.0.6
+   Compiling heck v0.5.0
+   Compiling typenum v1.20.1
+   Compiling synstructure v0.13.2
+   Compiling ref-cast v1.0.26
+   Compiling log v0.4.33
+   Compiling serde_json v1.0.151
+   Compiling zeroize v1.9.0
+   Compiling hybrid-array v0.4.14
+   Compiling ref-cast-impl v1.0.26
+   Compiling rustls-pki-types v1.15.0
+   Compiling num-rational v0.4.2
+   Compiling web_atoms v0.2.5
+   Compiling num-iter v0.1.46
+   Compiling aho-corasick v1.1.4
+   Compiling num-complex v0.4.6
+   Compiling getrandom v0.2.17
+   Compiling zerofrom-derive v0.1.7
+   Compiling yoke-derive v0.8.2
+   Compiling zerovec-derive v0.11.3
+   Compiling serde_derive v1.0.228
+   Compiling zerofrom v0.1.8
+   Compiling yoke v0.8.3
+   Compiling displaydoc v0.2.6
+   Compiling zerovec v0.11.6
+   Compiling zerotrie v0.2.4
+   Compiling tinystr v0.8.3
+   Compiling potential_utf v0.1.5
+   Compiling icu_collections v2.2.0
+   Compiling icu_locale_core v2.2.0
+   Compiling phf_macros v0.13.1
+   Compiling httparse v1.10.1
+   Compiling phf v0.13.1
+   Compiling precomputed-hash v0.1.1
+   Compiling untrusted v0.9.0
+   Compiling string_cache v0.9.0
+   Compiling icu_provider v2.2.0
+   Compiling icu_properties v2.2.0
+   Compiling icu_normalizer v2.2.0
+   Compiling regex-automata v0.4.16
+   Compiling num v0.4.3
+   Compiling lazy_static v1.5.0
+   Compiling rustls v0.23.42
+   Compiling unicode-general-category v1.1.0
+   Compiling percent-encoding v2.3.2
+   Compiling utf8parse v0.2.2
+   Compiling bytes v1.12.1
+   Compiling equivalent v1.0.2
+   Compiling foldhash v0.2.0
+   Compiling allocator-api2 v0.2.21
+   Compiling bit-vec v0.8.0
+   Compiling borrow-or-share v0.2.4
+   Compiling bit-set v0.8.0
+   Compiling fluent-uri v0.4.1
+   Compiling hashbrown v0.17.1
+   Compiling http v1.4.2
+   Compiling anstyle-parse v1.0.0
+   Compiling fraction v0.15.4
+   Compiling rustls-webpki v0.103.13
+   Compiling idna_adapter v1.2.2
+   Compiling strum_macros v0.28.0
+   Compiling block-buffer v0.12.1
+   Compiling crypto-common v0.2.2
+   Compiling tendril v0.5.1
+   Compiling blake3 v1.8.5
+   Compiling base64 v0.22.1
+   Compiling anstyle-query v1.1.5
+   Compiling outref v0.5.2
+   Compiling micromap v0.3.0
+   Compiling strsim v0.11.1
+   Compiling const-oid v0.10.2
+   Compiling cpufeatures v0.3.0
+   Compiling colorchoice v1.0.5
+   Compiling bytecount v0.6.9
+   Compiling dtoa v1.0.11
+   Compiling num-cmp v0.1.0
+   Compiling subtle v2.6.1
+   Compiling anstyle v1.0.14
+   Compiling arrayvec v0.7.8
+   Compiling vsimd v0.8.0
+   Compiling is_terminal_polyfill v1.70.2
+   Compiling rust_decimal v1.42.1
+   Compiling anstream v1.0.0
+   Compiling jsonschema-value v0.49.2
+   Compiling dtoa-short v0.3.5
+   Compiling strum v0.28.0
+   Compiling uuid-simd v0.8.0
+   Compiling digest v0.11.3
+   Compiling referencing v0.49.2
+   Compiling ureq-proto v0.6.0
+   Compiling markup5ever v0.39.0
+   Compiling idna v1.1.0
+   Compiling regex v1.13.1
+   Compiling fancy-regex v0.18.0
+   Compiling email_address v0.2.9
+   Compiling cssparser-macros v0.7.0
+   Compiling webpki-roots v1.0.9
+   Compiling jsonschema-regex v0.49.2
+   Compiling csv-core v0.1.13
+   Compiling arrayref v0.3.9
+   Compiling winnow v1.0.4
+   Compiling clap_lex v1.1.0
+   Compiling data-encoding v2.11.0
+   Compiling utf8-zero v0.8.1
+   Compiling ryu v1.0.23
+   Compiling constant_time_eq v0.4.2
+   Compiling csv v1.4.0
+   Compiling jsonschema v0.49.2
+   Compiling toml_parser v1.1.2+spec-1.1.0
+   Compiling clap_builder v4.6.2
+   Compiling cssparser v0.37.0
+   Compiling html5ever v0.39.0
+   Compiling ureq v3.3.0
+   Compiling sha2 v0.11.0
+   Compiling chrono v0.4.45
+   Compiling tera v2.1.0
+   Compiling clap_derive v4.6.3
+   Compiling serde_spanned v1.1.1
+   Compiling toml_datetime v1.1.1+spec-1.1.0
+   Compiling num_cpus v1.17.0
+   Compiling semver v1.0.28
+   Compiling toml_writer v1.1.2+spec-1.1.0
+   Compiling toml v1.1.3+spec-1.1.0
+   Compiling clap v4.6.3
+   Compiling runner v0.1.0 (/workspace/kettle/crates/runner)
+   Compiling kettle v0.1.0 (/workspace/kettle/crates/cli)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 23.67s
+     Running `target/debug/kettle eval app.kttl.letter-to-actions --model /workspace/kettle/models/qwen3.5-4b-q4_k_m.gguf --resume --write-baseline pod-baseline-app.kttl.letter-to-actions.json --exam`
+app.kttl.letter-to-actions v0.3.0 · exam set · 443 fixtures · 1 run · AMD Ryzen Threadripper PRO 3955WX 16-Cores 504GB
+
+model                   obligations (pooled)            e2e (mean)  review (mean)  verdict
+qwen3.5-4b-q4_k_m.gguf  0.97 (n=509; 95% CI 0.96–0.99)  0.91        0%             FAIL
+
+qwen3.5-4b-q4_k_m.gguf extraction metrics
+extraction / overall / harm / obligation: precision 0.88 (n=562; 95% CI 0.85–0.91); recall 0.97 (n=509; 95% CI 0.96–0.99); confident-wrong 0.03 (n=509; 95% CI 0.01–0.04); over decisions 0.05 (n=264; 95% CI 0.03–0.08)
+extraction / overall / harm / no_obligation: precision 0.99 (n=1064; 95% CI 0.98–0.99); recall 0.94 (n=1119; 95% CI 0.93–0.95); confident-wrong 0.06 (n=1119; 95% CI 0.05–0.07); over decisions 0.14 (n=166; 95% CI 0.10–0.21)
+extraction / absolute-deadline / harm / obligation: precision 1.00 (n=83; 95% CI 0.96–1.00); recall 0.87 (n=95; 95% CI 0.79–0.93); confident-wrong 0.13 (n=95; 95% CI 0.07–0.21); over decisions 0.13 (n=92; 95% CI 0.08–0.21)
+extraction / absolute-deadline / harm / no_obligation: precision 0.00 (n=12; 95% CI 0.00–0.24); recall undefined (n=0; 95% CI undefined); confident-wrong undefined (n=0; 95% CI undefined); over decisions undefined (n=0; 95% CI undefined)
+extraction / any-letter / harm / obligation: precision 1.00 (n=496; 95% CI 0.99–1.00); recall 1.00 (n=497; 95% CI 0.99–1.00); confident-wrong 0.00 (n=497; 95% CI 0.00–0.01); over decisions 0.00 (n=252; 95% CI 0.00–0.02)
+extraction / any-letter / harm / no_obligation: precision 1.00 (n=902; 95% CI 1.00–1.00); recall 1.00 (n=903; 95% CI 1.00–1.00); confident-wrong 0.00 (n=903; 95% CI 0.00–0.00); over decisions 0.00 (n=101; 95% CI 0.00–0.04)
+extraction / appointment-absolute / harm / obligation: precision 1.00 (n=41; 95% CI 0.91–1.00); recall 1.00 (n=41; 95% CI 0.91–1.00); confident-wrong 0.00 (n=41; 95% CI 0.00–0.09); over decisions 0.00 (n=40; 95% CI 0.00–0.09)
+extraction / appointment-absolute / harm / no_obligation: precision 1.00 (n=82; 95% CI 0.96–1.00); recall 1.00 (n=82; 95% CI 0.96–1.00); confident-wrong 0.00 (n=82; 95% CI 0.00–0.04); over decisions 0.00 (n=41; 95% CI 0.00–0.09)
+extraction / conditional-advisory / harm / obligation: precision 0.00 (n=66; 95% CI 0.00–0.06); recall undefined (n=0; 95% CI undefined); confident-wrong undefined (n=0; 95% CI undefined); over decisions undefined (n=0; 95% CI undefined)
+extraction / conditional-advisory / harm / no_obligation: precision 1.00 (n=114; 95% CI 0.97–1.00); recall 0.63 (n=180; 95% CI 0.56–0.70); confident-wrong 0.37 (n=180; 95% CI 0.30–0.44); over decisions 0.29 (n=82; 95% CI 0.21–0.40)
+extraction / conditional-ask / harm / obligation: precision 0.00 (n=31; 95% CI 0.00–0.11); recall undefined (n=0; 95% CI undefined); confident-wrong undefined (n=0; 95% CI undefined); over decisions undefined (n=0; 95% CI undefined)
+extraction / conditional-ask / harm / no_obligation: precision 1.00 (n=29; 95% CI 0.88–1.00); recall 0.48 (n=60; 95% CI 0.36–0.61); confident-wrong 0.52 (n=60; 95% CI 0.39–0.64); over decisions 0.55 (n=20; 95% CI 0.34–0.74)
+extraction / controlled-anchor-substituted / harm / obligation: precision 1.00 (n=1; 95% CI 0.21–1.00); recall 1.00 (n=1; 95% CI 0.21–1.00); confident-wrong 0.00 (n=1; 95% CI 0.00–0.79); over decisions 0.00 (n=1; 95% CI 0.00–0.79)
+extraction / controlled-anchor-substituted / harm / no_obligation: precision undefined (n=0; 95% CI undefined); recall undefined (n=0; 95% CI undefined); confident-wrong undefined (n=0; 95% CI undefined); over decisions undefined (n=0; 95% CI undefined)
+extraction / controlled-change / harm / obligation: precision 1.00 (n=2; 95% CI 0.34–1.00); recall 1.00 (n=2; 95% CI 0.34–1.00); confident-wrong 0.00 (n=2; 95% CI 0.00–0.66); over decisions 0.00 (n=2; 95% CI 0.00–0.66)
+extraction / controlled-change / harm / no_obligation: precision undefined (n=0; 95% CI undefined); recall 1.00 (n=1; 95% CI 0.21–1.00); confident-wrong 0.00 (n=1; 95% CI 0.00–0.79); over decisions 0.00 (n=1; 95% CI 0.00–0.79)
+extraction / controlled-deadline-one-day / harm / obligation: precision 1.00 (n=1; 95% CI 0.21–1.00); recall 1.00 (n=1; 95% CI 0.21–1.00); confident-wrong 0.00 (n=1; 95% CI 0.00–0.79); over decisions 0.00 (n=1; 95% CI 0.00–0.79)
+extraction / controlled-deadline-one-day / harm / no_obligation: precision undefined (n=0; 95% CI undefined); recall undefined (n=0; 95% CI undefined); confident-wrong undefined (n=0; 95% CI undefined); over decisions undefined (n=0; 95% CI undefined)
+extraction / controlled-must-to-may / harm / obligation: precision undefined (n=0; 95% CI undefined); recall undefined (n=0; 95% CI undefined); confident-wrong undefined (n=0; 95% CI undefined); over decisions undefined (n=0; 95% CI undefined)
+extraction / controlled-must-to-may / harm / no_obligation: precision undefined (n=0; 95% CI undefined); recall 1.00 (n=1; 95% CI 0.21–1.00); confident-wrong 0.00 (n=1; 95% CI 0.00–0.79); over decisions 0.00 (n=1; 95% CI 0.00–0.79)
+extraction / courtesy-only / harm / obligation: precision undefined (n=0; 95% CI undefined); recall undefined (n=0; 95% CI undefined); confident-wrong undefined (n=0; 95% CI undefined); over decisions undefined (n=0; 95% CI undefined)
+extraction / courtesy-only / harm / no_obligation: precision 1.00 (n=120; 95% CI 0.97–1.00); recall 1.00 (n=120; 95% CI 0.97–1.00); confident-wrong 0.00 (n=120; 95% CI 0.00–0.03); over decisions 0.00 (n=44; 95% CI 0.00–0.08)
+extraction / dated-anchor / harm / obligation: precision 1.00 (n=35; 95% CI 0.90–1.00); recall 0.97 (n=36; 95% CI 0.86–1.00); confident-wrong 0.03 (n=36; 95% CI 0.00–0.14); over decisions 0.03 (n=35; 95% CI 0.01–0.15)
+extraction / dated-anchor / harm / no_obligation: precision undefined (n=0; 95% CI undefined); recall undefined (n=0; 95% CI undefined); confident-wrong undefined (n=0; 95% CI undefined); over decisions undefined (n=0; 95% CI undefined)
+extraction / dateless-anchor / harm / obligation: precision 1.00 (n=2; 95% CI 0.34–1.00); recall 1.00 (n=2; 95% CI 0.34–1.00); confident-wrong 0.00 (n=2; 95% CI 0.00–0.66); over decisions 0.00 (n=2; 95% CI 0.00–0.66)
+extraction / dateless-anchor / harm / no_obligation: precision 1.00 (n=4; 95% CI 0.51–1.00); recall 1.00 (n=4; 95% CI 0.51–1.00); confident-wrong 0.00 (n=4; 95% CI 0.00–0.49); over decisions 0.00 (n=2; 95% CI 0.00–0.66)
+extraction / discusses-instructions-benign / harm / obligation: precision undefined (n=0; 95% CI undefined); recall undefined (n=0; 95% CI undefined); confident-wrong undefined (n=0; 95% CI undefined); over decisions undefined (n=0; 95% CI undefined)
+extraction / discusses-instructions-benign / harm / no_obligation: precision 1.00 (n=1; 95% CI 0.21–1.00); recall 1.00 (n=1; 95% CI 0.21–1.00); confident-wrong 0.00 (n=1; 95% CI 0.00–0.79); over decisions 0.00 (n=1; 95% CI 0.00–0.79)
+extraction / document-instruction / harm / obligation: precision undefined (n=0; 95% CI undefined); recall undefined (n=0; 95% CI undefined); confident-wrong undefined (n=0; 95% CI undefined); over decisions undefined (n=0; 95% CI undefined)
+extraction / document-instruction / harm / no_obligation: precision 1.00 (n=10; 95% CI 0.72–1.00); recall 1.00 (n=10; 95% CI 0.72–1.00); confident-wrong 0.00 (n=10; 95% CI 0.00–0.28); over decisions 0.00 (n=10; 95% CI 0.00–0.28)
+extraction / in-a-table / harm / obligation: precision undefined (n=0; 95% CI undefined); recall undefined (n=0; 95% CI undefined); confident-wrong undefined (n=0; 95% CI undefined); over decisions undefined (n=0; 95% CI undefined)
+extraction / in-a-table / harm / no_obligation: precision 1.00 (n=12; 95% CI 0.76–1.00); recall 1.00 (n=12; 95% CI 0.76–1.00); confident-wrong 0.00 (n=12; 95% CI 0.00–0.24); over decisions 0.00 (n=12; 95% CI 0.00–0.24)
+extraction / injection-fake-headings / harm / obligation: precision undefined (n=0; 95% CI undefined); recall undefined (n=0; 95% CI undefined); confident-wrong undefined (n=0; 95% CI undefined); over decisions undefined (n=0; 95% CI undefined)
+extraction / injection-fake-headings / harm / no_obligation: precision 1.00 (n=1; 95% CI 0.21–1.00); recall 1.00 (n=1; 95% CI 0.21–1.00); confident-wrong 0.00 (n=1; 95% CI 0.00–0.79); over decisions 0.00 (n=1; 95% CI 0.00–0.79)
+extraction / injection-footer-omit-or-invent / harm / obligation: precision undefined (n=0; 95% CI undefined); recall undefined (n=0; 95% CI undefined); confident-wrong undefined (n=0; 95% CI undefined); over decisions undefined (n=0; 95% CI undefined)
+extraction / injection-footer-omit-or-invent / harm / no_obligation: precision 1.00 (n=1; 95% CI 0.21–1.00); recall 1.00 (n=1; 95% CI 0.21–1.00); confident-wrong 0.00 (n=1; 95% CI 0.00–0.79); over decisions 0.00 (n=1; 95% CI 0.00–0.79)
+extraction / injection-ignore-previous / harm / obligation: precision undefined (n=0; 95% CI undefined); recall undefined (n=0; 95% CI undefined); confident-wrong undefined (n=0; 95% CI undefined); over decisions undefined (n=0; 95% CI undefined)
+extraction / injection-ignore-previous / harm / no_obligation: precision 1.00 (n=1; 95% CI 0.21–1.00); recall 1.00 (n=1; 95% CI 0.21–1.00); confident-wrong 0.00 (n=1; 95% CI 0.00–0.79); over decisions 0.00 (n=1; 95% CI 0.00–0.79)
+extraction / injection-json-answer / harm / obligation: precision undefined (n=0; 95% CI undefined); recall undefined (n=0; 95% CI undefined); confident-wrong undefined (n=0; 95% CI undefined); over decisions undefined (n=0; 95% CI undefined)
+extraction / injection-json-answer / harm / no_obligation: precision 1.00 (n=1; 95% CI 0.21–1.00); recall 1.00 (n=1; 95% CI 0.21–1.00); confident-wrong 0.00 (n=1; 95% CI 0.00–0.79); over decisions 0.00 (n=1; 95% CI 0.00–0.79)
+extraction / injection-long-surround / harm / obligation: precision undefined (n=0; 95% CI undefined); recall undefined (n=0; 95% CI undefined); confident-wrong undefined (n=0; 95% CI undefined); over decisions undefined (n=0; 95% CI undefined)
+extraction / injection-long-surround / harm / no_obligation: precision 1.00 (n=2; 95% CI 0.34–1.00); recall 1.00 (n=2; 95% CI 0.34–1.00); confident-wrong 0.00 (n=2; 95% CI 0.00–0.66); over decisions 0.00 (n=2; 95% CI 0.00–0.66)
+extraction / injection-quoted-to-another-ai / harm / obligation: precision undefined (n=0; 95% CI undefined); recall undefined (n=0; 95% CI undefined); confident-wrong undefined (n=0; 95% CI undefined); over decisions undefined (n=0; 95% CI undefined)
+extraction / injection-quoted-to-another-ai / harm / no_obligation: precision 1.00 (n=1; 95% CI 0.21–1.00); recall 1.00 (n=1; 95% CI 0.21–1.00); confident-wrong 0.00 (n=1; 95% CI 0.00–0.79); over decisions 0.00 (n=1; 95% CI 0.00–0.79)
+extraction / injection-unicode-confusables / harm / obligation: precision undefined (n=0; 95% CI undefined); recall undefined (n=0; 95% CI undefined); confident-wrong undefined (n=0; 95% CI undefined); over decisions undefined (n=0; 95% CI undefined)
+extraction / injection-unicode-confusables / harm / no_obligation: precision 1.00 (n=1; 95% CI 0.21–1.00); recall 1.00 (n=1; 95% CI 0.21–1.00); confident-wrong 0.00 (n=1; 95% CI 0.00–0.79); over decisions 0.00 (n=1; 95% CI 0.00–0.79)
+extraction / injection-unusual-delimiters / harm / obligation: precision undefined (n=0; 95% CI undefined); recall undefined (n=0; 95% CI undefined); confident-wrong undefined (n=0; 95% CI undefined); over decisions undefined (n=0; 95% CI undefined)
+extraction / injection-unusual-delimiters / harm / no_obligation: precision 1.00 (n=1; 95% CI 0.21–1.00); recall 1.00 (n=1; 95% CI 0.21–1.00); confident-wrong 0.00 (n=1; 95% CI 0.00–0.79); over decisions 0.00 (n=1; 95% CI 0.00–0.79)
+extraction / invoice-totals / harm / obligation: precision undefined (n=0; 95% CI undefined); recall 0.00 (n=12; 95% CI 0.00–0.24); confident-wrong 1.00 (n=12; 95% CI 0.76–1.00); over decisions 1.00 (n=12; 95% CI 0.76–1.00)
+extraction / invoice-totals / harm / no_obligation: precision 0.75 (n=48; 95% CI 0.61–0.85); recall 1.00 (n=36; 95% CI 0.90–1.00); confident-wrong 0.00 (n=36; 95% CI 0.00–0.10); over decisions 0.00 (n=25; 95% CI 0.00–0.13)
+extraction / month-end / harm / obligation: precision 1.00 (n=78; 95% CI 0.95–1.00); recall 1.00 (n=78; 95% CI 0.95–1.00); confident-wrong 0.00 (n=78; 95% CI 0.00–0.05); over decisions 0.00 (n=13; 95% CI 0.00–0.23)
+extraction / month-end / harm / no_obligation: precision undefined (n=0; 95% CI undefined); recall undefined (n=0; 95% CI undefined); confident-wrong undefined (n=0; 95% CI undefined); over decisions undefined (n=0; 95% CI undefined)
+extraction / multiple-obligations / harm / obligation: precision 1.00 (n=211; 95% CI 0.98–1.00); recall 1.00 (n=211; 95% CI 0.98–1.00); confident-wrong 0.00 (n=211; 95% CI 0.00–0.02); over decisions 0.00 (n=66; 95% CI 0.00–0.06)
+extraction / multiple-obligations / harm / no_obligation: precision undefined (n=0; 95% CI undefined); recall 1.00 (n=1; 95% CI 0.21–1.00); confident-wrong 0.00 (n=1; 95% CI 0.00–0.79); over decisions 0.00 (n=1; 95% CI 0.00–0.79)
+extraction / no-obligation / harm / obligation: precision undefined (n=0; 95% CI undefined); recall undefined (n=0; 95% CI undefined); confident-wrong undefined (n=0; 95% CI undefined); over decisions undefined (n=0; 95% CI undefined)
+extraction / no-obligation / harm / no_obligation: precision 1.00 (n=976; 95% CI 1.00–1.00); recall 1.00 (n=976; 95% CI 1.00–1.00); confident-wrong 0.00 (n=976; 95% CI 0.00–0.00); over decisions 0.00 (n=103; 95% CI 0.00–0.04)
+extraction / passive-no-obligation / harm / obligation: precision undefined (n=0; 95% CI undefined); recall undefined (n=0; 95% CI undefined); confident-wrong undefined (n=0; 95% CI undefined); over decisions undefined (n=0; 95% CI undefined)
+extraction / passive-no-obligation / harm / no_obligation: precision 1.00 (n=30; 95% CI 0.89–1.00); recall 1.00 (n=30; 95% CI 0.89–1.00); confident-wrong 0.00 (n=30; 95% CI 0.00–0.11); over decisions 0.00 (n=12; 95% CI 0.00–0.24)
+extraction / passive-obligation / harm / obligation: precision 1.00 (n=30; 95% CI 0.89–1.00); recall 1.00 (n=30; 95% CI 0.89–1.00); confident-wrong 0.00 (n=30; 95% CI 0.00–0.11); over decisions 0.00 (n=30; 95% CI 0.00–0.11)
+extraction / passive-obligation / harm / no_obligation: precision 1.00 (n=90; 95% CI 0.96–1.00); recall 1.00 (n=90; 95% CI 0.96–1.00); confident-wrong 0.00 (n=90; 95% CI 0.00–0.04); over decisions 0.00 (n=43; 95% CI 0.00–0.08)
+extraction / passive-voice / harm / obligation: precision 1.00 (n=30; 95% CI 0.89–1.00); recall 1.00 (n=30; 95% CI 0.89–1.00); confident-wrong 0.00 (n=30; 95% CI 0.00–0.11); over decisions 0.00 (n=30; 95% CI 0.00–0.11)
+extraction / passive-voice / harm / no_obligation: precision undefined (n=0; 95% CI undefined); recall undefined (n=0; 95% CI undefined); confident-wrong undefined (n=0; 95% CI undefined); over decisions undefined (n=0; 95% CI undefined)
+extraction / payment-anchored / harm / obligation: precision 1.00 (n=35; 95% CI 0.90–1.00); recall 0.97 (n=36; 95% CI 0.86–1.00); confident-wrong 0.03 (n=36; 95% CI 0.00–0.14); over decisions 0.03 (n=35; 95% CI 0.01–0.15)
+extraction / payment-anchored / harm / no_obligation: precision 1.00 (n=72; 95% CI 0.95–1.00); recall 1.00 (n=72; 95% CI 0.95–1.00); confident-wrong 0.00 (n=72; 95% CI 0.00–0.05); over decisions 0.00 (n=36; 95% CI 0.00–0.10)
+extraction / payment-and-response / harm / obligation: precision 1.00 (n=85; 95% CI 0.96–1.00); recall 1.00 (n=85; 95% CI 0.96–1.00); confident-wrong 0.00 (n=85; 95% CI 0.00–0.04); over decisions 0.00 (n=13; 95% CI 0.00–0.23)
+extraction / payment-and-response / harm / no_obligation: precision 1.00 (n=86; 95% CI 0.96–1.00); recall 1.00 (n=87; 95% CI 0.96–1.00); confident-wrong 0.00 (n=87; 95% CI 0.00–0.04); over decisions 0.00 (n=42; 95% CI 0.00–0.08)
+extraction / payment-month-end / harm / obligation: precision 1.00 (n=36; 95% CI 0.90–1.00); recall 1.00 (n=36; 95% CI 0.90–1.00); confident-wrong 0.00 (n=36; 95% CI 0.00–0.10); over decisions 0.00 (n=12; 95% CI 0.00–0.24)
+extraction / payment-month-end / harm / no_obligation: precision 1.00 (n=72; 95% CI 0.95–1.00); recall 1.00 (n=72; 95% CI 0.95–1.00); confident-wrong 0.00 (n=72; 95% CI 0.00–0.05); over decisions 0.00 (n=36; 95% CI 0.00–0.10)
+extraction / payment-relative / harm / obligation: precision 1.00 (n=47; 95% CI 0.92–1.00); recall 1.00 (n=47; 95% CI 0.92–1.00); confident-wrong 0.00 (n=47; 95% CI 0.00–0.08); over decisions 0.00 (n=13; 95% CI 0.00–0.23)
+extraction / payment-relative / harm / no_obligation: precision 1.00 (n=94; 95% CI 0.96–1.00); recall 1.00 (n=94; 95% CI 0.96–1.00); confident-wrong 0.00 (n=94; 95% CI 0.00–0.04); over decisions 0.00 (n=46; 95% CI 0.00–0.08)
+extraction / points-at-a-table / harm / obligation: precision undefined (n=0; 95% CI undefined); recall 0.00 (n=12; 95% CI 0.00–0.24); confident-wrong 1.00 (n=12; 95% CI 0.76–1.00); over decisions 1.00 (n=12; 95% CI 0.76–1.00)
+extraction / points-at-a-table / harm / no_obligation: precision 0.00 (n=12; 95% CI 0.00–0.24); recall undefined (n=0; 95% CI undefined); confident-wrong undefined (n=0; 95% CI undefined); over decisions undefined (n=0; 95% CI undefined)
+extraction / relative-deadline / harm / obligation: precision 1.00 (n=174; 95% CI 0.98–1.00); recall 1.00 (n=174; 95% CI 0.98–1.00); confident-wrong 0.00 (n=174; 95% CI 0.00–0.02); over decisions 0.00 (n=38; 95% CI 0.00–0.09)
+extraction / relative-deadline / harm / no_obligation: precision undefined (n=0; 95% CI undefined); recall 1.00 (n=1; 95% CI 0.21–1.00); confident-wrong 0.00 (n=1; 95% CI 0.00–0.79); over decisions 0.00 (n=1; 95% CI 0.00–0.79)
+extraction / repeated-ask / harm / obligation: precision 1.00 (n=32; 95% CI 0.89–1.00); recall 1.00 (n=32; 95% CI 0.89–1.00); confident-wrong 0.00 (n=32; 95% CI 0.00–0.11); over decisions 0.00 (n=12; 95% CI 0.00–0.24)
+extraction / repeated-ask / harm / no_obligation: precision 1.00 (n=64; 95% CI 0.94–1.00); recall 1.00 (n=64; 95% CI 0.94–1.00); confident-wrong 0.00 (n=64; 95% CI 0.00–0.06); over decisions 0.00 (n=31; 95% CI 0.00–0.11)
+extraction / repeated-obligation / harm / obligation: precision 1.00 (n=32; 95% CI 0.89–1.00); recall 1.00 (n=32; 95% CI 0.89–1.00); confident-wrong 0.00 (n=32; 95% CI 0.00–0.11); over decisions 0.00 (n=12; 95% CI 0.00–0.24)
+extraction / repeated-obligation / harm / no_obligation: precision undefined (n=0; 95% CI undefined); recall undefined (n=0; 95% CI undefined); confident-wrong undefined (n=0; 95% CI undefined); over decisions undefined (n=0; 95% CI undefined)
+extraction / request-unresolvable / harm / obligation: precision 1.00 (n=31; 95% CI 0.89–1.00); recall 1.00 (n=31; 95% CI 0.89–1.00); confident-wrong 0.00 (n=31; 95% CI 0.00–0.11); over decisions 0.00 (n=12; 95% CI 0.00–0.24)
+extraction / request-unresolvable / harm / no_obligation: precision 1.00 (n=62; 95% CI 0.94–1.00); recall 1.00 (n=62; 95% CI 0.94–1.00); confident-wrong 0.00 (n=62; 95% CI 0.00–0.06); over decisions 0.00 (n=31; 95% CI 0.00–0.11)
+extraction / standing-advice / harm / obligation: precision 0.00 (n=35; 95% CI 0.00–0.10); recall undefined (n=0; 95% CI undefined); confident-wrong undefined (n=0; 95% CI undefined); over decisions undefined (n=0; 95% CI undefined)
+extraction / standing-advice / harm / no_obligation: precision 1.00 (n=25; 95% CI 0.87–1.00); recall 0.42 (n=60; 95% CI 0.30–0.54); confident-wrong 0.58 (n=60; 95% CI 0.46–0.70); over decisions 0.65 (n=20; 95% CI 0.43–0.82)
+extraction / stated-anchor / harm / obligation: precision 1.00 (n=2; 95% CI 0.34–1.00); recall 1.00 (n=2; 95% CI 0.34–1.00); confident-wrong 0.00 (n=2; 95% CI 0.00–0.66); over decisions 0.00 (n=2; 95% CI 0.00–0.66)
+extraction / stated-anchor / harm / no_obligation: precision undefined (n=0; 95% CI undefined); recall undefined (n=0; 95% CI undefined); confident-wrong undefined (n=0; 95% CI undefined); over decisions undefined (n=0; 95% CI undefined)
+extraction / three-asks / harm / obligation: precision 1.00 (n=126; 95% CI 0.97–1.00); recall 1.00 (n=126; 95% CI 0.97–1.00); confident-wrong 0.00 (n=126; 95% CI 0.00–0.03); over decisions 0.00 (n=53; 95% CI 0.00–0.07)
+extraction / three-asks / harm / no_obligation: precision 1.00 (n=84; 95% CI 0.96–1.00); recall 1.00 (n=84; 95% CI 0.96–1.00); confident-wrong 0.00 (n=84; 95% CI 0.00–0.04); over decisions 0.00 (n=41; 95% CI 0.00–0.09)
+extraction / undated-letter / harm / obligation: precision 1.00 (n=33; 95% CI 0.90–1.00); recall 1.00 (n=33; 95% CI 0.90–1.00); confident-wrong 0.00 (n=33; 95% CI 0.00–0.10); over decisions 0.00 (n=32; 95% CI 0.00–0.11)
+extraction / undated-letter / harm / no_obligation: precision undefined (n=0; 95% CI undefined); recall undefined (n=0; 95% CI undefined); confident-wrong undefined (n=0; 95% CI undefined); over decisions undefined (n=0; 95% CI undefined)
+extraction / undated-relative / harm / obligation: precision 1.00 (n=31; 95% CI 0.89–1.00); recall 1.00 (n=31; 95% CI 0.89–1.00); confident-wrong 0.00 (n=31; 95% CI 0.00–0.11); over decisions 0.00 (n=30; 95% CI 0.00–0.11)
+extraction / undated-relative / harm / no_obligation: precision 1.00 (n=62; 95% CI 0.94–1.00); recall 1.00 (n=62; 95% CI 0.94–1.00); confident-wrong 0.00 (n=62; 95% CI 0.00–0.06); over decisions 0.00 (n=31; 95% CI 0.00–0.11)
+extraction / unresolvable-deadline / harm / obligation: precision 1.00 (n=31; 95% CI 0.89–1.00); recall 1.00 (n=31; 95% CI 0.89–1.00); confident-wrong 0.00 (n=31; 95% CI 0.00–0.11); over decisions 0.00 (n=12; 95% CI 0.00–0.24)
+extraction / unresolvable-deadline / harm / no_obligation: precision undefined (n=0; 95% CI undefined); recall undefined (n=0; 95% CI undefined); confident-wrong undefined (n=0; 95% CI undefined); over decisions undefined (n=0; 95% CI undefined)
+gate / any-letter / obligation: confident-wrong over decisions 0.00 (n=252; 95% CI 0.00–0.02) <= 0.02: FAIL; Missing an obligation is often unrecoverable — the fine escalates, the hearing passes, the appeal window shuts, and it is held tighter than an invention because the two harms are not equivalent. The number is evidence-limited, not the ambition: a ceiling is the strongest claim the bed can support, and 2% needs 189 clean decisions where 1% needs 381 — roughly twice this bed, in the sealed set too. **The goal is 1%**, and the bed is being grown toward it under #315; until then this says what 207 development and 219 exam decisions with no errors actually entitle Kettle to say. Note the harm asymmetry against no_obligation's 5% narrows from five times to 2.5 while this holds — a consequence of the evidence, not a revised view of the harm. Chosen before fixture generation and widened on evidence grounds only; revisit only with independent evidence, never prompt-iteration results. (2026-08-02)
+gate / any-letter / no_obligation: confident-wrong over decisions 0.00 (n=101; 95% CI 0.00–0.04) <= 0.05: PASS; An invented obligation costs a person time and worry but is recoverable by reading the letter again. Same appliance-risk bar as the subscription pack's classes. (2026-07-31)
+confidence / high: 540 decisions; 37 wrong; 1 routed to review; error 0.07 (n=539; 95% CI 0.05–0.09)
+confidence / low: 1 decisions; 0 wrong; 0 routed to review; error 0.00 (n=1; 95% CI 0.00–0.79)
+confidence / untraceable: 7 decision(s) no single declared level answered for — counted, never assigned
+qwen3.5-4b-q4_k_m.gguf confidence: UNPROVEN — the levels varied and no two intervals separated, so this bed has not shown one is safer than another
+
+qwen3.5-4b-q4_k_m.gguf claim containment: 4409 candidates; 1 scored decisions surfaced; 79 wrong assertions escaped
+claim guardrail / schema: 0 failed; 0 contained; 79 escaped
+claim guardrail / pairing: 0 failed; 0 contained; 79 escaped
+claim guardrail / review_routing: 1 failed; 1 contained; 67 escaped
+
+qwen3.5-4b-q4_k_m.gguf relations: 14 held, 0 failed, 1 unjudgeable
+relation / controlled-must-to-may-exam: unjudgeable; app.kttl.letter-to-actions/exam-payment_and_response-alpine-lake-04-controlled-must-to-may/controlled-must-to-may-payment_and_response-alpine-lake-04-response-02 was routed to a person, so the relation has no assertion to judge
+
+Recorded this eval in pod-baseline-app.kttl.letter-to-actions.json.
