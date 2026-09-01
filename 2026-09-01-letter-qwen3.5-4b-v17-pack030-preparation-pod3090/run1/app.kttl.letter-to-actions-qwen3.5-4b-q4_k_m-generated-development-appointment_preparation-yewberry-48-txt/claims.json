@@ -1,0 +1,824 @@
+{
+  "schema": "kettle/claim-traces@0",
+  "claims": [
+    {
+      "id": "claim-000001",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 0,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "12 December 2026",
+      "candidate": {
+        "confidence": "high",
+        "id": 0,
+        "obligations": [],
+        "segment": "12 December 2026"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 0,
+            "obligations": [],
+            "segment": "12 December 2026"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000002",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 1,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Grantley Legal Aid",
+      "candidate": {
+        "confidence": "high",
+        "id": 1,
+        "obligations": [],
+        "segment": "Grantley Legal Aid"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 1,
+            "obligations": [],
+            "segment": "Grantley Legal Aid"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000003",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 2,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Our reference: GLA-5527",
+      "candidate": {
+        "confidence": "high",
+        "id": 2,
+        "obligations": [],
+        "segment": "Our reference: GLA-5527"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 2,
+            "obligations": [],
+            "segment": "Our reference: GLA-5527"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000004",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 3,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Your appointment about your case file with Grantley Legal Aid is booked for 13 February 2027 at 12.00pm.",
+      "candidate": {
+        "confidence": "high",
+        "id": 3,
+        "obligations": [
+          {
+            "anchor": "13 February 2027",
+            "ask": "Attend the appointment about your case file",
+            "deadline": "on 13 February 2027 at 12.00pm",
+            "kind": "attendance",
+            "party": "Grantley Legal Aid"
+          }
+        ],
+        "segment": "Your appointment about your case file with Grantley Legal Aid is booked for 13 February 2027 at 12.00pm."
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 3,
+            "obligations": [
+              {
+                "anchor": "13 February 2027",
+                "ask": "Attend the appointment about your case file",
+                "deadline": "on 13 February 2027 at 12.00pm",
+                "kind": "attendance",
+                "party": "Grantley Legal Aid"
+              }
+            ],
+            "segment": "Your appointment about your case file with Grantley Legal Aid is booked for 13 February 2027 at 12.00pm."
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000005",
+      "parent_id": "claim-000004",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 3,
+      "candidate_index": 1,
+      "kind": "obligation",
+      "source": "Your appointment about your case file with Grantley Legal Aid is booked for 13 February 2027 at 12.00pm.",
+      "candidate": {
+        "anchor": "13 February 2027",
+        "ask": "Attend the appointment about your case file",
+        "deadline": "on 13 February 2027 at 12.00pm",
+        "kind": "attendance",
+        "party": "Grantley Legal Aid"
+      },
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000006",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 4,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Please park in the visitor bays rather than the staff bays.",
+      "candidate": {
+        "confidence": "high",
+        "id": 4,
+        "obligations": [
+          {
+            "anchor": "no particular date",
+            "ask": "Park in the visitor bays",
+            "deadline": "no particular date",
+            "kind": "other",
+            "party": "Grantley Legal Aid"
+          }
+        ],
+        "segment": "Please park in the visitor bays rather than the staff bays."
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 4,
+            "obligations": [
+              {
+                "anchor": "no particular date",
+                "ask": "Park in the visitor bays",
+                "deadline": "no particular date",
+                "kind": "other",
+                "party": "Grantley Legal Aid"
+              }
+            ],
+            "segment": "Please park in the visitor bays rather than the staff bays."
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000007",
+      "parent_id": "claim-000006",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 4,
+      "candidate_index": 1,
+      "kind": "obligation",
+      "source": "Please park in the visitor bays rather than the staff bays.",
+      "candidate": {
+        "anchor": "no particular date",
+        "ask": "Park in the visitor bays",
+        "deadline": "no particular date",
+        "kind": "other",
+        "party": "Grantley Legal Aid"
+      },
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000008",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 5,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Please wait outside the room until you are invited in, and bring the signed authority form when you come in.",
+      "candidate": {
+        "confidence": "high",
+        "id": 5,
+        "obligations": [
+          {
+            "anchor": "no particular date",
+            "ask": "Wait outside the room until invited in",
+            "deadline": "no particular date",
+            "kind": "attendance",
+            "party": "Grantley Legal Aid"
+          },
+          {
+            "anchor": "no particular date",
+            "ask": "Bring the signed authority form",
+            "deadline": "no particular date",
+            "kind": "other",
+            "party": "Grantley Legal Aid"
+          }
+        ],
+        "segment": "Please wait outside the room until you are invited in, and bring the signed authority form when you come in."
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 5,
+            "obligations": [
+              {
+                "anchor": "no particular date",
+                "ask": "Wait outside the room until invited in",
+                "deadline": "no particular date",
+                "kind": "attendance",
+                "party": "Grantley Legal Aid"
+              },
+              {
+                "anchor": "no particular date",
+                "ask": "Bring the signed authority form",
+                "deadline": "no particular date",
+                "kind": "other",
+                "party": "Grantley Legal Aid"
+              }
+            ],
+            "segment": "Please wait outside the room until you are invited in, and bring the signed authority form when you come in."
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000009",
+      "parent_id": "claim-000008",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 5,
+      "candidate_index": 1,
+      "kind": "obligation",
+      "source": "Please wait outside the room until you are invited in, and bring the signed authority form when you come in.",
+      "candidate": {
+        "anchor": "no particular date",
+        "ask": "Wait outside the room until invited in",
+        "deadline": "no particular date",
+        "kind": "attendance",
+        "party": "Grantley Legal Aid"
+      },
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000010",
+      "parent_id": "claim-000008",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 5,
+      "candidate_index": 2,
+      "kind": "obligation",
+      "source": "Please wait outside the room until you are invited in, and bring the signed authority form when you come in.",
+      "candidate": {
+        "anchor": "no particular date",
+        "ask": "Bring the signed authority form",
+        "deadline": "no particular date",
+        "kind": "other",
+        "party": "Grantley Legal Aid"
+      },
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000011",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 6,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Please arrive promptly, as late arrivals cannot always be seen.",
+      "candidate": {
+        "confidence": "high",
+        "id": 6,
+        "obligations": [
+          {
+            "anchor": "no particular date",
+            "ask": "Arrive promptly",
+            "deadline": "no particular date",
+            "kind": "attendance",
+            "party": "Grantley Legal Aid"
+          }
+        ],
+        "segment": "Please arrive promptly, as late arrivals cannot always be seen."
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 6,
+            "obligations": [
+              {
+                "anchor": "no particular date",
+                "ask": "Arrive promptly",
+                "deadline": "no particular date",
+                "kind": "attendance",
+                "party": "Grantley Legal Aid"
+              }
+            ],
+            "segment": "Please arrive promptly, as late arrivals cannot always be seen."
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000012",
+      "parent_id": "claim-000011",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 6,
+      "candidate_index": 1,
+      "kind": "obligation",
+      "source": "Please arrive promptly, as late arrivals cannot always be seen.",
+      "candidate": {
+        "anchor": "no particular date",
+        "ask": "Arrive promptly",
+        "deadline": "no particular date",
+        "kind": "attendance",
+        "party": "Grantley Legal Aid"
+      },
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000013",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 7,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Please allow for roadworks on the approach, and take a meter reading before you attend.",
+      "candidate": {
+        "confidence": "high",
+        "id": 7,
+        "obligations": [
+          {
+            "anchor": "no particular date",
+            "ask": "Allow for roadworks on the approach",
+            "deadline": "no particular date",
+            "kind": "other",
+            "party": "Grantley Legal Aid"
+          },
+          {
+            "anchor": "no particular date",
+            "ask": "Take a meter reading before attending",
+            "deadline": "no particular date",
+            "kind": "other",
+            "party": "Grantley Legal Aid"
+          }
+        ],
+        "segment": "Please allow for roadworks on the approach, and take a meter reading before you attend."
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 7,
+            "obligations": [
+              {
+                "anchor": "no particular date",
+                "ask": "Allow for roadworks on the approach",
+                "deadline": "no particular date",
+                "kind": "other",
+                "party": "Grantley Legal Aid"
+              },
+              {
+                "anchor": "no particular date",
+                "ask": "Take a meter reading before attending",
+                "deadline": "no particular date",
+                "kind": "other",
+                "party": "Grantley Legal Aid"
+              }
+            ],
+            "segment": "Please allow for roadworks on the approach, and take a meter reading before you attend."
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000014",
+      "parent_id": "claim-000013",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 7,
+      "candidate_index": 1,
+      "kind": "obligation",
+      "source": "Please allow for roadworks on the approach, and take a meter reading before you attend.",
+      "candidate": {
+        "anchor": "no particular date",
+        "ask": "Allow for roadworks on the approach",
+        "deadline": "no particular date",
+        "kind": "other",
+        "party": "Grantley Legal Aid"
+      },
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000015",
+      "parent_id": "claim-000013",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 7,
+      "candidate_index": 2,
+      "kind": "obligation",
+      "source": "Please allow for roadworks on the approach, and take a meter reading before you attend.",
+      "candidate": {
+        "anchor": "no particular date",
+        "ask": "Take a meter reading before attending",
+        "deadline": "no particular date",
+        "kind": "other",
+        "party": "Grantley Legal Aid"
+      },
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000016",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 8,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "If the date no longer suits you, our reception team can offer another.",
+      "candidate": {
+        "confidence": "high",
+        "id": 8,
+        "obligations": [],
+        "segment": "If the date no longer suits you, our reception team can offer another."
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 8,
+            "obligations": [],
+            "segment": "If the date no longer suits you, our reception team can offer another."
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000017",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 9,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Yours sincerely,",
+      "candidate": {
+        "confidence": "high",
+        "id": 9,
+        "obligations": [],
+        "segment": "Yours sincerely,"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 9,
+            "obligations": [],
+            "segment": "Yours sincerely,"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000018",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 10,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Grantley Legal Aid",
+      "candidate": {
+        "confidence": "high",
+        "id": 10,
+        "obligations": [],
+        "segment": "Grantley Legal Aid"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 10,
+            "obligations": [],
+            "segment": "Grantley Legal Aid"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000019",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 11,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "We have already cancelled the appointment you could not attend on 18 February.",
+      "candidate": {
+        "confidence": "high",
+        "id": 11,
+        "obligations": [],
+        "segment": "We have already cancelled the appointment you could not attend on 18 February."
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 11,
+            "obligations": [],
+            "segment": "We have already cancelled the appointment you could not attend on 18 February."
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    }
+  ]
+}

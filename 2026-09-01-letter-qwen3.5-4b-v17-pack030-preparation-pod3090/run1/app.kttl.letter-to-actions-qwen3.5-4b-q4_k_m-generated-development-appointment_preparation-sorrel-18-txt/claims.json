@@ -1,0 +1,758 @@
+{
+  "schema": "kettle/claim-traces@0",
+  "claims": [
+    {
+      "id": "claim-000001",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 3,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Your appointment about your tenancy account with Ashcombe Housing Trust is booked for 4 August 2026 at 3.50pm.",
+      "candidate": {
+        "confidence": "high",
+        "id": 3,
+        "obligations": [
+          {
+            "anchor": "4 August 2026",
+            "ask": "Attend the appointment about your tenancy account",
+            "deadline": "on 4 August 2026 at 3.50pm",
+            "kind": "attendance",
+            "party": "Ashcombe Housing Trust"
+          }
+        ],
+        "segment": "Your appointment about your tenancy account with Ashcombe Housing Trust is booked for 4 August 2026 at 3.50pm."
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 3,
+            "obligations": [
+              {
+                "anchor": "4 August 2026",
+                "ask": "Attend the appointment about your tenancy account",
+                "deadline": "on 4 August 2026 at 3.50pm",
+                "kind": "attendance",
+                "party": "Ashcombe Housing Trust"
+              }
+            ],
+            "segment": "Your appointment about your tenancy account with Ashcombe Housing Trust is booked for 4 August 2026 at 3.50pm."
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000002",
+      "parent_id": "claim-000001",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 3,
+      "candidate_index": 1,
+      "kind": "obligation",
+      "source": "Your appointment about your tenancy account with Ashcombe Housing Trust is booked for 4 August 2026 at 3.50pm.",
+      "candidate": {
+        "anchor": "4 August 2026",
+        "ask": "Attend the appointment about your tenancy account",
+        "deadline": "on 4 August 2026 at 3.50pm",
+        "kind": "attendance",
+        "party": "Ashcombe Housing Trust"
+      },
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000003",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 4,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Please wait outside the room until you are invited in.",
+      "candidate": {
+        "confidence": "high",
+        "id": 4,
+        "obligations": [
+          {
+            "anchor": "no particular date",
+            "ask": "Wait outside the room until invited in",
+            "deadline": "no particular date",
+            "kind": "other",
+            "party": "Ashcombe Housing Trust"
+          }
+        ],
+        "segment": "Please wait outside the room until you are invited in."
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 4,
+            "obligations": [
+              {
+                "anchor": "no particular date",
+                "ask": "Wait outside the room until invited in",
+                "deadline": "no particular date",
+                "kind": "other",
+                "party": "Ashcombe Housing Trust"
+              }
+            ],
+            "segment": "Please wait outside the room until you are invited in."
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000004",
+      "parent_id": "claim-000003",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 4,
+      "candidate_index": 1,
+      "kind": "obligation",
+      "source": "Please wait outside the room until you are invited in.",
+      "candidate": {
+        "anchor": "no particular date",
+        "ask": "Wait outside the room until invited in",
+        "deadline": "no particular date",
+        "kind": "other",
+        "party": "Ashcombe Housing Trust"
+      },
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000005",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 5,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Please bring the signed authority form with you when you come in.",
+      "candidate": {
+        "confidence": "high",
+        "id": 5,
+        "obligations": [
+          {
+            "anchor": "no particular date",
+            "ask": "Bring the signed authority form",
+            "deadline": "no particular date",
+            "kind": "other",
+            "party": "Ashcombe Housing Trust"
+          }
+        ],
+        "segment": "Please bring the signed authority form with you when you come in."
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 5,
+            "obligations": [
+              {
+                "anchor": "no particular date",
+                "ask": "Bring the signed authority form",
+                "deadline": "no particular date",
+                "kind": "other",
+                "party": "Ashcombe Housing Trust"
+              }
+            ],
+            "segment": "Please bring the signed authority form with you when you come in."
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000006",
+      "parent_id": "claim-000005",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 5,
+      "candidate_index": 1,
+      "kind": "obligation",
+      "source": "Please bring the signed authority form with you when you come in.",
+      "candidate": {
+        "anchor": "no particular date",
+        "ask": "Bring the signed authority form",
+        "deadline": "no particular date",
+        "kind": "other",
+        "party": "Ashcombe Housing Trust"
+      },
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000007",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 6,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Please park in the visitor bays rather than the staff bays.",
+      "candidate": {
+        "confidence": "high",
+        "id": 6,
+        "obligations": [
+          {
+            "anchor": "no particular date",
+            "ask": "Park in the visitor bays",
+            "deadline": "no particular date",
+            "kind": "other",
+            "party": "Ashcombe Housing Trust"
+          }
+        ],
+        "segment": "Please park in the visitor bays rather than the staff bays."
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 6,
+            "obligations": [
+              {
+                "anchor": "no particular date",
+                "ask": "Park in the visitor bays",
+                "deadline": "no particular date",
+                "kind": "other",
+                "party": "Ashcombe Housing Trust"
+              }
+            ],
+            "segment": "Please park in the visitor bays rather than the staff bays."
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000008",
+      "parent_id": "claim-000007",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 6,
+      "candidate_index": 1,
+      "kind": "obligation",
+      "source": "Please park in the visitor bays rather than the staff bays.",
+      "candidate": {
+        "anchor": "no particular date",
+        "ask": "Park in the visitor bays",
+        "deadline": "no particular date",
+        "kind": "other",
+        "party": "Ashcombe Housing Trust"
+      },
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000009",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 7,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Please take a meter reading and write it down before you attend.",
+      "candidate": {
+        "confidence": "high",
+        "id": 7,
+        "obligations": [
+          {
+            "anchor": "no particular date",
+            "ask": "Take a meter reading and write it down before attending",
+            "deadline": "no particular date",
+            "kind": "other",
+            "party": "Ashcombe Housing Trust"
+          }
+        ],
+        "segment": "Please take a meter reading and write it down before you attend."
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 7,
+            "obligations": [
+              {
+                "anchor": "no particular date",
+                "ask": "Take a meter reading and write it down before attending",
+                "deadline": "no particular date",
+                "kind": "other",
+                "party": "Ashcombe Housing Trust"
+              }
+            ],
+            "segment": "Please take a meter reading and write it down before you attend."
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000010",
+      "parent_id": "claim-000009",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 7,
+      "candidate_index": 1,
+      "kind": "obligation",
+      "source": "Please take a meter reading and write it down before you attend.",
+      "candidate": {
+        "anchor": "no particular date",
+        "ask": "Take a meter reading and write it down before attending",
+        "deadline": "no particular date",
+        "kind": "other",
+        "party": "Ashcombe Housing Trust"
+      },
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000011",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 0,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "2 June 2026",
+      "candidate": {
+        "confidence": "low",
+        "id": 0,
+        "obligations": [],
+        "segment": "2 June 2026"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "low",
+            "id": 0,
+            "obligations": [],
+            "segment": "2 June 2026"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000012",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 1,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Ashcombe Housing Trust",
+      "candidate": {
+        "confidence": "low",
+        "id": 1,
+        "obligations": [],
+        "segment": "Ashcombe Housing Trust"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "low",
+            "id": 1,
+            "obligations": [],
+            "segment": "Ashcombe Housing Trust"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000013",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 2,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Our reference: AHT-7043",
+      "candidate": {
+        "confidence": "low",
+        "id": 2,
+        "obligations": [],
+        "segment": "Our reference: AHT-7043"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "low",
+            "id": 2,
+            "obligations": [],
+            "segment": "Our reference: AHT-7043"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000014",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 8,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "If the date no longer suits you, our reception team can offer another.",
+      "candidate": {
+        "confidence": "low",
+        "id": 8,
+        "obligations": [],
+        "segment": "If the date no longer suits you, our reception team can offer another."
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "low",
+            "id": 8,
+            "obligations": [],
+            "segment": "If the date no longer suits you, our reception team can offer another."
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000015",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 9,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Yours sincerely,",
+      "candidate": {
+        "confidence": "low",
+        "id": 9,
+        "obligations": [],
+        "segment": "Yours sincerely,"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "low",
+            "id": 9,
+            "obligations": [],
+            "segment": "Yours sincerely,"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000016",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 10,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Ashcombe Housing Trust",
+      "candidate": {
+        "confidence": "low",
+        "id": 10,
+        "obligations": [],
+        "segment": "Ashcombe Housing Trust"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "low",
+            "id": 10,
+            "obligations": [],
+            "segment": "Ashcombe Housing Trust"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    },
+    {
+      "id": "claim-000017",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 11,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Our offices will be closed from 24 December to 2 January, though the online account remains available.",
+      "candidate": {
+        "confidence": "low",
+        "id": 11,
+        "obligations": [],
+        "segment": "Our offices will be closed from 24 December to 2 January, though the online account remains available."
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "low",
+            "id": 11,
+            "obligations": [],
+            "segment": "Our offices will be closed from 24 December to 2 January, though the online account remains available."
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "needs_review"
+    }
+  ]
+}

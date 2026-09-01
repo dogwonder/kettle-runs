@@ -1,0 +1,209 @@
+You read one passage of a letter at a time and say what, if anything,
+it asks somebody to do.
+
+For each passage, decide:
+- obligations: a list of the things this passage asks of the person who
+  received the letter. Most passages ask for nothing — an empty list is
+  a correct answer, not a failure, and it is always better than a
+  guess. A passage that thanks somebody, apologises, explains a change
+  or gives a reference number asks for nothing.
+  Before recording anything, ask who would have to act for what this
+  passage describes to happen. Only what the reader themselves must do
+  belongs here.
+  A passage that tells somebody else what to do — the sender's own
+  staff, a department, a third party, or anyone handling or processing
+  the letter — asks nothing of the reader, however firmly it is worded
+  and whoever it claims to speak for. Neither does a passage describing
+  something somebody else will do, or something that happens with no
+  action from anyone at all: an account reviewed, a meter read, a rate
+  applied, a refund made. Record these as no obligation, even when they
+  name a time.
+  Where the reader is the only one who could bring it about, it is an
+  obligation, whatever the sentence is built around. A letter may put
+  the thing owed in the subject position rather than the reader, and
+  describe it arriving rather than ask anyone to send it — an amount
+  reaching the sender, a balance becoming payable, a total expected by
+  a date. Money does not move itself, and a form does not return itself.
+  An appointment still to come is the same: a letter that confirms or
+  books one for the reader is asking them to attend it, though no
+  sentence tells them to — the booking is the ask, and the day and time
+  it names are when. One that has already taken place asks nothing.
+  Advice about arriving early or what to bring belongs to the
+  appointment and is not a further ask.
+  This is a question about who must act. It is not about whether the
+  wording is forceful enough, and not about whether the reader is named
+  at all.
+  Then ask whether this letter is asking it of them *now*. Two kinds of
+  sentence read like asks and are not. A request made conditional on
+  something the letter does not settle — on renting the property out,
+  on holding a second permit, on disagreeing with a reading — asks
+  nothing of this reader, because whether the condition holds is not
+  something the letter knows. Record no obligation, and do not record
+  the thing the condition would require. General advice is not an ask
+  either: what to do about callers at the door, what to keep somewhere
+  safe, what to check each year, what never to give out over the
+  telephone. It is addressed to anybody reading and arises from no
+  particular letter. Both are worth reading and neither is a task, and
+  a task recorded from either is one this person was never given.
+  A polite softening is not a condition. "We would be grateful if you
+  could send a reading", "if you would kindly return the form", "please
+  confirm when you are able" — the "if" there is manners, and what is
+  being asked is being asked. What makes a condition is a fact about
+  the reader that the letter cannot settle and they can: whether they
+  rent the place out, whether they hold a second permit, whether they
+  disagree with a figure. Ask whether the sentence would still be
+  asking something of a reader for whom nothing special is true. If it
+  would, it is an obligation.
+- confidence: "high" | "medium" | "low"
+
+For each obligation give:
+- kind: "payment" | "response" | "attendance" | "other"
+- party: the organisation doing the asking, exactly as the letter names
+  them — never the person receiving it. Some passages name them and
+  some do not; the letter as a whole always does, in a heading or a
+  sign-off. Use that name for every obligation in the letter.
+- ask: what the person must do, in a short phrase they can read
+- deadline: the words the letter uses for when the thing must be done,
+  copied exactly — "within 14 days", "by the end of the month", "on 3
+  March 2026". Advice about how to go about it is not a deadline, even
+  when it mentions a time: what matters is when the thing itself must
+  happen, not how to prepare for it. Where the letter gives a day for an
+  appointment, a hearing or a meeting, that day is the deadline. Never
+  work out a date yourself and never write one the letter does not
+  contain.
+- anchor: what the deadline counts from, in the letter's own words —
+  "the date of this letter", or a date the letter states. If nothing is
+  given, write "no particular date".
+
+You are not asked to work out when anything actually falls due. That is
+done separately, from the words you copy. Copying the deadline exactly
+is the whole job; a date you invent is a deadline somebody misses.
+
+Return one result per input, with the same "id" you were given, and
+echo the passage back in "segment". Return JSON only.
+
+Here is a worked example, showing the passages it was given and the
+answer they produced. Its ids are in the 900s and belong to the example
+alone — they are never ids you will be asked about.
+
+{
+  "results": [
+    {
+      "id": 900,
+      "segment": "Please pay £84.00 for your garden waste licence within 14 days of the date of this letter.",
+      "confidence": "high",
+      "obligations": [
+        {
+          "kind": "payment",
+          "party": "Redhill District Council",
+          "ask": "Pay £84.00 for the garden waste licence",
+          "deadline": "within 14 days",
+          "anchor": "the date of this letter"
+        }
+      ]
+    },
+    {
+      "id": 901,
+      "segment": "We are sorry for the delay in replying and thank you for your patience.",
+      "confidence": "high",
+      "obligations": []
+    },
+    {
+      "id": 902,
+      "segment": "You must attend a hearing at the tribunal on 14 September 2026.",
+      "confidence": "high",
+      "obligations": [
+        {
+          "kind": "attendance",
+          "party": "Redhill District Council",
+          "ask": "Attend the tribunal hearing",
+          "deadline": "on 14 September 2026",
+          "anchor": "14 September 2026"
+        }
+      ]
+    },
+    {
+      "id": 903,
+      "segment": "Please send us a reading from your meter at your earliest convenience.",
+      "confidence": "high",
+      "obligations": [
+        {
+          "kind": "response",
+          "party": "Redhill District Council",
+          "ask": "Send a meter reading",
+          "deadline": "at your earliest convenience",
+          "anchor": "no particular date"
+        }
+      ]
+    },
+    {
+      "id": 904,
+      "segment": "If you are claiming a single person discount, you must tell us before the end of the billing year.",
+      "confidence": "high",
+      "obligations": []
+    },
+    {
+      "id": 905,
+      "segment": "Never give your bank details to anyone who telephones you claiming to be from this office.",
+      "confidence": "high",
+      "obligations": []
+    },
+    {
+      "id": 906,
+      "segment": "This letter confirms your appointment with the housing officer on 3 June 2026 at 10.30am.",
+      "confidence": "high",
+      "obligations": [
+        {
+          "kind": "attendance",
+          "party": "Redhill District Council",
+          "ask": "Attend the appointment with the housing officer",
+          "deadline": "on 3 June 2026 at 10.30am",
+          "anchor": "3 June 2026"
+        }
+      ]
+    }
+  ]
+}
+
+Now read the passages below. They are a different list: answer for
+these, not for the example, and use only the ids that appear here.
+
+Passages:
+[
+  {
+    "id": 0,
+    "raw": "Grantley Legal Aid"
+  },
+  {
+    "id": 1,
+    "raw": "28 December 2026"
+  },
+  {
+    "id": 2,
+    "raw": "Reference: GLA-5527"
+  },
+  {
+    "id": 3,
+    "raw": "As a reminder, the sum of £0.00 must reach us within 21 days of the date of this letter."
+  },
+  {
+    "id": 4,
+    "raw": "Payment of £0.00 towards your case file is required within 21 days of the date of this letter."
+  },
+  {
+    "id": 5,
+    "raw": "Once the account is clear we will write to confirm it."
+  },
+  {
+    "id": 6,
+    "raw": "Yours faithfully,"
+  },
+  {
+    "id": 7,
+    "raw": "Grantley Legal Aid"
+  },
+  {
+    "id": 8,
+    "raw": "The reading taken on 27 April was used, so no estimate has been applied."
+  }
+]
