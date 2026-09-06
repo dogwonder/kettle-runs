@@ -1,0 +1,541 @@
+{
+  "schema": "kettle/claim-traces@0",
+  "claims": [
+    {
+      "id": "claim-000001",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 0,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "1 May 2026",
+      "candidate": {
+        "confidence": "high",
+        "id": 0,
+        "obligations": [],
+        "segment": "1 May 2026"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 0,
+            "obligations": [],
+            "segment": "1 May 2026"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000002",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 1,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Northgate Water",
+      "candidate": {
+        "confidence": "high",
+        "id": 1,
+        "obligations": [],
+        "segment": "Northgate Water"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 1,
+            "obligations": [],
+            "segment": "Northgate Water"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000003",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 2,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Our reference: NW-55210",
+      "candidate": {
+        "confidence": "high",
+        "id": 2,
+        "obligations": [],
+        "segment": "Our reference: NW-55210"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 2,
+            "obligations": [],
+            "segment": "Our reference: NW-55210"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000004",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 3,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Settlement of £96.45 must be received within 35 days of the date of this letter, or the matter is referred onward.",
+      "candidate": {
+        "confidence": "high",
+        "id": 3,
+        "obligations": [
+          {
+            "amount": {
+              "at": 3,
+              "value": "£96.45"
+            },
+            "ask": "Settle the account",
+            "deadline": {
+              "at": 3,
+              "from": {
+                "at": 0,
+                "value": "1 May 2026"
+              },
+              "read": {
+                "count": 35,
+                "counts_from": "letter_date",
+                "qualifier": "none",
+                "unit": "days"
+              },
+              "value": "within 35 days"
+            },
+            "kind": "payment",
+            "party": {
+              "at": 1,
+              "value": "Northgate Water"
+            }
+          }
+        ],
+        "segment": "Settlement of £96.45 must be received within 35 days of the date of this letter, or the matter is referred onward."
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 3,
+            "obligations": [
+              {
+                "amount": {
+                  "at": 3,
+                  "value": "£96.45"
+                },
+                "ask": "Settle the account",
+                "deadline": {
+                  "at": 3,
+                  "from": {
+                    "at": 0,
+                    "value": "1 May 2026"
+                  },
+                  "read": {
+                    "count": 35,
+                    "counts_from": "letter_date",
+                    "qualifier": "none",
+                    "unit": "days"
+                  },
+                  "value": "within 35 days"
+                },
+                "kind": "payment",
+                "party": {
+                  "at": 1,
+                  "value": "Northgate Water"
+                }
+              }
+            ],
+            "segment": "Settlement of £96.45 must be received within 35 days of the date of this letter, or the matter is referred onward."
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000005",
+      "parent_id": "claim-000004",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 3,
+      "candidate_index": 1,
+      "kind": "obligation",
+      "source": "Settlement of £96.45 must be received within 35 days of the date of this letter, or the matter is referred onward.",
+      "candidate": {
+        "amount": {
+          "at": 3,
+          "value": "£96.45"
+        },
+        "ask": "Settle the account",
+        "deadline": {
+          "at": 3,
+          "from": {
+            "at": 0,
+            "value": "1 May 2026"
+          },
+          "read": {
+            "count": 35,
+            "counts_from": "letter_date",
+            "qualifier": "none",
+            "unit": "days"
+          },
+          "value": "within 35 days"
+        },
+        "kind": "payment",
+        "party": {
+          "at": 1,
+          "value": "Northgate Water"
+        }
+      },
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "passage_shown",
+          "outcome": "passed",
+          "detail": "party names passage 1, shown in the request answered",
+          "field": "party"
+        },
+        {
+          "guardrail": "quote",
+          "outcome": "passed",
+          "field": "party"
+        },
+        {
+          "guardrail": "value_shape",
+          "outcome": "passed",
+          "field": "party"
+        },
+        {
+          "guardrail": "quote_identifies_passage",
+          "outcome": "failed",
+          "detail": "party's value is in 2 passages of this document",
+          "field": "party"
+        },
+        {
+          "guardrail": "passage_shown",
+          "outcome": "passed",
+          "detail": "amount names passage 3, shown in the request answered",
+          "field": "amount"
+        },
+        {
+          "guardrail": "quote",
+          "outcome": "passed",
+          "field": "amount"
+        },
+        {
+          "guardrail": "value_shape",
+          "outcome": "passed",
+          "field": "amount"
+        },
+        {
+          "guardrail": "passage_shown",
+          "outcome": "passed",
+          "detail": "deadline names passage 3, shown in the request answered",
+          "field": "deadline"
+        },
+        {
+          "guardrail": "quote",
+          "outcome": "passed",
+          "field": "deadline"
+        },
+        {
+          "guardrail": "value_shape",
+          "outcome": "passed",
+          "field": "deadline"
+        },
+        {
+          "guardrail": "passage_shown",
+          "outcome": "passed",
+          "detail": "from names passage 0, shown in the request answered",
+          "field": "from"
+        },
+        {
+          "guardrail": "quote",
+          "outcome": "passed",
+          "field": "from"
+        },
+        {
+          "guardrail": "value_shape",
+          "outcome": "passed",
+          "field": "from"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000006",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 4,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "The water account is being checked by the department that holds it, and any correction is applied automatically within 30 days.",
+      "candidate": {
+        "confidence": "high",
+        "id": 4,
+        "obligations": [],
+        "segment": "The water account is being checked by the department that holds it, and any correction is applied automatically within 30 days."
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 4,
+            "obligations": [],
+            "segment": "The water account is being checked by the department that holds it, and any correction is applied automatically within 30 days."
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000007",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 5,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "This part of the letter is sent for information only.",
+      "candidate": {
+        "confidence": "high",
+        "id": 5,
+        "obligations": [],
+        "segment": "This part of the letter is sent for information only."
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 5,
+            "obligations": [],
+            "segment": "This part of the letter is sent for information only."
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000008",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 6,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Yours sincerely,",
+      "candidate": {
+        "confidence": "high",
+        "id": 6,
+        "obligations": [],
+        "segment": "Yours sincerely,"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 6,
+            "obligations": [],
+            "segment": "Yours sincerely,"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000009",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 7,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Northgate Water",
+      "candidate": {
+        "confidence": "high",
+        "id": 7,
+        "obligations": [],
+        "segment": "Northgate Water"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 7,
+            "obligations": [],
+            "segment": "Northgate Water"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000010",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 8,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Your cover continues until 14 September and renews by itself unless you tell us otherwise.",
+      "candidate": {
+        "confidence": "high",
+        "id": 8,
+        "obligations": [],
+        "segment": "Your cover continues until 14 September and renews by itself unless you tell us otherwise."
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 8,
+            "obligations": [],
+            "segment": "Your cover continues until 14 September and renews by itself unless you tell us otherwise."
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    }
+  ]
+}

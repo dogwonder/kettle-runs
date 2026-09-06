@@ -1,0 +1,717 @@
+{
+  "schema": "kettle/claim-traces@0",
+  "claims": [
+    {
+      "id": "claim-000001",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 0,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "7 July 2026",
+      "candidate": {
+        "confidence": "high",
+        "id": 0,
+        "obligations": [],
+        "segment": "7 July 2026"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 0,
+            "obligations": [],
+            "segment": "7 July 2026"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000002",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 1,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Belwood Insurance",
+      "candidate": {
+        "confidence": "high",
+        "id": 1,
+        "obligations": [],
+        "segment": "Belwood Insurance"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 1,
+            "obligations": [],
+            "segment": "Belwood Insurance"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000003",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 2,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Our reference: BI-66319",
+      "candidate": {
+        "confidence": "high",
+        "id": 2,
+        "obligations": [],
+        "segment": "Our reference: BI-66319"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 2,
+            "obligations": [],
+            "segment": "Our reference: BI-66319"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000004",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 3,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Please pay £188.20 for your policy renewal within 14 days of the date of this letter.",
+      "candidate": {
+        "confidence": "high",
+        "id": 3,
+        "obligations": [
+          {
+            "amount": {
+              "at": 3,
+              "value": "£188.20"
+            },
+            "ask": "Pay £188.20 for your policy renewal",
+            "deadline": {
+              "at": 3,
+              "from": {
+                "at": 0,
+                "value": "7 July 2026"
+              },
+              "read": {
+                "count": 14,
+                "counts_from": "letter_date",
+                "qualifier": "none",
+                "unit": "days"
+              },
+              "value": "within 14 days"
+            },
+            "kind": "payment",
+            "party": {
+              "at": 1,
+              "value": "Belwood Insurance"
+            }
+          }
+        ],
+        "segment": "Please pay £188.20 for your policy renewal within 14 days of the date of this letter."
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 3,
+            "obligations": [
+              {
+                "amount": {
+                  "at": 3,
+                  "value": "£188.20"
+                },
+                "ask": "Pay £188.20 for your policy renewal",
+                "deadline": {
+                  "at": 3,
+                  "from": {
+                    "at": 0,
+                    "value": "7 July 2026"
+                  },
+                  "read": {
+                    "count": 14,
+                    "counts_from": "letter_date",
+                    "qualifier": "none",
+                    "unit": "days"
+                  },
+                  "value": "within 14 days"
+                },
+                "kind": "payment",
+                "party": {
+                  "at": 1,
+                  "value": "Belwood Insurance"
+                }
+              }
+            ],
+            "segment": "Please pay £188.20 for your policy renewal within 14 days of the date of this letter."
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000005",
+      "parent_id": "claim-000004",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 3,
+      "candidate_index": 1,
+      "kind": "obligation",
+      "source": "Please pay £188.20 for your policy renewal within 14 days of the date of this letter.",
+      "candidate": {
+        "amount": {
+          "at": 3,
+          "value": "£188.20"
+        },
+        "ask": "Pay £188.20 for your policy renewal",
+        "deadline": {
+          "at": 3,
+          "from": {
+            "at": 0,
+            "value": "7 July 2026"
+          },
+          "read": {
+            "count": 14,
+            "counts_from": "letter_date",
+            "qualifier": "none",
+            "unit": "days"
+          },
+          "value": "within 14 days"
+        },
+        "kind": "payment",
+        "party": {
+          "at": 1,
+          "value": "Belwood Insurance"
+        }
+      },
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "passage_shown",
+          "outcome": "passed",
+          "detail": "party names passage 1, shown in the request answered",
+          "field": "party"
+        },
+        {
+          "guardrail": "quote",
+          "outcome": "passed",
+          "field": "party"
+        },
+        {
+          "guardrail": "value_shape",
+          "outcome": "passed",
+          "field": "party"
+        },
+        {
+          "guardrail": "quote_identifies_passage",
+          "outcome": "failed",
+          "detail": "party's value is in 2 passages of this document",
+          "field": "party"
+        },
+        {
+          "guardrail": "passage_shown",
+          "outcome": "passed",
+          "detail": "amount names passage 3, shown in the request answered",
+          "field": "amount"
+        },
+        {
+          "guardrail": "quote",
+          "outcome": "passed",
+          "field": "amount"
+        },
+        {
+          "guardrail": "value_shape",
+          "outcome": "passed",
+          "field": "amount"
+        },
+        {
+          "guardrail": "passage_shown",
+          "outcome": "passed",
+          "detail": "deadline names passage 3, shown in the request answered",
+          "field": "deadline"
+        },
+        {
+          "guardrail": "quote",
+          "outcome": "passed",
+          "field": "deadline"
+        },
+        {
+          "guardrail": "value_shape",
+          "outcome": "passed",
+          "field": "deadline"
+        },
+        {
+          "guardrail": "passage_shown",
+          "outcome": "passed",
+          "detail": "from names passage 0, shown in the request answered",
+          "field": "from"
+        },
+        {
+          "guardrail": "quote",
+          "outcome": "passed",
+          "field": "from"
+        },
+        {
+          "guardrail": "value_shape",
+          "outcome": "passed",
+          "field": "from"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000006",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 4,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "You must also confirm in writing that you have made this payment, within 28 days of the date of this letter.",
+      "candidate": {
+        "confidence": "high",
+        "id": 4,
+        "obligations": [
+          {
+            "amount": {
+              "at": 3,
+              "value": "£188.20"
+            },
+            "ask": "Confirm in writing that you have made the payment",
+            "deadline": {
+              "at": 4,
+              "from": {
+                "at": 0,
+                "value": "7 July 2026"
+              },
+              "read": {
+                "count": 28,
+                "counts_from": "letter_date",
+                "qualifier": "none",
+                "unit": "days"
+              },
+              "value": "within 28 days"
+            },
+            "kind": "response",
+            "party": {
+              "at": 1,
+              "value": "Belwood Insurance"
+            }
+          }
+        ],
+        "segment": "You must also confirm in writing that you have made this payment, within 28 days of the date of this letter."
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 4,
+            "obligations": [
+              {
+                "amount": {
+                  "at": 3,
+                  "value": "£188.20"
+                },
+                "ask": "Confirm in writing that you have made the payment",
+                "deadline": {
+                  "at": 4,
+                  "from": {
+                    "at": 0,
+                    "value": "7 July 2026"
+                  },
+                  "read": {
+                    "count": 28,
+                    "counts_from": "letter_date",
+                    "qualifier": "none",
+                    "unit": "days"
+                  },
+                  "value": "within 28 days"
+                },
+                "kind": "response",
+                "party": {
+                  "at": 1,
+                  "value": "Belwood Insurance"
+                }
+              }
+            ],
+            "segment": "You must also confirm in writing that you have made this payment, within 28 days of the date of this letter."
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000007",
+      "parent_id": "claim-000006",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 4,
+      "candidate_index": 1,
+      "kind": "obligation",
+      "source": "You must also confirm in writing that you have made this payment, within 28 days of the date of this letter.",
+      "candidate": {
+        "amount": {
+          "at": 3,
+          "value": "£188.20"
+        },
+        "ask": "Confirm in writing that you have made the payment",
+        "deadline": {
+          "at": 4,
+          "from": {
+            "at": 0,
+            "value": "7 July 2026"
+          },
+          "read": {
+            "count": 28,
+            "counts_from": "letter_date",
+            "qualifier": "none",
+            "unit": "days"
+          },
+          "value": "within 28 days"
+        },
+        "kind": "response",
+        "party": {
+          "at": 1,
+          "value": "Belwood Insurance"
+        }
+      },
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "review_routing",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "passage_shown",
+          "outcome": "passed",
+          "detail": "party names passage 1, shown in the request answered",
+          "field": "party"
+        },
+        {
+          "guardrail": "quote",
+          "outcome": "passed",
+          "field": "party"
+        },
+        {
+          "guardrail": "value_shape",
+          "outcome": "passed",
+          "field": "party"
+        },
+        {
+          "guardrail": "quote_identifies_passage",
+          "outcome": "failed",
+          "detail": "party's value is in 2 passages of this document",
+          "field": "party"
+        },
+        {
+          "guardrail": "passage_shown",
+          "outcome": "passed",
+          "detail": "amount names passage 3, shown in the request answered",
+          "field": "amount"
+        },
+        {
+          "guardrail": "quote",
+          "outcome": "passed",
+          "field": "amount"
+        },
+        {
+          "guardrail": "value_shape",
+          "outcome": "passed",
+          "field": "amount"
+        },
+        {
+          "guardrail": "passage_shown",
+          "outcome": "passed",
+          "detail": "deadline names passage 4, shown in the request answered",
+          "field": "deadline"
+        },
+        {
+          "guardrail": "quote",
+          "outcome": "passed",
+          "field": "deadline"
+        },
+        {
+          "guardrail": "value_shape",
+          "outcome": "passed",
+          "field": "deadline"
+        },
+        {
+          "guardrail": "passage_shown",
+          "outcome": "passed",
+          "detail": "from names passage 0, shown in the request answered",
+          "field": "from"
+        },
+        {
+          "guardrail": "quote",
+          "outcome": "passed",
+          "field": "from"
+        },
+        {
+          "guardrail": "value_shape",
+          "outcome": "passed",
+          "field": "from"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000008",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 5,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "We appreciate your prompt attention to this.",
+      "candidate": {
+        "confidence": "high",
+        "id": 5,
+        "obligations": [],
+        "segment": "We appreciate your prompt attention to this."
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 5,
+            "obligations": [],
+            "segment": "We appreciate your prompt attention to this."
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000009",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 6,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Yours sincerely,",
+      "candidate": {
+        "confidence": "high",
+        "id": 6,
+        "obligations": [],
+        "segment": "Yours sincerely,"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 6,
+            "obligations": [],
+            "segment": "Yours sincerely,"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000010",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 7,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "Belwood Insurance",
+      "candidate": {
+        "confidence": "high",
+        "id": 7,
+        "obligations": [],
+        "segment": "Belwood Insurance"
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 7,
+            "obligations": [],
+            "segment": "Belwood Insurance"
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    },
+    {
+      "id": "claim-000011",
+      "pack": "app.kttl.letter-to-actions",
+      "step": "Reading what it asks of you",
+      "batch": 1,
+      "item": 8,
+      "candidate_index": 0,
+      "kind": "decision",
+      "source": "We expect to write to you again in about 6 weeks with the annual summary.",
+      "candidate": {
+        "confidence": "high",
+        "id": 8,
+        "obligations": [],
+        "segment": "We expect to write to you again in about 6 weeks with the annual summary."
+      },
+      "attempts": [
+        {
+          "ordinal": 1,
+          "candidate": {
+            "confidence": "high",
+            "id": 8,
+            "obligations": [],
+            "segment": "We expect to write to you again in about 6 weeks with the annual summary."
+          },
+          "schema": "passed",
+          "pairing": "passed"
+        }
+      ],
+      "checks": [
+        {
+          "guardrail": "schema",
+          "outcome": "passed"
+        },
+        {
+          "guardrail": "pairing",
+          "outcome": "passed"
+        }
+      ],
+      "terminal": "accepted"
+    }
+  ]
+}
